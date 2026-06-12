@@ -1,0 +1,44 @@
+[package]
+name = "aristotle-manager"
+version = "0.1.0"
+edition = "2024"
+description = "A tool for polling Aristotle results and managing Lean4 project compilation"
+authors = ["mdupont"]
+license = "MIT"
+
+[dependencies]
+# CLI and error handling
+clap = { version = "4.5", features = ["derive"] }
+thiserror = "1.0"
+anyhow = "1.0"
+
+# HTTP client for API (using rustls to avoid OpenSSL dependency issues)
+reqwest = { version = "0.12", features = ["json", "multipart", "stream", "rustls-tls"], default-features = false }
+tokio = { version = "1.40", features = ["full"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+serde_derive = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# File system
+walkdir = "2.5"
+tempfile = "3.10"
+
+# Compression
+flate2 = "1.0"
+tar = "0.4"
+
+# Configuration
+dirs = "5.0"
+
+# Shell commands
+shell-words = "1.1"
+
+# Date/time
+chrono = { version = "0.4", features = ["serde"] }
