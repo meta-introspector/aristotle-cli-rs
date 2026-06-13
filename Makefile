@@ -6,26 +6,26 @@ all: test
 # Build and test all Lean4 projects
 test:
 	@echo "Building all Lean4 projects via shell script..."
-	@./build_all.sh
+	@cargo run --release -- build
 
 # Pull updates and build
 poll:
 	@echo "Pulling updates and building all projects..."
-	@./poll.sh
+	@cargo run --release -- poll
 
 # Fetch new results from Aristotle and test them
 poll-results:
 	@echo "Fetching new results from Aristotle and testing them..."
-	@./poll-results.sh
+	@cargo run --release -- test
 
 # Show build results
 results:
 	@echo "Build results:"
-	@cat ./result.txt 2>/dev/null || echo "No results found. Run 'make test' or 'make poll' first."
+	@cargo run --release -- results 2>/dev/null || echo "No results found. Run 'make test' or 'make poll' first."
 
 # Clean up result file
 clean:
-	@rm -f result.txt
+	@cargo run --release -- clean
 	@echo "Cleaned up result file."
 
 # Build the Rust project (using nix develop)

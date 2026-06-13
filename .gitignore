@@ -1,1 +1,17 @@
 /target
+
+# Flake lock file
+flake.lock
+
+# Build artifacts
+*.rs.bk
+
+# IDE files
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
