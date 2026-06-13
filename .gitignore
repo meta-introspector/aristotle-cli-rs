@@ -3,6 +3,12 @@
 # Flake lock file
 flake.lock
 
+# Download artifacts & logs
+*_aristotle/
+aristotle_processed.txt
+aristotle_projects.json
+*.log
+
 # Build artifacts
 *.rs.bk
 
