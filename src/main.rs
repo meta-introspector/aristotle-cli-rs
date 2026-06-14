@@ -1,3 +1,11 @@
+use anyhow::{Context, Result};
+use clap::{Parser, Subcommand, ValueEnum};
+use flate2::Compression;
+use flate2::read::GzDecoder;
+use flate2::write::GzEncoder;
+use reqwest::{Client, StatusCode, multipart};
+use serde::{Deserialize, Serialize};
+use serde_json::Value;
 use std::env;
 use std::fs::{self, File, OpenOptions};
 use std::io::Write;
@@ -5,19 +13,12 @@ use std::path::PathBuf;
 use std::process::Command;
 use std::sync::{Arc, RwLock};
 use std::time::Duration;
-use anyhow::{Context, Result};
-use clap::{Parser, Subcommand};
-use flate2::read::GzDecoder;
-use reqwest::Client;
-use serde::{Deserialize, Serialize};
-use serde_json::Value;
-use tar::Archive;
+use tar::{Archive, Builder};
 use tracing::{debug, error, info, instrument, warn};
 use tracing_subscriber::{EnvFilter, fmt};
 use walkdir::WalkDir;
 
 mod notebooklm;
-
 
 #[cfg(test)]
 mod tests;
@@ -40,11 +41,18 @@ fn get_api_key() -> Result<String> {
     if let Some(key) = &*API_KEY.read().unwrap() {
         debug!("API key retrieved from static store");
         Ok(key.clone())
+    } else if let Ok(key) = env::var("ARISTOTLE_API_KEY") {
+        Ok(key)
     } else {
-        env::var("ARISTOTLE_API_KEY")
-            .map_err(|_| {
-                error!("API key not set in env or static store");
-                anyhow::anyhow!("API key not set. Set ARISTOTLE_API_KEY or use configure set")
+        let config = load_config()?;
+        config
+            .api_key
+            .filter(|key| !key.trim().is_empty())
+            .ok_or_else(|| {
+                error!("API key not set in env, static store, or persisted config");
+                anyhow::anyhow!(
+                    "API key not set. Set ARISTOTLE_API_KEY or use configure set -k <key> --persist"
+                )
             })
     }
 }
@@ -72,6 +80,8 @@ enum Commands {
     },
     /// Download results from Aristotle
     Download {
+        /// Optional project ID. When omitted, downloads all available project results.
+        project_id: Option<String>,
         #[arg(short = 'j', default_value = "4")]
         parallel: usize,
         #[arg(long, default_value = "console")]
@@ -80,6 +90,54 @@ enum Commands {
         verbose: bool,
         #[arg(long)]
         limit: Option<usize>,
+        #[arg(long)]
+        destination: Option<PathBuf>,
+    },
+    /// Show Aristotle server/toolchain version
+    Version,
+    /// List Aristotle projects
+    List {
+        #[arg(long, default_value = "30")]
+        limit: usize,
+        #[arg(long)]
+        pagination_key: Option<String>,
+        #[arg(long, value_enum)]
+        status: Option<ProjectStatusFilter>,
+    },
+    /// Submit a new Aristotle project
+    Submit {
+        prompt: String,
+        #[arg(long)]
+        project_dir: Option<PathBuf>,
+        #[arg(long)]
+        wait: bool,
+        #[arg(long)]
+        destination: Option<PathBuf>,
+    },
+    /// Ask a follow-up prompt against an Aristotle project
+    Ask {
+        project_id: String,
+        prompt: String,
+        #[arg(long)]
+        wait: bool,
+    },
+    /// List tasks for an Aristotle project
+    Tasks {
+        project_id: String,
+        #[arg(long, default_value = "10")]
+        limit: usize,
+        #[arg(long)]
+        pagination_key: Option<String>,
+    },
+    /// Show task status and recent events for an Aristotle project
+    Show {
+        project_id: String,
+        #[arg(long)]
+        task: Option<String>,
+        #[arg(long)]
+        limit: Option<usize>,
+        #[arg(long)]
+        pagination_key: Option<String>,
     },
     /// Split Lean4 modules (de-duplicate)
     Split {
@@ -129,18 +187,406 @@ enum ConfigureCommands {
     Set {
         #[arg(short = 'k')]
         api_key: Option<String>,
+        #[arg(long)]
+        persist: bool,
     },
     Show,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Config {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    api_key: Option<String>,
     base_dir: PathBuf,
     results_dir: PathBuf,
     git_base: PathBuf,
     max_parallel_downloads: usize,
     retry_wait_seconds: u64,
     max_retries: usize,
+}
+
+#[derive(Clone, Debug, ValueEnum)]
+enum ProjectStatusFilter {
+    Running,
+    Idle,
+}
+
+impl ProjectStatusFilter {
+    fn api_value(&self) -> u8 {
+        match self {
+            ProjectStatusFilter::Running => 1,
+            ProjectStatusFilter::Idle => 2,
+        }
+    }
+}
+
+#[derive(Debug, Deserialize)]
+struct VersionInfo {
+    lean_toolchain_version: Option<String>,
+    mathlib_hash: Option<String>,
+}
+
+impl VersionInfo {
+    fn lean_toolchain(&self) -> Option<&str> {
+        self.lean_toolchain_version.as_deref()
+    }
+
+    fn mathlib_hash(&self) -> Option<&str> {
+        self.mathlib_hash.as_deref()
+    }
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum ProjectStatus {
+    Running,
+    Idle,
+    Unknown(u8),
+}
+
+impl ProjectStatus {
+    fn from_code(status: u8) -> Self {
+        match status {
+            1 => ProjectStatus::Running,
+            2 => ProjectStatus::Idle,
+            other => ProjectStatus::Unknown(other),
+        }
+    }
+
+    fn as_str(self) -> &'static str {
+        match self {
+            ProjectStatus::Running => "RUNNING",
+            ProjectStatus::Idle => "IDLE",
+            ProjectStatus::Unknown(_code) => "UNKNOWN",
+        }
+    }
+}
+
+#[derive(Debug, Deserialize)]
+struct Project {
+    project_id: String,
+    created_at: String,
+    last_updated: String,
+    description: Option<String>,
+    status: u8,
+    has_input: bool,
+    has_files: bool,
+}
+
+impl Project {
+    fn status_kind(&self) -> ProjectStatus {
+        ProjectStatus::from_code(self.status)
+    }
+}
+
+#[derive(Debug, Deserialize)]
+struct ProjectListResponse {
+    projects: Vec<Project>,
+    pagination_key: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+struct AgentTask {
+    project_id: String,
+    agent_task_id: String,
+    status: String,
+    created_at: String,
+    #[serde(default)]
+    last_updated_at: Option<String>,
+    percent_complete: Option<u8>,
+    file_name: Option<String>,
+    description: Option<String>,
+    output_summary: Option<String>,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum AgentTaskStatus {
+    Queued,
+    InProgress,
+    Other,
+}
+
+impl AgentTaskStatus {
+    fn from_str(status: &str) -> Self {
+        match status {
+            "QUEUED" => AgentTaskStatus::Queued,
+            "IN_PROGRESS" => AgentTaskStatus::InProgress,
+            _ => AgentTaskStatus::Other,
+        }
+    }
+
+    fn is_running(self) -> bool {
+        matches!(self, AgentTaskStatus::Queued | AgentTaskStatus::InProgress)
+    }
+}
+
+#[derive(Debug, Deserialize)]
+struct TaskListResponse {
+    agent_tasks: Vec<AgentTask>,
+    pagination_key: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+struct Event {
+    event_id: String,
+    agent_task_id: String,
+    event_type: u8,
+    created_at: String,
+    content: String,
+    file_path: Option<String>,
+    explanation: Option<String>,
+    status: u8,
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum EventType {
+    Message,
+    Building,
+    Thinking,
+    EditingFile,
+    SearchingLocal,
+    RunningCommand,
+    Proving,
+    ReadingFiles,
+    Reviewing,
+    Finished,
+    Error,
+    ReadingLean,
+    SearchingExternal,
+    RunningLean,
+    Unknown(u8),
+}
+
+impl EventType {
+    fn from_code(event_type: u8) -> Self {
+        match event_type {
+            1 => EventType::Message,
+            2 => EventType::Building,
+            3 => EventType::Thinking,
+            4 => EventType::EditingFile,
+            5 => EventType::SearchingLocal,
+            6 => EventType::RunningCommand,
+            7 => EventType::Proving,
+            8 => EventType::ReadingFiles,
+            9 => EventType::Reviewing,
+            10 => EventType::Finished,
+            11 => EventType::Error,
+            12 => EventType::ReadingLean,
+            13 => EventType::SearchingExternal,
+            14 => EventType::RunningLean,
+            other => EventType::Unknown(other),
+        }
+    }
+
+    fn as_str(self) -> &'static str {
+        match self {
+            EventType::Message => "MESSAGE",
+            EventType::Building => "BUILDING",
+            EventType::Thinking => "THINKING",
+            EventType::EditingFile => "EDITING_FILE",
+            EventType::SearchingLocal => "SEARCHING_LOCAL",
+            EventType::RunningCommand => "RUNNING_COMMAND",
+            EventType::Proving => "PROVING",
+            EventType::ReadingFiles => "READING_FILES",
+            EventType::Reviewing => "REVIEWING",
+            EventType::Finished => "FINISHED",
+            EventType::Error => "ERROR",
+            EventType::ReadingLean => "READING_LEAN",
+            EventType::SearchingExternal => "SEARCHING_EXTERNAL",
+            EventType::RunningLean => "RUNNING_LEAN",
+            EventType::Unknown(_code) => "UNKNOWN",
+        }
+    }
+}
+
+impl Event {
+    fn event_type_kind(&self) -> EventType {
+        EventType::from_code(self.event_type)
+    }
+}
+
+#[derive(Debug, Deserialize)]
+struct EventListResponse {
+    events: Vec<Event>,
+    pagination_key: Option<String>,
+}
+
+fn task_is_running(status: &str) -> bool {
+    AgentTaskStatus::from_str(status).is_running()
+}
+
+fn task_is_terminal(status: &str) -> bool {
+    !task_is_running(status)
+}
+
+fn short_time(value: &str) -> String {
+    value.split('.').next().unwrap_or(value).replace('T', " ")
+}
+
+fn extract_api_error_body(body: &str) -> String {
+    let trimmed = body.trim();
+    if trimmed.is_empty() {
+        return "empty response body".to_string();
+    }
+
+    match serde_json::from_str::<Value>(trimmed) {
+        Ok(json) => extract_api_error_message(&json).unwrap_or_else(|| {
+            serde_json::to_string_pretty(&json).unwrap_or_else(|_| trimmed.to_string())
+        }),
+        Err(_) => trimmed.to_string(),
+    }
+}
+
+fn extract_api_error_message(value: &Value) -> Option<String> {
+    match value {
+        Value::String(s) => {
+            let message = s.trim();
+            if message.is_empty() {
+                None
+            } else {
+                Some(message.to_string())
+            }
+        }
+        Value::Array(items) => {
+            let messages: Vec<String> =
+                items.iter().filter_map(extract_api_error_message).collect();
+            if messages.is_empty() {
+                None
+            } else {
+                Some(messages.join("; "))
+            }
+        }
+        Value::Object(map) => {
+            for key in [
+                "detail",
+                "message",
+                "error",
+                "errors",
+                "description",
+                "reason",
+                "title",
+            ] {
+                if let Some(message) = map.get(key).and_then(extract_api_error_message) {
+                    return Some(message);
+                }
+            }
+            None
+        }
+        _ => None,
+    }
+}
+
+async fn api_error(response: reqwest::Response, context: &str) -> anyhow::Error {
+    let status = response.status();
+    let body = response
+        .text()
+        .await
+        .unwrap_or_else(|_| "unreadable response body".to_string());
+    let message = extract_api_error_body(&body);
+
+    if status == StatusCode::TOO_MANY_REQUESTS {
+        anyhow::anyhow!(
+            "{}: too many Aristotle requests are in progress; cancel or wait for a project to complete",
+            context
+        )
+    } else {
+        anyhow::anyhow!("{} failed with HTTP {}: {}", context, status, message)
+    }
+}
+
+async fn api_get_json<T: for<'de> Deserialize<'de>>(
+    client: &Client,
+    api_key: &str,
+    endpoint: &str,
+    params: &[(&str, String)],
+) -> Result<T> {
+    let url = format!("{}/{}", API_BASE_URL, endpoint.trim_start_matches('/'));
+    let response = client
+        .get(&url)
+        .header("X-API-Key", api_key)
+        .query(params)
+        .send()
+        .await
+        .with_context(|| format!("Failed to send GET {}", endpoint))?;
+
+    if !response.status().is_success() {
+        return Err(api_error(response, &format!("GET {}", endpoint)).await);
+    }
+
+    response
+        .json::<T>()
+        .await
+        .with_context(|| format!("Failed to parse JSON from GET {}", endpoint))
+}
+
+async fn api_post_json<T: for<'de> Deserialize<'de>>(
+    client: &Client,
+    api_key: &str,
+    endpoint: &str,
+    body: Value,
+) -> Result<T> {
+    let url = format!("{}/{}", API_BASE_URL, endpoint.trim_start_matches('/'));
+    let response = client
+        .post(&url)
+        .header("X-API-Key", api_key)
+        .json(&body)
+        .send()
+        .await
+        .with_context(|| format!("Failed to send POST {}", endpoint))?;
+
+    if !response.status().is_success() {
+        return Err(api_error(response, &format!("POST {}", endpoint)).await);
+    }
+
+    response
+        .json::<T>()
+        .await
+        .with_context(|| format!("Failed to parse JSON from POST {}", endpoint))
+}
+
+fn print_project(project: &Project) {
+    println!(
+        "{}  {:<7} files={} input={} created={} updated={}  {}",
+        project.project_id,
+        project.status_kind().as_str(),
+        project.has_files,
+        project.has_input,
+        short_time(&project.created_at),
+        short_time(&project.last_updated),
+        project.description.as_deref().unwrap_or("-")
+    );
+}
+
+fn print_task(task: &AgentTask) {
+    println!(
+        "{}  {:<20} {:>3}% created={} updated={} file={}  {}",
+        task.agent_task_id,
+        task.status,
+        task.percent_complete.unwrap_or(0),
+        short_time(&task.created_at),
+        task.last_updated_at
+            .as_deref()
+            .map(short_time)
+            .unwrap_or_else(|| "-".to_string()),
+        task.file_name.as_deref().unwrap_or("-"),
+        task.description.as_deref().unwrap_or("-")
+    );
+    if let Some(summary) = &task.output_summary {
+        println!("{}", summary);
+    }
+}
+
+fn print_event(event: &Event) {
+    let content = event.explanation.as_deref().unwrap_or(&event.content);
+    println!(
+        "{}  {} status={} event={} task={} file={}  {}",
+        short_time(&event.created_at),
+        event.event_type_kind().as_str(),
+        event.status,
+        event.event_id,
+        event.agent_task_id,
+        event.file_path.as_deref().unwrap_or("-"),
+        content
+    );
 }
 
 #[instrument]
@@ -153,6 +599,7 @@ fn load_config() -> Result<Config> {
 
     if !config_path.exists() {
         let default_config = Config {
+            api_key: None,
             base_dir: PathBuf::from("/home/mdupont/projects/arist"),
             results_dir: PathBuf::from("/home/mdupont/projects/aristotle_results"),
             git_base: PathBuf::from("/home/mdupont/05/07/arist"),
@@ -221,23 +668,34 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
     let config_path = config_dir.join("config.toml");
 
     match subcommand {
-        ConfigureCommands::Set { api_key } => {
-            if let Some(key) = api_key {
-                set_api_key(key);
-                info!("API key set from CLI argument");
-                println!("API key set");
+        ConfigureCommands::Set { api_key, persist } => {
+            let key = if let Some(key) = api_key {
+                key.clone()
             } else {
                 println!("Enter API key:");
                 let mut input = String::new();
                 std::io::stdin().read_line(&mut input)?;
-                set_api_key(input.trim());
-                info!("API key set from stdin");
-                println!("API key set");
+                input.trim().to_string()
+            };
+
+            if key.is_empty() {
+                return Err(anyhow::anyhow!("API key cannot be empty"));
             }
+
+            set_api_key(&key);
+            if *persist {
+                info!("API key set from CLI argument and persisted");
+                println!("API key set and persisted");
+            } else {
+                info!("API key set from CLI argument");
+                println!("API key set for this process. Use --persist to save it to config.");
+            }
+
             // Save config
             let config_str = fs::read_to_string(&config_path).unwrap_or_default();
             let mut config: Config = if config_str.is_empty() {
                 Config {
+                    api_key: None,
                     base_dir: PathBuf::from("/home/mdupont/projects/arist"),
                     results_dir: PathBuf::from("/home/mdupont/projects/aristotle_results"),
                     git_base: PathBuf::from("/home/mdupont/05/07/arist"),
@@ -248,6 +706,9 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
             } else {
                 toml::from_str(&config_str)?
             };
+            if *persist {
+                config.api_key = Some(key);
+            }
             config.git_base = PathBuf::from("/home/mdupont/05/07/arist");
             config.base_dir = PathBuf::from("/home/mdupont/projects/arist");
             config.results_dir = PathBuf::from("/home/mdupont/projects/aristotle_results");
@@ -263,12 +724,390 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
             println!("  Base directory:       {}", config.base_dir.display());
             println!("  Results directory:    {}", config.results_dir.display());
             println!("  Git base:             {}", config.git_base.display());
-            println!("  Max parallel downloads: {}", config.max_parallel_downloads);
+            println!(
+                "  Max parallel downloads: {}",
+                config.max_parallel_downloads
+            );
             println!("  Retry wait seconds:   {}", config.retry_wait_seconds);
             println!("  Max retries:          {}", config.max_retries);
+            println!(
+                "  API key persisted:    {}",
+                if config.api_key.as_ref().is_some_and(|k| !k.is_empty()) {
+                    "yes"
+                } else {
+                    "no"
+                }
+            );
         }
     }
     Ok(())
+}
+
+fn aristotle_client(timeout_seconds: u64) -> Result<Client> {
+    Client::builder()
+        .timeout(Duration::from_secs(timeout_seconds))
+        .build()
+        .context("Failed to build HTTP client")
+}
+
+#[instrument(skip_all)]
+async fn cmd_version() -> Result<()> {
+    let client = aristotle_client(30)?;
+    let version: VersionInfo = api_get_json(&client, "", "/version", &[]).await?;
+    println!(
+        "Lean toolchain: {}",
+        version.lean_toolchain().unwrap_or("unknown")
+    );
+    println!(
+        "Mathlib hash:   {}",
+        version.mathlib_hash().unwrap_or("unknown")
+    );
+    Ok(())
+}
+
+#[instrument(skip_all)]
+async fn cmd_list(
+    limit: usize,
+    pagination_key: Option<String>,
+    status: Option<ProjectStatusFilter>,
+) -> Result<()> {
+    if !(1..=100).contains(&limit) {
+        return Err(anyhow::anyhow!("--limit must be between 1 and 100"));
+    }
+
+    let api_key = get_api_key()?;
+    let client = aristotle_client(30)?;
+    let mut params = vec![("limit", limit.to_string())];
+    if let Some(key) = pagination_key {
+        params.push(("pagination_key", key));
+    }
+    if let Some(status) = status {
+        params.push(("status", status.api_value().to_string()));
+    }
+
+    let response: ProjectListResponse =
+        api_get_json(&client, &api_key, "/project", &params).await?;
+    for project in &response.projects {
+        print_project(project);
+    }
+    if let Some(key) = response.pagination_key {
+        println!("Pagination key: {}", key);
+    }
+    Ok(())
+}
+
+fn create_project_archive(project_dir: &PathBuf) -> Result<(tempfile::NamedTempFile, String)> {
+    if !project_dir.is_dir() {
+        return Err(anyhow::anyhow!(
+            "--project-dir must be a directory: {}",
+            project_dir.display()
+        ));
+    }
+
+    let archive = tempfile::NamedTempFile::new().context("Failed to create temporary archive")?;
+    let encoder = GzEncoder::new(
+        archive
+            .reopen()
+            .context("Failed to reopen temporary archive for writing")?,
+        Compression::default(),
+    );
+    let mut builder = Builder::new(encoder);
+
+    for entry in WalkDir::new(project_dir)
+        .into_iter()
+        .filter_map(|entry| entry.ok())
+    {
+        let path = entry.path();
+        if path == project_dir {
+            continue;
+        }
+        let relative = path.strip_prefix(project_dir)?;
+        let name = relative.to_string_lossy();
+        if name.starts_with(".git/")
+            || name.starts_with("target/")
+            || name.starts_with(".lake/build/")
+        {
+            continue;
+        }
+        if path.is_dir() {
+            builder.append_dir(relative, path)?;
+        } else if path.is_file() {
+            builder.append_path_with_name(path, relative)?;
+        }
+    }
+    builder.finish()?;
+    let encoder = builder.into_inner()?;
+    encoder.finish()?;
+
+    let public_name = format!(
+        "{}.tar.gz",
+        project_dir
+            .file_name()
+            .and_then(|name| name.to_str())
+            .unwrap_or("project")
+    );
+    Ok((archive, public_name))
+}
+
+#[instrument(skip_all)]
+async fn cmd_submit(
+    prompt: String,
+    project_dir: Option<PathBuf>,
+    wait: bool,
+    destination: Option<PathBuf>,
+) -> Result<()> {
+    let api_key = get_api_key()?;
+    let client = aristotle_client(300)?;
+    let url = format!("{}/project", API_BASE_URL);
+    let body = serde_json::json!({ "prompt": prompt }).to_string();
+
+    let mut request = client.post(&url).header("X-API-Key", &api_key);
+    let _archive_guard;
+    if let Some(project_dir) = project_dir {
+        let (archive, public_name) = create_project_archive(&project_dir)?;
+        let bytes = fs::read(archive.path()).with_context(|| {
+            format!(
+                "Failed to read temporary archive {}",
+                archive.path().display()
+            )
+        })?;
+        _archive_guard = Some(archive);
+        let part = multipart::Part::bytes(bytes)
+            .file_name(public_name)
+            .mime_str("application/x-tar")?;
+        let form = multipart::Form::new()
+            .text("body", body)
+            .part("input", part);
+        request = request.multipart(form);
+    } else {
+        _archive_guard = None;
+        request = request.form(&[("body", body)]);
+    }
+
+    let response = request.send().await.context("Failed to submit project")?;
+    if !response.status().is_success() {
+        return Err(api_error(response, "POST /project").await);
+    }
+    let project: Project = response
+        .json()
+        .await
+        .context("Failed to parse submitted project")?;
+    println!("Project created: {}", project.project_id);
+    print_project(&project);
+
+    if wait {
+        let task = newest_task(&client, &api_key, &project.project_id).await?;
+        let completed = wait_for_task(&client, &api_key, task).await?;
+        if let Some(destination) = destination {
+            download_project_file(&client, &api_key, &project.project_id, Some(destination))
+                .await?;
+        } else {
+            println!("Task finished with status: {}", completed.status);
+        }
+    }
+    Ok(())
+}
+
+#[instrument(skip_all)]
+async fn cmd_ask(project_id: String, prompt: String, wait: bool) -> Result<()> {
+    let api_key = get_api_key()?;
+    let client = aristotle_client(300)?;
+    let task: AgentTask = api_post_json(
+        &client,
+        &api_key,
+        &format!("/project/{}/ask", project_id),
+        serde_json::json!({ "prompt": prompt }),
+    )
+    .await?;
+    println!("Prompt submitted to project {}", project_id);
+    print_task(&task);
+
+    if wait {
+        wait_for_task(&client, &api_key, task).await?;
+    }
+    Ok(())
+}
+
+async fn newest_task(client: &Client, api_key: &str, project_id: &str) -> Result<AgentTask> {
+    let tasks = list_tasks(client, api_key, project_id, 1, None).await?;
+    tasks
+        .agent_tasks
+        .into_iter()
+        .next()
+        .ok_or_else(|| anyhow::anyhow!("No tasks found for project {}", project_id))
+}
+
+async fn list_tasks(
+    client: &Client,
+    api_key: &str,
+    project_id: &str,
+    limit: usize,
+    pagination_key: Option<String>,
+) -> Result<TaskListResponse> {
+    if !(1..=100).contains(&limit) {
+        return Err(anyhow::anyhow!("--limit must be between 1 and 100"));
+    }
+    let mut params = vec![("limit", limit.to_string())];
+    if let Some(key) = pagination_key {
+        params.push(("pagination_key", key));
+    }
+    api_get_json(
+        client,
+        api_key,
+        &format!("/project/{}/tasks", project_id),
+        &params,
+    )
+    .await
+}
+
+#[instrument(skip_all)]
+async fn cmd_tasks(project_id: String, limit: usize, pagination_key: Option<String>) -> Result<()> {
+    let api_key = get_api_key()?;
+    let client = aristotle_client(30)?;
+    let response = list_tasks(&client, &api_key, &project_id, limit, pagination_key).await?;
+    for task in &response.agent_tasks {
+        print_task(task);
+    }
+    if let Some(key) = response.pagination_key {
+        println!("Pagination key: {}", key);
+    }
+    Ok(())
+}
+
+async fn get_task(client: &Client, api_key: &str, task_id: &str) -> Result<AgentTask> {
+    api_get_json(client, api_key, &format!("/task/{}", task_id), &[]).await
+}
+
+async fn get_task_events(
+    client: &Client,
+    api_key: &str,
+    task_id: &str,
+    limit: usize,
+    pagination_key: Option<String>,
+    ascending: bool,
+) -> Result<EventListResponse> {
+    if !(1..=100).contains(&limit) {
+        return Err(anyhow::anyhow!("--limit must be between 1 and 100"));
+    }
+    let mut params = vec![
+        ("limit", limit.to_string()),
+        ("ascending", ascending.to_string()),
+    ];
+    if let Some(key) = pagination_key {
+        params.push(("pagination_key", key));
+    }
+    api_get_json(
+        client,
+        api_key,
+        &format!("/task/{}/events", task_id),
+        &params,
+    )
+    .await
+}
+
+async fn wait_for_task(client: &Client, api_key: &str, mut task: AgentTask) -> Result<AgentTask> {
+    loop {
+        print_task(&task);
+        if task_is_terminal(&task.status) {
+            return Ok(task);
+        }
+        tokio::time::sleep(Duration::from_secs(5)).await;
+        task = get_task(client, api_key, &task.agent_task_id).await?;
+    }
+}
+
+#[instrument(skip_all)]
+async fn cmd_show(
+    project_id: String,
+    task_id: Option<String>,
+    limit: Option<usize>,
+    pagination_key: Option<String>,
+) -> Result<()> {
+    let api_key = get_api_key()?;
+    let client = aristotle_client(30)?;
+    let task = if let Some(task_id) = task_id {
+        let task = get_task(&client, &api_key, &task_id).await?;
+        if task.project_id != project_id {
+            return Err(anyhow::anyhow!(
+                "Task {} belongs to project {}, not {}",
+                task.agent_task_id,
+                task.project_id,
+                project_id
+            ));
+        }
+        task
+    } else {
+        newest_task(&client, &api_key, &project_id).await?
+    };
+
+    print_task(&task);
+    let event_limit = limit.unwrap_or(if task_is_running(&task.status) { 3 } else { 0 });
+    if event_limit > 0 {
+        let response = get_task_events(
+            &client,
+            &api_key,
+            &task.agent_task_id,
+            event_limit,
+            pagination_key,
+            false,
+        )
+        .await?;
+        for event in response.events.iter().rev() {
+            print_event(event);
+        }
+        if let Some(key) = response.pagination_key {
+            println!("Pagination key: {}", key);
+        }
+    }
+    Ok(())
+}
+
+async fn download_project_file(
+    client: &Client,
+    api_key: &str,
+    project_id: &str,
+    destination: Option<PathBuf>,
+) -> Result<PathBuf> {
+    let project: Project =
+        api_get_json(client, api_key, &format!("/project/{}", project_id), &[]).await?;
+    let endpoint = if project.has_files {
+        format!("/project/{}/result", project_id)
+    } else if project.has_input {
+        format!("/project/{}/input", project_id)
+    } else {
+        return Err(anyhow::anyhow!(
+            "Project {} has no result or input files",
+            project_id
+        ));
+    };
+    let url = format!("{}/{}", API_BASE_URL, endpoint.trim_start_matches('/'));
+    let response = client
+        .get(&url)
+        .header("X-API-Key", api_key)
+        .send()
+        .await
+        .with_context(|| format!("Failed to download files for project {}", project_id))?;
+    if !response.status().is_success() {
+        return Err(api_error(response, &format!("GET {}", endpoint)).await);
+    }
+
+    let filename = response
+        .headers()
+        .get("content-disposition")
+        .and_then(|value| value.to_str().ok())
+        .and_then(|value| value.split("filename=").nth(1))
+        .map(|value| value.trim_matches('"').to_string())
+        .filter(|value| !value.is_empty())
+        .unwrap_or_else(|| format!("{}-aristotle.tar.gz", project_id));
+    let destination = destination.unwrap_or_else(|| PathBuf::from(filename));
+    let bytes = response.bytes().await?;
+    fs::write(&destination, &bytes)?;
+    println!(
+        "Downloaded {} bytes to {}",
+        bytes.len(),
+        destination.display()
+    );
+    Ok(destination)
 }
 
 #[instrument(skip(base_dir))]
@@ -398,7 +1237,11 @@ fn cmd_poll(_download_only: bool, _parallel: usize) -> Result<()> {
             }
             Err(e) => {
                 error!(project = %dir.display(), error = %e, "Build error");
-                println!("✗ {} failed: {}", dir.file_name().unwrap().to_string_lossy(), e);
+                println!(
+                    "✗ {} failed: {}",
+                    dir.file_name().unwrap().to_string_lossy(),
+                    e
+                );
                 fail += 1;
             }
         }
@@ -431,7 +1274,11 @@ fn cmd_build() -> Result<()> {
             }
             Err(e) => {
                 error!(project = %dir.display(), error = %e, "Build error");
-                println!("✗ {} failed: {}", dir.file_name().unwrap().to_string_lossy(), e);
+                println!(
+                    "✗ {} failed: {}",
+                    dir.file_name().unwrap().to_string_lossy(),
+                    e
+                );
                 fail += 1;
             }
         }
@@ -464,7 +1311,11 @@ fn cmd_test() -> Result<()> {
             }
             Err(e) => {
                 error!(project = %dir.display(), error = %e, "Test error");
-                println!("✗ {} failed: {}", dir.file_name().unwrap().to_string_lossy(), e);
+                println!(
+                    "✗ {} failed: {}",
+                    dir.file_name().unwrap().to_string_lossy(),
+                    e
+                );
                 fail += 1;
             }
         }
@@ -480,13 +1331,25 @@ fn cmd_test() -> Result<()> {
 /// ── Download command with parallel downloads and telemetry ────────────────
 
 #[instrument(skip_all)]
-async fn cmd_download(parallel: usize, _trace: &str, verbose: bool, limit: Option<usize>) -> Result<()> {
+async fn cmd_download(
+    project_id: Option<String>,
+    parallel: usize,
+    _trace: &str,
+    verbose: bool,
+    limit: Option<usize>,
+    destination: Option<PathBuf>,
+) -> Result<()> {
     let config = load_config()?;
     let api_key = get_api_key()?;
     let client = Client::builder()
         .timeout(Duration::from_secs(300))
         .build()
         .context("Failed to build HTTP client")?;
+
+    if let Some(project_id) = project_id {
+        download_project_file(&client, &api_key, &project_id, destination).await?;
+        return Ok(());
+    }
 
     // ── Verbose mode ───────────────────────────────────────────────────
     if verbose {
@@ -517,9 +1380,15 @@ async fn cmd_download(parallel: usize, _trace: &str, verbose: bool, limit: Optio
     } else {
         std::collections::HashSet::new()
     };
-    debug!(processed_count = processed_ids.len(), "Loaded processed IDs");
+    debug!(
+        processed_count = processed_ids.len(),
+        "Loaded processed IDs"
+    );
 
-    let mut log = OpenOptions::new().create(true).append(true).open(&download_log)?;
+    let mut log = OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open(&download_log)?;
     writeln!(
         log,
         "[{}] Starting download of results",
@@ -555,22 +1424,28 @@ async fn cmd_download(parallel: usize, _trace: &str, verbose: bool, limit: Optio
             .with_context(|| "Failed to read project list response body")?;
 
         if !status.is_success() {
-            error!(http_status = %status, body = %response_text, "Project list request failed");
+            let error_body = extract_api_error_body(&response_text);
+            error!(http_status = %status, body = %error_body, "Project list request failed");
             writeln!(
                 log,
                 "[{}] ERROR: Project list request failed with HTTP {}: {}",
                 chrono::Local::now().format("%Y-%m-%d %H:%M:%S"),
                 status,
-                response_text
+                error_body
             )?;
             return Err(anyhow::anyhow!(
-                "Project list request failed: HTTP {}",
-                status
+                "Project list request failed: HTTP {} - {}",
+                status,
+                error_body
             ));
         }
 
-        let page_json: Value = serde_json::from_str(&response_text)
-            .with_context(|| format!("Failed to parse project list JSON: {}", &response_text[..response_text.len().min(200)]))?;
+        let page_json: Value = serde_json::from_str(&response_text).with_context(|| {
+            format!(
+                "Failed to parse project list JSON: {}",
+                &response_text[..response_text.len().min(200)]
+            )
+        })?;
 
         // Extract projects from this page
         let page_projects = page_json["projects"]
@@ -580,7 +1455,12 @@ async fn cmd_download(parallel: usize, _trace: &str, verbose: bool, limit: Optio
         let page_count = page_projects.len();
         all_projects.extend(page_projects);
 
-        info!(page, page_count, total = all_projects.len(), "Fetched project page");
+        info!(
+            page,
+            page_count,
+            total = all_projects.len(),
+            "Fetched project page"
+        );
 
         // Check for pagination key to continue
         let next_key = page_json["pagination_key"].as_str().map(|s| s.to_string());
@@ -608,8 +1488,16 @@ async fn cmd_download(parallel: usize, _trace: &str, verbose: bool, limit: Optio
     // Build a synthetic JSON Value for extract_project_ids
     let json = serde_json::json!({ "projects": all_projects });
     let ids: Vec<String> = extract_project_ids(&json);
-    info!(project_count = ids.len(), "Extracted project IDs from all pages");
-    writeln!(log, "Found {} projects to download ({} pages)", ids.len(), page)?;
+    info!(
+        project_count = ids.len(),
+        "Extracted project IDs from all pages"
+    );
+    writeln!(
+        log,
+        "Found {} projects to download ({} pages)",
+        ids.len(),
+        page
+    )?;
 
     if ids.is_empty() {
         warn!("No project IDs found in API response");
@@ -684,7 +1572,12 @@ async fn cmd_download(parallel: usize, _trace: &str, verbose: bool, limit: Optio
     for (id, handle) in handles {
         match handle.await {
             Ok(Ok(path)) => {
-                writeln!(log, "✓ Downloaded and extracted: {} -> {}", id, path.display())?;
+                writeln!(
+                    log,
+                    "✓ Downloaded and extracted: {} -> {}",
+                    id,
+                    path.display()
+                )?;
                 downloaded += 1;
                 // Mark as processed
                 let mut proc = OpenOptions::new()
@@ -739,12 +1632,11 @@ fn extract_project_ids(json: &Value) -> Vec<String> {
             .iter()
             .filter_map(|v| match v {
                 Value::String(s) if is_uuid_like(s) => Some(s.clone()),
-                Value::Array(a) => {
-                    a.first()
-                        .and_then(Value::as_str)
-                        .filter(|s| is_uuid_like(s))
-                        .map(|s| s.to_string())
-                }
+                Value::Array(a) => a
+                    .first()
+                    .and_then(Value::as_str)
+                    .filter(|s| is_uuid_like(s))
+                    .map(|s| s.to_string()),
                 Value::Object(o) => get_id(o),
                 _ => None,
             })
@@ -792,7 +1684,10 @@ fn extract_project_ids(json: &Value) -> Vec<String> {
         }
     }
 
-    debug!("Could not extract IDs from API response; response: {}", serde_json::to_string_pretty(json).unwrap_or_default());
+    debug!(
+        "Could not extract IDs from API response; response: {}",
+        serde_json::to_string_pretty(json).unwrap_or_default()
+    );
     warn!("Could not extract project IDs from API response");
     Vec::new()
 }
@@ -908,12 +1803,13 @@ async fn download_single_result(
             .text()
             .await
             .unwrap_or_else(|_| "unreadable".to_string());
-        error!(id = %result_id, http_status = %http_status, body = %body, "Download request failed");
+        let error_body = extract_api_error_body(&body);
+        error!(id = %result_id, http_status = %http_status, body = %error_body, "Download request failed");
         return Err(anyhow::anyhow!(
             "Download failed for {}: HTTP {} - {}",
             result_id,
             http_status,
-            body
+            error_body
         ));
     }
 
@@ -923,7 +1819,10 @@ async fn download_single_result(
         .with_context(|| format!("Failed to read response bytes for result {}", result_id))?;
 
     if bytes.is_empty() {
-        return Err(anyhow::anyhow!("Empty response body for result {}", result_id));
+        return Err(anyhow::anyhow!(
+            "Empty response body for result {}",
+            result_id
+        ));
     }
 
     debug!(id = %result_id, size_bytes = bytes.len(), "Downloaded bytes");
@@ -990,16 +1889,13 @@ async fn download_single_result(
 
 #[instrument(skip(input_dir, output_dir))]
 fn cmd_split(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<()> {
-    let input_dir =
-        input_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist"));
+    let input_dir = input_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist"));
     let output_dir =
         output_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist/split-results"));
     fs::create_dir_all(&output_dir)?;
 
     // Path to the Lean splitter tool
-    let splitter_path = PathBuf::from(
-        "/home/mdupont/projects/lean-split-decls/SplitDecls.lean"
-    );
+    let splitter_path = PathBuf::from("/home/mdupont/projects/lean-split-decls/SplitDecls.lean");
 
     info!(
         input = %input_dir.display(),
@@ -1043,7 +1939,9 @@ fn cmd_split(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
 
         let module_name = match first_lean {
             Some(f) => {
-                let stem = f.path().file_stem()
+                let stem = f
+                    .path()
+                    .file_stem()
                     .and_then(|s| s.to_str())
                     .unwrap_or("Main");
                 format!("RequestProject.{}", stem)
@@ -1061,7 +1959,10 @@ fn cmd_split(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
         projects.push((project_dir, module_name));
     }
 
-    info!(count = projects.len(), "Discovered projects with RequestProject");
+    info!(
+        count = projects.len(),
+        "Discovered projects with RequestProject"
+    );
 
     if projects.is_empty() {
         println!("No projects with RequestProject found — nothing to split.");
@@ -1087,9 +1988,19 @@ fn cmd_split(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
             module_name
         );
 
-        match run_lean_splitter(&lake_bin, &splitter_path, project_dir, module_name, &proj_output) {
+        match run_lean_splitter(
+            &lake_bin,
+            &splitter_path,
+            project_dir,
+            module_name,
+            &proj_output,
+        ) {
             Ok(decl_count) => {
-                println!("  ✓ {} declarations split -> {}", decl_count, proj_output.display());
+                println!(
+                    "  ✓ {} declarations split -> {}",
+                    decl_count,
+                    proj_output.display()
+                );
                 succeeded += 1;
                 total_decls += decl_count;
             }
@@ -1103,7 +2014,10 @@ fn cmd_split(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
 
     println!(
         "Split complete: {} succeeded, {} failed, {} total declarations. Results in: {}",
-        succeeded, failed, total_decls, output_dir.display()
+        succeeded,
+        failed,
+        total_decls,
+        output_dir.display()
     );
     info!(succeeded, failed, total_decls, "Split complete");
     Ok(())
@@ -1270,56 +2184,57 @@ async fn main() -> Result<()> {
     let cli = Cli::parse();
 
     // Determine log level: use RUST_LOG env, or debug if --verbose on download
-    let env_filter = EnvFilter::try_from_default_env()
-        .unwrap_or_else(|_| EnvFilter::new("info"));
+    let env_filter = EnvFilter::try_from_default_env().unwrap_or_else(|_| EnvFilter::new("info"));
 
-    let file_log_guard: Option<tracing_appender::non_blocking::WorkerGuard> =
-        match &cli.command {
-            Commands::Download { trace, .. } if trace == "file" || trace == "both" => {
-                let config = load_config()?;
-                let trace_path = config.base_dir.join("trace.log");
-                let file_appender =
-                    tracing_appender::rolling::never(&config.base_dir, "trace.log");
-                let (non_blocking, guard) = tracing_appender::non_blocking(file_appender);
-                let file_layer = fmt::layer()
-                    .with_writer(non_blocking)
-                    .with_ansi(false)
-                    .with_target(true)
-                    .with_thread_ids(false)
-                    .with_thread_names(false)
-                    .with_file(false)
-                    .with_line_number(false);
-                let console_layer = fmt::layer()
-                    .with_writer(std::io::stdout)
-                    .with_target(true)
-                    .with_thread_ids(false)
-                    .with_thread_names(false)
-                    .with_file(false)
-                    .with_line_number(false);
+    let file_log_guard: Option<tracing_appender::non_blocking::WorkerGuard> = match &cli.command {
+        Commands::Download {
+            project_id: None,
+            trace,
+            ..
+        } if trace == "file" || trace == "both" => {
+            let config = load_config()?;
+            let trace_path = config.base_dir.join("trace.log");
+            let file_appender = tracing_appender::rolling::never(&config.base_dir, "trace.log");
+            let (non_blocking, guard) = tracing_appender::non_blocking(file_appender);
+            let file_layer = fmt::layer()
+                .with_writer(non_blocking)
+                .with_ansi(false)
+                .with_target(true)
+                .with_thread_ids(false)
+                .with_thread_names(false)
+                .with_file(false)
+                .with_line_number(false);
+            let console_layer = fmt::layer()
+                .with_writer(std::io::stdout)
+                .with_target(true)
+                .with_thread_ids(false)
+                .with_thread_names(false)
+                .with_file(false)
+                .with_line_number(false);
 
-                use tracing_subscriber::layer::SubscriberExt;
-                let subscriber = tracing_subscriber::Registry::default()
-                    .with(env_filter)
-                    .with(console_layer)
-                    .with(file_layer);
-                tracing::subscriber::set_global_default(subscriber)
-                    .context("Failed to set tracing subscriber")?;
-                println!("Trace file: {}", trace_path.display());
-                Some(guard)
-            }
-            _ => {
-                // Default: console-only subscriber
-                fmt()
-                    .with_env_filter(env_filter)
-                    .with_target(true)
-                    .with_thread_ids(false)
-                    .with_thread_names(false)
-                    .with_file(false)
-                    .with_line_number(false)
-                    .init();
-                None
-            }
-        };
+            use tracing_subscriber::layer::SubscriberExt;
+            let subscriber = tracing_subscriber::Registry::default()
+                .with(env_filter)
+                .with(console_layer)
+                .with(file_layer);
+            tracing::subscriber::set_global_default(subscriber)
+                .context("Failed to set tracing subscriber")?;
+            println!("Trace file: {}", trace_path.display());
+            Some(guard)
+        }
+        _ => {
+            // Default: console-only subscriber
+            fmt()
+                .with_env_filter(env_filter)
+                .with_target(true)
+                .with_thread_ids(false)
+                .with_thread_names(false)
+                .with_file(false)
+                .with_line_number(false)
+                .init();
+            None
+        }
+    };
 
     info!(version = VERSION, "aristotle-manager starting");
 
@@ -1338,13 +2253,100 @@ async fn main() -> Result<()> {
             cmd_build()?;
         }
         Commands::Download {
+            project_id,
             parallel,
             trace,
             verbose,
             limit,
+            destination,
         } => {
-            info!(parallel, trace, verbose, ?limit, "Executing download command");
-            cmd_download(*parallel, trace, *verbose, *limit).await?;
+            info!(
+                ?project_id,
+                parallel,
+                trace,
+                verbose,
+                ?limit,
+                ?destination,
+                "Executing download command"
+            );
+            cmd_download(
+                project_id.clone(),
+                *parallel,
+                trace,
+                *verbose,
+                *limit,
+                destination.clone(),
+            )
+            .await?;
+        }
+        Commands::Version => {
+            info!("Executing version command");
+            cmd_version().await?;
+        }
+        Commands::List {
+            limit,
+            pagination_key,
+            status,
+        } => {
+            info!(limit, ?pagination_key, ?status, "Executing list command");
+            cmd_list(*limit, pagination_key.clone(), status.clone()).await?;
+        }
+        Commands::Submit {
+            prompt,
+            project_dir,
+            wait,
+            destination,
+        } => {
+            info!(?project_dir, wait, ?destination, "Executing submit command");
+            cmd_submit(
+                prompt.clone(),
+                project_dir.clone(),
+                *wait,
+                destination.clone(),
+            )
+            .await?;
+        }
+        Commands::Ask {
+            project_id,
+            prompt,
+            wait,
+        } => {
+            info!(project_id, wait, "Executing ask command");
+            cmd_ask(project_id.clone(), prompt.clone(), *wait).await?;
+        }
+        Commands::Tasks {
+            project_id,
+            limit,
+            pagination_key,
+        } => {
+            info!(
+                project_id,
+                limit,
+                ?pagination_key,
+                "Executing tasks command"
+            );
+            cmd_tasks(project_id.clone(), *limit, pagination_key.clone()).await?;
+        }
+        Commands::Show {
+            project_id,
+            task,
+            limit,
+            pagination_key,
+        } => {
+            info!(
+                project_id,
+                ?task,
+                ?limit,
+                ?pagination_key,
+                "Executing show command"
+            );
+            cmd_show(
+                project_id.clone(),
+                task.clone(),
+                *limit,
+                pagination_key.clone(),
+            )
+            .await?;
         }
         Commands::Test { .. } => {
             info!("Executing test command");
@@ -1371,6 +2373,9 @@ async fn main() -> Result<()> {
         Commands::Clean => {
             info!("Executing clean command");
             cmd_clean()?
+        }
+        Commands::Index { .. } => {
+            anyhow::bail!("index command is not implemented yet")
         }
         Commands::Configure { subcommand } => {
             info!("Executing configure command");
