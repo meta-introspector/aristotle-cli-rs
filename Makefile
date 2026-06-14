@@ -30,6 +30,8 @@ LEAN := $(LEAN_BIN)/lean
 SPLITTER := /home/mdupont/projects/lean-split-decls/static_split.py
 ARIST_DIR := /mnt/data1/time-2026/05-may/07/arist
 SPLIT_OUT := $(ARIST_DIR)/split-results
+DASL_DIR := /home/mdupont/dasl
+DASL_SPLIT_OUT := $(ARIST_DIR)/split-results-dasl
 
 # Run static declaration split on all Aristotle projects (no build needed)
 split:
@@ -71,6 +73,40 @@ split-one:
 split-clean:
 	@echo "Cleaning split results..."
 	rm -rf $(SPLIT_OUT)
+
+# ── DASL dedup targets ───────────────────────────────────────────────
+
+# Run static split on all Lean files in ~/dasl/
+dedup-dasl:
+	@echo "Running static declaration split on ~/dasl/ Lean files..."
+	@cut -d: -f2- $(DASL_DIR)/index/lean.txt | sort -u | grep '\.lean$$' | grep -v '/\.lake/' | grep -v '/\.git/' > /tmp/dasl_lean_paths.txt; \
+	count=$$(wc -l < /tmp/dasl_lean_paths.txt); \
+	echo "  $$count Lean files found"; \
+	dirs=$$(sed 's|/[^/]*\.lean$$||' /tmp/dasl_lean_paths.txt | sort -u); \
+	ndirs=$$(echo "$$dirs" | wc -l); \
+	echo "  $$ndirs unique project directories"; \
+	n=0; total=0; \
+	rm -rf $(DASL_SPLIT_OUT); mkdir -p $(DASL_SPLIT_OUT); \
+	for dir in $$dirs; do \
+		[ -d "$$dir" ] || continue; \
+		name=$$(echo "$$dir" | tr '/' '-'); \
+		out="$(DASL_SPLIT_OUT)/$$name"; \
+		mkdir -p "$$out"; \
+		python3 $(SPLITTER) "$$dir" "$$out" 2>/dev/null; \
+		flakes=$$(find "$$out" -name 'flake.nix' 2>/dev/null | wc -l); \
+		total=$$((total + flakes)); n=$$((n+1)); \
+		echo "[$$n/$$ndirs] $$name: $$flakes flakes"; \
+	done; \
+	echo "Done: $$total total flakes across $$n directories"
+
+# Count declarations in DASL lean files (dry-run)
+dedup-dasl-dry:
+	@echo "Counting declarations in ~/dasl/ Lean files..."
+	@cut -d: -f2- $(DASL_DIR)/index/lean.txt | sort -u | grep '\.lean$$' | grep -v '/\.lake/' | grep -v '/\.git/' | while read f; do \
+		[ -f "$$f" ] || continue; \
+		decls=$$(grep -cE '^(def |theorem |lemma |example |inductive |structure |class |instance |opaque |axiom |abbrev )' "$$f" 2>/dev/null || echo 0); \
+		[ "$$decls" -gt 0 ] && echo "$$decls $$f"; \
+	done | awk '{sum+=$$1; print} END{print sum " TOTAL"}'
 
 # ── End split targets ────────────────────────────────────────────────
 
@@ -121,6 +157,8 @@ help:
 	@echo "  split           : Static decl split (no build), one flake.nix per decl"
 	@echo "  split-one PROJ= : Split single project by UUID"
 	@echo "  split-clean     : Remove split results"
+	@echo "  dedup-dasl      : Run static dedup/split on all ~/dasl/ Lean files"
+	@echo "  dedup-dasl-dry  : Count declarations in ~/dasl/ (no split)"
 	@echo "  rust-build      : Build the Rust project"
 	@echo "  rust-run        : Run the Rust project"
 	@echo "  rust-repl       : Start Rust REPL"
