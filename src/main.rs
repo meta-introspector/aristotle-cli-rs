@@ -111,6 +111,11 @@ enum Commands {
     },
     /// Clean build artifacts
     Clean,
+    /// Index all Aristotle runs into DASL-compatible blocks.json
+    Index {
+        #[arg(long)]
+        output: Option<PathBuf>,
+    },
     /// Generate text files for NotebookLM
     Notebooklm {
         /// The path to the Aristotle project directory
