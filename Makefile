@@ -27,11 +27,11 @@ results:
 LEAN_BIN := /nix/store/aqpyjzpqhs988lpqs8rnq8rw3i7ihrmi-lean/bin
 LAKE := $(LEAN_BIN)/lake
 LEAN := $(LEAN_BIN)/lean
-SPLITTER := /home/mdupont/projects/lean-split-decls/StaticSplit.lean
+SPLITTER := /home/mdupont/projects/lean-split-decls/static_split.py
 ARIST_DIR := /mnt/data1/time-2026/05-may/07/arist
 SPLIT_OUT := $(ARIST_DIR)/split-results
 
-# Run static Lean declaration split on all Aristotle projects (no build needed)
+# Run static declaration split on all Aristotle projects (no build needed)
 split:
 	@echo "Running static declaration splitter on all projects..."
 	@count=0; succ=0; fail=0; \
@@ -41,13 +41,13 @@ split:
 				name=$$(basename "$$proj"); \
 				out="$(SPLIT_OUT)/$$name"; \
 				mkdir -p "$$out"; \
-				if PATH="$(LEAN_BIN):$$PATH" lake env lean --run $(SPLITTER) "$$inner" "$$out" 2>/dev/null; then \
+				if python3 $(SPLITTER) "$$inner" "$$out" 2>/dev/null; then \
 					succ=$$((succ+1)); \
 				else \
 					fail=$$((fail+1)); \
 				fi; \
 				count=$$((count+1)); \
-				echo "[$$count] $$name: $$(find "$$out" -name '*.nix' 2>/dev/null | wc -l) flakes"; \
+				echo "[$$count] $$name: $$(find "$$out" -name 'flake.nix' 2>/dev/null | wc -l) flakes"; \
 			fi; \
 		done; \
 	done; \
@@ -62,7 +62,7 @@ split-one:
 			out="$(SPLIT_OUT)/$$name"; \
 			mkdir -p "$$out"; \
 			echo "Splitting $$dir -> $$out"; \
-			PATH="$(LEAN_BIN):$$PATH" lake env lean --run $(SPLITTER) "$$dir" "$$out" 2>&1; \
+			python3 $(SPLITTER) "$$dir" "$$out"; \
 			echo "  Flakes: $$(find "$$out" -name 'flake.nix' 2>/dev/null | wc -l)"; \
 		fi; \
 	done
