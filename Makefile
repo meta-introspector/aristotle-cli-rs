@@ -23,6 +23,49 @@ results:
 	@echo "Build results:"
 	@cargo run --release -- results 2>/dev/null || echo "No results found. Run 'make test' or 'make poll' first."
 
+# ── Lean split-decls targets ─────────────────────────────────────────
+LEAN_BIN := /nix/store/aqpyjzpqhs988lpqs8rnq8rw3i7ihrmi-lean/bin
+LAKE := $(LEAN_BIN)/lake
+LEAN := $(LEAN_BIN)/lean
+SPLITTER := /home/mdupont/projects/lean-split-decls/SplitDecls.lean
+ARIST_DIR := /mnt/data1/time-2026/05-may/07/arist
+SPLIT_OUT := $(ARIST_DIR)/split-results
+
+# Build mathlib4 dep once (cached for all projects)
+split-build-deps:
+	@echo "Building mathlib4 dependency (shared by all projects)..."
+	@first=$$(find $(ARIST_DIR) -path '*_aristotle/*_aristotle/lakefile.toml' -exec dirname {} \; | head -1); \
+	if [ -n "$$first" ]; then \
+		echo "  First project: $$first"; \
+		cd "$$first" && PATH="$(LEAN_BIN):$$PATH" lake build || echo "  Build had warnings but may be OK"; \
+	else \
+		echo "  No projects found"; \
+	fi
+
+# Run Lean declaration split on all Aristotle projects
+split:
+	@echo "Running Lean declaration splitter on all projects..."
+	@LEAN_BIN=$(LEAN_BIN) cargo run --release -- split --input-dir $(ARIST_DIR) --output-dir $(SPLIT_OUT)
+
+# Split a single project (usage: make split-one PROJ=<uuid>)
+split-one:
+	@if [ -z "$(PROJ)" ]; then echo "Usage: make split-one PROJ=<project-uuid>"; exit 1; fi; \
+	for dir in $(ARIST_DIR)/$(PROJ)*_aristotle/*_aristotle/; do \
+		if [ -d "$$dir" ] && [ -f "$$dir/lakefile.toml" ]; then \
+			mod=$$(find "$$dir/RequestProject" -name '*.lean' -exec basename {} .lean \; | head -1); \
+			echo "Splitting $$dir (module: RequestProject.$$mod)..."; \
+			mkdir -p "$(SPLIT_OUT)/$(PROJ)"; \
+			cd "$$dir" && PATH="$(LEAN_BIN):$$PATH" lake env lean --run $(SPLITTER) "RequestProject.$$mod" "$(SPLIT_OUT)/$(PROJ)" && echo "  ✓ Done"; \
+		fi; \
+	done
+
+# Clean split results
+split-clean:
+	@echo "Cleaning split results..."
+	rm -rf $(SPLIT_OUT)
+
+# ── End split targets ────────────────────────────────────────────────
+
 # Clean up result file
 clean:
 	@cargo run --release -- clean
@@ -67,6 +110,10 @@ help:
 	@echo "  poll-results    : Fetch new results from Aristotle and test them"
 	@echo "  results         : Show build results from last test/poll"
 	@echo "  clean           : Remove result file"
+	@echo "  split           : Run Lean decl splitter on all projects"
+	@echo "  split-build-deps: Build mathlib4 once (shared cache)"
+	@echo "  split-one PROJ= : Split single project by UUID"
+	@echo "  split-clean     : Remove split results"
 	@echo "  rust-build      : Build the Rust project"
 	@echo "  rust-run        : Run the Rust project"
 	@echo "  rust-repl       : Start Rust REPL"
