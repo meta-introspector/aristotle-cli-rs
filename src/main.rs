@@ -16,6 +16,9 @@ use tracing::{debug, error, info, instrument, warn};
 use tracing_subscriber::{EnvFilter, fmt};
 use walkdir::WalkDir;
 
+mod notebooklm;
+
+
 #[cfg(test)]
 mod tests;
 
@@ -108,6 +111,12 @@ enum Commands {
     },
     /// Clean build artifacts
     Clean,
+    /// Generate text files for NotebookLM
+    Notebooklm {
+        /// The path to the Aristotle project directory
+        #[arg(long)]
+        project_dir: PathBuf,
+    },
 }
 
 #[derive(Subcommand)]
@@ -1210,6 +1219,10 @@ async fn main() -> Result<()> {
         Commands::Configure { subcommand } => {
             info!("Executing configure command");
             cmd_configure(subcommand)?
+        }
+        Commands::Notebooklm { project_dir } => {
+            info!("Executing notebooklm command");
+            notebooklm::cmd_notebooklm(project_dir)?;
         }
     }
 
