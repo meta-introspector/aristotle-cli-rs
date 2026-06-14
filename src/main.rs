@@ -981,23 +981,35 @@ async fn download_single_result(
     Ok(project_dir)
 }
 
-/// ── Split command ────────────────────────────────────────────────────────
+/// ── Split command (Lean declaration-level splitter) ──────────────────
 
 #[instrument(skip(input_dir, output_dir))]
 fn cmd_split(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<()> {
-    let input_dir = input_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist"));
+    let input_dir =
+        input_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist"));
     let output_dir =
         output_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist/split-results"));
     fs::create_dir_all(&output_dir)?;
 
+    // Path to the Lean splitter tool
+    let splitter_path = PathBuf::from(
+        "/home/mdupont/projects/lean-split-decls/SplitDecls.lean"
+    );
+
     info!(
         input = %input_dir.display(),
         output = %output_dir.display(),
-        "Starting split operation"
+        splitter = %splitter_path.display(),
+        "Starting Lean declaration split"
     );
 
-    let mut copied = 0u64;
-    for entry in WalkDir::new(&input_dir) {
+    // Find lake binary (same dir as lean)
+    let lake_bin = find_lake()?;
+    info!(lake = %lake_bin.display(), "Found lake binary");
+
+    // Discover all project directories with RequestProject
+    let mut projects: Vec<(PathBuf, String)> = Vec::new();
+    for entry in WalkDir::new(&input_dir).min_depth(2).max_depth(5) {
         let entry = match entry {
             Ok(e) => e,
             Err(e) => {
@@ -1005,46 +1017,185 @@ fn cmd_split(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
                 continue;
             }
         };
-        let path = entry.path();
-        if path.is_dir()
-            && path.file_name().map_or(false, |n| n == "RequestProject")
-        {
-            debug!(dir = %path.display(), "Found RequestProject directory");
-            for lean_entry_res in WalkDir::new(path) {
-                let lean_entry = match lean_entry_res {
-                    Ok(e) => e,
-                    Err(e) => {
-                        warn!(error = %e, "Failed to walk Lean entry");
-                        continue;
-                    }
-                };
-                if lean_entry
-                    .path()
-                    .extension()
-                    .map_or(false, |ext| ext == "lean")
-                {
-                    let relative = lean_entry.path().strip_prefix(&input_dir)?;
-                    let output = output_dir.join(relative);
-                    if let Some(parent) = output.parent() {
-                        fs::create_dir_all(parent)?;
-                    }
-                    if !output.exists() {
-                        fs::copy(lean_entry.path(), &output)?;
-                        debug!(file = %lean_entry.path().display(), "Copied");
-                        copied += 1;
-                    }
-                }
+        if !entry.file_type().is_dir() {
+            continue;
+        }
+        if entry.file_name() != "RequestProject" {
+            continue;
+        }
+        let request_dir = entry.path().to_path_buf();
+        let project_dir = request_dir
+            .parent()
+            .map(|p| p.to_path_buf())
+            .unwrap_or_else(|| request_dir.clone());
+
+        // Find module name from .lean files in RequestProject
+        let first_lean = WalkDir::new(&request_dir)
+            .max_depth(3)
+            .into_iter()
+            .filter_map(|e| e.ok())
+            .find(|e| e.path().extension().map_or(false, |x| x == "lean"));
+
+        let module_name = match first_lean {
+            Some(f) => {
+                let stem = f.path().file_stem()
+                    .and_then(|s| s.to_str())
+                    .unwrap_or("Main");
+                format!("RequestProject.{}", stem)
+            }
+            None => continue,
+        };
+
+        let proj_name = project_dir
+            .file_name()
+            .and_then(|s| s.to_str())
+            .unwrap_or("unknown")
+            .to_string();
+
+        debug!(project = %proj_name, module = %module_name, "Found project");
+        projects.push((project_dir, module_name));
+    }
+
+    info!(count = projects.len(), "Discovered projects with RequestProject");
+
+    if projects.is_empty() {
+        println!("No projects with RequestProject found — nothing to split.");
+        return Ok(());
+    }
+
+    let mut succeeded = 0u64;
+    let mut failed = 0u64;
+    let mut total_decls = 0u64;
+
+    for (i, (project_dir, module_name)) in projects.iter().enumerate() {
+        let proj_name = project_dir
+            .file_name()
+            .and_then(|s| s.to_str())
+            .unwrap_or("unknown");
+        let proj_output = output_dir.join(proj_name);
+
+        println!(
+            "[{}/{}] Splitting {} (module: {})...",
+            i + 1,
+            projects.len(),
+            proj_name,
+            module_name
+        );
+
+        match run_lean_splitter(&lake_bin, &splitter_path, project_dir, module_name, &proj_output) {
+            Ok(decl_count) => {
+                println!("  ✓ {} declarations split -> {}", decl_count, proj_output.display());
+                succeeded += 1;
+                total_decls += decl_count;
+            }
+            Err(e) => {
+                warn!(project = %proj_name, error = %e, "Split failed");
+                println!("  ✗ Failed: {}", e);
+                failed += 1;
             }
         }
     }
 
-    info!(copied, "Split complete");
     println!(
-        "Split complete. {} files copied to: {}",
-        copied,
-        output_dir.display()
+        "Split complete: {} succeeded, {} failed, {} total declarations. Results in: {}",
+        succeeded, failed, total_decls, output_dir.display()
     );
+    info!(succeeded, failed, total_decls, "Split complete");
     Ok(())
+}
+
+/// Find the `lake` binary (Lean build tool)
+fn find_lake() -> Result<PathBuf> {
+    // Try LEAN_BIN env
+    if let Ok(lean_path) = std::env::var("LEAN_BIN") {
+        let lake = PathBuf::from(&lean_path).parent().map(|p| p.join("lake"));
+        if let Some(p) = lake {
+            if p.exists() {
+                return Ok(p);
+            }
+        }
+    }
+    // Check common paths
+    for candidate in &[
+        "/nix/store/aqpyjzpqhs988lpqs8rnq8rw3i7ihrmi-lean/bin/lake",
+        "/home/mdupont/.nix-profile/bin/lake",
+    ] {
+        let p = PathBuf::from(candidate);
+        if p.exists() {
+            return Ok(p);
+        }
+    }
+    // Search PATH
+    std::env::var("PATH")
+        .ok()
+        .and_then(|path| {
+            path.split(':')
+                .map(PathBuf::from)
+                .map(|d| d.join("lake"))
+                .find(|p| p.exists())
+        })
+        .ok_or_else(|| anyhow::anyhow!("lake not found. Install Lean 4 or set LEAN_BIN"))
+}
+
+/// Run the Lean split-decls tool on a single project
+fn run_lean_splitter(
+    lake_bin: &PathBuf,
+    splitter_path: &PathBuf,
+    project_dir: &PathBuf,
+    module_name: &str,
+    output_dir: &PathBuf,
+) -> Result<u64> {
+    fs::create_dir_all(output_dir)?;
+
+    let output = Command::new(lake_bin)
+        .args(["env", "lean", "--run"])
+        .arg(splitter_path)
+        .arg(module_name)
+        .arg(output_dir)
+        .current_dir(project_dir)
+        .output()
+        .with_context(|| {
+            format!(
+                "Failed to run lake env lean --run {} {} {} in {}",
+                splitter_path.display(),
+                module_name,
+                output_dir.display(),
+                project_dir.display()
+            )
+        })?;
+
+    let stdout = String::from_utf8_lossy(&output.stdout);
+    let stderr = String::from_utf8_lossy(&output.stderr);
+
+    if !output.status.success() {
+        warn!(
+            project = %project_dir.display(),
+            "Lean splitter returned non-zero"
+        );
+        return Err(anyhow::anyhow!(
+            "Splitter failed: {}",
+            stderr.lines().last().unwrap_or("unknown error")
+        ));
+    }
+
+    // Parse declaration count from stdout (format: "N declaration files written to ...")
+    let decl_count = stdout
+        .lines()
+        .rev()
+        .find_map(|line| {
+            line.split_whitespace()
+                .next()
+                .and_then(|s| s.parse::<u64>().ok())
+        })
+        .unwrap_or(0);
+
+    debug!(
+        project = %project_dir.display(),
+        decl_count,
+        "Splitter completed"
+    );
+
+    Ok(decl_count)
 }
 
 /// ── Merge command ────────────────────────────────────────────────────────
