@@ -1,4 +1,5 @@
 /target
+splitter-engine/
 
 # Flake lock file
 flake.lock
