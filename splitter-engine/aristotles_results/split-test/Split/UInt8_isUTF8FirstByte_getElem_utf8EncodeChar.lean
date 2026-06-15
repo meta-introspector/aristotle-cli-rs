@@ -1,0 +1,70 @@
+import Split.ByteArray_utf8DecodeChar?_parseFirstByte
+import Split.ByteArray_utf8DecodeChar?_FirstByte_invalid
+import Split.Eq_mpr
+import Split.Nat_ne_of_lt'
+import Split.False
+import Split.eq_false
+import Split.iff_false
+import Split.congrArg
+import Split.False_elim
+import Split.Char_utf8Size_le_four
+import Split.iff_true
+import Split.noConfusion_of_Nat
+import Split.ByteArray_utf8DecodeChar?_FirstByte_threeMore
+import Split.ByteArray_utf8DecodeChar?_FirstByte_ctorIdx
+import Split.Eq_mp
+import Split.ByteArray_utf8DecodeChar?_FirstByte_twoMore
+import Split.id
+import Split.Ne
+import Split.instOfNatNat
+import Split.LE_le
+import Split.instLENat
+import Split.Or_casesOn
+import Split.GetElem_getElem
+import Split.GT_gt
+import Split.UInt8_IsUTF8FirstByte
+import Split.List
+import Split.String_utf8EncodeChar
+import Split.absurd
+import Split.Iff
+import Split.String_length_utf8EncodeChar
+import Split.Nat
+import Split.congr
+import Split.LT_lt
+import Split.True
+import Split.eq_self
+import Split.Bool
+import Split.of_eq_true
+import Split.Nat_decLt
+import Split.Eq_ndrec
+import Split.Char_utf8Size_pos
+import Split.Eq_refl
+import Split.ByteArray_utf8DecodeChar?_FirstByte_done
+import Split.ByteArray_utf8DecodeChar?_isInvalidContinuationByte
+import Split.ByteArray_utf8DecodeChar?_FirstByte
+import Split.congrFun'
+import Split.Char
+import Split.Or
+import Split.instLTNat
+import Split.List_instGetElemNatLtLength
+import Split.ByteArray_utf8DecodeChar?_FirstByte_oneMore
+import Split.OfNat_ofNat
+import Split.Eq_symm
+import Split.not_false_eq_true
+import Split.Bool_false
+import Split.UInt8
+import Split.eq_false'
+import Split.Decidable_decide
+import Split.Eq
+import Split.List_length
+import Split.Nat_eq_zero_or_pos
+import Split.Not
+import Split.Char_utf8Size
+import Split.Eq_trans
+import Split.of_decide_eq_false
+
+-- UInt8.isUTF8FirstByte_getElem_utf8EncodeChar from environment
+-- theorem UInt8.isUTF8FirstByte_getElem_utf8EncodeChar : forall {c : Char} {i : Nat} {hi : LT.lt.{0} Nat instLTNat i (List.length.{0} UInt8 (String.utf8EncodeChar c))}, Iff (UInt8.IsUTF8FirstByte (GetElem.getElem.{0, 0, 0} (List.{0} UInt8) Nat UInt8 (fun (as : List.{0} UInt8) (i : Nat) => LT.lt.{0} Nat instLTNat i (List.length.{0} UInt8 as)) (List.instGetElemNatLtLength.{0} UInt8) (String.utf8EncodeChar c) i hi)) (Eq.{1} Nat i (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)))
+
+-- Stub: this file represents the declaration `UInt8.isUTF8FirstByte_getElem_utf8EncodeChar`.
+-- In a full split, the body would be extracted from the environment.

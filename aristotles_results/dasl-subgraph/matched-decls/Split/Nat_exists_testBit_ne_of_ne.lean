@@ -1,0 +1,73 @@
+import Split.Eq_mpr
+import Split.False
+import Split.instHDiv
+import Split.HMul_hMul
+import Split.instDecidableTrue
+import Split.congrArg
+import Split.Decidable_decide_congr_simp
+import Split.Nat_div_add_mod
+import Split.Nat_div2Induction
+import Split.Nat_mod_two_eq_zero_or_one
+import Split.Bool_false_eq_true
+import Split.Exists
+import Split.Nat_testBit_zero
+import Split.Eq_mp
+import Split.not_true_eq_false
+import Split.id
+import Split.HDiv_hDiv
+import Split.Nat_instMod
+import Split.instHMod
+import Split.Bool_true_eq_false
+import Split.decide_false
+import Split.Ne
+import Split.instMulNat
+import Split.instOfNatNat
+import Split.decide_true
+import Split.dite
+import Split.Or_casesOn
+import Split.Bool_true
+import Split.funext
+import Split.GT_gt
+import Split.instHAdd
+import Split.HMod_hMod
+import Split.Nat_zero_testBit
+import Split.HAdd_hAdd
+import Split.Nat_exists_testBit_of_ne_zero
+import Split.implies_congr
+import Split.Nat
+import Split.congr
+import Split.LT_lt
+import Split.True
+import Split.Nat_testBit
+import Split.eq_self
+import Split.Nat_instDiv
+import Split.Exists_intro
+import Split.instDecidableFalse
+import Split.Bool
+import Split.of_eq_true
+import Split.instAddNat
+import Split.Eq_refl
+import Split.congrFun'
+import Split.instDecidableEqNat
+import Split.Or_inl
+import Split.Nat_testBit_add_one
+import Split.Or
+import Split.instLTNat
+import Split.OfNat_ofNat
+import Split.Eq_symm
+import Split.not_false_eq_true
+import Split.Bool_false
+import Split.Decidable_decide
+import Split.Nat_succ
+import Split.Eq
+import Split.Nat_eq_zero_or_pos
+import Split.Not
+import Split.Or_inr
+import Split.Eq_trans
+import Split.instHMul
+
+-- Nat.exists_testBit_ne_of_ne from environment
+-- theorem Nat.exists_testBit_ne_of_ne : forall {x : Nat} {y : Nat}, (Ne.{1} Nat x y) -> (Exists.{1} Nat (fun (i : Nat) => Ne.{1} Bool (Nat.testBit x i) (Nat.testBit y i)))
+
+-- Stub: this file represents the declaration `Nat.exists_testBit_ne_of_ne`.
+-- In a full split, the body would be extracted from the environment.

@@ -1,0 +1,2 @@
+-- Declaration: vacuum_coeff
+-- Extracted by StaticSplit

@@ -16,11 +16,9 @@ use tracing::{debug, error, info, instrument, warn};
 use tracing_subscriber::{EnvFilter, fmt};
 use walkdir::WalkDir;
 
+mod dasl_index;
+mod index;
 mod notebooklm;
-
-
-#[cfg(test)]
-mod tests;
 
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
@@ -88,6 +86,20 @@ enum Commands {
         #[arg(long)]
         output_dir: Option<PathBuf>,
     },
+    /// Refresh: pull latest from Aristotle, download new, split all, build decl table
+    Refresh {
+        #[arg(short = 'j', default_value = "4")]
+        parallel: usize,
+        #[arg(long)]
+        limit: Option<usize>,
+    },
+    /// Build canonical declaration table from split results
+    DeclTable {
+        #[arg(long)]
+        split_dir: Option<PathBuf>,
+        #[arg(long)]
+        output: Option<PathBuf>,
+    },
     /// Merge split results
     Merge {
         #[arg(long)]
@@ -122,6 +134,24 @@ enum Commands {
         #[arg(long)]
         project_dir: PathBuf,
     },
+    /// Run SplitDecls on all Lean projects and produce per-declaration flake.nix lattice
+    SplitAll {
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+        #[arg(short = 'j', default_value = "4")]
+        parallel: usize,
+        #[arg(long)]
+        dry_run: bool,
+    },
+    /// Scan DASL index files (~/dasl/index/*.txt), find Lean4 proofs, ingest
+    DaslIndex {
+        #[arg(long)]
+        index_dir: Option<PathBuf>,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+        #[arg(long)]
+        prefix_filter: Option<String>,
+    },
 }
 
 #[derive(Subcommand)]
@@ -134,7 +164,7 @@ enum ConfigureCommands {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-struct Config {
+pub struct Config {
     base_dir: PathBuf,
     results_dir: PathBuf,
     git_base: PathBuf,
@@ -144,7 +174,7 @@ struct Config {
 }
 
 #[instrument]
-fn load_config() -> Result<Config> {
+pub fn load_config() -> Result<Config> {
     let config_dir = dirs::config_dir()
         .context("Could not determine config directory")?
         .join("aristotle-manager");
@@ -153,9 +183,9 @@ fn load_config() -> Result<Config> {
 
     if !config_path.exists() {
         let default_config = Config {
-            base_dir: PathBuf::from("/home/mdupont/projects/arist"),
-            results_dir: PathBuf::from("/home/mdupont/projects/aristotle_results"),
-            git_base: PathBuf::from("/home/mdupont/05/07/arist"),
+            base_dir: PathBuf::from("aristotles_results"),
+            results_dir: PathBuf::from("aristotles_results"),
+            git_base: PathBuf::from("aristotles_results"),
             max_parallel_downloads: 4,
             retry_wait_seconds: 10,
             max_retries: 3,
@@ -238,9 +268,9 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
             let config_str = fs::read_to_string(&config_path).unwrap_or_default();
             let mut config: Config = if config_str.is_empty() {
                 Config {
-                    base_dir: PathBuf::from("/home/mdupont/projects/arist"),
-                    results_dir: PathBuf::from("/home/mdupont/projects/aristotle_results"),
-                    git_base: PathBuf::from("/home/mdupont/05/07/arist"),
+                    base_dir: PathBuf::from("aristotles_results"),
+                    results_dir: PathBuf::from("aristotles_results"),
+                    git_base: PathBuf::from("aristotles_results"),
                     max_parallel_downloads: 4,
                     retry_wait_seconds: 10,
                     max_retries: 3,
@@ -248,9 +278,9 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
             } else {
                 toml::from_str(&config_str)?
             };
-            config.git_base = PathBuf::from("/home/mdupont/05/07/arist");
-            config.base_dir = PathBuf::from("/home/mdupont/projects/arist");
-            config.results_dir = PathBuf::from("/home/mdupont/projects/aristotle_results");
+            config.git_base = PathBuf::from("aristotles_results");
+            config.base_dir = PathBuf::from("aristotles_results");
+            config.results_dir = PathBuf::from("aristotles_results");
             let toml = toml::to_string(&config)?;
             fs::write(&config_path, toml)?;
             info!(path = %config_path.display(), "Configuration saved");
@@ -291,10 +321,11 @@ fn get_project_dirs(base_dir: &PathBuf) -> Result<Vec<PathBuf>> {
         };
         let path = entry.path();
         if path.is_dir() {
+            let is_git_repo = path.join(".git").is_dir();
             if let Some(name) = path.file_name() {
                 if let Some(name_str) = name.to_str() {
-                    if name_str.ends_with("_aristotle") {
-                        debug!(project = name_str, "Found aristotle project directory");
+                    if name_str.ends_with("_aristotle") || is_git_repo {
+                        debug!(project = name_str, is_git = is_git_repo, "Found project directory");
                         dirs.push(path);
                     }
                 }
@@ -722,6 +753,124 @@ async fn cmd_download(parallel: usize, _trace: &str, verbose: bool, limit: Optio
     Ok(())
 }
 
+/// ── Refresh: pull newest, download, split, build decl table ────────────
+
+#[instrument(skip_all)]
+async fn cmd_refresh(parallel: usize, limit: Option<usize>) -> Result<()> {
+    let config = load_config()?;
+    let api_key = get_api_key()?;
+
+    println!("╔══════════════════════════════════════════════╗");
+    println!("║   Aristotle Refresh Pipeline                 ║");
+    println!("╚══════════════════════════════════════════════╝");
+
+    // Step 1: Download (handles pagination, saves JSON, extracts)
+    println!("\n[1/3] Downloading latest projects...");
+    cmd_download(parallel, "console", true, limit).await?;
+
+    // Step 2: Split all projects (including nested archives)
+    println!("\n[2/3] Splitting declarations...");
+    let split_input = config.git_base.clone();
+    let split_output = config.base_dir.join("split-results");
+    cmd_split(Some(split_input), Some(split_output.clone()))?;
+
+    // Step 3: Build canonical declaration table
+    println!("\n[3/3] Building canonical declaration table...");
+    let table_output = config.base_dir.join("decl-table.json");
+    cmd_decl_table(Some(split_output), Some(table_output.clone()))?;
+
+    println!("\n✓ Refresh complete!");
+    println!("  Decl table: {}", table_output.display());
+    Ok(())
+}
+
+/// ── Build canonical declaration table ──────────────────────────────────
+
+#[instrument(skip(split_dir, output))]
+fn cmd_decl_table(split_dir: Option<PathBuf>, output: Option<PathBuf>) -> Result<()> {
+    let config = load_config()?;
+    let split_dir = split_dir
+        .unwrap_or_else(|| config.git_base.join("split-results"));
+    let output = output
+        .unwrap_or_else(|| config.git_base.join("decl-table.json"));
+
+    info!(
+        split_dir = %split_dir.display(),
+        output = %output.display(),
+        "Building canonical declaration table"
+    );
+
+    // Walk all split output directories for flake.nix files
+    // Each flake.nix directory = one declaration
+    let mut decls: std::collections::BTreeMap<String, Vec<String>> = std::collections::BTreeMap::new();
+    let mut total = 0u64;
+
+    for entry in WalkDir::new(&split_dir)
+        .min_depth(2)
+        .max_depth(5)
+        .into_iter()
+        .filter_map(|e| e.ok())
+    {
+        if entry.file_name() == "flake.nix" {
+            let decl_dir = entry.path().parent().unwrap_or(entry.path());
+            let decl_name = decl_dir
+                .file_name()
+                .and_then(|s| s.to_str())
+                .unwrap_or("unknown")
+                .to_string();
+
+            // Find which project(s) this decl comes from
+            let project = decl_dir
+                .ancestors()
+                .find(|a| {
+                    a.file_name()
+                        .map_or(false, |n| n.to_string_lossy().ends_with("_aristotle"))
+                })
+                .map(|p| p.file_name().unwrap_or_default().to_string_lossy().to_string())
+                .unwrap_or_default();
+
+            decls.entry(decl_name.clone())
+                .or_default()
+                .push(project);
+            total += 1;
+        }
+    }
+
+    // Deduplicate: each unique declaration name → canonical path + source projects
+    let mut table: Vec<serde_json::Value> = Vec::new();
+    for (name, projects) in &decls {
+        // Canonical path: use first project's path as canonical
+        let canonical = projects.first().map(|p| format!("{}/{}", p, name)).unwrap_or_default();
+        let unique_projects: Vec<&String> = {
+            let mut seen = std::collections::HashSet::new();
+            projects.iter().filter(|p| seen.insert(*p)).collect()
+        };
+        table.push(serde_json::json!({
+            "declaration": name,
+            "canonical_path": canonical,
+            "source_projects": unique_projects,
+            "occurrences": projects.len(),
+        }));
+    }
+
+    // Write table
+    let json = serde_json::to_string_pretty(&serde_json::json!({
+        "total_declarations": table.len(),
+        "total_occurrences": total,
+        "table": table,
+    }))?;
+    fs::write(&output, &json)?;
+
+    info!(declarations = table.len(), occurrences = total, "Declaration table built");
+    println!(
+        "Canonical decl table: {} unique declarations ({} total occurrences) -> {}",
+        table.len(),
+        total,
+        output.display()
+    );
+    Ok(())
+}
+
 /// Extract project IDs from the JSON response, handling various possible structures.
 fn extract_project_ids(json: &Value) -> Vec<String> {
     // Helper: try "project_id" first, then "id"
@@ -986,20 +1135,144 @@ async fn download_single_result(
     Ok(project_dir)
 }
 
+/// ── Split-All command: run SplitDecls on every Lean project ─────────
+
+#[instrument(skip(output_dir))]
+fn cmd_split_all(output_dir: Option<PathBuf>, parallel: usize, dry_run: bool) -> Result<()> {
+    let config = load_config()?;
+    let output_dir = output_dir.unwrap_or_else(|| config.base_dir.join("split-results"));
+
+    let splitter_script = PathBuf::from("split-aristotle-project.sh");
+    if !splitter_script.exists() {
+        return Err(anyhow::anyhow!(
+            "split-aristotle-project.sh not found. Run from aristotle-manager root."
+        ));
+    }
+
+    // Find all *_aristotle/ project directories
+    let dirs = get_project_dirs(&config.git_base)?;
+    info!(count = dirs.len(), "Found project directories");
+
+    if dirs.is_empty() {
+        println!("No project directories found in {}", config.git_base.display());
+        return Ok(());
+    }
+
+    if dry_run {
+        println!("Dry run — would split {} projects into {}", dirs.len(), output_dir.display());
+        for dir in &dirs {
+            let name = dir.file_name().unwrap_or_default().to_string_lossy();
+            let project_output = output_dir.join(&*name);
+            println!("  {} -> {}", name, project_output.display());
+        }
+        return Ok(());
+    }
+
+    fs::create_dir_all(&output_dir)?;
+
+    println!("Splitting {} Lean projects...", dirs.len());
+    let mut succeeded = 0u64;
+    let mut failed = 0u64;
+    let mut total_decls = 0u64;
+
+    // Process sequentially (the splitter itself is parallelized internally)
+    for (i, dir) in dirs.iter().enumerate() {
+        let name = dir.file_name().unwrap_or_default().to_string_lossy();
+        let project_output = output_dir.join(&*name);
+
+        // Look for .lean files inside the project
+        let lean_files: Vec<_> = WalkDir::new(dir)
+            .max_depth(5)
+            .into_iter()
+            .filter_map(|e| e.ok())
+            .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
+            .collect();
+
+        if lean_files.is_empty() {
+            debug!(project = %name, "No .lean files, skipping");
+            continue;
+        }
+
+        // Check for RequestProject directory
+        let rp_dir = dir.join("output-final_aristotle").join("RequestProject");
+        if !rp_dir.exists() {
+            debug!(project = %name, "No RequestProject, skipping");
+            continue;
+        }
+
+        println!(
+            "[{}/{}] Splitting {}...",
+            i + 1,
+            dirs.len(),
+            name
+        );
+
+        let abs_splitter = std::env::current_dir()?.join("split-aristotle-project.sh");
+        let result = Command::new(&abs_splitter)
+            .args([
+                dir.to_string_lossy().as_ref(),
+                project_output.to_string_lossy().as_ref(),
+            ])
+            .output();
+
+        match result {
+            Ok(output) => {
+                let stdout = String::from_utf8_lossy(&output.stdout);
+                let stderr = String::from_utf8_lossy(&output.stderr);
+                if output.status.success() {
+                    // Parse declaration count from output
+                    let decls = stdout
+                        .lines()
+                        .rev()
+                        .find_map(|line| {
+                            line.split_whitespace()
+                                .next()
+                                .and_then(|s| s.parse::<u64>().ok())
+                        })
+                        .unwrap_or(0);
+                    println!("  ✓ {} declarations -> {}", decls, project_output.display());
+                    succeeded += 1;
+                    total_decls += decls;
+                } else {
+                    warn!(project = %name, stderr = %stderr.trim(), "Split failed");
+                    println!("  ✗ Failed: {}", stderr.lines().last().unwrap_or("unknown"));
+                    failed += 1;
+                }
+            }
+            Err(e) => {
+                error!(project = %name, error = %e, "Failed to run splitter");
+                println!("  ✗ Error: {}", e);
+                failed += 1;
+            }
+        }
+    }
+
+    println!(
+        "Split-all complete: {} succeeded, {} failed, {} total declarations. Results in: {}",
+        succeeded, failed, total_decls, output_dir.display()
+    );
+    info!(succeeded, failed, total_decls, "Split-all complete");
+    Ok(())
+}
+
 /// ── Split command (Lean declaration-level splitter) ──────────────────
 
 #[instrument(skip(input_dir, output_dir))]
 fn cmd_split(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<()> {
+    let config = load_config()?;
     let input_dir =
-        input_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist"));
+        input_dir.unwrap_or_else(|| config.git_base.clone());
     let output_dir =
-        output_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist/split-results"));
+        output_dir.unwrap_or_else(|| config.git_base.join("split-results"));
     fs::create_dir_all(&output_dir)?;
 
     // Path to the Lean splitter tool
-    let splitter_path = PathBuf::from(
-        "/home/mdupont/projects/lean-split-decls/SplitDecls.lean"
-    );
+    let splitter_path = std::env::var("LEAN_SPLITTER")
+        .map(PathBuf::from)
+        .unwrap_or_else(|_| {
+            let cwd = std::env::current_dir().unwrap_or_default();
+            cwd.join("..").join("lean-split-decls").join("SplitDecls.lean")
+        });
 
     info!(
         input = %input_dir.display(),
@@ -1123,7 +1396,6 @@ fn find_lake() -> Result<PathBuf> {
     // Check common paths
     for candidate in &[
         "/nix/store/aqpyjzpqhs988lpqs8rnq8rw3i7ihrmi-lean/bin/lake",
-        "/home/mdupont/.nix-profile/bin/lake",
     ] {
         let p = PathBuf::from(candidate);
         if p.exists() {
@@ -1207,10 +1479,11 @@ fn run_lean_splitter(
 
 #[instrument(skip(input_dir, output_dir))]
 fn cmd_merge(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<()> {
+    let config = load_config()?;
     let input_dir =
-        input_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist/split-results"));
+        input_dir.unwrap_or_else(|| config.git_base.join("split-results"));
     let output_dir =
-        output_dir.unwrap_or_else(|| PathBuf::from("/home/mdupont/05/07/arist/merged-results"));
+        output_dir.unwrap_or_else(|| config.git_base.join("merged-results"));
     fs::create_dir_all(&output_dir)?;
 
     info!(
@@ -1357,6 +1630,14 @@ async fn main() -> Result<()> {
             info!("Executing split command");
             cmd_split(input_dir.clone(), output_dir.clone())?;
         }
+        Commands::Refresh { parallel, limit } => {
+            info!(parallel, ?limit, "Executing refresh command");
+            cmd_refresh(*parallel, *limit).await?;
+        }
+        Commands::DeclTable { split_dir, output } => {
+            info!("Executing decl-table command");
+            cmd_decl_table(split_dir.clone(), output.clone())?;
+        }
         Commands::Merge {
             input_dir,
             output_dir,
@@ -1372,6 +1653,10 @@ async fn main() -> Result<()> {
             info!("Executing clean command");
             cmd_clean()?
         }
+        Commands::Index { output } => {
+            info!("Executing index command");
+            index::cmd_index(output.clone())?;
+        }
         Commands::Configure { subcommand } => {
             info!("Executing configure command");
             cmd_configure(subcommand)?
@@ -1379,6 +1664,14 @@ async fn main() -> Result<()> {
         Commands::Notebooklm { project_dir } => {
             info!("Executing notebooklm command");
             notebooklm::cmd_notebooklm(project_dir)?;
+        }
+        Commands::SplitAll { output_dir, parallel, dry_run } => {
+            info!("Executing split-all command");
+            cmd_split_all(output_dir.clone(), *parallel, *dry_run)?;
+        }
+        Commands::DaslIndex { index_dir, output_dir, prefix_filter } => {
+            info!("Executing dasl-index command");
+            dasl_index::cmd_dasl_index(index_dir.clone(), output_dir.clone(), prefix_filter.clone())?;
         }
     }
 

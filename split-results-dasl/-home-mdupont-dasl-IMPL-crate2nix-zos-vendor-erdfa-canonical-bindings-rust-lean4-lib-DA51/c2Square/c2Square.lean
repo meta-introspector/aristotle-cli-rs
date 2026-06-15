@@ -1,0 +1,2 @@
+-- Declaration: c2Square
+-- Extracted by StaticSplit

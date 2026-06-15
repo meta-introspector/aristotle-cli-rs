@@ -1,0 +1,2 @@
+-- Declaration: resultShard
+-- Extracted by StaticSplit

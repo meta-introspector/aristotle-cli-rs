@@ -1,0 +1,2 @@
+-- Declaration: monsterLie
+-- Extracted by StaticSplit

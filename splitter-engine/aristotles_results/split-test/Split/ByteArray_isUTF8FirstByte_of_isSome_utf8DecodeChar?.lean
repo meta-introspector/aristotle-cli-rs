@@ -1,0 +1,69 @@
+import Split.Eq_mpr
+import Split.GetElem
+import Split.ByteArray_lt_size_of_isSome_utf8DecodeChar?
+import Split.congrArg
+import Split.Std_IsLinearPreorder_toIsPreorder
+import Split.ByteArray_extract
+import Split.Std_instReflLeOfIsPreorder
+import Split.HSub_hSub
+import Split.ByteArray_eq_of_utf8DecodeChar?_eq_some
+import Split.Option_some
+import Split.Exists
+import Split.Eq_rec
+import Split.Eq_mp
+import Split.id
+import Split.instSubNat
+import Split.instOfNatNat
+import Split.ByteArray_instGetElemNatUInt8LtSize
+import Split.LE_le
+import Split.ByteArray_isUTF8FirstByte_getElem_zero_utf8EncodeChar_append
+import Split.instLENat
+import Split.List_toByteArray
+import Split.GetElem_getElem
+import Split.Bool_true
+import Split.ByteArray_utf8DecodeChar?_eq_utf8DecodeChar?_extract
+import Split.UInt8_IsUTF8FirstByte
+import Split.instHAppendOfAppend
+import Split.instHAdd
+import Split.String_utf8EncodeChar
+import Split.Option_isSome_iff_exists
+import Split.ByteArray_size_extract
+import Split.instHSub
+import Split.Exists_casesOn
+import Split.HAdd_hAdd
+import Split.Nat
+import Split.LT_lt
+import Split.Nat_min_eq_left
+import Split.ByteArray_getElem_extract_aux
+import Split.Iff_mp
+import Split.Bool
+import Split.of_eq_true
+import Split.Eq_ndrec
+import Split.instAddNat
+import Split.Eq_refl
+import Split.congrFun'
+import Split.ByteArray_instAppend
+import Split.Char
+import Split.instLTNat
+import Split.ByteArray
+import Split.Option_isSome
+import Split.ByteArray_getElem_extract
+import Split.OfNat_ofNat
+import Split.UInt8
+import Split.Eq
+import Split.HAppend_hAppend
+import Split.Char_utf8Size
+import Split.Nat_instIsLinearOrder
+import Split.Min_min
+import Split.instMinNat
+import Split.ByteArray_size
+import Split.Eq_trans
+import Split.Std_IsLinearOrder_toIsLinearPreorder
+import Split.ByteArray_utf8DecodeChar?
+import Split.Option
+
+-- ByteArray.isUTF8FirstByte_of_isSome_utf8DecodeChar? from environment
+-- theorem ByteArray.isUTF8FirstByte_of_isSome_utf8DecodeChar? : forall {b : ByteArray} {i : Nat} (h : Eq.{1} Bool (Option.isSome.{0} Char (ByteArray.utf8DecodeChar? b i)) Bool.true), UInt8.IsUTF8FirstByte (GetElem.getElem.{0, 0, 0} ByteArray Nat UInt8 (fun (xs : ByteArray) (i : Nat) => LT.lt.{0} Nat instLTNat i (ByteArray.size xs)) ByteArray.instGetElemNatUInt8LtSize b i (ByteArray.lt_size_of_isSome_utf8DecodeChar? b i h))
+
+-- Stub: this file represents the declaration `ByteArray.isUTF8FirstByte_of_isSome_utf8DecodeChar?`.
+-- In a full split, the body would be extracted from the environment.

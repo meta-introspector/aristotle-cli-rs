@@ -1,0 +1,2 @@
+-- Declaration: lie_central_charge
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: majorArray
+-- Extracted by StaticSplit

@@ -1,0 +1,73 @@
+import Split.Pure_pure
+import Split.Unit_unit
+import Split.instDecidableNot
+import Split.Std_Format_nil
+import Split.String_Slice_Pattern_Char_instToForwardSearcherCharDefaultForwardSearcher
+import Split.instMonadExceptOfMonadExceptOf
+import Split.modify
+import Split.Monad_toApplicative
+import Split.String
+import Split.String_Slice_Pattern_ToForwardSearcher_DefaultForwardSearcher_instIteratorLoopIdSearchStep
+import Split.MonadExcept_throw
+import Split.Lean_PrettyPrinter_OneLine_continuation
+import Split.EStateM_instMonad
+import Split.MonadState_get
+import Split.Lean_PrettyPrinter_OneLine_State_column
+import Split.String_Slice
+import Split.String_Slice_trimAsciiEnd
+import Split.Std_Format_tag
+import Split.Lean_PrettyPrinter_OneLine_instMonadPrettyFormatM_match_1
+import Split.Prod_mk
+import Split.List_foldl
+import Split.Applicative_toPure
+import Split.Lean_PrettyPrinter_OneLine_State
+import Split.List_cons
+import Split.String_Slice_Pattern_ToForwardSearcher_DefaultForwardSearcher
+import Split.String_find
+import Split.String_Slice_copy
+import Split.instAppendString
+import Split.instHAppendOfAppend
+import Split.List
+import Split.instHAdd
+import Split.Unit
+import Split.List_drop
+import Split.HAdd_hAdd
+import Split.EStateM_instMonadStateOf
+import Split.PUnit
+import Split.Nat
+import Split.String_Pos
+import Split.String_length
+import Split.String_Pos_IsAtEnd
+import Split.instMonadStateOfMonadStateOf
+import Split.Std_Format
+import Split.Std_Format_append
+import Split.instAddNat
+import Split.Lean_PrettyPrinter_OneLine_State_line
+import Split.Monad_toBind
+import Split.EStateM_instMonadExceptOfOfBacktrackable
+import Split.String_sliceTo
+import Split.Lean_PrettyPrinter_OneLine_State_tags
+import Split.Bind_bind
+import Split.Char
+import Split.String_Slice_Pattern_Char_instForwardPatternChar
+import Split.Prod
+import Split.Std_Format_MonadPrettyFormat_mk
+import Split.String_Slice_Pattern_ToForwardSearcher_DefaultForwardSearcher_instIteratorIdSearchStepOfForwardPattern
+import Split.String_instDecidableIsAtEnd
+import Split.List_take
+import Split.Not
+import Split.HAppend_hAppend
+import Split.Lean_PrettyPrinter_OneLine_State_mk
+import Split.EStateM_nonBacktrackable
+import Split.Std_Format_text
+import Split.Char_ofNat
+import Split.Std_Format_MonadPrettyFormat
+import Split.Lean_PrettyPrinter_OneLine_M
+import Split.ite
+
+-- Lean.PrettyPrinter.OneLine.instMonadPrettyFormatM from environment
+-- def Lean.PrettyPrinter.OneLine.instMonadPrettyFormatM : Std.Format.MonadPrettyFormat Lean.PrettyPrinter.OneLine.M
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `Lean.PrettyPrinter.OneLine.instMonadPrettyFormatM`.
+-- In a full split, the body would be extracted from the environment.

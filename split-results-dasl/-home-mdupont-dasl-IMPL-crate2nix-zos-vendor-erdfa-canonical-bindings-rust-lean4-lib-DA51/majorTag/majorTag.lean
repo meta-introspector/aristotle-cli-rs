@@ -1,0 +1,2 @@
+-- Declaration: majorTag
+-- Extracted by StaticSplit

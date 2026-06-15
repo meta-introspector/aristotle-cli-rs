@@ -1,0 +1,2 @@
+-- Declaration: mm_no_currents
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MoonshineModule
+-- Extracted by StaticSplit

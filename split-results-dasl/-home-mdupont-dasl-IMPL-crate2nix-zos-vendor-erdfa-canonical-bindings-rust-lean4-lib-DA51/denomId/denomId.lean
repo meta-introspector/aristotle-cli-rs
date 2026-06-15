@@ -1,0 +1,2 @@
+-- Declaration: denomId
+-- Extracted by StaticSplit

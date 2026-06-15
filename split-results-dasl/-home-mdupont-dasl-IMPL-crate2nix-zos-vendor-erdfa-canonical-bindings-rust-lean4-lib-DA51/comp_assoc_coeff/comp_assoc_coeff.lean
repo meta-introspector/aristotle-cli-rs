@@ -1,0 +1,2 @@
+-- Declaration: comp_assoc_coeff
+-- Extracted by StaticSplit

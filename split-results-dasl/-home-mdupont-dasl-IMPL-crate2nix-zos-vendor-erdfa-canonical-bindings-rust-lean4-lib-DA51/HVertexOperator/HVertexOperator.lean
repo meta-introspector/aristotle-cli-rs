@@ -1,0 +1,2 @@
+-- Declaration: HVertexOperator
+-- Extracted by StaticSplit

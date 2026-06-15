@@ -43,3 +43,6 @@ shell-words = "1.1"
 
 # Date/time
 chrono = { version = "0.4", features = ["serde"] }
+
+# SQLite for Nix DB queries
+rusqlite = { version = "0.31", features = ["bundled"] }

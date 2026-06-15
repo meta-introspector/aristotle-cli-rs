@@ -1,0 +1,2 @@
+-- Declaration: DenominatorIdentity
+-- Extracted by StaticSplit

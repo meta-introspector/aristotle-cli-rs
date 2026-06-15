@@ -1,0 +1,2 @@
+-- Declaration: State.bind
+-- Extracted by StaticSplit

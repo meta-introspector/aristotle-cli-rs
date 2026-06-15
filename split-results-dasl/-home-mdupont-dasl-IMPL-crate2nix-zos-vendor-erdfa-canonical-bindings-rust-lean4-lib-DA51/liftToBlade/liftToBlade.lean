@@ -1,0 +1,2 @@
+-- Declaration: liftToBlade
+-- Extracted by StaticSplit

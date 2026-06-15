@@ -1,0 +1,2 @@
+-- Declaration: sspIndex
+-- Extracted by StaticSplit

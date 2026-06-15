@@ -1,0 +1,14 @@
+{
+  "inputDir": "/mnt/data1/time-2026/05-may/07/arist/locate2proof-output",
+  "outputDir": "/mnt/data1/time-2026/05-may/07/arist/locate2proof-output/split",
+  "modules": [
+    "DA51.CborVal", "DA51.Encode", "DA51.Decode", "DA51.Monster",
+    "DA51.Hecke", "DA51.Vertex", "DA51.HVertex", "DA51.Borcherds",
+    "DA51.Conformal", "DA51.Reflect", "DA51.SelfApply", "DA51.Exec",
+    "DA51.Ternary", "DA51.Bivector", "DA51.CubicalKernel",
+    "DA51.RoundTrip", "DA51.RealRoundTrip", "DA51.MultiAttractor",
+    "DA51.Theories", "DA51.TestReflect"
+  ],
+  "baseModule": "DA51",
+  "locateResultsFile": "./locate-results.txt"
+}

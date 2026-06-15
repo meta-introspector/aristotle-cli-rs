@@ -1,0 +1,76 @@
+import Split.Eq_mpr
+import Split.congrArg
+import Split.String
+import Split.Nat_min_le_right
+import Split.List_take_append_of_le_length
+import Split.HSub_hSub
+import Split.String_utf8ByteSize
+import Split.List_take_append
+import Split.Exists
+import Split.Nat_add_sub_cancel_left
+import Split.Eq_mp
+import Split.List_take_of_length_le
+import Split.id
+import Split.instSubNat
+import Split.List_take_eq_take_min
+import Split.LE_le
+import Split.instLENat
+import Split.String_Pos_Raw
+import Split.String_Pos_Raw_isValid_ofList
+import Split.dite
+import Split.Or_casesOn
+import Split.And_casesOn
+import Split.String_rawEndPos
+import Split.instAppendString
+import Split.instHAppendOfAppend
+import Split.List
+import Split.instHAdd
+import Split.And
+import Split.Iff
+import Split.instHSub
+import Split.Exists_casesOn
+import Split.String_instHSubRaw
+import Split.HAdd_hAdd
+import Split.String_exists_eq_ofList
+import Split.String_ofList_append
+import Split.Nat
+import Split.And_intro
+import Split.congr
+import Split.True
+import Split.String_instLERaw
+import Split.Iff_intro
+import Split.eq_self
+import Split.propext
+import Split.Exists_intro
+import Split.Decidable_byContradiction
+import Split.of_eq_true
+import Split.Eq_ndrec
+import Split.instAddNat
+import Split.Eq_refl
+import Split.congrFun'
+import Split.instDecidableEqNat
+import Split.Or_inl
+import Split.Char
+import Split.Or
+import Split.List_instAppend
+import Split.Eq_symm
+import Split.String_Pos_Raw_IsValid
+import Split.String_Pos_Raw_byteIdx
+import Split.Eq
+import Split.List_take
+import Split.List_length
+import Split.Not
+import Split.HAppend_hAppend
+import Split.Nat_decLe
+import Split.String_ofList
+import Split.Min_min
+import Split.Or_inr
+import Split.instMinNat
+import Split.Eq_trans
+import Split.String_utf8ByteSize_append
+
+-- String.Pos.Raw.isValid_append from environment
+-- theorem String.Pos.Raw.isValid_append : forall {s : String} {t : String} {p : String.Pos.Raw}, Iff (String.Pos.Raw.IsValid (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) s t) p) (Or (String.Pos.Raw.IsValid s p) (And (LE.le.{0} String.Pos.Raw String.instLERaw (String.rawEndPos s) p) (String.Pos.Raw.IsValid t (HSub.hSub.{0, 0, 0} String.Pos.Raw String String.Pos.Raw String.instHSubRaw p s))))
+
+-- Stub: this file represents the declaration `String.Pos.Raw.isValid_append`.
+-- In a full split, the body would be extracted from the environment.

@@ -1,0 +1,2 @@
+-- Declaration: ProofWitness
+-- Extracted by StaticSplit

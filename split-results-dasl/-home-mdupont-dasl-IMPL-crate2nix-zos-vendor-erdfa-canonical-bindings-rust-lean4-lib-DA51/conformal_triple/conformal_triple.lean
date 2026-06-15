@@ -1,0 +1,2 @@
+-- Declaration: conformal_triple
+-- Extracted by StaticSplit

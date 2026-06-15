@@ -1,0 +1,74 @@
+import Split.ByteArray_validateUTF8_go_match_1
+import Split.dite_cond_eq_true
+import Split.Eq_mpr
+import Split.False
+import Split.ByteArray_lt_size_of_isSome_utf8DecodeChar?
+import Split.eq_false
+import Split.Array_push
+import Split.congrArg
+import Split.ByteArray_utf8Decode?_go
+import Split.False_elim
+import Split.ByteArray_utf8DecodeChar
+import Split.Bool_false_eq_true
+import Split.Option_some
+import Split.Eq_rec
+import Split.Eq_mp
+import Split.Option_get_congr_simp
+import Split.UInt8_utf8ByteSize
+import Split.id
+import Split.Bool_true_eq_false
+import Split.ByteArray_isUTF8FirstByte_of_isSome_utf8DecodeChar?
+import Split.ByteArray_validateUTF8At_eq_isSome_utf8DecodeChar?
+import Split.ByteArray_instGetElemNatUInt8LtSize
+import Split.LE_le
+import Split.instLENat
+import Split.dite
+import Split.Array
+import Split.GetElem_getElem
+import Split.Bool_true
+import Split.Option_none
+import Split.instHAdd
+import Split.ByteArray_validateUTF8_go
+import Split.HAdd
+import Split.Bool_false_eq
+import Split.HAdd_hAdd
+import Split.ByteArray_isUTF8FirstByte_of_validateUTF8At
+import Split.ByteArray_le_size_of_utf8DecodeChar?_eq_some
+import Split.Nat
+import Split.congr
+import Split.LT_lt
+import Split.True
+import Split.eq_self
+import Split.eq_true
+import Split.Bool
+import Split.of_eq_true
+import Split.Nat_decLt
+import Split.Eq_ndrec
+import Split.instAddNat
+import Split.Eq_refl
+import Split.congrFun'
+import Split.ByteArray_validateUTF8_go_eq_def
+import Split.Char
+import Split.instLTNat
+import Split.ByteArray
+import Split.Option_isSome
+import Split.dite_cond_eq_false
+import Split.ByteArray_validateUTF8At
+import Split.Eq_symm
+import Split.Bool_false
+import Split.UInt8
+import Split.Eq
+import Split.ByteArray_utf8Size_utf8DecodeChar
+import Split.Not
+import Split.Char_utf8Size
+import Split.ByteArray_size
+import Split.Eq_trans
+import Split.ByteArray_utf8DecodeChar?
+import Split.ByteArray_utf8Decode?_go_induct_unfolding
+import Split.Option
+
+-- ByteArray.isSome_utf8Decode?Go_eq_validateUTF8Go from environment
+-- theorem ByteArray.isSome_utf8Decode?Go_eq_validateUTF8Go : forall {b : ByteArray} {i : Nat} {acc : Array.{0} Char} {hi : LE.le.{0} Nat instLENat i (ByteArray.size b)}, Eq.{1} Bool (Option.isSome.{0} (Array.{0} Char) (ByteArray.utf8Decode?.go b i acc hi)) (ByteArray.validateUTF8.go b i hi)
+
+-- Stub: this file represents the declaration `ByteArray.isSome_utf8Decode?Go_eq_validateUTF8Go`.
+-- In a full split, the body would be extracted from the environment.

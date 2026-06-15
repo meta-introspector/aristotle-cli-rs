@@ -1,0 +1,2 @@
+-- Declaration: griessSquare
+-- Extracted by StaticSplit

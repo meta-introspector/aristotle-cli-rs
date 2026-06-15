@@ -1,0 +1,72 @@
+import Split.Nat_mul_add_mod_self_left
+import Split.Eq_mpr
+import Split.False
+import Split.instHDiv
+import Split.HMul_hMul
+import Split.instDecidableTrue
+import Split.eq_false
+import Split.Nat_le_refl
+import Split.congrArg
+import Split.Decidable_decide_congr_simp
+import Split.Nat_mul_add_div
+import Split.Bool_false_eq_true
+import Split.Nat_testBit_zero
+import Split.id
+import Split.HDiv_hDiv
+import Split.Nat_instMod
+import Split.instDecidableEqBool
+import Split.instHMod
+import Split.decide_false
+import Split.instMulNat
+import Split.instOfNatNat
+import Split.ite_cond_eq_true
+import Split.decide_true
+import Split.dite
+import Split.Nat_casesAuxOn
+import Split.Bool_true
+import Split.GT_gt
+import Split.instHAdd
+import Split.Nat_bitwise
+import Split.HMod_hMod
+import Split.Nat_zero_testBit
+import Split.Bool_casesOn
+import Split.HAdd_hAdd
+import Split.Nat
+import Split.congr
+import Split.LT_lt
+import Split.True
+import Split.Nat_testBit
+import Split.eq_self
+import Split.Nat_instDiv
+import Split.instDecidableFalse
+import Split.Bool
+import Split.of_eq_true
+import Split.Eq_ndrec
+import Split.instAddNat
+import Split.Eq_refl
+import Split.congrFun'
+import Split.instDecidableEqNat
+import Split.Nat_testBit_add_one
+import Split.Nat_mul_mod_right
+import Split.instLTNat
+import Split.Nat_mod_succ
+import Split.ite_congr
+import Split.OfNat_ofNat
+import Split.Eq_symm
+import Split.ite_cond_eq_false
+import Split.Bool_false
+import Split.Decidable_decide
+import Split.Nat_succ
+import Split.Eq
+import Split.Not
+import Split.Nat_mul_div_right
+import Split.Eq_trans
+import Split.Nat_strongRecOn
+import Split.instHMul
+import Split.ite
+
+-- Nat.testBit_bitwise from environment
+-- theorem Nat.testBit_bitwise : forall {f : Bool -> Bool -> Bool}, (Eq.{1} Bool (f Bool.false Bool.false) Bool.false) -> (forall (x : Nat) (y : Nat) (i : Nat), Eq.{1} Bool (Nat.testBit (Nat.bitwise f x y) i) (f (Nat.testBit x i) (Nat.testBit y i)))
+
+-- Stub: this file represents the declaration `Nat.testBit_bitwise`.
+-- In a full split, the body would be extracted from the environment.

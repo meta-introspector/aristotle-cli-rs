@@ -1,0 +1,2 @@
+-- Declaration: conformal_text
+-- Extracted by StaticSplit

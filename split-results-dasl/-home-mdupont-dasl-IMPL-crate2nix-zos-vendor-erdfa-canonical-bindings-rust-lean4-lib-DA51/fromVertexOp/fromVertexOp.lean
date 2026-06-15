@@ -1,0 +1,2 @@
+-- Declaration: fromVertexOp
+-- Extracted by StaticSplit

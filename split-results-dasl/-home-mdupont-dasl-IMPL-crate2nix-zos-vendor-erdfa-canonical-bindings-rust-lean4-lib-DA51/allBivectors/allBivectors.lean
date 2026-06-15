@@ -1,0 +1,2 @@
+-- Declaration: allBivectors
+-- Extracted by StaticSplit

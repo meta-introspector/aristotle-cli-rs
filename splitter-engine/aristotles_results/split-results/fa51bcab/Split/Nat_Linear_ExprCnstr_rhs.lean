@@ -1,0 +1,9 @@
+import Split.Nat_Linear_Expr
+import Split.Nat_Linear_ExprCnstr
+
+-- Nat.Linear.ExprCnstr.rhs from environment
+-- def Nat.Linear.ExprCnstr.rhs : Nat.Linear.ExprCnstr -> Nat.Linear.Expr
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `Nat.Linear.ExprCnstr.rhs`.
+-- In a full split, the body would be extracted from the environment.

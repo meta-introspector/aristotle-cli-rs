@@ -1,0 +1,22 @@
+{
+  description = "Lean declaration: ByteArray.utf8DecodeChar?.FirstByte.twoMore";
+  inputs = { nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; flake-utils.url = "github:numtide/flake-utils"; 
+    ByteArray-utf8DecodeChar?-FirstByte.url = "path:/mnt/data1/time-2026/05-may/07/arist/splitter-engine/aristotles_results/split-test/ByteArray/utf8DecodeChar?/FirstByte";
+  };
+  outputs = { self, nixpkgs, flake-utils }:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      packages.${system}.default = pkgs.stdenv.mkDerivation {
+        pname = "decl-ByteArray.utf8DecodeChar?.FirstByte.twoMore";
+        version = "0.1.0";
+        src = ./.;
+        phases = [ "unpackPhase" "installPhase" ];
+        installPhase = ''
+          mkdir -p $out
+          cp ByteArray/utf8DecodeChar?/FirstByte/twoMore.lean $out/
+        '';
+      };
+    };
+}

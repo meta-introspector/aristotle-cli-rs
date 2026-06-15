@@ -1,0 +1,2 @@
+-- Declaration: majorText
+-- Extracted by StaticSplit

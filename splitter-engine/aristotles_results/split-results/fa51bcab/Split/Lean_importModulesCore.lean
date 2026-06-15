@@ -1,0 +1,86 @@
+import Split.Pure_pure
+import Split.Lean_NameMap
+import Split.Bool_not
+import Split.instMonadExceptOfMonadExceptOf
+import Split.Lean_Import
+import Split.instForInOfForIn'
+import Split.IO_instMonadLiftSTRealWorldBaseIO
+import Split.Monad_toApplicative
+import Split.String
+import Split.MonadExcept_throw
+import Split.instMonadLiftT
+import Split.Lean_ImportStateM
+import Split.MonadState_get
+import Split.IO
+import Split.Array_instMembership
+import Split.instMonadExceptOfEIO
+import Split.instDecidableRelLt
+import Split.Membership_mem
+import Split.StateRefT'_instMonadStateOfOfMonadLiftTST
+import Split.Option_bind
+import Split.inferInstance
+import Split.IO_RealWorld
+import Split.instDecidableEqBool
+import Split.ForIn_forIn
+import Split.Lean_NameMap_instEmptyCollection
+import Split.Std_HashMap
+import Split.instMonadEIO
+import Split.Applicative_toPure
+import Split.ToString_toString
+import Split.Membership
+import Split.ForInStep
+import Split.Array
+import Split.IO_userError
+import Split.Bool_true
+import Split.instAppendString
+import Split.Lean_Import_module
+import Split.instHAppendOfAppend
+import Split.Lean_OLeanLevel_private
+import Split.Unit
+import Split.StateRefT'_instMonadExceptOf
+import Split.ST
+import Split.StateRefT'
+import Split.StateRefT'_instMonad
+import Split.PUnit
+import Split.Lean_Name_instToString
+import Split.Lean_ModuleData_isModule
+import Split.LT_lt
+import Split.instMonadStateOfMonadStateOf
+import Split.Bool
+import Split.Lean_Name
+import Split.Monad_toBind
+import Split.Bind_bind
+import Split.PUnit_unit
+import Split.IO_Error
+import Split.Lean_ImportArtifacts
+import Split.instMonadLiftTOfMonadLift
+import Split.GetElem?_getElem?
+import Split.Lean_OLeanLevel
+import Split.EmptyCollection_emptyCollection
+import Split.Std_HashMap_instGetElem?Mem
+import Split.Array_instForIn'InferInstanceMembershipOfMonad
+import Split.optParam
+import Split.Lean_ModuleData
+import Split.Bool_false
+import Split.BaseIO
+import Split.Decidable_decide
+import Split.Eq
+import Split.Lean_Name_instBEq
+import Split.HAppend_hAppend
+import Split.instMonadLiftBaseIOEIO
+import Split.Lean_instOrdOLeanLevel
+import Split.ForInStep_yield
+import Split.Std_HashMap_instMembership
+import Split.Lean_ImportState
+import Split.instToStringString
+import Split.Lean_instLTOLeanLevel
+import Split.Option
+import Split.Lean_instHashableName
+import Split.ite
+
+-- Lean.importModulesCore from environment
+-- def Lean.importModulesCore : (Array.{0} Lean.Import) -> (forall (globalLevel : optParam.{1} Lean.OLeanLevel Lean.OLeanLevel.private), (optParam.{1} (Lean.NameMap Lean.ImportArtifacts) (EmptyCollection.emptyCollection.{0} (Lean.NameMap Lean.ImportArtifacts) (Lean.NameMap.instEmptyCollection Lean.ImportArtifacts))) -> (optParam.{1} Bool (Decidable.decide (LT.lt.{0} (optParam.{1} Lean.OLeanLevel Lean.OLeanLevel.private) Lean.instLTOLeanLevel globalLevel Lean.OLeanLevel.private) (instDecidableRelLt.{0} (optParam.{1} Lean.OLeanLevel Lean.OLeanLevel.private) Lean.instOrdOLeanLevel globalLevel Lean.OLeanLevel.private))) -> (Lean.ImportStateM Unit))
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `Lean.importModulesCore`.
+-- In a full split, the body would be extracted from the environment.

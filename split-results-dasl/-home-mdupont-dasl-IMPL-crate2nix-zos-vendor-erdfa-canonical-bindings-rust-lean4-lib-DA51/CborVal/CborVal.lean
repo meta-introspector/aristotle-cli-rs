@@ -1,0 +1,2 @@
+-- Declaration: CborVal
+-- Extracted by StaticSplit

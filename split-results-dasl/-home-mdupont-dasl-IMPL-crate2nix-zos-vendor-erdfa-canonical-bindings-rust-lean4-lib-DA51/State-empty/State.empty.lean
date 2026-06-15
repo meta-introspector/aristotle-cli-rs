@@ -1,0 +1,2 @@
+-- Declaration: State.empty
+-- Extracted by StaticSplit
