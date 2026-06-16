@@ -1,4 +1,4 @@
-/// dasl_index — Read DASL index files (~/dasl/index/*.txt), find Lean4 proofs,
+/// file_index — Read index files (lists of paths), find Lean4 proofs,
 /// ingest them into a working directory, and prepare for splitting.
 ///
 /// Index file formats:
@@ -219,7 +219,7 @@ pub fn ingest_lean_files(
 
 /// Top-level command: scan DASL indexes, find Lean files, ingest them.
 #[instrument(skip(index_dir, output_dir))]
-pub fn cmd_dasl_index(
+pub fn cmd_scan_index(
     index_dir: Option<PathBuf>,
     output_dir: Option<PathBuf>,
     prefix_filter: Option<String>,
@@ -238,7 +238,7 @@ pub fn cmd_dasl_index(
         ));
     }
 
-    println!("=== DASL Index → Lean4 Ingester ===");
+    println!("=== Index File → Lean4 Ingester ===");
     println!("Index dir:  {}", index_dir.display());
     println!("Output dir: {}", output_dir.display());
     println!();

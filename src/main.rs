@@ -16,9 +16,9 @@ use tracing::{debug, error, info, instrument, warn};
 use tracing_subscriber::{EnvFilter, fmt};
 use walkdir::WalkDir;
 
-mod dasl_index;
 mod index;
 mod notebooklm;
+mod file_index;
 
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
@@ -168,8 +168,8 @@ enum Commands {
         #[arg(long)]
         dry_run: bool,
     },
-    /// Scan DASL index files (~/dasl/index/*.txt), find Lean4 proofs, ingest
-    DaslIndex {
+    /// Scan index files (lists of file paths), find Lean4 proofs, ingest
+    ScanIndex {
         #[arg(long)]
         index_dir: Option<PathBuf>,
         #[arg(long)]
@@ -1837,9 +1837,9 @@ async fn main() -> Result<()> {
             info!("Executing split-all command");
             cmd_split_all(output_dir.clone(), *parallel, *dry_run)?;
         }
-        Commands::DaslIndex { index_dir, output_dir, prefix_filter } => {
-            info!("Executing dasl-index command");
-            dasl_index::cmd_dasl_index(index_dir.clone(), output_dir.clone(), prefix_filter.clone())?;
+        Commands::ScanIndex { index_dir, output_dir, prefix_filter } => {
+            info!("Executing scan-index command");
+            file_index::cmd_scan_index(index_dir.clone(), output_dir.clone(), prefix_filter.clone())?;
         }
     }
 
