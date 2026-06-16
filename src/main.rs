@@ -109,6 +109,22 @@ enum Commands {
         #[arg(long)]
         output_dir: Option<PathBuf>,
     },
+    /// Submit a project to the Aristotle API
+    Submit {
+        /// Prompt text or file containing the prompt
+        prompt: String,
+        #[arg(long)]
+        project_dir: Option<PathBuf>,
+        #[arg(long)]
+        wait: bool,
+    },
+    /// Check status of a submitted Aristotle project
+    Check {
+        /// Project ID to check (omit to list recent)
+        project_id: Option<String>,
+        #[arg(long)]
+        limit: Option<usize>,
+    },
     /// Test Lean4 projects
     Test {
         #[arg(long)]
@@ -1544,6 +1560,105 @@ fn cmd_merge(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
     Ok(())
 }
 
+/// ── Submit command: send a project to Aristotle via the CLI ────────
+
+#[instrument(skip(prompt, project_dir))]
+fn cmd_submit(prompt: &str, project_dir: Option<PathBuf>, wait: bool) -> Result<()> {
+    let api_key = get_api_key()?;
+    let mut args: Vec<String> = vec!["submit".into(), "--api-key".into(), api_key];
+    
+    if let Some(ref dir) = project_dir {
+        args.push("--project-dir".into());
+        args.push(dir.to_string_lossy().to_string());
+    }
+    if wait {
+        args.push("--wait".into());
+    }
+    args.push(prompt.to_string());
+
+    info!("Running: aristotle {}", args.join(" "));
+    
+    let output = Command::new("aristotle")
+        .args(&args)
+        .output()
+        .context("Failed to run aristotle CLI")?;
+
+    let stdout = String::from_utf8_lossy(&output.stdout);
+    let stderr = String::from_utf8_lossy(&output.stderr);
+
+    if output.status.success() {
+        for line in stdout.lines() {
+            if line.contains("Project created") || line.contains("WARNING") || line.contains("Error") {
+                println!("{}", line);
+            }
+        }
+        if !stderr.is_empty() {
+            eprintln!("{}", stderr);
+        }
+    } else {
+        error!(stdout = %stdout, stderr = %stderr, "aristotle CLI failed");
+        eprintln!("stdout: {}", stdout);
+        eprintln!("stderr: {}", stderr);
+        return Err(anyhow::anyhow!("aristotle CLI failed"));
+    }
+
+    Ok(())
+}
+
+/// ── Check command: query project status from Aristotle API ──────────
+
+#[instrument(skip(project_id))]
+async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<()> {
+    let api_key = get_api_key()?;
+    let client = Client::builder()
+        .timeout(Duration::from_secs(30))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    if let Some(pid) = project_id {
+        let url = format!("{}/project/{}", API_BASE_URL, pid);
+        let response = client
+            .get(&url)
+            .header("x-api-key", &api_key)
+            .send()
+            .await
+            .context("Failed to query project")?;
+
+        let body = response.text().await?;
+        if let Ok(json) = serde_json::from_str::<Value>(&body) {
+            println!("Project: {}", pid);
+            println!("  Description: {}", json["description"].as_str().unwrap_or(""));
+            println!("  Status: {} (has_files={})", 
+                json["status"].as_i64().unwrap_or(0),
+                json["has_files"].as_bool().unwrap_or(false));
+            println!("  Created: {}", json["created_at"].as_str().unwrap_or(""));
+            println!("  Updated: {}", json["last_updated"].as_str().unwrap_or(""));
+        }
+    } else {
+        let url = format!("{}/project", API_BASE_URL);
+        let limit = limit.unwrap_or(20);
+        let response = client.get(&url).header("x-api-key", &api_key).send().await?;
+        let body = response.text().await?;
+        if let Ok(json) = serde_json::from_str::<Value>(&body) {
+            if let Some(projects) = json["projects"].as_array() {
+                println!("{:<36} {:<20} {:<6} {:<30}", "ID", "CREATED", "STATUS", "DESCRIPTION");
+                for p in projects.iter().take(limit) {
+                    let st = match p["status"].as_i64().unwrap_or(0) {
+                        0 => "QUEUE", 1 => "RUN", 2 => "DONE", _ => "?"
+                    };
+                    println!("{:<36} {:<20} {:<6} {:<30}",
+                        p["project_id"].as_str().unwrap_or(""),
+                        p["created_at"].as_str().unwrap_or("").get(..20).unwrap_or(""),
+                        st,
+                        p["description"].as_str().unwrap_or("").get(..30).unwrap_or(""));
+                }
+            }
+        }
+    }
+
+    Ok(())
+}
+
 /// ── Main ─────────────────────────────────────────────────────────────────
 
 #[tokio::main]
@@ -1653,6 +1768,14 @@ async fn main() -> Result<()> {
         } => {
             info!("Executing merge command");
             cmd_merge(input_dir.clone(), output_dir.clone())?;
+        }
+        Commands::Submit { prompt, project_dir, wait } => {
+            info!("Executing submit command");
+            cmd_submit(prompt, project_dir.clone(), *wait)?;
+        }
+        Commands::Check { project_id, limit } => {
+            info!("Executing check command");
+            cmd_check(project_id.clone(), *limit).await?;
         }
         Commands::Results => {
             info!("Executing results command");
