@@ -125,6 +125,13 @@ enum Commands {
         #[arg(long)]
         limit: Option<usize>,
     },
+    /// Download results from a completed Aristotle project
+    DownloadResult {
+        /// Project ID to download
+        project_id: String,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
     /// Test Lean4 projects
     Test {
         #[arg(long)]
@@ -1659,6 +1666,31 @@ async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<(
     Ok(())
 }
 
+/// ── Download result from a completed Aristotle project ─────────
+
+async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>) -> Result<()> {
+    let config = load_config()?;
+    let api_key = get_api_key()?;
+    let results_dir = output_dir.unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
+    fs::create_dir_all(&results_dir)?;
+    let client = Client::builder().timeout(Duration::from_secs(300)).build()?;
+    println!("Downloading result for {}...", project_id);
+    match download_single_result(&client, &api_key, project_id, &results_dir, &results_dir, config.retry_wait_seconds, config.max_retries).await {
+        Ok(path) => {
+            println!("Downloaded to: {}", path.display());
+            let summary = path.join("output-final_aristotle").join("ARISTOTLE_SUMMARY.md");
+            if summary.exists() {
+                println!("\n=== Output ===");
+                for line in fs::read_to_string(&summary)?.lines().take(40) { println!("{}", line); }
+            }
+            let lean = WalkDir::new(&path).into_iter().filter_map(|e| e.ok()).filter(|e| e.path().extension().map_or(false, |e| e=="lean")).count();
+            println!("  .lean files: {}", lean);
+        }
+        Err(e) => println!("Failed: {}", e),
+    }
+    Ok(())
+}
+
 /// ── Main ─────────────────────────────────────────────────────────────────
 
 #[tokio::main]
@@ -1776,6 +1808,10 @@ async fn main() -> Result<()> {
         Commands::Check { project_id, limit } => {
             info!("Executing check command");
             cmd_check(project_id.clone(), *limit).await?;
+        }
+        Commands::DownloadResult { project_id, output_dir } => {
+            info!("Executing download-result command");
+            cmd_download_result(project_id, output_dir.clone()).await?;
         }
         Commands::Results => {
             info!("Executing results command");
