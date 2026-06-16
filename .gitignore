@@ -1,5 +1,6 @@
 /target
 splitter-engine/
+.lake/
 
 # Flake lock file
 flake.lock
