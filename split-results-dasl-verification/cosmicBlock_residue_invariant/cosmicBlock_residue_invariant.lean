@@ -1,0 +1,2 @@
+-- Declaration: cosmicBlock_residue_invariant
+-- Extracted by StaticSplit

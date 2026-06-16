@@ -1,0 +1,2 @@
+-- Declaration: recordedVoteFraction
+-- Extracted by StaticSplit

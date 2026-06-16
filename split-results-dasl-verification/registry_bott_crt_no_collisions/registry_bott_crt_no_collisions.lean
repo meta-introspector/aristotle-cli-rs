@@ -1,0 +1,2 @@
+-- Declaration: registry_bott_crt_no_collisions
+-- Extracted by StaticSplit

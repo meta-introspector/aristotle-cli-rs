@@ -1,0 +1,2 @@
+-- Declaration: m11_conjugacy_classes
+-- Extracted by StaticSplit

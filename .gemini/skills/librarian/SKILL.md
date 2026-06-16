@@ -1,10 +1,6 @@
 ---
-name: librarian
-description: >-
-  Research open-source library internals. Clone, index, and navigate dependency
-  source code with GitHub permalinks. Use when you need to understand how a
-  library works internally, trace a bug into a dependency, or find the
-  implementation behind an API.
+name: "librarian"
+description: "Research open-source library internals. Clone, index, and navigate dependency source code with GitHub permalinks. Use when you need to understand how a library works internally, trace a bug into a dependency, or find the implementation behind an API."
 ---
 
 # Librarian — Dependency Source Research

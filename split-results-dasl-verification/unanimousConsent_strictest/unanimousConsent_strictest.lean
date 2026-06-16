@@ -1,0 +1,2 @@
+-- Declaration: unanimousConsent_strictest
+-- Extracted by StaticSplit

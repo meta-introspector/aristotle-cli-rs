@@ -1,0 +1,2 @@
+-- Declaration: TritState
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: FiberSchemaMap
+-- Extracted by StaticSplit

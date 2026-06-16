@@ -1,0 +1,2 @@
+-- Declaration: king_resolve_at_coronation
+-- Extracted by StaticSplit

@@ -1,6 +1,6 @@
 ---
-name: dashlm-gpu-preparer
-description: Convert CPU hash-table into GPU-friendly Structure-of-Arrays layout and write to pinned memfd with JSON metadata sidecar.
+name: "dashlm-gpu-preparer"
+description: "Convert CPU hash-table into GPU-friendly Structure-of-Arrays layout and write to pinned memfd with JSON metadata sidecar."
 ---
 
 # dashlm_index_gpu_prep

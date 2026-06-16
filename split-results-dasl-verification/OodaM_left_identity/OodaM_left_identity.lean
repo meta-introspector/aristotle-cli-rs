@@ -1,0 +1,2 @@
+-- Declaration: OodaM_left_identity
+-- Extracted by StaticSplit

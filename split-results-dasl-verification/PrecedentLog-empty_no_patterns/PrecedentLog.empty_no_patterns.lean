@@ -1,0 +1,2 @@
+-- Declaration: PrecedentLog.empty_no_patterns
+-- Extracted by StaticSplit

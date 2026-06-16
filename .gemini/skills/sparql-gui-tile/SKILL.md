@@ -1,10 +1,6 @@
 ---
-name: sparql-gui-tile
-description: >-
-  SPARQL GUI tile — wraps the SPARQL query GUI at /mnt/data1/time-2026/06/07/sparql-gui.
-  Provides a web interface for running SPARQL queries over the IPLD CAR store metadata
-  loaded as RDF triples in Oxigraph. Use when running SPARQL queries against the
-  DASL block store or building graph visualizations.
+name: "sparql-gui-tile"
+description: "SPARQL GUI tile — wraps the SPARQL query GUI at /mnt/data1/time-2026/06/07/sparql-gui. Provides a web interface for running SPARQL queries over the IPLD CAR store metadata loaded as RDF triples in Oxigraph. Use when running SPARQL queries against the DASL block store or building graph visualizations."
 ---
 
 # sparql-gui-tile — SPARQL Query Interface

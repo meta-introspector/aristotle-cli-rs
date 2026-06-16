@@ -1,0 +1,2 @@
+-- Declaration: sua_sponte_under_cloture
+-- Extracted by StaticSplit

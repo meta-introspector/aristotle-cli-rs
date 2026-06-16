@@ -1,0 +1,2 @@
+-- Declaration: AtomicAction
+-- Extracted by StaticSplit

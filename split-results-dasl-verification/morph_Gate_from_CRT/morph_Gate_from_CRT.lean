@@ -1,0 +1,2 @@
+-- Declaration: morph_Gate_from_CRT
+-- Extracted by StaticSplit

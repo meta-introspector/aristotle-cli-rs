@@ -1,0 +1,2 @@
+-- Declaration: umbral_labels_have_roots
+-- Extracted by StaticSplit

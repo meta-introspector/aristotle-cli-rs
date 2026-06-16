@@ -1,0 +1,2 @@
+-- Declaration: hyphaTip
+-- Extracted by StaticSplit

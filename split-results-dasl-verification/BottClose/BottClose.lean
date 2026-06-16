@@ -1,0 +1,2 @@
+-- Declaration: BottClose
+-- Extracted by StaticSplit

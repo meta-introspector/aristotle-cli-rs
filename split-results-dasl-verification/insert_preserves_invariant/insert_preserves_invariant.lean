@@ -1,0 +1,2 @@
+-- Declaration: insert_preserves_invariant
+-- Extracted by StaticSplit

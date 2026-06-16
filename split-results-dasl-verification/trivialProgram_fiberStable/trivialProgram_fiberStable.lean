@@ -1,0 +1,2 @@
+-- Declaration: trivialProgram_fiberStable
+-- Extracted by StaticSplit

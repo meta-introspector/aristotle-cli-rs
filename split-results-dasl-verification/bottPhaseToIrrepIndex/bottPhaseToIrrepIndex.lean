@@ -1,0 +1,2 @@
+-- Declaration: bottPhaseToIrrepIndex
+-- Extracted by StaticSplit

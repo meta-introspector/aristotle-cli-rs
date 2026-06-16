@@ -1,0 +1,2 @@
+-- Declaration: lateCommitteeDeadlineDays
+-- Extracted by StaticSplit

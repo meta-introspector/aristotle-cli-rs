@@ -1,0 +1,2 @@
+-- Declaration: B_matrix_dim
+-- Extracted by StaticSplit

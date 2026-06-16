@@ -1,0 +1,2 @@
+-- Declaration: jitter_coupling_example
+-- Extracted by StaticSplit

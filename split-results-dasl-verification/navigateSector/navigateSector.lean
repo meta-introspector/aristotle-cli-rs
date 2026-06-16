@@ -1,0 +1,2 @@
+-- Declaration: navigateSector
+-- Extracted by StaticSplit

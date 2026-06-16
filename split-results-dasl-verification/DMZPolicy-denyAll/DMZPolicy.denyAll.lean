@@ -1,0 +1,2 @@
+-- Declaration: DMZPolicy.denyAll
+-- Extracted by StaticSplit

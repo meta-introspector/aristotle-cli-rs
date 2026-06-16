@@ -1,9 +1,6 @@
 ---
-name: mcp-bridge
-description: >-
-  Connect to MCP (Model Context Protocol) servers and create reusable
-  skills from them. HTTP and stdio transports. Use when connecting to
-  external tools via MCP, or when MCP servers are mentioned.
+name: "mcp-bridge"
+description: "Connect to MCP (Model Context Protocol) servers and create reusable skills from them. HTTP and stdio transports. Use when connecting to external tools via MCP, or when MCP servers are mentioned."
 ---
 
 # MCP Bridge — Connect to MCP Servers

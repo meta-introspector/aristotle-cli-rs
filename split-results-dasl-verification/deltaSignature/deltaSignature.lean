@@ -1,0 +1,2 @@
+-- Declaration: deltaSignature
+-- Extracted by StaticSplit

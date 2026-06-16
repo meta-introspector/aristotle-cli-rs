@@ -1,12 +1,6 @@
 ---
-name: search2pipe-ingest
-description: >-
-  Filesystem corpus ingestion pipeline: locate → stat → parquet → project grouping
-  → CI/CD pipeline generation. Uses plocate, locate_stat_cache, and search2pipe
-  binaries to turn filesystem searches into DASL tiles, pipelight TOML, and
-  FRACTRAN-encoded workflows.
-  Use when building a file corpus, extracting configs from the filesystem,
-  or generating CI pipelines from project discovery.
+name: "search2pipe-ingest"
+description: "Filesystem corpus ingestion pipeline: locate → stat → parquet → project grouping → CI/CD pipeline generation. Uses plocate, locate_stat_cache, and search2pipe binaries to turn filesystem searches into DASL tiles, pipelight TOML, and FRACTRAN-encoded workflows. Use when building a file corpus, extracting configs from the filesystem, or generating CI pipelines from project discovery."
 ---
 
 # Search2Pipe Ingest

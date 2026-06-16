@@ -1,0 +1,2 @@
+-- Declaration: monsterFibered
+-- Extracted by StaticSplit

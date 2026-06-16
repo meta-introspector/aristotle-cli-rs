@@ -1,0 +1,2 @@
+-- Declaration: ramanujan_congruence_10
+-- Extracted by StaticSplit

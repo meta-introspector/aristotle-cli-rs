@@ -1,0 +1,2 @@
+-- Declaration: violationRate100
+-- Extracted by StaticSplit

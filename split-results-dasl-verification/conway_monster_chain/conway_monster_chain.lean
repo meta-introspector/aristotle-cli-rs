@@ -1,0 +1,2 @@
+-- Declaration: conway_monster_chain
+-- Extracted by StaticSplit

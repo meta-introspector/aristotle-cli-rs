@@ -1,9 +1,6 @@
 ---
-name: cbor4ii
-description: >-
-  Work with the cbor4ii CBOR parser — the low-level CBOR engine used by
-  serde_ipld_dagcbor. Use when modifying CBOR parsing internals, debugging
-  CBOR encoding issues, or analyzing the CBOR→DAG-CBOR restriction layer.
+name: "cbor4ii"
+description: "Work with the cbor4ii CBOR parser — the low-level CBOR engine used by serde_ipld_dagcbor. Use when modifying CBOR parsing internals, debugging CBOR encoding issues, or analyzing the CBOR→DAG-CBOR restriction layer."
 ---
 
 # cbor4ii — CBOR Parser Engine

@@ -1,10 +1,6 @@
 ---
-name: nora-car-shmem
-description: >-
-  Configure and operate the Nora artifact registry with CAR shared-memory
-  storage backend for high-performance, content-addressed artifact storage.
-  Use when setting up Nora to use ipld-car-ipc-shmem-linux as its storage layer
-  instead of local filesystem or S3, or to diagnose its status.
+name: "nora-car-shmem"
+description: "Configure and operate the Nora artifact registry with CAR shared-memory storage backend for high-performance, content-addressed artifact storage. Use when setting up Nora to use ipld-car-ipc-shmem-linux as its storage layer instead of local filesystem or S3, or to diagnose its status."
 ---
 
 # nora-car-shmem — Nora + CAR Shared Memory Storage

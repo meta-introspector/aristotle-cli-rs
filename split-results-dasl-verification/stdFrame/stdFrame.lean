@@ -1,0 +1,2 @@
+-- Declaration: stdFrame
+-- Extracted by StaticSplit

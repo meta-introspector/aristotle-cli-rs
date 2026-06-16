@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-workload
-description: Collect repo info, build actions plans, run recursive workload vendoring, and generate workload reports. Use for workload processing and DASL workloads.
+name: "cargo-vendormod-workload"
+description: "Collect repo info, build actions plans, run recursive workload vendoring, and generate workload reports. Use for workload processing and DASL workloads."
 ---
 
 # Cargo-Vendormod Workload

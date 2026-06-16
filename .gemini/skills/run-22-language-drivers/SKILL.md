@@ -1,11 +1,6 @@
 ---
-name: run-22-language-drivers
-description: >-
-  Run the remaining 22 language drivers beyond the proven Rust driver.
-  Currently only driver-rust is tested in integration tests. The other 24
-  drivers (Python, Go, C, JS, Java, etc.) exist on disk but are never called.
-  Use when building multi-language integration tests, spawning drivers via
-  pipe protocol, or generating per-language systemd services.
+name: "run-22-language-drivers"
+description: "Run the remaining 22 language drivers beyond the proven Rust driver. Currently only driver-rust is tested in integration tests. The other 24 drivers (Python, Go, C, JS, Java, etc.) exist on disk but are never called. Use when building multi-language integration tests, spawning drivers via pipe protocol, or generating per-language systemd services."
 ---
 
 # Run Remaining 22 Language Drivers

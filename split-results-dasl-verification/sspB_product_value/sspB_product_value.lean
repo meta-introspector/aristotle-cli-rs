@@ -1,0 +1,2 @@
+-- Declaration: sspB_product_value
+-- Extracted by StaticSplit

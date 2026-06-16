@@ -1,10 +1,6 @@
 ---
-name: dasl-tiles
-description: >-
-  DASL tile system — load, render, and publish content-addressed tiles.
-  Run the tile-tui and perf-tile-tui TUI dashboards. Use when working
-  with tiles, fuzzing harness tiles, performance dashboards, or the
-  IPLD CAR shmem bridge.
+name: "dasl-tiles"
+description: "DASL tile system — load, render, and publish content-addressed tiles. Run the tile-tui and perf-tile-tui TUI dashboards. Use when working with tiles, fuzzing harness tiles, performance dashboards, or the IPLD CAR shmem bridge."
 ---
 
 # dasl-tiles — Tile System & TUI Clients

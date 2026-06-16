@@ -1,0 +1,2 @@
+-- Declaration: ContextWindow.extend
+-- Extracted by StaticSplit

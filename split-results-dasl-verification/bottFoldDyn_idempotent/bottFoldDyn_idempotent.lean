@@ -1,0 +1,2 @@
+-- Declaration: bottFoldDyn_idempotent
+-- Extracted by StaticSplit

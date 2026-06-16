@@ -1,0 +1,2 @@
+-- Declaration: Fi23_divides_B
+-- Extracted by StaticSplit

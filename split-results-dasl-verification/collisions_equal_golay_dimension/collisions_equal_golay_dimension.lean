@@ -1,0 +1,2 @@
+-- Declaration: collisions_equal_golay_dimension
+-- Extracted by StaticSplit

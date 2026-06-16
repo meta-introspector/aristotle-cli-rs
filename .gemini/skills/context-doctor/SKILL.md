@@ -1,9 +1,6 @@
 ---
-name: context-doctor
-description: >-
-  Identify and repair degradation in the agent's system prompt, skills,
-  and lattice. Diagnose bloat, redundancy, poor progressive disclosure,
-  and stale references. Use when the agent seems confused or forgetful.
+name: "context-doctor"
+description: "Identify and repair degradation in the agent's system prompt, skills, and lattice. Diagnose bloat, redundancy, poor progressive disclosure, and stale references. Use when the agent seems confused or forgetful."
 ---
 
 # Context Doctor — Repair Degraded Context

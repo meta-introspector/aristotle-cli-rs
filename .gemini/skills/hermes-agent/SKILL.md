@@ -1,7 +1,6 @@
 ---
-name: hermes-agent
-description: Configure and use Hermes Agent CLI, including setup, configuration, and common operations.
-category: devops
+name: "hermes-agent"
+description: "Configure and use Hermes Agent CLI, including setup, configuration, and common operations."
 ---
 
 # Hermes Agent Configuration and Usage

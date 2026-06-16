@@ -1,0 +1,2 @@
+-- Declaration: E6_2_order_value
+-- Extracted by StaticSplit

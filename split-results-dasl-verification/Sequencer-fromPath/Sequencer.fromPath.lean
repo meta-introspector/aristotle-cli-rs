@@ -1,0 +1,2 @@
+-- Declaration: Sequencer.fromPath
+-- Extracted by StaticSplit

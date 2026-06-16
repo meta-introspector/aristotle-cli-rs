@@ -1,0 +1,2 @@
+-- Declaration: growthG
+-- Extracted by StaticSplit

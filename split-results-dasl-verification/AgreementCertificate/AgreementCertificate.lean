@@ -1,0 +1,2 @@
+-- Declaration: AgreementCertificate
+-- Extracted by StaticSplit

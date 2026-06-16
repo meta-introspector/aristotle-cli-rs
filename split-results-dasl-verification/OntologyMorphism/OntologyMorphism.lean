@@ -1,0 +1,2 @@
+-- Declaration: OntologyMorphism
+-- Extracted by StaticSplit

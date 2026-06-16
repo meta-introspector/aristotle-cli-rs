@@ -1,0 +1,2 @@
+-- Declaration: BulkState
+-- Extracted by StaticSplit

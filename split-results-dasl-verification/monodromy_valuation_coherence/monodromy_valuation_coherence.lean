@@ -1,0 +1,2 @@
+-- Declaration: monodromy_valuation_coherence
+-- Extracted by StaticSplit

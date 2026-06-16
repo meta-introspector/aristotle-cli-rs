@@ -1,10 +1,6 @@
 ---
-name: vox
-description: >-
-  Spec-driven development — gap analysis, task decomposition (plan),
-  then TDD checkpoint execution (build). Two-step pipeline from spec
-  to implemented code. Use when you have a spec and want structure:
-  "/skill:vox plan <spec>" followed by repeated "/skill:vox build <spec>".
+name: "vox"
+description: "Spec-driven development — gap analysis, task decomposition (plan), then TDD checkpoint execution (build). Two-step pipeline from spec to implemented code. Use when you have a spec and want structure: \"/skill:vox plan <spec>\" followed by repeated \"/skill:vox build <spec>\"."
 ---
 
 # Vox — Spec-Driven Development

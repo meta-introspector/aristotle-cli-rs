@@ -1,0 +1,2 @@
+-- Declaration: l2_71_omega
+-- Extracted by StaticSplit

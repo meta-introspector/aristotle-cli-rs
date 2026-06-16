@@ -1,0 +1,2 @@
+-- Declaration: LiftProject
+-- Extracted by StaticSplit

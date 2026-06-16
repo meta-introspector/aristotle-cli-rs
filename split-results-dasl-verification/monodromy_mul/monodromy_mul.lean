@@ -1,0 +1,2 @@
+-- Declaration: monodromy_mul
+-- Extracted by StaticSplit

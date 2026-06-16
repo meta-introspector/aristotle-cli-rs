@@ -1,0 +1,2 @@
+-- Declaration: towerCliffordClass
+-- Extracted by StaticSplit

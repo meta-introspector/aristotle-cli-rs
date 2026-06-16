@@ -1,0 +1,2 @@
+-- Declaration: no_duplicates_in_basis
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: rootConfig
+-- Extracted by StaticSplit

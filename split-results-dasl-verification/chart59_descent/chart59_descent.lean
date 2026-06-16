@@ -1,0 +1,2 @@
+-- Declaration: chart59_descent
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: lcm_bott_monsterIrrep
+-- Extracted by StaticSplit

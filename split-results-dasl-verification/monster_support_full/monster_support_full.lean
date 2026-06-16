@@ -1,0 +1,2 @@
+-- Declaration: monster_support_full
+-- Extracted by StaticSplit

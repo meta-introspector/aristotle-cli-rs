@@ -1,0 +1,2 @@
+-- Declaration: lattice_distrib_law
+-- Extracted by StaticSplit

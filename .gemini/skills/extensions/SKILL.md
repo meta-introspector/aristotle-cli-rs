@@ -1,9 +1,6 @@
 ---
-name: extensions
-description: >-
-  Create and edit agent extensions — tools, slash commands, lifecycle
-  events, panels, status values. Use when adding a tool the agent can
-  call, a slash command, or reacting to app events.
+name: "extensions"
+description: "Create and edit agent extensions — tools, slash commands, lifecycle events, panels, status values. Use when adding a tool the agent can call, a slash command, or reacting to app events."
 ---
 
 # Extensions — Agent Capabilities

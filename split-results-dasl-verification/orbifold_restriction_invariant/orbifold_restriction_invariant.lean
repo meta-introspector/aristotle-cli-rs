@@ -1,0 +1,2 @@
+-- Declaration: orbifold_restriction_invariant
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: shapePermissions
+-- Extracted by StaticSplit

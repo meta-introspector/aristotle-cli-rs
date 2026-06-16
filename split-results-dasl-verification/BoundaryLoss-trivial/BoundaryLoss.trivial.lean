@@ -1,0 +1,2 @@
+-- Declaration: BoundaryLoss.trivial
+-- Extracted by StaticSplit

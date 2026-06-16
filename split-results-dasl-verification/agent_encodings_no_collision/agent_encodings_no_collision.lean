@@ -1,0 +1,2 @@
+-- Declaration: agent_encodings_no_collision
+-- Extracted by StaticSplit

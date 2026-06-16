@@ -1,6 +1,6 @@
 ---
-name: handoff
-description: Write a handoff document summarising the current conversation so a fresh agent can continue the work. Saves to the OS temporary directory. Use when wrapping up a session, handing off to another agent/colleague, or when asked to "write a handoff" or "summarise this session."
+name: "handoff"
+description: "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Saves to the OS temporary directory. Use when wrapping up a session, handing off to another agent/colleague, or when asked to \"write a handoff\" or \"summarise this session.\""
 ---
 
 # Handoff

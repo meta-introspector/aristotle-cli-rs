@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_satisfies_vanishing
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: jitter_explanation_invariant
+-- Extracted by StaticSplit

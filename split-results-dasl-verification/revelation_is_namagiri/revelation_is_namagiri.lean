@@ -1,0 +1,2 @@
+-- Declaration: revelation_is_namagiri
+-- Extracted by StaticSplit

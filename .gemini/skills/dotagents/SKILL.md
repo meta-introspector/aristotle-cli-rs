@@ -1,10 +1,6 @@
 ---
-name: dotagents
-description: >-
-  Deploy and sync agent configuration (prompts, skills, instructions, MCP servers)
-  across 22+ AI coding agents from a single .dotagents/ source of truth. Use when
-  setting up or updating agent configs, adding prompts/skills/commands, deploying
-  to pi/claude/cursor/gemini/codex, or managing team agent configuration.
+name: "dotagents"
+description: "Deploy and sync agent configuration (prompts, skills, instructions, MCP servers) across 22+ AI coding agents from a single .dotagents/ source of truth. Use when setting up or updating agent configs, adding prompts/skills/commands, deploying to pi/claude/cursor/gemini/codex, or managing team agent configuration."
 ---
 
 # dotagents — Agent Configuration Manager

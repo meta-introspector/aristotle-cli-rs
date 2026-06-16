@@ -1,0 +1,2 @@
+-- Declaration: obstruction_sum
+-- Extracted by StaticSplit

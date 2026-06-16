@@ -1,0 +1,2 @@
+-- Declaration: ConstitutionalQuorum.threshold
+-- Extracted by StaticSplit

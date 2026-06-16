@@ -1,0 +1,2 @@
+-- Declaration: gödelMap
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: supersingular_all_prime
+-- Extracted by StaticSplit

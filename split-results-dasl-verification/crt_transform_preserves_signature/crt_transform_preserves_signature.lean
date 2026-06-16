@@ -1,0 +1,2 @@
+-- Declaration: crt_transform_preserves_signature
+-- Extracted by StaticSplit

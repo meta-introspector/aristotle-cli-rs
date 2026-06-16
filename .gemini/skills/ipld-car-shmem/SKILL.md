@@ -1,9 +1,6 @@
 ---
-name: ipld-car-shmem
-description: >-
-  Operate the ipld-car-ipc-shmem-linux server — start, stop, warm, query,
-  and monitor the CAR page shared memory ring buffer. Use when managing
-  the DAG-CBOR memory cache, warming DASL files, or querying CAR pages by CID.
+name: "ipld-car-shmem"
+description: "Operate the ipld-car-ipc-shmem-linux server — start, stop, warm, query, and monitor the CAR page shared memory ring buffer. Use when managing the DAG-CBOR memory cache, warming DASL files, or querying CAR pages by CID."
 ---
 
 # ipld-car-shmem — CAR Page Shared Memory Server

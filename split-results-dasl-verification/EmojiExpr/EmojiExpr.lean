@@ -1,0 +1,2 @@
+-- Declaration: EmojiExpr
+-- Extracted by StaticSplit

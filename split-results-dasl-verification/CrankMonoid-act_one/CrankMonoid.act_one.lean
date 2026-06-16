@@ -1,0 +1,2 @@
+-- Declaration: CrankMonoid.act_one
+-- Extracted by StaticSplit

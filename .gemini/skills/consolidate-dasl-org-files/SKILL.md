@@ -1,11 +1,6 @@
 ---
-name: consolidate-dasl-org-files
-description: >-
-  Clean up duplicate and stale org files in ~/dasl. Merge NOTES.org/notes.org,
-  TASKS.org/tasks.org, archive PLAN.org (superseded by plan.org), check
-  report duplicates, archive numbered plan stubs (02-07), and create a single
-  consolidated TODO.org. Use when cleaning up project documentation,
-  removing duplicates, or consolidating scattered TODO items.
+name: "consolidate-dasl-org-files"
+description: "Clean up duplicate and stale org files in ~/dasl. Merge NOTES.org/notes.org, TASKS.org/tasks.org, archive PLAN.org (superseded by plan.org), check report duplicates, archive numbered plan stubs (02-07), and create a single consolidated TODO.org. Use when cleaning up project documentation, removing duplicates, or consolidating scattered TODO items."
 ---
 
 # Consolidate Duplicate Org Files in ~/dasl

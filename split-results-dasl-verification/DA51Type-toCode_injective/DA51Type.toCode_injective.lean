@@ -1,0 +1,2 @@
+-- Declaration: DA51Type.toCode_injective
+-- Extracted by StaticSplit

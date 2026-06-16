@@ -1,0 +1,2 @@
+-- Declaration: type_data_product
+-- Extracted by StaticSplit

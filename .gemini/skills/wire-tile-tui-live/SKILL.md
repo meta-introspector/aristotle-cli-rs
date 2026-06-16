@@ -1,11 +1,6 @@
 ---
-name: wire-tile-tui-live
-description: >-
-  Wire tile-tui TreeNode::Tile variant to live :18142 (QA Team) and :18143
-  (Fuzz Team) tile servers. Add Tile node kind to TreeState tree, fetch tile
-  JSON from IPLD shmem on selection, display tile metadata in detail panel.
-  Use when connecting the TUI to live services, adding health polling, or
-  building interactive tile dashboards.
+name: "wire-tile-tui-live"
+description: "Wire tile-tui TreeNode::Tile variant to live :18142 (QA Team) and :18143 (Fuzz Team) tile servers. Add Tile node kind to TreeState tree, fetch tile JSON from IPLD shmem on selection, display tile metadata in detail panel. Use when connecting the TUI to live services, adding health polling, or building interactive tile dashboards."
 ---
 
 # Wire tile-tui to Live QA and Fuzz Tile Servers

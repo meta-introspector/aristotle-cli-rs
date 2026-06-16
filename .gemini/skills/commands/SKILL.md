@@ -1,9 +1,6 @@
 ---
-name: commands
-description: >-
-  Create and edit slash commands for the agent. Use when the user
-  asks to add a custom /command, command shortcut, or scoped
-  conversation-backed command.
+name: "commands"
+description: "Create and edit slash commands for the agent. Use when the user asks to add a custom /command, command shortcut, or scoped conversation-backed command."
 ---
 
 # Commands — Slash Command Authoring

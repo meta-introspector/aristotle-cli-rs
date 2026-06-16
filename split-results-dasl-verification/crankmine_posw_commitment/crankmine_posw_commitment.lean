@@ -1,0 +1,2 @@
+-- Declaration: crankmine_posw_commitment
+-- Extracted by StaticSplit

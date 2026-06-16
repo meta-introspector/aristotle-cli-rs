@@ -1,0 +1,2 @@
+-- Declaration: Stage
+-- Extracted by StaticSplit

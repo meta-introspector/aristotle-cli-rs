@@ -1,10 +1,6 @@
 ---
-name: auth-registry
-description: >-
-  Encrypted credential management via sops + age. All LLM API keys and OAuth
-  tokens live in a single sops-encrypted secrets file. Decrypt, test, rotate,
-  and re-encrypt. Use when setting up agents, rotating keys, or diagnosing
-  auth failures.
+name: "auth-registry"
+description: "Encrypted credential management via sops + age. All LLM API keys and OAuth tokens live in a single sops-encrypted secrets file. Decrypt, test, rotate, and re-encrypt. Use when setting up agents, rotating keys, or diagnosing auth failures."
 ---
 
 # Auth Registry — sops-Encrypted Credential Management

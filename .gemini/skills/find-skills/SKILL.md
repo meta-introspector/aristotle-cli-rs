@@ -1,9 +1,6 @@
 ---
-name: find-skills
-description: >-
-  Discover and install agent skills from the open ecosystem. Use when
-  the user asks "how do I do X", "find a skill for X", or wants to
-  extend agent capabilities beyond what's in agent/skills/.
+name: "find-skills"
+description: "Discover and install agent skills from the open ecosystem. Use when the user asks \"how do I do X\", \"find a skill for X\", or wants to extend agent capabilities beyond what's in agent/skills/."
 ---
 
 # Find Skills — Ecosystem Discovery

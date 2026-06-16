@@ -1,0 +1,2 @@
+-- Declaration: morph_j_from_VOA
+-- Extracted by StaticSplit

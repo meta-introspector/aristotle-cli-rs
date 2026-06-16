@@ -1,6 +1,6 @@
 ---
-name: dotagents-providers-gemini
-description: Deploy dotfiles for Gemini using the Gemini provider in dotagents. Use when configuring Gemini agent commands, skills, or instructions.
+name: "dotagents-providers-gemini"
+description: "Deploy dotfiles for Gemini using the Gemini provider in dotagents. Use when configuring Gemini agent commands, skills, or instructions."
 ---
 
 # Dotagents Providers — Gemini

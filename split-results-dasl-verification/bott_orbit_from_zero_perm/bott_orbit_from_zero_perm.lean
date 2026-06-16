@@ -1,0 +1,2 @@
+-- Declaration: bott_orbit_from_zero_perm
+-- Extracted by StaticSplit

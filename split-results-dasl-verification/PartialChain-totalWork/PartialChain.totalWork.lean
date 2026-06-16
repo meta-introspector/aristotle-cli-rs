@@ -1,0 +1,2 @@
+-- Declaration: PartialChain.totalWork
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: self_describing_crt
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cosmicOrbit_constant_base
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: triggerClosesLeak
+-- Extracted by StaticSplit

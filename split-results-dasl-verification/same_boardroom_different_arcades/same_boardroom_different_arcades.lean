@@ -1,0 +1,2 @@
+-- Declaration: same_boardroom_different_arcades
+-- Extracted by StaticSplit

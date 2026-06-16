@@ -1,0 +1,2 @@
+-- Declaration: concreteSenateGov
+-- Extracted by StaticSplit

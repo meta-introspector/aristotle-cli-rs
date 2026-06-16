@@ -1,0 +1,2 @@
+-- Declaration: VoteThreshold
+-- Extracted by StaticSplit

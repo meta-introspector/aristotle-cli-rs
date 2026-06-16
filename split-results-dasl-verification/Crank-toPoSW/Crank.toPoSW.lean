@@ -1,0 +1,2 @@
+-- Declaration: Crank.toPoSW
+-- Extracted by StaticSplit

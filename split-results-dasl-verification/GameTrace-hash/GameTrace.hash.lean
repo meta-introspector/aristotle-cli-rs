@@ -1,0 +1,2 @@
+-- Declaration: GameTrace.hash
+-- Extracted by StaticSplit

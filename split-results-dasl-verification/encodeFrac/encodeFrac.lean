@@ -1,0 +1,2 @@
+-- Declaration: encodeFrac
+-- Extracted by StaticSplit

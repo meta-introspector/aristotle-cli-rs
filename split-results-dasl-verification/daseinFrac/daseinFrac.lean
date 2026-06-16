@@ -1,0 +1,2 @@
+-- Declaration: daseinFrac
+-- Extracted by StaticSplit

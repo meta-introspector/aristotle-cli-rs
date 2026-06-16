@@ -1,0 +1,2 @@
+-- Declaration: GrothendieckEndo.lift_preserves_proj
+-- Extracted by StaticSplit

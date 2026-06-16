@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-atlas
-description: Finite simple group theory repository classification and ZKperf integration. Use for mathematical analysis of codebases.
+name: "cargo-vendormod-atlas"
+description: "Finite simple group theory repository classification and ZKperf integration. Use for mathematical analysis of codebases."
 ---
 
 # Cargo-Vendormod Mathematical Atlas

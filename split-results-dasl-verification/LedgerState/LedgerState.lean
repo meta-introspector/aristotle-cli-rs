@@ -1,0 +1,2 @@
+-- Declaration: LedgerState
+-- Extracted by StaticSplit

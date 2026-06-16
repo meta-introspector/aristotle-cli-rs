@@ -1,0 +1,2 @@
+-- Declaration: selfPartition
+-- Extracted by StaticSplit

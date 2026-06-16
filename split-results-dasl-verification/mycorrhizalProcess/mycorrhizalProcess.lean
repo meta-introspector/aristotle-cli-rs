@@ -1,0 +1,2 @@
+-- Declaration: mycorrhizalProcess
+-- Extracted by StaticSplit

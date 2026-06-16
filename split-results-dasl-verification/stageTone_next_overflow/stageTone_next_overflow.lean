@@ -1,0 +1,2 @@
+-- Declaration: stageTone_next_overflow
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: TradeWarsMove
+-- Extracted by StaticSplit

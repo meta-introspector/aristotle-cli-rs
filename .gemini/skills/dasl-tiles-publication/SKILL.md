@@ -1,11 +1,6 @@
 ---
-name: dasl-tiles-publication
-description: >-
-  Self-publishing DASL tile registry with stable identities, immutable versions,
-  proof artifacts, and IPLD service references. Implements the tile publication
-  protocol: stable ID → latest pointer → immutable version → manifest + .so + proof.
-  Use when publishing tiles, updating tile versions, resolving stable IDs, or
-  managing the tile discovery list.
+name: "dasl-tiles-publication"
+description: "Self-publishing DASL tile registry with stable identities, immutable versions, proof artifacts, and IPLD service references. Implements the tile publication protocol: stable ID → latest pointer → immutable version → manifest + .so + proof. Use when publishing tiles, updating tile versions, resolving stable IDs, or managing the tile discovery list."
 ---
 
 # DASL Tiles Publication

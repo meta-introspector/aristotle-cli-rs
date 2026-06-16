@@ -1,0 +1,2 @@
+-- Declaration: self_reference_requires_membership
+-- Extracted by StaticSplit

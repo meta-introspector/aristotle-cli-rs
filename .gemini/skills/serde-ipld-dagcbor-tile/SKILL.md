@@ -1,8 +1,6 @@
 ---
-name: serde-ipld-dagcbor-tile
-description: >-
-  🔧 serde_ipld_dagcbor — DAG-CBOR Codec tile (port 18007) — diagnose, start, develop, and use.
-  harness
+name: "serde-ipld-dagcbor-tile"
+description: "🔧 serde_ipld_dagcbor — DAG-CBOR Codec tile (port 18007) — diagnose, start, develop, and use. harness"
 ---
 
 # 🔧 serde_ipld_dagcbor — DAG-CBOR Codec

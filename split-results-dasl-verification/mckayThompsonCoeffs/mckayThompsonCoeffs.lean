@@ -1,0 +1,2 @@
+-- Declaration: mckayThompsonCoeffs
+-- Extracted by StaticSplit

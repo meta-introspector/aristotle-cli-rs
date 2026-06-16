@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_emoji_soundness_completeness
+-- Extracted by StaticSplit

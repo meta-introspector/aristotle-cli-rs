@@ -1,0 +1,2 @@
+-- Declaration: canonicalGearbox
+-- Extracted by StaticSplit

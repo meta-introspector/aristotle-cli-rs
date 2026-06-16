@@ -1,0 +1,2 @@
+-- Declaration: mkContentRecord
+-- Extracted by StaticSplit

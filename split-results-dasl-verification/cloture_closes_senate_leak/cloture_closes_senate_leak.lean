@@ -1,0 +1,2 @@
+-- Declaration: cloture_closes_senate_leak
+-- Extracted by StaticSplit

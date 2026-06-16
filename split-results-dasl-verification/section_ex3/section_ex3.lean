@@ -1,0 +1,2 @@
+-- Declaration: section_ex3
+-- Extracted by StaticSplit

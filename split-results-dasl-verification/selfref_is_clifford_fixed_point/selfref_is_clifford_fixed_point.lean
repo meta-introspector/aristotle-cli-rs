@@ -1,0 +1,2 @@
+-- Declaration: selfref_is_clifford_fixed_point
+-- Extracted by StaticSplit

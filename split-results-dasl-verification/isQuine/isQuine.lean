@@ -1,0 +1,2 @@
+-- Declaration: isQuine
+-- Extracted by StaticSplit

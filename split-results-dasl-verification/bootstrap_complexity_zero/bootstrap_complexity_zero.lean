@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_complexity_zero
+-- Extracted by StaticSplit

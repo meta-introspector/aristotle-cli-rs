@@ -1,0 +1,2 @@
+-- Declaration: level3_mod47
+-- Extracted by StaticSplit

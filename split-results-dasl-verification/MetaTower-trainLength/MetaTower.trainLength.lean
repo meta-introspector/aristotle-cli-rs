@@ -1,0 +1,2 @@
+-- Declaration: MetaTower.trainLength
+-- Extracted by StaticSplit

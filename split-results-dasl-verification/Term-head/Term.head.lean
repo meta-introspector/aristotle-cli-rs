@@ -1,0 +1,2 @@
+-- Declaration: Term.head
+-- Extracted by StaticSplit

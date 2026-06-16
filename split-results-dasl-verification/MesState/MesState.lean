@@ -1,0 +1,2 @@
+-- Declaration: MesState
+-- Extracted by StaticSplit

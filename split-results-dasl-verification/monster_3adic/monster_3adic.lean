@@ -1,0 +1,2 @@
+-- Declaration: monster_3adic
+-- Extracted by StaticSplit

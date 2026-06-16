@@ -1,0 +1,2 @@
+-- Declaration: fin2_quaternion_isometry
+-- Extracted by StaticSplit

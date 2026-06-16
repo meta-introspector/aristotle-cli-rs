@@ -1,0 +1,2 @@
+-- Declaration: agent3
+-- Extracted by StaticSplit

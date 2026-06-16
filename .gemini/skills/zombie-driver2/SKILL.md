@@ -1,6 +1,6 @@
 ---
-name: zombie-driver2
-description: Rust compiler analysis suite with IPLD CAR shared memory, Monster group theory integration, spectral analysis, and OCI deployment. Use when working with the zombie_driver2 project, its 200+ analysis binaries, IPLD thought store, conformal field theory plugin, or OCI/Terraform deployment.
+name: "zombie-driver2"
+description: "Rust compiler analysis suite with IPLD CAR shared memory, Monster group theory integration, spectral analysis, and OCI deployment. Use when working with the zombie_driver2 project, its 200+ analysis binaries, IPLD thought store, conformal field theory plugin, or OCI/Terraform deployment."
 ---
 
 # Zombie Driver 2

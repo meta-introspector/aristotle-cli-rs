@@ -1,0 +1,2 @@
+-- Declaration: moonshineSystem
+-- Extracted by StaticSplit

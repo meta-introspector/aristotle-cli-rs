@@ -1,7 +1,7 @@
 ---
-name: shannon
-description: Interact with Neovim via RPC to annotate code, navigate files, and do walkthroughs. Use when the user asks to show something "in Neovim", requests an annotated code review, guided walkthrough, or error markers in their editor.
-allowed-tools: Bash Read Glob Grep
+name: "shannon"
+description: "Interact with Neovim via RPC to annotate code, navigate files, and do walkthroughs. Use when the user asks to show something \"in Neovim\", requests an annotated code review, guided walkthrough, or error markers in their editor."
+allowed-tools: "Bash Read Glob Grep"
 ---
 
 # Shannon: Neovim RPC interaction

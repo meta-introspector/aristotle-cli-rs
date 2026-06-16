@@ -1,0 +1,2 @@
+-- Declaration: chytrid_mycorrhiza_step
+-- Extracted by StaticSplit

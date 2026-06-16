@@ -1,0 +1,2 @@
+-- Declaration: cordycepsSpore
+-- Extracted by StaticSplit

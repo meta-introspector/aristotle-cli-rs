@@ -1,0 +1,2 @@
+-- Declaration: each_fires_once
+-- Extracted by StaticSplit

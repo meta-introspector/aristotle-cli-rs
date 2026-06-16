@@ -1,0 +1,2 @@
+-- Declaration: Cosmos
+-- Extracted by StaticSplit

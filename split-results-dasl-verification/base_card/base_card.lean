@@ -1,0 +1,2 @@
+-- Declaration: base_card
+-- Extracted by StaticSplit

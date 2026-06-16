@@ -1,8 +1,6 @@
 ---
-name: deploy-tile
-description: >-
-  Web-based system-manager deploy panel (port 8810). Deploy any tile from browser.
-  infra — deployment
+name: "deploy-tile"
+description: "Web-based system-manager deploy panel (port 8810). Deploy any tile from browser. infra — deployment"
 ---
 
 # 🎮 Deploy Tile

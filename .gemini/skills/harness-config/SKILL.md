@@ -1,10 +1,6 @@
 ---
-name: harness-config
-description: >-
-  Modify the agent harness: permissions, lifecycle hooks, tool
-  availability, model/context settings, schedules, and deterministic
-  runtime configuration. Use when changing how the agent runs, not
-  what it knows.
+name: "harness-config"
+description: "Modify the agent harness: permissions, lifecycle hooks, tool availability, model/context settings, schedules, and deterministic runtime configuration. Use when changing how the agent runs, not what it knows."
 ---
 
 # Harness Config — Runtime Configuration

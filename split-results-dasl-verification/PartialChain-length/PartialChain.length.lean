@@ -1,0 +1,2 @@
+-- Declaration: PartialChain.length
+-- Extracted by StaticSplit

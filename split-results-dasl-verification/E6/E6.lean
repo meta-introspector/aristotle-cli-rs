@@ -1,0 +1,2 @@
+-- Declaration: E6
+-- Extracted by StaticSplit

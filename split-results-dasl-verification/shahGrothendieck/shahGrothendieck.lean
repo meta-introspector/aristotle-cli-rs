@@ -1,0 +1,2 @@
+-- Declaration: shahGrothendieck
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: obstruction_product_not_prime
+-- Extracted by StaticSplit

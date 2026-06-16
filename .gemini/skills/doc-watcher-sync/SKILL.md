@@ -1,6 +1,6 @@
 ---
-name: doc-watcher-sync
-description: Watch .kilo/plans/*.md, .kilo/commands/*.md, and .kilo/agents/*.md then sync to ~/DOCS with stable slugs and last-updated stamps.
+name: "doc-watcher-sync"
+description: "Watch .kilo/plans/*.md, .kilo/commands/*.md, and .kilo/agents/*.md then sync to ~/DOCS with stable slugs and last-updated stamps."
 ---
 
 # DOC Watcher Sync Skill

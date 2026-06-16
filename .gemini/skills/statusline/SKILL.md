@@ -1,9 +1,6 @@
 ---
-name: statusline
-description: >-
-  Create and edit the agent statusline extension. Shows persistent
-  state at the bottom of the terminal. Use when handling the
-  /statusline command or customizing the bottom bar.
+name: "statusline"
+description: "Create and edit the agent statusline extension. Shows persistent state at the bottom of the terminal. Use when handling the /statusline command or customizing the bottom bar."
 ---
 
 # Statusline — Bottom Bar Customization

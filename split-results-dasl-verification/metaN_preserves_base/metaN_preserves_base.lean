@@ -1,0 +1,2 @@
+-- Declaration: metaN_preserves_base
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: normal_subgroup_contains_three_cycle
+-- Extracted by StaticSplit

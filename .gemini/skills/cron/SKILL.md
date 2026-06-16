@@ -1,9 +1,6 @@
 ---
-name: cron
-description: >-
-  Schedule reminders and recurring tasks via letta cron. One-shot or
-  recurring. Use when the user asks to be reminded, wants periodic
-  check-ins, or needs deferred follow-ups.
+name: "cron"
+description: "Schedule reminders and recurring tasks via letta cron. One-shot or recurring. Use when the user asks to be reminded, wants periodic check-ins, or needs deferred follow-ups."
 ---
 
 # Cron — Scheduled Tasks

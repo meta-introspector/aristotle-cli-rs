@@ -1,0 +1,2 @@
+-- Declaration: descent_condition
+-- Extracted by StaticSplit

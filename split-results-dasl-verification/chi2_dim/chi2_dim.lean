@@ -1,0 +1,2 @@
+-- Declaration: chi2_dim
+-- Extracted by StaticSplit

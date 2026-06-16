@@ -1,0 +1,2 @@
+-- Declaration: monster_vm_complete
+-- Extracted by StaticSplit

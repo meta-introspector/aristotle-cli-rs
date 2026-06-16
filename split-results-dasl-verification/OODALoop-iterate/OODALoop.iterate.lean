@@ -1,0 +1,2 @@
+-- Declaration: OODALoop.iterate
+-- Extracted by StaticSplit

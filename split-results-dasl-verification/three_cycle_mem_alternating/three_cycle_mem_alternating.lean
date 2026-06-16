@@ -1,0 +1,2 @@
+-- Declaration: three_cycle_mem_alternating
+-- Extracted by StaticSplit

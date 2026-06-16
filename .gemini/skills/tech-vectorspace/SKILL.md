@@ -1,11 +1,6 @@
 ---
-name: tech-vectorspace
-description: >-
-  Tech stack vector space model — basis {crates.io/getnora.io, git, flake.nix,
-  system-manager, nginx, shmem, perf, cargo/bun/uv} with topology and
-  CID/DAG-CBOR sheaf gluing across pipeline phases [spec, code, compile,
-  debug, perf, fuzz]. Use when reasoning about stack composition, pipeline
-  architecture, or generating new tile views from the sheaf.
+name: "tech-vectorspace"
+description: "Tech stack vector space model — basis {crates.io/getnora.io, git, flake.nix, system-manager, nginx, shmem, perf, cargo/bun/uv} with topology and CID/DAG-CBOR sheaf gluing across pipeline phases [spec, code, compile, debug, perf, fuzz]. Use when reasoning about stack composition, pipeline architecture, or generating new tile views from the sheaf."
 ---
 
 # tech-vectorspace — Pipeline Sheaf over a Tech Basis

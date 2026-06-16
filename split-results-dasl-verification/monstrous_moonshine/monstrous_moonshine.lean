@@ -1,0 +1,2 @@
+-- Declaration: monstrous_moonshine
+-- Extracted by StaticSplit

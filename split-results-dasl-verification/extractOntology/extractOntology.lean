@@ -1,0 +1,2 @@
+-- Declaration: extractOntology
+-- Extracted by StaticSplit

@@ -1,10 +1,6 @@
 ---
-name: merge-vendor-deps-main
-description: >-
-  Merge the vendor-deps branch into main for ipld-car-ipc-shmem-linux.
-  The main branch is broken (cargoLock.lockFile with file:// paths fails in
-  Nix sandbox). The vendor-deps branch works with cargo vendor + cargoVendorDir.
-  Use when fixing offline Nix builds, merging branches, or updating flake.nix.
+name: "merge-vendor-deps-main"
+description: "Merge the vendor-deps branch into main for ipld-car-ipc-shmem-linux. The main branch is broken (cargoLock.lockFile with file:// paths fails in Nix sandbox). The vendor-deps branch works with cargo vendor + cargoVendorDir. Use when fixing offline Nix builds, merging branches, or updating flake.nix."
 ---
 
 # Merge ipld-car-ipc-shmem-linux vendor-deps into main

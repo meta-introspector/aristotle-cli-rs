@@ -1,0 +1,2 @@
+-- Declaration: isFiberStable
+-- Extracted by StaticSplit

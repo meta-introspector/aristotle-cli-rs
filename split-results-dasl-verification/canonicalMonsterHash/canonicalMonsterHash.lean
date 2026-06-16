@@ -1,0 +1,2 @@
+-- Declaration: canonicalMonsterHash
+-- Extracted by StaticSplit

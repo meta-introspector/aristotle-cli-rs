@@ -1,0 +1,2 @@
+-- Declaration: idx3_bott
+-- Extracted by StaticSplit

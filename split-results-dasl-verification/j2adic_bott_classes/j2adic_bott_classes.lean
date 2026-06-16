@@ -1,0 +1,2 @@
+-- Declaration: j2adic_bott_classes
+-- Extracted by StaticSplit

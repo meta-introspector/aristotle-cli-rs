@@ -1,8 +1,6 @@
 ---
-name: vendormod-tile-server
-description: >-
-  Vendormod tile server (port 8765) — modules, refactor, badges.
-  vendormod — dashboard
+name: "vendormod-tile-server"
+description: "Vendormod tile server (port 8765) — modules, refactor, badges. vendormod — dashboard"
 ---
 
 # 📦 Vendormod Tile Server

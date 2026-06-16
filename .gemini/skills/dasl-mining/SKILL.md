@@ -1,9 +1,6 @@
 ---
-name: dasl-mining
-description: >-
-  Execute the three-phase DASL codebase mining pipeline — discover submodules
-  with vendormod, cross-reference objects between repos, deep-scan each with
-  deep_scanner. Use when analyzing the DASL monorepo structure.
+name: "dasl-mining"
+description: "Execute the three-phase DASL codebase mining pipeline — discover submodules with vendormod, cross-reference objects between repos, deep-scan each with deep_scanner. Use when analyzing the DASL monorepo structure."
 ---
 
 # dasl-mining — DASL Codebase Mining Pipeline

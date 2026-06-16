@@ -1,0 +1,2 @@
+-- Declaration: pos_annihilation_stable
+-- Extracted by StaticSplit

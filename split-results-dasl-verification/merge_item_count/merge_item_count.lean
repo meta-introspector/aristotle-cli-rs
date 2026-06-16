@@ -1,0 +1,2 @@
+-- Declaration: merge_item_count
+-- Extracted by StaticSplit

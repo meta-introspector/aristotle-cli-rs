@@ -1,0 +1,2 @@
+-- Declaration: shadow_transport_invariant
+-- Extracted by StaticSplit

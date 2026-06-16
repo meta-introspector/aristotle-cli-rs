@@ -1,0 +1,2 @@
+-- Declaration: fullRevolution_weight
+-- Extracted by StaticSplit

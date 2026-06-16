@@ -1,0 +1,2 @@
+-- Declaration: propagation_preserves_viability
+-- Extracted by StaticSplit

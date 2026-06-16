@@ -1,0 +1,2 @@
+-- Declaration: obj_CrankEngine
+-- Extracted by StaticSplit

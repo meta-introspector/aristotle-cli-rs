@@ -1,0 +1,2 @@
+-- Declaration: TeslaResonance
+-- Extracted by StaticSplit

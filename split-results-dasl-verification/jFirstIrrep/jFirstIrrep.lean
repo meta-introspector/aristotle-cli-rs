@@ -1,0 +1,2 @@
+-- Declaration: jFirstIrrep
+-- Extracted by StaticSplit

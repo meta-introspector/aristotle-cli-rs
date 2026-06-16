@@ -1,9 +1,6 @@
 ---
-name: skill-author
-description: >-
-  Create and package agent skills. SKILL.md frontmatter, progressive
-  disclosure, bundled resources (scripts/, references/, assets/).
-  Use when creating a new skill or updating an existing one.
+name: "skill-author"
+description: "Create and package agent skills. SKILL.md frontmatter, progressive disclosure, bundled resources (scripts/, references/, assets/). Use when creating a new skill or updating an existing one."
 ---
 
 # Skill Author — Creating Effective Skills

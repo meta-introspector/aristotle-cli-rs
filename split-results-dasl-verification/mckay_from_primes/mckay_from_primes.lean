@@ -1,0 +1,2 @@
+-- Declaration: mckay_from_primes
+-- Extracted by StaticSplit

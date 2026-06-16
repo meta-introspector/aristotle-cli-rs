@@ -1,0 +1,2 @@
+-- Declaration: on_dvd_monster
+-- Extracted by StaticSplit

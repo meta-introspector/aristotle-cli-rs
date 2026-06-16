@@ -1,10 +1,6 @@
 ---
-name: dispatch-agents
-description: >-
-  Dispatch stateless coding agents (Claude Code, Codex, Gemini CLI) via
-  Bash as sub-agents. Use when stuck, need a second opinion, or parallel
-  research. They have no memory — provide all context. Background by
-  default.
+name: "dispatch-agents"
+description: "Dispatch stateless coding agents (Claude Code, Codex, Gemini CLI) via Bash as sub-agents. Use when stuck, need a second opinion, or parallel research. They have no memory — provide all context. Background by default."
 ---
 
 # Dispatch Agents — Stateless Sub-Agent Orchestration

@@ -1,0 +1,2 @@
+-- Declaration: CopyInstr
+-- Extracted by StaticSplit

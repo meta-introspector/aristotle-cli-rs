@@ -1,11 +1,6 @@
 ---
-name: extend-dmz-mmap-scan
-description: >-
-  Extend the DMZ mmap scan from 200MB to the full 36GB pages.bin for complete
-  CID signature analysis. Also build per-language fuzz harnesses for 0xD8 0x2A
-  round-trip and cross-validate CID encoding/decoding across Rust, Python, Go,
-  JS, Java, and C. Use when expanding binary analysis coverage or building
-  cross-language validation harnesses.
+name: "extend-dmz-mmap-scan"
+description: "Extend the DMZ mmap scan from 200MB to the full 36GB pages.bin for complete CID signature analysis. Also build per-language fuzz harnesses for 0xD8 0x2A round-trip and cross-validate CID encoding/decoding across Rust, Python, Go, JS, Java, and C. Use when expanding binary analysis coverage or building cross-language validation harnesses."
 ---
 
 # Extend DMZ mmap Scan to Full 36GB pages.bin

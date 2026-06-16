@@ -1,0 +1,2 @@
+-- Declaration: idempotent_zero_defect
+-- Extracted by StaticSplit

@@ -1,8 +1,6 @@
 ---
-name: nagios-tile-monitor
-description: >-
-  Nagios-style DASL tile health monitor (port 8800). Diagnose, start, develop, use.
-  infra — monitoring
+name: "nagios-tile-monitor"
+description: "Nagios-style DASL tile health monitor (port 8800). Diagnose, start, develop, use. infra — monitoring"
 ---
 
 # 🟩 Nagios Tile Monitor

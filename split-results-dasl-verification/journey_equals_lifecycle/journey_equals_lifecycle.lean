@@ -1,0 +1,2 @@
+-- Declaration: journey_equals_lifecycle
+-- Extracted by StaticSplit

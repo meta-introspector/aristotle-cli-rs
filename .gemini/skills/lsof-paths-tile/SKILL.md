@@ -1,8 +1,6 @@
 ---
-name: lsof-paths-tile
-description: >-
-  Reusable tile that collects paths from lsof output across tmux sessions.
-  Provides CLI, HTTP server, and tile GUI for workspace path analysis.
+name: "lsof-paths-tile"
+description: "Reusable tile that collects paths from lsof output across tmux sessions. Provides CLI, HTTP server, and tile GUI for workspace path analysis."
 ---
 
 # lsof-paths-tile — Path Collection Service

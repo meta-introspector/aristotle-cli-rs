@@ -1,0 +1,2 @@
+-- Declaration: origin_shard_zero
+-- Extracted by StaticSplit

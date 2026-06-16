@@ -125,7 +125,7 @@ pub fn collect_lean_files(
 
         if file_matches > 0 {
             let name = path.file_name().unwrap_or_default().to_string_lossy();
-            stats.insert(name, file_matches);
+            stats.insert(name.to_string(), file_matches);
             debug!(index = %path.display(), lines = file_lines, matches = file_matches, "Index scanned");
         }
     }

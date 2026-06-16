@@ -1,0 +1,2 @@
+-- Declaration: navigate_origin
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: radical_normalizer_groups
+-- Extracted by StaticSplit

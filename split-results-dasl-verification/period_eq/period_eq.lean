@@ -1,0 +1,2 @@
+-- Declaration: period_eq
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: B_prime_divisors_divide
+-- Extracted by StaticSplit

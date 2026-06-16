@@ -1,0 +1,2 @@
+-- Declaration: example_composable
+-- Extracted by StaticSplit

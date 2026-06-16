@@ -1,0 +1,2 @@
+-- Declaration: type_defn_count
+-- Extracted by StaticSplit

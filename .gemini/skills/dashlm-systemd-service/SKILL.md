@@ -1,6 +1,6 @@
 ---
-name: dashlm-systemd-service
-description: Implement systemd service dashlm-index@.service and server binary dashlm_index_server for long-running shared-index management.
+name: "dashlm-systemd-service"
+description: "Implement systemd service dashlm-index@.service and server binary dashlm_index_server for long-running shared-index management."
 ---
 
 # dashlm_index_server + systemd unit

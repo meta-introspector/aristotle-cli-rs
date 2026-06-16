@@ -1,0 +1,2 @@
+-- Declaration: SimpleGroupEntry
+-- Extracted by StaticSplit

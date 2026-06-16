@@ -1,0 +1,2 @@
+-- Declaration: weightE6
+-- Extracted by StaticSplit

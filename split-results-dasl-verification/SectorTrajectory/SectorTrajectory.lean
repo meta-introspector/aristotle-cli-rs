@@ -1,0 +1,2 @@
+-- Declaration: SectorTrajectory
+-- Extracted by StaticSplit

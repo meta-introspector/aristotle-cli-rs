@@ -1,6 +1,6 @@
 ---
-name: dashlm-shared-index
-description: Create the low-level shared-memory library crate dashlm_shared_index wrapping LibAFL shmem with fixed-size hash table and zone-based hashing.
+name: "dashlm-shared-index"
+description: "Create the low-level shared-memory library crate dashlm_shared_index wrapping LibAFL shmem with fixed-size hash table and zone-based hashing."
 ---
 
 # dashlm_shared_index

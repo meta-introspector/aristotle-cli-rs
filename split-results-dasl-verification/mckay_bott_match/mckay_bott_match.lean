@@ -1,0 +1,2 @@
+-- Declaration: mckay_bott_match
+-- Extracted by StaticSplit

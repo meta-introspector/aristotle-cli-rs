@@ -1,0 +1,2 @@
+-- Declaration: OODALoop
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: navigate_preserves_items
+-- Extracted by StaticSplit

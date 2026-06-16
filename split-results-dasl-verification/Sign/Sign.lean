@@ -1,0 +1,2 @@
+-- Declaration: Sign
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ArithmeticAttractor.bottClass
+-- Extracted by StaticSplit

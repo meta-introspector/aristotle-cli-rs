@@ -1,0 +1,2 @@
+-- Declaration: Co1_factored
+-- Extracted by StaticSplit

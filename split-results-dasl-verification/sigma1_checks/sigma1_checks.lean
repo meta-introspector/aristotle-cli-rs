@@ -1,0 +1,2 @@
+-- Declaration: sigma1_checks
+-- Extracted by StaticSplit

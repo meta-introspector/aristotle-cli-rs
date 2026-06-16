@@ -1,12 +1,6 @@
 ---
-name: d8-2a-per-service-streams
-description: >-
-  Per-service eBPF hit streams filtered by PID from the D8-2A profiler.
-  Discovers services via systemctl+pgrep, tracks PID sets, and filters the
-  global hits.jsonl to provide per-service views. 6 services monitored:
-  nginx, dasl-tiles-rust, d8-2a-monitor, kant-pastebin, ssh, systemd-journald.
-  Use when debugging service-specific CBOR tag 42 detection or integrating
-  eBPF monitoring into per-service dashboards.
+name: "d8-2a-per-service-streams"
+description: "Per-service eBPF hit streams filtered by PID from the D8-2A profiler. Discovers services via systemctl+pgrep, tracks PID sets, and filters the global hits.jsonl to provide per-service views. 6 services monitored: nginx, dasl-tiles-rust, d8-2a-monitor, kant-pastebin, ssh, systemd-journald. Use when debugging service-specific CBOR tag 42 detection or integrating eBPF monitoring into per-service dashboards."
 ---
 
 # D8-2A Per-Service eBPF Streams

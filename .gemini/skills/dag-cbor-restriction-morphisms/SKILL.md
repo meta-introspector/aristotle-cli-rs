@@ -1,6 +1,6 @@
 ---
-name: dag-cbor-restriction-morphisms
-description: Build, test, and verify CBOR, DAG-CBOR, DRISL, IPLD, libipld, serde_ipld_dagcbor, rust-ipld-core, rust-ipld-dagpb, fuzz, and test-suite crates with cargo-vendormod. Use for dag-cbor workload management, flake coverage, encoding/decoding tests, fuzzing, and compliance tooling.
+name: "dag-cbor-restriction-morphisms"
+description: "Build, test, and verify CBOR, DAG-CBOR, DRISL, IPLD, libipld, serde_ipld_dagcbor, rust-ipld-core, rust-ipld-dagpb, fuzz, and test-suite crates with cargo-vendormod. Use for dag-cbor workload management, flake coverage, encoding/decoding tests, fuzzing, and compliance tooling."
 ---
 
 # DAG-CBOR Restricted-Morphisms Workflow

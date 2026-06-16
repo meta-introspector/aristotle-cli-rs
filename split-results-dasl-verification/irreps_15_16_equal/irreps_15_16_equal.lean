@@ -1,0 +1,2 @@
+-- Declaration: irreps_15_16_equal
+-- Extracted by StaticSplit

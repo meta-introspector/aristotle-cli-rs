@@ -1,0 +1,2 @@
+-- Declaration: VibeStepRecord
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: all_clusters_in_morphisms
+-- Extracted by StaticSplit

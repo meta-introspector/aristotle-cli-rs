@@ -1,8 +1,6 @@
 ---
-name: n0-dasl-tile
-description: >-
-  ⚠️ n0_dasl — Alternative DASL Impl tile (port 18009) — diagnose, start, develop, and use.
-  harness
+name: "n0-dasl-tile"
+description: "⚠️ n0_dasl — Alternative DASL Impl tile (port 18009) — diagnose, start, develop, and use. harness"
 ---
 
 # ⚠️ n0_dasl — Alternative DASL Impl

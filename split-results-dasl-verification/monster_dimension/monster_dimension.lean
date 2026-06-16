@@ -1,0 +1,2 @@
+-- Declaration: monster_dimension
+-- Extracted by StaticSplit

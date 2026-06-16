@@ -1,0 +1,2 @@
+-- Declaration: distinct_vibes_independent
+-- Extracted by StaticSplit

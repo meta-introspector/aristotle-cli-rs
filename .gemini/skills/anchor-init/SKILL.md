@@ -1,10 +1,6 @@
 ---
-name: anchor-init
-description: >-
-  Scaffolds anchor tag infrastructure and generates the initial master manifest
-  map. Zero-dependency anchor tagging subsystem for codebase navigation.
-  Use with "new" or "existing" project_type and a language_target
-  (typescript, rust, python, lean).
+name: "anchor-init"
+description: "Scaffolds anchor tag infrastructure and generates the initial master manifest map. Zero-dependency anchor tagging subsystem for codebase navigation. Use with \"new\" or \"existing\" project_type and a language_target (typescript, rust, python, lean)."
 ---
 
 # anchor-init — Anchor Tag Bootstrapper

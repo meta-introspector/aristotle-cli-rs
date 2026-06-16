@@ -1,0 +1,2 @@
+-- Declaration: cloture_threshold_is_60
+-- Extracted by StaticSplit

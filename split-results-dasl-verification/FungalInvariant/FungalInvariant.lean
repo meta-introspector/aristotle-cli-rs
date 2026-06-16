@@ -1,0 +1,2 @@
+-- Declaration: FungalInvariant
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: aristotle_shares_selfref_bott
+-- Extracted by StaticSplit

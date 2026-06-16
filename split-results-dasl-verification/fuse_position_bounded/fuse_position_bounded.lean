@@ -1,0 +1,2 @@
+-- Declaration: fuse_position_bounded
+-- Extracted by StaticSplit

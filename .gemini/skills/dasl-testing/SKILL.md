@@ -1,16 +1,119 @@
 ---
-name: dasl-testing
-description: >-
-  Run the DASL cross-implementation fuzzing harness — 27 CBOR/DAG-CBOR
-  implementations × 7 fuzzing engines across 13 languages. Use when setting
-  up fuzz campaigns, running round-robin comparison, analyzing crash data,
-  or launching the TUI dashboards (tile-tui, perf-tile-tui).
+name: "dasl-testing"
+description: "Run the DASL cross-implementation fuzzing harness — 27 CBOR/DAG-CBOR implementations × 7 fuzzing engines across 13 languages. Use when setting up fuzz campaigns, running round-robin comparison, analyzing crash data, deploying services via system-manager, or launching the TUI dashboards."
 ---
 
 # dasl-testing — Cross-Implementation Fuzzing
 
 **Location:** `~/dasl/dasl-testing/`
 **Scope:** 27 harnesses × 7 engines × 13 languages
+**Nix flake:** `~/dasl/dasl-testing/flake.nix`
+**Git mirror:** `~/git/github.com/meta-introspector/dasl-testing.git`
+
+## Nix Build (flakes)
+
+The root flake builds all Rust harnesses and Python services as nix packages:
+
+```bash
+cd ~/dasl/dasl-testing
+
+# Lock and build all services
+nix flake lock
+nix build .#  # default = all services
+
+# Individual services
+nix build .#serdeIpldDagcbor   # serde_ipld_dagcbor service binary
+nix build .#libipld            # libipld service binary
+nix build .#n0Dasl             # n0_dasl service binary
+nix build .#pythonService      # Python dag-cbrrr service
+nix build .#gateway            # Orchestration dashboard
+
+# C CBOR round-robin binaries
+nix build .#rr-tinycbor .#rr-libcbor .#rr-qcbor
+nix build .#c-cbor-all         # All 7 C round-robin testers
+```
+
+### Libipld Harness (vendored deps)
+
+The libipld harness has 46MB of vendored crate dependencies for pure sandbox build:
+
+```bash
+cd ~/dasl/dasl-testing/harnesses/libipld
+nix build .#  # Uses cargoVendorDir = "vendor"
+```
+
+**Flake pattern:** `cargoVendorDir = "vendor"` — avoids crates.io network fetches.
+The harness uses `cargoBuildFlags = [ "--bin service" ]` to build only the service binary.
+
+**Edition 2024 note:** Uses `edition = "2024"` (Cargo.toml). Requires a nixpkgs
+with rustc ≥ 1.85. If you see `"this version of Cargo is older than the '2024' edition"`,
+update nixpkgs or use rust-overlay.
+
+### Nora Cargo Config
+
+Rust harnesses that can't vendor deps use a preBuild hook with nora registry:
+
+```nix
+preBuild = ''
+  mkdir -p .cargo
+  cat > .cargo/config.toml << 'NORA_EOF'
+  [source.crates-io]
+  replace-with = "nora"
+
+  [source.nora]
+  registry = "http://127.0.0.1:4000/cargo/index"
+  NORA_EOF
+'';
+```
+
+**Gotcha:** This requires `--impure` in nix build (network to nora).
+Pure eval requires vendored deps.
+
+## Cargo Build (direct)
+
+```bash
+cd ~/dasl/dasl-testing
+
+# Build one harness
+cd harnesses/serde_ipld_dagcbor && cargo build --release
+
+# Build round-robin
+cd harnesses/rust-cbor && cargo build --release --bin rr_cbor4ii
+```
+
+## System-Manager Deployment
+
+Services defined in `~/dasl/dasl-testing/system-manager-config.nix`:
+
+```bash
+# Deploy via dasl-testing flake directly
+sudo $(nix build ~/dasl/dasl-testing#systemConfigs.dasl-tiles --print-out-paths)/bin/activate
+
+# Or via dasl-planning aggregate flake
+sudo $(nix build ~/dasl-planning#systemConfigs.all-services --print-out-paths)/bin/activate
+```
+
+### Current Service Status
+
+| Service | Port | Type | Deploy |
+|---------|------|------|--------|
+| serde-ipld-dagcbor | 18007 | Rust (service binary) | nix build .#serdeIpldDagcbor |
+| n0-dasl | 18009 | Rust (service binary) | nix build .#n0Dasl |
+| libipld | 18011 | Rust (vendored, edition 2024) | separate flake |
+| dag-cbrrr | 18001 | Python | nix build .#pythonService |
+| gateway | 18100 | Python | nix build .#gateway |
+
+### Python Tile Servers (separate)
+
+The nagios, deploy, vendormod, port-registry, and fuzz-team tile servers are
+Python scripts vendored in `~/dasl-planning/tile-servers/`:
+
+```bash
+nix build ~/dasl-planning#nagios-tile
+nix build ~/dasl-planning#deploy-tile
+```
+
+---
 
 ## Harness Targets
 
@@ -25,18 +128,6 @@ description: >-
 ### Other Languages
 `go-dasl`, `go-ipld-cbor`, `boxo`, `c-cbor`, `cpp-glaze`,
 `java-dag-cbor`, `js`, `python`, `python-ipld-core`
-
-## Build
-
-```bash
-cd ~/dasl/dasl-testing
-
-# Build one harness
-cd harnesses/serde_ipld_dagcbor && cargo build --release
-
-# Build round-robin
-cd harnesses/rust-cbor && cargo build --release --bin rr_cbor4ii
-```
 
 ## Run Fuzzing
 
@@ -89,27 +180,20 @@ Pattern: encode A → decode B → re-encode → compare bytes.
 ```bash
 cd ~/projects/dasl-tiles-rust
 
-# Interactive tile browser — navigate harnesses, run syscalls, view pipelines
+# Interactive tile browser
 cargo run --release --bin tile-tui
 cargo run --release --bin tile-tui -- --demo
 
-# Performance dashboard — 27 impls across 13 languages
+# Performance dashboard
 cargo run --release --bin perf-tile-tui
 cargo run --release --bin perf-tile-tui -- --demo
 ```
 
 ### eBPF Monitoring Tiles
 
-The eBPF loader exposes D8-2A detection as tiles:
-
 ```bash
-# Diagnostic check (permissions, kernel lockdown)
 cargo run --release --bin tile-mothership -- ebpf://d8-2a/diagnostic
-
-# Monitoring status
 cargo run --release --bin tile-mothership -- ebpf://d8-2a/status
-
-# Captured hits (requires sudo to run monitoring)
 cargo run --release --bin tile-mothership -- ebpf://d8-2a/hits
 ```
 
@@ -131,19 +215,6 @@ cargo run --release --bin tile-mothership -- ebpf://d8-2a/hits
 | ocaml | ocaml-cbor, ocaml-ipld |
 | scheme | racket-cbor, guile-cbor |
 
-### Syscall Operations
-
-Each harness exposes 3 syscall tiles:
-- `roundtrip` — encode then decode, verify byte equality
-- `decode-only` — parse CBOR bytes, check for panics
-- `invalid-encode` — attempt encode of invalid data
-
-### Pipeline DAG
-
-```
-corpus → [roundtrip@all 27 impls] → cross-check → report
-```
-
 ## Guardrails
 
 - Round-robin tests expect byte-identical output across implementations
@@ -151,3 +222,5 @@ corpus → [roundtrip@all 27 impls] → cross-check → report
 - CDDL spec at `dag_cbor_json.cddl` is the authority
 - Crash data goes to `collected_afl_data/`
 - TUI binaries are in `~/projects/dasl-tiles-rust/target/release/`
+- Pure eval builds need `cargoVendorDir`, not `cargoLock.lockFile`
+- Edition 2024 requires rustc ≥ 1.85 (use rust-overlay)

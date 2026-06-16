@@ -1,0 +1,2 @@
+-- Declaration: fungalArcadeClean
+-- Extracted by StaticSplit

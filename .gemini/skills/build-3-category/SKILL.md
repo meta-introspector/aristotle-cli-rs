@@ -1,11 +1,6 @@
 ---
-name: build-3-category
-description: >-
-  Build the 3-category: functor arrows between deep-scan analyses.
-  The current 2-category has 16 objects, 16 morphisms, and 10 hypermorphisms.
-  The next level adds 3-cells (functor arrows between morphism-level analyses).
-  Use when connecting VOA algebra to the hypermorphism graph, or extending
-  the categorical structure.
+name: "build-3-category"
+description: "Build the 3-category: functor arrows between deep-scan analyses. The current 2-category has 16 objects, 16 morphisms, and 10 hypermorphisms. The next level adds 3-cells (functor arrows between morphism-level analyses). Use when connecting VOA algebra to the hypermorphism graph, or extending the categorical structure."
 ---
 
 # Build 3-Category: Functor Arrows Between Deep-Scan Analyses

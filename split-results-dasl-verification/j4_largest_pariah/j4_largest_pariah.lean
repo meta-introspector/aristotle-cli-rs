@@ -1,0 +1,2 @@
+-- Declaration: j4_largest_pariah
+-- Extracted by StaticSplit

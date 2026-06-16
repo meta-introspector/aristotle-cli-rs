@@ -1,0 +1,2 @@
+-- Declaration: smallestDegrees
+-- Extracted by StaticSplit

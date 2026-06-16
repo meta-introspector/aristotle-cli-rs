@@ -1,0 +1,2 @@
+-- Declaration: address_space_card
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: all_taxa_in_mycelium
+-- Extracted by StaticSplit

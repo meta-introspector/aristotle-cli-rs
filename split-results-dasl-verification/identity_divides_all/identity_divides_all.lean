@@ -1,0 +1,2 @@
+-- Declaration: identity_divides_all
+-- Extracted by StaticSplit

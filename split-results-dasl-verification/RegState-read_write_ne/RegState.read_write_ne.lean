@@ -1,0 +1,2 @@
+-- Declaration: RegState.read_write_ne
+-- Extracted by StaticSplit

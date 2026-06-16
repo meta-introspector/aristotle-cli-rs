@@ -1,11 +1,6 @@
 ---
-name: port-registry
-description: >-
-  Monster CFT port registry tile — live port scan dashboard at /tile/ports/.
-  Cross-references /etc/services with nginx proxy map and live ss port checks.
-  26 ports tracked (Monster, ZOS, CICADA, Kant, Quickwit, Forgejo, NORA,
-  DASL, IPLD, headless, FRACTRAN). Use when checking which services are up,
-  finding port assignments, or diagnosing service health.
+name: "port-registry"
+description: "Monster CFT port registry tile — live port scan dashboard at /tile/ports/. Cross-references /etc/services with nginx proxy map and live ss port checks. 26 ports tracked (Monster, ZOS, CICADA, Kant, Quickwit, Forgejo, NORA, DASL, IPLD, headless, FRACTRAN). Use when checking which services are up, finding port assignments, or diagnosing service health."
 ---
 
 # Port Registry Tile

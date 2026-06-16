@@ -1,0 +1,2 @@
+-- Declaration: baby_monster_mult
+-- Extracted by StaticSplit

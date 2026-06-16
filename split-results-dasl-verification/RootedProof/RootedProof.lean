@@ -1,0 +1,2 @@
+-- Declaration: RootedProof
+-- Extracted by StaticSplit

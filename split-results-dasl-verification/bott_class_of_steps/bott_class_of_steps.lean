@@ -1,0 +1,2 @@
+-- Declaration: bott_class_of_steps
+-- Extracted by StaticSplit

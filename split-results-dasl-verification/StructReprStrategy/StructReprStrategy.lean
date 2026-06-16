@@ -1,0 +1,2 @@
+-- Declaration: StructReprStrategy
+-- Extracted by StaticSplit

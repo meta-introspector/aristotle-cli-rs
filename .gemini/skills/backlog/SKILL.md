@@ -1,9 +1,6 @@
 ---
-name: backlog
-description: >-
-  Backlog task tracker for DASL projects. Integrates with llm-agents.nix backlog-md
-  to manage dotagents tasks, worktrees, and tmux sessions. Provides unified view of
-  all work-in-progress across the monorepo.
+name: "backlog"
+description: "Backlog task tracker for DASL projects. Integrates with llm-agents.nix backlog-md to manage dotagents tasks, worktrees, and tmux sessions. Provides unified view of all work-in-progress across the monorepo."
 ---
 
 # Backlog — Task & Work Management

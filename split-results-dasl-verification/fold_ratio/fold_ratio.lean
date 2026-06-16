@@ -1,0 +1,2 @@
+-- Declaration: fold_ratio
+-- Extracted by StaticSplit

@@ -1,9 +1,6 @@
 ---
-name: vendormod-landscape
-description: >-
-  Integration between vendormod refactoring and the broader DASL tile
-  infrastructure — cross-references with existing tiles, overlapping work,
-  action plans for nginx, shmem registration, and monitoring.
+name: "vendormod-landscape"
+description: "Integration between vendormod refactoring and the broader DASL tile infrastructure — cross-references with existing tiles, overlapping work, action plans for nginx, shmem registration, and monitoring."
 ---
 
 # Vendormod Landscape — Integration with DASL Tile System

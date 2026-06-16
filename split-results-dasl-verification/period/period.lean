@@ -1,0 +1,2 @@
+-- Declaration: period
+-- Extracted by StaticSplit

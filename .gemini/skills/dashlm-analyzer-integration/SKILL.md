@@ -1,6 +1,6 @@
 ---
-name: dashlm-analyzer-integration
-description: Integrate shared index cache into crossbeam rustc analyzer to skip re-analysis of unchanged files.
+name: "dashlm-analyzer-integration"
+description: "Integrate shared index cache into crossbeam rustc analyzer to skip re-analysis of unchanged files."
 ---
 
 # crossbeam + dashlm integration

@@ -1,0 +1,2 @@
+-- Declaration: ru_std_gen
+-- Extracted by StaticSplit

@@ -1,10 +1,6 @@
 ---
-name: dasl-tiles-mcp
-description: >-
-  MCP (Model Context Protocol) server for DASL Tiles monitoring. Exposes 10 tools
-  including per-service eBPF streams, tile discovery "lens" layer, nginx log inspection,
-  and health checks. Every tile is a lens — call any tile by path without per-tile code.
-  Use when connecting DASL monitoring to MCP clients (pi, Claude Desktop, Continue).
+name: "dasl-tiles-mcp"
+description: "MCP (Model Context Protocol) server for DASL Tiles monitoring. Exposes 10 tools including per-service eBPF streams, tile discovery \"lens\" layer, nginx log inspection, and health checks. Every tile is a lens — call any tile by path without per-tile code. Use when connecting DASL monitoring to MCP clients (pi, Claude Desktop, Continue)."
 ---
 
 # DASL Tiles MCP Server — Every Tile is a Lens

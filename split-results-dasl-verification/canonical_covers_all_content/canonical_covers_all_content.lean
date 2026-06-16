@@ -1,0 +1,2 @@
+-- Declaration: canonical_covers_all_content
+-- Extracted by StaticSplit

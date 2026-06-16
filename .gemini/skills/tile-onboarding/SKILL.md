@@ -1,9 +1,6 @@
 ---
-name: tile-onboarding
-description: >-
-  How to create a new DASL tile, register it in IPLD shmem, and deploy it
-  via system-manager + nginx. Covers JSON definition, server skeleton, shmem
-  registration, systemd unit, and verification.
+name: "tile-onboarding"
+description: "How to create a new DASL tile, register it in IPLD shmem, and deploy it via system-manager + nginx. Covers JSON definition, server skeleton, shmem registration, systemd unit, and verification."
 ---
 
 # Tile Onboarding — How to Register a New DASL Tile

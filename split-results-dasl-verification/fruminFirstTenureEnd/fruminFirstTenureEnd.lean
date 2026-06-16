@@ -1,0 +1,2 @@
+-- Declaration: fruminFirstTenureEnd
+-- Extracted by StaticSplit

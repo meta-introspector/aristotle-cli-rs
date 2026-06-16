@@ -1,10 +1,6 @@
 ---
-name: fix-nix-system-manager-sandbox
-description: >-
-  Fix Nix system-manager sandbox permissions blocking dasl-tile service builds.
-  Currently fails with "Permission denied (os error 13)" in preBuild sandbox.
-  Use when deploying tile servers via system-manager, fixing Nix sandbox issues,
-  or matching the pastebin flake.nix pattern.
+name: "fix-nix-system-manager-sandbox"
+description: "Fix Nix system-manager sandbox permissions blocking dasl-tile service builds. Currently fails with \"Permission denied (os error 13)\" in preBuild sandbox. Use when deploying tile servers via system-manager, fixing Nix sandbox issues, or matching the pastebin flake.nix pattern."
 ---
 
 # Fix Nix System-Manager Sandbox for Tile Server Deployment

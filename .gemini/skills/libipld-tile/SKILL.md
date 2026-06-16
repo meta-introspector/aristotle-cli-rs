@@ -1,8 +1,6 @@
 ---
-name: libipld-tile
-description: >-
-  🔓 libipld — IPLD Core Impl tile (port 18011) — diagnose, start, develop, and use.
-  harness
+name: "libipld-tile"
+description: "🔓 libipld — IPLD Core Impl tile (port 18011) — diagnose, start, develop, and use. harness"
 ---
 
 # 🔓 libipld — IPLD Core Impl

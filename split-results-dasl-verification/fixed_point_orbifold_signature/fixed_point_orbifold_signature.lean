@@ -1,0 +1,2 @@
+-- Declaration: fixed_point_orbifold_signature
+-- Extracted by StaticSplit

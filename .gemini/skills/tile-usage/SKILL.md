@@ -1,8 +1,6 @@
 ---
-name: tile-usage
-description: >-
-  Everyday DASL tile operations — check health, browse tiles, query data
-  via API and TUI, and diagnose common issues.
+name: "tile-usage"
+description: "Everyday DASL tile operations — check health, browse tiles, query data via API and TUI, and diagnose common issues."
 ---
 
 # Tile Usage — How to Use DASL Tiles

@@ -1,0 +1,2 @@
+-- Declaration: sspA_sspB_disjoint
+-- Extracted by StaticSplit

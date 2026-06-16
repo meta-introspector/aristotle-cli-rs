@@ -1,0 +1,2 @@
+-- Declaration: ShardIDData
+-- Extracted by StaticSplit

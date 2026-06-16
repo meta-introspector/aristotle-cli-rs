@@ -1,0 +1,2 @@
+-- Declaration: j_3adic_valuations
+-- Extracted by StaticSplit

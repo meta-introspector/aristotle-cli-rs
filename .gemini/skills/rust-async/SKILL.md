@@ -1,11 +1,6 @@
 ---
-name: rust-async
-description: >-
-  Production patterns for async Rust with Tokio: tasks, channels, streams,
-  error handling, graceful shutdown. Enforces TigerBeetle coding standard:
-  typed errors, assertion density ≥2, no unwrap in production paths. Use
-  when building async Rust services, implementing concurrent systems, or
-  debugging async code.
+name: "rust-async"
+description: "Production patterns for async Rust with Tokio: tasks, channels, streams, error handling, graceful shutdown. Enforces TigerBeetle coding standard: typed errors, assertion density ≥2, no unwrap in production paths. Use when building async Rust services, implementing concurrent systems, or debugging async code."
 ---
 
 # Rust Async Patterns — TigerBeetle-Aligned

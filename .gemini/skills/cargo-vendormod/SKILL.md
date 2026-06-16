@@ -1,12 +1,6 @@
 ---
-name: cargo-vendormod
-description: >-
-  Cargo-vendormod — git submodule vendoring for Cargo. 8 subcommands (ingest,
-  memecache-upgrade, memecache-gc, scan-index, scan-delta, scan-catalog,
-  scan-tree, deep-scan) + compile-to-shmem + MCP server + module tree
-  visualization tile. Use when managing cargo dependencies as git
-  submodules, compiling crates to IPLD CAR shmem, running file scanners
-  with Hecke spectral scoring, or working with NORA registry integration.
+name: "cargo-vendormod"
+description: "Cargo-vendormod — git submodule vendoring for Cargo. 8 subcommands (ingest, memecache-upgrade, memecache-gc, scan-index, scan-delta, scan-catalog, scan-tree, deep-scan) + compile-to-shmem + MCP server + module tree visualization tile. Use when managing cargo dependencies as git submodules, compiling crates to IPLD CAR shmem, running file scanners with Hecke spectral scoring, or working with NORA registry integration."
 ---
 
 # cargo-vendormod — Git Submodule Vendoring for Cargo

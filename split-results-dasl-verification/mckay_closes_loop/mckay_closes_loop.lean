@@ -1,0 +1,2 @@
+-- Declaration: mckay_closes_loop
+-- Extracted by StaticSplit

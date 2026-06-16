@@ -1,10 +1,6 @@
 ---
-name: dasl-indexers
-description: >-
-  Index any data directory into the DASL IPLD CAR block store. 4 Python scripts
-  (aristotle-index, spool-index, master-index, dasl-report) + Rust aristotle-manager
-  with `index` command. Use when adding new data sources to DASL, running block
-  store analytics, or generating commutative proofs.
+name: "dasl-indexers"
+description: "Index any data directory into the DASL IPLD CAR block store. 4 Python scripts (aristotle-index, spool-index, master-index, dasl-report) + Rust aristotle-manager with `index` command. Use when adding new data sources to DASL, running block store analytics, or generating commutative proofs."
 ---
 
 # dasl-indexers — DASL Data Indexers

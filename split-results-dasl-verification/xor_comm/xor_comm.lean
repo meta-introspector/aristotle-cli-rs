@@ -1,0 +1,2 @@
+-- Declaration: xor_comm
+-- Extracted by StaticSplit

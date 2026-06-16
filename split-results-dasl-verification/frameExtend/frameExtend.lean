@@ -1,0 +1,2 @@
+-- Declaration: frameExtend
+-- Extracted by StaticSplit

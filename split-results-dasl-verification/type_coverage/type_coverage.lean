@@ -1,0 +1,2 @@
+-- Declaration: type_coverage
+-- Extracted by StaticSplit

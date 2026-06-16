@@ -1,0 +1,2 @@
+-- Declaration: SemanticGeometry
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: HN_algebra_dim
+-- Extracted by StaticSplit

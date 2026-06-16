@@ -1,0 +1,2 @@
+-- Declaration: waive_and_alter_uc_same_threshold
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: emojicoqPrimesSum_eq
+-- Extracted by StaticSplit

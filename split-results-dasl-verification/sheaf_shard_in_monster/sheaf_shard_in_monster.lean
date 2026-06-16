@@ -1,0 +1,2 @@
+-- Declaration: sheaf_shard_in_monster
+-- Extracted by StaticSplit

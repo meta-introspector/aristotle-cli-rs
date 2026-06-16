@@ -1,0 +1,2 @@
+-- Declaration: clDimA_value
+-- Extracted by StaticSplit

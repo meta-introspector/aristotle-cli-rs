@@ -1,10 +1,6 @@
 ---
-name: build-memory-ide
-description: >-
-  Build Memory IDE — de-duplicated build errors as IPLD memory objects.
-  Every build output becomes a content-addressed CID. Errors de-duplicated
-  across runs and projects. Build history timeline + error knowledge base.
-  Use when tracking build errors, linking fixes, or analyzing build history.
+name: "build-memory-ide"
+description: "Build Memory IDE — de-duplicated build errors as IPLD memory objects. Every build output becomes a content-addressed CID. Errors de-duplicated across runs and projects. Build history timeline + error knowledge base. Use when tracking build errors, linking fixes, or analyzing build history."
 ---
 
 # 🏗️ Build Memory IDE

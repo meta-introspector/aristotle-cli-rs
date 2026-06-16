@@ -1,0 +1,2 @@
+-- Declaration: effectivePermissions
+-- Extracted by StaticSplit

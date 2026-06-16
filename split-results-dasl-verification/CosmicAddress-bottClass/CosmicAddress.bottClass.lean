@@ -1,0 +1,2 @@
+-- Declaration: CosmicAddress.bottClass
+-- Extracted by StaticSplit

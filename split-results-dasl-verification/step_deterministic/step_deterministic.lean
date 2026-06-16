@@ -1,0 +1,2 @@
+-- Declaration: step_deterministic
+-- Extracted by StaticSplit

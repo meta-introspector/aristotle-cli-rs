@@ -1,0 +1,2 @@
+-- Declaration: l2_71_std_gen
+-- Extracted by StaticSplit

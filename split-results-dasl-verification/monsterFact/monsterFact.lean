@@ -1,0 +1,2 @@
+-- Declaration: monsterFact
+-- Extracted by StaticSplit

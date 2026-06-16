@@ -1,0 +1,2 @@
+-- Declaration: crankmine_is_restored
+-- Extracted by StaticSplit

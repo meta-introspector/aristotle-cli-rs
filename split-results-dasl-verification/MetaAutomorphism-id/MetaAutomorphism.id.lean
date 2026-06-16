@@ -1,0 +1,2 @@
+-- Declaration: MetaAutomorphism.id
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: residue_space_is_irrep_dimension
+-- Extracted by StaticSplit

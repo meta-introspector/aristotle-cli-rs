@@ -1,0 +1,2 @@
+-- Declaration: boardRoomAddr
+-- Extracted by StaticSplit

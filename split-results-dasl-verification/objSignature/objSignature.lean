@@ -1,0 +1,2 @@
+-- Declaration: objSignature
+-- Extracted by StaticSplit

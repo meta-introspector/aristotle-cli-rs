@@ -1,0 +1,2 @@
+-- Declaration: FungalTaxon.toSpore
+-- Extracted by StaticSplit

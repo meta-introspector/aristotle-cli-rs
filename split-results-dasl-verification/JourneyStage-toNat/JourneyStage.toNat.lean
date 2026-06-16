@@ -1,0 +1,2 @@
+-- Declaration: JourneyStage.toNat
+-- Extracted by StaticSplit

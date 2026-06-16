@@ -1,0 +1,2 @@
+-- Declaration: departure_is_bootstrap
+-- Extracted by StaticSplit

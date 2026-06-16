@@ -1,11 +1,6 @@
 ---
-name: nix
-description: >-
-  Comprehensive NixOS, Nix Flakes, Home Manager, and nix-darwin skill.
-  Covers declarative system configuration, reproducible environments,
-  package management, and cross-platform Nix workflows. All flake
-  inputs use git+file:/// per agent/foundation.md. Activate for any
-  Nix/NixOS/Flakes/Home-Manager/nix-darwin tasks.
+name: "nix"
+description: "Comprehensive NixOS, Nix Flakes, Home Manager, and nix-darwin skill. Covers declarative system configuration, reproducible environments, package management, and cross-platform Nix workflows. All flake inputs use git+file:/// per agent/foundation.md. Activate for any Nix/NixOS/Flakes/Home-Manager/nix-darwin tasks."
 ---
 
 # Nix Ecosystem Guide

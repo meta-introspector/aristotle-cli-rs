@@ -1,0 +1,2 @@
+-- Declaration: threeadic_mass_growth
+-- Extracted by StaticSplit

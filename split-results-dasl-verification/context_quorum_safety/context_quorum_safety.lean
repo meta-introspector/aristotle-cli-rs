@@ -1,0 +1,2 @@
+-- Declaration: context_quorum_safety
+-- Extracted by StaticSplit

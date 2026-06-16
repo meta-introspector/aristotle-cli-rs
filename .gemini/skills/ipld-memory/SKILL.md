@@ -1,6 +1,6 @@
 ---
-name: ipld-memory
-description: IPLD CAR shared memory backend for agent memory. Store, retrieve, and manage memory blocks via content-addressed CAR pages.
+name: "ipld-memory"
+description: "IPLD CAR shared memory backend for agent memory. Store, retrieve, and manage memory blocks via content-addressed CAR pages."
 ---
 
 # IPLD Memory

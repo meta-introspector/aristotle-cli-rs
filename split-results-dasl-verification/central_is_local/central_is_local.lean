@@ -1,0 +1,2 @@
+-- Declaration: central_is_local
+-- Extracted by StaticSplit

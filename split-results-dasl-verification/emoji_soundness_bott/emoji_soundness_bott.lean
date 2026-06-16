@@ -1,0 +1,2 @@
+-- Declaration: emoji_soundness_bott
+-- Extracted by StaticSplit

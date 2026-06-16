@@ -1,0 +1,2 @@
+-- Declaration: cl0n_monoSpan_eq_top
+-- Extracted by StaticSplit

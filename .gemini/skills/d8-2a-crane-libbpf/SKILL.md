@@ -1,10 +1,6 @@
 ---
-name: d8-2a-crane-libbpf
-description: >-
-  Build eBPF programs with libbpf-rs + crane in Nix — pure reproducible builds
-  from scratch, no pre-built binaries. Use when building C BPF programs with
-  Rust userspace via libbpf-rs, or adapting the libbpf-rs-starter-template to
-  a new project with a local Nix flake.
+name: "d8-2a-crane-libbpf"
+description: "Build eBPF programs with libbpf-rs + crane in Nix — pure reproducible builds from scratch, no pre-built binaries. Use when building C BPF programs with Rust userspace via libbpf-rs, or adapting the libbpf-rs-starter-template to a new project with a local Nix flake."
 ---
 
 # D8-2A: crane + libbpf-rs eBPF Build Pattern

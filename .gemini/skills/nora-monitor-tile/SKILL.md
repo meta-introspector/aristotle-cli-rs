@@ -1,10 +1,6 @@
 ---
-name: nora-monitor-tile
-description: >-
-  Nora package registry monitoring tile. Nora serves 13 registry protocols
-  (cargo, docker, npm, pypi, maven, go, nuget, gems, pub, conan, terraform,
-  ansible, raw) on :4000. Use when monitoring Nora health, checking cached
-  crate counts, or debugging registry proxy issues.
+name: "nora-monitor-tile"
+description: "Nora package registry monitoring tile. Nora serves 13 registry protocols (cargo, docker, npm, pypi, maven, go, nuget, gems, pub, conan, terraform, ansible, raw) on :4000. Use when monitoring Nora health, checking cached crate counts, or debugging registry proxy issues."
 ---
 
 # nora-monitor-tile — Nora Registry Monitor

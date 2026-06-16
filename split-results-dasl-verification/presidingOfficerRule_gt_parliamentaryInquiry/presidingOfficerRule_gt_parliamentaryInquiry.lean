@@ -1,0 +1,2 @@
+-- Declaration: presidingOfficerRule_gt_parliamentaryInquiry
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: period_thm
+-- Extracted by StaticSplit

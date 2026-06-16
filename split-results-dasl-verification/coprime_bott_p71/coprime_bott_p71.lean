@@ -1,0 +1,2 @@
+-- Declaration: coprime_bott_p71
+-- Extracted by StaticSplit

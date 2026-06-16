@@ -1,6 +1,6 @@
 ---
-name: dasl-tile-onboarding
-description: Create, compose, store, and publish DASL tiles as DAG-CBOR objects in IPLD CAR-of-CARs shared memory. Covers tile schema, tile-registry.sh, tile-composer, tile-tui, and pastebin integration.
+name: "dasl-tile-onboarding"
+description: "Create, compose, store, and publish DASL tiles as DAG-CBOR objects in IPLD CAR-of-CARs shared memory. Covers tile schema, tile-registry.sh, tile-composer, tile-tui, and pastebin integration."
 ---
 
 # DASL Tile Onboarding

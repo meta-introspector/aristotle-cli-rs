@@ -1,9 +1,6 @@
 ---
-name: vendormod-mcp
-description: >-
-  MCP server and CLI tools for DASL vendormod workflows — compile-to-shmem,
-  crate normalization, flake.nix generation, and DASL index registration.
-  Includes pi extension integration and NORA registry config.
+name: "vendormod-mcp"
+description: "MCP server and CLI tools for DASL vendormod workflows — compile-to-shmem, crate normalization, flake.nix generation, and DASL index registration. Includes pi extension integration and NORA registry config."
 ---
 
 # Vendormod MCP — Cargo Vendor Workflow Server

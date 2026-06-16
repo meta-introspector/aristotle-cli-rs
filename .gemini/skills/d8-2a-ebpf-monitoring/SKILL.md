@@ -1,11 +1,6 @@
 ---
-name: d8-2a-ebpf-monitoring
-description: >-
-  Monitor CPU register values for 0xD8 0x2A (CBOR tag 42 / CID signature) occurrences
-  using eBPF kprobe probes. Includes per-service PID-filtered streams, JSONL output,
-  MCP tile lens server, and deployment via system-manager + nginx. Use when debugging
-  DAG-CBOR implementations, detecting CBOR tag 42 patterns in running processes, or
-  integrating eBPF monitoring into DASL tiles.
+name: "d8-2a-ebpf-monitoring"
+description: "Monitor CPU register values for 0xD8 0x2A (CBOR tag 42 / CID signature) occurrences using eBPF kprobe probes. Includes per-service PID-filtered streams, JSONL output, MCP tile lens server, and deployment via system-manager + nginx. Use when debugging DAG-CBOR implementations, detecting CBOR tag 42 patterns in running processes, or integrating eBPF monitoring into DASL tiles."
 ---
 
 # D8 2A eBPF Monitoring — Register-Level CBOR Tag Detection

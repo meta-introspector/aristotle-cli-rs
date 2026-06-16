@@ -1,0 +1,2 @@
+-- Declaration: Crank.evolveN_preserves_name
+-- Extracted by StaticSplit

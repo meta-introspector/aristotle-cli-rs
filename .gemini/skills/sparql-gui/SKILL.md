@@ -1,7 +1,6 @@
 ---
-name: sparql-gui
-description: >-
-  🔍 SPARQL GUI — DASL package
+name: "sparql-gui"
+description: "🔍 SPARQL GUI — DASL package"
 ---
 
 # 🔍 SPARQL GUI

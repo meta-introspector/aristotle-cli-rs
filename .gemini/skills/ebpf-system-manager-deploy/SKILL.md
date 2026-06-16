@@ -1,10 +1,6 @@
 ---
-name: ebpf-system-manager-deploy
-description: >-
-  Deploy a Nix-built eBPF program as a systemd service via system-manager.
-  Use when you need to take a crane-built eBPF binary and run it persistently
-  as a root systemd service managed by system-manager. Covers the full pipeline:
-  git mirror → crane build → system-manager config → activate.
+name: "ebpf-system-manager-deploy"
+description: "Deploy a Nix-built eBPF program as a systemd service via system-manager. Use when you need to take a crane-built eBPF binary and run it persistently as a root systemd service managed by system-manager. Covers the full pipeline: git mirror → crane build → system-manager config → activate."
 ---
 
 # eBPF system-manager deploy pattern

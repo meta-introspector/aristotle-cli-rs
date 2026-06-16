@@ -1,0 +1,2 @@
+-- Declaration: HyphalDirection
+-- Extracted by StaticSplit

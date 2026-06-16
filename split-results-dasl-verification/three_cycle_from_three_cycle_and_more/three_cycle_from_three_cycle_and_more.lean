@@ -1,0 +1,2 @@
+-- Declaration: three_cycle_from_three_cycle_and_more
+-- Extracted by StaticSplit

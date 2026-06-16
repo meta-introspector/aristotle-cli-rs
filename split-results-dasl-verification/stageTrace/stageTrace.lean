@@ -1,0 +1,2 @@
+-- Declaration: stageTrace
+-- Extracted by StaticSplit

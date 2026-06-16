@@ -1,6 +1,6 @@
 ---
-name: dasl-tile-cli
-description: Interact with the DASL tile system using the `tile-mothership` CLI. Use this skill to discover, inspect, and render DASL tiles.
+name: "dasl-tile-cli"
+description: "Interact with the DASL tile system using the `tile-mothership` CLI. Use this skill to discover, inspect, and render DASL tiles."
 ---
 
 # DASL Tile CLI Interaction

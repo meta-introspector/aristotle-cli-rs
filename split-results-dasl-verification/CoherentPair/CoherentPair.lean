@@ -1,0 +1,2 @@
+-- Declaration: CoherentPair
+-- Extracted by StaticSplit

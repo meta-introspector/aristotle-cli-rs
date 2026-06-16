@@ -1,8 +1,6 @@
 ---
-name: qa-team-tile
-description: >-
-  🧪 QA Team — Aggregator tile (port 18142) — diagnose, start, develop, and use.
-  aggregator
+name: "qa-team-tile"
+description: "🧪 QA Team — Aggregator tile (port 18142) — diagnose, start, develop, and use. aggregator"
 ---
 
 # 🧪 QA Team — Aggregator

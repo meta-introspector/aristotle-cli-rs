@@ -1,0 +1,2 @@
+-- Declaration: SemanticState
+-- Extracted by StaticSplit

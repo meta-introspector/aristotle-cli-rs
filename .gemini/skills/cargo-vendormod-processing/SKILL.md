@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-processing
-description: Process Rust crates in topological order with Nix flake generation. Use for building workspaces.
+name: "cargo-vendormod-processing"
+description: "Process Rust crates in topological order with Nix flake generation. Use for building workspaces."
 ---
 
 # Cargo-Vendormod Crate Processing

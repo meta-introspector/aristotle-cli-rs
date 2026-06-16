@@ -1,0 +1,2 @@
+-- Declaration: prime59_residues
+-- Extracted by StaticSplit

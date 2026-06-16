@@ -1,0 +1,2 @@
+-- Declaration: two_triggers
+-- Extracted by StaticSplit

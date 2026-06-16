@@ -1,0 +1,2 @@
+-- Declaration: fracSize
+-- Extracted by StaticSplit

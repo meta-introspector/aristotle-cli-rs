@@ -1,0 +1,2 @@
+-- Declaration: ShardVote
+-- Extracted by StaticSplit

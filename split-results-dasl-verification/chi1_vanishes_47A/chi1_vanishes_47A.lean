@@ -1,0 +1,2 @@
+-- Declaration: chi1_vanishes_47A
+-- Extracted by StaticSplit

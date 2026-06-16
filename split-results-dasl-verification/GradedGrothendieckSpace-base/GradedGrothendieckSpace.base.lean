@@ -1,0 +1,2 @@
+-- Declaration: GradedGrothendieckSpace.base
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: bottFoldDyn_preserves_wf
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monster_baby_index
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: identityTerm
+-- Extracted by StaticSplit

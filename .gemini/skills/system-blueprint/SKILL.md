@@ -1,10 +1,6 @@
 ---
-name: system-blueprint
-description: >-
-  Complete DASL system blueprint — 11-dimension lifecycle for every package
-  (git mirror, worktree, branch, skill, nora pkg, nix flake, system-manager,
-  nginx proxy, tile GUI, admin tile, documentation). Maps 12+ packages with
-  current status. Use when auditing package completeness or planning new tiles.
+name: "system-blueprint"
+description: "Complete DASL system blueprint — 11-dimension lifecycle for every package (git mirror, worktree, branch, skill, nora pkg, nix flake, system-manager, nginx proxy, tile GUI, admin tile, documentation). Maps 12+ packages with current status. Use when auditing package completeness or planning new tiles."
 ---
 
 # System Blueprint

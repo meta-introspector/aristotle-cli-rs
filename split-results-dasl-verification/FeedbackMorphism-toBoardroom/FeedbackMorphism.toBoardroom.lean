@@ -1,0 +1,2 @@
+-- Declaration: FeedbackMorphism.toBoardroom
+-- Extracted by StaticSplit

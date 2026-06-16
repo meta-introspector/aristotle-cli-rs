@@ -1,0 +1,2 @@
+-- Declaration: validTransition
+-- Extracted by StaticSplit

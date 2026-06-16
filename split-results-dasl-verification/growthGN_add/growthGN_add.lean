@@ -1,0 +1,2 @@
+-- Declaration: growthGN_add
+-- Extracted by StaticSplit

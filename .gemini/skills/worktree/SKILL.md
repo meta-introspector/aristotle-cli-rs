@@ -1,8 +1,7 @@
 ---
-name: worktree
-description: Launch one or more tasks in new git worktrees using workmux.
-disable-model-invocation: true
-allowed-tools: Bash, Write
+name: "worktree"
+description: "Launch one or more tasks in new git worktrees using workmux."
+allowed-tools: "Bash, Write"
 ---
 
 Launch one or more tasks in new git worktrees using workmux.

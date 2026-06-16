@@ -1,0 +1,2 @@
+-- Declaration: cl05_img_sq
+-- Extracted by StaticSplit

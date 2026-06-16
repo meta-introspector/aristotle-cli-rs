@@ -1,10 +1,6 @@
 ---
-name: n0-dasl
-description: >-
-  Work with the n0_dasl crate — DASL reference implementation with custom
-  CID type (SHA-256 + BLAKE3) and DRISL (DAG-CBOR) codec. Use when modifying
-  the DASL reference, comparing with serde_ipld_dagcbor, or setting up
-  cross-implementation fuzzing.
+name: "n0-dasl"
+description: "Work with the n0_dasl crate — DASL reference implementation with custom CID type (SHA-256 + BLAKE3) and DRISL (DAG-CBOR) codec. Use when modifying the DASL reference, comparing with serde_ipld_dagcbor, or setting up cross-implementation fuzzing."
 ---
 
 # n0-dasl — DASL Reference Implementation

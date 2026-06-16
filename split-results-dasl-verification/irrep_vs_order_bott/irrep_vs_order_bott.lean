@@ -1,0 +1,2 @@
+-- Declaration: irrep_vs_order_bott
+-- Extracted by StaticSplit

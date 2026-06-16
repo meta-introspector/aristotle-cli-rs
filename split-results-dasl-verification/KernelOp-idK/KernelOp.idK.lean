@@ -1,0 +1,2 @@
+-- Declaration: KernelOp.idK
+-- Extracted by StaticSplit

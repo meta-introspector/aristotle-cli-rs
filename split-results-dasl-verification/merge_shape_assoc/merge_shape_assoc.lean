@@ -1,0 +1,2 @@
+-- Declaration: merge_shape_assoc
+-- Extracted by StaticSplit

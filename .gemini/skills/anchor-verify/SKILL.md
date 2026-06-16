@@ -1,9 +1,6 @@
 ---
-name: anchor-verify
-description: >-
-  Validates compliance of modified or staged files against system anchor policies.
-  Deploys pre-commit hooks that block commits without @anchor tokens and
-  auto-synchronizes the manifest. Use with "staged" or "all" target_scope.
+name: "anchor-verify"
+description: "Validates compliance of modified or staged files against system anchor policies. Deploys pre-commit hooks that block commits without @anchor tokens and auto-synchronizes the manifest. Use with \"staged\" or \"all\" target_scope."
 ---
 
 # anchor-verify — Policy Verification Engine

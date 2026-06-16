@@ -1,0 +1,2 @@
+-- Declaration: retractTriple_idempotent
+-- Extracted by StaticSplit

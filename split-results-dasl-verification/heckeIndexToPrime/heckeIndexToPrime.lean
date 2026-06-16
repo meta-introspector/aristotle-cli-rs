@@ -1,0 +1,2 @@
+-- Declaration: heckeIndexToPrime
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: selfRefAddr
+-- Extracted by StaticSplit

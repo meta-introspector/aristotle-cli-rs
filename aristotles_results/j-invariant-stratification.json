@@ -48,22 +48,22 @@
     }
   },
   "summary": {
-    "total_declarations": 5790,
-    "with_mathematical_constants": 1130,
+    "total_declarations": 5935,
+    "with_mathematical_constants": 1165,
     "noise_filtered": 91,
-    "no_constants": 4569,
+    "no_constants": 4679,
     "bands": {
-      "q\u2070": 316,
+      "q\u2070": 329,
+      "O(q\u2074)": 386,
       "q\u00b9": 123,
-      "O(q\u2074)": 374,
-      "q\u00b3": 315,
+      "q\u00b3": 325,
       "q\u00b2": 2
     }
   },
   "bands": {
     "q\u2070": {
       "description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
-      "count": 316,
+      "count": 329,
       "declarations": [
         {
           "name": "GccTree_TreeCode_COMPLEX_CST_elim",
@@ -2480,6 +2480,26 @@
           ]
         },
         {
+          "name": "AddressType_hauptmodul_elim",
+          "max_prime": 7,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 7,
+              "max_prime": 7,
+              "factors": [
+                7
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            7
+          ]
+        },
+        {
           "name": "Duality_Pair_elim",
           "max_prime": 7,
           "band": "q\u2070",
@@ -3304,6 +3324,26 @@
           ]
         },
         {
+          "name": "AddressType_shardId_elim",
+          "max_prime": 5,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 5,
+              "max_prime": 5,
+              "factors": [
+                5
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            5
+          ]
+        },
+        {
           "name": "Duality_Boolean_elim",
           "max_prime": 5,
           "band": "q\u2070",
@@ -4120,6 +4160,48 @@
           ]
         },
         {
+          "name": "AddressType_eigenspace_elim",
+          "max_prime": 3,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 6,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2,
+            3
+          ]
+        },
+        {
+          "name": "AddressType_nestedCID_elim",
+          "max_prime": 3,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 3,
+              "max_prime": 3,
+              "factors": [
+                3
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            3
+          ]
+        },
+        {
           "name": "AristotleWeaver_Core_SimpleExpr_lam_elim",
           "max_prime": 3,
           "band": "q\u2070",
@@ -4249,6 +4331,26 @@
         },
         {
           "name": "Duality_Symmetry_elim",
+          "max_prime": 3,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 3,
+              "max_prime": 3,
+              "factors": [
+                3
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            3
+          ]
+        },
+        {
+          "name": "Eigenspace_clock_elim",
           "max_prime": 3,
           "band": "q\u2070",
           "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
@@ -4992,6 +5094,66 @@
           ]
         },
         {
+          "name": "AddressType_harmonicPath_elim",
+          "max_prime": 2,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 4,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2
+          ]
+        },
+        {
+          "name": "AddressType_protocol_elim",
+          "max_prime": 2,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 2,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2
+          ]
+        },
+        {
+          "name": "AddressType_toUInt4",
+          "max_prime": 2,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 4,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2
+          ]
+        },
+        {
           "name": "AristotleWeaver_Core_SimpleExpr_app_elim",
           "max_prime": 2,
           "band": "q\u2070",
@@ -5232,6 +5394,66 @@
           ]
         },
         {
+          "name": "DA51Address_bits",
+          "max_prime": 2,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2
+          ]
+        },
+        {
+          "name": "DA51Address_eigenspaceField",
+          "max_prime": 2,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 2,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2
+          ]
+        },
+        {
+          "name": "DA51Address_typeField",
+          "max_prime": 2,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 4,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2
+          ]
+        },
+        {
           "name": "Duality_Binary_elim",
           "max_prime": 2,
           "band": "q\u2070",
@@ -5259,6 +5481,26 @@
           "constants": [
             {
               "value": 4,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2
+          ]
+        },
+        {
+          "name": "Eigenspace_hub_elim",
+          "max_prime": 2,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 2,
               "max_prime": 2,
               "factors": [
                 2
@@ -6173,6 +6415,26 @@
         },
         {
           "name": "Nat_zero_lt_two",
+          "max_prime": 2,
+          "band": "q\u2070",
+          "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
+          "constants": [
+            {
+              "value": 2,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 1,
+          "all_factors": [
+            2
+          ]
+        },
+        {
+          "name": "RoutingStrategy_priorityGPU_elim",
           "max_prime": 2,
           "band": "q\u2070",
           "band_description": "Foundation: 744 = 2\u00b3\u00d73\u00d731",
@@ -9421,7 +9683,7 @@
     },
     "q\u00b3": {
       "description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
-      "count": 315,
+      "count": 325,
       "declarations": [
         {
           "name": "List_foldlM_pure",
@@ -12809,6 +13071,438 @@
           ]
         },
         {
+          "name": "DA51Address_casesOn",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "name": "DA51Address_is_valid_prefix",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "name": "DA51Address_mk",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "name": "DA51Address_mk_inj",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "name": "DA51Address_mk_injEq",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "name": "DA51Address_mk_noConfusion",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "name": "DA51Address_mk_sizeOf_spec",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "name": "DA51Address_rec",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "name": "DA51Address_recOn",
+          "max_prime": 55889,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 16,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 48,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 63,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 64,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 5,
+          "all_factors": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
           "name": "MicroLean_instDecidableEqMicroLeanType_decEq",
           "max_prime": 55837,
           "band": "q\u00b3",
@@ -14970,6 +15664,46 @@
             13,
             19,
             29
+          ]
+        },
+        {
+          "name": "DA51Address_toEigenspace?_match_1",
+          "max_prime": 25639,
+          "band": "q\u00b3",
+          "band_description": "Higher irreps: 864299970 = 2\u00d73\u00d75\u00d7355679",
+          "constants": [
+            {
+              "value": 2,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 19,
+              "max_prime": 19,
+              "factors": [
+                19
+              ],
+              "name": ""
+            },
+            {
+              "value": 35,
+              "max_prime": 7,
+              "factors": [
+                5,
+                7
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 4,
+          "all_factors": [
+            2,
+            5,
+            7,
+            19
           ]
         },
         {
@@ -19683,7 +20417,7 @@
     },
     "O(q\u2074)": {
       "description": "Transcendental tail beyond q\u00b3 truncation",
-      "count": 374,
+      "count": 386,
       "declarations": [
         {
           "name": "instHSub",
@@ -23563,6 +24297,35 @@
           ]
         },
         {
+          "name": "instReprAddressType_repr_match_1",
+          "max_prime": 62031301,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 8,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 17,
+              "max_prime": 17,
+              "factors": [
+                17
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 4,
+          "all_factors": [
+            2,
+            17
+          ]
+        },
+        {
           "name": "instReprTrinity_repr_match_1",
           "max_prime": 62031301,
           "band": "O(q\u2074)",
@@ -27179,6 +27942,182 @@
           ]
         },
         {
+          "name": "stratifyTriple_eq_1",
+          "max_prime": 3680953,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 8,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 10,
+              "max_prime": 5,
+              "factors": [
+                2,
+                5
+              ],
+              "name": ""
+            },
+            {
+              "value": 19,
+              "max_prime": 19,
+              "factors": [
+                19
+              ],
+              "name": ""
+            },
+            {
+              "value": 29,
+              "max_prime": 29,
+              "factors": [
+                29
+              ],
+              "name": ""
+            },
+            {
+              "value": 39,
+              "max_prime": 13,
+              "factors": [
+                3,
+                13
+              ],
+              "name": ""
+            },
+            {
+              "value": 49,
+              "max_prime": 7,
+              "factors": [
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 68,
+              "max_prime": 17,
+              "factors": [
+                2,
+                17
+              ],
+              "name": ""
+            },
+            {
+              "value": 69,
+              "max_prime": 23,
+              "factors": [
+                3,
+                23
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 9,
+          "all_factors": [
+            2,
+            3,
+            5,
+            7,
+            13,
+            17,
+            19,
+            23,
+            29
+          ]
+        },
+        {
+          "name": "stratifyTriple_match_1",
+          "max_prime": 3680953,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 8,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 10,
+              "max_prime": 5,
+              "factors": [
+                2,
+                5
+              ],
+              "name": ""
+            },
+            {
+              "value": 19,
+              "max_prime": 19,
+              "factors": [
+                19
+              ],
+              "name": ""
+            },
+            {
+              "value": 29,
+              "max_prime": 29,
+              "factors": [
+                29
+              ],
+              "name": ""
+            },
+            {
+              "value": 39,
+              "max_prime": 13,
+              "factors": [
+                3,
+                13
+              ],
+              "name": ""
+            },
+            {
+              "value": 49,
+              "max_prime": 7,
+              "factors": [
+                7
+              ],
+              "name": ""
+            },
+            {
+              "value": 68,
+              "max_prime": 17,
+              "factors": [
+                2,
+                17
+              ],
+              "name": ""
+            },
+            {
+              "value": 69,
+              "max_prime": 23,
+              "factors": [
+                3,
+                23
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 9,
+          "all_factors": [
+            2,
+            3,
+            5,
+            7,
+            13,
+            17,
+            19,
+            23,
+            29
+          ]
+        },
+        {
           "name": "AristotleWeaver_Core_nodeToBox_match_1",
           "max_prime": 3680081,
           "band": "O(q\u2074)",
@@ -27694,6 +28633,118 @@
           ],
           "total_constants": 2,
           "all_factors": [
+            3
+          ]
+        },
+        {
+          "name": "default_sizeOf_match_1",
+          "max_prime": 2694203,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 6,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            },
+            {
+              "value": 17,
+              "max_prime": 17,
+              "factors": [
+                17
+              ],
+              "name": ""
+            },
+            {
+              "value": 21,
+              "max_prime": 7,
+              "factors": [
+                3,
+                7
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 4,
+          "all_factors": [
+            2,
+            3,
+            7,
+            17
+          ]
+        },
+        {
+          "name": "RoutingStrategy_noConfusion",
+          "max_prime": 2612243,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 6,
+              "max_prime": 3,
+              "factors": [
+                2,
+                3
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 2,
+          "all_factors": [
+            2,
+            3
+          ]
+        },
+        {
+          "name": "RoutingStrategy_noConfusionType",
+          "max_prime": 2612243,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 5,
+              "max_prime": 5,
+              "factors": [
+                5
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 2,
+          "all_factors": [
+            5
+          ]
+        },
+        {
+          "name": "instReprRoutingStrategy_repr_match_1",
+          "max_prime": 2612243,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 8,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 9,
+              "max_prime": 3,
+              "factors": [
+                3
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 4,
+          "all_factors": [
+            2,
             3
           ]
         },
@@ -28373,6 +29424,77 @@
             29,
             41,
             53
+          ]
+        },
+        {
+          "name": "Eigenspace_noConfusion",
+          "max_prime": 1701509,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 10,
+              "max_prime": 5,
+              "factors": [
+                2,
+                5
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 2,
+          "all_factors": [
+            2,
+            5
+          ]
+        },
+        {
+          "name": "Eigenspace_noConfusionType",
+          "max_prime": 1701509,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 9,
+              "max_prime": 3,
+              "factors": [
+                3
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 2,
+          "all_factors": [
+            3
+          ]
+        },
+        {
+          "name": "instReprEigenspace_repr_match_1",
+          "max_prime": 1701509,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 8,
+              "max_prime": 2,
+              "factors": [
+                2
+              ],
+              "name": ""
+            },
+            {
+              "value": 13,
+              "max_prime": 13,
+              "factors": [
+                13
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 4,
+          "all_factors": [
+            2,
+            13
           ]
         },
         {
@@ -29489,6 +30611,48 @@
             3,
             7,
             43
+          ]
+        },
+        {
+          "name": "AddressType_noConfusion",
+          "max_prime": 1323599,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 14,
+              "max_prime": 7,
+              "factors": [
+                2,
+                7
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 2,
+          "all_factors": [
+            2,
+            7
+          ]
+        },
+        {
+          "name": "AddressType_noConfusionType",
+          "max_prime": 1323599,
+          "band": "O(q\u2074)",
+          "band_description": "Transcendental tail beyond q\u00b3 truncation",
+          "constants": [
+            {
+              "value": 13,
+              "max_prime": 13,
+              "factors": [
+                13
+              ],
+              "name": ""
+            }
+          ],
+          "total_constants": 2,
+          "all_factors": [
+            13
           ]
         },
         {

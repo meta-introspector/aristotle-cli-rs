@@ -1,0 +1,2 @@
+-- Declaration: vacuum_sheet_size
+-- Extracted by StaticSplit

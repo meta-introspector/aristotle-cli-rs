@@ -1,0 +1,2 @@
+-- Declaration: retract71
+-- Extracted by StaticSplit

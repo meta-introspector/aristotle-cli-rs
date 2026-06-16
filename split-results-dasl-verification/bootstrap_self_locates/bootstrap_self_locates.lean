@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_self_locates
+-- Extracted by StaticSplit

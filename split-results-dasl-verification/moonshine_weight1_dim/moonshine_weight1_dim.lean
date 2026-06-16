@@ -1,0 +1,2 @@
+-- Declaration: moonshine_weight1_dim
+-- Extracted by StaticSplit

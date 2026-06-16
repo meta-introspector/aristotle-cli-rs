@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-vendoring
-description: Git submodule vendoring workflow for cargo-vendormod. Use when initializing vendoring, fetching upstream, rebasing, managing releases, or patching .cargo/config.toml.
+name: "cargo-vendormod-vendoring"
+description: "Git submodule vendoring workflow for cargo-vendormod. Use when initializing vendoring, fetching upstream, rebasing, managing releases, or patching .cargo/config.toml."
 ---
 
 # Cargo-Vendormod Vendoring Workflow

@@ -1,6 +1,6 @@
 ---
-name: dashlm-index-builder
-description: Build binary dashlm_index_builder that walks project tree, hashes files, and inserts into shared index, skipping unchanged files.
+name: "dashlm-index-builder"
+description: "Build binary dashlm_index_builder that walks project tree, hashes files, and inserts into shared index, skipping unchanged files."
 ---
 
 # dashlm_index_builder

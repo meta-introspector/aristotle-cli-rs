@@ -1,0 +1,2 @@
+-- Declaration: windingReflection
+-- Extracted by StaticSplit

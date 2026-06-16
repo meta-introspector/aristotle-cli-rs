@@ -1,0 +1,2 @@
+-- Declaration: fi24PrimeOrder
+-- Extracted by StaticSplit

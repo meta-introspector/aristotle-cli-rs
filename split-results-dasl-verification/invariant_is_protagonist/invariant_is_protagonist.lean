@@ -1,0 +1,2 @@
+-- Declaration: invariant_is_protagonist
+-- Extracted by StaticSplit

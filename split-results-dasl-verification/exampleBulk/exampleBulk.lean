@@ -1,0 +1,2 @@
+-- Declaration: exampleBulk
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: AgentStep.fiberPreserving
+-- Extracted by StaticSplit

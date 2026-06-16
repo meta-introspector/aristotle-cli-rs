@@ -1,9 +1,6 @@
 ---
-name: ping-agents
-description: >-
-  Health-check all installed LLM coding agent CLIs. Verify binaries exist,
-  versions are current, and auth is working. Use when onboarding a new
-  machine, after a nix update, or to see which agents are available.
+name: "ping-agents"
+description: "Health-check all installed LLM coding agent CLIs. Verify binaries exist, versions are current, and auth is working. Use when onboarding a new machine, after a nix update, or to see which agents are available."
 ---
 
 # Ping Agents — LLM CLI Health Check

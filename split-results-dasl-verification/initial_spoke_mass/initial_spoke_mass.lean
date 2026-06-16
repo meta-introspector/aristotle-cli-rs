@@ -1,0 +1,2 @@
+-- Declaration: initial_spoke_mass
+-- Extracted by StaticSplit

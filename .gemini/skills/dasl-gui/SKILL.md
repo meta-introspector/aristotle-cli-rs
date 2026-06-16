@@ -1,10 +1,6 @@
 ---
-name: dasl-gui
-description: >-
-  DASL GUI Dashboard — tile dashboard architecture with diagonalize tile
-  (block tree + pivot tables), vector space viewer, pipeline phase DAG,
-  and IPLD CAR shmem integration. Use when building or navigating the
-  DASL tile GUI, registering new tiles, or extending the dashboard.
+name: "dasl-gui"
+description: "DASL GUI Dashboard — tile dashboard architecture with diagonalize tile (block tree + pivot tables), vector space viewer, pipeline phase DAG, and IPLD CAR shmem integration. Use when building or navigating the DASL tile GUI, registering new tiles, or extending the dashboard."
 ---
 
 # dasl-gui — DASL Tile Dashboard

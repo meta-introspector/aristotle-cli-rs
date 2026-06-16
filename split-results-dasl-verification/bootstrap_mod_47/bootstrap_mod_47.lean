@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_mod_47
+-- Extracted by StaticSplit

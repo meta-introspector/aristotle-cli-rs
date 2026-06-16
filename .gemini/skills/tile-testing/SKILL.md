@@ -1,8 +1,6 @@
 ---
-name: tile-testing
-description: >-
-  How to test DASL tiles — health checks, API validation, nginx proxy testing,
-  CI/CD dry-run verification, and common failure diagnosis.
+name: "tile-testing"
+description: "How to test DASL tiles — health checks, API validation, nginx proxy testing, CI/CD dry-run verification, and common failure diagnosis."
 ---
 
 # Tile Testing — How to Test DASL Tiles

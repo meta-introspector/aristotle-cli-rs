@@ -1,0 +1,2 @@
+-- Declaration: pipeline_base_coherence
+-- Extracted by StaticSplit

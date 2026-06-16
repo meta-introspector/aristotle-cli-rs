@@ -1,0 +1,2 @@
+-- Declaration: T3C_first_nontrivial
+-- Extracted by StaticSplit

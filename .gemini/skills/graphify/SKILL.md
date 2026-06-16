@@ -1,5 +1,5 @@
 ---
-name: graphify
+name: "graphify"
 description: "any input (code, docs, papers, images, video) → knowledge graph → clustered communities → HTML + JSON + GRAPH_REPORT.md. Use when user asks any question about a codebase, project content, architecture, or file relationships — especially if graphify-out/ exists. Provides persistent graph with god nodes, community detection, and BFS/DFS query tools."
 ---
 

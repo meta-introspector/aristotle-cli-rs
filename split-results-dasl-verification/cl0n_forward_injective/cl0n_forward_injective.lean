@@ -1,0 +1,2 @@
+-- Declaration: cl0n_forward_injective
+-- Extracted by StaticSplit

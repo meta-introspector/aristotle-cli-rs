@@ -1,6 +1,6 @@
 ---
-name: dashlm-index-viewer
-description: Read-only tool dashlm_index_show that prints shared index statistics including zone distribution, access logs, and conflicts.
+name: "dashlm-index-viewer"
+description: "Read-only tool dashlm_index_show that prints shared index statistics including zone distribution, access logs, and conflicts."
 ---
 
 # dashlm_index_show

@@ -1,0 +1,2 @@
+-- Declaration: irrepBottClass_7
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: grade_symmetry
+-- Extracted by StaticSplit

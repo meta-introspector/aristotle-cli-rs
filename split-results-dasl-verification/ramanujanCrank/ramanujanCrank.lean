@@ -1,0 +1,2 @@
+-- Declaration: ramanujanCrank
+-- Extracted by StaticSplit

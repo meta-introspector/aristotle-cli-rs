@@ -1,0 +1,2 @@
+-- Declaration: mkMultihash
+-- Extracted by StaticSplit

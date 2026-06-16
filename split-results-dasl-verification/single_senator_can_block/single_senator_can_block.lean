@@ -1,0 +1,2 @@
+-- Declaration: single_senator_can_block
+-- Extracted by StaticSplit

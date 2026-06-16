@@ -1,6 +1,6 @@
 ---
-name: cloudflare-devops
-description: Automated bootstrap engine for Cloudflare deployments via wrangler and cloudflared. Use for deploying frontends to Workers/Pages, managing wrangler versions, configuring CI/CD pipelines (GitHub Actions), debugging edge routing, domain management, and zero-trust tunnel setup.
+name: "cloudflare-devops"
+description: "Automated bootstrap engine for Cloudflare deployments via wrangler and cloudflared. Use for deploying frontends to Workers/Pages, managing wrangler versions, configuring CI/CD pipelines (GitHub Actions), debugging edge routing, domain management, and zero-trust tunnel setup."
 ---
 
 # Cloudflare DevOps

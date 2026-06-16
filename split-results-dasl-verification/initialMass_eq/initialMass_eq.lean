@@ -1,0 +1,2 @@
+-- Declaration: initialMass_eq
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: example_vanishes
+-- Extracted by StaticSplit

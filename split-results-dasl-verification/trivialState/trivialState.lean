@@ -1,0 +1,2 @@
+-- Declaration: trivialState
+-- Extracted by StaticSplit

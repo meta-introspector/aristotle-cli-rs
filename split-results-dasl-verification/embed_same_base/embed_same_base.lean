@@ -1,0 +1,2 @@
+-- Declaration: embed_same_base
+-- Extracted by StaticSplit

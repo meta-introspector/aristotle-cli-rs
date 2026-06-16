@@ -1,10 +1,6 @@
 ---
-name: serde-ipld-dagcbor
-description: >-
-  Work with the DAG-CBOR codec — deterministic CBOR serialization with
-  canonical map ordering, f64-only floats, and CID tag 42 enforcement.
-  Use when modifying the serde_ipld_dagcbor codec or debugging DAG-CBOR
-  encoding/decoding issues.
+name: "serde-ipld-dagcbor"
+description: "Work with the DAG-CBOR codec — deterministic CBOR serialization with canonical map ordering, f64-only floats, and CID tag 42 enforcement. Use when modifying the serde_ipld_dagcbor codec or debugging DAG-CBOR encoding/decoding issues."
 ---
 
 # serde-ipld-dagcbor — DAG-CBOR Codec

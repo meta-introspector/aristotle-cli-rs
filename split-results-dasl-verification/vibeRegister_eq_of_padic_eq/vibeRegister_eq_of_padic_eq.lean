@@ -1,0 +1,2 @@
+-- Declaration: vibeRegister_eq_of_padic_eq
+-- Extracted by StaticSplit

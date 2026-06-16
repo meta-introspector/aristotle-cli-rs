@@ -1,0 +1,2 @@
+-- Declaration: isFiberCoherent
+-- Extracted by StaticSplit

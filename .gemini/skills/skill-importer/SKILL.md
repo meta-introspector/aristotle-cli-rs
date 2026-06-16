@@ -1,6 +1,6 @@
 ---
-name: skill-importer
-description: Import skills from all agent formats and regenerate unified forms. Use when adding new skills, syncing cross-agent docs, or normalizing existing skill files.
+name: "skill-importer"
+description: "Import skills from all agent formats and regenerate unified forms. Use when adding new skills, syncing cross-agent docs, or normalizing existing skill files."
 ---
 
 # Skill Importer

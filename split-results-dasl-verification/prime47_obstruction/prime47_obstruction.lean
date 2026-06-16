@@ -1,0 +1,2 @@
+-- Declaration: prime47_obstruction
+-- Extracted by StaticSplit

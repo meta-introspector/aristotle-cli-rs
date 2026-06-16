@@ -1,0 +1,2 @@
+-- Declaration: link_lands_in_fiber
+-- Extracted by StaticSplit

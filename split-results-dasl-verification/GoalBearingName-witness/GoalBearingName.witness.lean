@@ -1,0 +1,2 @@
+-- Declaration: GoalBearingName.witness
+-- Extracted by StaticSplit

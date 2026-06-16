@@ -1,0 +1,2 @@
+-- Declaration: proposalWindow
+-- Extracted by StaticSplit

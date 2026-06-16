@@ -1,10 +1,6 @@
 ---
-name: dasl-tile-guide
-description: >-
-  Complete guide for creating, deploying, and monitoring DASL tiles.
-  Covers tile schema, IPLD shmem storage, system-manager deployment,
-  nginx reverse proxy, dynamic tile discovery (systemd/tmux/nginx),
-  and the tile dashboard server.
+name: "dasl-tile-guide"
+description: "Complete guide for creating, deploying, and monitoring DASL tiles. Covers tile schema, IPLD shmem storage, system-manager deployment, nginx reverse proxy, dynamic tile discovery (systemd/tmux/nginx), and the tile dashboard server."
 ---
 
 # DASL Tile Guide

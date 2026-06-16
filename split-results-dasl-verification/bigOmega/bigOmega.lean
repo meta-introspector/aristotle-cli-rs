@@ -1,0 +1,2 @@
+-- Declaration: bigOmega
+-- Extracted by StaticSplit

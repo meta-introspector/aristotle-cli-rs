@@ -1,0 +1,2 @@
+-- Declaration: GrothendieckSpace
+-- Extracted by StaticSplit

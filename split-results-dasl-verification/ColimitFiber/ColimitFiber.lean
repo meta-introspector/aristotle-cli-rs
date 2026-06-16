@@ -1,0 +1,2 @@
+-- Declaration: ColimitFiber
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: pariahNonOggPrimes
+-- Extracted by StaticSplit

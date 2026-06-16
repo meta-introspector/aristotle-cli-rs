@@ -1,0 +1,2 @@
+-- Declaration: canonicalGradedSection_wf
+-- Extracted by StaticSplit

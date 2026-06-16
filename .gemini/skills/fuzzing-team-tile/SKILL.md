@@ -1,8 +1,6 @@
 ---
-name: fuzzing-team-tile
-description: >-
-  🐛 Fuzzing Team — Coverage tile (port 18143) — diagnose, start, develop, and use.
-  aggregator
+name: "fuzzing-team-tile"
+description: "🐛 Fuzzing Team — Coverage tile (port 18143) — diagnose, start, develop, and use. aggregator"
 ---
 
 # 🐛 Fuzzing Team — Coverage

@@ -1,0 +1,2 @@
+-- Declaration: posw_valid_iff
+-- Extracted by StaticSplit

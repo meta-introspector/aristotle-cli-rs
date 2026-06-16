@@ -1,0 +1,2 @@
+-- Declaration: sheafSectionFields_count
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MemoryFiber.empty
+-- Extracted by StaticSplit

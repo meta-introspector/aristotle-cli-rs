@@ -1,0 +1,2 @@
+-- Declaration: spineCharacteristicSum
+-- Extracted by StaticSplit

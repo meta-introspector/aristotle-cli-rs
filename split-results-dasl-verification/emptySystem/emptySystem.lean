@@ -1,0 +1,2 @@
+-- Declaration: emptySystem
+-- Extracted by StaticSplit

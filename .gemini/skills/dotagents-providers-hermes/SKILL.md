@@ -1,6 +1,6 @@
 ---
-name: dotagents-providers-hermes
-description: Deploy dotfiles for Hermes using the Hermes provider in dotagents. Use when configuring Hermes agent commands, skills, or instructions.
+name: "dotagents-providers-hermes"
+description: "Deploy dotfiles for Hermes using the Hermes provider in dotagents. Use when configuring Hermes agent commands, skills, or instructions."
 ---
 
 # Dotagents Providers — Hermes

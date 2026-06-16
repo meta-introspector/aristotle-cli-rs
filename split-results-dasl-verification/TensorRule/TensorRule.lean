@@ -1,0 +1,2 @@
+-- Declaration: TensorRule
+-- Extracted by StaticSplit

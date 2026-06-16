@@ -1,0 +1,2 @@
+-- Declaration: hasBootstrapSignature
+-- Extracted by StaticSplit

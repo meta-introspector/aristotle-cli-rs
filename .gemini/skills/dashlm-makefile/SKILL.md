@@ -1,6 +1,6 @@
 ---
-name: dashlm-makefile
-description: Update cargo-vendormod Makefile with dashlm targets for building, viewing, GPU prep, cleaning, and systemd service management.
+name: "dashlm-makefile"
+description: "Update cargo-vendormod Makefile with dashlm targets for building, viewing, GPU prep, cleaning, and systemd service management."
 ---
 
 # dashlm Makefile targets

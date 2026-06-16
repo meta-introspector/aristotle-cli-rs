@@ -1,0 +1,2 @@
+-- Declaration: demoNarrow
+-- Extracted by StaticSplit

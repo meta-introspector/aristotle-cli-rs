@@ -1,0 +1,2 @@
+-- Declaration: j2adic_total_mass
+-- Extracted by StaticSplit

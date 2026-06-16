@@ -1,0 +1,2 @@
+-- Declaration: GoalSpec
+-- Extracted by StaticSplit

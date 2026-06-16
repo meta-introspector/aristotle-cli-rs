@@ -1,0 +1,2 @@
+-- Declaration: faction_distribution
+-- Extracted by StaticSplit

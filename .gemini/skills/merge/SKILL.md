@@ -1,8 +1,7 @@
 ---
-name: merge
-description: Commit, rebase, and merge the current branch.
-disable-model-invocation: true
-allowed-tools: Read, Bash, Glob, Grep
+name: "merge"
+description: "Commit, rebase, and merge the current branch."
+allowed-tools: "Read, Bash, Glob, Grep"
 ---
 
 <!-- Customize the commit style and rebase behavior to match your workflow. -->

@@ -1,0 +1,2 @@
+-- Declaration: renumber_preserves_length
+-- Extracted by StaticSplit

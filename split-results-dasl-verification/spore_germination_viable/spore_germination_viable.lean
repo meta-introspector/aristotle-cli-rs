@@ -1,0 +1,2 @@
+-- Declaration: spore_germination_viable
+-- Extracted by StaticSplit

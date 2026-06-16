@@ -1,0 +1,2 @@
+-- Declaration: stages_complete
+-- Extracted by StaticSplit

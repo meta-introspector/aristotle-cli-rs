@@ -1,6 +1,6 @@
 ---
-name: dashlm-documentation
-description: Documentation and examples for the shared-memory index system including usage guide, systemd service, plugin integration, and GPU examples.
+name: "dashlm-documentation"
+description: "Documentation and examples for the shared-memory index system including usage guide, systemd service, plugin integration, and GPU examples."
 ---
 
 # dashlm docs + examples

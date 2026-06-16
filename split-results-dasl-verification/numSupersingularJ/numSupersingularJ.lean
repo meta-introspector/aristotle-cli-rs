@@ -1,0 +1,2 @@
+-- Declaration: numSupersingularJ
+-- Extracted by StaticSplit

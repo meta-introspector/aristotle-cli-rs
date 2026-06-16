@@ -1,0 +1,2 @@
+-- Declaration: MathObject
+-- Extracted by StaticSplit

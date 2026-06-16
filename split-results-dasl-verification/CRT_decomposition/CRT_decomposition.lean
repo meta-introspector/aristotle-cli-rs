@@ -1,0 +1,2 @@
+-- Declaration: CRT_decomposition
+-- Extracted by StaticSplit

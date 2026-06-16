@@ -1,9 +1,6 @@
 ---
-name: kami
-description: >-
-  Typeset documents to PDF — resumes, one-pagers, white papers, slide decks.
-  Markdown input, professional PDF output. Use when creating polished
-  documents from agent-generated content.
+name: "kami"
+description: "Typeset documents to PDF — resumes, one-pagers, white papers, slide decks. Markdown input, professional PDF output. Use when creating polished documents from agent-generated content."
 ---
 
 # Kami — Document Typesetting

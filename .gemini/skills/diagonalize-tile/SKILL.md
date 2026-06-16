@@ -1,8 +1,6 @@
 ---
-name: diagonalize-tile
-description: >-
-  Diagonalize IPLD block tree viewer (port 8082). Diagnose, start, develop, use.
-  data — visualization
+name: "diagonalize-tile"
+description: "Diagonalize IPLD block tree viewer (port 8082). Diagnose, start, develop, use. data — visualization"
 ---
 
 # 📂 Diagonalize Tile

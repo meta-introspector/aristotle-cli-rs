@@ -1,0 +1,2 @@
+-- Declaration: monster_irrep_factorization
+-- Extracted by StaticSplit

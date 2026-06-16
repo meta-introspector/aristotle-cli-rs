@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-graph
-description: Building, analyzing, and partitioning Rust dependency graphs for Solana universe. Use with global-graph commands.
+name: "cargo-vendormod-graph"
+description: "Building, analyzing, and partitioning Rust dependency graphs for Solana universe. Use with global-graph commands."
 ---
 
 # Cargo-Vendormod Dependency Graph Operations

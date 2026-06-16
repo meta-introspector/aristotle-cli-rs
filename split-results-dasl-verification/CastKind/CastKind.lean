@@ -1,0 +1,2 @@
+-- Declaration: CastKind
+-- Extracted by StaticSplit

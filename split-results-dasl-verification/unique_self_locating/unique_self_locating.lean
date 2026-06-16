@@ -1,0 +1,2 @@
+-- Declaration: unique_self_locating
+-- Extracted by StaticSplit

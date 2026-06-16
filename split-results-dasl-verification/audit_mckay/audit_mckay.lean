@@ -1,0 +1,2 @@
+-- Declaration: audit_mckay
+-- Extracted by StaticSplit

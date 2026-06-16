@@ -1,0 +1,2 @@
+-- Declaration: cl03_inv_fun
+-- Extracted by StaticSplit

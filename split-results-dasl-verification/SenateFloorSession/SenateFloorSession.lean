@@ -1,0 +1,2 @@
+-- Declaration: SenateFloorSession
+-- Extracted by StaticSplit

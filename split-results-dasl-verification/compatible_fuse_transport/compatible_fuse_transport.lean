@@ -1,0 +1,2 @@
+-- Declaration: compatible_fuse_transport
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: SenateAction.requiredThreshold
+-- Extracted by StaticSplit

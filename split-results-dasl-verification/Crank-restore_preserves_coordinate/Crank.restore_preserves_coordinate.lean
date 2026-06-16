@@ -1,0 +1,2 @@
+-- Declaration: Crank.restore_preserves_coordinate
+-- Extracted by StaticSplit

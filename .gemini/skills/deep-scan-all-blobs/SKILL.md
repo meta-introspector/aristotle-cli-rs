@@ -1,10 +1,6 @@
 ---
-name: deep-scan-all-blobs
-description: >-
-  Apply deep-scan to ALL 765+ blobs in IPLD shmem, not just the 153 in
-  vendormod/full/. The deep scanner applies Hecke scoring, entropy computation,
-  and functor arrow extraction. Use when expanding analysis coverage, computing
-  spectral features, or preparing data for the 3-category construction.
+name: "deep-scan-all-blobs"
+description: "Apply deep-scan to ALL 765+ blobs in IPLD shmem, not just the 153 in vendormod/full/. The deep scanner applies Hecke scoring, entropy computation, and functor arrow extraction. Use when expanding analysis coverage, computing spectral features, or preparing data for the 3-category construction."
 ---
 
 # Apply Deep-Scan to All 765+ IPLD Shmem Blobs

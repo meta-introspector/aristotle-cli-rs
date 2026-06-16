@@ -1,0 +1,2 @@
+-- Declaration: isObstructionPrime
+-- Extracted by StaticSplit

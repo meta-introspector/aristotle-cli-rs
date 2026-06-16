@@ -1,11 +1,6 @@
 ---
-name: vendormod-module-tile
-description: >-
-  Interactive HTML tile visualizing cargo-vendormod's refactored module
-  structure. Tree view of 30+ modules, animated refactor replay (26 items
-  moving from main.rs to utils.rs), file size metrics, and DASL architecture
-  badges. Zero-dependency single HTML file. Use when building tile
-  visualizations, documenting module architecture, or onboarding new agents.
+name: "vendormod-module-tile"
+description: "Interactive HTML tile visualizing cargo-vendormod's refactored module structure. Tree view of 30+ modules, animated refactor replay (26 items moving from main.rs to utils.rs), file size metrics, and DASL architecture badges. Zero-dependency single HTML file. Use when building tile visualizations, documenting module architecture, or onboarding new agents."
 ---
 
 # vendormod-module-tile — Module Tree Visualization

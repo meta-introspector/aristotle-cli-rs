@@ -1,0 +1,2 @@
+-- Declaration: emojiEncode_soundness_vanishes
+-- Extracted by StaticSplit

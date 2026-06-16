@@ -1,0 +1,2 @@
+-- Declaration: VoteChoice
+-- Extracted by StaticSplit

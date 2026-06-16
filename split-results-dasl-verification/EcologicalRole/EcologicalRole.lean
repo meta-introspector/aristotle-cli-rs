@@ -1,0 +1,2 @@
+-- Declaration: EcologicalRole
+-- Extracted by StaticSplit

@@ -1,12 +1,6 @@
 ---
-name: nginx-control-tiles
-description: >-
-  Nginx administration via DASL control tiles. Scans nginx configs, extracts
-  server blocks, locations, proxy_pass directives, and ports into DASL tiles.
-  Generates per-domain, per-proxy, per-port, and integration tiles from live
-  nginx state. Cross-references with /etc/services port registry.
-  Use when managing nginx configuration, migrating nginx to nix/git, or
-  auditing the nginx proxy topology.
+name: "nginx-control-tiles"
+description: "Nginx administration via DASL control tiles. Scans nginx configs, extracts server blocks, locations, proxy_pass directives, and ports into DASL tiles. Generates per-domain, per-proxy, per-port, and integration tiles from live nginx state. Cross-references with /etc/services port registry. Use when managing nginx configuration, migrating nginx to nix/git, or auditing the nginx proxy topology."
 ---
 
 # Nginx Control Tiles

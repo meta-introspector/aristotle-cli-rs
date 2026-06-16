@@ -1,0 +1,2 @@
+-- Declaration: MonsterHashFn
+-- Extracted by StaticSplit

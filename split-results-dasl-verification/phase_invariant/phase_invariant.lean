@@ -1,0 +1,2 @@
+-- Declaration: phase_invariant
+-- Extracted by StaticSplit

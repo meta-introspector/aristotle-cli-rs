@@ -1,0 +1,2 @@
+-- Declaration: isCoherent
+-- Extracted by StaticSplit

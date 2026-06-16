@@ -1,0 +1,2 @@
+-- Declaration: Kernel.iterate_zero
+-- Extracted by StaticSplit

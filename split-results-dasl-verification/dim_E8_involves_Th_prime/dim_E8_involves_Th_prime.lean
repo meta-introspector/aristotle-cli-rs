@@ -1,0 +1,2 @@
+-- Declaration: dim_E8_involves_Th_prime
+-- Extracted by StaticSplit

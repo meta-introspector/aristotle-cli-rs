@@ -1,0 +1,2 @@
+-- Declaration: {α
+-- Extracted by StaticSplit

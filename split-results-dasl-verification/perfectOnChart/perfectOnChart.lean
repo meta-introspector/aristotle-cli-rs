@@ -1,0 +1,2 @@
+-- Declaration: perfectOnChart
+-- Extracted by StaticSplit

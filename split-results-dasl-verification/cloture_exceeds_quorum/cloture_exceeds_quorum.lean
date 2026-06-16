@@ -1,0 +1,2 @@
+-- Declaration: cloture_exceeds_quorum
+-- Extracted by StaticSplit

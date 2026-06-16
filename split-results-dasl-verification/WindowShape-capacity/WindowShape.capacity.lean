@@ -1,0 +1,2 @@
+-- Declaration: WindowShape.capacity
+-- Extracted by StaticSplit

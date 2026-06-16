@@ -1,0 +1,2 @@
+-- Declaration: walk_coprime
+-- Extracted by StaticSplit

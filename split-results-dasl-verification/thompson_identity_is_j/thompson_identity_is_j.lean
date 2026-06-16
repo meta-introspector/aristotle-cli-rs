@@ -1,0 +1,2 @@
+-- Declaration: thompson_identity_is_j
+-- Extracted by StaticSplit

@@ -1,10 +1,6 @@
 ---
-name: fix-rust001-min-len
-description: >-
-  Fix n0_dasl RUST-001 bug: MIN_LEN is 3 but should be 4 in cid.rs.
-  Truncated CID (3-byte payload) causes panic instead of Err.
-  Use when fixing the n0_dasl CID parsing bug, adding regression tests,
-  or verifying mitigation vectors pass after the fix.
+name: "fix-rust001-min-len"
+description: "Fix n0_dasl RUST-001 bug: MIN_LEN is 3 but should be 4 in cid.rs. Truncated CID (3-byte payload) causes panic instead of Err. Use when fixing the n0_dasl CID parsing bug, adding regression tests, or verifying mitigation vectors pass after the fix."
 ---
 
 # Fix RUST-001: n0_dasl MIN_LEN 3→4

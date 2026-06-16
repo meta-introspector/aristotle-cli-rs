@@ -1,0 +1,2 @@
+-- Declaration: tripleCollision
+-- Extracted by StaticSplit

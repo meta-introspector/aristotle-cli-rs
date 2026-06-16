@@ -1,0 +1,2 @@
+-- Declaration: GrothendieckSpace.fiberData
+-- Extracted by StaticSplit

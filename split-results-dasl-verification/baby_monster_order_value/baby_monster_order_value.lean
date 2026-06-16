@@ -1,0 +1,2 @@
+-- Declaration: baby_monster_order_value
+-- Extracted by StaticSplit

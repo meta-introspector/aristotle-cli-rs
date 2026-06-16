@@ -1,0 +1,2 @@
+-- Declaration: ssp_product_is_monster_address_space
+-- Extracted by StaticSplit

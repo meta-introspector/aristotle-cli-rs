@@ -1,0 +1,2 @@
+-- Declaration: v2_v3_same_bott_class
+-- Extracted by StaticSplit

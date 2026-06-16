@@ -1,6 +1,6 @@
 ---
-name: system-manager-tmpfiles-fix
-description: Fix system-manager activation errors related to tmpfiles.d configuration. Debug and fix recurring system-manager errors caused by /etc/tmpfiles.d conflicts.
+name: "system-manager-tmpfiles-fix"
+description: "Fix system-manager activation errors related to tmpfiles.d configuration. Debug and fix recurring system-manager errors caused by /etc/tmpfiles.d conflicts."
 ---
 
 # Skill: Fixing system-manager Activation Error for `tmpfiles.d`

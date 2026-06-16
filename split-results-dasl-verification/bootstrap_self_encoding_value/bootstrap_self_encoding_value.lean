@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_self_encoding_value
+-- Extracted by StaticSplit

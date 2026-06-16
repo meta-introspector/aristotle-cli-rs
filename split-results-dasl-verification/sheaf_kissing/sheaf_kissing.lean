@@ -1,0 +1,2 @@
+-- Declaration: sheaf_kissing
+-- Extracted by StaticSplit

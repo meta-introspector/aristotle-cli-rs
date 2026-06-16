@@ -1,9 +1,6 @@
 ---
-name: nginx-tile-route
-description: >-
-  Add, list, and reload nginx tile routes on solana.solfunmeme.com.
-  Use when adding a new proxied path to the tile-server or any
-  backend service. Never inline sed/edit nginx configs directly.
+name: "nginx-tile-route"
+description: "Add, list, and reload nginx tile routes on solana.solfunmeme.com. Use when adding a new proxied path to the tile-server or any backend service. Never inline sed/edit nginx configs directly."
 ---
 
 # nginx-tile-route — Manage nginx tile proxy routes

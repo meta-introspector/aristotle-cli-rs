@@ -1,0 +1,2 @@
+-- Declaration: majorityOfList
+-- Extracted by StaticSplit

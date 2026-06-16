@@ -1,0 +1,2 @@
+-- Declaration: embedAddress
+-- Extracted by StaticSplit

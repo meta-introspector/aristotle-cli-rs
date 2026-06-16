@@ -1,0 +1,2 @@
+-- Declaration: moduli_product
+-- Extracted by StaticSplit

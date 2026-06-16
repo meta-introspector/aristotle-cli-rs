@@ -1,0 +1,2 @@
+-- Declaration: excess_factorization
+-- Extracted by StaticSplit

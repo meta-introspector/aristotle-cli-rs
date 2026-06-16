@@ -1,11 +1,6 @@
 ---
-name: lean4-2-category-formalization
-description: >-
-  Generate Lean4 formalization of the DASL 2-category structure (16 objects,
-  16 morphisms, 10 hypermorphisms). Covers the 5 byte-level morphisms,
-  hypermorphism flow, orbifold residues (70 mod 71, 9 mod 59, 8 mod 47),
-  and VOA-graded algebra dimensions. Use when formalizing DASL categorical
-  structures in Lean4, connecting to mathlib, or porting CBOR spec from F*.
+name: "lean4-2-category-formalization"
+description: "Generate Lean4 formalization of the DASL 2-category structure (16 objects, 16 morphisms, 10 hypermorphisms). Covers the 5 byte-level morphisms, hypermorphism flow, orbifold residues (70 mod 71, 9 mod 59, 8 mod 47), and VOA-graded algebra dimensions. Use when formalizing DASL categorical structures in Lean4, connecting to mathlib, or porting CBOR spec from F*."
 ---
 
 # Lean4 Formalization of 2-Category Structure

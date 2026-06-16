@@ -1,0 +1,2 @@
+-- Declaration: exponentSum_5
+-- Extracted by StaticSplit

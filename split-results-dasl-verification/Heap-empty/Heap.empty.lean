@@ -1,0 +1,2 @@
+-- Declaration: Heap.empty
+-- Extracted by StaticSplit

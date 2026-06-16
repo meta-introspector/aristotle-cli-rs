@@ -1,9 +1,6 @@
 ---
-name: ebpf-perf-event-diagnose
-description: >-
-  Diagnose and fix the EINVAL error during bpf_map_create in the d8_2a_loader
-  eBPF monitoring program. Use when debugging eBPF perf_event issues, checking
-  kernel BPF support, or deploying the 0xD8 0x2A register-level monitoring.
+name: "ebpf-perf-event-diagnose"
+description: "Diagnose and fix the EINVAL error during bpf_map_create in the d8_2a_loader eBPF monitoring program. Use when debugging eBPF perf_event issues, checking kernel BPF support, or deploying the 0xD8 0x2A register-level monitoring."
 ---
 
 # Diagnose eBPF perf_event EINVAL Error

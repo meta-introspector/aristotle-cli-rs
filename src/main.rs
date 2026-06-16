@@ -64,6 +64,8 @@ enum Commands {
     /// Build all projects
     Build {
         #[arg(long)]
+        input_dir: Option<PathBuf>,
+        #[arg(long)]
         no_fail_fast: bool,
         #[arg(short = 'v')]
         verbose: bool,
@@ -200,8 +202,14 @@ pub fn load_config() -> Result<Config> {
     }
 
     let toml = fs::read_to_string(&config_path)?;
-    let config: Config = toml::from_str(&toml)
+    let mut config: Config = toml::from_str(&toml)
         .with_context(|| format!("Failed to parse config at {}", config_path.display()))?;
+    
+    let current_dir = env::current_dir()?;
+    if current_dir.to_string_lossy() == "/mnt/data1/time-2026/05-may/07/arist" {
+        config.git_base = current_dir;
+    }
+
     debug!(
         base_dir = %config.base_dir.display(),
         results_dir = %config.results_dir.display(),

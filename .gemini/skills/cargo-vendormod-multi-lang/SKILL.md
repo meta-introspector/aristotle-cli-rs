@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-multi-lang
-description: Detect languages and generate per-language Nix flakes with cargo-vendormod. Use when processing Java, JavaScript, C, Lean4, Python, Go, Ruby, Nix, or mixed-language projects.
+name: "cargo-vendormod-multi-lang"
+description: "Detect languages and generate per-language Nix flakes with cargo-vendormod. Use when processing Java, JavaScript, C, Lean4, Python, Go, Ruby, Nix, or mixed-language projects."
 ---
 
 # Cargo-Vendormod Multi-Language

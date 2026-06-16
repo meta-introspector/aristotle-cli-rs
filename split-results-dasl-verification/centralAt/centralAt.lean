@@ -1,0 +1,2 @@
+-- Declaration: centralAt
+-- Extracted by StaticSplit

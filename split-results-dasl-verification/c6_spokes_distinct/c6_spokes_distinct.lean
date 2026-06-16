@@ -1,0 +1,2 @@
+-- Declaration: c6_spokes_distinct
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: AscomycotaClass
+-- Extracted by StaticSplit

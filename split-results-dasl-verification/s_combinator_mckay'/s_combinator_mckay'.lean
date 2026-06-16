@@ -1,0 +1,2 @@
+-- Declaration: s_combinator_mckay'
+-- Extracted by StaticSplit

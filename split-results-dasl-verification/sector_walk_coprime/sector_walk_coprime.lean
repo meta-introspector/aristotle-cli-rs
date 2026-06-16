@@ -1,0 +1,2 @@
+-- Declaration: sector_walk_coprime
+-- Extracted by StaticSplit

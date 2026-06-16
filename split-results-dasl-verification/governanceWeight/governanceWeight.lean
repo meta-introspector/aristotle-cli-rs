@@ -1,0 +1,2 @@
+-- Declaration: governanceWeight
+-- Extracted by StaticSplit

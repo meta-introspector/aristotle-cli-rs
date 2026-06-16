@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-scanner
-description: Discover and classify repositories, crates, and sanitized references in cargo-vendormod workloads. Use when scanning directories for Cargo.toml files, collecting repo info, or cleaning git references.
+name: "cargo-vendormod-scanner"
+description: "Discover and classify repositories, crates, and sanitized references in cargo-vendormod workloads. Use when scanning directories for Cargo.toml files, collecting repo info, or cleaning git references."
 ---
 
 # Cargo-Vendormod Scanner

@@ -1,0 +1,2 @@
+-- Declaration: sspPrimes_prime
+-- Extracted by StaticSplit

@@ -1,10 +1,6 @@
 ---
-name: round-robin-cross-lang
-description: >-
-  Run round-robin comparison with dag-cbrrr, go-ipld-cbor, and js-dag-cbor
-  beyond the current n0_dasl vs serde_ipld_dagcbor test. Use when expanding
-  cross-language divergence testing, verifying map_keys/tags/indefinite/floats/
-  integer_range categories, or building multi-language conformance evidence.
+name: "round-robin-cross-lang"
+description: "Run round-robin comparison with dag-cbrrr, go-ipld-cbor, and js-dag-cbor beyond the current n0_dasl vs serde_ipld_dagcbor test. Use when expanding cross-language divergence testing, verifying map_keys/tags/indefinite/floats/ integer_range categories, or building multi-language conformance evidence."
 ---
 
 # Round-Robin Cross-Language Divergence Testing

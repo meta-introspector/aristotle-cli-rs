@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-troubleshooting
-description: Diagnose and recover from cargo-vendormod failures. Use when tests fail, builds error, zkperf errors, git submodules break, flakes are invalid, or LLM error pipelines misfire.
+name: "cargo-vendormod-troubleshooting"
+description: "Diagnose and recover from cargo-vendormod failures. Use when tests fail, builds error, zkperf errors, git submodules break, flakes are invalid, or LLM error pipelines misfire."
 ---
 
 # Cargo-Vendormod Troubleshooting

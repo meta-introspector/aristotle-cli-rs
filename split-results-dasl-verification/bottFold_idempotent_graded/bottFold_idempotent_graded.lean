@@ -1,0 +1,2 @@
+-- Declaration: bottFold_idempotent_graded
+-- Extracted by StaticSplit

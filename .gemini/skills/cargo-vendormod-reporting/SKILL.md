@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-reporting
-description: Generate, process, and verify reports and manifests with cargo-vendormod. Use for report generation, goal tracking, coverage summaries, gitmodules metadata, rollup locks, Cargo.toml fixes, and DASL metadata processing.
+name: "cargo-vendormod-reporting"
+description: "Generate, process, and verify reports and manifests with cargo-vendormod. Use for report generation, goal tracking, coverage summaries, gitmodules metadata, rollup locks, Cargo.toml fixes, and DASL metadata processing."
 ---
 
 # Cargo-Vendormod Reporting

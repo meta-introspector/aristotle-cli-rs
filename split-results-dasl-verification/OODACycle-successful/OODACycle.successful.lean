@@ -1,0 +1,2 @@
+-- Declaration: OODACycle.successful
+-- Extracted by StaticSplit

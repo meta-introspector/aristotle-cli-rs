@@ -1,0 +1,2 @@
+-- Declaration: compose_empty_left
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: negDefForm
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fungalVine_carries_monomyth
+-- Extracted by StaticSplit

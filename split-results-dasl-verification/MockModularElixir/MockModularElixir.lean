@@ -1,0 +1,2 @@
+-- Declaration: MockModularElixir
+-- Extracted by StaticSplit

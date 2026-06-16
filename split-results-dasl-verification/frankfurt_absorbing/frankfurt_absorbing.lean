@@ -1,0 +1,2 @@
+-- Declaration: frankfurt_absorbing
+-- Extracted by StaticSplit

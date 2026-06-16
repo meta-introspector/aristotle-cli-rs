@@ -1,0 +1,2 @@
+-- Declaration: resource_dominates_refl
+-- Extracted by StaticSplit

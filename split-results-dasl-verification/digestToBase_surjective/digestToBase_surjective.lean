@@ -1,0 +1,2 @@
+-- Declaration: digestToBase_surjective
+-- Extracted by StaticSplit

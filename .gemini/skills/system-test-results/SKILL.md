@@ -1,79 +1,104 @@
 ---
-name: system-test-results
-description: >-
-  System integration test results for DASL tile infrastructure — live service
-  status, known issues, deploy commands, and vendormod metrics.
+name: "system-test-results"
+description: "System integration test results for DASL tile infrastructure — live service status, known issues, deploy commands, and vendormod metrics. Updated 2026-06-14 with system-manager flake deployment status."
 ---
 
 # System Test Results — DASL Tile Infrastructure
 
-**Date:** 2026-06-10  **Test:** Full system integration test
+**Date:** 2026-06-14  **Test:** Post-reboot service status
 
 ## Summary
 
 | Status | Count | Detail |
 |--------|-------|--------|
-| 🟢 UP | 10 | nagios, deploy, shmem, pastebin, 6 harness tiles |
-| 🟡 DEGRADED | 2 | nginx (running but locations missing), deploy/api (python parse issue) |
+| 🟢 SYSTEM-MANAGER | 8 | Python tiles + existing binaries in flake.nix, build passing |
+| 🟢 UP (raw) | 4 | nagios, deploy, vendormod, port-registry (python3) |
+| 🟡 PENDING | 3 | Rust services: serde-dagcbor, n0-dasl, libipld (need vendoring) |
 | 🔴 DOWN | 2 | pastebin /health (404), diagonalize /health (404) |
 
-## Live Services
+## Live Services (post-reboot)
 
-| Service | systemd | Port | HTTP /health |
-|---------|---------|------|-------------|
-| nagios-tile-monitor | 🟢 active | 8800 | 🟢 200 |
-| deploy-tile | 🟢 active | 8810 | 🟢 200 |
-| ipld-car-shmem | 🟢 active | @socket | ✅ 187,865 blocks |
-| kant-pastebin | 🟢 active | 8090 | 🔴 404 |
-| qa-team-tile | (manual) | 18142 | 🟢 200 |
-| fuzzing-team-tile | (manual) | 18143 | 🟢 200 |
-| serde-ipld-dagcbor | (manual) | 18007 | 🟢 200 |
-| n0-dasl | (manual) | 18009 | 🟢 200 |
-| libipld | (manual) | 18011 | 🟢 200 |
-| zombie-cft-tile-server | (manual) | 8095 | 🟢 200 |
-| tile-server | (manual) | 8081 | 🟢 200 |
-| diagonalize | (manual) | 8082 | 🔴 404 |
-| kant-pastebin-beta | 🔴 failed | — | — |
+| Service | systemd | Port | Build | Status |
+|---------|---------|------|-------|--------|
+| nagios-tile-monitor | 🟡 raw python | 8800 | ✅ nix build .#nagios-tile | 🟢 200 |
+| deploy-tile | 🟡 raw python | 8810 | ✅ nix build .#deploy-tile | 🟢 200 |
+| vendormod-tile | 🟡 raw python | 8765 | ✅ nix build .#vendormod-tile | 🟢 200 |
+| port-registry-tile | 🟡 raw python | 8820 | ✅ nix build .#port-tile | 🟢 200 |
+| zombie-cft-tile | 🟡 raw binary | 8095 | binary exists | 🟢 200 |
+| ipld-car-shmem | 🟢 systemd | @socket | deployment | ✅ 187K blocks |
+| nora | 🟢 systemd | 4000 | system-manager | 🟢 serving |
+| kant-pastebin | 🟢 systemd | 8090 | system-manager | 🟢 200 |
+| serde-ipld-dagcbor | 🔴 not built | 18007 | ⏳ nora vendoring | — |
+| n0-dasl | 🔴 not built | 18009 | ⏳ nora vendoring | — |
+| libipld | 🟡 flake ready | 18011 | ✅ vendored (46MB) | ⏳ deploy |
+| qa-team-tile | 🔴 not built | 18142 | ⏳ binary from dasl-testing | — |
+| fuzz-team-tile | 🟡 flake ready | 18143 | ✅ nix build .#fuzz-tile | ⏳ deploy |
+| diagonalize | 🔴 not built | 8082 | ⏳ python server | — |
+
+## System-Manager Flake (NEW)
+
+```bash
+# Location: ~/dasl-planning/
+# Flake: flake.nix + dasl-testing-system-manager.nix
+# Build: nix build .#systemConfigs.all-services --no-link
+# Deploy: sudo $(nix build .#systemConfigs.all-services --print-out-paths)/bin/activate
+
+# Individual packages
+nix build ~/dasl-planning#nagios-tile
+nix build ~/dasl-planning#deploy-tile
+nix build ~/dasl-planning#vendormod-tile
+nix build ~/dasl-planning#port-tile
+nix build ~/dasl-planning#fuzz-tile
+```
+
+### Working (8 services)
+Python tiles are nix-built from vendored scripts. Services and nginx
+locations defined declaratively. One `activate` command deploys all.
+
+### Pending (3 Rust services)
+serde-ipld-dagcbor, n0-dasl, libipld need crate vendoring for pure
+sandbox build. Currently fail with "failed to query replaced source
+registry crates-io". Blocked by crates.io 403.
+
+libipld has a working flake with 46MB vendored deps at
+`~/dasl/dasl-testing/harnesses/libipld/flake.nix` but uses
+`manveru/nixpkgs` fork — needs updating to standard nixpkgs.
 
 ## Known Issues
 
-### 1. Nginx Location Blocks Missing
-nginx is running (HTTP 200 on port 80) but `/tile/nagios/`, `/tile/deploy/`, `/pastebin/` return 404 locally.
-**Fix:** `fix-nginx-tile-locations` task — add location blocks to `/etc/nginx/locations.d/`
-**Nginx itself:** nginx.service in failed state because system-manager tried to manage it
-but an existing nginx process was already bound to ports. The process IS running, just not
-via systemd. system-manager will fix this on next clean deploy.
-**Workaround:** `sudo nginx -s reload` if config was updated manually.
+### 1. crates.io 403 — Pure Eval Blocker
+Nix sandbox blocks network access. Cargo deps must be:
+- **Vendored** (cargoVendorDir pattern) — works pure
+- **Nora** (preBuild .cargo/config.toml) — needs --impure
+- **crates.io** — 403, doesn't work at all
 
-### 2. Pastebin /health Returns 404
-Service is active on 8090 and serves paste content, but `/health` endpoint is not
-implemented in the pastebin app code.
-**Fix:** Add `/health` route to pastebin server code.
+### 2. Multi-Output nixpkgs Packages
+`environment.systemPackages` with `curl`, `jq` etc. fails with:
+"requires non-existent output 'bin'". Avoid or use explicit paths.
 
-### 3. Diagonalize /health Returns 404
-Python3 process listening on 8082 but `/health` endpoint missing.
-**Fix:** Update `server.py` to include health endpoint, or restart via system-manager.
+### 3. builtins.path Strips Vendor
+`builtins.path { path = ./.; }` filters via .gitignore. Use `src = ./.;`
+when vendor/ must be included in the build source.
 
-### 4. Harness Tiles Run as Raw Processes
-QA, Fuzz, serde, n0-dasl, libipld, zombie-cft, tile-server all run as raw binaries
-without systemd units. They survive reboots only if started manually.
-**Fix:** `fix-nix-system-manager-sandbox` task — add systemd units for all harness tiles.
+### 4. Pastebin /health Returns 404
+Service active on 8090 but `/health` endpoint not implemented.
 
-### 5. Deploy Tile API Python Parse
-`/api/tiles` and `/api/status` return valid JSON but the inline python3 parser failed
-during test — likely a pipe/buffer issue. The endpoints work when accessed directly
-via curl or browser.
+### 5. Diagonalize /health Returns 404
+Python3 process on 8082 but `/health` missing. Server needs update.
+
+### 6. Harness Tiles Run as Raw Processes
+Python tiles run as raw binaries without systemd units. Fix ready:
+`~/dasl-planning/dasl-testing-system-manager.nix` — just needs activation.
 
 ## Deploy Commands
 
 ```bash
-# Full deploy (system-manager)
+# Full deploy (system-manager flake — NEW)
+sudo $(nix build ~/dasl-planning#systemConfigs.all-services --print-out-paths)/bin/activate
+
+# Legacy deploy (pastebin flake)
 sudo -E ~/.nix-profile/bin/nix run github:numtide/system-manager -- switch \
   --flake /etc/system-manager#all-services
-
-# Restart individual service
-sudo systemctl restart nagios-tile-monitor
-sudo systemctl restart deploy-tile
 
 # Quick health check
 bash ~/DOCS/diagnostic.sh
@@ -88,6 +113,8 @@ bash ~/DOCS/check-tiles.sh
 |------|-----|--------|
 | Nagios | http://127.0.0.1:8800/ | 🟢 |
 | Deploy | http://127.0.0.1:8810/ | 🟢 |
+| Vendormod | http://127.0.0.1:8765/ | 🟢 |
+| Port | http://127.0.0.1:8820/ | 🟢 |
 | Pastebin | https://solana.solfunmeme.com/pastebin/ | 🟢 |
 
 ## Vendormod Status
@@ -100,10 +127,7 @@ bash ~/DOCS/check-tiles.sh
 | Git | committed, pushed to refactor-main |
 | Shmem | 28 items published |
 
-## Next Task
+## Skills Update (2026-06-14)
 
-Run `fix-nginx-tile-locations`:
-```bash
-cd ~/projects/dotagents/tasks/fix-nginx-tile-locations
-cat GEMINI.md
-```
+All 134 skills consolidated in `~/dotagents/skills/` as single source of truth.
+Deployed to `~/.pi/agent/skills/` via `dotagents deploy`.

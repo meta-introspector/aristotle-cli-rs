@@ -1,10 +1,6 @@
 ---
-name: tmux
-description: >-
-  Tmux session management — capture pane content, list sessions/windows/panes,
-  navigate between windows, send commands to panes, and monitor git status
-  across all open worktrees. Use when reviewing the tmux landscape, capturing
-  state from running sessions, or sending commands to specific panes.
+name: "tmux"
+description: "Tmux session management — capture pane content, list sessions/windows/panes, navigate between windows, send commands to panes, and monitor git status across all open worktrees. Use when reviewing the tmux landscape, capturing state from running sessions, or sending commands to specific panes."
 ---
 
 # tmux — Session Management Skill

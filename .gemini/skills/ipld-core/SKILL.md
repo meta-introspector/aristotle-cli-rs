@@ -1,9 +1,6 @@
 ---
-name: ipld-core
-description: >-
-  Work with the IPLD core types crate — the Ipld enum, CID handling,
-  codec trait, and dependency audit. Use when modifying, upgrading, or
-  fuzzing libipld-core or any crate that depends on ipld_core::ipld::Ipld.
+name: "ipld-core"
+description: "Work with the IPLD core types crate — the Ipld enum, CID handling, codec trait, and dependency audit. Use when modifying, upgrading, or fuzzing libipld-core or any crate that depends on ipld_core::ipld::Ipld."
 ---
 
 # ipld-core — IPLD Core Types Crate

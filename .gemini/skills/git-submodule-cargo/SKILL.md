@@ -1,6 +1,6 @@
 ---
-name: git-submodule-cargo
-description: Working with git submodules in cargo projects - initializing, updating, handling untracked content. Use when user encounters submodule issues in cargo workspaces.
+name: "git-submodule-cargo"
+description: "Working with git submodules in cargo projects - initializing, updating, handling untracked content. Use when user encounters submodule issues in cargo workspaces."
 ---
 
 # Git Submodules in Cargo Projects

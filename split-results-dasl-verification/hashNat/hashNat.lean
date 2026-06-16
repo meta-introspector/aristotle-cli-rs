@@ -1,0 +1,2 @@
+-- Declaration: hashNat
+-- Extracted by StaticSplit

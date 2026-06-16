@@ -1,0 +1,2 @@
+-- Declaration: GroupFuzz.hasFullCoverage
+-- Extracted by StaticSplit

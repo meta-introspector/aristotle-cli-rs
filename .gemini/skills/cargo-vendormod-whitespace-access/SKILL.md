@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-whitespace-access
-description: Strip, normalize, and sanitize untrusted text, file contents, command output, filenames, user-supplied input, and logs before writing them to disk or passing them downstream.
+name: "cargo-vendormod-whitespace-access"
+description: "Strip, normalize, and sanitize untrusted text, file contents, command output, filenames, user-supplied input, and logs before writing them to disk or passing them downstream."
 ---
 
 # Cargo-Vendormod Whitespace Access

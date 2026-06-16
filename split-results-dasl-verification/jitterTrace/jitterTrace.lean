@@ -1,0 +1,2 @@
+-- Declaration: jitterTrace
+-- Extracted by StaticSplit

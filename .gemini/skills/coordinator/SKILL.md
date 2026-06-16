@@ -1,8 +1,7 @@
 ---
-name: coordinator
-description: Orchestrate multiple worktree agents. Spawn, monitor, communicate, and merge.
-allowed-tools: Bash, Write, Read, Task
-disable-model-invocation: true
+name: "coordinator"
+description: "Orchestrate multiple worktree agents. Spawn, monitor, communicate, and merge."
+allowed-tools: "Bash, Write, Read, Task"
 ---
 
 # Worktree Agent Coordinator

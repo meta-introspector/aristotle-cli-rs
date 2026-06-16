@@ -1,10 +1,6 @@
 ---
-name: da51-orbifold-admin
-description: >-
-  DA51 Orbifold Arrow Matrix — Monster group (71×59×47)² combinatorial space,
-  Bott/AZ folding, admin panel for model creation/save/share. Use when building
-  the orbifold memstore, ingesting Cargo.toml dependency graphs, folding arrow
-  matrices, or deploying the DA51 admin dashboard.
+name: "da51-orbifold-admin"
+description: "DA51 Orbifold Arrow Matrix — Monster group (71×59×47)² combinatorial space, Bott/AZ folding, admin panel for model creation/save/share. Use when building the orbifold memstore, ingesting Cargo.toml dependency graphs, folding arrow matrices, or deploying the DA51 admin dashboard."
 ---
 
 # DA51 Orbifold — Arrow Matrix & Admin Panel

@@ -1,0 +1,2 @@
+-- Declaration: stretch_preserves_location
+-- Extracted by StaticSplit

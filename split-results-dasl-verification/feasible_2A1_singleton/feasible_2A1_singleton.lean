@@ -1,0 +1,2 @@
+-- Declaration: feasible_2A1_singleton
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: receiveMessage
+-- Extracted by StaticSplit

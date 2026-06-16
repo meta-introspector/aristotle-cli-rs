@@ -1,0 +1,2 @@
+-- Declaration: fungal_same_boardroom
+-- Extracted by StaticSplit

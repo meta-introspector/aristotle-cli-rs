@@ -1,0 +1,2 @@
+-- Declaration: growthGen_train_length
+-- Extracted by StaticSplit

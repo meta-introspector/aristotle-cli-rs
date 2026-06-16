@@ -1,6 +1,6 @@
 ---
-name: dashlm-zos-server-plugin
-description: Create zos-server plugin dashlm-index exposing HTTP/Unix-socket API for querying the shared index.
+name: "dashlm-zos-server-plugin"
+description: "Create zos-server plugin dashlm-index exposing HTTP/Unix-socket API for querying the shared index."
 ---
 
 # dashlm-index zos-server plugin

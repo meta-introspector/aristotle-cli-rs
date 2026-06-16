@@ -1,0 +1,2 @@
+-- Declaration: AddressRegistry.empty_all_new
+-- Extracted by StaticSplit

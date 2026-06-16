@@ -1,0 +1,2 @@
+-- Declaration: bridge_sym_nodeA
+-- Extracted by StaticSplit

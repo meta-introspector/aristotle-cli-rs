@@ -1,0 +1,2 @@
+-- Declaration: obj_ssp15
+-- Extracted by StaticSplit

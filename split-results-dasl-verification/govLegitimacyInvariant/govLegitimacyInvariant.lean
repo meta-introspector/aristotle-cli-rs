@@ -1,0 +1,2 @@
+-- Declaration: govLegitimacyInvariant
+-- Extracted by StaticSplit

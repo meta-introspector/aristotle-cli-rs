@@ -1,0 +1,2 @@
+-- Declaration: padicToReal
+-- Extracted by StaticSplit

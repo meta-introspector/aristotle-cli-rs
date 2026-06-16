@@ -1,0 +1,2 @@
+-- Declaration: SemanticState.atPoint
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: minorityManager_before_other
+-- Extracted by StaticSplit

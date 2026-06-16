@@ -1,0 +1,2 @@
+-- Declaration: MetaAutomorphism
+-- Extracted by StaticSplit

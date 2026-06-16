@@ -1,0 +1,2 @@
+-- Declaration: jExpansion_compatible
+-- Extracted by StaticSplit

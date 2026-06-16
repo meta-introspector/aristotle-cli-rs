@@ -1,0 +1,2 @@
+-- Declaration: strict_implies_equivariant
+-- Extracted by StaticSplit

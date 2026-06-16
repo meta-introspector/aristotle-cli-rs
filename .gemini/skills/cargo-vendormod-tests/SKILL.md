@@ -1,6 +1,6 @@
 ---
-name: cargo-vendormod-tests
-description: Run and extend the cargo-vendormod Rust test suite. Use when the user asks to run tests, add unit tests, check coverage, or debug test failures for cargo-vendormod.
+name: "cargo-vendormod-tests"
+description: "Run and extend the cargo-vendormod Rust test suite. Use when the user asks to run tests, add unit tests, check coverage, or debug test failures for cargo-vendormod."
 ---
 
 # Cargo-Vendormod Test Workflow

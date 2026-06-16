@@ -1,0 +1,2 @@
+-- Declaration: j4_not_dvd_monster
+-- Extracted by StaticSplit

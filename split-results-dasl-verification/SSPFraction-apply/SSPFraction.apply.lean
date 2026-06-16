@@ -1,0 +1,2 @@
+-- Declaration: SSPFraction.apply
+-- Extracted by StaticSplit

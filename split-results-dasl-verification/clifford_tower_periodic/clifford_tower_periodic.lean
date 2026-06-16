@@ -1,0 +1,2 @@
+-- Declaration: clifford_tower_periodic
+-- Extracted by StaticSplit

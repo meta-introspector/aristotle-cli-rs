@@ -1,0 +1,2 @@
+-- Declaration: mckay_1
+-- Extracted by StaticSplit

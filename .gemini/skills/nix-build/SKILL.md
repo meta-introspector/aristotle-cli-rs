@@ -1,9 +1,6 @@
 ---
-name: nix-build
-description: >-
-  Verify Nix flake builds, check derivations, and diagnose build failures.
-  Use when adding a new package, updating a dependency, or ensuring all
-  flakes in the workspace still build.
+name: "nix-build"
+description: "Verify Nix flake builds, check derivations, and diagnose build failures. Use when adding a new package, updating a dependency, or ensuring all flakes in the workspace still build."
 ---
 
 # Nix Build — Flake Verification & Diagnostics

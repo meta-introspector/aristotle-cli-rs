@@ -1,0 +1,2 @@
+-- Declaration: flatten
+-- Extracted by StaticSplit

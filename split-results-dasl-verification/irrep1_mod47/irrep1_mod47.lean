@@ -1,0 +1,2 @@
+-- Declaration: irrep1_mod47
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fungalPartialChain
+-- Extracted by StaticSplit

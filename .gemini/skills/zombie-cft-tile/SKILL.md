@@ -1,8 +1,6 @@
 ---
-name: zombie-cft-tile
-description: >-
-  Zombie CFT Monster containment tile (port 8095). Diagnose, start, develop, use.
-  atlas — CFT
+name: "zombie-cft-tile"
+description: "Zombie CFT Monster containment tile (port 8095). Diagnose, start, develop, use. atlas — CFT"
 ---
 
 # 🧟 Zombie CFT Tile

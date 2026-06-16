@@ -1,0 +1,2 @@
+-- Declaration: adjournmentSections
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: crossroadsSpore
+-- Extracted by StaticSplit

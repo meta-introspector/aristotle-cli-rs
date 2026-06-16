@@ -1,0 +1,2 @@
+-- Declaration: earthEnergyFraction
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: mesCoord
+-- Extracted by StaticSplit
