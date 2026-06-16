@@ -1,0 +1,30 @@
+import Split.Finset
+import Split.IPLDMonsterSchema_TypeDefnKind_map
+import Split.IPLDMonsterSchema_instDecidableEqTypeDefnKind
+import Split.IPLDMonsterSchema_TypeDefnKind_string
+import Split.IPLDMonsterSchema_TypeDefnKind_unit
+import Split.Insert_insert
+import Split.IPLDMonsterSchema_TypeDefnKind_struct
+import Split.IPLDMonsterSchema_TypeDefnKind_copy
+import Split.Finset_instInsert
+import Split.IPLDMonsterSchema_TypeDefnKind
+import Split.IPLDMonsterSchema_TypeDefnKind_bytes
+import Split.IPLDMonsterSchema_TypeDefnKind_enum
+import Split.Fintype
+import Split.IPLDMonsterSchema_TypeDefnKind_int
+import Split.Fintype_mk
+import Split.IPLDMonsterSchema_TypeDefnKind_any
+import Split.IPLDMonsterSchema_TypeDefnKind_union
+import Split.IPLDMonsterSchema_TypeDefnKind_list
+import Split.Finset_instSingleton
+import Split.IPLDMonsterSchema_TypeDefnKind_link
+import Split.Singleton_singleton
+import Split.IPLDMonsterSchema_TypeDefnKind_bool
+import Split.IPLDMonsterSchema_TypeDefnKind_float
+
+-- IPLDMonsterSchema.instFintypeTypeDefnKind from environment
+-- def IPLDMonsterSchema.instFintypeTypeDefnKind : Fintype.{0} IPLDMonsterSchema.TypeDefnKind
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `IPLDMonsterSchema.instFintypeTypeDefnKind`.
+-- In a full split, the body would be extracted from the environment.

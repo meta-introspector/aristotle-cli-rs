@@ -1,0 +1,69 @@
+import Split.Iff_mpr
+import Split.Eq_mpr
+import Split.CauSeq_Completion_instRatCast
+import Split.Real
+import Split.NonUnitalCommRing_toNonUnitalNonAssocCommRing
+import Split.CommRing_toNonUnitalCommRing
+import Split.Ring_toNonAssocRing
+import Split.Real_instZero
+import Split.abs
+import Split.Real_ofCauchy_zero
+import Split.congrArg
+import Split.HEq_refl
+import Split.NeZero_charZero_one
+import Split.IsAbsoluteValue_abs_isAbsoluteValue
+import Split.Real_instRatCast
+import Split.Rat
+import Split.CauSeq_Completion_Cauchy
+import Split.AddGroupWithOne_toAddMonoidWithOne
+import Split.Rat_instZeroLEOneClass
+import Split.Rat_linearOrder
+import Split.Real_instLT
+import Split.NonUnitalNonAssocSemiring_toMulZeroClass
+import Split.Eq_casesOn
+import Split.Real_ofCauchy
+import Split.NonUnitalNonAssocRing_toNonUnitalNonAssocSemiring
+import Split.Rat_cast
+import Split.Rat_instLattice
+import Split.Rat_instDivisionRing
+import Split.DivisionRing_toRing
+import Split.NonAssocRing_toNonUnitalNonAssocRing
+import Split.Real_ratCast_lt
+import Split.Real_instOne
+import Split.AddMonoidWithOne_toOne
+import Split.zero_lt_one
+import Split.Rat_instField
+import Split.Rat_instCharZero
+import Split.CauSeq_Completion_Cauchy_divisionRing
+import Split.NonUnitalNonAssocCommRing_toNonUnitalNonAssocRing
+import Split.LT_lt
+import Split.True
+import Split.eq_self
+import Split.Rat_instIsStrictOrderedRing
+import Split.Rat_instPartialOrder
+import Split.Rat_cast_zero
+import Split.of_eq_true
+import Split.eq_of_heq
+import Split.Eq_ndrec
+import Split.One_toOfNat1
+import Split.Real_ofCauchy_one
+import Split.Zero_toOfNat0
+import Split.Rat_instLT
+import Split.Eq_refl
+import Split.HEq
+import Split.Rat_addGroup
+import Split.OfNat_ofNat
+import Split.Eq_symm
+import Split.Eq
+import Split.Ring_toAddGroupWithOne
+import Split.Rat_commRing
+import Split.Eq_trans
+import Split.MulZeroClass_toZero
+import Split.LT
+import Split.Rat_cast_one
+
+-- Real.zero_lt_one from environment
+-- theorem Real.zero_lt_one : LT.lt.{0} Real Real.instLT (OfNat.ofNat.{0} Real 0 (Zero.toOfNat0.{0} Real Real.instZero)) (OfNat.ofNat.{0} Real 1 (One.toOfNat1.{0} Real Real.instOne))
+
+-- Stub: this file represents the declaration `Real.zero_lt_one`.
+-- In a full split, the body would be extracted from the environment.

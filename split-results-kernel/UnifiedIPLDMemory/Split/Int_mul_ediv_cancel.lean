@@ -1,0 +1,25 @@
+import Split.Int_instDiv
+import Split.instHDiv
+import Split.HMul_hMul
+import Split.congrArg
+import Split.Eq_mp
+import Split.HDiv_hDiv
+import Split.Ne
+import Split.Int
+import Split.Int_instMul
+import Split.instHAdd
+import Split.instOfNat
+import Split.HAdd_hAdd
+import Split.Int_zero_ediv
+import Split.Int_instAdd
+import Split.OfNat_ofNat
+import Split.Int_zero_add
+import Split.Eq
+import Split.Int_add_mul_ediv_right
+import Split.instHMul
+
+-- Int.mul_ediv_cancel from environment
+-- theorem Int.mul_ediv_cancel : forall (a : Int) {b : Int}, (Ne.{1} Int b (OfNat.ofNat.{0} Int 0 (instOfNat 0))) -> (Eq.{1} Int (HDiv.hDiv.{0, 0, 0} Int Int Int (instHDiv.{0} Int Int.instDiv) (HMul.hMul.{0, 0, 0} Int Int Int (instHMul.{0} Int Int.instMul) a b) b) a)
+
+-- Stub: this file represents the declaration `Int.mul_ediv_cancel`.
+-- In a full split, the body would be extracted from the environment.

@@ -1,0 +1,83 @@
+import Split.Ring_mk
+import Split.Int_cast
+import Split.NegZeroClass_toNeg
+import Split.instHSMul
+import Split.Function_Injective_addGroupWithOne
+import Split.One
+import Split.HMul_hMul
+import Split.Ring_toNonAssocRing
+import Split.AddGroupWithOne_toAddGroup
+import Split.Pow
+import Split.SMul
+import Split.AddGroupWithOne_toAddMonoidWithOne
+import Split.AddGroupWithOne_sub_eq_add_neg
+import Split.HSub_hSub
+import Split.AddMonoid_toNSMul
+import Split.AddGroupWithOne_toNeg
+import Split.NonUnitalNonAssocSemiring_toMulZeroClass
+import Split.Mul
+import Split.IntCast
+import Split.AddGroupWithOne_zsmul_succ'
+import Split.AddCommGroup
+import Split.NatCast
+import Split.AddGroupWithOne_zsmul_neg'
+import Split.Distrib_toAdd
+import Split.NonUnitalNonAssocRing_toNonUnitalNonAssocSemiring
+import Split.AddMonoidWithOne_toNatCast
+import Split.SubtractionMonoid_toSubNegZeroMonoid
+import Split.Int
+import Split.AddGroupWithOne_toIntCast
+import Split.SubNegZeroMonoid_toNegZeroClass
+import Split.AddGroupWithOne_intCast_negSucc
+import Split.SubtractionCommMonoid_toSubtractionMonoid
+import Split.Nat_cast
+import Split.NonAssocRing_toNonUnitalNonAssocRing
+import Split.Monoid_toPow
+import Split.SubNegMonoid_toSub
+import Split.AddMonoidWithOne_toOne
+import Split.instHAdd
+import Split.Neg
+import Split.instHSub
+import Split.AddGroup_toSubNegMonoid
+import Split.HPow_hPow
+import Split.Distrib_toMul
+import Split.HAdd_hAdd
+import Split.Ring_toAddCommGroup
+import Split.Nat
+import Split.Function_Injective_addCommGroup
+import Split.AddGroupWithOne_neg_add_cancel
+import Split.Semiring
+import Split.One_toOfNat1
+import Split.NonUnitalNonAssocSemiring_toDistrib
+import Split.Zero_toOfNat0
+import Split.AddGroupWithOne
+import Split.HSMul_hSMul
+import Split.AddGroupWithOne_toSub
+import Split.instHPow
+import Split.Function_Injective
+import Split.AddMonoidWithOne_toAddMonoid
+import Split.AddCommGroup_toDivisionAddCommMonoid
+import Split.AddGroupWithOne_intCast_ofNat
+import Split.OfNat_ofNat
+import Split.Ring_toSemiring
+import Split.Eq
+import Split.AddGroupWithOne_zsmul_zero'
+import Split.Ring
+import Split.Function_Injective_semiring
+import Split.Ring_toAddGroupWithOne
+import Split.Neg_neg
+import Split.Add
+import Split.MonoidWithZero_toMonoid
+import Split.MulZeroClass_toZero
+import Split.Sub
+import Split.Semiring_toMonoidWithZero
+import Split.instHMul
+import Split.SubNegMonoid_toZSMul
+import Split.Zero
+
+-- Function.Injective.ring from environment
+-- def Function.Injective.ring : forall {R : Type.{u_1}} {S : Type.{u_2}} (f : S -> R), (Function.Injective.{succ u_2, succ u_1} S R f) -> (forall [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.9 : Add.{u_2} S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.12 : Mul.{u_2} S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.15 : Zero.{u_2} S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.18 : One.{u_2} S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.21 : Neg.{u_2} S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.24 : Sub.{u_2} S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.27 : SMul.{0, u_2} Nat S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.33 : SMul.{0, u_2} Int S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.39 : Pow.{u_2, 0} S Nat] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.45 : NatCast.{u_2} S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.48 : IntCast.{u_2} S] [inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51 : Ring.{u_1} R], (Eq.{succ u_1} R (f (OfNat.ofNat.{u_2} S 0 (Zero.toOfNat0.{u_2} S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.15))) (OfNat.ofNat.{u_1} R 0 (Zero.toOfNat0.{u_1} R (MulZeroClass.toZero.{u_1} R (NonUnitalNonAssocSemiring.toMulZeroClass.{u_1} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_1} R (NonAssocRing.toNonUnitalNonAssocRing.{u_1} R (Ring.toNonAssocRing.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51)))))))) -> (Eq.{succ u_1} R (f (OfNat.ofNat.{u_2} S 1 (One.toOfNat1.{u_2} S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.18))) (OfNat.ofNat.{u_1} R 1 (One.toOfNat1.{u_1} R (AddMonoidWithOne.toOne.{u_1} R (AddGroupWithOne.toAddMonoidWithOne.{u_1} R (Ring.toAddGroupWithOne.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51)))))) -> (forall (x : S) (y : S), Eq.{succ u_1} R (f (HAdd.hAdd.{u_2, u_2, u_2} S S S (instHAdd.{u_2} S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.9) x y)) (HAdd.hAdd.{u_1, u_1, u_1} R R R (instHAdd.{u_1} R (Distrib.toAdd.{u_1} R (NonUnitalNonAssocSemiring.toDistrib.{u_1} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_1} R (NonAssocRing.toNonUnitalNonAssocRing.{u_1} R (Ring.toNonAssocRing.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51)))))) (f x) (f y))) -> (forall (x : S) (y : S), Eq.{succ u_1} R (f (HMul.hMul.{u_2, u_2, u_2} S S S (instHMul.{u_2} S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.12) x y)) (HMul.hMul.{u_1, u_1, u_1} R R R (instHMul.{u_1} R (Distrib.toMul.{u_1} R (NonUnitalNonAssocSemiring.toDistrib.{u_1} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_1} R (NonAssocRing.toNonUnitalNonAssocRing.{u_1} R (Ring.toNonAssocRing.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51)))))) (f x) (f y))) -> (forall (x : S), Eq.{succ u_1} R (f (Neg.neg.{u_2} S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.21 x)) (Neg.neg.{u_1} R (NegZeroClass.toNeg.{u_1} R (SubNegZeroMonoid.toNegZeroClass.{u_1} R (SubtractionMonoid.toSubNegZeroMonoid.{u_1} R (SubtractionCommMonoid.toSubtractionMonoid.{u_1} R (AddCommGroup.toDivisionAddCommMonoid.{u_1} R (Ring.toAddCommGroup.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51)))))) (f x))) -> (forall (x : S) (y : S), Eq.{succ u_1} R (f (HSub.hSub.{u_2, u_2, u_2} S S S (instHSub.{u_2} S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.24) x y)) (HSub.hSub.{u_1, u_1, u_1} R R R (instHSub.{u_1} R (SubNegMonoid.toSub.{u_1} R (AddGroup.toSubNegMonoid.{u_1} R (AddGroupWithOne.toAddGroup.{u_1} R (Ring.toAddGroupWithOne.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51))))) (f x) (f y))) -> (forall (n : Nat) (x : S), Eq.{succ u_1} R (f (HSMul.hSMul.{0, u_2, u_2} Nat S S (instHSMul.{0, u_2} Nat S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.27) n x)) (HSMul.hSMul.{0, u_1, u_1} Nat R R (instHSMul.{0, u_1} Nat R (AddMonoid.toNSMul.{u_1} R (AddMonoidWithOne.toAddMonoid.{u_1} R (AddGroupWithOne.toAddMonoidWithOne.{u_1} R (Ring.toAddGroupWithOne.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51))))) n (f x))) -> (forall (n : Int) (x : S), Eq.{succ u_1} R (f (HSMul.hSMul.{0, u_2, u_2} Int S S (instHSMul.{0, u_2} Int S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.33) n x)) (HSMul.hSMul.{0, u_1, u_1} Int R R (instHSMul.{0, u_1} Int R (SubNegMonoid.toZSMul.{u_1} R (AddGroup.toSubNegMonoid.{u_1} R (AddGroupWithOne.toAddGroup.{u_1} R (Ring.toAddGroupWithOne.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51))))) n (f x))) -> (forall (x : S) (n : Nat), Eq.{succ u_1} R (f (HPow.hPow.{u_2, 0, u_2} S Nat S (instHPow.{u_2, 0} S Nat inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.39) x n)) (HPow.hPow.{u_1, 0, u_1} R Nat R (instHPow.{u_1, 0} R Nat (Monoid.toPow.{u_1} R (MonoidWithZero.toMonoid.{u_1} R (Semiring.toMonoidWithZero.{u_1} R (Ring.toSemiring.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51))))) (f x) n)) -> (forall (n : Nat), Eq.{succ u_1} R (f (Nat.cast.{u_2} S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.45 n)) (Nat.cast.{u_1} R (AddMonoidWithOne.toNatCast.{u_1} R (AddGroupWithOne.toAddMonoidWithOne.{u_1} R (Ring.toAddGroupWithOne.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51))) n)) -> (forall (n : Int), Eq.{succ u_1} R (f (Int.cast.{u_2} S inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.48 n)) (Int.cast.{u_1} R (AddGroupWithOne.toIntCast.{u_1} R (Ring.toAddGroupWithOne.{u_1} R inst._@.Mathlib.Algebra.Ring.InjSurj.3307762607._hygCtx._hyg.51)) n)) -> (Ring.{u_2} S))
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `Function.Injective.ring`.
+-- In a full split, the body would be extracted from the environment.

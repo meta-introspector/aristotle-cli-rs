@@ -228,16 +228,70 @@ nix build "path:MicroLean/MicroLeanType"
 | `aristotle-dasl-subgraph` | `~/dotagents/skills/` | DASL/IPLD/CBOR subgraph |
 | `aristotle-locate2proof` | `~/dotagents/skills/` | locate → proof pipeline |
 
+## Agent Skills (6)
+
+| Skill | Location | Purpose |
+|-------|----------|---------|
+| `aristotle-manager` | `~/dotagents/skills/` | Rust CLI: download, split-all, index, config |
+| `aristotle-splitter` | `~/dotagents/skills/` | SplitDecls.lean (274L): multi-root BFS + DFS topo sort |
+| `aristotle-mathlib-split` | `~/dotagents/skills/` | 6,143 unique declarations, git committed, relative flake paths |
+| `aristotle-j-invariant` | `~/dotagents/skills/` | j(τ) q-expansion prime bands, Monster primes 47·59·71 |
+| `aristotle-dasl-subgraph` | `~/dotagents/skills/` | 3,155-node DASL/IPLD/CBOR commutative subgraph at depth 8 |
+| `aristotle-locate2proof` | `~/dotagents/skills/` | 61 canonical DASL proofs from 47K locate results |
+
+## Script Inventory (7 Python, 5 Shell)
+
+| Script | Purpose |
+|--------|---------|
+| `prime-stratify.py` | j-invariant q-expansion prime band stratification |
+| `dasl-index-scanner.py` | Scan ~/dasl/index/ for DASL-related .lean files |
+| `build-dasl-module.py` | Build canonical dasl-lean/ module (751 decls, 9 categories) |
+| `dasl-term-filter.py` | DASL/IPLD/CBOR term filter + depth-8 subgraph extraction |
+| `dedup-split.py` | Deduplicate split-results + fix flake paths to relative |
+| `locate2proof-collect.py` | Collect locate results → locate2proof config |
+| `detect-stale.py` | Detect stale projects (API updated since download) |
+| `split-aristotle-project.sh` | Per-project split wrapper (build + split) |
+| `split-lean-project.sh` | Low-level single-module splitter |
+| `run_notebooklm_all.sh` | Batch NotebookLM export |
+
+## Canonical DASL Module (`aristotles_results/dasl-lean/`)
+
+| Category | Decls | Content |
+|----------|-------|---------|
+| `dasl/ipld` | 12 | Content addressing, multihash, CID, Merkle DAG |
+| `dasl/cbor` | 150 | CBOR encode/decode, codec, round-trip |
+| `dasl/monster` | 26 | Monster group, Moonshine, Hecke, vertex operators |
+| `dasl/sheaf` | 2 | Sheaf theory, Čech cohomology |
+| `dasl/microlean` | 371 | Verified polyglot FFI (Rust/C++/JS/Python/CABI/emoji) |
+| `dasl/weaver` | 69 | AristotleWeaver graph layout engine |
+| `dasl/journal` | 12 | Content-addressed Merkle journals |
+| `dasl/primes` | 16 | Prime factorization, SSP primes |
+| `dasl/godel` | 93 | Gödel numbering, reflection, meta-reflective rewrite |
+
+## Documentation Index
+
+| Doc | Path |
+|-----|------|
+| Quick Reference | `~/DOCS/lean.md` |
+| Master Reference | `MASTER-DOCUMENTATION.md` |
+| Sheaf Architecture | `SHEAF-ARCHITECTURE.md` |
+| DASL Testing Integration | `DASL-TESTING-INTEGRATION.md` |
+| System Documentation | `DOCUMENTATION.md` |
+| j-Invariant Stratification | `J-INVARIANT-STRATIFICATION.md` |
+| Lean Dedup | `DASL_LEAN_DEDUP.md` |
+
 ## Statistics
 
 | Metric | Value |
 |--------|-------|
-| Aristotle projects downloaded | 191 (from 169 original) |
-| Projects successfully split | 43 |
-| Total declarations (pre-dedup) | 6,698 |
-| Unique declarations (mathlib-split) | 5,790 |
-| DAG nodes | 5,792 |
-| j-invariant: q⁰ band | 316 |
+| Aristotle projects | 193 |
+| Projects with Lean code | 81 |
+| Projects successfully split | 59 |
+| Total declarations (pre-dedup) | 7,376 |
+| Unique declarations (mathlib-split) | 6,143 |
+| DASL canonical module | 751 (9 categories) |
+| DAG nodes | 6,145 |
+| j-invariant: q⁰ band | 329 |
 | j-invariant: q¹ band (Monster primes) | 123 |
 | DASL subgraph: seeds | 222 (MicroLean 151 + Weaver 69 + codec 1 + DA51 1) |
 | DASL subgraph: depth-8 nodes | 3,155 |
@@ -247,6 +301,8 @@ nix build "path:MicroLean/MicroLeanType"
 | locate: canonical DASL proofs | 61 |
 | DA51 core: files / lines / decls | 20 / 1,988 / 258 |
 | Monster primes | 47 · 59 · 71 = 196,883 |
+| Sheaf-related projects | 64 |
+| Sheaf-related files | 645 |
 
 ## Build
 
