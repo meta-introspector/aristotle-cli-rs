@@ -451,9 +451,10 @@ fn cmd_poll(_download_only: bool, _parallel: usize) -> Result<()> {
 }
 
 #[instrument]
-fn cmd_build() -> Result<()> {
+fn cmd_build(input_dir: Option<PathBuf>) -> Result<()> {
     let config = load_config()?;
-    let dirs = get_project_dirs(&config.git_base)?;
+    let build_dir = input_dir.unwrap_or(config.git_base);
+    let dirs = get_project_dirs(&build_dir)?;
     info!(project_count = dirs.len(), "Starting build");
 
     let mut success = 0;
@@ -1614,9 +1615,9 @@ async fn main() -> Result<()> {
             info!("Executing poll command");
             cmd_poll(*download_only, *parallel)?;
         }
-        Commands::Build { .. } => {
+        Commands::Build { input_dir, .. } => {
             info!("Executing build command");
-            cmd_build()?;
+            cmd_build(input_dir.clone())?;
         }
         Commands::Download {
             parallel,
