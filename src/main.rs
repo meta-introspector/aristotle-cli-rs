@@ -20,6 +20,7 @@ mod fetch;
 mod file_index;
 mod index;
 mod notebooklm;
+mod pipeline;
 mod version;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
@@ -180,6 +181,15 @@ enum Commands {
     },
         /// Incremental fetch: poll API, download only new/changed, git-version
     Fetch {
+        #[arg(short = 'j', default_value = "2")]
+        parallel: usize,
+        #[arg(long)]
+        limit: Option<usize>,
+        #[arg(long)]
+        dry_run: bool,
+    },
+    /// Full pipeline: fetch → split → verify (lake build) → version → merge
+    Pipeline {
         #[arg(short = 'j', default_value = "2")]
         parallel: usize,
         #[arg(long)]
@@ -807,7 +817,7 @@ async fn cmd_download(parallel: usize, _trace: &str, verbose: bool, limit: Optio
 #[instrument(skip_all)]
 async fn cmd_refresh(parallel: usize, limit: Option<usize>) -> Result<()> {
     let config = load_config()?;
-    let api_key = get_api_key()?;
+    let _api_key = get_api_key()?;
 
     println!("╔══════════════════════════════════════════════╗");
     println!("║   Aristotle Refresh Pipeline                 ║");
@@ -1861,6 +1871,10 @@ async fn main() -> Result<()> {
         Commands::Fetch { parallel, limit, dry_run } => {
             info!("Executing fetch command");
             fetch::cmd_fetch(*parallel, *limit, *dry_run).await?;
+        }
+        Commands::Pipeline { parallel, limit, dry_run } => {
+            info!("Executing pipeline command");
+            pipeline::cmd_pipeline(*parallel, *limit, *dry_run).await?;
         }
         Commands::Version { results_dir, output_dir } => {
             info!("Executing version command");
