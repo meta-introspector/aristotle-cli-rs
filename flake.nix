@@ -1,57 +1,47 @@
 {
   description = "A tool for polling Aristotle results and managing Lean4 project compilation";
-  
+
   inputs = {
-    nixpkgs.url = "git+file:///mnt/data1/git/github.com/NixOS/nixpkgs.git?ref=master";
-    flake-utils.url = "git+file:///mnt/data1/git/github.com/numtide/flake-utils.git?ref=main";
-    nora.url = "git+file:///mnt/data1/git/github.com/getnora-io/nora.git?ref=main";
+    nixpkgs.url = "git+file:///mnt/data1/git/github.com/NixOS/nixpkgs.git?ref=omaster";
+    crane.url = "git+file:///mnt/data1/git/github.com/ipetkov/crane.git?ref=omaster";
+    flake-utils.url = "git+file:///mnt/data1/git/github.com/numtide/flake-utils.git?ref=omain";
   };
-  
-  outputs = { self, nixpkgs, nora, flake-utils }:
-    let
-      system-manager = nora.inputs.system-manager;
-    in
+
+  outputs = { self, nixpkgs, crane, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        noraPkgs = nora.packages.${system};
-        rust-toolchain = nora.inputs.rust-overlay.packages.${system}.default;
-        myPackages = rec {
-          aristotle-manager = pkgs.stdenv.mkDerivation {
-            pname = "aristotle-manager";
-            version = "0.1.0";
-            
+        craneLib = crane.mkLib pkgs;
+
+        src = pkgs.lib.cleanSourceWith {
             src = ./.;
-            
-            buildInputs = [
-              rust-toolchain
-              pkgs.cargo
-              pkgs.rustfmt
-              pkgs.clippy
-              pkgs.pkg-config
-              pkgs.openssl.dev
-              pkgs.zlib
-            ];
-            
-            cargoVendorDir = ./vendor;
-            
-            cargoBuildFlags = [ "--release" ];
-            doStrip = true;
-            
-            installPhase = ''
-              mkdir -p "$out/bin"
-              cp target/release/aristotle-manager "$out/bin/"
-            '';
+            filter = path: type:
+              let
+                baseName = baseNameOf (toString path);
+              in
+                ! (
+                  baseName == ".git" ||
+                  baseName == "target" ||
+                  baseName == "result"
+                );
           };
-          default = aristotle-manager;
+
+        cargoArtifacts = craneLib.buildDepsOnly {
+          inherit src;
+          buildInputs = [ pkgs.libgit2 pkgs.openssl.dev pkgs.zlib ];
+        };
+
+        myCrate = craneLib.buildPackage {
+          inherit src cargoArtifacts;
+          buildInputs = [ pkgs.libgit2 pkgs.openssl.dev pkgs.zlib ]; 
         };
       in
       {
-        devShells = rec {
+        devShells = {
           default = pkgs.mkShell {
             packages = [
-              rust-toolchain
               pkgs.cargo
+              pkgs.rustc
               pkgs.rustfmt
               pkgs.clippy
               pkgs.libgit2
@@ -60,7 +50,6 @@
               pkgs.zlib
               pkgs.nghttp2
               pkgs.pkg-config
-              pkgs.jq
               pkgs.cargo-edit
             ];
             ARISTOTLE_API_KEY = "";
@@ -69,23 +58,20 @@
               echo "======================================"
               echo ""
               echo "Build from source:"
-              echo "  cargo build        # Build the release binary"
-              echo "  cargo run          # Run the CLI"
+              echo "  cargo build"
+              echo "  cargo run"
               echo ""
               echo "Full package:"
-              echo "  nix build .#aristotle-manager"
+              echo "  nix build .#default"
               echo ""
             '';
           };
         };
-        
-        packages = myPackages;
-        
-        apps = {
-          default = {
-            type = "app";
-            program = "${myPackages.default}/bin/aristotle-manager";
-          };
+
+        packages.default = myCrate;
+        apps.default = {
+          type = "app";
+          program = "${myCrate}/bin/aristotle-manager";
         };
       }
     );

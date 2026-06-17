@@ -16,10 +16,11 @@ use tracing::{debug, error, info, instrument, warn};
 use tracing_subscriber::{EnvFilter, fmt};
 use walkdir::WalkDir;
 
+mod fetch;
+mod file_index;
 mod index;
 mod notebooklm;
-mod file_index;
-
+mod version;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -176,6 +177,22 @@ enum Commands {
         output_dir: Option<PathBuf>,
         #[arg(long)]
         prefix_filter: Option<String>,
+    },
+        /// Incremental fetch: poll API, download only new/changed, git-version
+    Fetch {
+        #[arg(short = 'j', default_value = "2")]
+        parallel: usize,
+        #[arg(long)]
+        limit: Option<usize>,
+        #[arg(long)]
+        dry_run: bool,
+    },
+    /// Git-version all Aristotle outputs — each project becomes a commit
+    Version {
+        #[arg(long)]
+        results_dir: Option<PathBuf>,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
     },
 }
 
@@ -1840,6 +1857,14 @@ async fn main() -> Result<()> {
         Commands::ScanIndex { index_dir, output_dir, prefix_filter } => {
             info!("Executing scan-index command");
             file_index::cmd_scan_index(index_dir.clone(), output_dir.clone(), prefix_filter.clone())?;
+        }
+        Commands::Fetch { parallel, limit, dry_run } => {
+            info!("Executing fetch command");
+            fetch::cmd_fetch(*parallel, *limit, *dry_run).await?;
+        }
+        Commands::Version { results_dir, output_dir } => {
+            info!("Executing version command");
+            version::cmd_version(results_dir.clone(), output_dir.clone())?;
         }
     }
 

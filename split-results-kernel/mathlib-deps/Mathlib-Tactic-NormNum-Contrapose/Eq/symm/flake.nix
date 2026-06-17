@@ -1,0 +1,24 @@
+{
+  description = "Lean declaration: Eq.symm";
+  inputs = { nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; flake-utils.url = "github:numtide/flake-utils"; 
+    Eq-rec.url = "path:/tmp/mathlib-split-test/Eq/rec";
+    Eq.url = "path:/tmp/mathlib-split-test/Eq";
+    rfl.url = "path:/tmp/mathlib-split-test/rfl";
+  };
+  outputs = { self, nixpkgs, flake-utils }:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      packages.${system}.default = pkgs.stdenv.mkDerivation {
+        pname = "decl-Eq.symm";
+        version = "0.1.0";
+        src = ./.;
+        phases = [ "unpackPhase" "installPhase" ];
+        installPhase = ''
+          mkdir -p $out
+          cp Eq/symm.lean $out/
+        '';
+      };
+    };
+}

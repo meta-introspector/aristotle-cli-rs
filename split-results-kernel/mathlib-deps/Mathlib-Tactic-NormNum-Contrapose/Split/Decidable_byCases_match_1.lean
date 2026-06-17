@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Decidable.byCases.match_1 : forall {p : Prop} (motive : (Decidable p) -> Sort.{u_1}) (dec._@.Init.Core.1874316381._hygCtx._hyg.24 : Decidable p), (forall (h : p), motive (Decidable.isTrue p h)) -> (forall (h : Not p), motive (Decidable.isFalse p h)) -> (motive dec._@.Init.Core.1874316381._hygCtx._hyg.24)
+def Decidable.byCases.match_1 : forall {p : Prop} (motive : (Decidable p) -> Sort.{u_1}) (dec._@.Init.Core.1874316381._hygCtx._hyg.24 : Decidable p), (forall (h : p), motive (Decidable.isTrue p h)) -> (forall (h : Not p), motive (Decidable.isFalse p h)) -> (motive dec._@.Init.Core.1874316381._hygCtx._hyg.24) :=
+  fun {p : Prop} (motive : (Decidable p) -> Sort.{u_1}) (dec._@.Init.Core.1874316381._hygCtx._hyg.24 : Decidable p) (h_1 : forall (h : p), motive (Decidable.isTrue p h)) (h_2 : forall (h : Not p), motive (Decidable.isFalse p h)) => Decidable.casesOn.{u_1} p (fun (x : Decidable p) => motive x) dec._@.Init.Core.1874316381._hygCtx._hyg.24 (fun (h._@.Init.Core.1874316381._hygCtx._hyg.41 : Not p) => h_2 h._@.Init.Core.1874316381._hygCtx._hyg.41) (fun (h._@.Init.Core.1874316381._hygCtx._hyg.42 : p) => h_1 h._@.Init.Core.1874316381._hygCtx._hyg.42)

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Parser.Tactic.valConfigItem : Lean.ParserDescr
+def Lean.Parser.Tactic.valConfigItem : Lean.ParserDescr :=
+  Lean.ParserDescr.nodeWithAntiquot "valConfigItem" (Lean.Name.mkStr4 "Lean" "Parser" "Tactic" "valConfigItem") (Lean.ParserDescr.binary (Lean.Name.mkStr1 "andthen") (Lean.ParserDescr.binary (Lean.Name.mkStr1 "andthen") (Lean.ParserDescr.unary (Lean.Name.mkStr1 "atomic") (Lean.ParserDescr.binary (Lean.Name.mkStr1 "andthen") (Lean.ParserDescr.binary (Lean.Name.mkStr1 "andthen") (Lean.ParserDescr.binary (Lean.Name.mkStr1 "andthen") (Lean.ParserDescr.symbol " (") (Lean.ParserDescr.unary (Lean.Name.mkStr1 "notFollowedBy") (Lean.ParserDescr.binary (Lean.Name.mkStr1 "orelse") (Lean.ParserDescr.nodeWithAntiquot "discharger" (Lean.Name.mkStr2 "token" "discharger") (Lean.ParserDescr.nonReservedSymbol "discharger" Bool.false)) (Lean.ParserDescr.nodeWithAntiquot "disch" (Lean.Name.mkStr2 "token" "disch") (Lean.ParserDescr.nonReservedSymbol "disch" Bool.false))))) (Lean.ParserDescr.const (Lean.Name.mkStr1 "ident"))) (Lean.ParserDescr.symbol " := "))) (Lean.ParserDescr.unary (Lean.Name.mkStr1 "withoutPosition") (Lean.ParserDescr.cat (Lean.Name.mkStr1 "term") (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0))))) (Lean.ParserDescr.symbol ")"))
