@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem MicroLean.emitEmojiLinear.eq_2 : forall (t : MicroLean.MicroLeanType), Eq.{1} String (MicroLean.emitEmojiLinear (MicroLean.LinearMicroType.qualified MicroLean.OwnershipMode.owned t)) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString "📦") (ToString.toString.{0} String instToStringString (MicroLean.emitEmoji t)))
+theorem MicroLean.emitEmojiLinear.eq_2 : forall (t : MicroLean.MicroLeanType), Eq.{1} String (MicroLean.emitEmojiLinear (MicroLean.LinearMicroType.qualified MicroLean.OwnershipMode.owned t)) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString "📦") (ToString.toString.{0} String instToStringString (MicroLean.emitEmoji t))) :=
+  fun (t : MicroLean.MicroLeanType) => Eq.refl.{1} String (MicroLean.emitEmojiLinear (MicroLean.LinearMicroType.qualified MicroLean.OwnershipMode.owned t))

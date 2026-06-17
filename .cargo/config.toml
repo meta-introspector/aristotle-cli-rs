@@ -1,5 +1,5 @@
-[registries.nora]
-index = "http://127.0.0.1:4000/cargo/index"
-
 [source.crates-io]
-replace-with = "nora"
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"

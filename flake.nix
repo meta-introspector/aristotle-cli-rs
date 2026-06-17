@@ -33,11 +33,11 @@
               pkgs.zlib
             ];
             
+            cargoVendorDir = ./vendor;
+            
             cargoBuildFlags = [ "--release" ];
             doStrip = true;
             
-            CARGO_CONFIG_FILE = ././.cargo/config.toml;
-
             installPhase = ''
               mkdir -p "$out/bin"
               cp target/release/aristotle-manager "$out/bin/"

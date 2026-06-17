@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: MicroLean.memOps : MicroLean.MicroLeanType -> String -> (List.{0} String)
+def MicroLean.memOps : MicroLean.MicroLeanType -> String -> (List.{0} String) :=
+  fun (t : MicroLean.MicroLeanType) (var : String) => ite.{1} (List.{0} String) (Eq.{1} Bool (MicroLean.isBoxed t) Bool.true) (instDecidableEqBool (MicroLean.isBoxed t) Bool.true) (List.cons.{0} String (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString "lean_inc(") (ToString.toString.{0} String instToStringString var)) (ToString.toString.{0} String instToStringString ");")) (List.cons.{0} String (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString "lean_dec(") (ToString.toString.{0} String instToStringString var)) (ToString.toString.{0} String instToStringString ");")) (List.nil.{0} String))) (List.nil.{0} String)

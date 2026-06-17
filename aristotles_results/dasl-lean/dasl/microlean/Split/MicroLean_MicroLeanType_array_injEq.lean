@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem MicroLean.MicroLeanType.array.injEq : forall (elem : MicroLean.MicroLeanType) (elem_1 : MicroLean.MicroLeanType), Eq.{1} Prop (Eq.{1} MicroLean.MicroLeanType (MicroLean.MicroLeanType.array elem) (MicroLean.MicroLeanType.array elem_1)) (Eq.{1} MicroLean.MicroLeanType elem elem_1)
+theorem MicroLean.MicroLeanType.array.injEq : forall (elem : MicroLean.MicroLeanType) (elem_1 : MicroLean.MicroLeanType), Eq.{1} Prop (Eq.{1} MicroLean.MicroLeanType (MicroLean.MicroLeanType.array elem) (MicroLean.MicroLeanType.array elem_1)) (Eq.{1} MicroLean.MicroLeanType elem elem_1) :=
+  fun (elem : MicroLean.MicroLeanType) (elem_1 : MicroLean.MicroLeanType) => Eq.propIntro (Eq.{1} MicroLean.MicroLeanType (MicroLean.MicroLeanType.array elem) (MicroLean.MicroLeanType.array elem_1)) (Eq.{1} MicroLean.MicroLeanType elem elem_1) (MicroLean.MicroLeanType.array.inj elem elem_1) (Eq.ndrec.{0, 1} MicroLean.MicroLeanType elem (fun (elem_1 : MicroLean.MicroLeanType) => Eq.{1} MicroLean.MicroLeanType (MicroLean.MicroLeanType.array elem) (MicroLean.MicroLeanType.array elem_1)) (Eq.refl.{1} MicroLean.MicroLeanType (MicroLean.MicroLeanType.array elem)) elem_1)
