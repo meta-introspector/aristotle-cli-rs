@@ -125,34 +125,44 @@ def emitDeclFlake (n : Name) (deps : Array Name) (absOutDir : System.FilePath) :
   let flakeContent := preamble ++ body
   IO.FS.writeFile (declDir / "flake.nix") flakeContent
 
-/-- Emit a single `.lean` file for one declaration (a stub describing it + its imports). -/
+/-- Emit a single `.lean` file for one declaration — now with ACTUAL body. -/
 def emitDeclFile (env : Environment) (n : Name) (deps : Array Name) (outDir : System.FilePath) : IO Unit := do
   let relPath := (nameToSimpleMod n).replace "." "/" ++ ".lean"
   let path := outDir / relPath
   let parent := path.parent.getD outDir
   IO.FS.createDirAll parent
   let mut lines : Array String := #[]
-  for d in deps do
-    lines := lines.push s!"import {nameToSimpleMod d}"
-  if deps.size > 0 then lines := lines.push ""
-  lines := lines.push s!"-- {n} from environment"
+  -- Header comment with spec info
+  lines := lines.push s!"import Mathlib"
+  lines := lines.push ""
+  -- Emit actual body based on declaration kind
   match env.find? n with
   | some (.defnInfo v) =>
-    lines := lines.push s!"-- def {n} : {v.type}"
-    lines := lines.push s!"-- (definition body omitted)"
-  | some (.thmInfo v) => lines := lines.push s!"-- theorem {n} : {v.type}"
-  | some (.axiomInfo v) => lines := lines.push s!"-- axiom {n} : {v.type}"
-  | some (.opaqueInfo v) => lines := lines.push s!"-- opaque {n} : {v.type}"
+    lines := lines.push s!"set_option pp.all true"
+    lines := lines.push s!"-- spec: {n} : {v.type}"
+    lines := lines.push s!"def {n} : {v.type} :="
+    lines := lines.push s!"  {v.value}"
+  | some (.thmInfo v) =>
+    lines := lines.push s!"-- spec: theorem {n} : {v.type}"
+    lines := lines.push s!"theorem {n} : {v.type} :="
+    lines := lines.push s!"  {v.value}"
+  | some (.axiomInfo v) =>
+    lines := lines.push s!"-- spec: axiom {n} : {v.type}"
+    lines := lines.push s!"axiom {n} : {v.type}"
+  | some (.opaqueInfo v) =>
+    lines := lines.push s!"-- spec: opaque {n} : {v.type}"
+    lines := lines.push s!"opaque {n} : {v.type} :="
+    lines := lines.push s!"  {v.value}"
   | some (.inductInfo v) =>
-    lines := lines.push s!"-- inductive {n} : {v.type}"
-    lines := lines.push s!"-- ctors: {v.ctors}"
-  | some (.ctorInfo v) => lines := lines.push s!"-- constructor {n} : {v.type}"
-  | some (.recInfo v) => lines := lines.push s!"-- recursor {n} : {v.type}"
-  | some (.quotInfo _) => lines := lines.push s!"-- quot {n}"
-  | none => lines := lines.push s!"-- (not found)"
-  lines := lines.push ""
-  lines := lines.push s!"-- Stub: this file represents the declaration `{n}`."
-  lines := lines.push s!"-- In a full split, the body would be extracted from the environment."
+    lines := lines.push s!"-- spec: inductive {n} : {v.type} (ctors: {v.ctors})"
+    lines := lines.push s!"-- inductive body not extracted (use #print {n})"
+  | some (.ctorInfo v) =>
+    lines := lines.push s!"-- spec: constructor {n} : {v.type}"
+  | some (.recInfo v) =>
+    lines := lines.push s!"-- spec: recursor {n} : {v.type}"
+  | some (.quotInfo _) =>
+    lines := lines.push s!"-- spec: quot {n}"
+  | none => lines := lines.push s!"-- {n} not found in environment"
   IO.FS.writeFile path (String.intercalate "\n" (lines.toList ++ [""]))
 
 /-- Generate a `lakefile.toml` for the split project. -/
