@@ -1,0 +1,2 @@
+-- Declaration: no_rejection_for_coherent
+-- Extracted by StaticSplit

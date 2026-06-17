@@ -1,0 +1,2 @@
+-- Declaration: feasibleOrbitSize
+-- Extracted by StaticSplit

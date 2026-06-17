@@ -1,0 +1,2 @@
+-- Declaration: monster_eigenspaces
+-- Extracted by StaticSplit

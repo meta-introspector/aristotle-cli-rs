@@ -1,0 +1,2 @@
+-- Declaration: clDim7
+-- Extracted by StaticSplit

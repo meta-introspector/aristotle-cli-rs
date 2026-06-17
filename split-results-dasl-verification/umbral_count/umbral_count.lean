@@ -1,0 +1,2 @@
+-- Declaration: umbral_count
+-- Extracted by StaticSplit

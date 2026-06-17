@@ -1,0 +1,2 @@
+-- Declaration: InvariantWitness
+-- Extracted by StaticSplit

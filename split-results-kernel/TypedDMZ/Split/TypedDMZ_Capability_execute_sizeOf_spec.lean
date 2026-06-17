@@ -1,0 +1,14 @@
+import Split.instOfNatNat
+import Split.TypedDMZ_Capability_execute
+import Split.Nat
+import Split.SizeOf_sizeOf
+import Split.TypedDMZ_Capability
+import Split.Eq_refl
+import Split.OfNat_ofNat
+import Split.Eq
+
+-- TypedDMZ.Capability.execute.sizeOf_spec from environment
+-- theorem TypedDMZ.Capability.execute.sizeOf_spec : Eq.{1} Nat (SizeOf.sizeOf.{1} TypedDMZ.Capability TypedDMZ.Capability._sizeOf_inst TypedDMZ.Capability.execute) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1))
+
+-- Stub: this file represents the declaration `TypedDMZ.Capability.execute.sizeOf_spec`.
+-- In a full split, the body would be extracted from the environment.

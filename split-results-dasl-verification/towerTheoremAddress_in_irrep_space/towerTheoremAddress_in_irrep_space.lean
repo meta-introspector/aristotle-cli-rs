@@ -1,0 +1,2 @@
+-- Declaration: towerTheoremAddress_in_irrep_space
+-- Extracted by StaticSplit

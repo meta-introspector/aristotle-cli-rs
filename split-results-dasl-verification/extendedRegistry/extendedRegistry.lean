@@ -1,0 +1,2 @@
+-- Declaration: extendedRegistry
+-- Extracted by StaticSplit

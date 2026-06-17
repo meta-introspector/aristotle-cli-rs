@@ -1,0 +1,2 @@
+-- Declaration: isSelfDocumenting
+-- Extracted by StaticSplit

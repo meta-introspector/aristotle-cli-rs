@@ -1,0 +1,2 @@
+-- Declaration: Ternary.factor
+-- Extracted by StaticSplit

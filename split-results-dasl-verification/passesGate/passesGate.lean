@@ -1,0 +1,2 @@
+-- Declaration: passesGate
+-- Extracted by StaticSplit

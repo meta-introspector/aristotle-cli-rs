@@ -1,0 +1,2 @@
+-- Declaration: identityKernel
+-- Extracted by StaticSplit

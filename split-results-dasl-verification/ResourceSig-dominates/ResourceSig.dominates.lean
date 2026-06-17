@@ -1,0 +1,2 @@
+-- Declaration: ResourceSig.dominates
+-- Extracted by StaticSplit

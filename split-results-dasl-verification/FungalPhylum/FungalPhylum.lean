@@ -1,0 +1,2 @@
+-- Declaration: FungalPhylum
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: SchachEvent
+-- Extracted by StaticSplit

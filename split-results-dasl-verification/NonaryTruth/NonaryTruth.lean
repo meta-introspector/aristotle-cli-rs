@@ -1,0 +1,2 @@
+-- Declaration: NonaryTruth
+-- Extracted by StaticSplit

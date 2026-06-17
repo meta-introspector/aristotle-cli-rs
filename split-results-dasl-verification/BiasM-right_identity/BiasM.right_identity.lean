@@ -1,0 +1,2 @@
+-- Declaration: BiasM.right_identity
+-- Extracted by StaticSplit

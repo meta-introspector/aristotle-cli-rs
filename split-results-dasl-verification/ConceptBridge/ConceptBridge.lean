@@ -1,0 +1,2 @@
+-- Declaration: ConceptBridge
+-- Extracted by StaticSplit

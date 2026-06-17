@@ -1,0 +1,2 @@
+-- Declaration: quorumRequired
+-- Extracted by StaticSplit

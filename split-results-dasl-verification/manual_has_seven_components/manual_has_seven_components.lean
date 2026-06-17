@@ -1,0 +1,2 @@
+-- Declaration: manual_has_seven_components
+-- Extracted by StaticSplit

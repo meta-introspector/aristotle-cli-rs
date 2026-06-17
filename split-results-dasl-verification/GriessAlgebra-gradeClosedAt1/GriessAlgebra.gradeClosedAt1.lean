@@ -1,0 +1,2 @@
+-- Declaration: GriessAlgebra.gradeClosedAt1
+-- Extracted by StaticSplit

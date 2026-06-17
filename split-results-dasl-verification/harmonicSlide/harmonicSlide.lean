@@ -1,0 +1,2 @@
+-- Declaration: harmonicSlide
+-- Extracted by StaticSplit

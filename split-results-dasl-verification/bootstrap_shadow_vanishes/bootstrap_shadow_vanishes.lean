@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_shadow_vanishes
+-- Extracted by StaticSplit

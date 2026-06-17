@@ -1,0 +1,2 @@
+-- Declaration: PadicVector.toNat
+-- Extracted by StaticSplit

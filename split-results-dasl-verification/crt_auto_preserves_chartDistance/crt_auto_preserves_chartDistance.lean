@@ -1,0 +1,2 @@
+-- Declaration: crt_auto_preserves_chartDistance
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fullChain_preserves_monomyth
+-- Extracted by StaticSplit

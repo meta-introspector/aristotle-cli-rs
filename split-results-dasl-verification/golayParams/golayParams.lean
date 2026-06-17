@@ -1,0 +1,2 @@
+-- Declaration: golayParams
+-- Extracted by StaticSplit

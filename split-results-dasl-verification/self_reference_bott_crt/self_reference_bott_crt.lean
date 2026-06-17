@@ -1,0 +1,2 @@
+-- Declaration: self_reference_bott_crt
+-- Extracted by StaticSplit

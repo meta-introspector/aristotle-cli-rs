@@ -1,0 +1,81 @@
+import Split.Pure_pure
+import Split.Lean_MessageData
+import Split.Lean_MonadError_mk
+import Split.Lean_instMonadExceptOfExceptionCoreM
+import Split.Lean_Meta_mkFreshLevelMVar
+import Split.Lean_MetavarKind_natural
+import Split.Lean_Meta_whnf
+import Split.Lean_Meta_trySynthInstance
+import Split.Lean_mkSort
+import Split.Lean_MessageData_hint'
+import Split.String
+import Split.Lean_Meta_State
+import Split.Lean_Expr_const
+import Split.Lean_instAddErrorMessageContextOfAddMessageContextOfMonad
+import Split.Lean_mkApp4
+import Split.Lean_MessageData_instAppend
+import Split.Option_some
+import Split.Lean_throwError
+import Split.Lean_MonadQuotation_toMonadRef
+import Split.Lean_mkApp2
+import Split.Lean_Expr
+import Split.Lean_Meta_MetaM
+import Split.Lean_Expr_isSort
+import Split.IO_RealWorld
+import Split.StateRefT'_instMonadFunctor
+import Split.instDecidableEqBool
+import Split.ReaderT_instMonadFunctor
+import Split.Lean_Level
+import Split.ReaderT_instMonadLift
+import Split.Lean_Meta_getLevel
+import Split.Applicative_toPure
+import Split.Lean_instToMessageDataString
+import Split.List_cons
+import Split.Lean_Name_anonymous
+import Split.Bool_true
+import Split.Option_none
+import Split.instHAppendOfAppend
+import Split.List
+import Split.StateRefT'_instMonadExceptOf
+import Split.Lean_Core_CoreM
+import Split.ReaderT_instMonadExceptOf
+import Split.Lean_Meta_instMonadMetaM
+import Split.StateRefT'
+import Split.StateRefT'_instMonad
+import Split.PUnit
+import Split.Lean_Core_instMonadQuotationCoreM
+import Split.Lean_ToMessageData_toMessageData
+import Split.Nat
+import Split.Lean_Meta_expandCoe
+import Split.Bool
+import Split.Lean_Meta_mkFreshExprMVar
+import Split.Lean_Name_mkStr2
+import Split.Lean_Name
+import Split.Monad_toBind
+import Split.Lean_indentExpr
+import Split.Bind_bind
+import Split.PUnit_unit
+import Split.StateRefT'_instMonadLift
+import Split.Lean_Core_instMonadCoreM
+import Split.Lean_instToMessageDataMessageData
+import Split.Prod
+import Split.Lean_Name_mkStr1
+import Split.ReaderT_instApplicativeOfMonad
+import Split.Eq
+import Split.Lean_Meta_inferType
+import Split.HAppend_hAppend
+import Split.Lean_Meta_instAddMessageContextMetaM
+import Split.Lean_Exception
+import Split.Lean_Meta_Context
+import Split.Lean_instMonadQuotationOfMonadFunctorOfMonadLift
+import Split.Lean_LOption
+import Split.List_nil
+import Split.Option
+import Split.ite
+
+-- Lean.Meta.coerceToSort? from environment
+-- def Lean.Meta.coerceToSort? : Lean.Expr -> (Lean.Meta.MetaM (Option.{0} Lean.Expr))
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `Lean.Meta.coerceToSort?`.
+-- In a full split, the body would be extracted from the environment.

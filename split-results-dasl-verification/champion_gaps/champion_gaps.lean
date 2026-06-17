@@ -1,0 +1,2 @@
+-- Declaration: champion_gaps
+-- Extracted by StaticSplit

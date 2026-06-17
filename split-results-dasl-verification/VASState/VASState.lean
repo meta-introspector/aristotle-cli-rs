@@ -1,0 +1,2 @@
+-- Declaration: VASState
+-- Extracted by StaticSplit

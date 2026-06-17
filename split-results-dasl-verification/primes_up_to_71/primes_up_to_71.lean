@@ -1,0 +1,2 @@
+-- Declaration: primes_up_to_71
+-- Extracted by StaticSplit

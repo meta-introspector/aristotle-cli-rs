@@ -1,0 +1,2 @@
+-- Declaration: irrep_factors
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: obj_CongruenceGate
+-- Extracted by StaticSplit

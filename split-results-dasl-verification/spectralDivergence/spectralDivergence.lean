@@ -1,0 +1,2 @@
+-- Declaration: spectralDivergence
+-- Extracted by StaticSplit

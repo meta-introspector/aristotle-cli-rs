@@ -1,0 +1,2 @@
+-- Declaration: metaN_zero
+-- Extracted by StaticSplit

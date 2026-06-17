@@ -1,0 +1,2 @@
+-- Declaration: fractran_tower_connection
+-- Extracted by StaticSplit

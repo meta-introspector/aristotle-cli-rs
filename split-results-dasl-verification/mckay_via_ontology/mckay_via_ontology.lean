@@ -1,0 +1,2 @@
+-- Declaration: mckay_via_ontology
+-- Extracted by StaticSplit

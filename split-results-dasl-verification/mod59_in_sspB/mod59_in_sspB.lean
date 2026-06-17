@@ -1,0 +1,2 @@
+-- Declaration: mod59_in_sspB
+-- Extracted by StaticSplit

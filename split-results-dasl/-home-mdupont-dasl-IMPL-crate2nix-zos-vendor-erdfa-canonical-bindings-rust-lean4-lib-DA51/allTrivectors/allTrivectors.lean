@@ -1,0 +1,2 @@
+-- Declaration: allTrivectors
+-- Extracted by StaticSplit

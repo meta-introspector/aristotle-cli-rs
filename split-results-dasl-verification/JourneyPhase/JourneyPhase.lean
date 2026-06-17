@@ -1,0 +1,2 @@
+-- Declaration: JourneyPhase
+-- Extracted by StaticSplit

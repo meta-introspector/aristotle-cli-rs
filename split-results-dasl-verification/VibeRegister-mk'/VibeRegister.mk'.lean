@@ -1,0 +1,2 @@
+-- Declaration: VibeRegister.mk'
+-- Extracted by StaticSplit

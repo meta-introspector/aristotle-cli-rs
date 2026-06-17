@@ -1,0 +1,2 @@
+-- Declaration: VoxelSpace.inBounds
+-- Extracted by StaticSplit

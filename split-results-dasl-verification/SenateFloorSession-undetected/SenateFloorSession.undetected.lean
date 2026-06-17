@@ -1,0 +1,2 @@
+-- Declaration: SenateFloorSession.undetected
+-- Extracted by StaticSplit

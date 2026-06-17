@@ -1,0 +1,2 @@
+-- Declaration: OrbifoldChart
+-- Extracted by StaticSplit

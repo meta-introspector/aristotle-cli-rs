@@ -1,0 +1,2 @@
+-- Declaration: sheafSection_Earth_chart71
+-- Extracted by StaticSplit

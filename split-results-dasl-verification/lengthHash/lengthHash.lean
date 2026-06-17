@@ -1,0 +1,2 @@
+-- Declaration: lengthHash
+-- Extracted by StaticSplit

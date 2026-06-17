@@ -1,0 +1,2 @@
+-- Declaration: map
+-- Extracted by StaticSplit

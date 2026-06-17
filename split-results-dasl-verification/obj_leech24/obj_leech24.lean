@@ -1,0 +1,2 @@
+-- Declaration: obj_leech24
+-- Extracted by StaticSplit

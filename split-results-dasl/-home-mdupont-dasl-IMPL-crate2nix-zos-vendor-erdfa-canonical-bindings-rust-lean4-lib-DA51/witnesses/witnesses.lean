@@ -1,0 +1,2 @@
+-- Declaration: witnesses
+-- Extracted by StaticSplit

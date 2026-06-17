@@ -1,0 +1,2 @@
+-- Declaration: kingSection
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MetaTowerMorphism.id
+-- Extracted by StaticSplit

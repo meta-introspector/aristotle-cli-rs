@@ -1,0 +1,2 @@
+-- Declaration: AgentTelemetryPacket
+-- Extracted by StaticSplit

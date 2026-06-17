@@ -1,0 +1,2 @@
+-- Declaration: monodromy_weight_bott_C
+-- Extracted by StaticSplit

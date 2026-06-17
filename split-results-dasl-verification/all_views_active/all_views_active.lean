@@ -1,0 +1,2 @@
+-- Declaration: all_views_active
+-- Extracted by StaticSplit

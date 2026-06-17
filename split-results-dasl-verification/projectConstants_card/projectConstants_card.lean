@@ -1,0 +1,2 @@
+-- Declaration: projectConstants_card
+-- Extracted by StaticSplit

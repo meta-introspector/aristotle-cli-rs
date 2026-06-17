@@ -1,0 +1,2 @@
+-- Declaration: majorBytes
+-- Extracted by StaticSplit

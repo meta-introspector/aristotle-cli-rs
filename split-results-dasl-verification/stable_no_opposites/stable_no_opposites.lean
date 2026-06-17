@@ -1,0 +1,2 @@
+-- Declaration: stable_no_opposites
+-- Extracted by StaticSplit

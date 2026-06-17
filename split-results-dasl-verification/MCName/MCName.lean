@@ -1,0 +1,2 @@
+-- Declaration: MCName
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Ternary.oppositeSigned
+-- Extracted by StaticSplit

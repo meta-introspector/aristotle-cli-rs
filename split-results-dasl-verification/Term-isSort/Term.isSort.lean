@@ -1,0 +1,2 @@
+-- Declaration: Term.isSort
+-- Extracted by StaticSplit

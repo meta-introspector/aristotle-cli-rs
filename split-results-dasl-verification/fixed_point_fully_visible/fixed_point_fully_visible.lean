@@ -1,0 +1,2 @@
+-- Declaration: fixed_point_fully_visible
+-- Extracted by StaticSplit

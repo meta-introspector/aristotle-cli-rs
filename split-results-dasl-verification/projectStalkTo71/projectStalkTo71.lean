@@ -1,0 +1,2 @@
+-- Declaration: projectStalkTo71
+-- Extracted by StaticSplit

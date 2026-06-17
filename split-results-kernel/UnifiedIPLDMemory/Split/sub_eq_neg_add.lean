@@ -1,0 +1,36 @@
+import Split.NegZeroClass_toNeg
+import Split.congrArg
+import Split.AddMonoid_toAddZeroClass
+import Split.sub_eq_add_neg
+import Split.HSub_hSub
+import Split.AddZeroClass_toAddZero
+import Split.SubtractionMonoid_toSubNegZeroMonoid
+import Split.SubtractionMonoid_toSubNegMonoid
+import Split.SubNegZeroMonoid_toNegZeroClass
+import Split.SubtractionCommMonoid_toSubtractionMonoid
+import Split.add_comm
+import Split.SubtractionCommMonoid_toAddCommMonoid
+import Split.SubNegMonoid_toSub
+import Split.instHAdd
+import Split.instHSub
+import Split.HAdd_hAdd
+import Split.congr
+import Split.True
+import Split.eq_self
+import Split.SubNegMonoid_toNeg
+import Split.of_eq_true
+import Split.AddZero_toAdd
+import Split.AddCommSemigroup_toAddCommMagma
+import Split.SubNegMonoid_toAddMonoid
+import Split.SubtractionCommMonoid
+import Split.AddCommMonoid_toAddCommSemigroup
+import Split.Eq
+import Split.Neg_neg
+import Split.Eq_trans
+import Split.AddCommMagma_toAdd
+
+-- sub_eq_neg_add from environment
+-- theorem sub_eq_neg_add : forall {α : Type.{u_1}} [inst._@.Mathlib.Algebra.Group.Basic.1330277111._hygCtx._hyg.6 : SubtractionCommMonoid.{u_1} α] (a : α) (b : α), Eq.{succ u_1} α (HSub.hSub.{u_1, u_1, u_1} α α α (instHSub.{u_1} α (SubNegMonoid.toSub.{u_1} α (SubtractionMonoid.toSubNegMonoid.{u_1} α (SubtractionCommMonoid.toSubtractionMonoid.{u_1} α inst._@.Mathlib.Algebra.Group.Basic.1330277111._hygCtx._hyg.6)))) a b) (HAdd.hAdd.{u_1, u_1, u_1} α α α (instHAdd.{u_1} α (AddZero.toAdd.{u_1} α (AddZeroClass.toAddZero.{u_1} α (AddMonoid.toAddZeroClass.{u_1} α (SubNegMonoid.toAddMonoid.{u_1} α (SubtractionMonoid.toSubNegMonoid.{u_1} α (SubtractionCommMonoid.toSubtractionMonoid.{u_1} α inst._@.Mathlib.Algebra.Group.Basic.1330277111._hygCtx._hyg.6))))))) (Neg.neg.{u_1} α (NegZeroClass.toNeg.{u_1} α (SubNegZeroMonoid.toNegZeroClass.{u_1} α (SubtractionMonoid.toSubNegZeroMonoid.{u_1} α (SubtractionCommMonoid.toSubtractionMonoid.{u_1} α inst._@.Mathlib.Algebra.Group.Basic.1330277111._hygCtx._hyg.6)))) b) a)
+
+-- Stub: this file represents the declaration `sub_eq_neg_add`.
+-- In a full split, the body would be extracted from the environment.

@@ -1,0 +1,2 @@
+-- Declaration: flipMask
+-- Extracted by StaticSplit

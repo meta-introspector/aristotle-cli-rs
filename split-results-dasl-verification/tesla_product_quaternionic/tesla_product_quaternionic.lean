@@ -1,0 +1,2 @@
+-- Declaration: tesla_product_quaternionic
+-- Extracted by StaticSplit

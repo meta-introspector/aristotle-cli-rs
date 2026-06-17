@@ -1,0 +1,2 @@
+-- Declaration: CubicalComplex
+-- Extracted by StaticSplit

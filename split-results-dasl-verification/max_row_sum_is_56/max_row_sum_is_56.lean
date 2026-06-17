@@ -1,0 +1,2 @@
+-- Declaration: max_row_sum_is_56
+-- Extracted by StaticSplit

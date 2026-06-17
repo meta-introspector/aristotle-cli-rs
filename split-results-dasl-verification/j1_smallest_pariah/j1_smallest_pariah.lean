@@ -1,0 +1,2 @@
+-- Declaration: j1_smallest_pariah
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: axis_eigenspaces_sum
+-- Extracted by StaticSplit

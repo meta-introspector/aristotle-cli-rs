@@ -1,0 +1,2 @@
+-- Declaration: identity_is_lambda
+-- Extracted by StaticSplit

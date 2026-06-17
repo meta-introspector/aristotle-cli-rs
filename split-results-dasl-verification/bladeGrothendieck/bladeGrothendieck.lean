@@ -1,0 +1,2 @@
+-- Declaration: bladeGrothendieck
+-- Extracted by StaticSplit

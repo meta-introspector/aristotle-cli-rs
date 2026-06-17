@@ -1,0 +1,2 @@
+-- Declaration: GroupFuzz.full_coverage_density
+-- Extracted by StaticSplit

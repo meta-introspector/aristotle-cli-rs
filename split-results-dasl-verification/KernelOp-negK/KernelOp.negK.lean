@@ -1,0 +1,2 @@
+-- Declaration: KernelOp.negK
+-- Extracted by StaticSplit

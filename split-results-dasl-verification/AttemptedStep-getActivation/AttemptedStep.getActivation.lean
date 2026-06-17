@@ -1,0 +1,2 @@
+-- Declaration: AttemptedStep.getActivation
+-- Extracted by StaticSplit

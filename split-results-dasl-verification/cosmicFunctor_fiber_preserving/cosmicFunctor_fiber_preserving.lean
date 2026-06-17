@@ -1,0 +1,2 @@
+-- Declaration: cosmicFunctor_fiber_preserving
+-- Extracted by StaticSplit

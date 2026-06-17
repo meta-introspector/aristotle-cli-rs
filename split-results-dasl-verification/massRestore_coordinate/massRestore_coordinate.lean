@@ -1,0 +1,2 @@
+-- Declaration: massRestore_coordinate
+-- Extracted by StaticSplit

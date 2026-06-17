@@ -1,0 +1,2 @@
+-- Declaration: shadows_eq_umbral
+-- Extracted by StaticSplit

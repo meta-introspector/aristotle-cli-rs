@@ -1,0 +1,2 @@
+-- Declaration: SemanticState.equiv_trans
+-- Extracted by StaticSplit

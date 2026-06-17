@@ -1,0 +1,2 @@
+-- Declaration: vacuum
+-- Extracted by StaticSplit

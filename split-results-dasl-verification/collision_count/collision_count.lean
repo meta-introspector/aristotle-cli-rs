@@ -1,0 +1,2 @@
+-- Declaration: collision_count
+-- Extracted by StaticSplit

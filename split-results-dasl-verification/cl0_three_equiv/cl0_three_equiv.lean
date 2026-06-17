@@ -1,0 +1,2 @@
+-- Declaration: cl0_three_equiv
+-- Extracted by StaticSplit

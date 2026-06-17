@@ -1,0 +1,2 @@
+-- Declaration: vanishing_implies_divides
+-- Extracted by StaticSplit

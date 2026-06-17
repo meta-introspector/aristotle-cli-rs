@@ -1,0 +1,2 @@
+-- Declaration: complete_chain
+-- Extracted by StaticSplit

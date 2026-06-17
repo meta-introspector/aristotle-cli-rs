@@ -1,0 +1,2 @@
+-- Declaration: tentacleToAppendage
+-- Extracted by StaticSplit

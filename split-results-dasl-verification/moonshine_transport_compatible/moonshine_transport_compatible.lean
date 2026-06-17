@@ -1,0 +1,2 @@
+-- Declaration: moonshine_transport_compatible
+-- Extracted by StaticSplit

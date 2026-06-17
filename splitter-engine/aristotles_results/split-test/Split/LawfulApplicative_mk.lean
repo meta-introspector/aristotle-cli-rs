@@ -1,0 +1,24 @@
+import Split.Applicative_toSeqLeft
+import Split.Pure_pure
+import Split.LawfulFunctor
+import Split.Function_comp
+import Split.id
+import Split.Seq_seq
+import Split.Applicative_toPure
+import Split.Applicative
+import Split.Unit
+import Split.SeqLeft_seqLeft
+import Split.Function_const
+import Split.Applicative_toFunctor
+import Split.Applicative_toSeq
+import Split.Applicative_toSeqRight
+import Split.SeqRight_seqRight
+import Split.Eq
+import Split.Functor_map
+import Split.LawfulApplicative
+
+-- LawfulApplicative.mk from environment
+-- constructor LawfulApplicative.mk : forall {f : Type.{u} -> Type.{v}} [inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5 : Applicative.{u, v} f] [toLawfulFunctor : LawfulFunctor.{u, v} f (Applicative.toFunctor.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5)], (forall {α : Type.{u}} {β : Type.{u}} (x : f α) (y : f β), Eq.{succ v} (f α) (SeqLeft.seqLeft.{u, v} f (Applicative.toSeqLeft.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α β x (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.31 : Unit) => y)) (Seq.seq.{u, v} f (Applicative.toSeq.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) β α (Functor.map.{u, v} f (Applicative.toFunctor.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α (β -> α) (Function.const.{succ u, succ u} α β) x) (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.46 : Unit) => y))) -> (forall {α : Type.{u}} {β : Type.{u}} (x : f α) (y : f β), Eq.{succ v} (f β) (SeqRight.seqRight.{u, v} f (Applicative.toSeqRight.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α β x (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.69 : Unit) => y)) (Seq.seq.{u, v} f (Applicative.toSeq.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) β β (Functor.map.{u, v} f (Applicative.toFunctor.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α (β -> β) (Function.const.{succ u, succ u} (β -> β) α (id.{succ u} β)) x) (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.85 : Unit) => y))) -> (forall {α : Type.{u}} {β : Type.{u}} (g : α -> β) (x : f α), Eq.{succ v} (f β) (Seq.seq.{u, v} f (Applicative.toSeq.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α β (Pure.pure.{u, v} f (Applicative.toPure.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) (α -> β) g) (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.109 : Unit) => x)) (Functor.map.{u, v} f (Applicative.toFunctor.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α β g x)) -> (forall {α : Type.{u}} {β : Type.{u}} (g : α -> β) (x : α), Eq.{succ v} (f β) (Functor.map.{u, v} f (Applicative.toFunctor.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α β g (Pure.pure.{u, v} f (Applicative.toPure.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α x)) (Pure.pure.{u, v} f (Applicative.toPure.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) β (g x))) -> (forall {α : Type.{u}} {β : Type.{u}} (g : f (α -> β)) (x : α), Eq.{succ v} (f β) (Seq.seq.{u, v} f (Applicative.toSeq.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α β g (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.161 : Unit) => Pure.pure.{u, v} f (Applicative.toPure.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α x)) (Functor.map.{u, v} f (Applicative.toFunctor.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) (α -> β) β (fun (h : α -> β) => h x) g)) -> (forall {α : Type.{u}} {β : Type.{u}} {γ : Type.{u}} (x : f α) (g : f (α -> β)) (h : f (β -> γ)), Eq.{succ v} (f γ) (Seq.seq.{u, v} f (Applicative.toSeq.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) β γ h (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.203 : Unit) => Seq.seq.{u, v} f (Applicative.toSeq.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α β g (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.215 : Unit) => x))) (Seq.seq.{u, v} f (Applicative.toSeq.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) α γ (Seq.seq.{u, v} f (Applicative.toSeq.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) (α -> β) (α -> γ) (Functor.map.{u, v} f (Applicative.toFunctor.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5) (β -> γ) ((α -> β) -> α -> γ) (Function.comp.{succ u, succ u, succ u} α β γ) h) (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.239 : Unit) => g)) (fun (x._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.246 : Unit) => x))) -> (LawfulApplicative.{u, v} f inst._@.Init.Control.Lawful.Basic.138018349._hygCtx._hyg.5)
+
+-- Stub: this file represents the declaration `LawfulApplicative.mk`.
+-- In a full split, the body would be extracted from the environment.

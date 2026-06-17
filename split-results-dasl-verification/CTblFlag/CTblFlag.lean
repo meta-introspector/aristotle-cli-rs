@@ -1,0 +1,2 @@
+-- Declaration: CTblFlag
+-- Extracted by StaticSplit

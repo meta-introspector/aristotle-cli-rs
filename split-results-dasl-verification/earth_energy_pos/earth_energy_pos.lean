@@ -1,0 +1,2 @@
+-- Declaration: earth_energy_pos
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: skeleton_pair_primes
+-- Extracted by StaticSplit

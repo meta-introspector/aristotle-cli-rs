@@ -1,0 +1,2 @@
+-- Declaration: StratReflection.isObjectLevel
+-- Extracted by StaticSplit

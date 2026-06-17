@@ -1,0 +1,2 @@
+-- Declaration: DistributedSession
+-- Extracted by StaticSplit

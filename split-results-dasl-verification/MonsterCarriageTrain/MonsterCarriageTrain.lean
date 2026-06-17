@@ -1,0 +1,2 @@
+-- Declaration: MonsterCarriageTrain
+-- Extracted by StaticSplit

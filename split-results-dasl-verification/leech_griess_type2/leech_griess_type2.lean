@@ -1,0 +1,2 @@
+-- Declaration: leech_griess_type2
+-- Extracted by StaticSplit

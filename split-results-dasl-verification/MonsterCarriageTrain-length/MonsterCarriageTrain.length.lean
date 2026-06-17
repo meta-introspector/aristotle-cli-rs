@@ -1,0 +1,2 @@
+-- Declaration: MonsterCarriageTrain.length
+-- Extracted by StaticSplit

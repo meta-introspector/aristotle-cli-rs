@@ -1,0 +1,2 @@
+-- Declaration: ContextWindow.shift
+-- Extracted by StaticSplit

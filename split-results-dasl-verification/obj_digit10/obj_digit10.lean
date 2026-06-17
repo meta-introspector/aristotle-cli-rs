@@ -1,0 +1,2 @@
+-- Declaration: obj_digit10
+-- Extracted by StaticSplit

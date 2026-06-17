@@ -1,0 +1,2 @@
+-- Declaration: metaN_preserves_stableEquiv
+-- Extracted by StaticSplit

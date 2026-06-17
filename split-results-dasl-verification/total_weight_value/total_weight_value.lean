@@ -1,0 +1,2 @@
+-- Declaration: total_weight_value
+-- Extracted by StaticSplit

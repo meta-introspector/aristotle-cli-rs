@@ -1,0 +1,2 @@
+-- Declaration: grade0_dim
+-- Extracted by StaticSplit

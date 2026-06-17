@@ -1,0 +1,2 @@
+-- Declaration: peak_2adic_bott_class
+-- Extracted by StaticSplit

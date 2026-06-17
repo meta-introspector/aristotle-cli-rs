@@ -1,0 +1,2 @@
+-- Declaration: execTriple
+-- Extracted by StaticSplit

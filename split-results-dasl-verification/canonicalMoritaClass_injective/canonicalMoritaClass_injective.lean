@@ -1,0 +1,2 @@
+-- Declaration: canonicalMoritaClass_injective
+-- Extracted by StaticSplit

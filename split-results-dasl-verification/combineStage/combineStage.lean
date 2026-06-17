@@ -1,0 +1,2 @@
+-- Declaration: combineStage
+-- Extracted by StaticSplit

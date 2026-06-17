@@ -1,0 +1,2 @@
+-- Declaration: discriminant_relation_q1
+-- Extracted by StaticSplit

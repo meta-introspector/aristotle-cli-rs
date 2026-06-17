@@ -1,0 +1,2 @@
+-- Declaration: encoding_is_homomorphism
+-- Extracted by StaticSplit

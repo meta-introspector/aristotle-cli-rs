@@ -1,0 +1,2 @@
+-- Declaration: longRangeBivectors
+-- Extracted by StaticSplit

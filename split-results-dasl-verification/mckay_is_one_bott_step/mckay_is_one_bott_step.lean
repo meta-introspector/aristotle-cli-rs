@@ -1,0 +1,2 @@
+-- Declaration: mckay_is_one_bott_step
+-- Extracted by StaticSplit

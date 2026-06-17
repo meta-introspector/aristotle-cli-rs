@@ -1,0 +1,2 @@
+-- Declaration: encodeResidue_append
+-- Extracted by StaticSplit

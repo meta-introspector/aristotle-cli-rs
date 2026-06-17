@@ -1,0 +1,2 @@
+-- Declaration: bootstrapEmoji_renders
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fiber_over_71_card
+-- Extracted by StaticSplit

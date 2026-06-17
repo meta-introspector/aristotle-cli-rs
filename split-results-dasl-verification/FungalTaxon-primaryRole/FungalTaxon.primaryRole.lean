@@ -1,0 +1,2 @@
+-- Declaration: FungalTaxon.primaryRole
+-- Extracted by StaticSplit

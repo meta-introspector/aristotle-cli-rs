@@ -1,0 +1,2 @@
+-- Declaration: doubleFrac
+-- Extracted by StaticSplit

@@ -1,0 +1,12 @@
+name = "unified-dasl"
+version = "0.1.0"
+defaultTargets = ["UnifiedDasl"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.28.0"
+
+[[lean_lib]]
+name = "UnifiedDasl"
+globs = ["UnifiedDasl.+", "UnifiedDasl.*.+"]

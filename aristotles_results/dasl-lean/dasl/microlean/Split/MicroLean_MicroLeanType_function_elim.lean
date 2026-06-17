@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: MicroLean.MicroLeanType.function.elim : forall {motive : MicroLean.MicroLeanType -> Sort.{u}} (t : MicroLean.MicroLeanType), (Eq.{1} Nat (MicroLean.MicroLeanType.ctorIdx t) 2) -> (forall (domain : MicroLean.MicroLeanType) (codomain : MicroLean.MicroLeanType), motive (MicroLean.MicroLeanType.function domain codomain)) -> (motive t)
+def MicroLean.MicroLeanType.function.elim : forall {motive : MicroLean.MicroLeanType -> Sort.{u}} (t : MicroLean.MicroLeanType), (Eq.{1} Nat (MicroLean.MicroLeanType.ctorIdx t) 2) -> (forall (domain : MicroLean.MicroLeanType) (codomain : MicroLean.MicroLeanType), motive (MicroLean.MicroLeanType.function domain codomain)) -> (motive t) :=
+  fun {motive : MicroLean.MicroLeanType -> Sort.{u}} (t : MicroLean.MicroLeanType) (h : Eq.{1} Nat (MicroLean.MicroLeanType.ctorIdx t) 2) (function : forall (domain : MicroLean.MicroLeanType) (codomain : MicroLean.MicroLeanType), motive (MicroLean.MicroLeanType.function domain codomain)) => MicroLean.MicroLeanType.ctorElim.{u} motive 2 t (Eq.symm.{1} Nat (MicroLean.MicroLeanType.ctorIdx t) 2 h) (PULift.up.{u, u} (forall (domain : MicroLean.MicroLeanType) (codomain : MicroLean.MicroLeanType), motive (MicroLean.MicroLeanType.function domain codomain)) function)

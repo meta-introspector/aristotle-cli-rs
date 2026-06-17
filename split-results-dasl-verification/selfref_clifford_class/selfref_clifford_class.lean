@@ -1,0 +1,2 @@
+-- Declaration: selfref_clifford_class
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: eval_quote
+-- Extracted by StaticSplit

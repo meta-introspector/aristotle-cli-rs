@@ -1,0 +1,2 @@
+-- Declaration: mm_griess_decomp
+-- Extracted by StaticSplit

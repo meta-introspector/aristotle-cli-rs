@@ -1,0 +1,2 @@
+-- Declaration: node1
+-- Extracted by StaticSplit

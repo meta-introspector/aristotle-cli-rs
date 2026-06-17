@@ -1,0 +1,2 @@
+-- Declaration: distinctDimensions
+-- Extracted by StaticSplit

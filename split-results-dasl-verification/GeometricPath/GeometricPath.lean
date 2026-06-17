@@ -1,0 +1,2 @@
+-- Declaration: GeometricPath
+-- Extracted by StaticSplit

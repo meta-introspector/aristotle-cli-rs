@@ -1,0 +1,2 @@
+-- Declaration: l2_71_mult_out
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: n_lossy_steps
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Term.isApp
+-- Extracted by StaticSplit

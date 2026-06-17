@@ -1,0 +1,2 @@
+-- Declaration: shadow_perm_invariant
+-- Extracted by StaticSplit

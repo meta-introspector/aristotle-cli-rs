@@ -1,0 +1,74 @@
+import Split.IsRightCancelAdd_addRightStrictMono_of_addRightMono
+import Split.Nontrivial
+import Split.Iff_mpr
+import Split.sub_pos
+import Split.AddGroup_toSubtractionMonoid
+import Split.Preorder_toLT
+import Split.HMul_hMul
+import Split.Ring_toNonAssocRing
+import Split.mul_sub
+import Split.AddGroupWithOne_toAddGroup
+import Split.congrArg
+import Split.instIsLeftCancelAddOfAddLeftReflectLE
+import Split.covariant_swap_add_of_covariant_add
+import Split.AddMonoid_toAddZeroClass
+import Split.NonUnitalNonAssocRing_toAddCommGroup
+import Split.PartialOrder_toPreorder
+import Split.instIsRightCancelAddOfAddRightReflectLE
+import Split.IsStrictOrderedRing_mk
+import Split.AddGroupWithOne_toAddMonoidWithOne
+import Split.HSub_hSub
+import Split.IsStrictOrderedRing
+import Split.NonUnitalNonAssocSemiring_toMulZeroClass
+import Split.Preorder_toLE
+import Split.PosMulStrictMono_mk
+import Split.AddCommGroup_toAddGroup
+import Split.AddZeroClass_toAddZero
+import Split.PartialOrder
+import Split.Eq_mp
+import Split.MulPosStrictMono_mk
+import Split.NonUnitalNonAssocRing_toNonUnitalNonAssocSemiring
+import Split.ZeroLEOneClass
+import Split.IsOrderedAddMonoid_toIsOrderedCancelAddMonoid
+import Split.SubtractionMonoid_toSubNegZeroMonoid
+import Split.LE_le
+import Split.SubNegZeroMonoid_toNegZeroClass
+import Split.NonAssocRing_toNonUnitalNonAssocRing
+import Split.SubNegMonoid_toSub
+import Split.sub_mul
+import Split.NonUnitalNonAssocSemiring_toAddCommMonoid
+import Split.AddMonoidWithOne_toOne
+import Split.instHSub
+import Split.AddGroup_toSubNegMonoid
+import Split.IsOrderedCancelAddMonoid_toAddLeftReflectLE
+import Split.Distrib_toMul
+import Split.NonAssocSemiring_toNonUnitalNonAssocSemiring
+import Split.Ring_toAddCommGroup
+import Split.LT_lt
+import Split.NonUnitalNonAssocSemiring_toDistrib
+import Split.AddZero_toAdd
+import Split.Zero_toOfNat0
+import Split.IsOrderedCancelAddMonoid_toAddLeftReflectLT
+import Split.contravariant_swap_add_of_contravariant_add
+import Split.AddCommSemigroup_toAddCommMagma
+import Split.SubNegMonoid_toAddMonoid
+import Split.OfNat_ofNat
+import Split.AddCommMonoid_toAddCommSemigroup
+import Split.NegZeroClass_toZero
+import Split.Semiring_toNonAssocSemiring
+import Split.Ring_toSemiring
+import Split.Ring
+import Split.Ring_toAddGroupWithOne
+import Split.IsOrderedAddMonoid
+import Split.IsLeftCancelAdd_addLeftReflectLE_of_addLeftReflectLT
+import Split.Eq_trans
+import Split.MulZeroClass_toZero
+import Split.AddCommMagma_toAdd
+import Split.IsOrderedAddMonoid_toAddLeftMono
+import Split.instHMul
+
+-- IsStrictOrderedRing.of_mul_pos from environment
+-- theorem IsStrictOrderedRing.of_mul_pos : forall {R : Type.{u}} [inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3 : Ring.{u} R] [inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.6 : PartialOrder.{u} R] [inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.9 : IsOrderedAddMonoid.{u} R (NonUnitalNonAssocSemiring.toAddCommMonoid.{u} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u} R (NonAssocRing.toNonUnitalNonAssocRing.{u} R (Ring.toNonAssocRing.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3)))) (PartialOrder.toPreorder.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.6)] [inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.12 : ZeroLEOneClass.{u} R (MulZeroClass.toZero.{u} R (NonUnitalNonAssocSemiring.toMulZeroClass.{u} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u} R (NonAssocRing.toNonUnitalNonAssocRing.{u} R (Ring.toNonAssocRing.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3))))) (AddMonoidWithOne.toOne.{u} R (AddGroupWithOne.toAddMonoidWithOne.{u} R (Ring.toAddGroupWithOne.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3))) (Preorder.toLE.{u} R (PartialOrder.toPreorder.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.6))] [inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.15 : Nontrivial.{u} R], (forall (a : R) (b : R), (LT.lt.{u} R (Preorder.toLT.{u} R (PartialOrder.toPreorder.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.6)) (OfNat.ofNat.{u} R 0 (Zero.toOfNat0.{u} R (MulZeroClass.toZero.{u} R (NonUnitalNonAssocSemiring.toMulZeroClass.{u} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u} R (NonAssocRing.toNonUnitalNonAssocRing.{u} R (Ring.toNonAssocRing.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3))))))) a) -> (LT.lt.{u} R (Preorder.toLT.{u} R (PartialOrder.toPreorder.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.6)) (OfNat.ofNat.{u} R 0 (Zero.toOfNat0.{u} R (MulZeroClass.toZero.{u} R (NonUnitalNonAssocSemiring.toMulZeroClass.{u} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u} R (NonAssocRing.toNonUnitalNonAssocRing.{u} R (Ring.toNonAssocRing.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3))))))) b) -> (LT.lt.{u} R (Preorder.toLT.{u} R (PartialOrder.toPreorder.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.6)) (OfNat.ofNat.{u} R 0 (Zero.toOfNat0.{u} R (MulZeroClass.toZero.{u} R (NonUnitalNonAssocSemiring.toMulZeroClass.{u} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u} R (NonAssocRing.toNonUnitalNonAssocRing.{u} R (Ring.toNonAssocRing.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3))))))) (HMul.hMul.{u, u, u} R R R (instHMul.{u} R (Distrib.toMul.{u} R (NonUnitalNonAssocSemiring.toDistrib.{u} R (NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u} R (NonAssocRing.toNonUnitalNonAssocRing.{u} R (Ring.toNonAssocRing.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3)))))) a b))) -> (IsStrictOrderedRing.{u} R (Ring.toSemiring.{u} R inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.3) inst._@.Mathlib.Algebra.Order.Ring.Defs.3827747854._hygCtx._hyg.6)
+
+-- Stub: this file represents the declaration `IsStrictOrderedRing.of_mul_pos`.
+-- In a full split, the body would be extracted from the environment.

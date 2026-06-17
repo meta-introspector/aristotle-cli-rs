@@ -1,0 +1,2 @@
+-- Declaration: eq_one_of_commutes_with_all
+-- Extracted by StaticSplit

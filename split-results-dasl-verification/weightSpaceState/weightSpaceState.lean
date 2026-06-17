@@ -1,0 +1,2 @@
+-- Declaration: weightSpaceState
+-- Extracted by StaticSplit

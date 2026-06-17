@@ -1,0 +1,2 @@
+-- Declaration: base_nontrivial
+-- Extracted by StaticSplit

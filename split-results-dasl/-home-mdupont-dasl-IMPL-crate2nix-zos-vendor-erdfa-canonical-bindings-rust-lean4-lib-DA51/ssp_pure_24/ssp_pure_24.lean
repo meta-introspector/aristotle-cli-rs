@@ -1,0 +1,2 @@
+-- Declaration: ssp_pure_24
+-- Extracted by StaticSplit

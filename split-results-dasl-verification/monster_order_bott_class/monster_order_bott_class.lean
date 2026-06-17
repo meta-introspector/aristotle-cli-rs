@@ -1,0 +1,2 @@
+-- Declaration: monster_order_bott_class
+-- Extracted by StaticSplit

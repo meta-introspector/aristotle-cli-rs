@@ -1,0 +1,2 @@
+-- Declaration: MorphismRelation
+-- Extracted by StaticSplit

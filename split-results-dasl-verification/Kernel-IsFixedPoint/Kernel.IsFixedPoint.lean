@@ -1,0 +1,2 @@
+-- Declaration: Kernel.IsFixedPoint
+-- Extracted by StaticSplit

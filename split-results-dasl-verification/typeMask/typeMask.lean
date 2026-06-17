@@ -1,0 +1,2 @@
+-- Declaration: typeMask
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: canonical_generator_is_sparse
+-- Extracted by StaticSplit

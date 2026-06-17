@@ -1,0 +1,2 @@
+-- Declaration: PrecedentLog.size
+-- Extracted by StaticSplit

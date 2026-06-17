@@ -1,0 +1,2 @@
+-- Declaration: uniformLog_patternCount
+-- Extracted by StaticSplit

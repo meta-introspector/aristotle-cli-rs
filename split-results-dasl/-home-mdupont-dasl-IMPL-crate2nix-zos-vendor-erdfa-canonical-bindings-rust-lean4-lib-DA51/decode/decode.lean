@@ -1,0 +1,2 @@
+-- Declaration: decode
+-- Extracted by StaticSplit

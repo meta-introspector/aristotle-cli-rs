@@ -1,0 +1,2 @@
+-- Declaration: our_system_self_locates
+-- Extracted by StaticSplit

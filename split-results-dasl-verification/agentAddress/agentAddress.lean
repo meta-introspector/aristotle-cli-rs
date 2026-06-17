@@ -1,0 +1,2 @@
+-- Declaration: agentAddress
+-- Extracted by StaticSplit

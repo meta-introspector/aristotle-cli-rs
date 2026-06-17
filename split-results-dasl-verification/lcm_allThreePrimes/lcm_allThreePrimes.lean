@@ -1,0 +1,2 @@
+-- Declaration: lcm_allThreePrimes
+-- Extracted by StaticSplit

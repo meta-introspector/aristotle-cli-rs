@@ -1,0 +1,2 @@
+-- Declaration: j_constant_term
+-- Extracted by StaticSplit

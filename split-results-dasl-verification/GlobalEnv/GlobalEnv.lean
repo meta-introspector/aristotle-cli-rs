@@ -1,0 +1,2 @@
+-- Declaration: GlobalEnv
+-- Extracted by StaticSplit

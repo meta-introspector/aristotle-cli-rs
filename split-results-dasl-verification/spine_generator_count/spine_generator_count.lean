@@ -1,0 +1,2 @@
+-- Declaration: spine_generator_count
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: trivector_product
+-- Extracted by StaticSplit

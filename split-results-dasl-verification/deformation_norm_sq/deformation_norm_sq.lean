@@ -1,0 +1,2 @@
+-- Declaration: deformation_norm_sq
+-- Extracted by StaticSplit

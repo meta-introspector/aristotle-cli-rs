@@ -1,0 +1,2 @@
+-- Declaration: Sequencer.empty
+-- Extracted by StaticSplit

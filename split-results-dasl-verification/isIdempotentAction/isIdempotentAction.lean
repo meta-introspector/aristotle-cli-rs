@@ -1,0 +1,2 @@
+-- Declaration: isIdempotentAction
+-- Extracted by StaticSplit

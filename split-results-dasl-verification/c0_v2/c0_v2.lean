@@ -1,0 +1,2 @@
+-- Declaration: c0_v2
+-- Extracted by StaticSplit

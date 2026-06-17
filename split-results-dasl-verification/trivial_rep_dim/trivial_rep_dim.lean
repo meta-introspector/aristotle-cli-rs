@@ -1,0 +1,2 @@
+-- Declaration: trivial_rep_dim
+-- Extracted by StaticSplit

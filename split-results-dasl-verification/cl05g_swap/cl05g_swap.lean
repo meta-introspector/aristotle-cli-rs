@@ -1,0 +1,2 @@
+-- Declaration: cl05g_swap
+-- Extracted by StaticSplit

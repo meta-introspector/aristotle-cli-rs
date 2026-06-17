@@ -1,0 +1,2 @@
+-- Declaration: ramanujan_tau_2_mod_691
+-- Extracted by StaticSplit

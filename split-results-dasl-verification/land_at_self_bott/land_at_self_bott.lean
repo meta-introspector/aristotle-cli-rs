@@ -1,0 +1,2 @@
+-- Declaration: land_at_self_bott
+-- Extracted by StaticSplit

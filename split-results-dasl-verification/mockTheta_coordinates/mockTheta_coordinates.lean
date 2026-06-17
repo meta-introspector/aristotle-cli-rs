@@ -1,0 +1,2 @@
+-- Declaration: mockTheta_coordinates
+-- Extracted by StaticSplit

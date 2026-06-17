@@ -1,0 +1,2 @@
+-- Declaration: Vessel
+-- Extracted by StaticSplit

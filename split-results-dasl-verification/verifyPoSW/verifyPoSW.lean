@@ -1,0 +1,2 @@
+-- Declaration: verifyPoSW
+-- Extracted by StaticSplit

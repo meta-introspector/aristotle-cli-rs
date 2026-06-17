@@ -1,0 +1,2 @@
+-- Declaration: bbf15_vec
+-- Extracted by StaticSplit

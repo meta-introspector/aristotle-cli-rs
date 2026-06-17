@@ -1,0 +1,2 @@
+-- Declaration: crankGrothendieck
+-- Extracted by StaticSplit

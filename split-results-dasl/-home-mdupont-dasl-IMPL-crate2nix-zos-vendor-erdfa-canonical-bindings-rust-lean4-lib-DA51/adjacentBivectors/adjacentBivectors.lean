@@ -1,0 +1,2 @@
+-- Declaration: adjacentBivectors
+-- Extracted by StaticSplit

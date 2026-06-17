@@ -1,0 +1,2 @@
+-- Declaration: self_reference_transport_preserves_mod_71
+-- Extracted by StaticSplit

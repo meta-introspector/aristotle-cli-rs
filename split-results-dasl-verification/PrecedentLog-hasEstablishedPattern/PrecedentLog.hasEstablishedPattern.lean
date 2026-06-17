@@ -1,0 +1,2 @@
+-- Declaration: PrecedentLog.hasEstablishedPattern
+-- Extracted by StaticSplit

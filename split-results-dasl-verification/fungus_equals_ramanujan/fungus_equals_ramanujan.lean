@@ -1,0 +1,2 @@
+-- Declaration: fungus_equals_ramanujan
+-- Extracted by StaticSplit

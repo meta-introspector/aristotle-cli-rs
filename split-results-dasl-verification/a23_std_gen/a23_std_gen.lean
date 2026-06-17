@@ -1,0 +1,2 @@
+-- Declaration: a23_std_gen
+-- Extracted by StaticSplit

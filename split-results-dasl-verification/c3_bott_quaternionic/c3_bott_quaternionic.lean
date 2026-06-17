@@ -1,0 +1,2 @@
+-- Declaration: c3_bott_quaternionic
+-- Extracted by StaticSplit

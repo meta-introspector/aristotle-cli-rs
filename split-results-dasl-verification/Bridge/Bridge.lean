@@ -1,0 +1,2 @@
+-- Declaration: Bridge
+-- Extracted by StaticSplit

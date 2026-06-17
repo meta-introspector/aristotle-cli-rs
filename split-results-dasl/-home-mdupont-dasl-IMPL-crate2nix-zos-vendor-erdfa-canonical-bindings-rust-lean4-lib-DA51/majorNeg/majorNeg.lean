@@ -1,0 +1,2 @@
+-- Declaration: majorNeg
+-- Extracted by StaticSplit

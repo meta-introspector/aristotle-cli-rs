@@ -1,0 +1,2 @@
+-- Declaration: hypergraph_has_agent_slots
+-- Extracted by StaticSplit

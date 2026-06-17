@@ -1,0 +1,2 @@
+-- Declaration: sectionOrbifold
+-- Extracted by StaticSplit

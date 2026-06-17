@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup
+-- Extracted by StaticSplit

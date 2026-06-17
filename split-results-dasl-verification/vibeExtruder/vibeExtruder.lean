@@ -1,0 +1,2 @@
+-- Declaration: vibeExtruder
+-- Extracted by StaticSplit

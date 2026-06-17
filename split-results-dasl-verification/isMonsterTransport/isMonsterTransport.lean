@@ -1,0 +1,2 @@
+-- Declaration: isMonsterTransport
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ontology_subset_SSP
+-- Extracted by StaticSplit

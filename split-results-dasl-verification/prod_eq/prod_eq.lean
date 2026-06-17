@@ -1,0 +1,2 @@
+-- Declaration: prod_eq
+-- Extracted by StaticSplit

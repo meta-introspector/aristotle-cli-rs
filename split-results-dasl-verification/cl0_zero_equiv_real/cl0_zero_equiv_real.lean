@@ -1,0 +1,2 @@
+-- Declaration: cl0_zero_equiv_real
+-- Extracted by StaticSplit

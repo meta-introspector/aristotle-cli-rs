@@ -1,0 +1,2 @@
+-- Declaration: VecRule
+-- Extracted by StaticSplit

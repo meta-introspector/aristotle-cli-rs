@@ -1,0 +1,2 @@
+-- Declaration: two_layer_implies_fiber
+-- Extracted by StaticSplit

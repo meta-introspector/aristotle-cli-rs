@@ -1,0 +1,2 @@
+-- Declaration: num_signatures
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: bottGradeObj
+-- Extracted by StaticSplit

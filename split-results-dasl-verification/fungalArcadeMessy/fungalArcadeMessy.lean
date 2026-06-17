@@ -1,0 +1,2 @@
+-- Declaration: fungalArcadeMessy
+-- Extracted by StaticSplit

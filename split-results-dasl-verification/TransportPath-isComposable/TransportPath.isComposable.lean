@@ -1,0 +1,2 @@
+-- Declaration: TransportPath.isComposable
+-- Extracted by StaticSplit

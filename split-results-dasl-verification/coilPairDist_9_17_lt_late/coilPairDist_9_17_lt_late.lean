@@ -1,0 +1,2 @@
+-- Declaration: coilPairDist_9_17_lt_late
+-- Extracted by StaticSplit

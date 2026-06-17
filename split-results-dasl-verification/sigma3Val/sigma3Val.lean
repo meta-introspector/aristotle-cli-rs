@@ -1,0 +1,2 @@
+-- Declaration: sigma3Val
+-- Extracted by StaticSplit

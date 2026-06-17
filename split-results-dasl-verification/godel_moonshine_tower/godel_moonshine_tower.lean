@@ -1,0 +1,2 @@
+-- Declaration: godel_moonshine_tower
+-- Extracted by StaticSplit

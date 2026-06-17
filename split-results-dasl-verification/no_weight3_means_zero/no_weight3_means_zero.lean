@@ -1,0 +1,2 @@
+-- Declaration: no_weight3_means_zero
+-- Extracted by StaticSplit

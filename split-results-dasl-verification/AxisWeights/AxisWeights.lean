@@ -1,0 +1,2 @@
+-- Declaration: AxisWeights
+-- Extracted by StaticSplit

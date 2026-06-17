@@ -1,0 +1,2 @@
+-- Declaration: halfWeight
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: sheafSections_different_fibers
+-- Extracted by StaticSplit

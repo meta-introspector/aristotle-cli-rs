@@ -1,0 +1,2 @@
+-- Declaration: GradedFiber
+-- Extracted by StaticSplit

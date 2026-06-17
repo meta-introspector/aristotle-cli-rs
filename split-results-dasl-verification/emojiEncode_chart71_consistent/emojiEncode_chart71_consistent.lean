@@ -1,0 +1,2 @@
+-- Declaration: emojiEncode_chart71_consistent
+-- Extracted by StaticSplit

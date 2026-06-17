@@ -1,0 +1,2 @@
+-- Declaration: monsterCompatible
+-- Extracted by StaticSplit

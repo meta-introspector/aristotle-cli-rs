@@ -1,0 +1,2 @@
+-- Declaration: total_nav_dim
+-- Extracted by StaticSplit

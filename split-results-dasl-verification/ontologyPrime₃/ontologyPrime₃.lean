@@ -1,0 +1,2 @@
+-- Declaration: ontologyPrime₃
+-- Extracted by StaticSplit

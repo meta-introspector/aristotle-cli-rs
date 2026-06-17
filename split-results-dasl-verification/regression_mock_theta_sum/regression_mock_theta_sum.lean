@@ -1,0 +1,2 @@
+-- Declaration: regression_mock_theta_sum
+-- Extracted by StaticSplit

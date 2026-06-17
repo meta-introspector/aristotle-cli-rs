@@ -1,0 +1,2 @@
+-- Declaration: Term
+-- Extracted by StaticSplit

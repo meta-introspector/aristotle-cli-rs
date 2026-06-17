@@ -1,0 +1,2 @@
+-- Declaration: voa_weight1
+-- Extracted by StaticSplit

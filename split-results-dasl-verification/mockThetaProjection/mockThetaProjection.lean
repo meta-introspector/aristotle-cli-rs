@@ -1,0 +1,2 @@
+-- Declaration: mockThetaProjection
+-- Extracted by StaticSplit

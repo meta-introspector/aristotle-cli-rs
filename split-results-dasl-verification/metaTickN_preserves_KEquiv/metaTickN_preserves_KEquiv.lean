@@ -1,0 +1,2 @@
+-- Declaration: metaTickN_preserves_KEquiv
+-- Extracted by StaticSplit

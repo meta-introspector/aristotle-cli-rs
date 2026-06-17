@@ -1,0 +1,2 @@
+-- Declaration: SoftStep.isHard
+-- Extracted by StaticSplit

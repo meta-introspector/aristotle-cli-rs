@@ -1,0 +1,2 @@
+-- Declaration: hasQuorum
+-- Extracted by StaticSplit

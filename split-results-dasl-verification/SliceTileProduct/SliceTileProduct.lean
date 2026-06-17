@@ -1,0 +1,2 @@
+-- Declaration: SliceTileProduct
+-- Extracted by StaticSplit

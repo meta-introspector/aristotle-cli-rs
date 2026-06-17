@@ -1,0 +1,2 @@
+-- Declaration: encode_ontology_product
+-- Extracted by StaticSplit

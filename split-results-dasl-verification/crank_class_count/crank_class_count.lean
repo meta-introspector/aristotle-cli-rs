@@ -1,0 +1,2 @@
+-- Declaration: crank_class_count
+-- Extracted by StaticSplit

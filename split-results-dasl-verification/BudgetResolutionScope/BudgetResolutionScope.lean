@@ -1,0 +1,2 @@
+-- Declaration: BudgetResolutionScope
+-- Extracted by StaticSplit

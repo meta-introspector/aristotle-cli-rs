@@ -1,0 +1,2 @@
+-- Declaration: AnnotatedSequencer.isCoherent
+-- Extracted by StaticSplit

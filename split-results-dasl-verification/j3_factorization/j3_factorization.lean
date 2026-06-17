@@ -1,0 +1,2 @@
+-- Declaration: j3_factorization
+-- Extracted by StaticSplit

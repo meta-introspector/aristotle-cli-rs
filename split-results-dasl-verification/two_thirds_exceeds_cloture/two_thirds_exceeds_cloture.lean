@@ -1,0 +1,2 @@
+-- Declaration: two_thirds_exceeds_cloture
+-- Extracted by StaticSplit

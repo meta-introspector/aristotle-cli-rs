@@ -1,0 +1,2 @@
+-- Declaration: Trit
+-- Extracted by StaticSplit

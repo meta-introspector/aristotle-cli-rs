@@ -1,0 +1,2 @@
+-- Declaration: areCompatible
+-- Extracted by StaticSplit

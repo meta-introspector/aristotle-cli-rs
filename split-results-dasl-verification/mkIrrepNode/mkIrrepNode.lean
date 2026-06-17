@@ -1,0 +1,2 @@
+-- Declaration: mkIrrepNode
+-- Extracted by StaticSplit

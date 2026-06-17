@@ -1,0 +1,2 @@
+-- Declaration: PartialChain
+-- Extracted by StaticSplit

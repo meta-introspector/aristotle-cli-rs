@@ -1,0 +1,2 @@
+-- Declaration: boardRoom_quorum_intersection
+-- Extracted by StaticSplit

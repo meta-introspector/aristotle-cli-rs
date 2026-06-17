@@ -1,0 +1,2 @@
+-- Declaration: ly_pariah_67
+-- Extracted by StaticSplit

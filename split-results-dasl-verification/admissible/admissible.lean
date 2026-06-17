@@ -1,0 +1,2 @@
+-- Declaration: admissible
+-- Extracted by StaticSplit

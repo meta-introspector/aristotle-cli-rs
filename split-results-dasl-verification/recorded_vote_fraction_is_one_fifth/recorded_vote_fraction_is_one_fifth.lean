@@ -1,0 +1,2 @@
+-- Declaration: recorded_vote_fraction_is_one_fifth
+-- Extracted by StaticSplit

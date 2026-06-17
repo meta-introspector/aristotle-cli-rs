@@ -1,0 +1,2 @@
+-- Declaration: umbral_hecke_preserves_origin
+-- Extracted by StaticSplit

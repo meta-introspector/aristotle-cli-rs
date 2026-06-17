@@ -1,0 +1,2 @@
+-- Declaration: combinedModulus
+-- Extracted by StaticSplit

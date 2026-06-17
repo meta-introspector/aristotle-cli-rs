@@ -1,0 +1,2 @@
+-- Declaration: selfLifting_clifford
+-- Extracted by StaticSplit

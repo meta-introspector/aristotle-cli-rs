@@ -1,0 +1,2 @@
+-- Declaration: mckay_factorization
+-- Extracted by StaticSplit

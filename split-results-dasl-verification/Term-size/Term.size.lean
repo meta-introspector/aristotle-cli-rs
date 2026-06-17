@@ -1,0 +1,2 @@
+-- Declaration: Term.size
+-- Extracted by StaticSplit

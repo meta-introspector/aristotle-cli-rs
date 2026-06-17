@@ -1,0 +1,2 @@
+-- Declaration: nil_is_atom
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: agreeOnProjectState
+-- Extracted by StaticSplit

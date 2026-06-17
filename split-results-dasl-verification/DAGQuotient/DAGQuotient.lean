@@ -1,0 +1,2 @@
+-- Declaration: DAGQuotient
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: obj_golay4096
+-- Extracted by StaticSplit

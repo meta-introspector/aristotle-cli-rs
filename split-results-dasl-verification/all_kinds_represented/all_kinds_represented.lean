@@ -1,0 +1,2 @@
+-- Declaration: all_kinds_represented
+-- Extracted by StaticSplit

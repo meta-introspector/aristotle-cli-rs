@@ -1,0 +1,2 @@
+-- Declaration: fungalChain_source_is_monomyth
+-- Extracted by StaticSplit

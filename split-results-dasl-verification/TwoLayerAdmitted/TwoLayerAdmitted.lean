@@ -1,0 +1,2 @@
+-- Declaration: TwoLayerAdmitted
+-- Extracted by StaticSplit

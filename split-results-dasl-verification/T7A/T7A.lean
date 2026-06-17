@@ -1,0 +1,2 @@
+-- Declaration: T7A
+-- Extracted by StaticSplit

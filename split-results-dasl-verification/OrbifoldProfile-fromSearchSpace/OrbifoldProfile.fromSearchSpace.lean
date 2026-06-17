@@ -1,0 +1,2 @@
+-- Declaration: OrbifoldProfile.fromSearchSpace
+-- Extracted by StaticSplit

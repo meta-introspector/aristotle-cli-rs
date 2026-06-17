@@ -1,0 +1,2 @@
+-- Declaration: obj_senate100
+-- Extracted by StaticSplit

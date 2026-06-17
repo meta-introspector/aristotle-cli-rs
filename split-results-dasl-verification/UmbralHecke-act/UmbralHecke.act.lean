@@ -1,0 +1,2 @@
+-- Declaration: UmbralHecke.act
+-- Extracted by StaticSplit

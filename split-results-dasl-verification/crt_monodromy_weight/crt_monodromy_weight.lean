@@ -1,0 +1,2 @@
+-- Declaration: crt_monodromy_weight
+-- Extracted by StaticSplit

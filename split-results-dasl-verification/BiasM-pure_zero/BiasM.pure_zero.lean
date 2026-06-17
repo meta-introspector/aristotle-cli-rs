@@ -1,0 +1,2 @@
+-- Declaration: BiasM.pure_zero
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: grade_sum
+-- Extracted by StaticSplit

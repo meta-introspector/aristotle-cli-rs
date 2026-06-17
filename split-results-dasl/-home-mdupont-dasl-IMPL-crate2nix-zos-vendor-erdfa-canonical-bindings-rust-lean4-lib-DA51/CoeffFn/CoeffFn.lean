@@ -1,0 +1,2 @@
+-- Declaration: CoeffFn
+-- Extracted by StaticSplit

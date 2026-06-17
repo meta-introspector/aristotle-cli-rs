@@ -1,0 +1,2 @@
+-- Declaration: MonsterProgram
+-- Extracted by StaticSplit

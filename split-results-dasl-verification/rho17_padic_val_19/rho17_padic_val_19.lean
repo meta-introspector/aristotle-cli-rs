@@ -1,0 +1,2 @@
+-- Declaration: rho17_padic_val_19
+-- Extracted by StaticSplit

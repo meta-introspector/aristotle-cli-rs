@@ -1,0 +1,2 @@
+-- Declaration: sspB_size
+-- Extracted by StaticSplit

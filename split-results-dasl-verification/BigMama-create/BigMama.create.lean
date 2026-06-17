@@ -1,0 +1,2 @@
+-- Declaration: BigMama.create
+-- Extracted by StaticSplit

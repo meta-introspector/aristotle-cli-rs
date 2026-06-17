@@ -1,0 +1,2 @@
+-- Declaration: GlobalInvariant.preserved_by_iteration
+-- Extracted by StaticSplit

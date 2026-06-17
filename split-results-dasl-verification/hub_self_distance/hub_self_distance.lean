@@ -1,0 +1,2 @@
+-- Declaration: hub_self_distance
+-- Extracted by StaticSplit

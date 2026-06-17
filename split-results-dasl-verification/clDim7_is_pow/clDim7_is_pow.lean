@@ -1,0 +1,2 @@
+-- Declaration: clDim7_is_pow
+-- Extracted by StaticSplit

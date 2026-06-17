@@ -1,0 +1,2 @@
+-- Declaration: sheafBlock_Spoke_digest_nonzero
+-- Extracted by StaticSplit

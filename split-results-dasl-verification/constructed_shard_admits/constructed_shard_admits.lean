@@ -1,0 +1,2 @@
+-- Declaration: constructed_shard_admits
+-- Extracted by StaticSplit

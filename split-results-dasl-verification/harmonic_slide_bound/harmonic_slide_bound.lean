@@ -1,0 +1,2 @@
+-- Declaration: harmonic_slide_bound
+-- Extracted by StaticSplit

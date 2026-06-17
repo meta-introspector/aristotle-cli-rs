@@ -1,0 +1,2 @@
+-- Declaration: three_layer_implies_two
+-- Extracted by StaticSplit

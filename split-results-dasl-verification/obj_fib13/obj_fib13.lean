@@ -1,0 +1,2 @@
+-- Declaration: obj_fib13
+-- Extracted by StaticSplit

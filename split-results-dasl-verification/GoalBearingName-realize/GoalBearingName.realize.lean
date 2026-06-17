@@ -1,0 +1,2 @@
+-- Declaration: GoalBearingName.realize
+-- Extracted by StaticSplit

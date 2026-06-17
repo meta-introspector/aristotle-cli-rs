@@ -1,0 +1,2 @@
+-- Declaration: monomyth_spore_germinates_ramanujan
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fungalFamily_distinct
+-- Extracted by StaticSplit

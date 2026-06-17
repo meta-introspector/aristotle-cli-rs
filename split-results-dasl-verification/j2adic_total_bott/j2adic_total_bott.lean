@@ -1,0 +1,2 @@
+-- Declaration: j2adic_total_bott
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: proofProgram
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: walk_visits_all_sectors
+-- Extracted by StaticSplit

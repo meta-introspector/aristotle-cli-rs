@@ -1,0 +1,2 @@
+-- Declaration: monster_hash_auto_congruent
+-- Extracted by StaticSplit

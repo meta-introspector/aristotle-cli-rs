@@ -1,0 +1,2 @@
+-- Declaration: no_ghost_mult_c1
+-- Extracted by StaticSplit

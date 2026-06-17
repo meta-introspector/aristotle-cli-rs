@@ -1,0 +1,2 @@
+-- Declaration: leech_conway_gluing
+-- Extracted by StaticSplit

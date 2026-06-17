@@ -1,0 +1,2 @@
+-- Declaration: representationSize
+-- Extracted by StaticSplit

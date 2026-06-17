@@ -1,0 +1,2 @@
+-- Declaration: identity_class
+-- Extracted by StaticSplit

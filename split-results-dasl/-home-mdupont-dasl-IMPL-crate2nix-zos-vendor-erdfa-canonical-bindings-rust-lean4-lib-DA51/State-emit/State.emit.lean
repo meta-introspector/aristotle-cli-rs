@@ -1,0 +1,2 @@
+-- Declaration: State.emit
+-- Extracted by StaticSplit

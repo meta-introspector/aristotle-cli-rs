@@ -1,0 +1,2 @@
+-- Declaration: bottClock_injective
+-- Extracted by StaticSplit

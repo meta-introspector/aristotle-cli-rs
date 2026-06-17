@@ -1,0 +1,2 @@
+-- Declaration: monomythSpore
+-- Extracted by StaticSplit

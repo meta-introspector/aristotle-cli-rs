@@ -1,0 +1,2 @@
+-- Declaration: canonicalRegimeBoundary
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monster_clifford_coprime
+-- Extracted by StaticSplit

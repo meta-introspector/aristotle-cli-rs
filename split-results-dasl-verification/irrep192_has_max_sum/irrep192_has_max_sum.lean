@@ -1,0 +1,2 @@
+-- Declaration: irrep192_has_max_sum
+-- Extracted by StaticSplit

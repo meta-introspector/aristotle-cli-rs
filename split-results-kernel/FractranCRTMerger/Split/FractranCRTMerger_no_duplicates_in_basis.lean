@@ -1,0 +1,70 @@
+import Split.FractranCRTMerger_FractranObject_cardinality
+import Split.FractranCRTMerger_obj_bootstrap
+import Split.False
+import Split.of_decide_eq_true
+import Split.instDecidableEqProd
+import Split.congrArg
+import Split.HEq_refl
+import Split.List_Mem_tail
+import Split.False_elim
+import Split.ZMod_decidableEq
+import Split.FractranCRTMerger_obj_senate100
+import Split.noConfusion_of_Nat
+import Split.FractranCRTMerger_gradedRegistry
+import Split.Membership_mem
+import Split.Eq_mp
+import Split.id
+import Split.FractranCRTMerger_obj_prime59
+import Split.Nat_instMod
+import Split.instHMod
+import Split.FractranCRTMerger_obj_ternary
+import Split.instOfNatNat
+import Split.FractranCRTMerger_obj_golay256
+import Split.FractranCRTMerger_obj_prime71
+import Split.ZMod
+import Split.FractranCRTMerger_obj_fib13
+import Split.Or_casesOn
+import Split.List_cons
+import Split.FractranCRTMerger_obj_bott8
+import Split.Bool_true
+import Split.List
+import Split.HMod_hMod
+import Split.FractranCRTMerger_obj_golay4096
+import Split.absurd
+import Split.List_instMembership
+import Split.FractranCRTMerger_FractranObject_address
+import Split.FractranCRTMerger_obj_bool
+import Split.FractranCRTMerger_obj_mckay196884
+import Split.FractranCRTMerger_obj_fin5
+import Split.Nat
+import Split.FractranCRTMerger_obj_ssp15
+import Split.FractranCRTMerger_obj_prime47
+import Split.List_Mem_head
+import Split.Bool
+import Split.Eq_ndrec
+import Split.FractranCRTMerger_obj_monster196883
+import Split.Eq_refl
+import Split.HEq
+import Split.FractranCRTMerger_obj_leech24
+import Split.instDecidableEqNat
+import Split.FractranCRTMerger_obj_ooda7
+import Split.Or
+import Split.FractranCRTMerger_obj_unit
+import Split.FractranCRTMerger_FractranObject
+import Split.Prod
+import Split.OfNat_ofNat
+import Split.Eq_symm
+import Split.List_Mem
+import Split.Decidable_decide
+import Split.Eq
+import Split.List_ctorIdx
+import Split.List_Mem_casesOn
+import Split.Eq_trans
+import Split.of_decide_eq_false
+import Split.List_nil
+
+-- FractranCRTMerger.no_duplicates_in_basis from environment
+-- theorem FractranCRTMerger.no_duplicates_in_basis : forall (a : FractranCRTMerger.FractranObject) (b : FractranCRTMerger.FractranObject), (Membership.mem.{0, 0} FractranCRTMerger.FractranObject (List.{0} FractranCRTMerger.FractranObject) (List.instMembership.{0} FractranCRTMerger.FractranObject) FractranCRTMerger.gradedRegistry a) -> (Membership.mem.{0, 0} FractranCRTMerger.FractranObject (List.{0} FractranCRTMerger.FractranObject) (List.instMembership.{0} FractranCRTMerger.FractranObject) FractranCRTMerger.gradedRegistry b) -> (Eq.{1} (Prod.{0, 0} (ZMod (OfNat.ofNat.{0} Nat 47 (instOfNatNat 47))) (Prod.{0, 0} (ZMod (OfNat.ofNat.{0} Nat 59 (instOfNatNat 59))) (ZMod (OfNat.ofNat.{0} Nat 71 (instOfNatNat 71))))) (FractranCRTMerger.FractranObject.address a) (FractranCRTMerger.FractranObject.address b)) -> (Eq.{1} Nat (HMod.hMod.{0, 0, 0} Nat Nat Nat (instHMod.{0} Nat Nat.instMod) (FractranCRTMerger.FractranObject.cardinality a) (OfNat.ofNat.{0} Nat 196883 (instOfNatNat 196883))) (HMod.hMod.{0, 0, 0} Nat Nat Nat (instHMod.{0} Nat Nat.instMod) (FractranCRTMerger.FractranObject.cardinality b) (OfNat.ofNat.{0} Nat 196883 (instOfNatNat 196883))))
+
+-- Stub: this file represents the declaration `FractranCRTMerger.no_duplicates_in_basis`.
+-- In a full split, the body would be extracted from the environment.

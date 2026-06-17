@@ -1,0 +1,15 @@
+import Split.PULift_up
+import Split.Nat
+import Split.UnifiedIPLDMemory_BottClass_ctorIdx
+import Split.UnifiedIPLDMemory_BottClass_class4
+import Split.UnifiedIPLDMemory_BottClass_ctorElim
+import Split.Eq_symm
+import Split.Eq
+import Split.UnifiedIPLDMemory_BottClass
+
+-- UnifiedIPLDMemory.BottClass.class4.elim from environment
+-- def UnifiedIPLDMemory.BottClass.class4.elim : forall {motive : UnifiedIPLDMemory.BottClass -> Sort.{u}} (t : UnifiedIPLDMemory.BottClass), (Eq.{1} Nat (UnifiedIPLDMemory.BottClass.ctorIdx t) 4) -> (motive UnifiedIPLDMemory.BottClass.class4) -> (motive t)
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `UnifiedIPLDMemory.BottClass.class4.elim`.
+-- In a full split, the body would be extracted from the environment.

@@ -1,0 +1,2 @@
+-- Declaration: RegState
+-- Extracted by StaticSplit

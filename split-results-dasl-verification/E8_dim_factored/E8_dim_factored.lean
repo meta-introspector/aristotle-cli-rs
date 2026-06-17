@@ -1,0 +1,2 @@
+-- Declaration: E8_dim_factored
+-- Extracted by StaticSplit

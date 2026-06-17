@@ -1,0 +1,2 @@
+-- Declaration: minimalKernel
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: dim_98304x
+-- Extracted by StaticSplit

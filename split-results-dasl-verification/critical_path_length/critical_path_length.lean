@@ -1,0 +1,2 @@
+-- Declaration: critical_path_length
+-- Extracted by StaticSplit

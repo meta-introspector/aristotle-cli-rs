@@ -1,0 +1,2 @@
+-- Declaration: cl05_img
+-- Extracted by StaticSplit

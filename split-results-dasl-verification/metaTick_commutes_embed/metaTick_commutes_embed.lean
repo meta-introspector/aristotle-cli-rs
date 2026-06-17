@@ -1,0 +1,2 @@
+-- Declaration: metaTick_commutes_embed
+-- Extracted by StaticSplit

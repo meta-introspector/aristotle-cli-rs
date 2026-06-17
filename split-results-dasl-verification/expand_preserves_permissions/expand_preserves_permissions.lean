@@ -1,0 +1,2 @@
+-- Declaration: expand_preserves_permissions
+-- Extracted by StaticSplit

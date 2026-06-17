@@ -1,0 +1,2 @@
+-- Declaration: hermes_addr
+-- Extracted by StaticSplit

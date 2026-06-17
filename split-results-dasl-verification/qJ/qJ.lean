@@ -1,0 +1,2 @@
+-- Declaration: qJ
+-- Extracted by StaticSplit

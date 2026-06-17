@@ -1,0 +1,2 @@
+-- Declaration: basin_is_singleton
+-- Extracted by StaticSplit

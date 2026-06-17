@@ -1,0 +1,2 @@
+-- Declaration: isShadow
+-- Extracted by StaticSplit

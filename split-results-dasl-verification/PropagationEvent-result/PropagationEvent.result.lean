@@ -1,0 +1,2 @@
+-- Declaration: PropagationEvent.result
+-- Extracted by StaticSplit

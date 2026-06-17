@@ -1,0 +1,2 @@
+-- Declaration: PartialCoalgebra.terminated
+-- Extracted by StaticSplit

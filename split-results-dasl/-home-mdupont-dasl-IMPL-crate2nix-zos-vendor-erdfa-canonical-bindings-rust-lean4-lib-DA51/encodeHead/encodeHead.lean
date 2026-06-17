@@ -1,0 +1,2 @@
+-- Declaration: encodeHead
+-- Extracted by StaticSplit

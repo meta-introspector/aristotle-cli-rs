@@ -1,0 +1,2 @@
+-- Declaration: supportCount
+-- Extracted by StaticSplit

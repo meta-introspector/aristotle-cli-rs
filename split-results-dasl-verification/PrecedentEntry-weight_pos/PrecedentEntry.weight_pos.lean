@@ -1,0 +1,2 @@
+-- Declaration: PrecedentEntry.weight_pos
+-- Extracted by StaticSplit

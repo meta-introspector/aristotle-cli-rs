@@ -1,0 +1,71 @@
+import Split.Eq_mpr
+import Split.Nat_add_le_add_iff_right
+import Split.False
+import Split.instHDiv
+import Split.HMul_hMul
+import Split.eq_false
+import Split.Nat_div_eq
+import Split.Nat_mod_inductionOn
+import Split.congrArg
+import Split.and_self
+import Split.Iff_rfl
+import Split.HSub_hSub
+import Split.Nat_le_add_left
+import Split.id
+import Split.HDiv_hDiv
+import Split.instSubNat
+import Split.instMulNat
+import Split.instOfNatNat
+import Split.LE_le
+import Split.ite_cond_eq_true
+import Split.instLENat
+import Split.false_iff
+import Split.Nat_casesAuxOn
+import Split.iff_self
+import Split.Nat_zero_mul
+import Split.instHAdd
+import Split.And
+import Split.Iff
+import Split.instHSub
+import Split.Nat_succ_mul
+import Split.And_right
+import Split.HAdd_hAdd
+import Split.Nat_le_zero_eq
+import Split.Nat
+import Split.And_intro
+import Split.congr
+import Split.LT_lt
+import Split.True
+import Split.eq_self
+import Split.Nat_instDiv
+import Split.propext
+import Split.Iff_mp
+import Split.eq_true
+import Split.of_eq_true
+import Split.Nat_decLt
+import Split.Eq_ndrec
+import Split.instAddNat
+import Split.Eq_refl
+import Split.Nat_add_sub_cancel
+import Split.congrFun'
+import Split.instLTNat
+import Split.instDecidableAnd
+import Split.Nat_not_le
+import Split.OfNat_ofNat
+import Split.Eq_symm
+import Split.ite_cond_eq_false
+import Split.Nat_succ
+import Split.Eq
+import Split.Nat_sub_le_sub_iff_right
+import Split.Nat_lt_of_lt_of_le
+import Split.Not
+import Split.Nat_decLe
+import Split.Eq_trans
+import Split.instHMul
+import Split.ite
+
+-- Nat.le_div_iff_mul_le from environment
+-- theorem Nat.le_div_iff_mul_le : forall {k : Nat} {x : Nat} {y : Nat}, (LT.lt.{0} Nat instLTNat (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) k) -> (Iff (LE.le.{0} Nat instLENat x (HDiv.hDiv.{0, 0, 0} Nat Nat Nat (instHDiv.{0} Nat Nat.instDiv) y k)) (LE.le.{0} Nat instLENat (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) x k) y))
+
+-- Stub: this file represents the declaration `Nat.le_div_iff_mul_le`.
+-- In a full split, the body would be extracted from the environment.

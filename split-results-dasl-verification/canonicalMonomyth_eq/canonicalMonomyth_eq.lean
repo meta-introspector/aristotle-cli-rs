@@ -1,0 +1,2 @@
+-- Declaration: canonicalMonomyth_eq
+-- Extracted by StaticSplit

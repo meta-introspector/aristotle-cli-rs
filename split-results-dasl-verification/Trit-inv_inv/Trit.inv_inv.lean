@@ -1,0 +1,2 @@
+-- Declaration: Trit.inv_inv
+-- Extracted by StaticSplit

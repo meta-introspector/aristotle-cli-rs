@@ -1,0 +1,2 @@
+-- Declaration: ColonizationAttempt
+-- Extracted by StaticSplit

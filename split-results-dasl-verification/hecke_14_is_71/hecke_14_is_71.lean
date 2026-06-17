@@ -1,0 +1,2 @@
+-- Declaration: hecke_14_is_71
+-- Extracted by StaticSplit

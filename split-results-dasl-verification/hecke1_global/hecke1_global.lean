@@ -1,0 +1,2 @@
+-- Declaration: hecke1_global
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: clDim8_value
+-- Extracted by StaticSplit

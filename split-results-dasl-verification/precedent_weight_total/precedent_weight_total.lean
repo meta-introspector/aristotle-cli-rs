@@ -1,0 +1,2 @@
+-- Declaration: precedent_weight_total
+-- Extracted by StaticSplit

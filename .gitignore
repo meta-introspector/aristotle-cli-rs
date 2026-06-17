@@ -1,4 +1,6 @@
 /target
+splitter-engine/
+.lake/
 
 # Flake lock file
 flake.lock
@@ -21,3 +23,4 @@ aristotle_projects.json
 # OS files
 .DS_Store
 Thumbs.db
+.lake/

@@ -1,0 +1,2 @@
+-- Declaration: ColonizationResult.getFeedback
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: sectorCoordForShard
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: type_counts_sum
+-- Extracted by StaticSplit

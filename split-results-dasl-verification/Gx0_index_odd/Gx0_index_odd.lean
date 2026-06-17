@@ -1,0 +1,2 @@
+-- Declaration: Gx0_index_odd
+-- Extracted by StaticSplit

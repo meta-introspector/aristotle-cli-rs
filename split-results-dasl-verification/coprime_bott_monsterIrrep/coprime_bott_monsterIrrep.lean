@@ -1,0 +1,2 @@
+-- Declaration: coprime_bott_monsterIrrep
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: namagiriPoint
+-- Extracted by StaticSplit

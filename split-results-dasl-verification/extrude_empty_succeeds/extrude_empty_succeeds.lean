@@ -1,0 +1,2 @@
+-- Declaration: extrude_empty_succeeds
+-- Extracted by StaticSplit

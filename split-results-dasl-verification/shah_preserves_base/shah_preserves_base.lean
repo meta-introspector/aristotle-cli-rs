@@ -1,0 +1,2 @@
+-- Declaration: shah_preserves_base
+-- Extracted by StaticSplit

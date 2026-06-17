@@ -1,0 +1,2 @@
+-- Declaration: rotate_period_3
+-- Extracted by StaticSplit

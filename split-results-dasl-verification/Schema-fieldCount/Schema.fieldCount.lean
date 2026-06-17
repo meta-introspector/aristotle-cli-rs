@@ -1,0 +1,2 @@
+-- Declaration: Schema.fieldCount
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ru_dvd_monster
+-- Extracted by StaticSplit

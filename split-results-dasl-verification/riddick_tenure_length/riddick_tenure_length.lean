@@ -1,0 +1,2 @@
+-- Declaration: riddick_tenure_length
+-- Extracted by StaticSplit

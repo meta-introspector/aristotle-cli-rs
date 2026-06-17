@@ -1,0 +1,2 @@
+-- Declaration: anomaly_detected
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: hardyVerifies
+-- Extracted by StaticSplit

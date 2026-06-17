@@ -1,0 +1,2 @@
+-- Declaration: BindingType
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: tritInvol_invol
+-- Extracted by StaticSplit

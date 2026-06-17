@@ -1,0 +1,2 @@
+-- Declaration: achievesConsensus
+-- Extracted by StaticSplit

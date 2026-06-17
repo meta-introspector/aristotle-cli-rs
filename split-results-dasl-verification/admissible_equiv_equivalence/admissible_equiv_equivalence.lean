@@ -1,0 +1,2 @@
+-- Declaration: admissible_equiv_equivalence
+-- Extracted by StaticSplit

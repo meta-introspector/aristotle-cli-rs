@@ -1,0 +1,2 @@
+-- Declaration: trivector_gate
+-- Extracted by StaticSplit

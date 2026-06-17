@@ -1,0 +1,2 @@
+-- Declaration: die_plate_size
+-- Extracted by StaticSplit

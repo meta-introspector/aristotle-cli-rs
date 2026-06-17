@@ -1,0 +1,2 @@
+-- Declaration: MonsterLieAlgebra
+-- Extracted by StaticSplit

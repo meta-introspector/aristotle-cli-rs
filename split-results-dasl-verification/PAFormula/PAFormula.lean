@@ -1,0 +1,2 @@
+-- Declaration: PAFormula
+-- Extracted by StaticSplit

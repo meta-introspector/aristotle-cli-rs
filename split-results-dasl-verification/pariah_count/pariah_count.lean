@@ -1,0 +1,2 @@
+-- Declaration: pariah_count
+-- Extracted by StaticSplit

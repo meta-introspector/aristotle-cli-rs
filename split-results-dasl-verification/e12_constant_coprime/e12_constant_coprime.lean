@@ -1,0 +1,2 @@
+-- Declaration: e12_constant_coprime
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fractionNewTerms
+-- Extracted by StaticSplit

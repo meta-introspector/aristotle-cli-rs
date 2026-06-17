@@ -1,0 +1,2 @@
+-- Declaration: CIDVersion
+-- Extracted by StaticSplit

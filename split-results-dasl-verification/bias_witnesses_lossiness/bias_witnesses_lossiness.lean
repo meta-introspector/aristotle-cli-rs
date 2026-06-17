@@ -1,0 +1,2 @@
+-- Declaration: bias_witnesses_lossiness
+-- Extracted by StaticSplit

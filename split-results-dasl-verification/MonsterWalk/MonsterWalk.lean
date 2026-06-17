@@ -1,0 +1,2 @@
+-- Declaration: MonsterWalk
+-- Extracted by StaticSplit

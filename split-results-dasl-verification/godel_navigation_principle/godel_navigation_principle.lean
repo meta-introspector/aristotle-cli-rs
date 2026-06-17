@@ -1,0 +1,2 @@
+-- Declaration: godel_navigation_principle
+-- Extracted by StaticSplit

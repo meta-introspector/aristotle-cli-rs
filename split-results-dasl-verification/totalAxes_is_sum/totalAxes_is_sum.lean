@@ -1,0 +1,2 @@
+-- Declaration: totalAxes_is_sum
+-- Extracted by StaticSplit

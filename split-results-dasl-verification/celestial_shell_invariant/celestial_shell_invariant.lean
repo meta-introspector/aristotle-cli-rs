@@ -1,0 +1,2 @@
+-- Declaration: celestial_shell_invariant
+-- Extracted by StaticSplit

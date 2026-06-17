@@ -1,0 +1,2 @@
+-- Declaration: FiberState.wellFormed
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: seventy_one_is_20th_prime
+-- Extracted by StaticSplit

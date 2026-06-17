@@ -1,0 +1,2 @@
+-- Declaration: obj_prime47
+-- Extracted by StaticSplit

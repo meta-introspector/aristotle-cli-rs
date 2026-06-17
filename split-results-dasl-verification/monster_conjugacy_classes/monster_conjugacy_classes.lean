@@ -1,0 +1,2 @@
+-- Declaration: monster_conjugacy_classes
+-- Extracted by StaticSplit

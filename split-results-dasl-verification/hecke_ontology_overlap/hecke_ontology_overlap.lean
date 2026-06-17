@@ -1,0 +1,2 @@
+-- Declaration: hecke_ontology_overlap
+-- Extracted by StaticSplit

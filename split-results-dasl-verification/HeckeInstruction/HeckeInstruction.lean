@@ -1,0 +1,2 @@
+-- Declaration: HeckeInstruction
+-- Extracted by StaticSplit

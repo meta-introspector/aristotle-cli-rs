@@ -1,0 +1,2 @@
+-- Declaration: fleischwolf_eq_diePlate
+-- Extracted by StaticSplit

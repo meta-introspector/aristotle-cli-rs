@@ -1,0 +1,2 @@
+-- Declaration: pointed_totality_card
+-- Extracted by StaticSplit

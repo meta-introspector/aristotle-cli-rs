@@ -1,0 +1,2 @@
+-- Declaration: AddressSpace
+-- Extracted by StaticSplit

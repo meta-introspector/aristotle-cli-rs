@@ -1,0 +1,2 @@
+-- Declaration: majorityLeader_before_all
+-- Extracted by StaticSplit

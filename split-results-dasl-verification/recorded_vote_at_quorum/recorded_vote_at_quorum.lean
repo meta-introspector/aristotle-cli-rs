@@ -1,0 +1,2 @@
+-- Declaration: recorded_vote_at_quorum
+-- Extracted by StaticSplit

@@ -1,0 +1,17 @@
+import Split.Pure_pure
+import Split.Monad_toApplicative
+import Split.Prod_mk
+import Split.Applicative_toPure
+import Split.StateT_bind_match_1
+import Split.Monad_toBind
+import Split.Bind_bind
+import Split.StateT
+import Split.Prod
+import Split.Monad
+
+-- StateT.map from environment
+-- def StateT.map : forall {σ : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.State.3880878766._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}}, (α -> β) -> (StateT.{u, v} σ m α) -> (StateT.{u, v} σ m β)
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `StateT.map`.
+-- In a full split, the body would be extracted from the environment.

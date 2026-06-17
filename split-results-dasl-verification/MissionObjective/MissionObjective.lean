@@ -1,0 +1,2 @@
+-- Declaration: MissionObjective
+-- Extracted by StaticSplit

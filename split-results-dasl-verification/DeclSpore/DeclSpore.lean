@@ -1,0 +1,2 @@
+-- Declaration: DeclSpore
+-- Extracted by StaticSplit

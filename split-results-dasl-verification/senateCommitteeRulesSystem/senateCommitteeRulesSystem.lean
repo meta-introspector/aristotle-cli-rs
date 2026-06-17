@@ -1,0 +1,2 @@
+-- Declaration: senateCommitteeRulesSystem
+-- Extracted by StaticSplit

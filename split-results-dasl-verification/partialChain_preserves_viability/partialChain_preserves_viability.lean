@@ -1,0 +1,2 @@
+-- Declaration: partialChain_preserves_viability
+-- Extracted by StaticSplit

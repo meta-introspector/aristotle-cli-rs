@@ -1,0 +1,2 @@
+-- Declaration: canonicalWeights_length
+-- Extracted by StaticSplit

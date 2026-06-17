@@ -1,0 +1,2 @@
+-- Declaration: sheafSections_different_eigenspace
+-- Extracted by StaticSplit

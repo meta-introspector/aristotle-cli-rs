@@ -1,0 +1,2 @@
+-- Declaration: ssp_trivector
+-- Extracted by StaticSplit

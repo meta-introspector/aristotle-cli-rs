@@ -1,0 +1,2 @@
+-- Declaration: stretch_increases_length
+-- Extracted by StaticSplit

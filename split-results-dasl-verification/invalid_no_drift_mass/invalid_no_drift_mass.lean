@@ -1,0 +1,2 @@
+-- Declaration: invalid_no_drift_mass
+-- Extracted by StaticSplit

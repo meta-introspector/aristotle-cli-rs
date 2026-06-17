@@ -1,0 +1,2 @@
+-- Declaration: ssp_last_three_product
+-- Extracted by StaticSplit

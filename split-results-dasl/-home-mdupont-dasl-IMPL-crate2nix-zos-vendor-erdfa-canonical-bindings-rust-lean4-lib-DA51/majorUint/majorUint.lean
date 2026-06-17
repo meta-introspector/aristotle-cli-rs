@@ -1,0 +1,2 @@
+-- Declaration: majorUint
+-- Extracted by StaticSplit

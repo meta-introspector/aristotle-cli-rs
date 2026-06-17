@@ -1,0 +1,2 @@
+-- Declaration: all_fungal_extruders_agree
+-- Extracted by StaticSplit

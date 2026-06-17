@@ -1,0 +1,2 @@
+-- Declaration: aristotle_has_ghost
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: M11_divides_M12
+-- Extracted by StaticSplit

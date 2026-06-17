@@ -1,0 +1,2 @@
+-- Declaration: assignNode
+-- Extracted by StaticSplit

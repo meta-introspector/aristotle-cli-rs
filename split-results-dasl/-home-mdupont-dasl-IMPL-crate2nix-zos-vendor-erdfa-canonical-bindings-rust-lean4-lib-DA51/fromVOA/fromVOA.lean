@@ -1,0 +1,2 @@
+-- Declaration: fromVOA
+-- Extracted by StaticSplit

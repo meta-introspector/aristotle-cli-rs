@@ -1,0 +1,2 @@
+-- Declaration: examples_valid
+-- Extracted by StaticSplit

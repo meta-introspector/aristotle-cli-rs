@@ -1,0 +1,2 @@
+-- Declaration: FederalConstitution
+-- Extracted by StaticSplit

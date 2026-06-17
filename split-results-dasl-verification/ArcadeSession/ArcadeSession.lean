@@ -1,0 +1,2 @@
+-- Declaration: ArcadeSession
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: bootstrapIndex
+-- Extracted by StaticSplit

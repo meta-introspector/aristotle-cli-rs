@@ -1,0 +1,2 @@
+-- Declaration: c2_decomp
+-- Extracted by StaticSplit

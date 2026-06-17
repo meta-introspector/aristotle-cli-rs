@@ -1,0 +1,2 @@
+-- Declaration: tower_period_full
+-- Extracted by StaticSplit

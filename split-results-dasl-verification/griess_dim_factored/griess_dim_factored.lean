@@ -1,0 +1,2 @@
+-- Declaration: griess_dim_factored
+-- Extracted by StaticSplit

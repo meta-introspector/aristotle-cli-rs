@@ -1,0 +1,2 @@
+-- Declaration: ternaryMul_assoc
+-- Extracted by StaticSplit

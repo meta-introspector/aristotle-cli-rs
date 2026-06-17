@@ -1,0 +1,2 @@
+-- Declaration: majorMap
+-- Extracted by StaticSplit

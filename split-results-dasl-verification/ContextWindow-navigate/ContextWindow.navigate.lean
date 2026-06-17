@@ -1,0 +1,2 @@
+-- Declaration: ContextWindow.navigate
+-- Extracted by StaticSplit

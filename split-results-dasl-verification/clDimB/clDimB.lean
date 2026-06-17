@@ -1,0 +1,2 @@
+-- Declaration: clDimB
+-- Extracted by StaticSplit

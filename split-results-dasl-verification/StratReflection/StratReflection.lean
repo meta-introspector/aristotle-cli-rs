@@ -1,0 +1,2 @@
+-- Declaration: StratReflection
+-- Extracted by StaticSplit

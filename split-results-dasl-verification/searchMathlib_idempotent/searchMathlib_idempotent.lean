@@ -1,0 +1,2 @@
+-- Declaration: searchMathlib_idempotent
+-- Extracted by StaticSplit

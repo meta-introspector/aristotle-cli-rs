@@ -1,0 +1,2 @@
+-- Declaration: mckay_c1_count
+-- Extracted by StaticSplit

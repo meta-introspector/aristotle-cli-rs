@@ -1,0 +1,2 @@
+-- Declaration: ColimitFiber.canonical
+-- Extracted by StaticSplit

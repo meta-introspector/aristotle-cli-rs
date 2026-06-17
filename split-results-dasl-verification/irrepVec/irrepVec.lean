@@ -1,0 +1,2 @@
+-- Declaration: irrepVec
+-- Extracted by StaticSplit

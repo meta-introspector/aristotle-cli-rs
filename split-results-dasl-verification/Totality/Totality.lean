@@ -1,0 +1,2 @@
+-- Declaration: Totality
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: retractTriple
+-- Extracted by StaticSplit

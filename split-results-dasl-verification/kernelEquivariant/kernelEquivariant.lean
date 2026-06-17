@@ -1,0 +1,2 @@
+-- Declaration: kernelEquivariant
+-- Extracted by StaticSplit

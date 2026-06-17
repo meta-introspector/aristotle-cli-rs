@@ -1,0 +1,2 @@
+-- Declaration: phi_eq_addressOfState
+-- Extracted by StaticSplit

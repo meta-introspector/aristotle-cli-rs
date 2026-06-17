@@ -1,0 +1,2 @@
+-- Declaration: bootstrapEmoji_encoding_correct
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: max_violations_in_passive_session
+-- Extracted by StaticSplit

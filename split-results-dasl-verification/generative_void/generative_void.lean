@@ -1,0 +1,2 @@
+-- Declaration: generative_void
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: windowedResidueProjection
+-- Extracted by StaticSplit

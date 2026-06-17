@@ -1,0 +1,2 @@
+-- Declaration: MonsterBase
+-- Extracted by StaticSplit

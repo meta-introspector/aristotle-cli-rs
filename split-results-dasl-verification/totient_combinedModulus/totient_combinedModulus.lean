@@ -1,0 +1,2 @@
+-- Declaration: totient_combinedModulus
+-- Extracted by StaticSplit

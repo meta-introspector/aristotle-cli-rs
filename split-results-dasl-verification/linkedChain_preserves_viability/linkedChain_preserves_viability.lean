@@ -1,0 +1,2 @@
+-- Declaration: linkedChain_preserves_viability
+-- Extracted by StaticSplit

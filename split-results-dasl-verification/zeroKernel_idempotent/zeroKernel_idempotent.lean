@@ -1,0 +1,2 @@
+-- Declaration: zeroKernel_idempotent
+-- Extracted by StaticSplit

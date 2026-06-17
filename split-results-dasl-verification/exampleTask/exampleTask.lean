@@ -1,0 +1,2 @@
+-- Declaration: exampleTask
+-- Extracted by StaticSplit

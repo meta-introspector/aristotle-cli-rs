@@ -1,0 +1,2 @@
+-- Declaration: obj_majority51
+-- Extracted by StaticSplit

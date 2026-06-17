@@ -1,0 +1,2 @@
+-- Declaration: dmzUmwelt
+-- Extracted by StaticSplit

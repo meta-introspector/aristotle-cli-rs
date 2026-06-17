@@ -1,0 +1,2 @@
+-- Declaration: umwelt_shared_shadows
+-- Extracted by StaticSplit

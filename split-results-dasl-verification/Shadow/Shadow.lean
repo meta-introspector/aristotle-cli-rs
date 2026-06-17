@@ -1,0 +1,2 @@
+-- Declaration: Shadow
+-- Extracted by StaticSplit

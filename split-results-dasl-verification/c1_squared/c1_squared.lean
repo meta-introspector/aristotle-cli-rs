@@ -1,0 +1,2 @@
+-- Declaration: c1_squared
+-- Extracted by StaticSplit

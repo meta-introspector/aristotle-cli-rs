@@ -1,0 +1,2 @@
+-- Declaration: tag_ne_0
+-- Extracted by StaticSplit

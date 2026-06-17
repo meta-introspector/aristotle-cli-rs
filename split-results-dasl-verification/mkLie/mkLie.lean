@@ -1,0 +1,2 @@
+-- Declaration: mkLie
+-- Extracted by StaticSplit

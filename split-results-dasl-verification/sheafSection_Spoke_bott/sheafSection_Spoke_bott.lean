@@ -1,0 +1,2 @@
+-- Declaration: sheafSection_Spoke_bott
+-- Extracted by StaticSplit

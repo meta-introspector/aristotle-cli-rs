@@ -1,0 +1,2 @@
+-- Declaration: HS_order_factored
+-- Extracted by StaticSplit

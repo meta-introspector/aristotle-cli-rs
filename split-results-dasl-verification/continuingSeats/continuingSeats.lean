@@ -1,0 +1,2 @@
+-- Declaration: continuingSeats
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CongruenceSpec
+-- Extracted by StaticSplit

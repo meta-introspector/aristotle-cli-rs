@@ -1,0 +1,2 @@
+-- Declaration: ramanujanCongruences
+-- Extracted by StaticSplit

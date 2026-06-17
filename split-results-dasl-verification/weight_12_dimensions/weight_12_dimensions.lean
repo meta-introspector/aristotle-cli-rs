@@ -1,0 +1,2 @@
+-- Declaration: weight_12_dimensions
+-- Extracted by StaticSplit

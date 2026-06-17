@@ -1,0 +1,2 @@
+-- Declaration: e4_cubed_minus_e6_squared_constant
+-- Extracted by StaticSplit

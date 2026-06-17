@@ -1,0 +1,2 @@
+-- Declaration: RamanujanReconstruction
+-- Extracted by StaticSplit

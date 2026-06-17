@@ -1,0 +1,79 @@
+import Split.Pure_pure
+import Split.Inhabited_default
+import Split.Lean_NameMap
+import Split.Lean_instDecidableEqOLeanLevel
+import Split.bne
+import Split.Lean_finalizeImport
+import Split.instMonadExceptOfMonadExceptOf
+import Split.Lean_Import
+import Split.Lean_importModulesCore
+import Split.instForInOfForIn'
+import Split.Lean_profileitIO
+import Split.Monad_toApplicative
+import Split.Lean_ImportStateM_run
+import Split.MonadExcept_throw
+import Split.Lean_withImporting
+import Split.IO
+import Split.Array_instMembership
+import Split.instMonadExceptOfEIO
+import Split.instDecidableRelLt
+import Split.inferInstance
+import Split.Lean_instInhabitedImportState
+import Split.EIO
+import Split.instDecidableEqBool
+import Split.ForIn_forIn
+import Split.Lean_NameMap_instEmptyCollection
+import Split.instOfNatNat
+import Split.instMonadEIO
+import Split.Applicative_toPure
+import Split.instBEqOfDecidableEq
+import Split.Membership
+import Split.ForInStep
+import Split.List_toArray
+import Split.Lean_Name_anonymous
+import Split.Array
+import Split.IO_userError
+import Split.Bool_true
+import Split.Lean_Import_module
+import Split.Lean_OLeanLevel_private
+import Split.Unit
+import Split.Array_forM
+import Split.PUnit
+import Split.Nat
+import Split.LT_lt
+import Split.Lean_loadPlugin
+import Split.Bool
+import Split.Lean_Name
+import Split.Monad_toBind
+import Split.UInt32
+import Split.Bind_bind
+import Split.PUnit_unit
+import Split.IO_Error
+import Split.Lean_ImportArtifacts
+import Split.Lean_OLeanLevel
+import Split.EmptyCollection_emptyCollection
+import Split.Array_instForIn'InferInstanceMembershipOfMonad
+import Split.optParam
+import Split.Prod
+import Split.OfNat_ofNat
+import Split.Bool_false
+import Split.Lean_Options
+import Split.Decidable_decide
+import Split.Eq
+import Split.UInt32_instOfNat
+import Split.Array_size
+import Split.Lean_Environment
+import Split.System_FilePath
+import Split.Lean_instOrdOLeanLevel
+import Split.ForInStep_yield
+import Split.Lean_ImportState
+import Split.Lean_instLTOLeanLevel
+import Split.List_nil
+import Split.ite
+
+-- Lean.importModules from environment
+-- def Lean.importModules : (Array.{0} Lean.Import) -> Lean.Options -> (optParam.{1} UInt32 (OfNat.ofNat.{0} UInt32 0 (UInt32.instOfNat 0))) -> (optParam.{1} (Array.{0} System.FilePath) (List.toArray.{0} System.FilePath (List.nil.{0} System.FilePath))) -> (optParam.{1} Bool Bool.false) -> (optParam.{1} Bool Bool.false) -> (optParam.{1} Lean.OLeanLevel Lean.OLeanLevel.private) -> (optParam.{1} (Lean.NameMap Lean.ImportArtifacts) (EmptyCollection.emptyCollection.{0} (Lean.NameMap Lean.ImportArtifacts) (Lean.NameMap.instEmptyCollection Lean.ImportArtifacts))) -> (IO Lean.Environment)
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `Lean.importModules`.
+-- In a full split, the body would be extracted from the environment.

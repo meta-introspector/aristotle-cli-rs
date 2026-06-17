@@ -1,0 +1,2 @@
+-- Declaration: bootstrapEmoji_clifford_correct
+-- Extracted by StaticSplit

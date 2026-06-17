@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: AristotleWeaver.Core.BoundingBox.noConfusion : forall {P : Sort.{u}} {t : AristotleWeaver.Core.BoundingBox} {t' : AristotleWeaver.Core.BoundingBox}, (Eq.{1} AristotleWeaver.Core.BoundingBox t t') -> (AristotleWeaver.Core.BoundingBox.noConfusionType.{u} P t t')
+def AristotleWeaver.Core.BoundingBox.noConfusion : forall {P : Sort.{u}} {t : AristotleWeaver.Core.BoundingBox} {t' : AristotleWeaver.Core.BoundingBox}, (Eq.{1} AristotleWeaver.Core.BoundingBox t t') -> (AristotleWeaver.Core.BoundingBox.noConfusionType.{u} P t t') :=
+  fun {P : Sort.{u}} {t : AristotleWeaver.Core.BoundingBox} {t' : AristotleWeaver.Core.BoundingBox} (eq : Eq.{1} AristotleWeaver.Core.BoundingBox t t') => Eq.ndrec.{u, 1} AristotleWeaver.Core.BoundingBox t (fun {t' : AristotleWeaver.Core.BoundingBox} => AristotleWeaver.Core.BoundingBox.noConfusionType.{u} P t t') (AristotleWeaver.Core.BoundingBox.casesOn.{u} (fun {t : AristotleWeaver.Core.BoundingBox} => AristotleWeaver.Core.BoundingBox.noConfusionType.{u} P t t) t (fun (x : Float) (y : Float) (w : Float) (h : Float) (k : (Eq.{1} Float x x) -> (Eq.{1} Float y y) -> (Eq.{1} Float w w) -> (Eq.{1} Float h h) -> P) => k (Eq.refl.{1} Float x) (Eq.refl.{1} Float y) (Eq.refl.{1} Float w) (Eq.refl.{1} Float h))) t' eq

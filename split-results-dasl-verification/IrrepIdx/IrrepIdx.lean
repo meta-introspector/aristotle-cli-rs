@@ -1,0 +1,2 @@
+-- Declaration: IrrepIdx
+-- Extracted by StaticSplit

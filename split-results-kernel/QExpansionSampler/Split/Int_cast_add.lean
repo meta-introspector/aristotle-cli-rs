@@ -1,0 +1,71 @@
+import Split.neg_add_rev
+import Split.AddGroup_toSubtractionMonoid
+import Split.Int_cast
+import Split.Eq_mpr
+import Split.NegZeroClass_toNeg
+import Split.Int_cast_natCast
+import Split.Nat_succ_eq_add_one
+import Split.AddMonoid_toAddSemigroup
+import Split.AddGroupWithOne_toAddGroup
+import Split.congrArg
+import Split.add_assoc
+import Split.AddMonoid_toAddZeroClass
+import Split.AddGroupWithOne_toAddMonoidWithOne
+import Split.sub_eq_add_neg
+import Split.HSub_hSub
+import Split.Int_negSucc_add_ofNat
+import Split.AddZeroClass_toAddZero
+import Split.Int_cast_negSucc
+import Split.id
+import Split.AddMonoidWithOne_toNatCast
+import Split.SubtractionMonoid_toSubNegZeroMonoid
+import Split.instOfNatNat
+import Split.Int
+import Split.SubtractionMonoid_toSubNegMonoid
+import Split.AddGroupWithOne_toIntCast
+import Split.SubNegZeroMonoid_toNegZeroClass
+import Split.Nat_cast
+import Split.SubNegMonoid_toSub
+import Split.Nat_cast_add
+import Split.instHAdd
+import Split.AddSemigroup_toAdd
+import Split.eq_neg_add_iff_add_eq
+import Split.instHSub
+import Split.AddGroup_toSubNegMonoid
+import Split.sub_eq_iff_eq_add
+import Split.HAdd_hAdd
+import Split.Int_subNatNat
+import Split.Nat
+import Split.congr
+import Split.True
+import Split.eq_self
+import Split.SubNegMonoid_toNeg
+import Split.propext
+import Split.Nat_add_assoc
+import Split.of_eq_true
+import Split.Int_instAdd
+import Split.Int_ofNat_add_negSucc
+import Split.Int_cast_subNatNat
+import Split.instAddNat
+import Split.AddZero_toAdd
+import Split.Eq_refl
+import Split.AddGroupWithOne
+import Split.instNatCastInt
+import Split.Int_negSucc_add_negSucc
+import Split.AddMonoidWithOne_toAddMonoid
+import Split.Int_negSucc
+import Split.SubNegMonoid_toAddMonoid
+import Split.OfNat_ofNat
+import Split.Eq_symm
+import Split.Nat_succ
+import Split.Eq
+import Split.Neg_neg
+import Split.Eq_trans
+import Split.Nat_add_right_comm
+import Split.Nat_add_comm
+
+-- Int.cast_add from environment
+-- theorem Int.cast_add : forall {R : Type.{u}} [inst._@.Mathlib.Data.Int.Cast.Basic.2358612238._hygCtx._hyg.3 : AddGroupWithOne.{u} R] (m : Int) (n : Int), Eq.{succ u} R (Int.cast.{u} R (AddGroupWithOne.toIntCast.{u} R inst._@.Mathlib.Data.Int.Cast.Basic.2358612238._hygCtx._hyg.3) (HAdd.hAdd.{0, 0, 0} Int Int Int (instHAdd.{0} Int Int.instAdd) m n)) (HAdd.hAdd.{u, u, u} R R R (instHAdd.{u} R (AddSemigroup.toAdd.{u} R (AddMonoid.toAddSemigroup.{u} R (AddMonoidWithOne.toAddMonoid.{u} R (AddGroupWithOne.toAddMonoidWithOne.{u} R inst._@.Mathlib.Data.Int.Cast.Basic.2358612238._hygCtx._hyg.3))))) (Int.cast.{u} R (AddGroupWithOne.toIntCast.{u} R inst._@.Mathlib.Data.Int.Cast.Basic.2358612238._hygCtx._hyg.3) m) (Int.cast.{u} R (AddGroupWithOne.toIntCast.{u} R inst._@.Mathlib.Data.Int.Cast.Basic.2358612238._hygCtx._hyg.3) n))
+
+-- Stub: this file represents the declaration `Int.cast_add`.
+-- In a full split, the body would be extracted from the environment.

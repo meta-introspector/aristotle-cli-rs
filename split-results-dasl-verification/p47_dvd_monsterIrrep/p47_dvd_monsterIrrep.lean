@@ -1,0 +1,2 @@
+-- Declaration: p47_dvd_monsterIrrep
+-- Extracted by StaticSplit

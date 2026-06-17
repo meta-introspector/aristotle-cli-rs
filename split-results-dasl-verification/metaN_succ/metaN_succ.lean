@@ -1,0 +1,2 @@
+-- Declaration: metaN_succ
+-- Extracted by StaticSplit

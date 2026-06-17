@@ -1,0 +1,2 @@
+-- Declaration: HarbotFaction
+-- Extracted by StaticSplit

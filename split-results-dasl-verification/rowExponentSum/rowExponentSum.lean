@@ -1,0 +1,2 @@
+-- Declaration: rowExponentSum
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: bottCoilAt
+-- Extracted by StaticSplit

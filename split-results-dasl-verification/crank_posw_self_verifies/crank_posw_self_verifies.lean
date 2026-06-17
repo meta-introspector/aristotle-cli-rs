@@ -1,0 +1,2 @@
+-- Declaration: crank_posw_self_verifies
+-- Extracted by StaticSplit

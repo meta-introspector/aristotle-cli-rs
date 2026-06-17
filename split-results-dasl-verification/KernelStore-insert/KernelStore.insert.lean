@@ -1,0 +1,2 @@
+-- Declaration: KernelStore.insert
+-- Extracted by StaticSplit

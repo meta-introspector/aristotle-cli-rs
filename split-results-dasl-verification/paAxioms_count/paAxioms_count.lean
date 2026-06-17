@@ -1,0 +1,2 @@
+-- Declaration: paAxioms_count
+-- Extracted by StaticSplit

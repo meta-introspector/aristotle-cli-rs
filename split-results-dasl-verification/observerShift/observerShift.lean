@@ -1,0 +1,2 @@
+-- Declaration: observerShift
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: crown_product
+-- Extracted by StaticSplit

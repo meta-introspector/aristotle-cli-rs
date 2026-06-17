@@ -1,0 +1,2 @@
+-- Declaration: growHypha
+-- Extracted by StaticSplit

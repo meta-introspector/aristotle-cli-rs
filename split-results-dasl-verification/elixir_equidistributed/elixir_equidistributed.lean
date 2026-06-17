@@ -1,0 +1,2 @@
+-- Declaration: elixir_equidistributed
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: compressWindow
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: type3_count
+-- Extracted by StaticSplit

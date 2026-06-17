@@ -1,0 +1,2 @@
+-- Declaration: quorumForming
+-- Extracted by StaticSplit

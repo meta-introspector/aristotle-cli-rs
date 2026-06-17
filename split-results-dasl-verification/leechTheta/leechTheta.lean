@@ -1,0 +1,2 @@
+-- Declaration: leechTheta
+-- Extracted by StaticSplit

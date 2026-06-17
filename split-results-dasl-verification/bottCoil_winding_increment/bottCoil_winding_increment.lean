@@ -1,0 +1,2 @@
+-- Declaration: bottCoil_winding_increment
+-- Extracted by StaticSplit

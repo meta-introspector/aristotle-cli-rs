@@ -1,0 +1,2 @@
+-- Declaration: selfLocating
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: return_retraction_idempotent
+-- Extracted by StaticSplit

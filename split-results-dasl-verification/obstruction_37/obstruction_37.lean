@@ -1,0 +1,2 @@
+-- Declaration: obstruction_37
+-- Extracted by StaticSplit

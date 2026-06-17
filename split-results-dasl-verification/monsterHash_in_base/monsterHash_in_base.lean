@@ -1,0 +1,2 @@
+-- Declaration: monsterHash_in_base
+-- Extracted by StaticSplit

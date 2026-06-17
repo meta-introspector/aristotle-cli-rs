@@ -1,0 +1,72 @@
+import Split.Iff_mpr
+import Split.Eq_mpr
+import Split.False
+import Split.Decidable_casesOn
+import Split.getElem?_neg
+import Split.Iff_of_eq
+import Split.Option_ctorIdx
+import Split.congrArg
+import Split.False_elim
+import Split.GetElem_getElem_congr_simp
+import Split.HSub_hSub
+import Split.instInhabitedTrue
+import Split.Decidable
+import Split.List_instGetElem?NatLtLength
+import Split.noConfusion_of_Nat
+import Split.Option_some_injEq
+import Split.Option_some
+import Split.Exists
+import Split.Nat_brecOn
+import Split.id
+import Split.instSubNat
+import Split.instOfNatNat
+import Split.false_iff
+import Split.if_pos
+import Split.List_cons
+import Split.GetElem_getElem
+import Split.Nat_below
+import Split.iff_self
+import Split.Option_none
+import Split.List
+import Split.instHAdd
+import Split.forall_false
+import Split.Unit
+import Split.Iff
+import Split.instHSub
+import Split.HAdd_hAdd
+import Split.instNonemptyOfInhabited
+import Split.Nat
+import Split.exists_prop_congr
+import Split.congr
+import Split.LT_lt
+import Split.True
+import Split.propext
+import Split.of_eq_true
+import Split.instAddNat
+import Split.Eq_refl
+import Split.congrFun'
+import Split.instDecidableEqNat
+import Split.instLTNat
+import Split.GetElem?_getElem?
+import Split.List_getElem?_cons
+import Split.List_instGetElemNatLtLength
+import Split.OfNat_ofNat
+import Split.not_false_eq_true
+import Split.eq_false'
+import Split.Nat_succ
+import Split.Eq
+import Split.List_length
+import Split.if_neg
+import Split.Not
+import Split.List_instLawfulGetElemNatLtLength
+import Split.Eq_trans
+import Split.Nat_lt_of_succ_lt_succ
+import Split.List_nil
+import Split.Option
+import Split.ite
+
+-- List.getElem?_eq_some_iff from environment
+-- theorem List.getElem?_eq_some_iff : forall {α : Type.{u_1}} {i : Nat} {a : α} {l : List.{u_1} α}, Iff (Eq.{succ u_1} (Option.{u_1} α) (GetElem?.getElem?.{u_1, 0, u_1} (List.{u_1} α) Nat α (fun (as : List.{u_1} α) (i : Nat) => LT.lt.{0} Nat instLTNat i (List.length.{u_1} α as)) (List.instGetElem?NatLtLength.{u_1} α) l i) (Option.some.{u_1} α a)) (Exists.{0} (LT.lt.{0} Nat instLTNat i (List.length.{u_1} α l)) (fun (h : LT.lt.{0} Nat instLTNat i (List.length.{u_1} α l)) => Eq.{succ u_1} α (GetElem.getElem.{u_1, 0, u_1} (List.{u_1} α) Nat α (fun (as : List.{u_1} α) (i : Nat) => LT.lt.{0} Nat instLTNat i (List.length.{u_1} α as)) (List.instGetElemNatLtLength.{u_1} α) l i h) a))
+
+-- Stub: this file represents the declaration `List.getElem?_eq_some_iff`.
+-- In a full split, the body would be extracted from the environment.

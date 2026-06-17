@@ -1,0 +1,2 @@
+-- Declaration: repr_is_bott
+-- Extracted by StaticSplit

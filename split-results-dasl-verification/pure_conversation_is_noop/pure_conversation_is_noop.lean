@@ -1,0 +1,2 @@
+-- Declaration: pure_conversation_is_noop
+-- Extracted by StaticSplit

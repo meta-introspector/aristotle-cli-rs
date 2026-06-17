@@ -1,0 +1,2 @@
+-- Declaration: morph_Spore_from_DAO
+-- Extracted by StaticSplit

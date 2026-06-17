@@ -1,0 +1,2 @@
+-- Declaration: Hypha
+-- Extracted by StaticSplit

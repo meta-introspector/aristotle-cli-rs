@@ -1,0 +1,2 @@
+-- Declaration: leech_mod2_type4
+-- Extracted by StaticSplit

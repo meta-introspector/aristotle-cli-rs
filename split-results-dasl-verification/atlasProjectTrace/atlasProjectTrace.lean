@@ -1,0 +1,2 @@
+-- Declaration: atlasProjectTrace
+-- Extracted by StaticSplit

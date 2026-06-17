@@ -1,0 +1,2 @@
+-- Declaration: bottClock_periodic
+-- Extracted by StaticSplit

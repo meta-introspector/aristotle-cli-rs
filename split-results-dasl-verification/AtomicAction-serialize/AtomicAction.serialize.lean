@@ -1,0 +1,2 @@
+-- Declaration: AtomicAction.serialize
+-- Extracted by StaticSplit

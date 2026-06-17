@@ -1,0 +1,2 @@
+-- Declaration: canonicalGradedSection
+-- Extracted by StaticSplit

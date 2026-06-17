@@ -1,0 +1,2 @@
+-- Declaration: GrothendieckEndo.liftToTotal
+-- Extracted by StaticSplit

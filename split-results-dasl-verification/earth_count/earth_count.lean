@@ -1,0 +1,2 @@
+-- Declaration: earth_count
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: GradedTotal.fiber
+-- Extracted by StaticSplit

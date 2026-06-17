@@ -1,0 +1,2 @@
+-- Declaration: extended_registry_length
+-- Extracted by StaticSplit

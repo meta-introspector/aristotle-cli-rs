@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_namagiri_maximal_distance
+-- Extracted by StaticSplit

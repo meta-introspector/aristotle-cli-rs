@@ -1,0 +1,2 @@
+-- Declaration: hecke_compose
+-- Extracted by StaticSplit

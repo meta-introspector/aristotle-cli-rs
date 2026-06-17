@@ -1,0 +1,2 @@
+-- Declaration: jCoefficients
+-- Extracted by StaticSplit

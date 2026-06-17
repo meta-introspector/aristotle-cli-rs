@@ -1,0 +1,2 @@
+-- Declaration: obj_DAOOrganism
+-- Extracted by StaticSplit

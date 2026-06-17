@@ -1,0 +1,2 @@
+-- Declaration: meta_shift_trivial_on_base
+-- Extracted by StaticSplit

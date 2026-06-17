@@ -1,0 +1,2 @@
+-- Declaration: permitAll_reduces_to_committee
+-- Extracted by StaticSplit

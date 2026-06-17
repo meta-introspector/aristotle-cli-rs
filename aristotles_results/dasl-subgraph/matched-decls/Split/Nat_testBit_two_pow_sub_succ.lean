@@ -1,0 +1,69 @@
+import Split.instPowNat
+import Split.Eq_mpr
+import Split.False
+import Split.Nat_recAux
+import Split.instHDiv
+import Split.Bool_not
+import Split.instDecidableTrue
+import Split.congrArg
+import Split.Decidable_decide_congr_simp
+import Split.Nat_zero_div
+import Split.HSub_hSub
+import Split.decide_eq_false
+import Split.Nat_testBit_zero
+import Split.id
+import Split.HDiv_hDiv
+import Split.Bool_and
+import Split.Nat_instMod
+import Split.instHMod
+import Split.decide_false
+import Split.instSubNat
+import Split.instOfNatNat
+import Split.Bool_true_and
+import Split.LE_le
+import Split.decide_true
+import Split.instLENat
+import Split.instNatPowNat
+import Split.Bool_true
+import Split.instHAdd
+import Split.HMod_hMod
+import Split.Nat_zero_testBit
+import Split.Iff
+import Split.instHSub
+import Split.HPow_hPow
+import Split.HAdd_hAdd
+import Split.Bool_false_and
+import Split.Nat
+import Split.congr
+import Split.LT_lt
+import Split.True
+import Split.Nat_testBit
+import Split.eq_self
+import Split.Nat_instDiv
+import Split.instDecidableFalse
+import Split.Decidable_byContradiction
+import Split.Bool
+import Split.of_eq_true
+import Split.Nat_decLt
+import Split.instAddNat
+import Split.congrFun'
+import Split.instDecidableEqNat
+import Split.Nat_not_decide_mod_two_eq_one
+import Split.instHPow
+import Split.instLTNat
+import Split.OfNat_ofNat
+import Split.not_false_eq_true
+import Split.Bool_false
+import Split.Decidable_decide
+import Split.Eq
+import Split.instDecidableIff
+import Split.Not
+import Split.Nat_sub_eq_zero_of_le
+import Split.Nat_testBit_succ
+import Split.Eq_trans
+
+-- Nat.testBit_two_pow_sub_succ from environment
+-- theorem Nat.testBit_two_pow_sub_succ : forall {x : Nat} {n : Nat}, (LT.lt.{0} Nat instLTNat x (HPow.hPow.{0, 0, 0} Nat Nat Nat (instHPow.{0, 0} Nat Nat (instPowNat.{0} Nat instNatPowNat)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) n)) -> (forall (i : Nat), Eq.{1} Bool (Nat.testBit (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) (HPow.hPow.{0, 0, 0} Nat Nat Nat (instHPow.{0, 0} Nat Nat (instPowNat.{0} Nat instNatPowNat)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) n) (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) x (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)))) i) (Bool.and (Decidable.decide (LT.lt.{0} Nat instLTNat i n) (Nat.decLt i n)) (Bool.not (Nat.testBit x i))))
+
+-- Stub: this file represents the declaration `Nat.testBit_two_pow_sub_succ`.
+-- In a full split, the body would be extracted from the environment.

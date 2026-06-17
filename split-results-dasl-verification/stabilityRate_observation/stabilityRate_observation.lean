@@ -1,0 +1,2 @@
+-- Declaration: stabilityRate_observation
+-- Extracted by StaticSplit

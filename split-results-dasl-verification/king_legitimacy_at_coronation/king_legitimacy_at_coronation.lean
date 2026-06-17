@@ -1,0 +1,2 @@
+-- Declaration: king_legitimacy_at_coronation
+-- Extracted by StaticSplit

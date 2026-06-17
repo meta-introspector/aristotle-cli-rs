@@ -1,0 +1,71 @@
+import Split.Eq_mpr
+import Split.MonsterTrain_Carriage_canonical
+import Split.MonsterTrain_MonsterCarriageTrain_cars
+import Split.congrArg
+import Split.List_instDecidableEqNil
+import Split.List_map
+import Split.AddMonoid_toAddZeroClass
+import Split.HSub_hSub
+import Split.MonsterTrain_CARBlock
+import Split.Nat_instAddMonoid
+import Split.Option_some
+import Split.MonsterTrain_extendCAR
+import Split.id
+import Split.MonsterTrain_encodeTrain
+import Split.MonsterTrain_jCoefficient
+import Split.Prod_mk
+import Split.instSubNat
+import Split.instOfNatNat
+import Split.MonsterTrain_stretchLimo
+import Split.List_zipIdx_append
+import Split.MonsterTrain_CARBlock_mk
+import Split.zero_add
+import Split.Prod_fst
+import Split.MonsterTrain_encodeTrain_match_1
+import Split.List_cons
+import Split.List_length_zipIdx
+import Split.Option_none
+import Split.instHAppendOfAppend
+import Split.List
+import Split.instHAdd
+import Split.instHSub
+import Split.HAdd_hAdd
+import Split.MonsterTrain_MonsterCarriageTrain_wellFormed
+import Split.Nat
+import Split.congr
+import Split.True
+import Split.eq_self
+import Split.MonsterTrain_Carriage_capacity
+import Split.MonsterTrain_CID_mk
+import Split.List_length_map
+import Split.of_eq_true
+import Split.instAddNat
+import Split.Eq_refl
+import Split.MonsterTrain_Carriage_mk
+import Split.MonsterTrain_MonsterCarriageTrain_monotoneGrades
+import Split.congrFun'
+import Split.instDecidableEqNat
+import Split.List_map_append
+import Split.MonsterTrain_CID
+import Split.List_instAppend
+import Split.Prod
+import Split.ite_congr
+import Split.OfNat_ofNat
+import Split.List_zipIdx
+import Split.Eq
+import Split.Prod_snd
+import Split.List_length
+import Split.Not
+import Split.HAppend_hAppend
+import Split.Eq_trans
+import Split.MonsterTrain_MonsterCarriageTrain
+import Split.MonsterTrain_Carriage
+import Split.List_nil
+import Split.Option
+import Split.ite
+
+-- MonsterTrain.bridge_simulation from environment
+-- theorem MonsterTrain.bridge_simulation : forall (t : MonsterTrain.MonsterCarriageTrain), (MonsterTrain.MonsterCarriageTrain.wellFormed t) -> (MonsterTrain.MonsterCarriageTrain.monotoneGrades t) -> (Eq.{1} (List.{0} MonsterTrain.CARBlock) (MonsterTrain.encodeTrain (MonsterTrain.stretchLimo t)) (MonsterTrain.extendCAR (MonsterTrain.encodeTrain t)))
+
+-- Stub: this file represents the declaration `MonsterTrain.bridge_simulation`.
+-- In a full split, the body would be extracted from the environment.

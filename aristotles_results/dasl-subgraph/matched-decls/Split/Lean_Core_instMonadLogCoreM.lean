@@ -1,0 +1,86 @@
+import Split.Pure_pure
+import Split.Lean_BaseMessage_pos
+import Split.Lean_MessageData
+import Split.Lean_Core_State_mk
+import Split.Lean_Core_State_messages
+import Split.Lean_MonadRef_getRef
+import Split.Lean_NamingContext_mk
+import Split.Lean_Core_instMonadRefCoreM
+import Split.instMonadReaderOfReaderTOfMonad
+import Split.IO_instMonadLiftSTRealWorldBaseIO
+import Split.modify
+import Split.Lean_BaseMessage_isSilent
+import Split.String
+import Split.Lean_FileMap
+import Split.Lean_BaseMessage_severity
+import Split.Lean_MonadFileMap_mk
+import Split.Lean_Core_State_env
+import Split.instMonadLiftT
+import Split.MonadState_get
+import Split.Lean_MonadLog
+import Split.Lean_Message
+import Split.MonadReader_read
+import Split.StateRefT'_instMonadStateOfOfMonadLiftTST
+import Split.IO_RealWorld
+import Split.EIO
+import Split.Lean_MonadLog_mk
+import Split.instDecidableEqBool
+import Split.Lean_MessageData_withNamingContext
+import Split.instMonadEIO
+import Split.Lean_BaseMessage_fileName
+import Split.ReaderT_instMonadLift
+import Split.Applicative_toPure
+import Split.Lean_MessageData_hasTag
+import Split.Lean_Core_State_auxDeclNGen
+import Split.Lean_Core_Context_suppressElabErrors
+import Split.Bool_true
+import Split.Unit
+import Split.Lean_Core_State_nextMacroScope
+import Split.ST
+import Split.Lean_Core_State
+import Split.Lean_Core_CoreM
+import Split.Lean_Core_instMonadLogCoreM_match_1
+import Split.instMonadReaderOfMonadReaderOf
+import Split.StateRefT'
+import Split.StateRefT'_instMonad
+import Split.PUnit
+import Split.Lean_BaseMessage_caption
+import Split.Lean_Core_State_ngen
+import Split.Lean_BaseMessage_endPos
+import Split.Lean_Core_Context_fileName
+import Split.Lean_Core_State_cache
+import Split.instMonadStateOfMonadStateOf
+import Split.Bool
+import Split.Lean_Name
+import Split.Monad_toBind
+import Split.Lean_BaseMessage_data
+import Split.Bind_bind
+import Split.Lean_Core_Context_currNamespace
+import Split.PUnit_unit
+import Split.instMonadLiftTOfMonadLift
+import Split.Lean_Core_instMonadCoreM
+import Split.instMonadStateOfOfMonadLift
+import Split.Lean_Core_Context_fileMap
+import Split.Lean_Core_State_infoState
+import Split.Bool_false
+import Split.BaseIO
+import Split.Lean_BaseMessage_keepFullRange
+import Split.ReaderT_instApplicativeOfMonad
+import Split.Eq
+import Split.Lean_Core_State_traceState
+import Split.Lean_Exception
+import Split.instMonadLiftBaseIOEIO
+import Split.Lean_Core_State_snapshotTasks
+import Split.Lean_Core_Context_openDecls
+import Split.Lean_Core_Context
+import Split.Lean_MessageLog_add
+import Split.Lean_BaseMessage_mk
+import Split.ite
+import Split.Lean_MessageLog_hasErrors
+
+-- Lean.Core.instMonadLogCoreM from environment
+-- def Lean.Core.instMonadLogCoreM : Lean.MonadLog Lean.Core.CoreM
+-- (definition body omitted)
+
+-- Stub: this file represents the declaration `Lean.Core.instMonadLogCoreM`.
+-- In a full split, the body would be extracted from the environment.

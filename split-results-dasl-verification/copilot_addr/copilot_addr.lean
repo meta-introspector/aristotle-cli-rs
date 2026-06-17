@@ -1,0 +1,2 @@
+-- Declaration: copilot_addr
+-- Extracted by StaticSplit

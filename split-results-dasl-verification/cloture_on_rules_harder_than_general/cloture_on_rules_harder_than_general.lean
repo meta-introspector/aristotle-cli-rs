@@ -1,0 +1,2 @@
+-- Declaration: cloture_on_rules_harder_than_general
+-- Extracted by StaticSplit
