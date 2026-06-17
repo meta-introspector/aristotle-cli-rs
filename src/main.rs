@@ -21,6 +21,7 @@ mod file_index;
 mod index;
 mod notebooklm;
 mod pipeline;
+mod replay;
 mod version;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
@@ -194,6 +195,13 @@ enum Commands {
         parallel: usize,
         #[arg(long)]
         limit: Option<usize>,
+        #[arg(long)]
+        dry_run: bool,
+    },
+    /// Replay entire archive chronologically into a fresh split/merge repo
+    Replay {
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
         #[arg(long)]
         dry_run: bool,
     },
@@ -1875,6 +1883,10 @@ async fn main() -> Result<()> {
         Commands::Pipeline { parallel, limit, dry_run } => {
             info!("Executing pipeline command");
             pipeline::cmd_pipeline(*parallel, *limit, *dry_run).await?;
+        }
+        Commands::Replay { output_dir, dry_run } => {
+            info!("Executing replay command");
+            replay::cmd_replay(output_dir.clone(), *dry_run).await?;
         }
         Commands::Version { results_dir, output_dir } => {
             info!("Executing version command");
