@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: AristotleWeaver.Core.SimpleExpr.bvar.elim : forall {motive : AristotleWeaver.Core.SimpleExpr -> Sort.{u}} (t : AristotleWeaver.Core.SimpleExpr), (Eq.{1} Nat (AristotleWeaver.Core.SimpleExpr.ctorIdx t) 0) -> (forall (a._@._internal._hyg.0 : Nat), motive (AristotleWeaver.Core.SimpleExpr.bvar a._@._internal._hyg.0)) -> (motive t)
+def AristotleWeaver.Core.SimpleExpr.bvar.elim : forall {motive : AristotleWeaver.Core.SimpleExpr -> Sort.{u}} (t : AristotleWeaver.Core.SimpleExpr), (Eq.{1} Nat (AristotleWeaver.Core.SimpleExpr.ctorIdx t) 0) -> (forall (a._@._internal._hyg.0 : Nat), motive (AristotleWeaver.Core.SimpleExpr.bvar a._@._internal._hyg.0)) -> (motive t) :=
+  fun {motive : AristotleWeaver.Core.SimpleExpr -> Sort.{u}} (t : AristotleWeaver.Core.SimpleExpr) (h : Eq.{1} Nat (AristotleWeaver.Core.SimpleExpr.ctorIdx t) 0) (bvar : forall (a._@._internal._hyg.0 : Nat), motive (AristotleWeaver.Core.SimpleExpr.bvar a._@._internal._hyg.0)) => AristotleWeaver.Core.SimpleExpr.ctorElim.{u} motive 0 t (Eq.symm.{1} Nat (AristotleWeaver.Core.SimpleExpr.ctorIdx t) 0 h) (PULift.up.{u, u} (forall (a._@._internal._hyg.0 : Nat), motive (AristotleWeaver.Core.SimpleExpr.bvar a._@._internal._hyg.0)) bvar)

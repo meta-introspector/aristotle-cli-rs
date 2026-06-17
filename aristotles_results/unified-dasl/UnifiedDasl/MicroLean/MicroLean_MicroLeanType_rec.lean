@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: recursor MicroLean.MicroLeanType.rec : forall {motive : MicroLean.MicroLeanType -> Sort.{u}}, (motive MicroLean.MicroLeanType.nat) -> (motive MicroLean.MicroLeanType.bool) -> (forall (domain : MicroLean.MicroLeanType) (codomain : MicroLean.MicroLeanType), (motive domain) -> (motive codomain) -> (motive (MicroLean.MicroLeanType.function domain codomain))) -> (forall (elem : MicroLean.MicroLeanType), (motive elem) -> (motive (MicroLean.MicroLeanType.array elem))) -> (forall (fst : MicroLean.MicroLeanType) (snd : MicroLean.MicroLeanType), (motive fst) -> (motive snd) -> (motive (MicroLean.MicroLeanType.prod fst snd))) -> (forall (t : MicroLean.MicroLeanType), motive t)

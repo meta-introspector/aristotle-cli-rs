@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem MicroLean.not_all_boxed : Not (forall (t : MicroLean.MicroLeanType), Eq.{1} Bool (MicroLean.isBoxed t) Bool.true)
+theorem MicroLean.not_all_boxed : Not (forall (t : MicroLean.MicroLeanType), Eq.{1} Bool (MicroLean.isBoxed t) Bool.true) :=
+  fun (h : forall (t : MicroLean.MicroLeanType), Eq.{1} Bool (MicroLean.isBoxed t) Bool.true) => absurd.{0} (Eq.{1} Bool (MicroLean.isBoxed MicroLean.counterTerm) Bool.true) False (h MicroLean.counterTerm) (of_decide_eq_true (Not (Eq.{1} Bool (MicroLean.isBoxed MicroLean.counterTerm) Bool.true)) (instDecidableNot (Eq.{1} Bool (MicroLean.isBoxed MicroLean.counterTerm) Bool.true) (instDecidableEqBool (MicroLean.isBoxed MicroLean.counterTerm) Bool.true)) (id.{0} (Eq.{1} Bool (Decidable.decide (Not (Eq.{1} Bool (MicroLean.isBoxed MicroLean.counterTerm) Bool.true)) (instDecidableNot (Eq.{1} Bool (MicroLean.isBoxed MicroLean.counterTerm) Bool.true) (instDecidableEqBool (MicroLean.isBoxed MicroLean.counterTerm) Bool.true))) Bool.true) (Eq.refl.{1} Bool Bool.true)))

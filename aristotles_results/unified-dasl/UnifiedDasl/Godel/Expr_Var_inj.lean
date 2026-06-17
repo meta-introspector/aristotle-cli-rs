@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Expr.Var.inj : forall {a._@._internal._hyg.0 : String} {a_1._@._internal._hyg.0 : String}, (Eq.{1} Expr (Expr.Var a._@._internal._hyg.0) (Expr.Var a_1._@._internal._hyg.0)) -> (Eq.{1} String a._@._internal._hyg.0 a_1._@._internal._hyg.0)
+theorem Expr.Var.inj : forall {a._@._internal._hyg.0 : String} {a_1._@._internal._hyg.0 : String}, (Eq.{1} Expr (Expr.Var a._@._internal._hyg.0) (Expr.Var a_1._@._internal._hyg.0)) -> (Eq.{1} String a._@._internal._hyg.0 a_1._@._internal._hyg.0) :=
+  fun {a._@._internal._hyg.0 : String} {a_1._@._internal._hyg.0 : String} (x._@.RequestProject.MetaReflective.3091913453._hygCtx._hyg.39 : Eq.{1} Expr (Expr.Var a._@._internal._hyg.0) (Expr.Var a_1._@._internal._hyg.0)) => Expr.Var.noConfusion.{0} (Eq.{1} String a._@._internal._hyg.0 a_1._@._internal._hyg.0) a._@._internal._hyg.0 a_1._@._internal._hyg.0 x._@.RequestProject.MetaReflective.3091913453._hygCtx._hyg.39 (fun (a_eq._@._internal.0.RequestProject.MetaReflective.3091913453._hygCtx._hyg.40 : Eq.{1} String a._@._internal._hyg.0 a_1._@._internal._hyg.0) => a_eq._@._internal.0.RequestProject.MetaReflective.3091913453._hygCtx._hyg.40)

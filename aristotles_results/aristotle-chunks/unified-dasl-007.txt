@@ -1,0 +1,61 @@
+# Unified DASL Formalization — Chunk 7/16
+
+## Context
+
+This is part of the Unified DASL project — a canonical formalization combining
+the DASL/IPLD/CBOR mathematical ecosystem into a single Lean4 project.
+
+## Mathematical Foundation
+
+The j-invariant q-expansion provides the natural periodic table:
+  j(τ) = q⁻¹ + 744 + 196884q + 21493760q² + 864299970q³ + O(q⁴)
+
+Monster group: 196883 = 47 × 59 × 71 (minimal non-trivial irrep)
+SSP basis: Cl(15,0,0) = [2,3,5,7,11,13,17,19,23,29,31,41,47,59,71]
+
+## Declarations to Formalize (50 items)
+
+## MicroLean (50 declarations)
+  - MicroLean_LinearMicroType_qualified_noConfusion
+  - MicroLean_LinearMicroType_qualified_sizeOf_spec
+  - MicroLean_LinearMicroType_rec
+  - MicroLean_LinearMicroType_recOn
+  - MicroLean_MicroLeanType
+  - MicroLean_MicroLeanType_array
+  - MicroLean_MicroLeanType_array_elim
+  - MicroLean_MicroLeanType_array_inj
+  - MicroLean_MicroLeanType_array_injEq
+  - MicroLean_MicroLeanType_array_noConfusion
+  - MicroLean_MicroLeanType_array_sizeOf_spec
+  - MicroLean_MicroLeanType_below
+  - MicroLean_MicroLeanType_bool
+  - MicroLean_MicroLeanType_bool_elim
+  - MicroLean_MicroLeanType_bool_sizeOf_spec
+  - MicroLean_MicroLeanType_brecOn
+  - MicroLean_MicroLeanType_brecOn_eq
+  - MicroLean_MicroLeanType_brecOn_go
+  - MicroLean_MicroLeanType_casesOn
+  - MicroLean_MicroLeanType_ctorElim
+  ... +30 more
+
+## Task
+
+For each declaration above:
+1. Write a complete Lean4 formalization with full proofs
+2. Connect to existing mathlib theorems where possible  
+3. Ensure all proofs are sorry-free and kernel-checked
+4. Add proper imports and module structure
+5. Place in RequestProject/ module for Aristotle submission
+
+## Architecture
+
+These declarations form a commutative sheaf:
+  - Ipld: content addressing layer (CID, multihash, Merkle DAG)
+  - Cbor: encoding/decoding layer (codec, round-trip)
+  - Monster: group theory (Hecke operators, vertex algebras, moonshine)
+  - Sheaf: gluing layer (Čech cohomology, restriction maps)
+  - MicroLean: type system (polyglot FFI: Rust/C++/JS/Python/CABI)
+  - Weaver: visualization (graph layout, bounding boxes)
+  - Journal: persistence (Merkle chains, content-addressed blocks)
+  - Primes: arithmetic (SSP factorization, valuations)
+  - Godel: meta-layer (self-reference, reflection, quines)
