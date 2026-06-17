@@ -57,7 +57,10 @@ pub async fn cmd_fetch(
             .send()
             .await?;
         let data: serde_json::Value = resp.json().await?;
-        let items = data["data"].as_array().unwrap_or(&vec![]);
+        let items = match data.get("data").and_then(|d| d.as_array()) {
+            Some(arr) => arr,
+            None => break,
+        };
 
         if items.is_empty() {
             break;
