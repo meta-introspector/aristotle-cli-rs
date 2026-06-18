@@ -50,7 +50,7 @@ fn commit_project(
         format!("aristotle: {}", project_name)
     } else {
         let first_line = description.lines().next().unwrap_or("");
-        let subject = if first_line.len() > 72 {
+        let _subject = if first_line.len() > 72 {
             format!("{}...", &first_line[..69])
         } else {
             first_line.to_string()

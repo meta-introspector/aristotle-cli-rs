@@ -1,10 +1,9 @@
 /// fetch — Incremental Aristotle sync (git-fetch style).
 /// Only downloads new or updated projects, then git-versions them.
 use std::fs;
-use std::path::PathBuf;
 use std::collections::HashSet;
 use crate::load_config;
-use tracing::{debug, info, instrument, warn};
+use tracing::{instrument, warn};
 
 /// Run a lightweight incremental fetch: poll API, download only new/changed, version.
 #[instrument(skip(limit))]

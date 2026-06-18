@@ -5,34 +5,33 @@
     nixpkgs.url = "git+file:///mnt/data1/git/github.com/NixOS/nixpkgs.git?ref=omaster";
     crane.url = "git+file:///mnt/data1/git/github.com/ipetkov/crane.git?ref=omaster";
     flake-utils.url = "git+file:///mnt/data1/git/github.com/numtide/flake-utils.git?ref=omain";
+    rust-overlay.url = "git+file:///mnt/data1/git/github.com/oxalica/rust-overlay.git?ref=omaster";
   };
 
-  outputs = { self, nixpkgs, crane, flake-utils, ... }:
+  outputs = { self, nixpkgs, crane, flake-utils, rust-overlay }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ rust-overlay.overlays.default ];
+        };
         craneLib = crane.mkLib pkgs;
 
-        src = pkgs.lib.cleanSourceWith {
-            src = ./.;
-            filter = path: type:
-              let
-                baseName = baseNameOf (toString path);
-              in
-                ! (
-                  baseName == ".git" ||
-                  baseName == "target" ||
-                  baseName == "result"
-                );
-          };
+        rawGitSrc = builtins.fetchGit {
+          url = "git+file:///mnt/data1/git/github.com/arist/aristotle-manager.git";
+          rev = "b96e6c36e52572544389700ed8a437b6e8973d90";
+        };
+
+        cleanedSrc = craneLib.cleanCargoSource rawGitSrc;
 
         cargoArtifacts = craneLib.buildDepsOnly {
-          inherit src;
+          src = cleanedSrc;
           buildInputs = [ pkgs.libgit2 pkgs.openssl.dev pkgs.zlib ];
         };
 
         myCrate = craneLib.buildPackage {
-          inherit src cargoArtifacts;
+          src = cleanedSrc;
+          cargoArtifacts = cargoArtifacts;
           buildInputs = [ pkgs.libgit2 pkgs.openssl.dev pkgs.zlib ]; 
         };
       in
