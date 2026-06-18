@@ -3,12 +3,14 @@
 A tool for polling Aristotle results and managing Lean4 project compilation. This project provides both shell scripts and a Rust-based command-line interface for automating the process of:
 
 - Polling the Aristotle API for new project results
+- Submitting Aristotle projects and asking follow-up project-scoped prompts
 - Managing Lean4 project compilation
 - Tracking build status and results
 
 ## Features
 
 - **Poll for new projects**: Download and process new results from Aristotle
+- **Interactive Aristotle API workflow**: Submit prompts, list projects, ask follow-up questions, and inspect task events
 - **Build management**: Compile all Lean4 projects with proper error handling
 - **Parallel downloads**: Support for concurrent project processing
 - **Comprehensive logging**: Detailed logs for debugging and monitoring
@@ -107,19 +109,36 @@ make rust-clippy
 cargo run -- --help
 
 # Configure API key
-cargo run -- configure set --api-key YOUR_KEY
+export ARISTOTLE_API_KEY=YOUR_KEY
+
+# Or persist an API key explicitly
+cargo run -- configure set -k YOUR_KEY --persist
 
 # Show configuration
 cargo run -- configure show
 
+# Check Aristotle server/toolchain version
+cargo run -- version
+
+# Submit a prompt, optionally with a Lean project directory
+cargo run -- submit "Fill in all sorries" --project-dir ./my-lean-project --wait
+
+# List projects and ask follow-up prompts
+cargo run -- list --limit 10
+cargo run -- ask <project-id> "Continue, try a different lemma strategy" --wait
+cargo run -- show <project-id> --limit 20
+
 # Poll for new projects
 cargo run -- poll
 
-# Poll and build projects
-cargo run -- poll-and-build
-
 # Build all projects
 cargo run -- build
+
+# Download one project result
+cargo run -- download <project-id> --destination result.tar.gz
+
+# Bulk-download available results
+cargo run -- download -j 4 --verbose
 
 # Show results
 cargo run -- results
@@ -171,10 +190,28 @@ slack_webhook = ""
 
 This project uses the Aristotle API at `https://aristotle.harmonic.fun/api/v3`.
 
+Aristotle's interactive workflow is project-scoped. It is not a standalone chat-completions API:
+
+1. Create a project with a prompt, optionally uploading a Lean/project archive.
+2. Ask follow-up prompts against that project.
+3. Poll tasks/events for progress and output.
+
+The endpoint model matches the current official Python SDK (`aristotlelib` 2.0.0, released 2026-05-14).
+
 ### Endpoints Used
 
 - `GET /api/v3/project` - List projects
-- `GET /api/v3/result/{id}` - Download project result
+- `POST /api/v3/project` - Submit a new project prompt
+- `GET /api/v3/project/{id}` - Get project metadata
+- `POST /api/v3/project/{id}/ask` - Submit a follow-up project-scoped prompt
+- `GET /api/v3/project/{id}/tasks` - List project tasks
+- `GET /api/v3/task/{id}` - Get task status
+- `GET /api/v3/task/{id}/events` - List task events
+- `GET /api/v3/project/{id}/result` - Download project result files
+- `GET /api/v3/project/{id}/input` - Download uploaded input files when no result exists
+- `GET /api/v3/version` - Show Aristotle Lean toolchain metadata
+
+OpenAPI/docs URLs were checked and were not exposed publicly at the time this was documented.
 
 ### Authentication
 
@@ -184,8 +221,24 @@ Set your API key using:
 # Via environment variable
 export ARISTOTLE_API_KEY=your_key_here
 
-# Or via the CLI
-cargo run -- configure set --api-key your_key_here
+# Or via the CLI for the current process only
+cargo run -- configure set -k your_key_here
+
+# Or persist it in ~/.config/aristotle-manager/config.toml
+cargo run -- configure set -k your_key_here --persist
+```
+
+The CLI resolves API keys in this order: in-memory key, `ARISTOTLE_API_KEY`, persisted config.
+
+### Official Python CLI Reference
+
+The official SDK can be used directly for comparison:
+
+```bash
+uvx --from aristotlelib aristotle submit "Prove this theorem..." --wait
+uvx --from aristotlelib aristotle list --limit 10
+uvx --from aristotlelib aristotle ask <project-id> "Continue, try a different lemma strategy"
+uvx --from aristotlelib aristotle show <project-id> --limit 20
 ```
 
 ## Development
