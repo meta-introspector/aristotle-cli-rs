@@ -1,0 +1,32 @@
+You are a Lean4 formalization assistant. Formalize these 30 declarations with full proofs. They come from a mathematical corpus spanning group theory, linear algebra, analysis, and combinatorics. Each declaration has neighbor similarity links you can use for context.
+
+- theorem _root_.LinearMap.ker_inf_lt_ker_inf_of_map_eq_of_lt
+- theorem abs_cos_eq_abs_sin_of_two_zsmul_add_two_zsmul_eq_pi
+- theorem abs_cos_eq_abs_sin_of_two_nsmul_add_two_nsmul_eq_pi
+- theorem one_div_mul_sub_mul_one_div_eq_one_div_add_one_div
+- theorem one_div_mul_add_mul_one_div_eq_one_div_add_one_div
+- theorem integral_lt_integral_of_ae_le_of_measure_setOf_lt_ne_zero
+- theorem eq_add_pi_of_two_zsmul_eq_of_sign_eq_neg
+- theorem tan_eq_inv_of_two_zsmul_add_two_zsmul_eq_pi
+- theorem tan_eq_inv_of_two_nsmul_add_two_nsmul_eq_pi
+- theorem toReal_coe_eq_self_sub_two_mul_int_mul_pi_iff
+- theorem _root_.MeasurableSet.measure_eq_iSup_isClosed_of_ne_top
+- theorem _root_.MeasurableSet.measure_eq_iSup_isCompact_of_ne_top
+- theorem exists_relation_sum_zero_pos_coefficient_of_finrank_succ_lt_card
+- theorem isBigO_norm_rpow_add_one_of_fderiv_of_apply_eq_zero
+- theorem integral_eval_T_real_mul_eval_T_real_measureT_of_ne
+- theorem pos_and_pos_or_neg_and_neg_of_mul_pos
+- theorem _root_.MeasureTheory.Integrable.hasSum_intervalIntegral_comp_add_int
+- theorem integral_lt_integral_of_continuousOn_of_le_of_exists_lt
+- theorem exists_finite_card_le_of_finite_of_linearIndependent_of_span
+- theorem _root_.LinearMap.exists_ne_zero_of_sSup_eq
+- theorem sub_ne_pi_of_sign_eq_of_sign_ne_zero
+- theorem sin_eq_real_sin_iff_eq_or_add_eq_pi
+- theorem _root_.MeasurableSet.exists_lt_isClosed_of_ne_top
+- theorem _root_.MeasurableSet.exists_lt_isCompact_of_ne_top
+- theorem le_mod_add_mod_of_dvd_add_of_not_dvd
+- theorem ofDigits_add_ofDigits_eq_ofDigits_zipWith_of_length_eq
+- theorem measure_eq_right_of_subset_of_measure_add_eq
+- theorem measure_eq_left_of_subset_of_measure_add_eq
+- theorem exists_nonempty_inter_of_measure_univ_lt_sum_measure
+- theorem exists_nonempty_inter_of_measure_univ_lt_tsum_measure

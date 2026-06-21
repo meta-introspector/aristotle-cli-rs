@@ -1,0 +1,1000 @@
+ 1030  nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1031  exit
+ 1032  cd ..
+ 1033  git push local
+ 1034  cd
+ 1035  ls -altr
+ 1036  cd dasl-planning/
+ 1037  ls -latr
+ 1038  exit
+ 1039  cd projects/forgecode
+ 1040  nix run .
+ 1041  top
+ 1042  cd dasl-planning/
+ 1043  vibe
+ 1044  ls
+ 1045  nix develop /home/mdupont/llm-agents.nix#pi -- --session 019ea3e6-b82f-74b8-96ed-b0716b61c3b7
+ 1046  nix run /home/mdupont/llm-agents.nix#pi -- --session 019ea3e6-b82f-74b8-96ed-b0716b61c3b7
+ 1047  . ~/.deepseek/env.sh
+ 1048  nix run /home/mdupont/llm-agents.nix#pi 
+ 1049  cd projects/
+ 1050  cd system-manager/
+ 1051  cd
+ 1052  cd ./pastebin
+ 1053  ./deploy.sh 
+ 1054  kilo
+ 1055  kilo -s ses_140009e28ffeA8w1YTYl495uDZ
+ 1056  top
+ 1057  ps xafu 3546323
+ 1058  ps xafu | grep 3546323
+ 1059  lsof -p 3546323
+ 1060  sudo lsof -p 3546323
+ 1061  lean
+ 1062  cd -
+ 1063  cd ..
+ 1064  cd diagonalize/
+ 1065  nix run github:numtide/llm-agents.nix#pi -- --session 019ec0fb-66e4-7483-8d90-5524f9501a32
+ 1066  lake
+ 1067  #. ~/.deepseek/env.sh && nix run github:numtide/llm-agents.nix#pi -- --session 019e951b-8863-7731-ad3f-c60b800d86b6
+ 1068  . ~/.deepseek/env.sh && nix run github:numtide/llm-agents.nix#pi -- --session 019ec219-5f28-71d0-9c37-08bfc64323dc
+ 1069  cd projects/system-manager/system-manager
+ 1070  git status
+ 1071  git commt -m 'remove vendor' -a
+ 1072  git commit -m 'remove vendor' -a
+ 1073  git commit -m 'remove vendor' -a -n
+ 1074  nix build .
+ 1075  nix flake update
+ 1076  top
+ 1077  cd 
+ 1078  cd pastebin
+ 1079  git status
+ 1080  ncdu
+ 1081  cargo clean
+ 1082  rm -rf target/
+ 1083  ifconfig 
+ 1084  dhclient
+ 1085  sudo dhclient
+ 1086  ifconfig 
+ 1087  top
+ 1088  cd projects/
+ 1089  mkdir sysadmin
+ 1090  cd sysadmin/
+ 1091  git init
+ 1092  gemini
+ 1093  cd ..
+ 1094  cd sparql-gui
+ 1095  ./deploy.sh 
+ 1096  cd ..
+ 1097  cd system-manager/system-manager
+ 1098  gemini
+ 1099  cd pastebin
+ 1100  emacs .gitmodules 
+ 1101  ps xauf | grep pi
+ 1102  cd projects/arist
+ 1103  ls
+ 1104  nix run github:numtide/llm-agents.nix#pi
+ 1105  nix develop ../lean-split-tool/minimal-test/
+ 1106  . ~/.deepseek/env.sh && nix run github:numtide/llm-agents.nix#pi -- --session  019ec219-5f28-71d0-9c37-08bfc64323dc
+ 1107  nix develop ../lean-split-tool/minimal-test/
+ 1108  nix develop ~/projects/lean-split-tool/minimal-test/
+ 1109  cd projects/nora/
+ 1110  ./deploy.sh 
+ 1111  ps xauf | grep nora
+ 1112  locate diagonalize
+ 1113  cd ..
+ 1114  mkdir diagonalize
+ 1115  cd diagonalize/
+ 1116  locate diagonalize > locate.txt
+ 1117  . ~/.deepseek/env.sh
+ 1118  . ~/.deepseek/env.sh && nix run github:numtide/llm-agents.nix#pi 
+ 1119  cd ..
+ 1120  cd lean-split-tool/minimal-test/
+ 1121  nix develop
+ 1122  RUST_BACKTRACE=true cargo run --bin system-manager -- --sudo switch --flake /home/mdupont/.gemini/tmp/sysadmin/sm-test#default
+ 1123  cd /home/mdupont/.gemini/tmp/sysadmin/sm-test#default
+ 1124  cd /home/mdupont/.gemini/tmp/sysadmin/
+ 1125  ls
+ 1126  RUST_BACKTRACE=true system-manager -- --sudo switch --flake /home/mdupont/.gemini/tmp/sysadmin/sm-test#default
+ 1127  RUST_BACKTRACE=true system-manager --  switch --flake /home/mdupont/.gemini/tmp/sysadmin/sm-test#default
+ 1128  RUST_BACKTRACE=true system-manager  switch --flake /home/mdupont/.gemini/tmp/sysadmin/sm-test#default
+ 1129  sudo RUST_BACKTRACE=true system-manager  switch --flake /home/mdupont/.gemini/tmp/sysadmin/sm-test#default
+ 1130  which system-manager
+ 1131  sudo RUST_BACKTRACE=true /home/mdupont/.nix-profile/bin/system-manager  switch --flake /home/mdupont/.gemini/tmp/sysadmin/sm-test#default
+ 1132  /home/mdupont/.nix-profile/bin/system-manager --version
+ 1133  cd
+ 1134  cd projects/sparql-gui
+ 1135  ls
+ 1136  emacs flake.nix 
+ 1137  cd 
+ 1138  cd /mnt/data1/dasl-tiles-rust
+ 1139  ncdu
+ 1140  cd
+ 1141  mkdir pastebin-clean
+ 1142  cd pastebin-clean/
+ 1143  mv ~/pastebin/_gen/ .
+ 1144  mv ~/pastebin/perf-data/ .
+ 1145  exit
+ 1146  ncdu
+ 1147  cd .git
+ 1148  cd modules/
+ 1149  ls
+ 1150  cd Custom-File-Crawler/
+ 1151  ls
+ 1152  cat config 
+ 1153  git push origin
+ 1154  cd ..
+ 1155  rm -rf Custom-File-Crawler/
+ 1156  ncdu
+ 1157  exit
+ 1158  cd 
+ 1159  #locate diagonalize > locate.txt
+ 1160  cd projects/
+ 1161  cd diagonalize/
+ 1162  ls
+ 1163  find -name \*.rs
+ 1164  cd ..
+ 1165  ls -latr
+ 1166  cd dasl-tiles-rust-wt/
+ 1167  ls
+ 1168  git status
+ 1169  ls
+ 1170  rm -rf target/
+ 1171  find -name
+ 1172  find
+ 1173  git status
+ 1174  cd ..
+ 1175  cd dasl-tiles-rust/
+ 1176  ls
+ 1177  git status
+ 1178  find
+ 1179  ncdu
+ 1180  cd ..
+ 1181  ls
+ 1182  ls *shmem*
+ 1183  cd
+ 1184  cd dasl
+ 1185  cd index/
+ 1186  locate shmem \.rs 
+ 1187  locate shmem \.rs ipdl
+ 1188  locate shmem \.rs ipld
+ 1189  #/mnt/data1/time-2026/02-february/22/dasl/ipld-car-ipc-shmem-linux-vendor-deps/
+ 1190  cd
+ 1191  cd projects/
+ 1192  ln -s /mnt/data1/time-2026/02-february/22/dasl/ipld-car-ipc-shmem-linux-vendor-deps/ 
+ 1193  locate ipld shmeme
+ 1194  locate ipld shmem
+ 1195  locate ipld shmem linux
+ 1196  locate ipld shmem linux Cargo.toml
+ 1197  locate ipld shmem linux Cargo.toml | less
+ 1198  ln -s /mnt/data1/time-2026/02-february/22/dasl/ipld-car-ipc-shmem-linux/
+ 1199  cd ipld-car-ipc-shmem-linux
+ 1200  ls
+ 1201  ncdu
+ 1202  . ~/.deepseek/env.sh && nix run github:numtide/llm-agents.nix#pi 
+ 1203  cd
+ 1204  cd projects/lettacode/
+ 1205  nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1206  exit
+ 1207  locate .zkperf
+ 1208  locate /.zkperf/
+ 1209  rm -rf /mnt/data1/time-2026/04-april/10/vibe-experiment/Custom-File-Crawler-workspace/output/test-run/.zkperf/
+ 1210  cd ..
+ 1211  mkdir zkperf-clean
+ 1212  cd zkperf-clean/
+ 1213  locate /.zkperf/ > list.txt
+ 1214  cut -d / -f1-3 list.txt  | sort | uniq -c | sort -rn
+ 1215  cut -d / -f1-7 list.txt  | sort | uniq -c | sort -rn
+ 1216  locate /mnt/data1/nix-store/store/bi5f42kr8k7k5wkl6b84qvxlybc5jzbl-p1i2msf2236yvwsr3hx9g81zf4z5slqm-source/
+ 1217  cut -d / -f1-3 list.txt  | sort | uniq -c | sort -rn
+ 1218  cut -d / -f1-7 list.txt  | sort | uniq -c | sort -rn
+ 1219  cut -d / -f1-13 list.txt  | sort | uniq -c | sort -rn
+ 1220  cut -d / -f1-12 list.txt  | sort | uniq -c | sort -rn
+ 1221  cut -d / -f1-11 list.txt  | sort | uniq -c | sort -rn
+ 1222  ut -d / -f1-10 list.txt  | sort | uniq -c | sort -rn
+ 1223  cut -d / -f1-9 list.txt  | sort | uniq -c | sort -rn
+ 1224  rm -rf /mnt/data1/time-2026/04-april/26/zkperf/.zkperf/audit /mnt/data1/time-2026/04-april/10/todo_txt_output/ 
+ 1225  cut -d / -f1-9 list.txt  | sort | uniq -c | sort -rn
+ 1226  rm -rf /mnt/data1/time-2026/04-april/26/zkperf/.zkperf/ /mnt/data1/time-2026/04-april/12/zkperf-reflect/.zkperf/
+ 1227  rm -rf /mnt/data1/time-2026/04-april/26/zkperf/cargo-zkperf/.zkperf
+ 1228  ls -altr
+ 1229  rm list.txt 
+ 1230  df -h
+ 1231  exit
+ 1232  cd
+ 1233  cd projects/arist/
+ 1234  ls
+ 1235  ln -s ~/projects/aristotle_results/ 
+ 1236  mv 0b1f914a-a33d-45d5-9a31-89e0a27d19ba_aristotle/* aristotle_results/0b1f914a-a33d-45d5-9a31-89e0a27d19ba_aristotle/
+ 1237  rmdir 0b1f914a-a33d-45d5-9a31-89e0a27d19ba_aristotle
+ 1238  mv 4806a047-d3ca-4681-9152-e89c06a59d62_aristotle/* aristotle_results/4806a047-d3ca-4681-9152-e89c06a59d62_aristotle/
+ 1239  mv 798ac753-4dcc-44c1-acbb-ca7a8fa9c63d_aristotle/* aristotle_results/798ac753-4dcc-44c1-acbb-ca7a8fa9c63d_aristotle/
+ 1240  rm 7d0e6e16-6c89-4db8-92e7-b739566ff669_aristotle/* aristotle_results/7d0e6e16-6c89-4db8-92e7-b739566ff669_aristotle/
+ 1241  ls
+ 1242  rmdir 4806a047-d3ca-4681-9152-e89c06a59d62_aristotle/ 798ac753-4dcc-44c1-acbb-ca7a8fa9c63d_aristotle/ 7d0e6e16-6c89-4db8-92e7-b739566ff669_aristotle/
+ 1243  ls
+ 1244  rm -rf 7d0e6e16-6c89-4db8-92e7-b739566ff669_aristotle/
+ 1245  ls
+ 1246  cargo run
+ 1247  cargo run download 
+ 1248  ls -ltatr
+ 1249  exit
+ 1250  nix-locate kant-pastebin
+ 1251  nix-locate pastebin
+ 1252  nix-locate pastebin | less
+ 1253  cd result/bin/
+ 1254  ls
+ 1255  cd ..
+ 1256  find 
+ 1257  exit
+ 1258  pwd
+ 1259  cd 
+ 1260  cd pastebin
+ 1261  nix build .
+ 1262  nix flake update
+ 1263  nix build .
+ 1264  cd
+ 1265  cd projects/aristotle_results/
+ 1266  grep -i krypt *
+ 1267  grep -i krypt */*
+ 1268  grep -i krypt */*/*
+ 1269  grep -r -i krypt *
+ 1270  find
+ 1271  cd 69713c5d-d2df-48a9-b693-84e0f7b58352_aristotle/output-final_aristotle/
+ 1272  ls
+ 1273  find
+ 1274  emacs README.md 
+ 1275  exit
+ 1276  cd
+ 1277  cd projects/
+ 1278  ls -latr
+ 1279  cd
+ 1280  cd dasl-planning/
+ 1281  #nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1282  ls -ltr
+ 1283  nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1284  exit
+ 1285  locate .cargo/config 
+ 1286  locate .cargo/config  | xargs grep nora
+ 1287  cd
+ 1288  cd nora
+ 1289  cd projects/nora/
+ 1290  locate .cargo/config/config.toml  | xargs grep nora > grep_cargo_nora.txt
+ 1291  cat grep_cargo_nora.txt
+ 1292  locate .cargo/config/config.toml  | xargs grep nora 
+ 1293  locate .cargo/config.toml  | xargs grep nora 
+ 1294  locate .cargo/config.toml  | xargs grep nora  > cargo_config.txt
+ 1295  exit
+ 1296  locate libipld shim
+ 1297  exit
+ 1298  tmux attach
+ 1299  top
+ 1300  tmux ls
+ 1301  lsof -p 1206
+ 1302  tmux ls
+ 1303  top
+ 1304  cd pastebin
+ 1305  ncdu
+ 1306  cd zkperf/
+ 1307  rm target/
+ 1308  rm -rf target/
+ 1309  cd ..
+ 1310  rm -rf target/
+ 1311  ncdu
+ 1312  rm -rf vendor/
+ 1313  ncdu
+ 1314  cd modules/
+ 1315  ls -latr
+ 1316  cd ..
+ 1317  tmux
+ 1318  ps xauf | grep find
+ 1319  top
+ 1320  cd
+ 1321  cd dasl
+ 1322  cd index/
+ 1323  locate -r \.lean$ > lean.txt
+ 1324  wc lean.txt
+ 1325  tp[
+ 1326  exit
+ 1327  cd
+ 1328  cd .vibe
+ 1329  ls -latr
+ 1330  cat vibehistory 
+ 1331  grep -i hecke vibehistory 
+ 1332  ls
+ 1333  cd logs/
+ 1334  ls -altr
+ 1335  grep -i hecke *
+ 1336  cd session/
+ 1337  ls
+ 1338  grep -i hecke *
+ 1339  grep -i hecke */*
+ 1340  find -ctime -1 -exec grep -i hecke {} \;
+ 1341  pwd
+ 1342  find -ctime -1 -exec grep -i hecke {} \; | less
+ 1343  find -ctime -1 -exec grep -i hecke {} \; | grep git
+ 1344  find -ctime -1 -exec grep -i hecke {} \; | grep git |grep \.md
+ 1345  find -ctime -1 -exec grep -i hecke {} \; | grep git |grep \.md |less
+ 1346  exit
+ 1347  locate 71 quine lean
+ 1348  cat /mnt/data1/kant/pastebin/erdfa-clean/docs/71-quine.md
+ 1349  locate 71 lean
+ 1350  locate 71 -r \.lean$
+ 1351  locate 71 -r \.lean$ const
+ 1352  exit
+ 1353  cd
+ 1354  cd projects/lettacode/
+ 1355  nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1356  nix run github:numtide/llm-agents.nix#codex
+ 1357  exit
+ 1358  tmux attach
+ 1359  lcoate Cosmic Compute
+ 1360  locate Cosmic Compute
+ 1361  exit
+ 1362  cd
+ 1363  cd projects/
+ 1364  cd lettacode/
+ 1365  nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1366  exit
+ 1367  cd 
+ 1368  ls -latr
+ 1369  mkidr /mnt/data1/pastebin-clean
+ 1370  mkdir /mnt/data1/pastebin-clean
+ 1371  cd pastebin-clean/
+ 1372  mv * /mnt/data1/pastebin-clean/
+ 1373  ls
+ 1374  cd ..
+ 1375  rmdir pastebin-clean/
+ 1376  ln -s /mnt/data1/pastebin-clean/
+ 1377  cd pastebin-clean/
+ 1378  mv ~/pastebin/perf-data/ .
+ 1379  mv ~/pastebin/perf-data/ perf-data2
+ 1380  mkdir plugins
+ 1381  cd plugins/
+ 1382  mv ~/pastebin/plugins/html5ever/ .
+ 1383  mv ~/pastebin/plugins/oxc/ .
+ 1384  mv ~/pastebin/plugins/zos-circuit-optimizer/ .
+ 1385  #mv ~/pastebin/zkperf/ 
+ 1386  cd ..
+ 1387  mv ~/pastebin/zkperf/  zkperf
+ 1388  cd 
+ 1389  cd nix-common/
+ 1390  git remote -v
+ 1391  git init --bare ~/git/solana.solfunmeme.com/nix-common
+ 1392  git remote add origin ~/git/solana.solfunmeme.com/nix-common
+ 1393  git push origin
+ 1394  locate approval-graph-til
+ 1395  cd /mnt/data1/kant/pastebin/tiles/approval-graph-tile/
+ 1396  rm -rf target/
+ 1397  git status
+ 1398  cd ..
+ 1399  ls
+ 1400  find -name target
+ 1401  cd ..
+ 1402  find -name target
+ 1403  rm -rf ./erdfa-clean/publish-rs/target
+ 1404  rm -rf ./crate-vendor-work/cc/src/target
+ 1405  rm -rf ./upgrade-cli/target
+ 1406  git status
+ 1407  git commit -m 'removing temps' -a
+ 1408  git push local
+ 1409  nix build 
+ 1410  nix flake update
+ 1411  nix build .
+ 1412  git branch
+ 1413  git log 
+ 1414  ls
+ 1415  cd tiles/approval-graph-tile/
+ 1416  ls
+ 1417  nix build .
+ 1418  git log
+ 1419  gitgit branch -a
+ 1420  git branch -a
+ 1421  git reflog
+ 1422  gitcd ..
+ 1423  cd ..
+ 1424  git branch graphtiles
+ 1425  nix build .
+ 1426  cd
+ 1427  cd projects/tmux/
+ 1428  ls
+ 1429  ./capture.sh 
+ 1430  exit
+ 1431  cd 
+ 1432  cd nix/nixpacks/
+ 1433  ls
+ 1434  git remote -v
+ 1435  cd ..
+ 1436  cd /mnt/data1/time2/time/2023/07/06/nixpkgs
+ 1437  git revote -v
+ 1438  nix remote -v
+ 1439  git remote -v
+ 1440  git push local
+ 1441  git push local --all
+ 1442  git fetch --all
+ 1443  git push local --all
+ 1444  git push local 
+ 1445  git push local --mirror
+ 1446  cd 
+ 1447  cd projects/nora/
+ 1448  cd worktree/
+ 1449  nix flake update
+ 1450  nix build .
+ 1451  git commit -m 'fix broken flake' -a
+ 1452  git push local
+ 1453  git remote -v
+ 1454  git push
+ 1455  git remote add upstream https://github.com/getnora-io/nora.git
+ 1456  git fetch upstream
+ 1457  cd ..
+ 1458  nix flake update
+ 1459  nix build .
+ 1460  exit
+ 1461  cd git/github.com/NixOS/
+ 1462  cd nixpkgs
+ 1463  cd nixpkgs.git/
+ 1464  git remote -v 
+ 1465  git remote add origin https://github.com/NixOS/nixpkgs
+ 1466  git fetch --all
+ 1467  nix profile add nixpkgs#jq
+ 1468  jq --version
+ 1469  cd
+ 1470  cd projects/nora/
+ 1471  nix build
+ 1472  nix flake update
+ 1473  nix build
+ 1474  nix flake update
+ 1475  nix build --verbose
+ 1476  cd worktree/
+ 1477  git status
+ 1478  nix build .
+ 1479  cd ..
+ 1480  cd worktree/
+ 1481  nix flake update
+ 1482  nix build .
+ 1483  nix flake update
+ 1484  nix build . -vvv
+ 1485  bash ./update.sh 
+ 1486  cd /mnt/data1/git/github.com/NixOS/nixpkgs.git
+ 1487  git branch
+ 1488  git branch -a
+ 1489  git checkout -b omaster origin/master 
+ 1490  git branch omaster origin/master 
+ 1491  cd /mnt/data1/git/github.com/numtide/flake-utils.git
+ 1492  git branch -a 
+ 1493  git branch omaster origin/master 
+ 1494  git branch omain origin/main
+ 1495  git remote -v
+ 1496  git branch -a
+ 1497  git diff main origin/main
+ 1498  git branch omain origin/main
+ 1499  git remote -v
+ 1500  git ref
+ 1501  git refs
+ 1502  git refs list
+ 1503  git log main
+ 1504  git branch omain main
+ 1505  cd /mnt/data1/git/github.com/numtide/system-manager.git
+ 1506  git branch -a
+ 1507  git branch -a |grep main
+ 1508  git branch omain origin/main
+ 1509  git remote -v
+ 1510  git log origin/main
+ 1511  git log -1
+ 1512  git log -2
+ 1513  git remote -v
+ 1514  cd
+ 1515  cd projects/system-manager/system-manager/
+ 1516  git branch
+ 1517  git fetch --all
+ 1518  git branch -a
+ 1519  git status
+ 1520  git commit -m 'wip' -a
+ 1521  git add crates/system-manager-mcp-controller/
+ 1522  git commit -m 'wip' -a
+ 1523  git commit -m 'wip' -a -n
+ 1524  git push
+ 1525  git push local
+ 1526  git checkout origin/main
+ 1527  git checkout -b omain origin/main
+ 1528  git push local o
+ 1529  git push local 
+ 1530  cd 
+ 1531  cd projects/
+ 1532  mkdir crane
+ 1533  cd cra
+ 1534  cd crane
+ 1535  locate ipetkov/crane
+ 1536  locate 2026 crane
+ 1537  locate 2026 /crane/ Cargo.toml
+ 1538  ln -s /mnt/data1/time-2026/05-may/19/crane/
+ 1539  git branch
+ 1540  cd crane/
+ 1541  ls
+ 1542  git fetch --all
+ 1543  git remote -v
+ 1544  git remote add local /mnt/data1/git/github.com/ipetkov/crane.git
+ 1545  git push local
+ 1546  git fetch local
+ 1547  git checkout omaster origin/master
+ 1548  git checkout -b omaster origin/master
+ 1549  git push local 
+ 1550  cd
+ 1551  cd projects/nora/worktree/
+ 1552  nix flake update .
+ 1553  nix flake update 
+ 1554  locate rust-overlay/Cargo.toml
+ 1555  locate rust-overlay Cargo.toml
+ 1556  cd
+ 1557  locate rust-overlay 2026
+ 1558  cd /mnt/data1/time-2026/02-february/22/dasl/IMPL/crate2nix-zos/nix/rust-overlay
+ 1559  git branch 
+ 1560  git fetch --all
+ 1561  cd .
+ 1562  cd 
+ 1563  today
+ 1564  git submodule add https://github.com/oxalica/rust-overlay
+ 1565  cd rust-overlay
+ 1566  ls
+ 1567  git remote add local /mnt/data1/git/github.com/oxalica/rust-overlay.git
+ 1568  git push local
+ 1569  git branch omaster master
+ 1570  gti push local
+ 1571  git push local
+ 1572  git push local --all
+ 1573  jq --version
+ 1574  nix profile add jq
+ 1575  nix profile add nixpkgs:jq
+ 1576  nix profile add nixpkgs/jq
+ 1577  nix profile add nixpkgs#jq
+ 1578  vi ~/.config/nix/nix.conf
+ 1579  emacs ~/.config/nix/nix.conf
+ 1580  nix profile add nixpkgs#jq
+ 1581  emacs ~/.config/nix/registry.json
+ 1582  nix profile add nixpkgs#jq
+ 1583  git -C '/home/mdupont/git/github.com/NixOS/nixpkgs.git
+ 1584  git -C /home/mdupont/git/github.com/NixOS/nixpkgs.git
+ 1585  git -C /home/mdupont/git/github.com/NixOS/nixpkgs.git remote -v
+ 1586  git -C /home/mdupont/git/github.com/NixOS/nixpkgs.git log
+ 1587  git -C /home/mdupont/git/github.com/NixOS/nixpkgs.git log -a
+ 1588  git -C /home/mdupont/git/github.com/NixOS/nixpkgs.git branch -a
+ 1589  git -C /home/mdupont/git/github.com/NixOS/nixpkgs.git remotes -v
+ 1590  cd /home/mdupont/git/github.com/NixOS/
+ 1591  ls -latr
+ 1592  cd nixpkgs.git/
+ 1593  ls
+ 1594  git remote -v 
+ 1595  git fetch --all
+ 1596  emacs config 
+ 1597  exity
+ 1598  exit
+ 1599  tmux attach
+ 1600  locate nur nginx
+ 1601  locate nur nginx |less
+ 1602  cd
+ 1603  cd DOCS
+ 1604  grep -r nginx *
+ 1605  grep -r nginx * | grep nur
+ 1606  exit
+ 1607  locate nora-system-manager
+ 1608  k
+ 1609  gh auth
+ 1610  gh auth refresh
+ 1611  gh auth stauts
+ 1612  gh auth status
+ 1613  gh auth login -h github.com
+ 1614  gh auth status
+ 1615  exit
+ 1616  locate nora-system-managers
+ 1617  locate nora-system-manager
+ 1618  cd /mnt/data1/time-2026/05-may/28/nora/nora-system-manager.nix
+ 1619  cd /mnt/data1/time-2026/05-may/28/nora/
+ 1620  git remote -v
+ 1621  git status
+ 1622  git add update.sh
+ 1623  git commit -m 'uipdate' -a
+ 1624  git remote -v
+ 1625  exit
+ 1626  cd
+ 1627  cd projects/
+ 1628  cd lettacode/
+ 1629  nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1630  exit
+ 1631  cd
+ 1632  cd pastebin
+ 1633  nix build .
+ 1634  cargo build
+ 1635  cd 
+ 1636  cd projects/
+ 1637  cd erdf-publish
+ 1638  locate 2026 erdf-publish
+ 1639  locate erdf-publish
+ 1640  locate 2026 erdfa-publish
+ 1641  locate 2026 erdfa-publish mar 17
+ 1642  locate 2026 erdfa-publish mar/17
+ 1643  locate 2026 erdfa-publish 03-march/17
+ 1644  ln ~/03-march/17/erdfa-publish/ 
+ 1645  ln -s ~/03-march/17/erdfa-publish/ 
+ 1646  cd erdfa-publish
+ 1647  ls
+ 1648  git fetch --all
+ 1649  nix build .
+ 1650  cargo publish
+ 1651  cargo login
+ 1652  cargo login --help
+ 1653  cargo login --registry nora
+ 1654  vibe
+ 1655  vibe --agent lean --continue
+ 1656  exit
+ 1657  cd
+ 1658  cd projects/arist
+ 1659  git stauts
+ 1660  git status
+ 1661  git log --all -S target
+ 1662  git log --all --patch > all.txt
+ 1663  grep target all.txt 
+ 1664  grep target/debug all.txt 
+ 1665  cd .git/
+ 1666  find -size +10000
+ 1667  cd ..
+ 1668  git unpack
+ 1669  git branch
+ 1670  git push upstream public
+ 1671  git remote -v
+ 1672  ls
+ 1673  git remote add upstream https://github.com/meta-introspector/aristotle-cli-rs
+ 1674  git push upstream public
+ 1675  exit
+ 1676  cd /mnt/data1/nix/.git/modules/time/modules/2025/05/10/lean4/
+ 1677  git status
+ 1678  git fetch --all
+ 1679  pwd
+ 1680  cd
+ 1681  cd 2025/05/10/lean4/
+ 1682  pwd
+ 1683  ls -latr
+ 1684  locate lean4-introspector
+ 1685  locate lean-introspector
+ 1686  locate lean introspector
+ 1687  locate LeanServer
+ 1688  mkdir seealso
+ 1689  cd seealso/
+ 1690  ln -s /mnt/data1/nix/time/2025/06/01/solfunmeme-dioxus/vendor/lean4/
+ 1691  ln -s /mnt/data1/nix/time/2025/05/10/lean4/
+ 1692  ln -s /mnt/data1/nix/time/2025/05/10/lean4/ another
+ 1693  locate LeanIntrospector.lean
+ 1694  ln -s /mnt/data1/nix/time/2025/05/10/Lean4Introspector/
+ 1695  pwd
+ 1696  cd
+ 1697  cd dotagent
+ 1698  grep -r git+file *
+ 1699  grep -r "git+file" * > git_file.txt
+ 1700  cat git_file.txt 
+ 1701  cd
+ 1702  cd projects/arist
+ 1703  bash -x ./bugreport.sh 
+ 1704  cargo build
+ 1705  cargo build | grep error
+ 1706  cargo build | grep error 2>&1
+ 1707  cargo fix --dirty
+ 1708  cargo fix 
+ 1709  cargo fix --allow-dirty
+ 1710  cargo build 
+ 1711  nix build
+ 1712  df -h
+ 1713  systemctl start nix-daemon
+ 1714  systemctl status nix-daemon
+ 1715  exit
+ 1716  ls -lar
+ 1717  cd 
+ 1718  cd
+ 1719  cd 2026/06/17/njlaw/
+ 1720  ls -latr
+ 1721  find
+ 1722  find | less
+ 1723  cat njleg-map.toml 
+ 1724  ls *.toml
+ 1725  ca
+ 1726  exit
+ 1727  nvdia-smi
+ 1728  nvidia-sm
+ 1729  nvidia-smi
+ 1730  sudo apt install nvidia-utils-595-server
+ 1731  sudo dpkg --configure -a
+ 1732  sudo apt install nvidia-utils-595-server
+ 1733  nvidia-smi
+ 1734  sudo apt install nvidia-595-server
+ 1735  sudo apt install nvidia-595
+ 1736  sudo apt install nvidia-*595
+ 1737  sudo apt install nvidia-*595*
+ 1738  sudo apt install nvidia-driver-595-server
+ 1739  sudo apt update
+ 1740  sudo apt install nvidia-driver-595-server
+ 1741  exit
+ 1742  cd 
+ 1743  cd pastebin-spool
+ 1744  grep nvidia-smi *&
+ 1745  grep nvidia-smi *
+ 1746  nvidia-smi 
+ 1747  modprobe nvidia
+ 1748  sudo modprobe nvidia
+ 1749  nvidia-smi 
+ 1750  nvidia-smi  |pastebinit 
+ 1751  free -h
+ 1752  lshw
+ 1753  lshw |head
+ 1754  lshw | pastebinit 
+ 1755  exit
+ 1756  top
+ 1757  exit
+ 1758  ls -latr
+ 1759  cd
+ 1760  ls -latr
+ 1761  cd projects/
+ 1762  cd
+ 1763  cd dasl
+ 1764  ls -latr
+ 1765  cd hecke/
+ 1766  ls -latr
+ 1767  cd ..
+ 1768  cd..
+ 1769  cd 
+ 1770  cd dotagents/tasks/
+ 1771  ls -latr
+ 1772  cd fix-nix-vendor-source/
+ 1773  bash ./boot.sh 
+ 1774  cd ..
+ 1775  git add .
+ 1776  git commit -m 'new tasks' -a
+ 1777  cd tasks/fix-nix-vendor-source/
+ 1778  ./boot.sh 
+ 1779  . ~/.deepseek/env.sh
+ 1780  ./boot.sh 
+ 1781  exit
+ 1782  gemini
+ 1783  exit
+ 1784  tmux attach
+ 1785  top
+ 1786  cd projects/
+ 1787  cd tmux/
+ 1788  ls
+ 1789  ./capture.sh 
+ 1790  ps xauf | grep tmux
+ 1791  strace -p 3551043
+ 1792  sudo strace -p 3551043
+ 1793  tmux attach
+ 1794  cd projects/
+ 1795  cd tmux/
+ 1796  ls
+ 1797  tmux
+ 1798  gemini
+ 1799  vibe
+ 1800  tmux -S /tmp/tmux-1000/default attach
+ 1801  pkill -USR1 tmux
+ 1802  tmux -S /tmp/tmux-1000/default attach
+ 1803  grep COMPLETION_SUMMARY.md. /home/mdupont/.vibe/logs/session/session_202606*/*
+ 1804  grep COMPLETION_SUMMARY.md. /home/mdupont/.vibe/logs/session/session_202606*/* -c
+ 1805  grep COMPLETION_SUMMARY.md. /home/mdupont/.vibe/logs/session/session_202606*/* -c |grep -v :0
+ 1806  less /home/mdupont/.vibe/logs/session/session_20260618_192838_01b72e32/messages.jsonl
+ 1807  exti
+ 1808  exit
+ 1809  top
+ 1810  exit
+ 1811  tmux  attach
+ 1812  cd 
+ 1813  cd projects/lettacode/
+ 1814  nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1815  exit
+ 1816  wget -L1 https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M/
+ 1817  wget -R -L1 https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M/
+ 1818  less index.html 
+ 1819  wget -R -L1 https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M/words/MG1-check1
+ 1820  wget -R -L1 https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M/words/MG1
+ 1821  wget -R -L1 https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M/words
+ 1822  exit
+ 1823  cd
+ 1824  cd .kilo
+ 1825  ls -latr
+ 1826  cd agents/
+ 1827  ls -latr
+ 1828  cd ..
+ 1829  ls -latr
+ 1830  exit
+ 1831  cd
+ 1832  cd projects/
+ 1833  cd aristotle_results/
+ 1834  cd ..
+ 1835  cd arist/
+ 1836  gemini
+ 1837  cd ..
+ 1838  mkdir gemini
+ 1839  cd gemini/
+ 1840  vibe --agent lean4
+ 1841  vibe --agent lean
+ 1842  #vibe --agent lean
+ 1843  nix develop /home/mdupont/projects/lean-split-tool/minimal-test/ -c vibe agent lean --continue
+ 1844  nix develop /home/mdupont/projects/lean-split-tool/minimal-test/ -c vibe --agent lean --continue
+ 1845  exit
+ 1846  locate -i hecke lean4
+ 1847  locate -i hecke lean 
+ 1848  cd
+ 1849  cd dasl/index/
+ 1850  locate -i hecke lean  >hecke_lean.txt
+ 1851  cd ..
+ 1852  cd arist
+ 1853  cd ..
+ 1854  cd projects/arist/
+ 1855  vibe --agent lean
+ 1856  nix develop -c vibe --resume 4d44b746
+ 1857  nix develop /home/mdupont/projects/lean-split-tool/minimal-test/ -c vibe --resume 4d44b746
+ 1858  nix develop /home/mdupont/projects/lean-split-tool/minimal-test/ -c vibe 
+ 1859  exit
+ 1860  vibe --continue --agent lean
+ 1861  vibe  --agent lean
+ 1862  d
+ 1863  cd
+ 1864  cd dasl
+ 1865  cd hecke/
+ 1866  vibe  --agent lean
+ 1867  vibe  --agent lean 
+ 1868  cd
+ 1869  cd projects/mistral-vibe
+ 1870  ls
+ 1871  ls -altr
+ 1872  git remote -v
+ 1873  cd ..
+ 1874  rm mistral-vibe/
+ 1875  rm mistral-vibe
+ 1876  locate mistral-vib 2026
+ 1877  cd mistral-vibe
+ 1878  ls
+ 1879  ls -latr
+ 1880  vibe  --agent lean 
+ 1881  cd ..
+ 1882  cd arist
+ 1883  ls
+ 1884  vibe  --agent lean 
+ 1885  exit
+ 1886  cd ~/projects/aristotle_results/69713c5d-d2df-48a9-b693-84e0f7b58352_aristotle/output-final_aristotle/RequestProject/
+ 1887  ls
+ 1888  nix run github:numtide/llm-agents.nix#letta-code 
+ 1889  vibe --agent lean
+ 1890  nix develop /home/mdupont/projects/lean-split-tool/minimal-test/
+ 1891  exit
+ 1892  cd
+ 1893  cd projects/
+ 1894  cd lettacode/
+ 1895  nix run github:numtide/llm-agents.nix#letta-code -- --agent agent-9693ce24-98b7-44b3-92ef-a8fa704fef43
+ 1896  exit
+ 1897  history | grep tmux
+ 1898  history | grep kill
+ 1899  tmux attach
+ 1900  exit
+ 1901  lsusb 
+ 1902  dmesg
+ 1903  sudo su -
+ 1904  exit
+ 1905  cd
+ 1906  cd projects/arist
+ 1907  git log src/main.rs --patch -S aristotle
+ 1908  git log src/main.rs -S aristotle
+ 1909  git log src/main.rs -S arist
+ 1910  git log -S arist
+ 1911  git log -S aristotle cli
+ 1912  git log -S "aristotle" 
+ 1913  git log -S "aristotle"  --patch 
+ 1914  git log -S "aristotle"  --patch  | grep -i command
+ 1915  git log -S "Bearer"  --patch  
+ 1916  locate aristotles
+ 1917  locate aristotles lib
+ 1918  exit
+ 1919  tmux attach
+ 1920  cd
+ 1921  cd dotagents/tasks/split-merge-build-dasl/
+ 1922  ls
+ 1923  . ~/.deepseek/env.sh && nix run github:numtide/llm-agents.nix#pi 
+ 1924  cd
+ 1925  cd projects/mathlib4
+ 1926  git fetch --all
+ 1927  git branch -a
+ 1928  git checkout upstream/master
+ 1929  git checkout omaster
+ 1930  git checkout -b omaster
+ 1931  git log -3
+ 1932  exit
+ 1933  cd 
+ 1934  locate 
+ 1935  sudo systemctl nix-daemon restart
+ 1936  sudo systemctl restart nix-daemon 
+ 1937  sudo systemctl status nix-daemon 
+ 1938  cd projects/arist
+ 1939  cd nix-iso/
+ 1940  nix profile add .
+ 1941  aristotle-manager 
+ 1942  which aristotle-manager 
+ 1943  readlink which aristotle-manager 
+ 1944  readlink `which aristotle-manager `
+ 1945  cd
+ 1946  cd pastebin-spool/
+ 1947  grep "194" * | grep "x194"
+ 1948  grep -a "194" * | grep -a "x194"
+ 1949  grep -a "194" * 
+ 1950  grep -a "194" *.txt
+ 1951  grep -a " 194 " *.txt
+ 1952  grep -a " 194 " *.txt |grep char
+ 1953  cd
+ 1954  cd pastebin
+ 1955  ./deploy
+ 1956  ./deploy.sh 
+ 1957  cargo build
+ 1958  cargo clean
+ 1959  nix build 
+ 1960  cd
+ 1961  cd 
+ 1962  cd projects/arist/
+ 1963  grep 41 */*/*
+ 1964  ls
+ 1965  find -iname  \*omega\*
+ 1966  locate monsterIrrepOmega
+ 1967  locate monsterIrrepOmega | xargs cat 
+ 1968  ls
+ 1969  ls */*
+ 1970  ls */* | grep -i harp
+ 1971  locate MonsterHarpSong.md
+ 1972  git log src/main.rs OA
+ 1973  locate MonsterHarpSong.md:
+ 1974  ocate aristotlelib
+ 1975  locate aristotlelib
+ 1976  cd /home/mdupont/.local/share/uv/tools/aristotlelib/lib/
+ 1977  ls
+ 1978  ls -latr
+ 1979  cd python3.13/
+ 1980  ls
+ 1981  cd site-packages/
+ 1982  ls
+ 1983  cd aristotlelib
+ 1984  ls
+ 1985  grep -i -r bearer *
+ 1986  grep -i -r api *
+ 1987  grep -i -r api-key *
+ 1988  exit
+ 1989  cd ..
+ 1990  grep arf *
+ 1991  grep arf *.rs
+ 1992  grep arf */*.rs
+ 1993  locate arf.rs
+ 1994  find -name \*arf\*
+ 1995  git remote -v
+ 1996  git status
+ 1997  mkdir /mnt/data1/aristotle_results2/
+ 1998  mv aristotle_results/* /mnt/data1/aristotle_results2/
+ 1999  git status
+ 2000  mv aristotles_results/*.tar.gz /mnt/data1/aristotle_results2/
+ 2001  git status
+ 2002  mv aristotle-submissions/ /mnt/data1/aristotle_results2/
+ 2003  mv aristotles_results/aristotle-blocks.json /mnt/data1/aristotle_results2/
+ 2004  git status 
+ 2005  git commit -m 'remove data files' -a
+ 2006  git rebase --continue
+ 2007  git status
+ 2008  git rm -f --cached split-results-kernel/
+ 2009  git rm -r -f --cached split-results-kernel/
+ 2010  git status
+ 2011  git rm -rf aristotle-submissions
+ 2012  git status
+ 2013  git rm -rf consolidated-dasl
+ 2014  git status
+ 2015  git rm -rf split-by-band
+ 2016  git status
+ 2017  git rm -rf splitter-engine
+ 2018  git status
+ 2019  git status |grep new
+ 2020  git rm -rf nix-flakes/
+ 2021  git status
+ 2022  git status |grep new
+ 2023  git rm -rf findings-*
+ 2024  git status |grep new
+ 2025  git rm all.txt  all_tasks.json 
+ 2026  git rm -f all.txt  all_tasks.json 
+ 2027  git status |grep new
+ 2028  git commit -m 'cleaning' -a
+ 2029  history > clean.txt
