@@ -1,0 +1,392 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>DASL Spec Audit v2</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:1300px;margin:0 auto;padding:20px;background:#0d1117;color:#c9d1d9}
+h1{color:#58a6ff;border-bottom:2px solid #30363d;padding-bottom:10px}
+h2{color:#f0f6fc;margin-top:30px}
+.sum{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;margin:20px 0}
+.bar{background:#21262d;border-radius:4px;height:28px;margin:10px 0;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;text-align:center;line-height:28px;font-size:12px;color:#fff}
+.row{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;margin:8px 0}
+.row.ok{border-left:4px solid #238636} .row.no{border-left:4px solid #da3633}
+.row .id{font-weight:bold;color:#58a6ff}
+.row .cat{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;margin:0 6px}
+.row .src{color:#8b949e;font-size:11px}
+.badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:11px}
+.badge.ok{background:#23863633;color:#3fb950} .badge.no{background:#da363333;color:#f85149}
+.match{font-family:monospace;font-size:12px;color:#8b949e;margin:3px 0 0 20px}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid #30363d}
+th{color:#8b949e;font-weight:600}
+</style></head><body>
+<h1>DASL Spec-Driven Proof Audit v2</h1>
+<p>2026-06-22 14:57 | 34 spec elements | 359 fuzz corpus declarations</p>
+<div class="sum"><h2>Overall Coverage</h2>
+<div class="bar"><div class="bar-fill" style="width:85.3%;background:#238636">29/34 (85.3%)</div></div>
+<h3>By Source</h3><table><tr><th>Source</th><th>Elements</th><th>Covered</th><th>%</th></tr>
+<tr><td style="color:#58a6ff">grant</td><td>8</td><td>6</td><td>75.0%</td></tr>
+<tr><td style="color:#f0883e">theory</td><td>6</td><td>6</td><td>100.0%</td></tr>
+<tr><td style="color:#3fb950">components</td><td>4</td><td>4</td><td>100.0%</td></tr>
+<tr><td style="color:#bc8cff">test-plan</td><td>5</td><td>5</td><td>100.0%</td></tr>
+<tr><td style="color:#f778ba">build-memory</td><td>4</td><td>2</td><td>50.0%</td></tr>
+<tr><td style="color:#a5d6ff">cddl</td><td>4</td><td>4</td><td>100.0%</td></tr>
+<tr><td style="color:#ff7b72">aristotle</td><td>3</td><td>2</td><td>66.7%</td></tr>
+</table></div>
+<h2 style="color:#58a6ff">GRANT</h2>
+<div class="row ok">
+<span class="id">DASL-1.1</span>
+<span class="cat" style="background:#58a6ff33;color:#58a6ff">Content Addressing</span>
+<span class="src">[grant]</span>
+<span class="badge ok">170 matches</span>
+<p><strong>Content identifiers MUST be cryptographic hashes (SHA256-based CIDv1)</strong></p>
+<div class="match">[ContentAddressing] ContentAddressing_MultihashCodec_noConfusion — score 5</div>
+<div class="match">[ContentAddressing] ContentAddressing_CID_mk — score 5</div>
+<div class="match">[ContentAddressing] ContentAddressing_mkCID — score 5</div>
+<div class="match">[ContentAddressing] ContentAddressing_instDecidableEqMultihash — score 5</div>
+</div>
+<div class="row ok">
+<span class="id">DASL-1.2</span>
+<span class="cat" style="background:#58a6ff33;color:#58a6ff">Content Addressing</span>
+<span class="src">[grant]</span>
+<span class="badge ok">149 matches</span>
+<p><strong>Test vectors MUST have unique identifiers (no CID collisions)</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_SSP_all_prime — score 2</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_HashFamily_noConfusion — score 2</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_noConfusionType — score 2</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_noConfusion — score 2</div>
+</div>
+<div class="row ok">
+<span class="id">DASL-2.1</span>
+<span class="cat" style="background:#58a6ff33;color:#58a6ff">Monster Symmetries</span>
+<span class="src">[grant]</span>
+<span class="badge ok">126 matches</span>
+<p><strong>Corpus MUST cover all 15 supersingular prime symmetry classes</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_SSP_all_prime — score 2</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_ssp_bott_niemeier — score 2</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_sspBasis_all_prime — score 2</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_mckay_from_primes — score 2</div>
+</div>
+<div class="row ok">
+<span class="id">DASL-2.2</span>
+<span class="cat" style="background:#58a6ff33;color:#58a6ff">Monster Symmetries</span>
+<span class="src">[grant]</span>
+<span class="badge ok">129 matches</span>
+<p><strong>Complexity bounded by Griess dimension V1=196,883</strong></p>
+<div class="match">[_fuzz_edge_cases] 196883_plus_1_equals_196884 — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_ctorElim — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_bool_elim — score 1</div>
+</div>
+<div class="row no">
+<span class="id">DASL-3.1</span>
+<span class="cat" style="background:#58a6ff33;color:#58a6ff">State Transitions</span>
+<span class="src">[grant]</span>
+<span class="badge no">0 matches</span>
+<p><strong>State transitions MUST be deterministic (pure functions)</strong></p>
+</div>
+<div class="row ok">
+<span class="id">REQ-1</span>
+<span class="cat" style="background:#58a6ff33;color:#58a6ff">Corpus Scale</span>
+<span class="src">[grant]</span>
+<span class="badge ok">54 matches</span>
+<p><strong>Test Corpus: target 38,725 test vectors</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_layer_count — score 2</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_repr_is_bott — score 2</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_sheafSectionFields_count — score 2</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_partitionKeyOfCid — score 2</div>
+</div>
+<div class="row no">
+<span class="id">REQ-2</span>
+<span class="cat" style="background:#58a6ff33;color:#58a6ff">Fuzzing</span>
+<span class="src">[grant]</span>
+<span class="badge no">0 matches</span>
+<p><strong>Automated test generation via FRACTRAN evolution</strong></p>
+</div>
+<div class="row ok">
+<span class="id">REQ-13</span>
+<span class="cat" style="background:#58a6ff33;color:#58a6ff">Adversarial</span>
+<span class="src">[grant]</span>
+<span class="badge ok">9 matches</span>
+<p><strong>Edge case testing: Monster cusp evolution at 1/p</strong></p>
+<div class="match">[_fuzz_edge_cases] 196883_plus_1_equals_196884 — score 1</div>
+<div class="match">[_fuzz_edge_cases] oversize — score 1</div>
+<div class="match">[_fuzz_edge_cases] ___empty___ — score 1</div>
+<div class="match">[_fuzz_edge_cases] Ω_π_λ_α_β_γ — score 1</div>
+</div>
+<h2 style="color:#f0883e">THEORY</h2>
+<div class="row ok">
+<span class="id">TH-1</span>
+<span class="cat" style="background:#f0883e33;color:#f0883e">Quasi-Fiber Bundle</span>
+<span class="src">[theory]</span>
+<span class="badge ok">23 matches</span>
+<p><strong>DASL traces form quasi-fiber bundle over Monster conjugacy classes</strong></p>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_MonsterObject_sheafSection_elim — score 3</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_MonsterObject_sheafSection_sizeOf_spec — score 3</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_sheafSectionFieldCount — score 3</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_sheafSectionFields_count — score 3</div>
+</div>
+<div class="row ok">
+<span class="id">TH-2</span>
+<span class="cat" style="background:#f0883e33;color:#f0883e">Bott Periodicity</span>
+<span class="src">[theory]</span>
+<span class="badge ok">43 matches</span>
+<p><strong>8-fold Bott periodicity in complexity classes</strong></p>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_repr_is_bott_period — score 2</div>
+<div class="match">[BottNestedCarriage] BottNested_NestedCarriage_mk_injEq — score 2</div>
+<div class="match">[BottNestedCarriage] BottNested_LimoCarriage_noConfusion — score 2</div>
+<div class="match">[BottNestedCarriage] BottNested_NestedCarriage_depth_eq_1 — score 2</div>
+</div>
+<div class="row ok">
+<span class="id">TH-3</span>
+<span class="cat" style="background:#f0883e33;color:#f0883e">71-Layer Sharding</span>
+<span class="src">[theory]</span>
+<span class="badge ok">60 matches</span>
+<p><strong>15 supersingular primes define execution partitions (max 71)</strong></p>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_stage1_coprime_59_71 — score 2</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_stage1_coprime_47_71 — score 2</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_partitionKeyOfCid — score 2</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_mckay_from_primes — score 2</div>
+</div>
+<div class="row ok">
+<span class="id">TH-4</span>
+<span class="cat" style="background:#f0883e33;color:#f0883e">Griess Algebra</span>
+<span class="src">[theory]</span>
+<span class="badge ok">33 matches</span>
+<p><strong>DAG operations correspond to Griess algebra axis products</strong></p>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_Metrics_mk_inj — score 1</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_exponentDistance — score 1</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_PartitionKey_noConfusionType — score 1</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_nodeScore — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">TH-5</span>
+<span class="cat" style="background:#f0883e33;color:#f0883e">Monster Walk</span>
+<span class="src">[theory]</span>
+<span class="badge ok">118 matches</span>
+<p><strong>10-step calculation through Monster Group order</strong></p>
+<div class="match">[_fuzz_edge_cases] 196883_plus_1_equals_196884 — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_ctorElim — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_bool_elim — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">TH-6</span>
+<span class="cat" style="background:#f0883e33;color:#f0883e">QxKxV Identity</span>
+<span class="src">[theory]</span>
+<span class="badge ok">24 matches</span>
+<p><strong>71x59x47=196,883 (V1 irrep dimension)</strong></p>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_stage1_CRT_injective — score 4</div>
+<div class="match">[TypedDMZ] TypedDMZ_complete_governance — score 4</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_mckay_from_primes — score 3</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_sum_three_primes — score 3</div>
+</div>
+<h2 style="color:#3fb950">COMPONENTS</h2>
+<div class="row ok">
+<span class="id">CMP-1</span>
+<span class="cat" style="background:#3fb95033;color:#3fb950">IPLD Core</span>
+<span class="src">[components]</span>
+<span class="badge ok">174 matches</span>
+<p><strong>Rust ipld-core: Core IPLD traits and types</strong></p>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_repr_is_bott — score 2</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_repr_is_bott_period — score 2</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_CARBlock_cid — score 2</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_CARBlock_mk_sizeOf_spec — score 2</div>
+</div>
+<div class="row ok">
+<span class="id">CMP-2</span>
+<span class="cat" style="background:#3fb95033;color:#3fb950">DAG-CBOR Codec</span>
+<span class="src">[components]</span>
+<span class="badge ok">28 matches</span>
+<p><strong>serde_ipld_dagcbor: DAG-CBOR codec with Serde</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_instDecidableEqCodec — score 1</div>
+<div class="match">[ContentAddressing] ContentAddressing_Multihash_recOn — score 1</div>
+<div class="match">[ContentAddressing] ContentAddressing_instReprMultihash_repr — score 1</div>
+<div class="match">[ContentAddressing] ContentAddressing_MultihashCodec_sha3_256_sizeOf_spec — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">CMP-3</span>
+<span class="cat" style="background:#3fb95033;color:#3fb950">MMGroup</span>
+<span class="src">[components]</span>
+<span class="badge ok">117 matches</span>
+<p><strong>mmgroup: Monster Group computation</strong></p>
+<div class="match">[_fuzz_edge_cases] 196883_plus_1_equals_196884 — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_ctorElim — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_bool_elim — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">CMP-4</span>
+<span class="cat" style="background:#3fb95033;color:#3fb950">Cross-Language</span>
+<span class="src">[components]</span>
+<span class="badge ok">112 matches</span>
+<p><strong>Multi-language IPLD: Go,Java,Python,JS,C</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_instDecidableEqCodec — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_ctorElim — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_bool_elim — score 1</div>
+</div>
+<h2 style="color:#bc8cff">TEST-PLAN</h2>
+<div class="row ok">
+<span class="id">TEST-A</span>
+<span class="cat" style="background:#bc8cff33;color:#bc8cff">Spec-Derived</span>
+<span class="src">[test-plan]</span>
+<span class="badge ok">86 matches</span>
+<p><strong>Valid CBOR at each nesting level, all major types, Tag 42 CID, deterministic encoding</strong></p>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_PartitionKey_stage1 — score 2</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_complete — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_honest — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_ctorElim — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">TEST-B</span>
+<span class="cat" style="background:#bc8cff33;color:#bc8cff">Fuzzer-Generated</span>
+<span class="src">[test-plan]</span>
+<span class="badge ok">9 matches</span>
+<p><strong>Crash/hang/memory error inputs from AFL++</strong></p>
+<div class="match">[_fuzz_edge_cases] 196883_plus_1_equals_196884 — score 1</div>
+<div class="match">[_fuzz_edge_cases] oversize — score 1</div>
+<div class="match">[_fuzz_edge_cases] ___empty___ — score 1</div>
+<div class="match">[_fuzz_edge_cases] Ω_π_λ_α_β_γ — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">TEST-C</span>
+<span class="cat" style="background:#bc8cff33;color:#bc8cff">Impl-Native</span>
+<span class="src">[test-plan]</span>
+<span class="badge ok">134 matches</span>
+<p><strong>Tests: Rust serde_ipld, Go ipld-prime, Python libipld, JS, C</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_MaximalUmwelt_hash_fams — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_instFintypeDMZLayer — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_instReprHashFamily_repr_match_1 — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_DMZLayer_degeneracy_grades_sizeOf_spec — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">TEST-D</span>
+<span class="cat" style="background:#bc8cff33;color:#bc8cff">App-Extracted</span>
+<span class="src">[test-plan]</span>
+<span class="badge ok">87 matches</span>
+<p><strong>Real-world CBOR from ATProto firehose, CAR files</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_complete — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_layer_count — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_repr_is_bott — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_repr_is_bott_period — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">TEST-E</span>
+<span class="cat" style="background:#bc8cff33;color:#bc8cff">Adversarial</span>
+<span class="src">[test-plan]</span>
+<span class="badge ok">45 matches</span>
+<p><strong>Deep nesting, large arrays, duplicate keys, invalid UTF-8, indefinite-length</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_complete — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_honest — score 1</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_instReprTypeDefnKind_repr — score 1</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_instReprMonsterCarriageTrain_repr — score 1</div>
+</div>
+<h2 style="color:#f778ba">BUILD-MEMORY</h2>
+<div class="row ok">
+<span class="id">BM-1</span>
+<span class="cat" style="background:#f778ba33;color:#f778ba">Build CID</span>
+<span class="src">[build-memory]</span>
+<span class="badge ok">122 matches</span>
+<p><strong>Every build output gets a CID: stdout,stderr,errors</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_instFintypeDMZLayer — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_instDecidableEqBindingType — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_SSP_all_prime — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_instDecidableEqGrade — score 1</div>
+</div>
+<div class="row no">
+<span class="id">BM-2</span>
+<span class="cat" style="background:#f778ba33;color:#f778ba">Error Dedup</span>
+<span class="src">[build-memory]</span>
+<span class="badge no">0 matches</span>
+<p><strong>Errors de-duplicated across runs via content addressing</strong></p>
+</div>
+<div class="row ok">
+<span class="id">BM-3</span>
+<span class="cat" style="background:#f778ba33;color:#f778ba">IPLD Shmem</span>
+<span class="src">[build-memory]</span>
+<span class="badge ok">135 matches</span>
+<p><strong>Build outputs stored in IPLD CAR shmem</strong></p>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_repr_is_bott — score 2</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_repr_is_bott_period — score 2</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_complete — score 1</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_layer_count — score 1</div>
+</div>
+<div class="row no">
+<span class="id">BM-4</span>
+<span class="cat" style="background:#f778ba33;color:#f778ba">DAG-CBOR Model</span>
+<span class="src">[build-memory]</span>
+<span class="badge no">0 matches</span>
+<p><strong>Build node data model in DAG-CBOR format</strong></p>
+</div>
+<h2 style="color:#a5d6ff">CDDL</h2>
+<div class="row ok">
+<span class="id">CDDL-1</span>
+<span class="cat" style="background:#a5d6ff33;color:#a5d6ff">CDDL Types</span>
+<span class="src">[cddl]</span>
+<span class="badge ok">57 matches</span>
+<p><strong>dag-cbor-value: uint,int,bytes,text,array,map,null,bool,float</strong></p>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_ctorElim — score 3</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind_recOn — score 3</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_instFintypeTypeDefnKind — score 3</div>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_TypeDefnKind — score 3</div>
+</div>
+<div class="row ok">
+<span class="id">CDDL-2</span>
+<span class="cat" style="background:#a5d6ff33;color:#a5d6ff">CDDL Encoding</span>
+<span class="src">[cddl]</span>
+<span class="badge ok">9 matches</span>
+<p><strong>DAG-CBOR encoding: length-prefixed,UTF-8,deterministic order</strong></p>
+<div class="match">[IPLDMonsterSchema] IPLDMonsterSchema_sheafSectionFields_count — score 1</div>
+<div class="match">[PadicEntropyDAG] Decidable_lt_or_eq_of_le — score 1</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_MonsterCarriageTrain_length_eq_1 — score 1</div>
+<div class="match">[MonsterCarriageTrain] MonsterTrain_MonsterCarriageTrain_length — score 1</div>
+</div>
+<div class="row ok">
+<span class="id">CDDL-3</span>
+<span class="cat" style="background:#a5d6ff33;color:#a5d6ff">CDDL CID</span>
+<span class="src">[cddl]</span>
+<span class="badge ok">140 matches</span>
+<p><strong>CID: multicodec 0x71,multihash 0x1220,32-byte bstr</strong></p>
+<div class="match">[ContentAddressing] ContentAddressing_CID_mk — score 3</div>
+<div class="match">[ContentAddressing] ContentAddressing_mkCID — score 3</div>
+<div class="match">[ContentAddressing] ContentAddressing_CID_noConfusion — score 3</div>
+<div class="match">[ContentAddressing] ContentAddressing_CID_mk_inj — score 3</div>
+</div>
+<div class="row ok">
+<span class="id">CDDL-4</span>
+<span class="cat" style="background:#a5d6ff33;color:#a5d6ff">CDDL Block</span>
+<span class="src">[cddl]</span>
+<span class="badge ok">72 matches</span>
+<p><strong>dag-cbor-block: {multicodec,multihash,data}</strong></p>
+<div class="match">[ContentAddressing] ContentAddressing_CID_mk — score 2</div>
+<div class="match">[ContentAddressing] ContentAddressing_mkCID — score 2</div>
+<div class="match">[ContentAddressing] ContentAddressing_CID_noConfusion — score 2</div>
+<div class="match">[ContentAddressing] ContentAddressing_CID_mk_inj — score 2</div>
+</div>
+<h2 style="color:#ff7b72">ARISTOTLE</h2>
+<div class="row ok">
+<span class="id">ARI-1</span>
+<span class="cat" style="background:#ff7b7233;color:#ff7b72">Monster CharTable</span>
+<span class="src">[aristotle]</span>
+<span class="badge ok">16 matches</span>
+<p><strong>194x194 Monster character table (fef52e3d)</strong></p>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmz_complete — score 2</div>
+<div class="match">[UmweltGodelTrust] UmweltGodelTrust_dmzUmwelt — score 1</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_nodeScore — score 1</div>
+<div class="match">[PadicEntropyDAG] PadicEntropyDAG_padicVector — score 1</div>
+</div>
+<div class="row no">
+<span class="id">ARI-2</span>
+<span class="cat" style="background:#ff7b7233;color:#ff7b72">Consolidated DASL</span>
+<span class="src">[aristotle]</span>
+<span class="badge no">0 matches</span>
+<p><strong>842 files merged, 133 real declarations, 5 modules</strong></p>
+</div>
+<div class="row ok">
+<span class="id">ARI-3</span>
+<span class="cat" style="background:#ff7b7233;color:#ff7b72">ProofOfCoverage</span>
+<span class="src">[aristotle]</span>
+<span class="badge ok">1 matches</span>
+<p><strong>ProofOfCoverage.lean: 250 lines, sorry-free, 15 claims</strong></p>
+<div class="match">[BottNestedCarriage] BottNested_NestedCarriage_single_eq_1 — score 1</div>
+</div>
+</body></html>
