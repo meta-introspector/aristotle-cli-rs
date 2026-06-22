@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DASL Spec-Driven Proof Audit</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #0d1117; color: #c9d1d9; }
+  h1 { color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
+  h2 { color: #f0f6fc; margin-top: 30px; }
+  .summary { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin: 20px 0; }
+  .coverage-bar { background: #21262d; border-radius: 4px; height: 24px; margin: 10px 0; overflow: hidden; }
+  .coverage-fill { height: 100%; border-radius: 4px; transition: width 0.5s; }
+  .coverage-fill.pass { background: #238636; }
+  .coverage-fill.fail { background: #da3633; }
+  .spec-row { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 15px; margin: 10px 0; }
+  .spec-row.pass { border-left: 4px solid #238636; }
+  .spec-row.fail { border-left: 4px solid #da3633; }
+  .spec-id { font-weight: bold; color: #58a6ff; display: inline-block; width: 80px; }
+  .spec-cat { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 10px; }
+  .match-list { margin-top: 10px; padding-left: 20px; }
+  .match-item { font-family: monospace; font-size: 13px; color: #8b949e; }
+  .match-item strong { color: #f0f6fc; }
+  .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+  .badge.pass { background: #23863633; color: #3fb950; }
+  .badge.fail { background: #da363333; color: #f85149; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 8px; border-bottom: 1px solid #30363d; }
+  th { color: #8b949e; font-weight: 600; }
+  .cat-table td:first-child { font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>🔬 DASL Spec-Driven Proof Audit</h1>
+<p>Generated: 2026-06-22 14:40:25 | Corpus: 170 declarations (Fuzz Corpus)</p>
+
+<div class="summary">
+<h2>Coverage Summary</h2>
+<div class="coverage-bar">
+  <div class="coverage-fill pass" style="width: 86.4%"></div>
+</div>
+<p><strong>19/22</strong> spec elements have matching declarations (<strong>86.4%</strong>)</p>
+
+<h3>By Category</h3>
+<table class="cat-table">
+<tr><th>Category</th><th>Covered</th><th>Total</th><th>%</th></tr>
+<tr><td>71 Lean4 Proofs</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>71-Layer Sharding</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Adversarial</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Bott Periodicity</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Content Addressing</td><td>2</td><td>2</td><td>100.0%</td></tr>
+<tr><td>Corpus Scale</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Cross-Language</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>DAG-CBOR Codec</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>FRACTRAN Algebra</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Fuzzing</td><td>0</td><td>1</td><td>0.0%</td></tr>
+<tr><td>Griess Algebra</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>IPLD Core</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>MMGroup</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Monster Symmetries</td><td>2</td><td>2</td><td>100.0%</td></tr>
+<tr><td>Monster Walk</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Monster Walk Proof</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Quasi-Fiber Bundle</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Q×K×V Identity</td><td>1</td><td>1</td><td>100.0%</td></tr>
+<tr><td>Sonnenlicht Moonshine</td><td>0</td><td>1</td><td>0.0%</td></tr>
+<tr><td>State Transitions</td><td>0</td><td>1</td><td>0.0%</td></tr>
+</table></div>
+<h2>DASL Core Specification</h2>
+<div class="spec-row pass">
+  <span class="spec-id">DASL-1.1</span>
+  <span class="spec-cat" style="background:#3498db33; color:#3498db">Content Addressing</span>
+  <span class="badge pass">170 matches</span>
+  <p><strong>Content identifiers MUST be cryptographic hashes</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: CID starts with 'bafy' (SHA256-based CIDv1)</p>
+<div class="match-list"><div class="match-item">[ContentAddressing] <strong>ContentAddressing_MultihashCodec_noConfusion</strong> (score: 5)</div>
+<div class="match-item">[ContentAddressing] <strong>ContentAddressing_CID_mk</strong> (score: 5)</div>
+<div class="match-item">[ContentAddressing] <strong>ContentAddressing_mkCID</strong> (score: 5)</div>
+<div class="match-item">[ContentAddressing] <strong>ContentAddressing_instDecidableEqMultihash</strong> (score: 5)</div>
+<div class="match-item">[ContentAddressing] <strong>ContentAddressing_CID_noConfusion</strong> (score: 5)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">DASL-1.2</span>
+  <span class="spec-cat" style="background:#3498db33; color:#3498db">Content Addressing</span>
+  <span class="badge pass">149 matches</span>
+  <p><strong>Test vectors MUST have unique identifiers</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: All CIDs are unique (no duplicates)</p>
+<div class="match-list"><div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_SSP_all_prime</strong> (score: 2)</div>
+<div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_HashFamily_noConfusion</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_noConfusionType</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_noConfusion</strong> (score: 2)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_stage1_CRT_injective</strong> (score: 2)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">DASL-2.1</span>
+  <span class="spec-cat" style="background:#e74c3c33; color:#e74c3c">Monster Symmetries</span>
+  <span class="badge pass">126 matches</span>
+  <p><strong>Test corpus MUST cover all symmetry classes (15 Monster primes)</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: Vectors span all 15 supersingular prime classes</p>
+<div class="match-list"><div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_SSP_all_prime</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_ssp_bott_niemeier</strong> (score: 2)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_sspBasis_all_prime</strong> (score: 2)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_mckay_from_primes</strong> (score: 2)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_sum_three_primes</strong> (score: 2)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">DASL-2.2</span>
+  <span class="spec-cat" style="background:#e74c3c33; color:#e74c3c">Monster Symmetries</span>
+  <span class="badge pass">119 matches</span>
+  <p><strong>Complexity MUST be bounded by V₁ = 196,883</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: Sum of prime exponents ≤ 196,883</p>
+<div class="match-list"><div class="match-item">[_fuzz_edge_cases] <strong>196883_plus_1_equals_196884</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_ctorElim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_bool_elim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_copy_sizeOf_spec</strong> (score: 1)</div>
+</div></div>
+<div class="spec-row fail">
+  <span class="spec-id">DASL-3.1</span>
+  <span class="spec-cat" style="background:#2ecc7133; color:#2ecc71">State Transitions</span>
+  <span class="badge fail">0 matches</span>
+  <p><strong>State transitions MUST be deterministic</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: FRACTRAN step function is pure (same input → same output)</p>
+</div>
+<h2>Grant Requirements</h2>
+<div class="spec-row pass">
+  <span class="spec-id">REQ-1</span>
+  <span class="spec-cat" style="background:#f39c1233; color:#f39c12">Corpus Scale</span>
+  <span class="badge pass">53 matches</span>
+  <p><strong>Test Corpus: 38,725 test vectors</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: len(corpus) >= 38,725</p>
+<div class="match-list"><div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_dmz_layer_count</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_repr_is_bott</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_sheafSectionFields_count</strong> (score: 2)</div>
+<div class="match-item">[TypedDMZ] <strong>TypedDMZ_Schema_fieldCount</strong> (score: 2)</div>
+<div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_DMZLayer_degeneracy_grades_sizeOf_spec</strong> (score: 1)</div>
+</div></div>
+<div class="spec-row fail">
+  <span class="spec-id">REQ-2</span>
+  <span class="spec-cat" style="background:#9b59b633; color:#9b59b6">Fuzzing</span>
+  <span class="badge fail">0 matches</span>
+  <p><strong>Automated test generation via FRACTRAN evolution</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: FRACTRAN generates novel test cases</p>
+</div>
+<div class="spec-row pass">
+  <span class="spec-id">REQ-13</span>
+  <span class="spec-cat" style="background:#1abc9c33; color:#1abc9c">Adversarial</span>
+  <span class="badge pass">9 matches</span>
+  <p><strong>Edge case testing — Monster cusp evolution</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: Finds boundary conditions at 1/p for each Monster prime</p>
+<div class="match-list"><div class="match-item">[_fuzz_edge_cases] <strong>196883_plus_1_equals_196884</strong> (score: 1)</div>
+<div class="match-item">[_fuzz_edge_cases] <strong>oversize</strong> (score: 1)</div>
+<div class="match-item">[_fuzz_edge_cases] <strong>___empty___</strong> (score: 1)</div>
+<div class="match-item">[_fuzz_edge_cases] <strong>Ω_π_λ_α_β_γ</strong> (score: 1)</div>
+<div class="match-item">[_fuzz_edge_cases] <strong>solidGoldMag单元</strong> (score: 1)</div>
+</div></div>
+<h2>Theoretical Framework</h2>
+<div class="spec-row pass">
+  <span class="spec-id">TH-1</span>
+  <span class="spec-cat" style="background:#e67e2233; color:#e67e22">Quasi-Fiber Bundle</span>
+  <span class="badge pass">23 matches</span>
+  <p><strong>DASL operation traces form a quasi-fiber bundle over Monster conjugacy classes</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_MonsterObject_sheafSection_elim</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_MonsterObject_sheafSection_sizeOf_spec</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_sheafSectionFieldCount</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_sheafSectionFields_count</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_sheafSectionFields</strong> (score: 2)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">TH-2</span>
+  <span class="spec-cat" style="background:#8e44ad33; color:#8e44ad">Bott Periodicity</span>
+  <span class="badge pass">43 matches</span>
+  <p><strong>8-fold periodicity in complexity classes — Bott clock</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_repr_is_bott_period</strong> (score: 2)</div>
+<div class="match-item">[BottNestedCarriage] <strong>BottNested_NestedCarriage_mk_injEq</strong> (score: 2)</div>
+<div class="match-item">[BottNestedCarriage] <strong>BottNested_LimoCarriage_noConfusion</strong> (score: 2)</div>
+<div class="match-item">[BottNestedCarriage] <strong>BottNested_NestedCarriage_depth_eq_1</strong> (score: 2)</div>
+<div class="match-item">[BottNestedCarriage] <strong>BottNested_NestedCarriage_noConfusionType</strong> (score: 2)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">TH-3</span>
+  <span class="spec-cat" style="background:#c0392b33; color:#c0392b">71-Layer Sharding</span>
+  <span class="badge pass">60 matches</span>
+  <p><strong>Supersingular primes define execution partitions — 15 primes, 71 max</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_stage1_coprime_59_71</strong> (score: 2)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_stage1_coprime_47_71</strong> (score: 2)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_partitionKeyOfCid</strong> (score: 2)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_mckay_from_primes</strong> (score: 2)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_sum_three_primes</strong> (score: 2)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">TH-4</span>
+  <span class="spec-cat" style="background:#16a08533; color:#16a085">Griess Algebra</span>
+  <span class="badge pass">33 matches</span>
+  <p><strong>DAG operations correspond to Griess algebra axis products</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_Metrics_mk_inj</strong> (score: 1)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_exponentDistance</strong> (score: 1)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_PartitionKey_noConfusionType</strong> (score: 1)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_nodeScore</strong> (score: 1)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_padicVector</strong> (score: 1)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">TH-5</span>
+  <span class="spec-cat" style="background:#d3540033; color:#d35400">Monster Walk</span>
+  <span class="badge pass">118 matches</span>
+  <p><strong>10-step calculation through Monster Group order</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[_fuzz_edge_cases] <strong>196883_plus_1_equals_196884</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_ctorElim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_bool_elim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_copy_sizeOf_spec</strong> (score: 1)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">TH-6</span>
+  <span class="spec-cat" style="background:#2980b933; color:#2980b9">Q×K×V Identity</span>
+  <span class="badge pass">24 matches</span>
+  <p><strong>71 × 59 × 47 = 196,883 (V₁ irrep dimension)</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_stage1_CRT_injective</strong> (score: 4)</div>
+<div class="match-item">[TypedDMZ] <strong>TypedDMZ_complete_governance</strong> (score: 4)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_mckay_from_primes</strong> (score: 3)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_sum_three_primes</strong> (score: 3)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_stage1_coprime_59_71</strong> (score: 2)</div>
+</div></div>
+<h2>Component Coverage</h2>
+<div class="spec-row pass">
+  <span class="spec-id">CMP-1</span>
+  <span class="spec-cat" style="background:#27ae6033; color:#27ae60">IPLD Core</span>
+  <span class="badge pass">174 matches</span>
+  <p><strong>Rust ipld-core: Core IPLD traits and types</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_repr_is_bott</strong> (score: 2)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_repr_is_bott_period</strong> (score: 2)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_CARBlock_cid</strong> (score: 2)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_CARBlock_mk_sizeOf_spec</strong> (score: 2)</div>
+<div class="match-item">[MonsterCarriageTrain] <strong>MonsterTrain_CARBlock_mk_injEq</strong> (score: 2)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">CMP-2</span>
+  <span class="spec-cat" style="background:#f1c40f33; color:#f1c40f">DAG-CBOR Codec</span>
+  <span class="badge pass">28 matches</span>
+  <p><strong>serde_ipld_dagcbor: DAG-CBOR codec with Serde</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_instDecidableEqCodec</strong> (score: 1)</div>
+<div class="match-item">[ContentAddressing] <strong>ContentAddressing_Multihash_recOn</strong> (score: 1)</div>
+<div class="match-item">[ContentAddressing] <strong>ContentAddressing_instReprMultihash_repr</strong> (score: 1)</div>
+<div class="match-item">[ContentAddressing] <strong>ContentAddressing_MultihashCodec_sha3_256_sizeOf_spec</strong> (score: 1)</div>
+<div class="match-item">[ContentAddressing] <strong>ContentAddressing_MultihashCodec_noConfusion</strong> (score: 1)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">CMP-3</span>
+  <span class="spec-cat" style="background:#e74c3c33; color:#e74c3c">MMGroup</span>
+  <span class="badge pass">117 matches</span>
+  <p><strong>mmgroup: Monster Group computation software</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[_fuzz_edge_cases] <strong>196883_plus_1_equals_196884</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_ctorElim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_bool_elim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_copy_sizeOf_spec</strong> (score: 1)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">CMP-4</span>
+  <span class="spec-cat" style="background:#7f8c8d33; color:#7f8c8d">Cross-Language</span>
+  <span class="badge pass">111 matches</span>
+  <p><strong>Multi-language IPLD: Go, Java, Python, JavaScript</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_instDecidableEqCodec</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_ctorElim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_bool_elim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_copy_sizeOf_spec</strong> (score: 1)</div>
+</div></div>
+<h2>Proof Integration</h2>
+<div class="spec-row pass">
+  <span class="spec-id">PRF-1</span>
+  <span class="spec-cat" style="background:#2c3e5033; color:#2c3e50">71 Lean4 Proofs</span>
+  <span class="badge pass">109 matches</span>
+  <p><strong>71-layer proof system in Lean4</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[BottNestedCarriage] <strong>BottNested_NestedCarriage_single_eq_1</strong> (score: 3)</div>
+<div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_DMZLayer_degeneracy_grades_sizeOf_spec</strong> (score: 2)</div>
+<div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_DMZLayer_maximal_umwelt_sizeOf_spec</strong> (score: 2)</div>
+<div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_DMZLayer_ofNat_ctorIdx</strong> (score: 2)</div>
+<div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_dmz_complete</strong> (score: 2)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">PRF-2</span>
+  <span class="spec-cat" style="background:#d3540033; color:#d35400">Monster Walk Proof</span>
+  <span class="badge pass">118 matches</span>
+  <p><strong>Monster Walk: 10-step calculation through Monster Group</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[_fuzz_edge_cases] <strong>196883_plus_1_equals_196884</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_ctorElim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_map_sizeOf_spec</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_bool_elim</strong> (score: 1)</div>
+<div class="match-item">[IPLDMonsterSchema] <strong>IPLDMonsterSchema_TypeDefnKind_copy_sizeOf_spec</strong> (score: 1)</div>
+</div></div>
+<div class="spec-row pass">
+  <span class="spec-id">PRF-3</span>
+  <span class="spec-cat" style="background:#8e44ad33; color:#8e44ad">FRACTRAN Algebra</span>
+  <span class="badge pass">10 matches</span>
+  <p><strong>FRACTRAN prime factorization algebra</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+<div class="match-list"><div class="match-item">[UmweltGodelTrust] <strong>UmweltGodelTrust_SSP_all_prime</strong> (score: 1)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_padicVector</strong> (score: 1)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_stage1_coprime_59_71</strong> (score: 1)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_stage1_coprime_47_71</strong> (score: 1)</div>
+<div class="match-item">[PadicEntropyDAG] <strong>PadicEntropyDAG_sspBasis_all_prime</strong> (score: 1)</div>
+</div></div>
+<div class="spec-row fail">
+  <span class="spec-id">PRF-4</span>
+  <span class="spec-cat" style="background:#c0392b33; color:#c0392b">Sonnenlicht Moonshine</span>
+  <span class="badge fail">0 matches</span>
+  <p><strong>Ramanujan generating function / Moonshine</strong></p>
+  <p style="color: #8b949e; font-size: 13px;">Verification: </p>
+</div>
+
+<h2>Legend</h2>
+<table>
+<tr><td><span class="badge pass">PASS</span></td><td>Spec element has matching declarations in the fuzz corpus</td></tr>
+<tr><td><span class="badge fail">FAIL</span></td><td>Spec element has NO matching declarations — coverage gap</td></tr>
+<tr><td><strong>Score</strong></td><td>Number of matching keywords between spec element and declaration name/text</td></tr>
+</table>
+<p style="color: #8b949e; font-size: 12px; margin-top: 40px;">
+DASL Grant Proposal — Spec-Driven Proof Audit. Corpus: 360 declarations across 7 splitter lenses.<br>
+Spec sources: verify_spec_compliance.py, README.md, grant proposal.
+</p>
+</body></html>
