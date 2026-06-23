@@ -134,6 +134,8 @@ enum Commands {
         project_id: String,
         #[arg(long)]
         output_dir: Option<PathBuf>,
+        #[arg(long)]
+        verbose: bool,
     },
     /// Test Lean4 projects
     Test {
@@ -1703,23 +1705,64 @@ async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<(
 
 /// ── Download result from a completed Aristotle project ─────────
 
-async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>) -> Result<()> {
+async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>, verbose: bool) -> Result<()> {
     let config = load_config()?;
     let api_key = get_api_key()?;
     let results_dir = output_dir.unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
     fs::create_dir_all(&results_dir)?;
     let client = Client::builder().timeout(Duration::from_secs(300)).build()?;
+    // Enable debug tracing for verbose mode
+    if verbose {
+        info!("Verbose mode: full chat/prose data will be saved");
+    }
     println!("Downloading result for {}...", project_id);
     match download_single_result(&client, &api_key, project_id, &results_dir, &results_dir, config.retry_wait_seconds, config.max_retries).await {
         Ok(path) => {
             println!("Downloaded to: {}", path.display());
             let summary = path.join("output-final_aristotle").join("ARISTOTLE_SUMMARY.md");
             if summary.exists() {
-                println!("\n=== Output ===");
-                for line in fs::read_to_string(&summary)?.lines().take(40) { println!("{}", line); }
+                println!("\n=== Aristotle Chat / Summary ===");
+                let summary_text = fs::read_to_string(&summary)?;
+                for line in summary_text.lines().take(40) { println!("{}", line); }
+            } else {
+                // Check for sub-project path (e.g., e3e23af0_aristotle/ARISTOTLE_SUMMARY.md)
+                for entry in WalkDir::new(&path).max_depth(2).into_iter().filter_map(|e| e.ok()) {
+                    if entry.file_name() == "ARISTOTLE_SUMMARY.md" {
+                        println!("\n=== Aristotle Chat / Summary ===");
+                        let summary_text = fs::read_to_string(entry.path())?;
+                        for line in summary_text.lines().take(40) { println!("{}", line); }
+                        break;
+                    }
+                }
             }
             let lean = WalkDir::new(&path).into_iter().filter_map(|e| e.ok()).filter(|e| e.path().extension().map_or(false, |e| e=="lean")).count();
             println!("  .lean files: {}", lean);
+            if verbose {
+                // Extract and save all prose for term analysis
+                let prose_path = path.join("aristotle_all_prose.txt");
+                let mut prose = String::new();
+                for entry in WalkDir::new(&path).into_iter().filter_map(|e| e.ok()) {
+                    if entry.path().extension().map_or(false, |e| e == "lean" || e == "md") {
+                        if let Ok(text) = fs::read_to_string(entry.path()) {
+                            // For .lean files, extract comments and docstrings only
+                            if entry.path().extension().unwrap_or_default() == "lean" {
+                                for line in text.lines() {
+                                    let trimmed = line.trim();
+                                    if trimmed.starts_with("-- ") || trimmed.starts_with("/--") || trimmed.starts_with("/-!") {
+                                        prose.push_str(line);
+                                        prose.push('\n');
+                                    }
+                                }
+                            } else {
+                                prose.push_str(&text);
+                                prose.push('\n');
+                            }
+                        }
+                    }
+                }
+                fs::write(&prose_path, &prose)?;
+                println!("  Saved all prose to: {}", prose_path.display());
+            }
         }
         Err(e) => println!("Failed: {}", e),
     }
@@ -1844,9 +1887,9 @@ async fn main() -> Result<()> {
             info!("Executing check command");
             cmd_check(project_id.clone(), *limit).await?;
         }
-        Commands::DownloadResult { project_id, output_dir } => {
+        Commands::DownloadResult { project_id, output_dir, verbose } => {
             info!("Executing download-result command");
-            cmd_download_result(project_id, output_dir.clone()).await?;
+            cmd_download_result(project_id, output_dir.clone(), *verbose).await?;
         }
         Commands::Results => {
             info!("Executing results command");
