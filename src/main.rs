@@ -22,6 +22,7 @@ mod file_index;
 mod index;
 mod notebooklm;
 mod notebooklm_cross;
+mod notebooklm_dump;
 mod pipeline;
 mod pipeline_steps;
 mod replay;
@@ -267,6 +268,11 @@ enum Commands {
         /// The path to the Aristotle project directory
         #[arg(long)]
         project_dir: PathBuf,
+    },
+    /// Dump entire DASL pipeline state for NotebookLM ingestion
+    NotebooklmDump {
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
     },
     /// Run SplitDecls on all Lean projects and produce per-declaration flake.nix lattice
     SplitAll {
@@ -2259,6 +2265,10 @@ async fn main() -> Result<()> {
         Commands::Notebooklm { project_dir } => {
             info!("Executing notebooklm command");
             notebooklm::cmd_notebooklm(project_dir)?;
+        }
+        Commands::NotebooklmDump { output_dir } => {
+            info!("Executing notebooklm-dump command");
+            notebooklm_dump::cmd_notebooklm_dump(output_dir.clone())?;
         }
         Commands::SplitAll { output_dir, parallel, dry_run } => {
             info!("Executing split-all command");

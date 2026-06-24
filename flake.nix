@@ -19,7 +19,7 @@
 
         rawGitSrc = builtins.fetchGit {
           url = "git+file:///mnt/data1/git/github.com/arist/aristotle-manager.git";
-          rev = "b96e6c36e52572544389700ed8a437b6e8973d90";
+          ref = "main";
         };
 
         cleanedSrc = craneLib.cleanCargoSource rawGitSrc;
