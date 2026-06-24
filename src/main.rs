@@ -205,6 +205,15 @@ enum Commands {
         #[arg(long)]
         mathlib_split: Option<PathBuf>,
     },
+    /// Merge multiple Aristotle projects into a unified directory for combined processing
+    MergeProjects {
+        /// Project IDs to merge (space-separated UUIDs)
+        #[arg(long, num_args = 1..)]
+        project_ids: Vec<String>,
+        /// Output directory for merged project
+        #[arg(long)]
+        output_dir: PathBuf,
+    },
     /// Submit a project to the Aristotle API
     Submit {
         /// Prompt text or file containing the prompt
@@ -2302,6 +2311,10 @@ async fn main() -> Result<()> {
         Commands::CanonicalFlakeAll { output_dir, mathlib_split } => {
             info!("Executing canonical-flake-all command");
             pipeline_steps::cmd_canonical_flake_all(output_dir.clone(), mathlib_split.clone())?;
+        }
+        Commands::MergeProjects { project_ids, output_dir } => {
+            info!(?project_ids, "Executing merge-projects command");
+            pipeline_steps::cmd_merge_projects(&project_ids, output_dir.clone())?;
         }
         Commands::DepGraph { input_dir, output_dir } => {
             info!("Executing dep-graph command");

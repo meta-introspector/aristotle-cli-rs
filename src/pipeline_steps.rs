@@ -4,7 +4,7 @@ use std::path::{Path, PathBuf};
 use anyhow::{Context, Result};
 use regex::Regex;
 use serde::Serialize;
-use tracing::{debug, info, instrument};
+use tracing::{debug, info, instrument, warn};
 use walkdir::WalkDir;
 
 // ── J-Invariant Prime Stratification ───────────────────────────────────
@@ -1172,5 +1172,65 @@ pub fn cmd_canonical_flake_all(
     println!("  Output:     {}", output_base.display());
 
     info!(succeeded, total_mods, total_resolved, "Canonical flake all complete");
+    Ok(())
+}
+
+// ── Merge Projects: Combine multiple Aristotle projects into one ──────
+
+#[instrument(skip(project_ids, output_dir))]
+pub fn cmd_merge_projects(project_ids: &[String], output_dir: PathBuf) -> Result<()> {
+    let config = super::load_config()?;
+    fs::create_dir_all(&output_dir)?;
+    let rp_dir = output_dir.join("RequestProject");
+    fs::create_dir_all(&rp_dir)?;
+
+    let mut total = 0u64;
+    let mut found = 0u64;
+
+    for pid in project_ids {
+        let proj_dir = config
+            .results_dir
+            .join(format!("{}_aristotle/output-final_aristotle/RequestProject", pid));
+
+        if !proj_dir.exists() {
+            warn!(project = %pid, "Project not found, skipping");
+            continue;
+        }
+        found += 1;
+
+        let mut copied = 0u64;
+        for entry in WalkDir::new(&proj_dir)
+            .into_iter()
+            .filter_map(|e| e.ok())
+            .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
+        {
+            let fname = entry.file_name().to_string_lossy().to_string();
+            let dest = rp_dir.join(format!("{}_{}", pid, fname));
+            fs::copy(entry.path(), &dest)?;
+            copied += 1;
+        }
+        println!("  {} -> {} files", pid, copied);
+        total += copied;
+    }
+
+    // Copy lakefile and lean-toolchain from first project
+    let first_pid = project_ids.first().map(|s| s.as_str()).unwrap_or("");
+    let src_base = config
+        .results_dir
+        .join(format!("{}_aristotle/output-final_aristotle", first_pid));
+    for fname in &["lakefile.toml", "lean-toolchain"] {
+        let src = src_base.join(fname);
+        if src.exists() {
+            fs::copy(&src, output_dir.join(fname))?;
+            println!("  Copied {}", fname);
+        }
+    }
+
+    println!("\nMerge complete:");
+    println!("  Projects:  {}/{}", found, project_ids.len());
+    println!("  Files:     {}", total);
+    println!("  Output:    {}", output_dir.display());
+
+    info!(found, total, "Merge projects complete");
     Ok(())
 }
