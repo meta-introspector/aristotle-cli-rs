@@ -1,3 +1,4 @@
+use std::collections::HashSet;
 use std::env;
 use std::fs::{self, File, OpenOptions};
 use std::io::Write;
@@ -66,6 +67,10 @@ enum Commands {
         download_only: bool,
         #[arg(short = 'j', default_value = "4")]
         parallel: usize,
+        #[arg(long, default_value = "console")]
+        trace: String,
+        #[arg(long)]
+        verbose: bool,
     },
     /// Build all projects
     Build {
@@ -215,6 +220,8 @@ enum Commands {
         project_id: Option<String>,
         #[arg(long)]
         limit: Option<usize>,
+        #[arg(long, default_value = "console")]
+        trace: String,
     },
     /// Download results from a completed Aristotle project
     DownloadResult {
@@ -561,11 +568,101 @@ fn build_project(dir: &PathBuf) -> Result<bool> {
     Ok(success)
 }
 
-#[instrument(skip_all, fields(download_only = _download_only, parallel = _parallel))]
-fn cmd_poll(_download_only: bool, _parallel: usize) -> Result<()> {
+#[instrument(skip_all, fields(download_only = download_only, parallel = parallel))]
+#[instrument(skip(download_only))]
+async fn cmd_poll(download_only: bool, parallel: usize) -> Result<()> {
     let config = load_config()?;
     info!("Starting poll operation");
 
+    // Step 1: Fetch project list from API and download new projects
+    let api_key = get_api_key()?;
+    let client = Client::builder()
+        .timeout(Duration::from_secs(30))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    // Fetch paginated project list
+    let mut all_projects: Vec<Value> = Vec::new();
+    let mut pagination_key: Option<String> = None;
+    let mut page = 0u32;
+
+    loop {
+        page += 1;
+        let page_url = if let Some(ref key) = pagination_key {
+            format!("{}/project?pagination_key={}", API_BASE_URL, key)
+        } else {
+            format!("{}/project", API_BASE_URL)
+        };
+        info!(url = %page_url, page, "Fetching project list page");
+
+        let response = client
+            .get(&page_url)
+            .header("x-api-key", &api_key)
+            .send()
+            .await
+            .with_context(|| format!("Failed to fetch project list from {}", page_url))?;
+
+        let response_text = response.text().await?;
+        let page_json: Value = serde_json::from_str(&response_text)
+            .with_context(|| "Failed to parse project list JSON")?;
+
+        let page_projects = page_json["projects"].as_array().cloned().unwrap_or_default();
+        let page_count = page_projects.len();
+        all_projects.extend(page_projects);
+        info!(page, page_count, total = all_projects.len(), "Fetched project page");
+
+        let next_key = page_json["pagination_key"].as_str().map(|s| s.to_string());
+        if next_key.is_none() || page_count == 0 {
+            break;
+        }
+        if pagination_key.as_deref() == next_key.as_deref() {
+            break;
+        }
+        pagination_key = next_key;
+    }
+
+    // Save the project list
+    let projects_json = serde_json::json!({
+        "projects": all_projects,
+        "total": all_projects.len()
+    });
+    let projects_path = config.base_dir.join("aristotle_projects.json");
+    fs::write(&projects_path, serde_json::to_string_pretty(&projects_json)?)?;
+    info!(path = %projects_path.display(), total = all_projects.len(), "Saved project list");
+
+    println!("API projects: {}", all_projects.len());
+
+    // Step 2: Download any new projects
+    let existing_ids: HashSet<String> = {
+        let mut s = HashSet::new();
+        if let Ok(entries) = std::fs::read_dir(&config.results_dir) {
+            for entry in entries.filter_map(|e| e.ok()) {
+                let name_string = entry.file_name().to_string_lossy().into_owned();
+                if name_string.ends_with("_aristotle") {
+                    s.insert(name_string.trim_end_matches("_aristotle").to_string());
+                }
+                if name_string.ends_with("-aristotle.tar.gz") {
+                    s.insert(name_string.trim_end_matches("-aristotle.tar.gz").to_string());
+                }
+            }
+        }
+        s
+    };
+
+    let new_count = all_projects.len() - existing_ids.len();
+    println!("  Existing: {}", existing_ids.len());
+    println!("  New:      {}", new_count);
+
+    if new_count > 0 {
+        println!("\nDownloading {} new projects...", new_count);
+        crate::fetch::cmd_fetch(parallel, None, false).await?;
+    } else if download_only {
+        println!("\n  Nothing new — exiting (download-only mode).");
+        return Ok(());
+    }
+
+    // Step 3: Build existing projects
+    println!("\nBuilding projects...");
     update_git_repos(&config.git_base)?;
 
     let dirs = get_project_dirs(&config.git_base)?;
@@ -2009,9 +2106,17 @@ async fn main() -> Result<()> {
     let env_filter = EnvFilter::try_from_default_env()
         .unwrap_or_else(|_| EnvFilter::new("info"));
 
+    // Extract trace mode from command
+    let trace_mode: Option<&str> = match &cli.command {
+        Commands::Download { trace, .. } => Some(trace.as_str()),
+        Commands::Poll { trace, .. } => Some(trace.as_str()),
+        Commands::Check { trace, .. } => Some(trace.as_str()),
+        _ => None,
+    };
+
     let file_log_guard: Option<tracing_appender::non_blocking::WorkerGuard> =
-        match &cli.command {
-            Commands::Download { trace, .. } if trace == "file" || trace == "both" => {
+        match trace_mode {
+            Some(file) if file == "file" || file == "both" => {
                 let config = load_config()?;
                 let trace_path = config.base_dir.join("trace.log");
                 let file_appender =
@@ -2065,9 +2170,11 @@ async fn main() -> Result<()> {
         Commands::Poll {
             download_only,
             parallel,
+            trace,
+            verbose,
         } => {
-            info!("Executing poll command");
-            cmd_poll(*download_only, *parallel)?;
+            info!(parallel, trace, verbose, "Executing poll command");
+            cmd_poll(*download_only, *parallel).await?;
         }
         Commands::Build { input_dir, .. } => {
             info!("Executing build command");
@@ -2112,8 +2219,8 @@ async fn main() -> Result<()> {
             info!("Executing submit command");
             cmd_submit(prompt, project_dir.clone(), *wait)?;
         }
-        Commands::Check { project_id, limit } => {
-            info!("Executing check command");
+        Commands::Check { project_id, limit, trace } => {
+            info!(?project_id, ?limit, trace, "Executing check command");
             cmd_check(project_id.clone(), *limit).await?;
         }
         Commands::DownloadResult { project_id, output_dir, verbose } => {
