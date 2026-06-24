@@ -191,6 +191,15 @@ enum Commands {
         #[arg(long)]
         mathlib_split: Option<PathBuf>,
     },
+    /// Generate canonical flakes for all downloaded Aristotle projects
+    CanonicalFlakeAll {
+        /// Output directory for all canonical flakes
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+        /// Path to mathlib-split directory
+        #[arg(long)]
+        mathlib_split: Option<PathBuf>,
+    },
     /// Submit a project to the Aristotle API
     Submit {
         /// Prompt text or file containing the prompt
@@ -2182,6 +2191,10 @@ async fn main() -> Result<()> {
         Commands::CanonicalFlake { input_dir, output_dir, mathlib_split } => {
             info!("Executing canonical-flake command");
             pipeline_steps::cmd_canonical_flake(input_dir.clone(), output_dir.clone(), mathlib_split.clone())?;
+        }
+        Commands::CanonicalFlakeAll { output_dir, mathlib_split } => {
+            info!("Executing canonical-flake-all command");
+            pipeline_steps::cmd_canonical_flake_all(output_dir.clone(), mathlib_split.clone())?;
         }
         Commands::DepGraph { input_dir, output_dir } => {
             info!("Executing dep-graph command");

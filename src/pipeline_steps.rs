@@ -4,7 +4,7 @@ use std::path::{Path, PathBuf};
 use anyhow::{Context, Result};
 use regex::Regex;
 use serde::Serialize;
-use tracing::{info, instrument};
+use tracing::{debug, info, instrument};
 use walkdir::WalkDir;
 
 // ── J-Invariant Prime Stratification ───────────────────────────────────
@@ -1060,5 +1060,107 @@ pub fn cmd_canonical_flake(
     println!("  Output:      {}", output_dir.display());
 
     info!(written, resolved_total, "Canonical flake generation complete");
+    Ok(())
+}
+
+// ── Canonical Flake All: Process every downloaded Aristotle project ──
+
+#[instrument(skip(output_dir, mathlib_split))]
+pub fn cmd_canonical_flake_all(
+    output_dir: Option<PathBuf>,
+    mathlib_split: Option<PathBuf>,
+) -> Result<()> {
+    let config = super::load_config()?;
+    let output_base = output_dir
+        .unwrap_or_else(|| config.base_dir.join("canonical-flakes"));
+
+    // Find all *_aristotle/ project directories
+    let dirs: Vec<PathBuf> = std::fs::read_dir(&config.git_base)?
+        .filter_map(|e| e.ok())
+        .map(|e| e.path())
+        .filter(|p| p.is_dir())
+        .filter(|p| {
+            p.file_name()
+                .map(|n| n.to_string_lossy().ends_with("_aristotle"))
+                .unwrap_or(false)
+        })
+        .collect();
+
+    let total = dirs.len();
+    info!(total, "Found downloaded Aristotle projects");
+    println!("Processing {} Aristotle projects...", total);
+
+    let mut succeeded = 0u64;
+    let mut total_mods = 0u64;
+    let mut total_resolved = 0u64;
+
+    for (i, dir) in dirs.iter().enumerate() {
+        let proj_name = dir
+            .file_name()
+            .unwrap_or_default()
+            .to_string_lossy()
+            .replace("_aristotle", "");
+        let proj_out = output_base.join(&proj_name);
+
+        // Look for the output-final_aristotle subdirectory
+        let lean_root = dir.join("output-final_aristotle");
+        if !lean_root.exists() {
+            debug!(name = %proj_name, "No output-final_aristotle, skipping");
+            continue;
+        }
+
+        // Check for .lean files
+        let has_lean = WalkDir::new(&lean_root)
+            .max_depth(3)
+            .into_iter()
+            .filter_map(|e| e.ok())
+            .any(|e| e.path().extension().map_or(false, |ext| ext == "lean"));
+
+        if !has_lean {
+            debug!(name = %proj_name, "No .lean files, skipping");
+            continue;
+        }
+
+        println!("[{}/{}] {} ...", i + 1, total, proj_name);
+
+        match cmd_canonical_flake(
+            lean_root.clone(),
+            Some(proj_out.clone()),
+            mathlib_split.clone(),
+        ) {
+            Ok(()) => {
+                succeeded += 1;
+                // Count results from the output directory
+                if let Ok(files) = std::fs::read_dir(&proj_out) {
+                    let count = files
+                        .filter_map(|e| e.ok())
+                        .filter(|e| e.path().is_dir())
+                        .count() as u64;
+                    total_mods += count;
+                    // Count resolved imports across all flake.nix files
+                    for entry in WalkDir::new(&proj_out)
+                        .into_iter()
+                        .filter_map(|e| e.ok())
+                        .filter(|e| e.file_name() == "flake.nix")
+                    {
+                        if let Ok(content) = std::fs::read_to_string(entry.path()) {
+                            total_resolved += content.matches("path:").count() as u64;
+                        }
+                    }
+                }
+            }
+            Err(e) => {
+                eprintln!("  FAIL {}: {}", proj_name, e);
+            }
+        }
+    }
+
+    println!("\nCanonical Flake All complete:");
+    println!("  Projects:   {}/{} succeeded", succeeded, total);
+    println!("  Modules:    {}", total_mods);
+    println!("  Resolved:   {} Mathlib imports", total_resolved);
+    println!("  Output:     {}", output_base.display());
+
+    info!(succeeded, total_mods, total_resolved, "Canonical flake all complete");
     Ok(())
 }
