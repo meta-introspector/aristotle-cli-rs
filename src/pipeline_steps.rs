@@ -1074,17 +1074,27 @@ pub fn cmd_canonical_flake_all(
     let output_base = output_dir
         .unwrap_or_else(|| config.base_dir.join("canonical-flakes"));
 
-    // Find all *_aristotle/ project directories
-    let dirs: Vec<PathBuf> = std::fs::read_dir(&config.git_base)?
-        .filter_map(|e| e.ok())
-        .map(|e| e.path())
-        .filter(|p| p.is_dir())
-        .filter(|p| {
-            p.file_name()
-                .map(|n| n.to_string_lossy().ends_with("_aristotle"))
-                .unwrap_or(false)
-        })
-        .collect();
+    // Find all *_aristotle/ project directories in both locations:
+    //   git_base  — older downloads (time-2026 tree)
+    //   results_dir — canonical download location
+    let mut dirs: Vec<PathBuf> = Vec::new();
+    let mut seen = std::collections::HashSet::new();
+
+    for base in [&config.git_base, &config.results_dir] {
+        if let Ok(entries) = std::fs::read_dir(base) {
+            for entry in entries.filter_map(|e| e.ok()) {
+                let path = entry.path();
+                if path.is_dir() {
+                    if let Some(name) = path.file_name() {
+                        let name = name.to_string_lossy();
+                        if name.ends_with("_aristotle") && seen.insert(name.to_string()) {
+                            dirs.push(path);
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     let total = dirs.len();
     info!(total, "Found downloaded Aristotle projects");
