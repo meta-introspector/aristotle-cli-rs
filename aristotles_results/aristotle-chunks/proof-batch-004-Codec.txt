@@ -1,0 +1,14 @@
+# Task: Prove DAG-CBOR Codec Properties
+
+## Data
+DAG-CBOR: deterministic CBOR subset. Tag 42 for CID links. String-keyed maps only.
+
+## Theorems to Prove
+1. **codec_roundtrip**: For all DAG-CBOR values v, decode(encode(v)) = v.
+2. **deterministic_encoding**: Equal values → equal encodings.
+3. **type_preservation**: decode preserves IPLD kind.
+4. **size_bound**: |encode(v)| ≤ C·|v| for some constant C.
+5. **no_cycles**: DAG-CBOR cannot encode cycles.
+
+## Files
+Place all in RequestProject/CodecProofs.lean. Full proofs, no sorry, standard axioms only.

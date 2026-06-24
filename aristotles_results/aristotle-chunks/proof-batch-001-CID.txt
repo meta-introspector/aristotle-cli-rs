@@ -1,0 +1,15 @@
+# Task: Prove CID Content-Addressability
+
+## Data
+A CIDv1 is: <multicodec:0x01><codec:varint><mh-length><mh-algo><mh-digest>
+SHA-256 produces 32-byte digests. Multibase identity prefix is 0x00.
+
+## Theorems to Prove
+1. **CID_deterministic**: For all byte sequences b1 ≠ b2, CID(b1) ≠ CID(b2).
+2. **multibase_idempotent**: Encoding a CID with multibase identity returns original bytes.
+3. **codec_self_describing**: Every CIDv1 carries its codec in the first varint.
+4. **hash_length_consistent**: Multihash length prefix matches SHA-256 output length.
+5. **cid_merkle_root**: Changing any DAG leaf changes the root CID.
+
+## Files
+Place all in RequestProject/CIDProofs.lean. Full proofs, no sorry, standard axioms only.

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "total_declarations": 0,
+    "unique_nodes": 0,
+    "total_layers": 0,
+    "declaration_kinds": {}
+  },
+  "layers": {},
+  "topological_order": [],
+  "car_file": "./output/knowledge-graph.cid.car",
+  "build_timestamp": "2026-06-21T11:25:15Z",
+  "decl_file_paths": {},
+  "decl_dependencies": {}
+}

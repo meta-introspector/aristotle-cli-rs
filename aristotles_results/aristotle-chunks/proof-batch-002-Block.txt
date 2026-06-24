@@ -1,0 +1,15 @@
+# Task: Prove DASL Block Properties
+
+## Data
+A Block is: {hash: CID, prev: CID, data: ByteArray, index: Nat}
+Genesis block has prev = null CID (all zeros).
+
+## Theorems to Prove
+1. **genesisBlock_is_root**: Genesis block has index 0 and prev null CID.
+2. **block_valid_iff_hash_matches**: Valid iff hash = SHA256(prev.hash, data).
+3. **chain_length_monotonic**: For any valid chain, block indices strictly increasing.
+4. **fork_detection**: Same prev + different data = chain fork.
+5. **immutable_history**: Changing committed block data invalidates all successors.
+
+## Files
+Place all in RequestProject/BlockProofs.lean. Full proofs, no sorry, standard axioms only.

@@ -20,9 +20,12 @@ mod fetch;
 mod file_index;
 mod index;
 mod notebooklm;
+mod notebooklm_cross;
 mod pipeline;
+mod pipeline_steps;
 mod replay;
 mod version;
+mod repl;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -91,6 +94,21 @@ enum Commands {
         #[arg(long)]
         output_dir: Option<PathBuf>,
     },
+    /// Generate cross-project NotebookLM files from all REPL declarations
+    NotebooklmCross {
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
+    /// Load declarations into lean4-repl shared memory
+    LoadDecls {
+        /// Directory containing .lean source files
+        dir: Option<PathBuf>,
+        /// Only show counts
+        #[arg(long)]
+        dry_run: bool,
+    },
+    /// Show lean4-repl stats
+    ReplStats,
     /// Refresh: pull latest from Aristotle, download new, split all, build decl table
     Refresh {
         #[arg(short = 'j', default_value = "4")]
@@ -111,6 +129,67 @@ enum Commands {
         input_dir: Option<PathBuf>,
         #[arg(long)]
         output_dir: Option<PathBuf>,
+    },
+    /// Consolidate declarations from a specific Aristotle project into unified pool
+    Consolidate {
+        #[arg(long)]
+        project_id: String,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
+    /// J-invariant prime stratification (assign declarations to q-expansion bands)
+    JKey {
+        #[arg(long)]
+        input_dir: Option<PathBuf>,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
+    /// Extract functor arrows between declarations (2-category structure)
+    Arrows {
+        #[arg(long)]
+        input_dir: Option<PathBuf>,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
+    /// Split declarations by j-invariant bands
+    SplitByBand {
+        #[arg(long)]
+        input_dir: Option<PathBuf>,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
+    /// Generate per-band flake.nix files
+    GenFlake {
+        #[arg(long)]
+        band_dir: Option<PathBuf>,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
+    /// Build dependency graph from consolidated declarations
+    DepGraph {
+        #[arg(long)]
+        input_dir: Option<PathBuf>,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
+    /// Build mycelium categorical structure (0/1/2-cells + terminal morphisms)
+    Mycelium {
+        #[arg(long)]
+        input_dir: Option<PathBuf>,
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+    },
+    /// Generate canonical per-module flakes with mathlib-split resolution
+    CanonicalFlake {
+        /// Aristotle project directory to split
+        #[arg(long)]
+        input_dir: PathBuf,
+        /// Output directory for canonical flakes
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+        /// Path to mathlib-split directory
+        #[arg(long)]
+        mathlib_split: Option<PathBuf>,
     },
     /// Submit a project to the Aristotle API
     Submit {
@@ -1604,6 +1683,147 @@ fn cmd_merge(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
     Ok(())
 }
 
+/// ── Consolidate command ──────────────────────────────────────────────────
+
+#[instrument(skip(output_dir))]
+fn cmd_consolidate(project_id: &str, output_dir: Option<PathBuf>) -> Result<()> {
+    let config = load_config()?;
+    let output_dir = output_dir.unwrap_or_else(|| config.base_dir.join("consolidated"));
+    fs::create_dir_all(&output_dir)?;
+
+    let project_dir = config.git_base.join(format!("{}_aristotle", project_id));
+    if !project_dir.exists() {
+        let alt_dir = config.results_dir.join(format!("{}_aristotle", project_id));
+        if alt_dir.exists() {
+            return consolidate_project(&alt_dir, &output_dir, project_id);
+        }
+        return Err(anyhow::anyhow!(
+            "Project {} not found. Run 'aristotle-manager download-result {}' first.",
+            project_id, project_id
+        ));
+    }
+    consolidate_project(&project_dir, &output_dir, project_id)
+}
+
+fn consolidate_project(project_dir: &PathBuf, output_dir: &PathBuf, project_id: &str) -> Result<()> {
+    let mut lean_files: Vec<PathBuf> = Vec::new();
+    for entry in WalkDir::new(project_dir).max_depth(10).into_iter().filter_map(|e| e.ok()) {
+        if entry.path().extension().map_or(false, |ext| ext == "lean") {
+            lean_files.push(entry.path().to_path_buf());
+        }
+    }
+
+    if lean_files.is_empty() {
+        println!("No .lean files found in project {}", project_id);
+        return Ok(());
+    }
+
+    #[derive(Debug, Serialize)]
+    struct Declaration {
+        name: String,
+        kind: String,
+        file: String,
+        line: usize,
+        content: String,
+        cid: String,
+        dependencies: Vec<String>,
+    }
+
+    let decl_keywords = [
+        "theorem", "def", "lemma", "example", "instance",
+        "class", "inductive", "structure", "abbrev", "axiom",
+        "opaque", "mutual",
+    ];
+
+    let mut declarations: Vec<Declaration> = Vec::new();
+    let mut seen: std::collections::HashSet<String> = std::collections::HashSet::new();
+
+    for lean_path in &lean_files {
+        let content = fs::read_to_string(lean_path)?;
+        let file_name = lean_path.file_name().and_then(|s| s.to_str()).unwrap_or("unknown");
+        let mut line_num = 0usize;
+        for line in content.lines() {
+            line_num += 1;
+            let trimmed = line.trim();
+            let mut found_kind: Option<&str> = None;
+            for kw in &decl_keywords {
+                if trimmed.starts_with(kw) {
+                    let after = &trimmed[kw.len()..];
+                    if after.starts_with(' ') || after.starts_with('\t') {
+                        found_kind = Some(*kw);
+                        break;
+                    }
+                }
+            }
+            if let Some(kind) = found_kind {
+                let after_kw = trimmed[kind.len()..].trim_start();
+                let name_part = if after_kw.starts_with('@') {
+                    after_kw.split(']').nth(1).unwrap_or(after_kw).trim_start()
+                } else { after_kw };
+                let name = name_part
+                    .split(|c: char| c.is_whitespace() || c == '(' || c == ':' || c == '{' || c == '[')
+                    .next().unwrap_or("").to_string();
+                if name.is_empty() || name == "-" || name == "_" { continue; }
+
+                use std::hash::{Hash, Hasher};
+                let mut hasher = std::collections::hash_map::DefaultHasher::new();
+                line.hash(&mut hasher);
+                let cid = format!("decl-cid-{:016x}", hasher.finish());
+
+                let mut deps: Vec<String> = Vec::new();
+                for word in name_part.split_whitespace() {
+                    let w = word.trim_matches(|c: char| c == ',' || c == ')' || c == '(' || c == ':');
+                    if !w.is_empty() && w != name && w.chars().next().map_or(false, |c| c.is_alphabetic()) && w.len() > 1 {
+                        deps.push(w.to_string());
+                    }
+                }
+                deps.sort(); deps.dedup();
+
+                let dedup_key = format!("{}::{}", kind, name);
+                if seen.insert(dedup_key) {
+                    declarations.push(Declaration { name, kind: kind.to_string(), file: file_name.to_string(), line: line_num, content: line.to_string(), cid, dependencies: deps });
+                }
+            }
+        }
+    }
+
+    declarations.sort_by(|a, b| a.kind.cmp(&b.kind).then(a.name.cmp(&b.name)));
+    let total = declarations.len();
+
+    let mut consolidated_lean = format!("-- Consolidated from Aristotle project {}\n-- {} declarations\n\n", project_id, total);
+    let mut current_kind = String::new();
+    for decl in &declarations {
+        if decl.kind != current_kind {
+            current_kind = decl.kind.clone();
+            consolidated_lean.push_str(&format!("\n-- {}s\n\n", current_kind));
+        }
+        consolidated_lean.push_str(&format!("-- [{}:{}]\n{}\n\n", decl.file, decl.line, decl.content));
+    }
+    fs::write(output_dir.join(format!("{}_consolidated.lean", project_id)), &consolidated_lean)?;
+
+    let mut breakdown_map = serde_json::Map::new();
+    let mut counts: std::collections::HashMap<&str, usize> = std::collections::HashMap::new();
+    for decl in &declarations { *counts.entry(&decl.kind).or_default() += 1; }
+    for (kind, count) in &counts { breakdown_map.insert(kind.to_string(), serde_json::json!(count)); }
+
+    let decls_json: Vec<serde_json::Value> = declarations.iter().map(|d| serde_json::json!({
+        "name": d.name, "kind": d.kind, "file": d.file, "line": d.line,
+        "cid": d.cid, "dependencies": d.dependencies, "content": d.content,
+    })).collect();
+
+    let manifest = serde_json::json!({
+        "project_id": project_id, "total_declarations": total,
+        "breakdown": breakdown_map, "declarations": decls_json,
+    });
+    fs::write(output_dir.join(format!("{}_manifest.json", project_id)), serde_json::to_string_pretty(&manifest)?)?;
+
+    println!("Consolidated project {}: {} declarations", project_id, total);
+    let mut bk: Vec<(String, usize)> = counts.into_iter().map(|(k,v)| (k.to_string(), v)).collect();
+    bk.sort_by(|a,b| b.1.cmp(&a.1));
+    for (kind, count) in &bk { println!("  {:>12}: {}", kind, count); }
+    Ok(())
+}
+
 /// ── Submit command: send a project to Aristotle via the CLI ────────
 
 #[instrument(skip(prompt, project_dir))]
@@ -1907,6 +2127,10 @@ async fn main() -> Result<()> {
             info!("Executing configure command");
             cmd_configure(subcommand)?
         }
+        Commands::NotebooklmCross { output_dir } => {
+            info!("Executing notebooklm-cross command");
+            notebooklm_cross::cmd_notebooklm_cross(output_dir.clone())?;
+        }
         Commands::Notebooklm { project_dir } => {
             info!("Executing notebooklm command");
             notebooklm::cmd_notebooklm(project_dir)?;
@@ -1934,6 +2158,46 @@ async fn main() -> Result<()> {
         Commands::Version { results_dir, output_dir } => {
             info!("Executing version command");
             version::cmd_version(results_dir.clone(), output_dir.clone())?;
+        }
+        Commands::Consolidate { project_id, output_dir } => {
+            info!("Executing consolidate command");
+            cmd_consolidate(project_id, output_dir.clone())?;
+        }
+        Commands::JKey { input_dir, output_dir } => {
+            info!("Executing j-key command");
+            pipeline_steps::cmd_j_key(input_dir.clone(), output_dir.clone())?;
+        }
+        Commands::Arrows { input_dir, output_dir } => {
+            info!("Executing arrows command");
+            pipeline_steps::cmd_arrows(input_dir.clone(), output_dir.clone())?;
+        }
+        Commands::SplitByBand { input_dir, output_dir } => {
+            info!("Executing split-by-band command");
+            pipeline_steps::cmd_split_by_band(input_dir.clone(), output_dir.clone())?;
+        }
+        Commands::GenFlake { band_dir, output_dir } => {
+            info!("Executing gen-flake command");
+            pipeline_steps::cmd_gen_flake(band_dir.clone(), output_dir.clone())?;
+        }
+        Commands::CanonicalFlake { input_dir, output_dir, mathlib_split } => {
+            info!("Executing canonical-flake command");
+            pipeline_steps::cmd_canonical_flake(input_dir.clone(), output_dir.clone(), mathlib_split.clone())?;
+        }
+        Commands::DepGraph { input_dir, output_dir } => {
+            info!("Executing dep-graph command");
+            pipeline_steps::cmd_dep_graph(input_dir.clone(), output_dir.clone())?;
+        }
+        Commands::Mycelium { input_dir, output_dir } => {
+            info!("Executing mycelium command");
+            pipeline_steps::cmd_mycelium(input_dir.clone(), output_dir.clone())?;
+        }
+        Commands::LoadDecls { dir, dry_run } => {
+            info!("Executing load-decls");
+            repl::cmd_load_decls(dir.clone(), *dry_run)?;
+        }
+        Commands::ReplStats => {
+            info!("Executing repl-stats");
+            repl::cmd_repl_stats()?;
         }
     }
 

@@ -1,0 +1,14 @@
+# Task: Prove CAR Archive Properties
+
+## Data
+CARv1: {header: {roots: [CID], version: 1}, blocks: [{cid, data}], index: CID→offset}
+
+## Theorems to Prove
+1. **car_roundtrip**: For any block B, encode(decode(B)) = B.
+2. **car_merkle_root_valid**: Roots array contains valid CIDs.
+3. **car_index_covers_all_blocks**: Every block has an index entry.
+4. **car_deterministic**: Identical blocks → identical CIDs.
+5. **car_streamable**: Blocks can be verified without loading entire file.
+
+## Files
+Place all in RequestProject/CARProofs.lean. Full proofs, no sorry, standard axioms only.

@@ -21,7 +21,9 @@ dirs = "5.0"
 flate2 = "1.0"
 
 # HTTP client for API (using rustls to avoid OpenSSL dependency issues)
-reqwest = { version = "0.12", features = ["json", "multipart", "stream", "rustls-tls"], default-features = false }
+glob = "0.3"
+regex = "1"
+reqwest = { version = "0.12", features = ["json", "multipart", "stream", "rustls-tls", "blocking"], default-features = false }
 
 # SQLite for Nix DB queries
 rusqlite = { version = "0.31", features = ["bundled"] }
