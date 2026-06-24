@@ -73,7 +73,8 @@ pub async fn cmd_fetch(
         let page_count = items.len();
         for item in &items {
             let id = item["project_id"].as_str().unwrap_or("");
-            if !existing.contains(id) {
+            let has_files = item["has_files"].as_bool().unwrap_or(false);
+            if !existing.contains(id) && has_files {
                 new_projects.push(item.clone());
             }
         }
@@ -118,8 +119,8 @@ pub async fn cmd_fetch(
     let mut failed = 0u64;
 
     for (i, project) in new_projects.iter().enumerate() {
-        let id = project["id"].as_str().unwrap_or("");
-        let url = format!("{}/project/{}/result/download", base_url, id);
+        let id = project["project_id"].as_str().unwrap_or("?");
+        let url = format!("{}/project/{}/result", base_url, id);
 
         match client
             .get(&url)
