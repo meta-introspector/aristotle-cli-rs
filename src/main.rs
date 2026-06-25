@@ -345,6 +345,33 @@ enum Commands {
         #[arg(long)]
         output_dir: Option<PathBuf>,
     },
+    /// Send instructions to a running Aristotle project (injects files inline)
+    Ask {
+        /// Project ID to send instructions to
+        project_id: String,
+        /// Prompt text (use @file.lean to inject file content)
+        prompt: String,
+        /// Optional file to attach inline (replaces {file} in prompt, or appends)
+        #[arg(long)]
+        file: Option<PathBuf>,
+        /// Batch inject: read all .lean files from this directory as follow-up asks
+        #[arg(long)]
+        inject_dir: Option<PathBuf>,
+    },
+    /// Patch mode: watch a running Aristotle project, detect prereq gaps, fill them
+    Patch {
+        /// Project ID to watch
+        project_id: String,
+        /// Directory containing .lean files available as prereqs
+        #[arg(long)]
+        prereq_dir: PathBuf,
+        /// Poll interval in seconds
+        #[arg(long, default_value = "60")]
+        interval: u64,
+        /// Max number of patch rounds
+        #[arg(long, default_value = "10")]
+        max_rounds: usize,
+    },
 }
 
 #[derive(Subcommand)]
@@ -2307,6 +2334,164 @@ async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>, verb
     Ok(())
 }
 
+/// ── Ask: send instructions to a running Aristotle project ────────
+
+fn cmd_ask(project_id: String, prompt: String, file: Option<PathBuf>, inject_dir: Option<PathBuf>) -> Result<()> {
+    use std::process::Command;
+    let api_key = get_api_key()?;
+
+    // Build the prompt — optionally inject file content
+    let final_prompt = if let Some(ref f) = file {
+        let content = std::fs::read_to_string(f)
+            .context("Failed to read inject file")?;
+        let fname = f.file_name().unwrap_or_default().to_string_lossy();
+        if prompt.contains("{file}") {
+            prompt.replace("{file}", &format!("=== {} ===\n{}\n=== END FILE ===", fname, content))
+        } else {
+            format!("{}\n\n=== {} ===\n{}\n=== END FILE ===", prompt, fname, content)
+        }
+    } else {
+        prompt.to_string()
+    };
+
+    info!("Asking project {}: {}...", project_id, &final_prompt[..final_prompt.len().min(80)]);
+    
+    let status = Command::new("aristotle")
+        .args(["ask", &project_id, &final_prompt])
+        .output()
+        .context("Failed to run aristotle ask")?;
+
+    let stdout = String::from_utf8_lossy(&status.stdout);
+    let stderr = String::from_utf8_lossy(&status.stderr);
+    println!("{}", stdout);
+    if !stderr.is_empty() { eprintln!("{}", stderr); }
+
+    // Batch inject: iterate all .lean files in a directory
+    if let Some(ref dir) = inject_dir {
+        let entries: Vec<_> = std::fs::read_dir(dir)
+            .context("Failed to read inject_dir")?
+            .filter_map(|e| e.ok())
+            .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
+            .collect();
+        for entry in &entries {
+            let path = entry.path();
+            let content = std::fs::read_to_string(&path)
+                .with_context(|| format!("Failed to read {:?}", path))?;
+            let fname = path.file_name().unwrap_or_default().to_string_lossy();
+            let ask_prompt = format!("File: {}\n\n=== {} ===\n{}\n=== END FILE ===", fname, fname, content);
+            let status = Command::new("aristotle")
+                .args(["ask", &project_id, &ask_prompt])
+                .output()
+                .context("Failed to run aristotle ask")?;
+            if !status.status.success() {
+                eprintln!("  Failed to inject: {}", fname);
+            }
+        }
+        println!("Injected {} files into project {}", entries.len(), project_id);
+    }
+
+    Ok(())
+}
+
+/// ── Patch mode: poll a running Aristotle project, detect prereq gaps ──
+
+async fn cmd_patch(project_id: String, prereq_dir: PathBuf, interval: u64, max_rounds: usize) -> Result<()> {
+    use tokio::time::{sleep, Duration};
+
+    let config = load_config()?;
+    let api_key = get_api_key()?;
+    let client = Client::builder()
+        .timeout(Duration::from_secs(30))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    // Index prereq files
+    let mut prereq_index: std::collections::HashMap<String, PathBuf> = std::collections::HashMap::new();
+    for entry in WalkDir::new(&prereq_dir).into_iter().filter_map(|e| e.ok())
+        .filter(|e| e.path().extension().map_or(false, |e| e == "lean"))
+    {
+        let name = entry.path().file_name().unwrap_or_default().to_string_lossy().to_string();
+        prereq_index.insert(name, entry.path().to_path_buf());
+    }
+    println!("Indexed {} prereq files", prereq_index.len());
+    println!("Watching project {} every {}s for {} rounds", project_id, interval, max_rounds);
+
+    for round in 1..=max_rounds {
+        // Check project status
+        let url = format!("{}/project/{}", API_BASE_URL, project_id);
+        let resp = client.get(&url).header("x-api-key", &api_key).send().await;
+        match resp {
+            Ok(r) if r.status().is_success() => {
+                let json: serde_json::Value = r.json().await?;
+                let status = json["status"].as_i64().unwrap_or(0);
+                let desc = json["description"].as_str().unwrap_or("");
+
+                match status {
+                    0 | 1 => { // Queued or Running
+                        println!("[Round {}/{}] Status: {} — still working...", round, max_rounds,
+                            if status == 0 { "QUEUED" } else { "RUNNING" });
+                        
+                        // Check if Aristotle is asking for specific files
+                        let tasks_url = format!("{}/project/{}/task", API_BASE_URL, project_id);
+                        if let Ok(tasks_resp) = client.get(&tasks_url).header("x-api-key", &api_key).send().await {
+                            if tasks_resp.status().is_success() {
+                                let tasks_json: serde_json::Value = tasks_resp.json().await?;
+                                if let Some(tasks) = tasks_json.as_array() {
+                                    for task in tasks {
+                                        let task_desc = task["description"].as_str().unwrap_or("");
+                                        let task_status = task["status"].as_str().unwrap_or("");
+                                        if task_status == "running" || task_status == "queued" {
+                                            // Look for file requests in task description
+                                            for pat in ["need", "missing", "cannot find", "can't find", "require", "please provide"] {
+                                                if task_desc.to_lowercase().contains(pat) {
+                                                    println!("  Task needs help: {}", &task_desc[..task_desc.len().min(200)]);
+                                                    // Try to find matching prereq
+                                                    for (name, path) in &prereq_index {
+                                                        if task_desc.contains(name.as_str()) {
+                                                            println!("  Found prereq: {} -> injecting...", name);
+                                                            let content = std::fs::read_to_string(path)?;
+                                                            let ask_prompt = format!(
+                                                                "Here is the missing file you need:\n\n=== {} ===\n{}\n=== END FILE ===",
+                                                                name, content
+                                                            );
+                                                            std::process::Command::new("aristotle")
+                                                                .args(["ask", &project_id, &ask_prompt])
+                                                                .output()?;
+                                                            println!("  Injected: {}", name);
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    2 => { // Done
+                        println!("[Round {}/{}] COMPLETED!", round, max_rounds);
+                        return Ok(());
+                    }
+                    _ => {
+                        println!("[Round {}/{}] Status: FAILED ({})", round, max_rounds, status);
+                        return Err(anyhow::anyhow!("Project failed: {}", desc));
+                    }
+                }
+            }
+            Ok(r) => {
+                println!("[Round {}/{}] API returned {}", round, max_rounds, r.status());
+            }
+            Err(e) => {
+                println!("[Round {}/{}] API error: {}", round, max_rounds, e);
+            }
+        }
+        sleep(Duration::from_secs(interval)).await;
+    }
+    println!("Max rounds ({}) reached — project still running", max_rounds);
+    Ok(())
+}
+
 /// ── Main ─────────────────────────────────────────────────────────────────
 
 #[tokio::main]
@@ -2446,6 +2631,14 @@ async fn main() -> Result<()> {
         Commands::DownloadResult { project_id, output_dir, verbose } => {
             info!("Executing download-result command");
             cmd_download_result(project_id, output_dir.clone(), *verbose).await?;
+        }
+        Commands::Ask { project_id, prompt, file, inject_dir } => {
+            info!("Executing ask command");
+            cmd_ask(project_id.clone(), prompt.clone(), file.clone(), inject_dir.clone())?;
+        }
+        Commands::Patch { project_id, prereq_dir, interval, max_rounds } => {
+            info!("Executing patch command");
+            cmd_patch(project_id.clone(), prereq_dir.clone(), *interval, *max_rounds).await?;
         }
         Commands::Results => {
             info!("Executing results command");
