@@ -18,7 +18,7 @@
         craneLib = crane.mkLib pkgs;
 
         rawGitSrc = builtins.fetchGit {
-          url = "git+file:///mnt/data1/git/github.com/arist/aristotle-manager.git";
+          url = "git+file:///home/mdupont/git/github.com/meta-introspector/aristotle-manager.git";
           ref = "main";
         };
 
