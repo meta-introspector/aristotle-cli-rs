@@ -113,6 +113,13 @@ enum Commands {
         #[arg(long)]
         dry_run: bool,
     },
+    /// Ask Aristotle with Lean4 proof files attached
+    AskWithFiles {
+        project_id: String,
+        prompt: String,
+        #[arg(long)]
+        files_dir: PathBuf,
+    },
     /// Show lean4-repl stats
     ReplStats,
     /// Refresh: pull latest from Aristotle, download new, split all, build decl table
@@ -2004,49 +2011,140 @@ fn consolidate_project(project_dir: &PathBuf, output_dir: &PathBuf, project_id: 
     Ok(())
 }
 
-/// ── Submit command: send a project to Aristotle via the CLI ────────
+/// ── Submit command: send a project to Aristotle as multipart with tarball ──
 
 #[instrument(skip(prompt, project_dir))]
-fn cmd_submit(prompt: &str, project_dir: Option<PathBuf>, wait: bool) -> Result<()> {
+fn cmd_submit(prompt: &str, project_dir: Option<PathBuf>, _wait: bool) -> Result<()> {
     let api_key = get_api_key()?;
-    let mut args: Vec<String> = vec!["submit".into(), "--api-key".into(), api_key];
-    
+    let client = reqwest::blocking::Client::builder()
+        .timeout(Duration::from_secs(300))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    let url = format!("{}/project", API_BASE_URL);
+    info!(url = %url, "Submitting to Aristotle API (native HTTP with tarball)");
+
+    let mut form = reqwest::blocking::multipart::Form::new()
+        .text("body", serde_json::json!({"prompt": prompt}).to_string());
+
+    // If project directory provided, tar.gz it and attach as file
     if let Some(ref dir) = project_dir {
-        args.push("--project-dir".into());
-        args.push(dir.to_string_lossy().to_string());
+        if dir.exists() {
+            let tar_path = dir.with_extension("tar.gz");
+            // Create tarball
+            let tar_status = std::process::Command::new("tar")
+                .args(["-czf", &tar_path.to_string_lossy(), "-C",
+                       &dir.parent().unwrap_or(dir).to_string_lossy(),
+                       &dir.file_name().unwrap_or_default().to_string_lossy()])
+                .output()
+                .context("Failed to create project tarball")?;
+            if !tar_status.status.success() {
+                return Err(anyhow::anyhow!("tar failed: {}", String::from_utf8_lossy(&tar_status.stderr)));
+            }
+            let tar_data = std::fs::read(&tar_path)
+                .context("Failed to read tarball")?;
+            let tar_len = tar_data.len();
+            let fname = format!("{}.tar.gz", dir.file_name().unwrap_or_default().to_string_lossy());
+            let part = reqwest::blocking::multipart::Part::bytes(tar_data)
+                .file_name(fname)
+                .mime_str("application/gzip")?;
+            form = form.part("file", part);
+            info!(size = tar_len, "Attached project tarball");
+            let _ = std::fs::remove_file(&tar_path);
+        }
     }
-    if wait {
-        args.push("--wait".into());
-    }
-    args.push(prompt.to_string());
 
-    info!("Running: aristotle {}", args.join(" "));
-    
-    let output = Command::new("aristotle")
-        .args(&args)
-        .output()
-        .context("Failed to run aristotle CLI")?;
+    let response = client
+        .post(&url)
+        .header("x-api-key", &api_key)
+        .multipart(form)
+        .send()
+        .context("Failed to submit to Aristotle API")?;
 
-    let stdout = String::from_utf8_lossy(&output.stdout);
-    let stderr = String::from_utf8_lossy(&output.stderr);
+    let status = response.status();
+    let body = response.text().unwrap_or_default();
+    info!(http_status = %status, body = %body.chars().take(200).collect::<String>());
 
-    if output.status.success() {
-        for line in stdout.lines() {
-            if line.contains("Project created") || line.contains("WARNING") || line.contains("Error") {
-                println!("{}", line);
+    if status.is_success() {
+        if let Ok(json) = serde_json::from_str::<serde_json::Value>(&body) {
+            if let Some(pid) = json["project_id"].as_str() {
+                println!("Project created: {}", pid);
+            } else {
+                println!("Submitted successfully");
             }
         }
-        if !stderr.is_empty() {
-            eprintln!("{}", stderr);
-        }
     } else {
-        error!(stdout = %stdout, stderr = %stderr, "aristotle CLI failed");
-        eprintln!("stdout: {}", stdout);
-        eprintln!("stderr: {}", stderr);
-        return Err(anyhow::anyhow!("aristotle CLI failed"));
+        error!(http_status = %status, "Aristotle API error");
+        return Err(anyhow::anyhow!("API error: HTTP {} — {}", status,
+            body.chars().take(300).collect::<String>()));
     }
 
     Ok(())
+}
+
+fn ask_aristotle_sync(api_key: &str, project_id: &str, prompt: &str) -> Result<String> {
+    let client = reqwest::blocking::Client::builder()
+        .timeout(Duration::from_secs(60))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    let url = format!("{}/project/{}/ask", API_BASE_URL, project_id);
+    info!(url = %url, "Asking Aristotle (native HTTP)");
+
+    let response = client
+        .post(&url)
+        .header("x-api-key", api_key)
+        .json(&serde_json::json!({"prompt": prompt}))
+        .send()
+        .context("Failed to ask Aristotle")?;
+
+    let status = response.status();
+    let body = response.text().unwrap_or_default();
+    if !status.is_success() {
+        return Err(anyhow::anyhow!("Ask failed: HTTP {} — {}", status, body));
+    }
+    Ok(body)
+}
+
+/// Ask with files attached (Lean4 proofs, data files)
+fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files_dir: &PathBuf) -> Result<String> {
+    let client = reqwest::blocking::Client::builder()
+        .timeout(Duration::from_secs(120))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    // Build body JSON with prompt + inline file contents
+    let mut body = serde_json::json!({"prompt": prompt});
+    if files_dir.exists() {
+        let mut files_map = serde_json::Map::new();
+        for entry in WalkDir::new(files_dir).max_depth(2).into_iter().filter_map(|e| e.ok()) {
+            if entry.path().extension().map_or(false, |e| e == "lean") {
+                let content = fs::read_to_string(entry.path())?;
+                let name = entry.file_name().to_string_lossy().to_string();
+                files_map.insert(name, serde_json::json!(content));
+            }
+        }
+        if !files_map.is_empty() {
+            body["files"] = serde_json::json!(files_map);
+        }
+    }
+
+    let url = format!("{}/project/{}/ask", API_BASE_URL, project_id);
+    info!(url = %url, "Asking Aristotle with files (native HTTP)");
+
+    let response = client
+        .post(&url)
+        .header("x-api-key", api_key)
+        .json(&body)
+        .send()
+        .context("Failed to ask Aristotle with files")?;
+
+    let status = response.status();
+    let resp_body = response.text().unwrap_or_default();
+    if !status.is_success() {
+        return Err(anyhow::anyhow!("Ask with files failed: HTTP {} — {}", status, resp_body));
+    }
+    Ok(resp_body)
 }
 
 /// ── Check command: query project status from Aristotle API ──────────
@@ -2367,15 +2465,11 @@ fn cmd_ask(project_id: String, prompt: String, file: Option<PathBuf>, inject_dir
 
     info!("Asking project {}: {}...", project_id, &final_prompt[..final_prompt.len().min(80)]);
     
-    let status = Command::new("aristotle")
-        .args(["ask", &project_id, &final_prompt])
-        .output()
-        .context("Failed to run aristotle ask")?;
-
-    let stdout = String::from_utf8_lossy(&status.stdout);
-    let stderr = String::from_utf8_lossy(&status.stderr);
-    println!("{}", stdout);
-    if !stderr.is_empty() { eprintln!("{}", stderr); }
+    let ask_result = ask_aristotle_sync(&api_key, &project_id, &final_prompt);
+    match ask_result {
+        Ok(resp) => println!("{}", resp),
+        Err(e) => eprintln!("Ask failed: {}", e),
+    }
 
     // Batch inject: iterate all .lean files in a directory
     if let Some(ref dir) = inject_dir {
@@ -2390,12 +2484,9 @@ fn cmd_ask(project_id: String, prompt: String, file: Option<PathBuf>, inject_dir
                 .with_context(|| format!("Failed to read {:?}", path))?;
             let fname = path.file_name().unwrap_or_default().to_string_lossy();
             let ask_prompt = format!("File: {}\n\n=== {} ===\n{}\n=== END FILE ===", fname, fname, content);
-            let status = Command::new("aristotle")
-                .args(["ask", &project_id, &ask_prompt])
-                .output()
-                .context("Failed to run aristotle ask")?;
-            if !status.status.success() {
-                eprintln!("  Failed to inject: {}", fname);
+            match ask_aristotle_sync(&api_key, &project_id, &ask_prompt) {
+                Ok(_) => {}
+                Err(e) => eprintln!("  Failed to inject: {} — {}", fname, e),
             }
         }
         println!("Injected {} files into project {}", entries.len(), project_id);
@@ -2465,9 +2556,7 @@ async fn cmd_patch(project_id: String, prereq_dir: PathBuf, interval: u64, max_r
                                                                 "Here is the missing file you need:\n\n=== {} ===\n{}\n=== END FILE ===",
                                                                 name, content
                                                             );
-                                                            std::process::Command::new("aristotle")
-                                                                .args(["ask", &project_id, &ask_prompt])
-                                                                .output()?;
+                                                            let _ = ask_aristotle_sync(&api_key, &project_id, &ask_prompt);
                                                             println!("  Injected: {}", name);
                                                             break;
                                                         }
@@ -2926,6 +3015,12 @@ async fn main() -> Result<()> {
         Commands::LoadDecls { dir, dry_run } => {
             info!("Executing load-decls");
             repl::cmd_load_decls(dir.clone(), *dry_run)?;
+        }
+        Commands::AskWithFiles { project_id, prompt, files_dir } => {
+            info!("Executing ask-with-files");
+            let api_key = get_api_key()?;
+            let result = ask_aristotle_with_files(&api_key, project_id, prompt, files_dir)?;
+            println!("{}", result);
         }
         Commands::ReplStats => {
             info!("Executing repl-stats");
