@@ -233,6 +233,15 @@ enum Commands {
         #[arg(long, default_value = "console")]
         trace: String,
     },
+    /// Show status of all DASL-related projects with lean/sorry/flake stats
+    DaslStatus {
+        /// Filter by keyword in description
+        #[arg(long)]
+        filter: Option<String>,
+        /// Only show projects with sorries
+        #[arg(long)]
+        sorries_only: bool,
+    },
     /// Download results from a completed Aristotle project
     DownloadResult {
         /// Project ID to download
@@ -1994,6 +2003,7 @@ fn cmd_submit(prompt: &str, project_dir: Option<PathBuf>, wait: bool) -> Result<
 
 #[instrument(skip(project_id))]
 async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<()> {
+    let config = load_config()?;
     let api_key = get_api_key()?;
     let client = Client::builder()
         .timeout(Duration::from_secs(30))
@@ -2018,6 +2028,32 @@ async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<(
                 json["has_files"].as_bool().unwrap_or(false));
             println!("  Created: {}", json["created_at"].as_str().unwrap_or(""));
             println!("  Updated: {}", json["last_updated"].as_str().unwrap_or(""));
+
+            // Local disk info
+            let proj_dir = config.results_dir.join(format!("{}_aristotle", pid));
+            if proj_dir.exists() {
+                let lean_count = WalkDir::new(&proj_dir)
+                    .into_iter()
+                    .filter_map(|e| e.ok())
+                    .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
+                    .count();
+                let sorry_count = if lean_count > 0 {
+                    let mut count = 0u64;
+                    for entry in WalkDir::new(&proj_dir).into_iter().filter_map(|e| e.ok())
+                        .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
+                    {
+                        if let Ok(content) = std::fs::read_to_string(entry.path()) {
+                            count += content.matches("sorry").count() as u64;
+                        }
+                    }
+                    count
+                } else { 0 };
+                let flake_dir = config.base_dir.join("canonical-flakes").join(&pid);
+                let has_flakes = flake_dir.exists();
+                println!("  Local: {} .lean files, {} sorries, flakes={}", lean_count, sorry_count, if has_flakes { "yes" } else { "no" });
+            } else {
+                println!("  Local: not downloaded");
+            }
         }
     } else {
         let url = format!("{}/project", API_BASE_URL);
@@ -2041,6 +2077,83 @@ async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<(
         }
     }
 
+    Ok(())
+}
+
+/// ── DASL Status: show all DASL-related projects with lean/sorry/flake stats ──
+
+fn cmd_dasl_status(filter: Option<String>, sorries_only: bool) -> Result<()> {
+    let config = load_config()?;
+    let dasl_keywords = ["dasl", "dag-cbor", "ipld", "monster", "moonshine", "umbral", "aristotle loop", "consolidated", "lean4", "splitter"];
+
+    // Load API project list
+    let api_path = config.base_dir.join("aristotle_projects.json");
+    let all_projects: Vec<Value> = if api_path.exists() {
+        let text = std::fs::read_to_string(&api_path)?;
+        let json: Value = serde_json::from_str(&text)?;
+        json["projects"].as_array().cloned().unwrap_or_default()
+    } else {
+        return Err(anyhow::anyhow!("No aristotle_projects.json — run 'download' or 'poll' first"));
+    };
+
+    // Filter to DASL-related projects
+    let mut results: Vec<(String, String, u64, u64, bool)> = Vec::new();
+
+    for project in &all_projects {
+        let pid = project["project_id"].as_str().unwrap_or("").to_string();
+        let desc = project["description"].as_str().unwrap_or("").to_lowercase();
+
+        // Check if DASL-related
+        let is_dasl = dasl_keywords.iter().any(|kw| desc.contains(kw));
+        if !is_dasl { continue; }
+
+        // Apply user filter
+        if let Some(ref f) = filter {
+            if !desc.contains(&f.to_lowercase()) { continue; }
+        }
+
+        // Local stats
+        let proj_dir = config.results_dir.join(format!("{}_aristotle", &pid));
+        let (lean_count, sorry_count, has_flakes) = if proj_dir.exists() {
+            let mut lean = 0u64;
+            let mut sorries = 0u64;
+            for entry in WalkDir::new(&proj_dir).into_iter().filter_map(|e| e.ok())
+                .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
+            {
+                lean += 1;
+                if let Ok(content) = std::fs::read_to_string(entry.path()) {
+                    let actual_sorries = content.lines()
+                        .filter(|l| l.trim() == "sorry" || l.trim().starts_with("sorry "))
+                        .count() as u64;
+                    sorries += actual_sorries;
+                }
+            }
+            let flakes = config.base_dir.join("canonical-flakes").join(&pid).exists();
+            (lean, sorries, flakes)
+        } else {
+            (0, 0, false)
+        };
+
+        if sorries_only && sorry_count == 0 { continue; }
+
+        let status = match project["status"].as_i64().unwrap_or(0) {
+            0 => "QUEUE", 1 => "RUN", 2 => "DONE", _ => "?"
+        };
+        results.push((pid, status.to_string(), lean_count, sorry_count, has_flakes));
+    }
+
+    // Sort by sorry count desc, then lean count desc
+    results.sort_by(|a, b| b.3.cmp(&a.3).then(b.2.cmp(&a.2)));
+
+    println!("{:<38} {:<6} {:<6} {:<6} {:<6}", "PROJECT", "STATUS", "LEAN", "SORRY", "FLAKES");
+    for (pid, status, lean, sorry, flakes) in &results {
+        let marker = if *sorry > 0 { " ⚠" } else { "" };
+        println!("{:<38} {:<6} {:<6} {:<6} {:<6}{}", 
+            pid, status, lean, sorry, if *flakes { "yes" } else { "no" }, marker);
+    }
+
+    let total_sorries: u64 = results.iter().map(|r| r.3).sum();
+    println!("\n{} DASL projects, {} total sorries", results.len(), total_sorries);
     Ok(())
 }
 
@@ -2237,6 +2350,10 @@ async fn main() -> Result<()> {
         Commands::Check { project_id, limit, trace } => {
             info!(?project_id, ?limit, trace, "Executing check command");
             cmd_check(project_id.clone(), *limit).await?;
+        }
+        Commands::DaslStatus { filter, sorries_only } => {
+            info!(?filter, sorries_only, "Executing dasl-status command");
+            cmd_dasl_status(filter.clone(), *sorries_only)?;
         }
         Commands::DownloadResult { project_id, output_dir, verbose } => {
             info!("Executing download-result command");
