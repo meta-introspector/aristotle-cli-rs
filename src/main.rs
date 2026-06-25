@@ -372,6 +372,17 @@ enum Commands {
         #[arg(long, default_value = "10")]
         max_rounds: usize,
     },
+    /// Finish: download result, merge into common project, rebuild flakes, update planner
+    DaslFinish {
+        /// Project ID to finish
+        project_id: String,
+        /// Common project to merge into
+        #[arg(long, default_value = "/home/mdupont/projects/dasl-sorries")]
+        common_project: PathBuf,
+        /// Canonical results directory
+        #[arg(long, default_value = "/home/mdupont/projects/dasl-results")]
+        results_dir: PathBuf,
+    },
 }
 
 #[derive(Subcommand)]
@@ -2492,6 +2503,170 @@ async fn cmd_patch(project_id: String, prereq_dir: PathBuf, interval: u64, max_r
     Ok(())
 }
 
+/// ── DaslFinish: download result, merge, rebuild flakes, update planner ──
+
+async fn cmd_dasl_finish(project_id: String, common_project: PathBuf, results_dir: PathBuf) -> Result<()> {
+    info!("=== dasl-finish: {} ====", project_id);
+
+    // Step 1: Download result to canonical results directory
+    let api_key = get_api_key()?;
+    let client = Client::builder().timeout(Duration::from_secs(300)).build()?;
+    fs::create_dir_all(&results_dir)?;
+    
+    println!("[1/5] Downloading result for {}...", project_id);
+    let download_path = download_single_result(
+        &client, &api_key, &project_id, &results_dir, &results_dir, 10, 3
+    ).await?;
+    println!("  Downloaded to: {}", download_path.display());
+
+    // Step 2: Find and copy .lean files into common project
+    println!("[2/5] Merging .lean files into {}...", common_project.display());
+    let lean_files: Vec<_> = WalkDir::new(&download_path)
+        .into_iter().filter_map(|e| e.ok())
+        .filter(|e| e.path().extension().map_or(false, |e| e == "lean"))
+        .collect();
+    
+    let mut merged = 0usize;
+    for entry in &lean_files {
+        let src = entry.path();
+        let fname = format!("{}_{}", &project_id[..8], src.file_name().unwrap_or_default().to_string_lossy());
+        let dst = common_project.join("RequestProject").join(&fname);
+        if !src.starts_with(&common_project) {
+            fs::create_dir_all(dst.parent().unwrap())?;
+            fs::copy(src, &dst)?;
+            merged += 1;
+        }
+    }
+    println!("  Merged {} .lean files ({} total in result)", merged, lean_files.len());
+
+    // Step 3: Regenerate canonical flakes
+    println!("[3/5] Regenerating canonical flakes...");
+    let flakes_out = common_project.parent().unwrap().join("dasl-sorries-flakes");
+    let _ = fs::remove_dir_all(&flakes_out);
+    let _ = cmd_canonical_flake_inner(&common_project, &flakes_out, None)?;
+    let flake_count = WalkDir::new(&flakes_out).into_iter().filter_map(|e| e.ok())
+        .filter(|e| e.file_name() == "flake.nix").count();
+    println!("  {} modules with flakes", flake_count);
+
+    // Step 4: Update planner (auto-scan)
+    println!("[4/5] Updating planner...");
+    match std::process::Command::new("bash").arg("-c")
+        .arg("cd ~/dasl-planning && ./dasl-planner refresh 2>&1")
+        .output() 
+    {
+        Ok(out) => println!("  Planner: {}", String::from_utf8_lossy(&out.stdout).trim()),
+        Err(e) => eprintln!("  Planner refresh failed: {}", e),
+    }
+
+    // Step 5: Git commit
+    println!("[5/5] Committing...");
+    let _ = std::process::Command::new("git")
+        .args(["-C", &common_project.to_string_lossy(), "add", "-A"])
+        .output();
+    let _ = std::process::Command::new("git")
+        .args(["-C", &common_project.to_string_lossy(), "commit", "-m",
+            &format!("dasl-finish: merged Aristotle result {} ({} .lean files)", project_id, merged),
+            "--no-verify"])
+        .output();
+    println!("  Committed {} files", merged);
+
+    println!("\n=== dasl-finish complete ===");
+    println!("  Project:  {}", project_id);
+    println!("  Files:    {} merged", merged);
+    println!("  Flakes:   {} modules", flake_count);
+    println!("  Results:  {}", results_dir.display());
+
+    Ok(())
+}
+
+/// ── Inner canonical-flake (returns Result instead of printing) ──
+
+fn cmd_canonical_flake_inner(input_dir: &PathBuf, output_dir: &PathBuf, mathlib_split: Option<PathBuf>) -> Result<()> {
+    use std::collections::HashSet;
+    let mathlib_dir = mathlib_split.unwrap_or_else(|| PathBuf::from("/home/mdupont/projects/lean-split-tool/mathlib-split"));
+    let index = cmd_canonical_flake_build_index(&mathlib_dir)?;
+    let output_base = output_dir.join("RequestProject");
+    fs::create_dir_all(&output_base)?;
+    let lean_files: Vec<_> = WalkDir::new(input_dir.join("RequestProject")).into_iter()
+        .filter_map(|e| e.ok()).filter(|e| e.path().extension().map_or(false, |e| e == "lean")).collect();
+    let mut resolved = 0usize;
+    for entry in &lean_files {
+        let content = fs::read_to_string(entry.path())?;
+        let mut deps: Vec<String> = Vec::new();
+        for line in content.lines() {
+            let trimmed = line.trim();
+            if trimmed.starts_with("import ") {
+                let import_path = trimmed.strip_prefix("import ").unwrap().trim();
+                if let Some(resolved_path) = index.get(import_path) {
+                    deps.push(format!("    \"{}", resolved_path));
+                    resolved += 1;
+                }
+            }
+        }
+        let fname = entry.path().file_stem().unwrap().to_string_lossy();
+        let mod_dir = output_base.join(&*fname);
+        fs::create_dir_all(&mod_dir)?;
+        let flake_content = format!(r#"{{
+  description = "Canonical flake for {mod} — Auto-generated by canonical-flake";
+  inputs = {{
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  }};
+  outputs = {{ self, nixpkgs }}: let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${{system}};
+    mathlibPath = "{mathlib}";
+  in {{
+    packages.${{system}}.default = pkgs.stdenv.mkDerivation {{
+      name = "{mod}";
+      src = ./.;
+      buildInputs = with pkgs; [ lean4 ];
+      buildPhase = ''"
+        for dep in {deps_str}; do
+          cp -r "$dep" src/
+        done
+        mkdir -p $out
+        cp {mod}.lean $out/
+      "'';
+      installPhase = "true";
+    }};
+    devShells.${{system}}.default = pkgs.mkShell {{
+      buildInputs = with pkgs; [ lean4 ];
+      shellHook = ''
+        echo "Canonical flake: {mod}"
+        echo "Mathlib-split: {mathlib}"
+      '';
+    }};
+  }};
+}}"#, 
+            mod = fname,
+            mathlib = mathlib_dir.display(),
+            deps_str = deps.join("\n")
+        );
+        fs::write(mod_dir.join("flake.nix"), &flake_content)?;
+        fs::copy(entry.path(), mod_dir.join(format!("{}.lean", fname)))?;
+    }
+    Ok(())
+}
+
+fn cmd_canonical_flake_build_index(mathlib_dir: &PathBuf) -> Result<std::collections::HashMap<String, String>> {
+    let mut index = std::collections::HashMap::new();
+    for entry in WalkDir::new(mathlib_dir).into_iter().filter_map(|e| e.ok())
+        .filter(|e| e.file_name() == "flake.nix")
+    {
+        let rel = entry.path().strip_prefix(mathlib_dir).unwrap_or(entry.path());
+        let mod_path = rel.parent().unwrap_or(std::path::Path::new(""));
+        if let Ok(content) = fs::read_to_string(entry.path()) {
+            for line in content.lines() {
+                if let Some(module) = line.trim().strip_prefix("module = \"") {
+                    let module = module.trim_end_matches("\";");
+                    index.insert(module.to_string(), mod_path.to_string_lossy().to_string());
+                }
+            }
+        }
+    }
+    Ok(index)
+}
+
 /// ── Main ─────────────────────────────────────────────────────────────────
 
 #[tokio::main]
@@ -2639,6 +2814,10 @@ async fn main() -> Result<()> {
         Commands::Patch { project_id, prereq_dir, interval, max_rounds } => {
             info!("Executing patch command");
             cmd_patch(project_id.clone(), prereq_dir.clone(), *interval, *max_rounds).await?;
+        }
+        Commands::DaslFinish { project_id, common_project, results_dir } => {
+            info!("Executing dasl-finish command");
+            cmd_dasl_finish(project_id.clone(), common_project.clone(), results_dir.clone()).await?;
         }
         Commands::Results => {
             info!("Executing results command");
