@@ -242,6 +242,18 @@ enum Commands {
         #[arg(long)]
         sorries_only: bool,
     },
+    /// Find overlapping projects by shared mathlib-split imports
+    Overlap {
+        /// Reference project ID to compare against
+        #[arg(long)]
+        reference: String,
+        /// Minimum shared imports to report (default 5)
+        #[arg(long, default_value = "5")]
+        min_shared: usize,
+        /// Top N results (default 20)
+        #[arg(long, default_value = "20")]
+        top: usize,
+    },
     /// Download results from a completed Aristotle project
     DownloadResult {
         /// Project ID to download
@@ -2157,6 +2169,78 @@ fn cmd_dasl_status(filter: Option<String>, sorries_only: bool) -> Result<()> {
     Ok(())
 }
 
+/// ── Overlap: find projects sharing mathlib-split imports with a reference ──
+
+fn cmd_overlap(reference: String, min_shared: usize, top: usize) -> Result<()> {
+    let config = load_config()?;
+    let flakes_dir = config.base_dir.join("canonical-flakes");
+
+    // Build reference project import set
+    let ref_dir = flakes_dir.join(&reference);
+    if !ref_dir.exists() {
+        return Err(anyhow::anyhow!(
+            "Reference project not found in canonical-flakes: {}. Run canonical-flake on it first.",
+            reference
+        ));
+    }
+
+    let mut ref_imports: std::collections::HashSet<String> = std::collections::HashSet::new();
+    for entry in WalkDir::new(&ref_dir).into_iter().filter_map(|e| e.ok())
+        .filter(|e| e.file_name() == "flake.nix")
+    {
+        if let Ok(content) = std::fs::read_to_string(entry.path()) {
+            for line in content.lines() {
+                if let Some(path) = line.trim().strip_prefix("url = \"path:") {
+                    let path = path.trim_end_matches("\";");
+                    ref_imports.insert(path.to_string());
+                }
+            }
+        }
+    }
+    let ref_count = ref_imports.len();
+    println!("Reference: {} ({}) unique mathlib-split imports", reference, ref_count);
+
+    // Scan all projects for overlap
+    let mut overlaps: Vec<(String, usize)> = Vec::new();
+    if let Ok(entries) = std::fs::read_dir(&flakes_dir) {
+        for entry in entries.filter_map(|e| e.ok()) {
+            let pid = entry.file_name().to_string_lossy().to_string();
+            if pid == reference { continue; }
+
+            let proj_dir = flakes_dir.join(&pid);
+            if !proj_dir.is_dir() { continue; }
+
+            let mut shared = 0usize;
+            for flake_entry in WalkDir::new(&proj_dir).into_iter().filter_map(|e| e.ok())
+                .filter(|e| e.file_name() == "flake.nix")
+            {
+                if let Ok(content) = std::fs::read_to_string(flake_entry.path()) {
+                    for line in content.lines() {
+                        if let Some(path) = line.trim().strip_prefix("url = \"path:") {
+                            let path = path.trim_end_matches("\";");
+                            if ref_imports.contains(path) {
+                                shared += 1;
+                            }
+                        }
+                    }
+                }
+            }
+            if shared >= min_shared {
+                overlaps.push((pid, shared));
+            }
+        }
+    }
+
+    overlaps.sort_by(|a, b| b.1.cmp(&a.1));
+    let total = overlaps.len();
+    println!("\n{:<40} {:<10}", "PROJECT", "SHARED");
+    for (pid, shared) in overlaps.iter().take(top) {
+        println!("{:<40} {:<10}", pid, shared);
+    }
+    println!("\n{} projects share >= {} imports with {}", total, min_shared, reference);
+    Ok(())
+}
+
 /// ── Download result from a completed Aristotle project ─────────
 
 async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>, verbose: bool) -> Result<()> {
@@ -2354,6 +2438,10 @@ async fn main() -> Result<()> {
         Commands::DaslStatus { filter, sorries_only } => {
             info!(?filter, sorries_only, "Executing dasl-status command");
             cmd_dasl_status(filter.clone(), *sorries_only)?;
+        }
+        Commands::Overlap { reference, min_shared, top } => {
+            info!(reference, min_shared, top, "Executing overlap command");
+            cmd_overlap(reference.clone(), *min_shared, *top)?;
         }
         Commands::DownloadResult { project_id, output_dir, verbose } => {
             info!("Executing download-result command");
