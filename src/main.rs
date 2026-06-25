@@ -2558,6 +2558,18 @@ async fn cmd_dasl_finish(project_id: String, common_project: PathBuf, results_di
         Err(e) => eprintln!("  Planner refresh failed: {}", e),
     }
 
+    // Also update GOAP planner
+    match std::process::Command::new(
+        "/home/mdupont/dasl-planning/plan-mappings/goap/target/release/dasl-planner"
+    ).output() {
+        Ok(out) => {
+            let goap_out = String::from_utf8_lossy(&out.stdout);
+            let done = goap_out.lines().filter(|l| l.contains("✓")).count();
+            println!("  GOAP: {} atoms proven", done);
+        }
+        Err(_) => {}
+    }
+
     // Step 5: Git commit
     println!("[5/5] Committing...");
     let _ = std::process::Command::new("git")
