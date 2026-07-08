@@ -42,22 +42,27 @@ pub async fn cmd_fetch(
     let base_url = crate::API_BASE_URL;
 
     let mut new_projects: Vec<serde_json::Value> = Vec::new();
-    let mut page = 1;
-    let per_page = 100;
+    let mut pagination_key: Option<String> = None;
+    let mut page = 0u32;
 
     loop {
-        let url = format!(
-            "{}/project?page={}&per_page={}",
-            base_url, page, per_page
-        );
+        page += 1;
+        let url = if let Some(ref key) = pagination_key {
+            format!("{}/project?pagination_key={}", base_url, key)
+        } else {
+            format!("{}/project", base_url)
+        };
+
         let resp = client
             .get(&url)
-            .header("Authorization", format!("Bearer {}", api_key))
+            .header("x-api-key", &api_key)
+            .header("Content-Type", "application/json")
             .send()
             .await?;
+
         let data: serde_json::Value = resp.json().await?;
-        let items = match data.get("data").and_then(|d| d.as_array()) {
-            Some(arr) => arr,
+        let items = match data.get("projects").and_then(|d| d.as_array()) {
+            Some(arr) => arr.clone(),
             None => break,
         };
 
@@ -65,19 +70,24 @@ pub async fn cmd_fetch(
             break;
         }
 
-        for item in items {
-            let id = item["id"].as_str().unwrap_or("");
-            if !existing.contains(id) {
+        let page_count = items.len();
+        for item in &items {
+            let id = item["project_id"].as_str().unwrap_or("");
+            let has_files = item["has_files"].as_bool().unwrap_or(false);
+            if !existing.contains(id) && has_files {
                 new_projects.push(item.clone());
             }
         }
 
-        page += 1;
-        if let Some(lim) = limit {
-            if new_projects.len() >= lim {
-                break;
-            }
+        // Check for pagination
+        let next_key = data["pagination_key"].as_str().map(|s| s.to_string());
+        if next_key.is_none() || page_count == 0 {
+            break;
         }
+        if pagination_key.as_deref() == next_key.as_deref() {
+            break;
+        }
+        pagination_key = next_key;
 
         // Be gentle on the API
         tokio::time::sleep(std::time::Duration::from_millis(200)).await;
@@ -109,12 +119,12 @@ pub async fn cmd_fetch(
     let mut failed = 0u64;
 
     for (i, project) in new_projects.iter().enumerate() {
-        let id = project["id"].as_str().unwrap_or("");
-        let url = format!("{}/project/{}/result/download", base_url, id);
+        let id = project["project_id"].as_str().unwrap_or("?");
+        let url = format!("{}/project/{}/result", base_url, id);
 
         match client
             .get(&url)
-            .header("Authorization", format!("Bearer {}", api_key))
+            .header("x-api-key", &api_key)
             .send()
             .await
         {
