@@ -21,3 +21,6 @@ aristotle_projects.json
 # OS files
 .DS_Store
 Thumbs.db
+/aristotles_results/
+/aristotle-results-real
+/splitter-engine/.lake/
