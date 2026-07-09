@@ -18,8 +18,9 @@ pub async fn cmd_fetch(
 
     println!("=== Aristotle Fetch (incremental) ===");
 
-    // Step 1: Discover already-downloaded project IDs
+    // Step 1: Discover already-downloaded project IDs + their extraction timestamps
     let mut existing: HashSet<String> = HashSet::new();
+    let mut existing_time: std::collections::HashMap<String, String> = std::collections::HashMap::new();
     if results_dir.exists() {
         for entry in fs::read_dir(results_dir)? {
             let entry = entry?;
@@ -27,9 +28,17 @@ pub async fn cmd_fetch(
                 let name = entry.file_name();
                 let name_str = name.to_string_lossy();
                 if name_str.ends_with("_aristotle") {
-                    // Extract project UUID
                     let id = name_str.trim_end_matches("_aristotle").to_string();
-                    existing.insert(id);
+                    existing.insert(id.clone());
+                    // Read metadata for extracted_at timestamp
+                    let meta_path = entry.path().join("aristotle_metadata.json");
+                    if let Ok(meta_str) = fs::read_to_string(&meta_path) {
+                        if let Ok(meta) = serde_json::from_str::<serde_json::Value>(&meta_str) {
+                            if let Some(ts) = meta["extracted_at"].as_str() {
+                                existing_time.insert(id, ts.to_string());
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -74,7 +83,14 @@ pub async fn cmd_fetch(
         for item in &items {
             let id = item["project_id"].as_str().unwrap_or("");
             let has_files = item["has_files"].as_bool().unwrap_or(false);
-            if !existing.contains(id) && has_files {
+            let last_updated = item["last_updated"].as_str().unwrap_or("");
+            let is_new = !existing.contains(id);
+            let is_updated = if let Some(extracted) = existing_time.get(id) {
+                last_updated > extracted.as_str()
+            } else {
+                false
+            };
+            if has_files && (is_new || is_updated) {
                 new_projects.push(item.clone());
             }
         }
@@ -98,9 +114,10 @@ pub async fn cmd_fetch(
     if dry_run {
         println!("\n  Dry run — would download:");
         for p in new_projects.iter().take(10) {
-            let id = p["id"].as_str().unwrap_or("?");
+            let id = p["project_id"].as_str().unwrap_or("?");
             let desc = p["description"].as_str().unwrap_or("").lines().next().unwrap_or("");
-            println!("    {} — {}", id, desc.chars().take(80).collect::<String>());
+            let updated = p["last_updated"].as_str().unwrap_or("?");
+            println!("    {} — {} — {}", id, updated.chars().take(19).collect::<String>(), desc.chars().take(60).collect::<String>());
         }
         if new_projects.len() > 10 {
             println!("    ... and {} more", new_projects.len() - 10);
