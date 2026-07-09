@@ -656,47 +656,6 @@ fn get_project_dirs(base_dir: &PathBuf) -> Result<Vec<PathBuf>> {
     Ok(dirs)
 }
 
-#[instrument(skip(base_dir))]
-fn update_git_repos(base_dir: &PathBuf) -> Result<()> {
-    let dirs = get_project_dirs(base_dir)?;
-
-    for dir in &dirs {
-        let name = dir.file_name().unwrap().to_string_lossy();
-        info!(project = %name, "Checking for git updates");
-
-        if dir.join(".git").exists() {
-            debug!(project = %name, "Pulling latest changes");
-            let output = Command::new("git")
-                .args(["pull"])
-                .current_dir(dir)
-                .output()
-                .with_context(|| format!("Failed to run git pull in {}", dir.display()))?;
-
-            let stdout = String::from_utf8_lossy(&output.stdout);
-            if !output.status.success() {
-                let stderr = String::from_utf8_lossy(&output.stderr);
-                warn!(project = %name, stdout = %stdout.trim(), stderr = %stderr.trim(), "git pull had issues");
-            } else {
-                debug!(project = %name, output = %stdout.trim(), "git pull succeeded");
-            }
-        } else {
-            debug!(project = %name, "Not a git repository");
-        }
-    }
-
-    let log_path = base_dir.join("poll.log");
-    let mut log = File::create(&log_path)?;
-    writeln!(
-        log,
-        "[{}] Updated {} repositories",
-        chrono::Local::now().format("%Y-%m-%d %H:%M:%S"),
-        dirs.len()
-    )?;
-
-    info!("Git update complete");
-    Ok(())
-}
-
 #[instrument(skip(dir))]
 fn build_project(dir: &PathBuf) -> Result<bool> {
     let name = dir.file_name().unwrap().to_string_lossy();
@@ -820,7 +779,6 @@ async fn cmd_poll(download_only: bool, parallel: usize) -> Result<()> {
 
     // Step 3: Build existing projects
     println!("\nBuilding projects...");
-    update_git_repos(&config.git_base)?;
 
     let dirs = get_project_dirs(&config.git_base)?;
     info!(project_count = dirs.len(), "Building projects");
