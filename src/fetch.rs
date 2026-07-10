@@ -213,7 +213,7 @@ pub async fn cmd_fetch(
     // Step 4: Git version the new results
     if downloaded > 0 {
         println!("\n  Versioning new results...");
-        crate::version::cmd_version(Some(config.results_dir.clone()), Some(config.git_base.clone()))?;
+        crate::version::cmd_version(Some(config.results_dir.clone()), Some(config.git_base.join("git-versions")))?;
     }
 
     Ok(())
