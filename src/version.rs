@@ -22,9 +22,27 @@ fn commit_project(
     let metadata: serde_json::Value = serde_json::from_str(
         &fs::read_to_string(&metadata_path)?
     )?;
+    // Convert extracted_at to Unix timestamp for git commit --date
     let extracted_at = metadata["extracted_at"]
         .as_str()
         .unwrap_or("unknown");
+    let git_date = if extracted_at != "unknown" {
+        match chrono::DateTime::parse_from_rfc3339(extracted_at) {
+            Ok(dt) => format!("@{}", dt.timestamp()),
+            Err(_) => {
+                // Try parsing as bare ISO 8601 (no timezone)
+                match chrono::NaiveDateTime::parse_from_str(
+                    &extracted_at[..19],
+                    "%Y-%m-%dT%H:%M:%S",
+                ) {
+                    Ok(ndt) => format!("@{}", ndt.and_utc().timestamp()),
+                    Err(_) => extracted_at.to_string(),
+                }
+            }
+        }
+    } else {
+        extracted_at.to_string()
+    };
 
     // Derive commit message from status description
     let status_path = project_dir.join("aristotle_status.json");
@@ -75,17 +93,48 @@ fn commit_project(
     }
 
     // Sync project files into the repo directory (only changed/new files)
+    // Skip nested _aristotle directories and tarball files
     let mut changed = false;
+    
+    // Write .gitignore to exclude tarballs and nested projects
+    let gitignore_path = repo.join(".gitignore");
+    if !gitignore_path.exists() {
+        let gitignore_content = "*_aristotle.tar.gz\n*.tar.gz\n";
+        fs::write(&gitignore_path, gitignore_content)?;
+        changed = true;
+    }
     for entry in walkdir::WalkDir::new(project_dir)
         .max_depth(5)
         .into_iter()
         .filter_map(|e| e.ok())
     {
         let path = entry.path();
+        
+        // Skip .tar.gz files entirely
+        if let Some(name) = path.file_name() {
+            if name.to_string_lossy().ends_with(".tar.gz") {
+                continue;
+            }
+        }
+        
+        // Skip nested _aristotle directories
+        let rel = match path.strip_prefix(project_dir) {
+            Ok(r) => r,
+            Err(_) => continue,
+        };
+        
+        // Check if this path is inside a nested _aristotle directory
+        if let Some(rel_str) = rel.to_str() {
+            if rel_str.contains("_aristotle/") || rel_str.contains("/_aristotle") {
+                debug!(project = %project_name, path = %rel_str, "Skipping nested _aristotle directory");
+                continue;
+            }
+        }
+        
         if path.is_dir() {
             continue;
         }
-        let rel = path.strip_prefix(project_dir)?;
+        
         let target = repo.join(rel);
         if let Some(parent) = target.parent() {
             fs::create_dir_all(parent)?;
@@ -129,18 +178,23 @@ fn commit_project(
         return Ok(None);
     }
 
+    // Write commit message to a temp file (avoids ARG_MAX issues with huge descriptions)
+    let msg_path = repo.join(".git/COMMIT_EDITMSG");
+    fs::write(&msg_path, &commit_msg)
+        .with_context(|| format!("write commit msg for {}", project_name))?;
+
     // Commit with extracted_at as author date
     let out = Command::new("git")
         .args([
             "-c", "user.name=aristotle-manager",
             "-c", "user.email=aristotle@harmonic.fun",
             "commit",
-            "-m", &commit_msg,
-            "--date", extracted_at,
+            "-F", &msg_path.to_string_lossy(),
+            "--date", &git_date,
         ])
         .current_dir(repo)
         .output()
-        .context("git commit failed")?;
+        .with_context(|| format!("git commit failed for {} (msg size {})", project_name, commit_msg.len()))?;
 
     if out.status.success() {
         // Get the short commit hash
