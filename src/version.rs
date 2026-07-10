@@ -63,7 +63,6 @@ fn commit_project(
     let commit_msg = if description.is_empty() {
         format!("aristotle: {}", project_name)
     } else {
-        let first_line = description.lines().next().unwrap_or("");
         format!("aristotle: {}\n\n{}\n\nProject: {}", project_name, description, project_name)
     };
 
