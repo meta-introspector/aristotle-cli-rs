@@ -1,2 +1,26 @@
-# Ignore individual project git repos
-????????-*
+/target
+
+# Flake lock file
+flake.lock
+
+# Download artifacts & logs
+*_aristotle/
+aristotle_processed.txt
+aristotle_projects.json
+*.log
+
+# Build artifacts
+*.rs.bk
+
+# IDE files
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+/aristotles_results/
+/aristotle-results-real
+/splitter-engine/.lake/

@@ -31,7 +31,6 @@ mod version;
 mod repl;
 mod refusal;
 mod term_graph;
-mod num_graph;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -471,20 +470,6 @@ enum Commands {
     /// Build term-level dependency graph across projects
     /// Each project is a page, terms are nodes, edges show usage/need relationships
     TermGraph {
-        /// Base directory containing git-versions subdirectory
-        #[arg(long, default_value = "/mnt/data1/time-2026/05-may/07/arist")]
-        git_base: PathBuf,
-        /// Output directory for graph files (JSON, DOT, report)
-        #[arg(long)]
-        output_dir: Option<PathBuf>,
-        /// Only build graph, don't generate reports
-        #[arg(long)]
-        quiet: bool,
-    },
-    /// Extract numerical constants and prime factorizations to glue projects together
-    /// Finds shared constants (196883, 71, 59, 47, etc.) and their factorizations
-    /// to identify which projects should be merged
-    NumGraph {
         /// Base directory containing git-versions subdirectory
         #[arg(long, default_value = "/mnt/data1/time-2026/05-may/07/arist")]
         git_base: PathBuf,
@@ -5708,21 +5693,6 @@ async fn main() -> Result<()> {
                 println!("\n## Top Merge Candidates (by shared terms):");
                 for (p1, p2, count) in merge_plan.iter().take(10) {
                     println!("  {} + {}: {} shared terms", p1, p2, count);
-                }
-            }
-        }
-	Commands::NumGraph { git_base, output_dir, quiet } => {
-            info!("Executing num-graph command");
-            let graph = num_graph::build_num_graph(&git_base, output_dir.clone())?;
-            if !quiet {
-                let report = num_graph::generate_num_report(&graph);
-                println!("{}", report);
-                
-                // Print merge suggestions
-                let merge_plan = num_graph::generate_num_merge_plan(&graph);
-                println!("\n## Top Merge Candidates (by shared numerical constants):");
-                for (p1, p2, shared) in merge_plan.iter().take(10) {
-                    println!("  {} + {}: {} shared constants: {:?}", p1, p2, shared.len(), shared);
                 }
             }
         }
