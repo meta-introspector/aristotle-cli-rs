@@ -11,10 +11,11 @@ use tracing::{debug, info, instrument, warn};
 fn commit_project(
     repo: &Path,
     project_dir: &Path,
-) -> anyhow::Result<bool> {
+) -> anyhow::Result<Option<String>> {
+    /// Returns Ok(Some(short_hash)) on success, Ok(None) if skipped.
     let metadata_path = project_dir.join("aristotle_metadata.json");
     if !metadata_path.exists() {
-        return Ok(false);
+        return Ok(None);
     }
 
     // Read metadata for extracted_at + project_id
@@ -58,7 +59,7 @@ fn commit_project(
             .context("git init failed")?;
         if !out.status.success() {
             warn!(project = %project_name, "git init failed: {}", String::from_utf8_lossy(&out.stderr));
-            return Ok(false);
+            return Ok(None);
         }
         // Create an initial empty commit so that later commits can be made
         Command::new("git")
@@ -113,7 +114,7 @@ fn commit_project(
         let status_lines = String::from_utf8_lossy(&status_out.stdout);
         if status_lines.trim().is_empty() {
             debug!(project = %project_name, "No changes, skipping commit");
-            return Ok(false);
+            return Ok(None);
         }
     }
 
@@ -125,7 +126,7 @@ fn commit_project(
         .context("git add failed")?;
     if !out.status.success() {
         warn!(project = %project_name, "git add failed: {}", String::from_utf8_lossy(&out.stderr));
-        return Ok(false);
+        return Ok(None);
     }
 
     // Commit with extracted_at as author date
@@ -142,12 +143,26 @@ fn commit_project(
         .context("git commit failed")?;
 
     if out.status.success() {
-        info!(project = %project_name, "Committed");
-        Ok(true)
+        // Get the short commit hash
+        let rev = Command::new("git")
+            .args(["rev-parse", "--short", "HEAD"])
+            .current_dir(repo)
+            .output()
+            .ok()
+            .and_then(|o| {
+                if o.status.success() {
+                    Some(String::from_utf8_lossy(&o.stdout).trim().to_string())
+                } else {
+                    None
+                }
+            })
+            .unwrap_or_else(|| "?".to_string());
+        info!(project = %project_name, hash = %rev, "Committed");
+        Ok(Some(rev))
     } else {
         let stderr = String::from_utf8_lossy(&out.stderr);
         warn!(project = %project_name, error = %stderr.trim(), "Commit failed");
-        Ok(false)
+        Ok(None)
     }
 }
 
@@ -208,13 +223,11 @@ pub fn cmd_version(
         fs::create_dir_all(&repo_dir)?;
 
         match commit_project(&repo_dir, project) {
-            Ok(true) => {
+            Ok(Some(rev)) => {
                 committed += 1;
-                if (i + 1) % 20 == 0 {
-                    println!("  [{}/{}] committed...", i + 1, projects.len());
-                }
+                println!("  {}  → {}  @ {}", name, repo_dir.display(), rev);
             }
-            Ok(false) => {
+            Ok(None) => {
                 skipped += 1;
                 debug!(project = %name, "No changes or no metadata");
             }
