@@ -30,6 +30,7 @@ mod replay;
 mod version;
 mod repl;
 mod refusal;
+mod term_graph;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -465,6 +466,19 @@ enum Commands {
         /// Repair: run SPARQL queries + GOAP planner to fix compilation errors
         #[arg(long)]
         repair: bool,
+    },
+    /// Build term-level dependency graph across projects
+    /// Each project is a page, terms are nodes, edges show usage/need relationships
+    TermGraph {
+        /// Base directory containing git-versions subdirectory
+        #[arg(long, default_value = "/mnt/data1/time-2026/05-may/07/arist")]
+        git_base: PathBuf,
+        /// Output directory for graph files (JSON, DOT, report)
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+        /// Only build graph, don't generate reports
+        #[arg(long)]
+        quiet: bool,
     },
     }
 
@@ -5667,6 +5681,21 @@ async fn main() -> Result<()> {
             info!("Executing diagonalize command");
             cmd_diagonalize(output_dir.clone(), *core_only, *dry_run, *rebuild, *from_lattice, *repair)?;
 	}
+	Commands::TermGraph { git_base, output_dir, quiet } => {
+            info!("Executing term-graph command");
+            let graph = term_graph::build_term_graph(&git_base, output_dir.clone())?;
+            if !quiet {
+                let report = term_graph::generate_report(&graph);
+                println!("{}", report);
+                
+                // Also print merge suggestions
+                let merge_plan = term_graph::generate_merge_plan(&graph);
+                println!("\n## Top Merge Candidates (by shared terms):");
+                for (p1, p2, count) in merge_plan.iter().take(10) {
+                    println!("  {} + {}: {} shared terms", p1, p2, count);
+                }
+            }
+        }
     }
     // Keep the file appender guard alive until program exit
     drop(file_log_guard);
