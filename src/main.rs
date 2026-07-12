@@ -24,6 +24,7 @@ mod local_server;
 mod notebooklm;
 mod notebooklm_cross;
 mod notebooklm_dump;
+mod numerics;
 mod pipeline;
 mod pipeline_steps;
 mod replay;
@@ -231,6 +232,18 @@ enum Commands {
         /// Output directory for merged project
         #[arg(long)]
         output_dir: PathBuf,
+    },
+    /// Extract numerical constants and prime factors from all projects, match with OEIS
+    Numerics {
+        /// Base directory containing git-versions repos
+        #[arg(long)]
+        git_base: Option<PathBuf>,
+        /// Output directory for numerics data
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+        /// OEIS sequences directory for matching
+        #[arg(long)]
+        oeis_dir: Option<PathBuf>,
     },
     /// Submit a project to the Aristotle API
     Submit {
@@ -5629,6 +5642,10 @@ async fn main() -> Result<()> {
         Commands::MergeProjects { project_ids, output_dir } => {
             info!(?project_ids, "Executing merge-projects command");
             pipeline_steps::cmd_merge_projects(&project_ids, output_dir.clone())?;
+        }
+        Commands::Numerics { git_base, output_dir, oeis_dir } => {
+            info!("Executing numerics extraction");
+            numerics::cmd_extract_numerics(git_base.clone(), output_dir.clone(), oeis_dir.clone())?;
         }
         Commands::DepGraph { input_dir, output_dir } => {
             info!("Executing dep-graph command");
