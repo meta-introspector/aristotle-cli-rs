@@ -31,6 +31,7 @@ mod version;
 mod repl;
 mod refusal;
 mod term_graph;
+mod project_test;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -466,6 +467,30 @@ enum Commands {
         /// Repair: run SPARQL queries + GOAP planner to fix compilation errors
         #[arg(long)]
         repair: bool,
+    },
+    /// Run project tests and report results to shmem + Aristotle
+    ProjectTest {
+        /// Target Aristotle project ID for results
+        #[arg(long)]
+        project_id: Option<String>,
+        /// Test mode: conformance, fuzz, round-robin, all
+        #[arg(long, default_value = "conformance")]
+        mode: String,
+        /// Number of fuzz iterations (default: 10000)
+        #[arg(long)]
+        iterations: Option<u64>,
+        /// Timeout in seconds per test phase
+        #[arg(long, default_value = "300")]
+        timeout: u64,
+        /// DASL testing directory (auto-detected if not specified)
+        #[arg(long)]
+        dir: Option<String>,
+        /// Submit results to DASLFINAL Aristotle project
+        #[arg(long)]
+        submit: bool,
+        /// Output JSON summary to stdout
+        #[arg(long)]
+        json: bool,
     },
     /// Build term-level dependency graph across projects
     /// Each project is a page, terms are nodes, edges show usage/need relationships
@@ -5681,6 +5706,30 @@ async fn main() -> Result<()> {
             info!("Executing diagonalize command");
             cmd_diagonalize(output_dir.clone(), *core_only, *dry_run, *rebuild, *from_lattice, *repair)?;
 	}
+	Commands::ProjectTest { mode, iterations, timeout, dir, submit, json, project_id } => {
+            info!("Executing project test");
+            let testing_dir = dir.as_ref()
+                .map(PathBuf::from)
+                .or_else(|| project_test::find_project_testing_dir())
+                .ok_or_else(|| anyhow::anyhow!(
+                    "Testing directory not found. Specify --dir"
+                ))?;
+            let api_key = if *submit { get_api_key().ok() } else { None };
+            let report = project_test::run_project_tests(
+                &testing_dir,
+                &mode,
+                *iterations,
+                *timeout,
+                *submit,
+                api_key,
+                project_id.as_deref(),
+            )?;
+            if *json {
+                println!("{}", project_test::report_to_json(&report));
+            } else {
+                project_test::print_report_summary(&report);
+            }
+        }
 	Commands::TermGraph { git_base, output_dir, quiet } => {
             info!("Executing term-graph command");
             let graph = term_graph::build_term_graph(&git_base, output_dir.clone())?;
