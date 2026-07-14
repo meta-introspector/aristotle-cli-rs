@@ -2,21 +2,21 @@
   description = "Aristotle Manager — Rust binary for polling Aristotle results and managing Lean4 project compilation";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/23.11";
+    nixpkgs.url = "git+file:///home/mdupont/git/github.com/NixOS/nixpkgs.git?ref=omaster";
+    flake-utils.url = "git+file:///home/mdupont/git/github.com/numtide/flake-utils.git?ref=omaster";
   };
 
-  outputs = { self, nixpkgs, nora-system-managers, flake-utils, nora }:
+  outputs = { self, nixpkgs, flake-utils }:
     (flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        noraPkgs = nora.packages.${system};
       in {
         packages = rec {
           default = pkgs.rustPlatform.buildRustPackage {
             pname = "aristotle-manager";
             version = "0.1.0";
             src = ./.;
-            cargoSha256 = "0000000000000000000000000000000000000000000000000000";
+            cargoLock.lockFile = ./Cargo.lock;
             buildInputs = [ pkgs.openssl pkgs.zlib pkgs.libgit2 pkgs.curl pkgs.nghttp2 ];
             nativeBuildInputs = [ pkgs.pkg-config ];
             doCheck = false;
