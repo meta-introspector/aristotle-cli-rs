@@ -17,26 +17,26 @@ use std::collections::HashMap;
 use std::fs;
 use std::io::{BufRead, BufReader, Read, Write};
 use std::net::TcpListener;
-use std::path::{Path, PathBuf};
+use std::path::Path;
 use std::process::Command;
 use std::sync::{Arc, Mutex};
 
-use anyhow::{Context, Result};
+use anyhow::Result;
 use serde::Serialize;
-use tracing::{debug, error, info, warn};
+use tracing::{debug, info, warn};
 
 /// Stored project state
 #[derive(Debug, Clone, Serialize)]
 pub struct LocalProject {
     pub project_id: String,
     pub description: String,
-    pub status: u8,             // 0=pending, 1=processing, 2=done
+    pub status: u8, // 0=pending, 1=processing, 2=done
     pub has_files: bool,
     pub created_at: String,
     pub last_updated: String,
     pub lean_result: Option<String>,
     pub remote_id: Option<String>, // forwarded to real Aristotle
-    pub files: Vec<String>,     // paths to saved .lean files
+    pub files: Vec<String>,        // paths to saved .lean files
 }
 
 /// State shared across request handlers
@@ -44,7 +44,7 @@ pub struct LocalProject {
 pub struct ServerState {
     pub projects: HashMap<String, LocalProject>,
     pub port: u16,
-    pub forward: bool,          // forward passing proofs to remote?
+    pub forward: bool, // forward passing proofs to remote?
 }
 
 pub struct AristoServer {
@@ -75,17 +75,28 @@ impl AristoServer {
             None
         };
 
-        info!("Aristotle local server listening on {}", port);
-        println!("Aristotle local server listening on {}", port);
-        if forward {
+        let server = AristoServer {
+            state: state.clone(),
+            listener,
+            forward_url: forward_url.clone(),
+            api_key: api_key.to_string(),
+        };
+
+        info!(port = %server.state.lock().unwrap().port, forward = %server.state.lock().unwrap().forward, "Aristotle local server listening");
+        println!(
+            "Aristotle local server listening on {} (forward={})",
+            server.state.lock().unwrap().port,
+            server.state.lock().unwrap().forward
+        );
+        if server.forward_url.is_some() {
             println!("  Forwarding passing proofs to aristotle.harmonic.fun");
         }
 
-        for stream in listener.incoming() {
+        for stream in server.listener.incoming() {
             let mut stream = stream?;
-            let state = state.clone();
-            let forward_url = forward_url.clone();
-            let api_key = api_key.to_string();
+            let state = server.state.clone();
+            let forward_url = server.forward_url.clone();
+            let api_key = server.api_key.clone();
 
             std::thread::spawn(move || {
                 handle_request(&mut stream, &state, &forward_url, &api_key);
@@ -152,7 +163,15 @@ fn handle_request(
         json_response(200, r#"{"status":"ok"}"#)
     } else if path.starts_with("/api/v3/project") {
         let subpath = path.strip_prefix("/api/v3/project").unwrap_or("");
-        handle_api(method, subpath, &body, content_type, state, forward_url, api_key)
+        handle_api(
+            method,
+            subpath,
+            &body,
+            content_type,
+            state,
+            forward_url,
+            api_key,
+        )
     } else {
         json_response(404, r#"{"error":"not found"}"#)
     };
@@ -206,7 +225,6 @@ fn handle_submit(
     let now = timestamp();
 
     // Save files to temp dir and run lean
-    let mut lean_result = None;
     let mut saved_files = Vec::new();
     let work_dir = std::env::temp_dir().join(format!("aristo-{}", &project_id[..8]));
     let _ = fs::create_dir_all(&work_dir);
@@ -217,12 +235,11 @@ fn handle_submit(
         saved_files.push(path.to_string_lossy().to_string());
     }
 
-    // Run lean on all .lean files
-    if !saved_files.is_empty() {
-        lean_result = Some(run_lean_check(&work_dir, &saved_files));
+    let lean_result = if !saved_files.is_empty() {
+        Some(run_lean_check(&work_dir, &saved_files))
     } else {
-        lean_result = Some("No .lean files submitted — skipping local check".to_string());
-    }
+        Some("No .lean files submitted — skipping local check".to_string())
+    };
 
     let passed = lean_result.as_ref().map_or(false, |r| r.contains("PASS"));
 
@@ -275,8 +292,12 @@ fn handle_ask(
     drop(st);
 
     let local_answer = if let Some(ref proj) = project {
-        format!("Local: project {} has {} files. Lean result: {:?}",
-            proj.project_id, proj.files.len(), proj.lean_result)
+        format!(
+            "Local: project {} has {} files. Lean result: {:?}",
+            proj.project_id,
+            proj.files.len(),
+            proj.lean_result
+        )
     } else {
         "Project not found locally".to_string()
     };
@@ -286,21 +307,29 @@ fn handle_ask(
         if let Some(ref remote_id) = proj.remote_id {
             match forward_ask(remote_id, &prompt, url, api_key) {
                 Ok(remote_answer) => {
-                    return json_response(200, &serde_json::json!({
-                        "local": local_answer,
-                        "remote": remote_answer,
-                    }).to_string());
+                    return json_response(
+                        200,
+                        &serde_json::json!({
+                            "local": local_answer,
+                            "remote": remote_answer,
+                        })
+                        .to_string(),
+                    );
                 }
                 Err(e) => warn!("Forward ask failed: {}", e),
             }
         }
     }
 
-    json_response(200, &serde_json::json!({
-        "local": local_answer,
-        "project_id": id,
-        "status": "QUEUED",
-    }).to_string())
+    json_response(
+        200,
+        &serde_json::json!({
+            "local": local_answer,
+            "project_id": id,
+            "status": "QUEUED",
+        })
+        .to_string(),
+    )
 }
 
 /// GET /api/v3/project/:id
@@ -316,12 +345,16 @@ fn handle_get_project(id: &str, state: &Arc<Mutex<ServerState>>) -> String {
 fn handle_get_result(id: &str, state: &Arc<Mutex<ServerState>>) -> String {
     let st = state.lock().unwrap();
     if let Some(proj) = st.projects.get(id) {
-        return json_response(200, &serde_json::json!({
-            "project_id": id,
-            "lean_result": proj.lean_result,
-            "remote_id": proj.remote_id,
-            "files": proj.files,
-        }).to_string());
+        return json_response(
+            200,
+            &serde_json::json!({
+                "project_id": id,
+                "lean_result": proj.lean_result,
+                "remote_id": proj.remote_id,
+                "files": proj.files,
+            })
+            .to_string(),
+        );
     }
     json_response(404, r#"{"error":"not found"}"#)
 }
@@ -334,7 +367,10 @@ fn run_lean_check(work_dir: &Path, files: &[String]) -> String {
 
     for file in files {
         let path = Path::new(file);
-        let filename = path.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default();
+        let filename = path
+            .file_name()
+            .map(|s| s.to_string_lossy().to_string())
+            .unwrap_or_default();
 
         match Command::new("lean")
             .arg(file)
@@ -378,7 +414,12 @@ fn run_lean_check(work_dir: &Path, files: &[String]) -> String {
 
 // ── Remote forwarding ─────────────────────────────────────────────────
 
-fn forward_submit(prompt: &str, files: &[(String, String)], base_url: &str, api_key: &str) -> Result<String, String> {
+fn forward_submit(
+    prompt: &str,
+    files: &[(String, String)],
+    base_url: &str,
+    api_key: &str,
+) -> Result<String, String> {
     let url = format!("{}/project", base_url);
     let body = serde_json::json!({
         "prompt": prompt,
@@ -390,8 +431,7 @@ fn forward_submit(prompt: &str, files: &[(String, String)], base_url: &str, api_
         .build()
         .map_err(|e| e.to_string())?;
 
-    let form = reqwest::blocking::multipart::Form::new()
-        .text("body", body.to_string());
+    let form = reqwest::blocking::multipart::Form::new().text("body", body.to_string());
 
     let resp = client
         .post(&url)
@@ -403,7 +443,8 @@ fn forward_submit(prompt: &str, files: &[(String, String)], base_url: &str, api_
     if resp.status().is_success() {
         let text = resp.text().map_err(|e| e.to_string())?;
         let json: serde_json::Value = serde_json::from_str(&text).map_err(|e| e.to_string())?;
-        json["project_id"].as_str()
+        json["project_id"]
+            .as_str()
             .map(|s| s.to_string())
             .ok_or_else(|| "no project_id".to_string())
     } else {
@@ -411,7 +452,12 @@ fn forward_submit(prompt: &str, files: &[(String, String)], base_url: &str, api_
     }
 }
 
-fn forward_ask(project_id: &str, prompt: &str, base_url: &str, api_key: &str) -> Result<String, String> {
+fn forward_ask(
+    project_id: &str,
+    prompt: &str,
+    base_url: &str,
+    api_key: &str,
+) -> Result<String, String> {
     let url = format!("{}/project/{}/ask", base_url, project_id);
     let client = reqwest::blocking::Client::builder()
         .timeout(std::time::Duration::from_secs(60))
@@ -476,7 +522,11 @@ fn json_response(status: u16, body: &str) -> String {
     };
     format!(
         "HTTP/1.1 {} {}\r\nContent-Type: application/json\r\n{}Content-Length: {}\r\n\r\n{}",
-        status, message, CORS_HEADERS, body.len(), body
+        status,
+        message,
+        CORS_HEADERS,
+        body.len(),
+        body
     )
 }
 
@@ -498,6 +548,8 @@ fn timestamp() -> String {
 
 fn uuid_v4() -> String {
     use std::time::{SystemTime, UNIX_EPOCH};
-    let now = SystemTime::now().duration_since(UNIX_EPOCH).unwrap_or_default();
+    let now = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .unwrap_or_default();
     format!("local-{:016x}", now.as_nanos() & 0xffffffffffffffff)
 }

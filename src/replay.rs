@@ -6,7 +6,7 @@ use std::fs;
 use std::path::PathBuf;
 use std::process::Command;
 use serde::{Deserialize, Serialize};
-use tracing::{info, instrument, warn};
+use tracing::{instrument, warn};
 
 use crate::load_config;
 
@@ -48,8 +48,8 @@ pub async fn cmd_replay(
         let meta_path = entry.path().join("aristotle_metadata.json");
         let date = if meta_path.exists() {
             if let Ok(content) = fs::read_to_string(&meta_path) {
-                if let Ok(meta) = serde_json::from_str::<serde_json::Value>(&content) {
-                    meta["extracted_at"].as_str().unwrap_or("1970-01-01").to_string()
+                if let Ok(meta) = serde_json::from_str::<ProjectMeta>(&content) {
+                    meta.extracted_at.unwrap_or_else(|| "1970-01-01".to_string())
                 } else {
                     "1970-01-01".to_string()
                 }
@@ -92,7 +92,7 @@ pub async fn cmd_replay(
     }
     fs::create_dir_all(&output)?;
 
-    let mut git = |args: &[&str]| -> anyhow::Result<()> {
+    let git = |args: &[&str]| -> anyhow::Result<()> {
         let out = Command::new("git")
             .args(args)
             .current_dir(&output)
@@ -163,7 +163,7 @@ pub async fn cmd_replay(
 
                 // Get summary for commit message
                 let summary_path = proj_dir.join("ARISTOTLE_SUMMARY.md");
-                let summary = if summary_path.exists() {
+                let _summary = if summary_path.exists() {
                     fs::read_to_string(&summary_path).unwrap_or_default()
                         .lines().take(3).collect::<Vec<_>>().join("\n")
                 } else {

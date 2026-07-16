@@ -10,6 +10,7 @@
     (flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        gitHash = self.shortRev or self.dirtyShortRev or "dirty";
       in {
         packages = rec {
           default = pkgs.rustPlatform.buildRustPackage {
@@ -17,6 +18,7 @@
             version = "0.1.0";
             src = ./.;
             cargoLock.lockFile = ./Cargo.lock;
+            GIT_HASH = gitHash;
             buildInputs = [ pkgs.openssl pkgs.zlib pkgs.libgit2 pkgs.curl pkgs.nghttp2 ];
             nativeBuildInputs = [ pkgs.pkg-config ];
             doCheck = false;

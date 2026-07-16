@@ -2,7 +2,7 @@ use std::collections::HashSet;
 use std::env;
 use std::fs::{self, File, OpenOptions};
 use std::io::Write;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use std::process::Command;
 use std::sync::{Arc, RwLock};
 use std::time::Duration;
@@ -27,6 +27,7 @@ mod notebooklm_dump;
 mod pipeline;
 mod pipeline_steps;
 mod replay;
+mod nix_build;
 mod version;
 mod repl;
 mod refusal;
@@ -41,7 +42,11 @@ struct Cli {
     command: Commands,
 }
 
-const VERSION: &str = env!("CARGO_PKG_VERSION");
+const VERSION: &str = concat!(
+    env!("CARGO_PKG_VERSION"),
+    "-",
+    env!("GIT_HASH"),
+);
 const API_BASE_URL: &str = "https://aristotle.harmonic.fun/api/v3";
 
 static API_KEY: RwLock<Option<String>> = RwLock::new(None);
@@ -77,6 +82,18 @@ enum Commands {
         #[arg(long)]
         verbose: bool,
     },
+    /// Enrich: run task-enricher (chats, pi sessions, shmem) + GOAP pipeline (consolidate, j-key, dep-graph, mycelium, arrows)
+    Enrich {
+        /// DASLFINAL project ID for consolidate step
+        #[arg(long, default_value = "738b2c45-72f6-43b4-8725-dfbf3fe82fcb")]
+        project_id: String,
+        /// Skip task-enricher phase (only run GOAP pipeline)
+        #[arg(long)]
+        skip_task_enricher: bool,
+        /// Skip GOAP pipeline (only run task-enricher)
+        #[arg(long)]
+        skip_goap: bool,
+    },
     /// Build all projects
     Build {
         #[arg(long)]
@@ -104,6 +121,7 @@ enum Commands {
         #[arg(long)]
         output_dir: Option<PathBuf>,
     },
+
     /// Generate cross-project NotebookLM files from all REPL declarations
     NotebooklmCross {
         #[arg(long)]
@@ -122,7 +140,10 @@ enum Commands {
         project_id: String,
         prompt: String,
         #[arg(long)]
-        files_dir: PathBuf,
+        files_dir: Option<PathBuf>,
+        /// Single .lean file to submit (alternative to --files-dir)
+        #[arg(long)]
+        file: Option<PathBuf>,
     },
     /// Start local Aristotle API server (self-check proofs first)
     Serve {
@@ -203,6 +224,24 @@ enum Commands {
         #[arg(long)]
         output_dir: Option<PathBuf>,
     },
+    /// Nix-build: compile Lean project using nix store binaries + oleans
+    NixBuild {
+        /// Project directory with .lean files
+        #[arg(long)]
+        input_dir: PathBuf,
+        /// Output directory for built .olean files
+        #[arg(long)]
+        output_dir: Option<PathBuf>,
+        /// Nix store path for lean toolchain (default: from config)
+        #[arg(long)]
+        nix_store: Option<String>,
+        /// Generate flake.nix before building
+        #[arg(long)]
+        generate_flake: bool,
+        /// Just generate flake.nix, don't build
+        #[arg(long)]
+        dry_run: bool,
+    },
     /// Generate canonical per-module flakes with mathlib-split resolution
     CanonicalFlake {
         /// Aristotle project directory to split
@@ -250,6 +289,9 @@ enum Commands {
         limit: Option<usize>,
         #[arg(long, default_value = "console")]
         trace: String,
+        /// Print raw JSON response for debugging
+        #[arg(long)]
+        verbose: bool,
     },
     /// Show status of all DASL-related projects with lean/sorry/flake stats
     DaslStatus {
@@ -524,6 +566,10 @@ pub struct Config {
     max_parallel_downloads: usize,
     retry_wait_seconds: u64,
     max_retries: usize,
+    /// Path to nix store olean directory (e.g. /mnt/data1/nix-store/store/yy02jnq1m13zbmsahh87v5z9w91k4wwa-lean4-4.29.1/lib/lean)
+    nix_store_path: Option<String>,
+    /// Path to mathlib-split directory (e.g. /home/mdupont/projects/lean-split-tool/mathlib-split)
+    mathlib_split_path: Option<String>,
 }
 
 #[instrument]
@@ -542,6 +588,8 @@ pub fn load_config() -> Result<Config> {
             max_parallel_downloads: 4,
             retry_wait_seconds: 10,
             max_retries: 3,
+            nix_store_path: None,
+            mathlib_split_path: None,
         };
         let toml = toml::to_string(&default_config)?;
         fs::write(&config_path, toml)?;
@@ -633,6 +681,8 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
                     max_parallel_downloads: 4,
                     retry_wait_seconds: 10,
                     max_retries: 3,
+                    nix_store_path: None,
+                    mathlib_split_path: None,
                 }
             } else {
                 toml::from_str(&config_str)?
@@ -1929,7 +1979,7 @@ fn run_rust_splitter(input_dir: &PathBuf, output_dir: &PathBuf) -> Result<u64> {
         .map(PathBuf::from)
         .unwrap_or_else(|_| {
             // Try common paths
-            let candidates = [
+            let _candidates = [
                 "/nix/store/" // glob? we try PATH
             ];
             "split-decls-rs".into()
@@ -2140,7 +2190,7 @@ fn run_shmem_splitter(output_dir: &PathBuf) -> Result<u64> {
     }
 
     // Also try UDS socket
-    if let Ok(content) = std::fs::read_to_string("@ipld_car_shmem") {
+    if let Ok(_content) = std::fs::read_to_string("@ipld_car_shmem") {
         // The socket may not be readable as file; try vendormod query
         info!("Shmem socket found but not directly readable");
     }
@@ -2205,7 +2255,7 @@ fn run_agent_log_splitter(input_dir: &PathBuf, output_dir: &PathBuf) -> Result<u
         if let Ok(content) = std::fs::read_to_string(entry.path()) {
             if let Ok(json) = serde_json::from_str::<serde_json::Value>(&content) {
                 if let Some(projects) = json["projects"].as_array() {
-                    for (i, proj) in projects.iter().enumerate() {
+                    for (_i, proj) in projects.iter().enumerate() {
                         let desc = proj["description"].as_str().unwrap_or("");
                         let pid = proj["project_id"].as_str().unwrap_or("");
                         // Extract terms from description as "task list" declarations
@@ -2439,6 +2489,69 @@ fn consolidate_project(project_dir: &PathBuf, output_dir: &PathBuf, project_id: 
     Ok(())
 }
 
+/// ── Enrich command: task-enricher + GOAP pipeline ──
+
+fn cmd_enrich(project_id: &str, run_task_enricher: bool, run_goap: bool) -> Result<()> {
+    let config = load_config()?;
+    let base = config.base_dir.clone();
+
+    if run_task_enricher {
+        let task_enricher = env::var("TASK_ENRICHER")
+            .unwrap_or_else(|_| "/mnt/data1/time-2026/07-july/01/task-runner/target/release/task-enricher".to_string());
+        if Path::new(&task_enricher).exists() {
+            info!(bin = %task_enricher, "Enrich: running task-enricher (chats, pi sessions, shmem, planner)");
+            let output = Command::new(&task_enricher)
+                .arg("enrich")
+                .output()
+                .context("Failed to run task-enricher")?;
+            let stdout = String::from_utf8_lossy(&output.stdout);
+            let stderr = String::from_utf8_lossy(&output.stderr);
+            if !output.status.success() {
+                warn!(code = ?output.status.code(), stderr = %stderr, "task-enricher failed");
+            } else {
+                // Print task-enricher output lines
+                for line in stdout.lines() {
+                    println!("  {line}");
+                }
+            }
+        } else {
+            warn!(bin = %task_enricher, "task-enricher binary not found — skipping chats/pi/shmem scan");
+        }
+    }
+
+    if run_goap {
+        let consolidated_dir = base.join("consolidated");
+        let jkey_dir = base.join("j-key");
+        let arrows_dir = base.join("arrows");
+        let depgraph_dir = base.join("dep-graph");
+        let mycelium_dir = base.join("mycelium");
+
+        info!(project_id, "Enrich: consolidate");
+        cmd_consolidate(project_id, Some(consolidated_dir.clone()))?;
+
+        info!("Enrich: j-key");
+        pipeline_steps::cmd_j_key(Some(consolidated_dir.clone()), Some(jkey_dir.clone()))?;
+
+        info!("Enrich: arrows");
+        pipeline_steps::cmd_arrows(Some(jkey_dir.clone()), Some(arrows_dir.clone()))?;
+
+        info!("Enrich: dep-graph");
+        pipeline_steps::cmd_dep_graph(Some(consolidated_dir.clone()), Some(depgraph_dir.clone()))?;
+
+        info!("Enrich: mycelium");
+        pipeline_steps::cmd_mycelium(Some(depgraph_dir.clone()), Some(mycelium_dir.clone()))?;
+
+        println!("\nEnrich complete: {} -> {} -> {} -> {} -> {}",
+            consolidated_dir.display(),
+            jkey_dir.display(),
+            arrows_dir.display(),
+            depgraph_dir.display(),
+            mycelium_dir.display());
+    }
+
+    Ok(())
+}
+
 /// ── Submit command: send a project to Aristotle as multipart with tarball ──
 
 #[instrument(skip(prompt, project_dir))]
@@ -2540,7 +2653,7 @@ fn ask_aristotle_sync(api_key: &str, project_id: &str, prompt: &str) -> Result<S
 }
 
 /// Ask with files attached (Lean4 proofs, data files)
-fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files_dir: &PathBuf) -> Result<String> {
+fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files_dir: Option<&PathBuf>, file: Option<&PathBuf>) -> Result<String> {
     let client = reqwest::blocking::Client::builder()
         .timeout(Duration::from_secs(120))
         .build()
@@ -2548,18 +2661,30 @@ fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files
 
     // Build body JSON with prompt + inline file contents
     let mut body = serde_json::json!({"prompt": prompt});
-    if files_dir.exists() {
-        let mut files_map = serde_json::Map::new();
-        for entry in WalkDir::new(files_dir).max_depth(2).into_iter().filter_map(|e| e.ok()) {
-            if entry.path().extension().map_or(false, |e| e == "lean") {
-                let content = fs::read_to_string(entry.path())?;
-                let name = entry.file_name().to_string_lossy().to_string();
-                files_map.insert(name, serde_json::json!(content));
+    let mut files_map = serde_json::Map::new();
+
+    if let Some(dir) = files_dir {
+        if dir.exists() {
+            for entry in WalkDir::new(dir).max_depth(2).into_iter().filter_map(|e| e.ok()) {
+                if entry.path().extension().map_or(false, |e| e == "lean") {
+                    let content = fs::read_to_string(entry.path())?;
+                    let name = entry.file_name().to_string_lossy().to_string();
+                    files_map.insert(name, serde_json::json!(content));
+                }
             }
         }
-        if !files_map.is_empty() {
-            body["files"] = serde_json::json!(files_map);
+    }
+
+    if let Some(f) = file {
+        if f.exists() {
+            let content = fs::read_to_string(f)?;
+            let name = f.file_name().unwrap().to_string_lossy().to_string();
+            files_map.insert(name, serde_json::json!(content));
         }
+    }
+
+    if !files_map.is_empty() {
+        body["files"] = serde_json::json!(files_map);
     }
 
     let url = format!("{}/project/{}/ask", API_BASE_URL, project_id);
@@ -2583,7 +2708,7 @@ fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files
 /// ── Check command: query project status from Aristotle API ──────────
 
 #[instrument(skip(project_id))]
-async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<()> {
+async fn cmd_check(project_id: Option<String>, limit: Option<usize>, verbose: bool) -> Result<()> {
     let config = load_config()?;
     let api_key = get_api_key()?;
     let client = Client::builder()
@@ -2601,8 +2726,13 @@ async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<(
             .context("Failed to query project")?;
 
         let body = response.text().await?;
+        if verbose {
+            println!("{}", body);
+            return Ok(());
+        }
         if let Ok(json) = serde_json::from_str::<Value>(&body) {
             println!("Project: {}", pid);
+            println!("  Name:        {}", json["name"].as_str().unwrap_or(""));
             println!("  Description: {}", json["description"].as_str().unwrap_or(""));
             println!("  Status: {} (has_files={})", 
                 json["status"].as_i64().unwrap_or(0),
@@ -2637,23 +2767,74 @@ async fn cmd_check(project_id: Option<String>, limit: Option<usize>) -> Result<(
             }
         }
     } else {
-        let url = format!("{}/project", API_BASE_URL);
-        let limit = limit.unwrap_or(20);
-        let response = client.get(&url).header("x-api-key", &api_key).send().await?;
-        let body = response.text().await?;
-        if let Ok(json) = serde_json::from_str::<Value>(&body) {
-            if let Some(projects) = json["projects"].as_array() {
-                println!("{:<36} {:<20} {:<6} {:<30}", "ID", "CREATED", "STATUS", "DESCRIPTION");
-                for p in projects.iter().take(limit) {
-                    let st = match p["status"].as_i64().unwrap_or(0) {
-                        0 => "QUEUE", 1 => "RUN", 2 => "DONE", _ => "?"
-                    };
-                    println!("{:<36} {:<20} {:<6} {:<30}",
-                        p["project_id"].as_str().unwrap_or(""),
-                        p["created_at"].as_str().unwrap_or("").get(..20).unwrap_or(""),
-                        st,
-                        p["description"].as_str().unwrap_or("").get(..30).unwrap_or(""));
+        // Fetch all pages
+        let limit = limit.unwrap_or(usize::MAX);
+        let mut all_projects: Vec<Value> = Vec::new();
+        let mut pagination_key: Option<String> = None;
+        let mut page = 0u32;
+
+        loop {
+            page += 1;
+            let page_url = if let Some(ref key) = pagination_key {
+                format!("{}/project?pagination_key={}", API_BASE_URL, key)
+            } else {
+                format!("{}/project", API_BASE_URL)
+            };
+
+            let resp = client
+                .get(&page_url)
+                .header("x-api-key", &api_key)
+                .send()
+                .await
+                .context("Failed to fetch project list")?;
+
+            let body = resp.text().await?;
+
+            if verbose {
+                println!("--- Page {} ---", page);
+                println!("{}", body);
+            }
+
+            let page_json: Value = serde_json::from_str(&body)?;
+            if let Some(projects) = page_json["projects"].as_array() {
+                let page_count = projects.len();
+                all_projects.extend(projects.iter().cloned());
+
+                if all_projects.len() >= limit {
+                    break;
                 }
+
+                let next_key = page_json["pagination_key"].as_str().map(|s| s.to_string());
+                if next_key.is_none() || page_count == 0 {
+                    break;
+                }
+                if pagination_key.as_deref() == next_key.as_deref() {
+                    break;
+                }
+                pagination_key = next_key;
+            } else {
+                break;
+            }
+        }
+
+        if !verbose {
+            println!("{:<36} {:<6} {:<60} {}", "ID", "ST", "NAME / DESCRIPTION", "CREATED");
+            for p in all_projects.iter().take(limit) {
+                let st = match p["status"].as_i64().unwrap_or(0) {
+                    0 => "QUEUE", 1 => "RUN", 2 => "DONE", _ => "?"
+                };
+                let desc = p["description"].as_str().unwrap_or("");
+                let name = p["name"].as_str().unwrap_or("");
+                let label = if !name.is_empty() {
+                    format!("{} — {}", name, desc)
+                } else {
+                    desc.to_string()
+                };
+                println!("{:<36} {:<6} {:<60} {}",
+                    p["project_id"].as_str().unwrap_or(""),
+                    st,
+                    label.get(..60).unwrap_or(""),
+                    p["created_at"].as_str().unwrap_or("").get(..19).unwrap_or(""));
             }
         }
     }
@@ -2879,7 +3060,7 @@ async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>, verb
 /// ── Ask: send instructions to a running Aristotle project ────────
 
 fn cmd_ask(project_id: String, prompt: String, file: Option<PathBuf>, inject_dir: Option<PathBuf>) -> Result<()> {
-    use std::process::Command;
+
     let api_key = get_api_key()?;
 
     // Build the prompt — optionally inject file content
@@ -2933,7 +3114,7 @@ fn cmd_ask(project_id: String, prompt: String, file: Option<PathBuf>, inject_dir
 async fn cmd_patch(project_id: String, prereq_dir: PathBuf, interval: u64, max_rounds: usize) -> Result<()> {
     use tokio::time::{sleep, Duration};
 
-    let config = load_config()?;
+    let _config = load_config()?;
     let api_key = get_api_key()?;
     let client = Client::builder()
         .timeout(Duration::from_secs(30))
@@ -3116,14 +3297,13 @@ async fn cmd_dasl_finish(project_id: String, common_project: PathBuf, results_di
 /// ── Inner canonical-flake (returns Result instead of printing) ──
 
 fn cmd_canonical_flake_inner(input_dir: &PathBuf, output_dir: &PathBuf, mathlib_split: Option<PathBuf>) -> Result<()> {
-    use std::collections::HashSet;
     let mathlib_dir = mathlib_split.unwrap_or_else(|| PathBuf::from("/home/mdupont/projects/lean-split-tool/mathlib-split"));
     let index = cmd_canonical_flake_build_index(&mathlib_dir)?;
     let output_base = output_dir.join("RequestProject");
     fs::create_dir_all(&output_base)?;
     let lean_files: Vec<_> = WalkDir::new(input_dir.join("RequestProject")).into_iter()
         .filter_map(|e| e.ok()).filter(|e| e.path().extension().map_or(false, |e| e == "lean")).collect();
-    let mut resolved = 0usize;
+    let _resolved = 0usize;
     for entry in &lean_files {
         let content = fs::read_to_string(entry.path())?;
         let mut deps: Vec<String> = Vec::new();
@@ -3133,7 +3313,7 @@ fn cmd_canonical_flake_inner(input_dir: &PathBuf, output_dir: &PathBuf, mathlib_
                 let import_path = trimmed.strip_prefix("import ").unwrap().trim();
                 if let Some(resolved_path) = index.get(import_path) {
                     deps.push(format!("    \"{}", resolved_path));
-                    resolved += 1;
+
                 }
             }
         }
@@ -3230,8 +3410,6 @@ fn cmd_mckay_oeis(grep_files: Vec<PathBuf>, output: PathBuf, inject_into: Option
     let mut mckay_ok = 0u64;
     let mut coeff_empty = 0u64;
     let mut cls_empty = 0u64;
-    let mut coeff_empty = 0u64;
-    let mut cls_empty = 0u64;
     for seq_path in seq_files.keys() {
         let content = match std::fs::read_to_string(seq_path) { Ok(c) => { read_ok += 1; c }, Err(_) => continue };
         if !content.contains("McKay-Thompson") { continue; }
@@ -3300,7 +3478,7 @@ import Mathlib
 def mckayThompsonCoeffs : List (String × List ℤ) := [
 "#, grep_files.iter().map(|p| p.file_name().unwrap_or_default().to_string_lossy()).collect::<Vec<_>>().join(", "), classes.len()));
 
-    for (cls, (oid, coeffs)) in &classes {
+    for (cls, (_oid, coeffs)) in &classes {
         let cs: Vec<String> = coeffs.iter().map(|c| c.to_string()).collect();
         lean.push_str(&format!("  (\"{}\", [{}]),\n", cls, cs.join(", ")));
     }
@@ -5176,7 +5354,7 @@ fn apply_sparql_fixes(ws_dir: &std::path::Path) -> Result<()> {
             let content = std::fs::read_to_string(entry.path())?;
             let rel = entry.path().strip_prefix(&src_dir).unwrap_or(entry.path());
             let rel_str = rel.to_string_lossy().to_string();
-            let current_project = rel_str.split('/').next().unwrap_or("").to_string();
+            let _current_project = rel_str.split('/').next().unwrap_or("").to_string();
 
             let mut new_content = String::new();
             let mut changed = false;
@@ -5430,7 +5608,7 @@ async fn main() -> Result<()> {
         _ => None,
     };
 
-    let file_log_guard: Option<tracing_appender::non_blocking::WorkerGuard> =
+    let _file_log_guard: Option<tracing_appender::non_blocking::WorkerGuard> =
         match trace_mode {
             Some(file) if file == "file" || file == "both" => {
                 let config = load_config()?;
@@ -5516,6 +5694,7 @@ async fn main() -> Result<()> {
             info!("Executing split command");
             cmd_split(input_dir.clone(), output_dir.clone())?;
         }
+
         Commands::Refresh { parallel, limit } => {
             info!(parallel, ?limit, "Executing refresh command");
             cmd_refresh(*parallel, *limit).await?;
@@ -5535,9 +5714,9 @@ async fn main() -> Result<()> {
             info!("Executing submit command");
             cmd_submit(prompt, project_dir.clone(), *wait)?;
         }
-        Commands::Check { project_id, limit, trace } => {
+        Commands::Check { project_id, limit, trace, verbose } => {
             info!(?project_id, ?limit, trace, "Executing check command");
-            cmd_check(project_id.clone(), *limit).await?;
+            cmd_check(project_id.clone(), *limit, *verbose).await?;
         }
         Commands::DaslStatus { filter, sorries_only } => {
             info!(?filter, sorries_only, "Executing dasl-status command");
@@ -5643,6 +5822,10 @@ async fn main() -> Result<()> {
             info!("Executing gen-flake command");
             pipeline_steps::cmd_gen_flake(band_dir.clone(), output_dir.clone())?;
         }
+        Commands::NixBuild { input_dir, output_dir, nix_store, generate_flake, dry_run } => {
+            info!("Executing nix-build command");
+            nix_build::cmd_nix_build(input_dir.clone(), output_dir.clone(), nix_store.clone(), *generate_flake, *dry_run)?;
+        }
         Commands::CanonicalFlake { input_dir, output_dir, mathlib_split } => {
             info!("Executing canonical-flake command");
             pipeline_steps::cmd_canonical_flake(input_dir.clone(), output_dir.clone(), mathlib_split.clone())?;
@@ -5667,10 +5850,10 @@ async fn main() -> Result<()> {
             info!("Executing load-decls");
             repl::cmd_load_decls(dir.clone(), *dry_run)?;
         }
-        Commands::AskWithFiles { project_id, prompt, files_dir } => {
+        Commands::AskWithFiles { project_id, prompt, files_dir, file } => {
             info!("Executing ask-with-files");
             let api_key = get_api_key()?;
-            let result = ask_aristotle_with_files(&api_key, project_id, prompt, files_dir)?;
+            let result = ask_aristotle_with_files(&api_key, project_id, prompt, files_dir.as_ref(), file.as_ref())?;
             println!("{}", result);
         }
         Commands::Serve { port, forward } => {
@@ -5745,9 +5928,11 @@ async fn main() -> Result<()> {
                 }
             }
         }
+        Commands::Enrich { project_id, skip_task_enricher, skip_goap } => {
+            info!("Executing enrich command");
+            cmd_enrich(&project_id, !skip_task_enricher, !skip_goap)?;
+        }
     }
-    // Keep the file appender guard alive until program exit
-    drop(file_log_guard);
 
     info!("aristotle-manager finished successfully");
     Ok(())

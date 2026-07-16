@@ -1,31 +1,24 @@
+use anyhow::Context;
 /// version — Git-version each Aristotle project output individually.
 /// Each project gets its OWN git repo under `git-versions/<project_id>/`.
 /// The extracted_at date becomes the commit author date.
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::Command;
-use anyhow::Context;
 use tracing::{debug, info, instrument, warn};
 
 /// Create (or update) a git repo for one project, committing its current files.
-fn commit_project(
-    repo: &Path,
-    project_dir: &Path,
-) -> anyhow::Result<Option<String>> {
-    /// Returns Ok(Some(short_hash)) on success, Ok(None) if skipped.
+fn commit_project(repo: &Path, project_dir: &Path) -> anyhow::Result<Option<String>> {
+    // Returns Ok(Some(short_hash)) on success, Ok(None) if skipped.
     let metadata_path = project_dir.join("aristotle_metadata.json");
     if !metadata_path.exists() {
         return Ok(None);
     }
 
     // Read metadata for extracted_at + project_id
-    let metadata: serde_json::Value = serde_json::from_str(
-        &fs::read_to_string(&metadata_path)?
-    )?;
+    let metadata: serde_json::Value = serde_json::from_str(&fs::read_to_string(&metadata_path)?)?;
     // Convert extracted_at to Unix timestamp for git commit --date
-    let extracted_at = metadata["extracted_at"]
-        .as_str()
-        .unwrap_or("unknown");
+    let extracted_at = metadata["extracted_at"].as_str().unwrap_or("unknown");
     let git_date = if extracted_at != "unknown" {
         match chrono::DateTime::parse_from_rfc3339(extracted_at) {
             Ok(dt) => format!("@{}", dt.timestamp()),
@@ -47,9 +40,7 @@ fn commit_project(
     // Derive commit message from status description
     let status_path = project_dir.join("aristotle_status.json");
     let description = if status_path.exists() {
-        let status: serde_json::Value = serde_json::from_str(
-            &fs::read_to_string(&status_path)?
-        )?;
+        let status: serde_json::Value = serde_json::from_str(&fs::read_to_string(&status_path)?)?;
         status["description"].as_str().unwrap_or("").to_string()
     } else {
         String::new()
@@ -63,7 +54,10 @@ fn commit_project(
     let commit_msg = if description.is_empty() {
         format!("aristotle: {}", project_name)
     } else {
-        format!("aristotle: {}\n\n{}\n\nProject: {}", project_name, description, project_name)
+        format!(
+            "aristotle: {}\n\n{}\n\nProject: {}",
+            project_name, description, project_name
+        )
     };
 
     // Init git repo for this project if it doesn't exist
@@ -81,10 +75,14 @@ fn commit_project(
         // Create an initial empty commit so that later commits can be made
         Command::new("git")
             .args([
-                "-c", "user.name=aristotle-manager",
-                "-c", "user.email=aristotle@harmonic.fun",
-                "commit", "--allow-empty",
-                "-m", "aristotle: initial commit",
+                "-c",
+                "user.name=aristotle-manager",
+                "-c",
+                "user.email=aristotle@harmonic.fun",
+                "commit",
+                "--allow-empty",
+                "-m",
+                "aristotle: initial commit",
             ])
             .current_dir(repo)
             .output()
@@ -94,7 +92,7 @@ fn commit_project(
     // Sync project files into the repo directory (only changed/new files)
     // Skip nested _aristotle directories and tarball files
     let mut changed = false;
-    
+
     // Write .gitignore to exclude tarballs and nested projects
     let gitignore_path = repo.join(".gitignore");
     if !gitignore_path.exists() {
@@ -108,20 +106,20 @@ fn commit_project(
         .filter_map(|e| e.ok())
     {
         let path = entry.path();
-        
+
         // Skip .tar.gz files entirely
         if let Some(name) = path.file_name() {
             if name.to_string_lossy().ends_with(".tar.gz") {
                 continue;
             }
         }
-        
+
         // Skip nested _aristotle directories
         let rel = match path.strip_prefix(project_dir) {
             Ok(r) => r,
             Err(_) => continue,
         };
-        
+
         // Check if this path is inside a nested _aristotle directory
         if let Some(rel_str) = rel.to_str() {
             if rel_str.contains("_aristotle/") || rel_str.contains("/_aristotle") {
@@ -129,11 +127,11 @@ fn commit_project(
                 continue;
             }
         }
-        
+
         if path.is_dir() {
             continue;
         }
-        
+
         let target = repo.join(rel);
         if let Some(parent) = target.parent() {
             fs::create_dir_all(parent)?;
@@ -185,15 +183,25 @@ fn commit_project(
     // Commit with extracted_at as author date
     let out = Command::new("git")
         .args([
-            "-c", "user.name=aristotle-manager",
-            "-c", "user.email=aristotle@harmonic.fun",
+            "-c",
+            "user.name=aristotle-manager",
+            "-c",
+            "user.email=aristotle@harmonic.fun",
             "commit",
-            "-F", &msg_path.to_string_lossy(),
-            "--date", &git_date,
+            "-F",
+            &msg_path.to_string_lossy(),
+            "--date",
+            &git_date,
         ])
         .current_dir(repo)
         .output()
-        .with_context(|| format!("git commit failed for {} (msg size {})", project_name, commit_msg.len()))?;
+        .with_context(|| {
+            format!(
+                "git commit failed for {} (msg size {})",
+                project_name,
+                commit_msg.len()
+            )
+        })?;
 
     if out.status.success() {
         // Get the short commit hash
@@ -230,7 +238,8 @@ pub fn cmd_version(
 
     if !results_dir.exists() {
         return Err(anyhow::anyhow!(
-            "Results directory not found: {}", results_dir.display()
+            "Results directory not found: {}",
+            results_dir.display()
         ));
     }
 
@@ -267,7 +276,7 @@ pub fn cmd_version(
     let mut committed = 0u64;
     let mut skipped = 0u64;
 
-    for (i, project) in projects.iter().enumerate() {
+    for (_i, project) in projects.iter().enumerate() {
         let name = project.file_name().unwrap_or_default().to_string_lossy();
 
         // Strip '_aristotle' suffix to get the repo dir name
@@ -306,11 +315,17 @@ pub fn cmd_version(
     entries.sort_by_key(|e| e.path().join(".git").exists());
     entries.reverse();
     for e in entries.iter().take(10) {
-        let name = e.file_name().to_string_lossy();
+        let _name = e.file_name().to_string_lossy();
         let git_path = e.path().join(".git");
         let age = if git_path.exists() {
             let log = Command::new("git")
-                .args(["-C", e.path().to_str().unwrap_or(""), "log", "--oneline", "-1"])
+                .args([
+                    "-C",
+                    e.path().to_str().unwrap_or(""),
+                    "log",
+                    "--oneline",
+                    "-1",
+                ])
                 .output();
             match log {
                 Ok(out) => String::from_utf8_lossy(&out.stdout).trim().to_string(),
