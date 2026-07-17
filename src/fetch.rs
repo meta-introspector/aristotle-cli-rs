@@ -6,10 +6,10 @@ use crate::load_config;
 use tracing::{instrument, warn};
 
 /// Run a lightweight incremental fetch: poll API, download only new/changed, version.
-#[instrument(skip(limit))]
+#[instrument(skip(_limit))]
 pub async fn cmd_fetch(
     parallel: usize,
-    limit: Option<usize>,
+    _limit: Option<usize>,
     dry_run: bool,
 ) -> anyhow::Result<()> {
     let config = load_config()?;
@@ -52,10 +52,8 @@ pub async fn cmd_fetch(
 
     let mut new_projects: Vec<serde_json::Value> = Vec::new();
     let mut pagination_key: Option<String> = None;
-    let mut page = 0u32;
 
     loop {
-        page += 1;
         let url = if let Some(ref key) = pagination_key {
             format!("{}/project?pagination_key={}", base_url, key)
         } else {

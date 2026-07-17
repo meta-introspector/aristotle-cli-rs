@@ -203,7 +203,7 @@ fn match_any(text_lower: &str, patterns: &[&str]) -> Vec<(String, String)> {
 
 fn dedup(items: &mut Vec<(String, String, String, String)>) {
     let mut seen = HashSet::new();
-    items.retain(|(sid, fnm, pat, ctx)| {
+    items.retain(|(sid, _fnm, pat, ctx)| {
         let key = (
             sid.clone(),
             pat.clone(),
@@ -316,6 +316,7 @@ pub fn run_audit(base_dir: &str, output_json: &str) -> Result<AuditReport> {
     let json = serde_json::to_string_pretty(&report)?;
     fs::write(output_json, json)?;
     eprintln!("Saved to {}", output_json);
+    eprintln!("Total issues: {}", report.total());
 
     Ok(report)
 }

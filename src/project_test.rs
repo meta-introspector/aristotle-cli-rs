@@ -17,7 +17,7 @@
 
 use anyhow::{Context, Result};
 use serde::{Deserialize, Serialize};
-use std::collections::{BTreeMap, HashMap};
+use std::collections::HashMap;
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::Command;
@@ -167,8 +167,7 @@ fn current_timestamp() -> String {
         .unwrap_or_default();
     let secs = now.as_secs();
     // Format as ISO 8601
-    let datetime = chrono::DateTime::from_timestamp(secs as i64, 0)
-        .unwrap_or_default();
+    let datetime = chrono::DateTime::from_timestamp(secs as i64, 0).unwrap_or_default();
     datetime.format("%Y-%m-%dT%H:%M:%SZ").to_string()
 }
 
@@ -185,7 +184,10 @@ fn generate_run_id() -> String {
 /// Run the DASL conformance suite and return structured results.
 #[instrument]
 pub fn run_conformance(testing_dir: &Path, timeout_secs: u64) -> Result<Vec<ConformanceResult>> {
-    info!("Running DASL conformance suite from {}", testing_dir.display());
+    info!(
+        "Running DASL conformance suite from {}",
+        testing_dir.display()
+    );
 
     let start = SystemTime::now();
 
@@ -221,10 +223,7 @@ pub fn run_conformance(testing_dir: &Path, timeout_secs: u64) -> Result<Vec<Conf
 }
 
 /// Parse conformance output from super_harness.sh (which outputs JSON at the end).
-fn parse_conformance_output(
-    output: &str,
-    duration_ms: u64,
-) -> Result<Vec<ConformanceResult>> {
+fn parse_conformance_output(output: &str, duration_ms: u64) -> Result<Vec<ConformanceResult>> {
     let mut results = Vec::new();
 
     // Try to parse the entire output as JSON (in case super_harness outputs a single JSON object)
@@ -286,8 +285,16 @@ fn parse_conformance_output(
         for line in output.lines() {
             if line.contains("error") || line.contains("fail") {
                 // Create a minimal error entry
-                let impl_name = line.split(':').next().unwrap_or("unknown").trim().to_string();
-                if !results.iter().any(|r: &ConformanceResult| r.implementation == impl_name) {
+                let impl_name = line
+                    .split(':')
+                    .next()
+                    .unwrap_or("unknown")
+                    .trim()
+                    .to_string();
+                if !results
+                    .iter()
+                    .any(|r: &ConformanceResult| r.implementation == impl_name)
+                {
                     results.push(ConformanceResult {
                         implementation: impl_name,
                         language: "unknown".to_string(),
@@ -322,7 +329,11 @@ fn parse_single_impl_result(
         "Go".to_string()
     } else if name.contains("helia") || name.contains("atcute") {
         "JavaScript".to_string()
-    } else if name.contains("python") || name.contains("cbrrr") || name.contains("libipld") || name.contains("ipld-core") {
+    } else if name.contains("python")
+        || name.contains("cbrrr")
+        || name.contains("libipld")
+        || name.contains("ipld-core")
+    {
         "Python".to_string()
     } else if name.contains("serde") || name.contains("n0_dasl") || name.contains("rust") {
         "Rust".to_string()
@@ -406,16 +417,17 @@ pub fn run_round_robin(
         .args(extra_args)
         .current_dir(testing_dir);
 
-    let output = cmd
-        .output()
-        .context("Failed to execute round_robin.py")?;
+    let output = cmd.output().context("Failed to execute round_robin.py")?;
 
     let duration = start.elapsed().unwrap_or_default().as_millis() as u64;
     let stdout = String::from_utf8_lossy(&output.stdout);
     let stderr = String::from_utf8_lossy(&output.stderr);
 
     if !output.status.success() {
-        warn!("round_robin.py exited with code {}", output.status.code().unwrap_or(-1));
+        warn!(
+            "round_robin.py exited with code {}",
+            output.status.code().unwrap_or(-1)
+        );
     }
 
     // Try to parse JSON output
@@ -444,10 +456,7 @@ pub fn run_round_robin(
                 if unique_results.len() > 1 {
                     summary.divergences.push(RoundRobinDivergence {
                         input_hash: input.as_str().unwrap_or("?").to_string(),
-                        input_size: json
-                            .get("size")
-                            .and_then(|v| v.as_u64())
-                            .unwrap_or(0) as usize,
+                        input_size: json.get("size").and_then(|v| v.as_u64()).unwrap_or(0) as usize,
                         results,
                         description: json
                             .get("description")
@@ -496,7 +505,10 @@ pub fn run_fuzz(
         "all" | _ => "fuzz",
     };
 
-    info!("Running DASL fuzz (mode={}, iterations={})", fuzz_mode, iterations);
+    info!(
+        "Running DASL fuzz (mode={}, iterations={})",
+        fuzz_mode, iterations
+    );
 
     let start = SystemTime::now();
 
@@ -513,7 +525,10 @@ pub fn run_fuzz(
     let stderr = String::from_utf8_lossy(&output.stderr);
 
     if !output.status.success() {
-        warn!("Fuzz exited with code {}", output.status.code().unwrap_or(-1));
+        warn!(
+            "Fuzz exited with code {}",
+            output.status.code().unwrap_or(-1)
+        );
     }
 
     let mut crashes = Vec::new();
@@ -523,7 +538,8 @@ pub fn run_fuzz(
     // Parse crash info from output
     for line in stdout.lines().chain(stderr.lines()) {
         if line.contains("CRASH") || line.contains("crash") {
-            let hash = line.split(|c: char| c.is_whitespace() || c == ':')
+            let hash = line
+                .split(|c: char| c.is_whitespace() || c == ':')
                 .find(|s| !s.is_empty() && s.len() > 8)
                 .unwrap_or("?")
                 .to_string();
@@ -556,7 +572,10 @@ pub fn run_fuzz(
 pub fn report_to_shmem(report: &DaslTestReport) -> Result<()> {
     let shmem_path = Path::new(SHMEM_CLIENT);
     if !shmem_path.exists() {
-        warn!("shmem client not found at {}, skipping shmem report", SHMEM_CLIENT);
+        warn!(
+            "shmem client not found at {}, skipping shmem report",
+            SHMEM_CLIENT
+        );
         return Ok(());
     }
 
@@ -591,15 +610,24 @@ pub fn report_to_shmem(report: &DaslTestReport) -> Result<()> {
         .context("Failed to atomize test report into shmem")?;
 
     if !atomize_output.status.success() {
-        warn!("shmem atomize returned non-zero: {}",
-              String::from_utf8_lossy(&atomize_output.stderr));
+        warn!(
+            "shmem atomize returned non-zero: {}",
+            String::from_utf8_lossy(&atomize_output.stderr)
+        );
     }
 
     // Also store directly to a known path via the shmem REST API if available
     // Using dasl-planner's shmem integration path
     let shmem_path_key = format!("dasl/testing/reports/{}", &report.run_id);
     let store_output = Command::new(SHMEM_CLIENT)
-        .args(["shmem", "put", "--path", &shmem_path_key, "--file", &report_path.to_string_lossy()])
+        .args([
+            "shmem",
+            "put",
+            "--path",
+            &shmem_path_key,
+            "--file",
+            &report_path.to_string_lossy(),
+        ])
         .output()
         .ok();
 
@@ -652,7 +680,11 @@ fn resolve_project_id(cli_arg: Option<&str>) -> String {
 
 /// Post a test report to an Aristotle project via the `ask` endpoint.
 /// Uses the existing project — no spam, no new projects created.
-pub fn report_to_aristotle(report: &DaslTestReport, api_key: &str, project_id: Option<&str>) -> Result<()> {
+pub fn report_to_aristotle(
+    report: &DaslTestReport,
+    api_key: &str,
+    project_id: Option<&str>,
+) -> Result<()> {
     let pid = resolve_project_id(project_id);
     if pid.is_empty() {
         warn!("No Aristotle project ID configured — skipping report");
@@ -681,7 +713,11 @@ pub fn report_to_aristotle(report: &DaslTestReport, api_key: &str, project_id: O
     if let Some(ref conformance) = report.conformance {
         prompt_lines.push(format!("-- Conformance Results:"));
         for r in conformance {
-            let mark = if r.fail_count > 0 || r.error_count > 0 { "FAIL" } else { "PASS" };
+            let mark = if r.fail_count > 0 || r.error_count > 0 {
+                "FAIL"
+            } else {
+                "PASS"
+            };
             prompt_lines.push(format!(
                 "--   {}: {} ({} pass, {} fail, {} error)",
                 mark, r.implementation, r.pass_count, r.fail_count, r.error_count
@@ -692,8 +728,12 @@ pub fn report_to_aristotle(report: &DaslTestReport, api_key: &str, project_id: O
 
     // Round-robin section
     if let Some(ref rr) = report.round_robin {
-        prompt_lines.push(format!("-- Round-Robin: {} inputs, {} converge, {} diverge",
-            rr.total_inputs, rr.convergence_count, rr.divergences.len()));
+        prompt_lines.push(format!(
+            "-- Round-Robin: {} inputs, {} converge, {} diverge",
+            rr.total_inputs,
+            rr.convergence_count,
+            rr.divergences.len()
+        ));
         for div in &rr.divergences {
             prompt_lines.push(format!("--   DIVERGENCE: {}", div.input_hash));
             for (imp, hash) in &div.results {
@@ -706,8 +746,10 @@ pub fn report_to_aristotle(report: &DaslTestReport, api_key: &str, project_id: O
     // Fuzz section
     if let Some(ref fuzz_results) = report.fuzz {
         for f in fuzz_results {
-            prompt_lines.push(format!("-- Fuzz ({}): {} iterations, {} unique crashes",
-                f.mode, f.iterations, f.unique_crashes));
+            prompt_lines.push(format!(
+                "-- Fuzz ({}): {} iterations, {} unique crashes",
+                f.mode, f.iterations, f.unique_crashes
+            ));
             for crash in &f.crashes {
                 prompt_lines.push(format!("--   CRASH: {}", crash.error));
             }
@@ -716,7 +758,10 @@ pub fn report_to_aristotle(report: &DaslTestReport, api_key: &str, project_id: O
     }
 
     prompt_lines.push(format!("-- Summary: {}", report.summary));
-    prompt_lines.push(format!("-- Full report in shmem: dasl/testing/reports/{}", report.run_id));
+    prompt_lines.push(format!(
+        "-- Full report in shmem: dasl/testing/reports/{}",
+        report.run_id
+    ));
 
     let prompt = prompt_lines.join("\n");
     let body = serde_json::json!({"prompt": prompt});
@@ -734,7 +779,11 @@ pub fn report_to_aristotle(report: &DaslTestReport, api_key: &str, project_id: O
     if status.is_success() {
         info!("DASL test results posted to DASLFINAL project");
     } else {
-        warn!("Ask failed: HTTP {} — {}", status, resp_body.chars().take(200).collect::<String>());
+        warn!(
+            "Ask failed: HTTP {} — {}",
+            status,
+            resp_body.chars().take(200).collect::<String>()
+        );
     }
 
     Ok(())
@@ -927,7 +976,10 @@ pub fn run_project_tests(
         if total_crashes == 0 {
             summary_parts.push(format!("✅ {} fuzz iterations, no crashes", iters));
         } else {
-            summary_parts.push(format!("🛑 {} unique crashes in {} iterations", total_crashes, iters));
+            summary_parts.push(format!(
+                "🛑 {} unique crashes in {} iterations",
+                total_crashes, iters
+            ));
         }
     }
     report.summary = summary_parts.join(" | ");
@@ -968,7 +1020,10 @@ pub fn print_report_summary(report: &DaslTestReport) {
 
     if let Some(ref conformance) = report.conformance {
         println!("── Conformance ──");
-        println!("  {:<30} {:>8} {:>8} {:>8} {:>8}", "Implementation", "Total", "Pass", "Fail", "Error");
+        println!(
+            "  {:<30} {:>8} {:>8} {:>8} {:>8}",
+            "Implementation", "Total", "Pass", "Fail", "Error"
+        );
         println!("  {}", "-".repeat(70));
         for r in conformance {
             let status_mark = if r.fail_count > 0 || r.error_count > 0 {
@@ -978,7 +1033,12 @@ pub fn print_report_summary(report: &DaslTestReport) {
             };
             println!(
                 "  {} {:<26} {:>8} {:>8} {:>8} {:>8}",
-                status_mark, r.implementation, r.fixture_count, r.pass_count, r.fail_count, r.error_count
+                status_mark,
+                r.implementation,
+                r.fixture_count,
+                r.pass_count,
+                r.fail_count,
+                r.error_count
             );
         }
     }
@@ -986,8 +1046,12 @@ pub fn print_report_summary(report: &DaslTestReport) {
     if let Some(ref rr) = report.round_robin {
         println!();
         println!("── Round-Robin ──");
-        println!("  Inputs: {} total, {} converge, {} diverge",
-                 rr.total_inputs, rr.convergence_count, rr.divergences.len());
+        println!(
+            "  Inputs: {} total, {} converge, {} diverge",
+            rr.total_inputs,
+            rr.convergence_count,
+            rr.divergences.len()
+        );
         for div in &rr.divergences {
             println!("  ⚠️  {}", div.input_hash);
             for (imp, hash) in &div.results {
@@ -1000,9 +1064,16 @@ pub fn print_report_summary(report: &DaslTestReport) {
         println!();
         println!("── Fuzz ──");
         for f in fuzz_results {
-            println!("  Mode: {} ({} iters, {} crashes)", f.mode, f.iterations, f.unique_crashes);
+            println!(
+                "  Mode: {} ({} iters, {} crashes)",
+                f.mode, f.iterations, f.unique_crashes
+            );
             for crash in &f.crashes {
-                println!("  🛑  {}: {}", crash.input_hash, crash.error.chars().take(100).collect::<String>());
+                println!(
+                    "  🛑  {}: {}",
+                    crash.input_hash,
+                    crash.error.chars().take(100).collect::<String>()
+                );
             }
         }
     }
@@ -1058,7 +1129,10 @@ mod tests {
 }"#;
         let results = parse_conformance_output(json, 1000).unwrap();
         assert_eq!(results.len(), 2);
-        let serde = results.iter().find(|r| r.implementation == "serde_ipld_dagcbor").unwrap();
+        let serde = results
+            .iter()
+            .find(|r| r.implementation == "serde_ipld_dagcbor")
+            .unwrap();
         assert_eq!(serde.pass_count, 1);
         assert_eq!(serde.fail_count, 1);
         assert_eq!(serde.duration_ms, 1000);
