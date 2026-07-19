@@ -540,12 +540,18 @@ enum Commands {
         /// Base directory containing git-versions subdirectory
         #[arg(long, default_value = "/mnt/data1/time-2026/05-may/07/arist")]
         git_base: PathBuf,
+        /// Additional directories to scan (DASL testing, skill dirs, etc.)
+        #[arg(long)]
+        extra_dirs: Vec<PathBuf>,
         /// Output directory for graph files (JSON, DOT, report)
         #[arg(long)]
         output_dir: Option<PathBuf>,
         /// Only build graph, don't generate reports
         #[arg(long)]
         quiet: bool,
+        /// Output machine-readable JSON instead of human-readable report
+        #[arg(long)]
+        json: bool,
     },
     /// Do the next smart thing: pick the highest-priority pending task and execute it
     Next,
@@ -5895,18 +5901,23 @@ async fn main() -> Result<()> {
                 project_test::print_report_summary(&report);
             }
         }
-	Commands::TermGraph { git_base, output_dir, quiet } => {
+	Commands::TermGraph { git_base, extra_dirs, output_dir, quiet, json } => {
             info!("Executing term-graph command");
-            let graph = term_graph::build_term_graph(&git_base, output_dir.clone())?;
+            let graph = term_graph::build_term_graph(&git_base, &extra_dirs, output_dir.clone())?;
             if !quiet {
-                let report = term_graph::generate_report(&graph);
-                println!("{}", report);
-                
-                // Also print merge suggestions
-                let merge_plan = term_graph::generate_merge_plan(&graph);
-                println!("\n## Top Merge Candidates (by shared terms):");
-                for (p1, p2, count) in merge_plan.iter().take(10) {
-                    println!("  {} + {}: {} shared terms", p1, p2, count);
+                if *json {
+                    let json_str = serde_json::to_string_pretty(&graph)?;
+                    println!("{}", json_str);
+                } else {
+                    let report = term_graph::generate_report(&graph);
+                    println!("{}", report);
+                    
+                    // Also print merge suggestions
+                    let merge_plan = term_graph::generate_merge_plan(&graph);
+                    println!("\n## Top Merge Candidates (by shared terms):");
+                    for (p1, p2, count) in merge_plan.iter().take(10) {
+                        println!("  {} + {}: {} shared terms", p1, p2, count);
+                    }
                 }
             }
         }
