@@ -553,6 +553,12 @@ enum Commands {
         #[arg(long)]
         json: bool,
     },
+    /// Load term graph JSON into IPLD CAR shmem (for cross-ref enrichment)
+    LoadTermGraphToShmem {
+        /// Path to term_graph.json file
+        #[arg(long)]
+        input: PathBuf,
+    },
     /// Do the next smart thing: pick the highest-priority pending task and execute it
     Next,
     }
@@ -5924,6 +5930,10 @@ async fn main() -> Result<()> {
         Commands::Enrich { project_id, skip_task_enricher, skip_goap } => {
             info!("Executing enrich command");
             cmd_enrich(&project_id, !skip_task_enricher, !skip_goap)?;
+        }
+        Commands::LoadTermGraphToShmem { input } => {
+            info!("Loading term graph to shmem: {}", input.display());
+            load_shmem::load_term_graph_to_shmem(&input)?;
         }
         Commands::Next => {
             info!("Executing next command");
