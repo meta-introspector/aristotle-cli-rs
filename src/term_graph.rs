@@ -1,6 +1,7 @@
 use anyhow::{Context, Result};
 use serde::Serialize;
 use serde_json;
+use std::collections::HashSet;
 /// term_graph — Build term-level dependency graph across Aristotle projects.
 /// Each project is a "page", terms are nodes, edges represent usage/need relationships.
 ///
@@ -11,7 +12,101 @@ use serde_json;
 use std::collections::{BTreeMap, BTreeSet, HashMap};
 use std::fs;
 use std::path::{Path, PathBuf};
+use std::sync::OnceLock;
 use tracing::{info, instrument, warn};
+
+/// Common Lean built-in identifiers to exclude from cross-project matching
+static STOP_TERMS: OnceLock<HashSet<&'static str>> = OnceLock::new();
+fn stop_terms() -> &'static HashSet<&'static str> {
+    STOP_TERMS.get_or_init(|| {
+        HashSet::from([
+            "Nat",
+            "Int",
+            "Bool",
+            "String",
+            "List",
+            "Option",
+            "Unit",
+            "True",
+            "False",
+            "Prop",
+            "Type",
+            "Sort",
+            "Fin",
+            "Rat",
+            "Float",
+            "Char",
+            "UInt8",
+            "UInt16",
+            "UInt32",
+            "UInt64",
+            "USize",
+            "Array",
+            "Vector",
+            "HashMap",
+            "HashSet",
+            "RBMap",
+            "RBSet",
+            "Std",
+            "Lean",
+            "DecidableEq",
+            "Decidable",
+            "BEq",
+            "Hashable",
+            "Inhabited",
+            "Default",
+            "ToString",
+            "Repr",
+            "OfNat",
+            "Add",
+            "Mul",
+            "Sub",
+            "Div",
+            "Mod",
+            "Pow",
+            "Neg",
+            "Inv",
+            "Zero",
+            "One",
+            "OfScientific",
+            "Function",
+            "Eq",
+            "HEq",
+            "LT",
+            "LE",
+            "GT",
+            "GE",
+            "Ord",
+            "Compare",
+            "Monad",
+            "Functor",
+            "Applicative",
+            "Alternative",
+            "No",
+            "All",
+            "Every",
+            "Each",
+            "Some",
+            "This",
+            "For",
+            "In",
+            "With",
+            "By",
+            "As",
+            "At",
+            "On",
+            "To",
+            "From",
+            "Of",
+            "Is",
+            "Has",
+            "left",
+            "right",
+            "true",
+            "false",
+        ])
+    })
+}
 
 /// Information about a single term
 #[derive(Debug, Clone, Default, Serialize)]
@@ -147,21 +242,25 @@ fn extract_lean_terms(file_path: &Path) -> Result<(Vec<(String, String)>, Vec<St
 
         for keyword in def_keywords {
             if let Some(rest) = trimmed.strip_prefix(keyword) {
-                // Extract the term name (before :, :=, or whitespace)
+                // Extract the term name (before (, :, :=, or whitespace)
                 let term_name = rest.split_whitespace().next().and_then(|s| {
-                    // Remove trailing : or :=
+                    // Strip trailing symbols
                     let cleaned = s
                         .trim_end_matches(':')
-                        .trim_end_matches(" :=")
-                        .trim_end_matches(':');
-                    if cleaned.is_empty() {
+                        .trim_end_matches(":=")
+                        .trim_end_matches('(');
+                    if cleaned.is_empty() || !cleaned.chars().any(|c| c.is_ascii_alphanumeric()) {
                         None
                     } else {
                         Some(cleaned.to_string())
                     }
                 });
-                if let Some(term) = term_name {
-                    definitions.push((term, file_path.display().to_string()));
+                if let Some(ref term) = term_name {
+                    if !stop_terms().contains(term.as_str())
+                        && !stop_terms().contains(term.split('.').next().unwrap_or(""))
+                    {
+                        definitions.push((term.clone(), file_path.display().to_string()));
+                    }
                 }
                 break;
             }
@@ -182,7 +281,20 @@ fn extract_lean_terms(file_path: &Path) -> Result<(Vec<(String, String)>, Vec<St
             .collect();
 
         for word in caps_words {
-            if !word.contains("Mathlib.") && !word.contains("Lean.") && word.len() > 1 {
+            // Filter for meaningful identifiers: at least one ASCII alphanum char
+            let has_alphanum = word.chars().any(|c| c.is_ascii_alphanumeric());
+            if !word.contains("Mathlib.")
+                && !word.contains("Lean.")
+                && word.len() > 1
+                && !word.starts_with('.')
+                && !word.starts_with("..")
+                && has_alphanum
+                && !word
+                    .chars()
+                    .all(|c| c.is_ascii_punctuation() || c.is_whitespace() || !c.is_ascii())
+                && !stop_terms().contains(word)
+                && !stop_terms().contains(word.split('.').next().unwrap_or(""))
+            {
                 usages.push(word.to_string());
             }
         }
@@ -204,7 +316,7 @@ fn process_project(project_path: &Path) -> Result<(String, Vec<(String, String)>
 
     // Walk through all .lean files in the project
     for entry in walkdir::WalkDir::new(project_path)
-        .max_depth(10)
+        .max_depth(5)
         .into_iter()
         .filter_map(|e| e.ok())
     {
@@ -225,19 +337,84 @@ fn process_project(project_path: &Path) -> Result<(String, Vec<(String, String)>
     Ok((project_name, all_definitions, all_usages))
 }
 
-/// Build term graph from git-versions directory
-#[instrument(skip(git_base, output_dir))]
-pub fn build_term_graph(git_base: &Path, output_dir: Option<PathBuf>) -> Result<TermGraph> {
-    info!("Building term dependency graph from {}", git_base.display());
+/// Process a single extra directory (non-git-versions), using dir basename as project name
+fn process_extra_dir(graph: &mut TermGraph, dir_path: &Path) -> Result<u64> {
+    let dir_name = dir_path
+        .file_name()
+        .and_then(|n| n.to_str())
+        .unwrap_or("unknown")
+        .to_string();
 
-    let git_versions_dir = git_base.join("git-versions");
+    info!(
+        "Processing extra dir: {} ({})",
+        dir_name,
+        dir_path.display()
+    );
+    let mut count = 0u64;
 
-    if !git_versions_dir.exists() {
-        return Err(anyhow::anyhow!(
-            "git-versions directory not found: {}",
-            git_versions_dir.display()
-        ));
+    for entry in walkdir::WalkDir::new(dir_path)
+        .max_depth(5)
+        .into_iter()
+        .filter_map(|e| e.ok())
+    {
+        let path = entry.path();
+        if path.extension().map_or(false, |ext| ext == "lean") {
+            match extract_lean_terms(path) {
+                Ok((defs, uses)) => {
+                    for (term, file) in &defs {
+                        graph.add_definition(term, &dir_name, Some(file), None);
+                    }
+                    for term in &uses {
+                        graph.add_usage(term, &dir_name);
+                        graph.add_need(term, &dir_name);
+                    }
+                    count += 1;
+                }
+                Err(e) => {
+                    warn!(file = %path.display(), error = %e, "Failed to extract terms");
+                }
+            }
+        }
     }
+
+    info!("Extra dir {}: {} lean files processed", dir_name, count);
+    Ok(count)
+}
+
+/// Count .lean files in a directory (quick check, max 2 levels deep)
+fn count_lean_files(dir: &Path) -> u64 {
+    let mut count = 0u64;
+    if let Ok(entries) = fs::read_dir(dir) {
+        for entry in entries.flatten() {
+            let path = entry.path();
+            if path.is_dir() {
+                // One level deeper
+                if let Ok(sub_entries) = fs::read_dir(&path) {
+                    for sub in sub_entries.flatten() {
+                        if sub.path().extension().map_or(false, |ext| ext == "lean") {
+                            count += 1;
+                        }
+                    }
+                }
+            } else if path.extension().map_or(false, |ext| ext == "lean") {
+                count += 1;
+            }
+            if count > 100 {
+                break; // Just need to know if there are any
+            }
+        }
+    }
+    count
+}
+
+/// Build term graph from git-versions directory and optional extra directories
+#[instrument(skip(git_base, extra_dirs, output_dir))]
+pub fn build_term_graph(
+    git_base: &Path,
+    extra_dirs: &[PathBuf],
+    output_dir: Option<PathBuf>,
+) -> Result<TermGraph> {
+    info!("Building term dependency graph from {}", git_base.display());
 
     let mut graph = TermGraph::new();
     let mut projects_processed = 0u64;
@@ -245,42 +422,87 @@ pub fn build_term_graph(git_base: &Path, output_dir: Option<PathBuf>) -> Result<
     let mut definitions_found = 0u64;
     let mut usages_found = 0u64;
 
-    // Find all project directories in git-versions
-    for entry in fs::read_dir(&git_versions_dir)? {
-        let entry = entry?;
-        if entry.file_type()?.is_dir() {
-            let project_path = entry.path();
-            let project_name = entry.file_name().to_string_lossy().to_string();
+    // Process git-versions projects
+    // First try git_base/git-versions/, then git_base/ (direct UUID dirs)
+    let git_versions_dir = git_base.join("git-versions");
+    let project_base = if git_versions_dir.exists() {
+        git_versions_dir.clone()
+    } else {
+        // UUID directories directly under git_base (config-driven path)
+        git_base.to_path_buf()
+    };
 
-            info!("Processing project: {}", project_name);
+    if project_base.exists() {
+        let mut project_count = 0u64;
+        for entry in fs::read_dir(&project_base)? {
+            let entry = entry?;
+            if entry.file_type()?.is_dir() {
+                let project_path = entry.path();
+                let project_name = entry.file_name().to_string_lossy().to_string();
 
-            match process_project(&project_path) {
-                Ok((_, definitions, usages)) => {
-                    projects_processed += 1;
-                    files_scanned += 1; // Simplified - would need to count actual files
-
-                    // Add definitions to graph
-                    for (term, file) in &definitions {
-                        graph.add_definition(term, &project_name, Some(file), None);
-                        definitions_found += 1;
-                    }
-
-                    // Add usages to graph
-                    for term in &usages {
-                        graph.add_usage(term, &project_name);
-                        usages_found += 1;
-                    }
-
-                    // For now, usages are also needs (simplified model)
-                    // In a more sophisticated version, we'd parse imports
-                    for term in &usages {
-                        graph.add_need(term, &project_name);
-                    }
+                // Quick check: skip if no .lean files
+                let lean_count = count_lean_files(&project_path);
+                if lean_count == 0 {
+                    continue;
                 }
-                Err(e) => {
-                    warn!(project = %project_name, error = %e, "Failed to process project");
+
+                project_count += 1;
+                if project_count % 50 == 0 {
+                    info!(
+                        "Progress: {} projects processed (current: {})",
+                        project_count, project_name
+                    );
+                }
+
+                match process_project(&project_path) {
+                    Ok((_, definitions, usages)) => {
+                        projects_processed += 1;
+                        files_scanned += lean_count;
+
+                        for (term, file) in &definitions {
+                            graph.add_definition(term, &project_name, Some(file), None);
+                            definitions_found += 1;
+                        }
+
+                        for term in &usages {
+                            graph.add_usage(term, &project_name);
+                            usages_found += 1;
+                        }
+
+                        for term in &usages {
+                            graph.add_need(term, &project_name);
+                        }
+                    }
+                    Err(e) => {
+                        warn!(project = %project_name, error = %e, "Failed to process project");
+                    }
                 }
             }
+        }
+        info!(
+            "Processed {} projects from {}",
+            project_count,
+            project_base.display()
+        );
+    } else {
+        warn!(
+            "Project base directory not found: {} (tried {})",
+            project_base.display(),
+            git_versions_dir.display()
+        );
+    }
+
+    // Process extra directories
+    for extra_dir in extra_dirs {
+        if extra_dir.exists() {
+            match process_extra_dir(&mut graph, extra_dir) {
+                Ok(count) => files_scanned += count,
+                Err(e) => {
+                    warn!(dir = %extra_dir.display(), error = %e, "Failed to process extra dir")
+                }
+            }
+        } else {
+            warn!("Extra dir not found: {}", extra_dir.display());
         }
     }
 
