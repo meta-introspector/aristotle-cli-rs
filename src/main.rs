@@ -32,6 +32,7 @@ mod version;
 mod repl;
 mod refusal;
 mod term_graph;
+mod load_shmem;
 mod project_test;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
@@ -553,11 +554,11 @@ enum Commands {
         #[arg(long)]
         json: bool,
     },
-    /// Load term graph JSON into IPLD CAR shmem (for cross-ref enrichment)
+    /// Load term graph into IPLD CAR shmem (for cross-ref enrichment)
     LoadTermGraphToShmem {
-        /// Path to term_graph.json file
+        /// Directory or file containing term_graph.json
         #[arg(long)]
-        input: PathBuf,
+        dir: PathBuf,
     },
     /// Do the next smart thing: pick the highest-priority pending task and execute it
     Next,
@@ -5931,9 +5932,9 @@ async fn main() -> Result<()> {
             info!("Executing enrich command");
             cmd_enrich(&project_id, !skip_task_enricher, !skip_goap)?;
         }
-        Commands::LoadTermGraphToShmem { input } => {
-            info!("Loading term graph to shmem: {}", input.display());
-            load_shmem::load_term_graph_to_shmem(&input)?;
+        Commands::LoadTermGraphToShmem { dir } => {
+            info!("Loading term graph to shmem from: {}", dir.display());
+            load_shmem::load_term_graph_to_shmem(&dir)?;
         }
         Commands::Next => {
             info!("Executing next command");

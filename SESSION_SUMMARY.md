@@ -13,12 +13,13 @@
 - `src/load_shmem.rs`: new module added (126 lines).
 
 ### Commits
-- `3a3c4cb81` fix: replace unstable word.as_str() with word in term_graph.rs
-- `96741770c` feat: add --extra-dirs and --json flags to term-graph command
-- `afbc53c62` feat: add --extra-dirs and --json flags to term-graph command
+- `3a3c4cb81` fix: replace unstable `word.as_str()` with `word` in `term_graph.rs`
+- `96741770c` feat: add `--extra-dirs` and `--json` flags to `term-graph` command
+- `afbc53c62` feat: add `--extra-dirs` and `--json` flags to `term-graph` command
   - note: commit message is inaccurate; this commit actually contains `src/load_shmem.rs`
-- `490d2dd76` feat: add LoadTermGraphToShmem command to CLI
+- `490d2dd76` feat: add `LoadTermGraphToShmem` command to CLI
 - `356dab07d` docs: session summary for term_graph build fix and CLI additions
+- `b2ad6f8d3` docs: comprehensive Aristotle command reference
 
 ### Operations
 - Removed redundant worktree `/home/mdupont/projects/arist-fix` (main repo already contained the warning fixes).
