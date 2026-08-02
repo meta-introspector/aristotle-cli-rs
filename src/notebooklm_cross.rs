@@ -77,8 +77,8 @@ const PROJECTS: &[(&str, &str)] = &[
         ("fa51bcab", "aristotles_results/fa51bcab-be78-4427-b05c-27c58cdd8584_aristotle/output-final_aristotle/RequestProject"),
 ];
 
-pub fn cmd_notebooklm_cross(_o: Option<PathBuf>) -> Result<()> {
-    let out = PathBuf::from("/mnt/data1/notebooklm/2026/06-june/24-dasl-proofs");
+pub fn cmd_notebooklm_cross(o: Option<PathBuf>) -> Result<()> {
+    let out = o.unwrap_or_else(|| PathBuf::from("/mnt/data1/notebooklm/2026/06-june/24-dasl-proofs"));
     fs::create_dir_all(&out)?;
 
     let mut file_num = 1;
