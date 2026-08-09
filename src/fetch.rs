@@ -83,10 +83,15 @@ pub async fn cmd_fetch(
             let has_files = item["has_files"].as_bool().unwrap_or(false);
             let last_updated = item["last_updated"].as_str().unwrap_or("");
             let is_new = !existing.contains(id);
+            // A locally-present project with no extracted_at metadata (e.g. a
+            // legacy dir written before metadata was recorded) cannot be
+            // compared — treat it as updated so it gets re-fetched rather than
+            // silently skipped forever. If metadata exists, only re-fetch when
+            // the API's last_updated is strictly newer than the local stamp.
             let is_updated = if let Some(extracted) = existing_time.get(id) {
                 last_updated > extracted.as_str()
             } else {
-                false
+                existing.contains(id)
             };
             if has_files && (is_new || is_updated) {
                 new_projects.push(item.clone());
