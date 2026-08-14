@@ -1356,10 +1356,7 @@ pub fn cmd_merge_projects(project_ids: &[String], output_dir: PathBuf) -> Result
     let mut found = 0u64;
 
     for pid in project_ids {
-        let proj_dir = config.results_dir.join(format!(
-            "{}_aristotle/output-final_aristotle/RequestProject",
-            pid
-        ));
+        let proj_dir = config.results_dir.join(format!("{}_aristotle", pid));
 
         if !proj_dir.exists() {
             warn!(project = %pid, "Project not found, skipping");
@@ -1368,13 +1365,44 @@ pub fn cmd_merge_projects(project_ids: &[String], output_dir: PathBuf) -> Result
         found += 1;
 
         let mut copied = 0u64;
+        // Walk the WHOLE project dir (handles output-final_aristotle/RequestProject,
+        // nested *_aristotle subdirs, flat UnifiedDasl/ trees). Skip build dirs.
         for entry in WalkDir::new(&proj_dir)
             .into_iter()
+            .filter_entry(|e| {
+                let n = e.file_name().to_string_lossy();
+                n != ".lake" && n != "build" && n != ".git" && n != "target"
+                    && n != ".olean" && n != ".cache"
+            })
             .filter_map(|e| e.ok())
             .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
         {
             let fname = entry.file_name().to_string_lossy().to_string();
-            let dest = rp_dir.join(format!("{}_{}", pid, fname));
+            // Prefix with the project id (36 chars) — cap the combined name
+            // below NAME_MAX (255) since some source files have ~200-char
+            // basenames (repeated server_variant_ dirs flattened).
+            let mut name = format!("{}_{}", pid, fname);
+            if name.len() > 200 {
+                let (stem, ext) = if name.ends_with(".lean") {
+                    (&name[..name.len() - 5], ".lean")
+                } else {
+                    (name.as_str(), "")
+                };
+                // Truncate to 196 bytes at a char boundary (avoid UTF-8 panic).
+                let mut end = stem.len().min(196);
+                while end > 0 && !stem.is_char_boundary(end) {
+                    end -= 1;
+                }
+                name = format!("{}{}", &stem[..end], ext);
+            }
+            // Same basename can appear in different nested dirs — dedup.
+            let mut dest = rp_dir.join(&name);
+            let mut n = 2;
+            while dest.exists() {
+                let stem = name.trim_end_matches(".lean");
+                dest = rp_dir.join(format!("{}_{}.lean", stem, n));
+                n += 1;
+            }
             fs::copy(entry.path(), &dest)?;
             copied += 1;
         }
