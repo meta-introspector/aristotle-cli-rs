@@ -26,3 +26,6 @@ Thumbs.db
 /splitter-engine/.lake/
 /result
 /*-*-*-*-*/
+/split-results*/
+/split-by-band/
+/merged-results/
