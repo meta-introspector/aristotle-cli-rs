@@ -56,8 +56,16 @@ fi
 
 # ── Step 3: Run SplitDecls with nix store lean ─────────────────────────
 cd "$TMPDIR"
-LEAN_PATH="$LEAN_LIB" \
-  $LEAN --run "$SPLITTER" "$MODULE" "$OUTPUT_DIR" 2>/dev/null || true
+LEAN_ERR="$TMPDIR/lean.err"
+if ! LEAN_PATH="$LEAN_LIB" $LEAN --run "$SPLITTER" "$MODULE" "$OUTPUT_DIR" 2>"$LEAN_ERR"; then
+  echo "  ✗ SplitDecls failed for $MODULE: $(head -3 "$LEAN_ERR" 2>/dev/null)" >&2
+  rm -rf "$TMPDIR"
+  exit 1
+fi
+# Forward any lean warnings (stderr) to our stderr so callers capture them
+if [ -s "$LEAN_ERR" ]; then
+  head -5 "$LEAN_ERR" >&2
+fi
 
 # Count results
 DECL_COUNT=$(find "$OUTPUT_DIR" -name "*.lean" 2>/dev/null | wc -l)
