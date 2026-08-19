@@ -4,7 +4,7 @@ use std::fs::{self, File, OpenOptions};
 use std::io::Write;
 use std::path::PathBuf;
 use std::process::Command;
-use std::sync::{Arc, RwLock};
+use std::sync::Arc;
 use std::time::Duration;
 use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
@@ -34,6 +34,9 @@ mod refusal;
 mod term_graph;
 mod load_shmem;
 mod project_test;
+mod api;
+
+use api::{get_api_key, set_api_key, API_BASE_URL};
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -48,28 +51,6 @@ const VERSION: &str = concat!(
     "-",
     env!("GIT_HASH"),
 );
-const API_BASE_URL: &str = "https://aristotle.harmonic.fun/api/v3";
-
-static API_KEY: RwLock<Option<String>> = RwLock::new(None);
-
-fn get_api_key() -> Result<String> {
-    if let Some(key) = &*API_KEY.read().unwrap() {
-        debug!("API key retrieved from static store");
-        Ok(key.clone())
-    } else {
-        env::var("ARISTOTLE_API_KEY")
-            .map_err(|_| {
-                error!("API key not set in env or static store");
-                anyhow::anyhow!("API key not set. Set ARISTOTLE_API_KEY or use configure set")
-            })
-    }
-}
-
-fn set_api_key(api_key: &str) {
-    debug!("Setting API key in static store");
-    *API_KEY.write().unwrap() = Some(api_key.to_string());
-}
-
 #[derive(Subcommand)]
 enum Commands {
     /// Poll for new projects
@@ -735,23 +716,29 @@ fn get_project_dirs(base_dir: &PathBuf) -> Result<Vec<PathBuf>> {
             return Ok(dirs);
         }
     };
-    for entry in readdir {
-        let entry = match entry {
-            Ok(e) => e,
-            Err(e) => {
-                warn!(error = %e, "Failed to read directory entry");
-                continue;
-            }
-        };
+    let mut entries: Vec<_> = readdir.flatten().collect();
+    // Sort so plain git repos come before their *_aristotle copies; dedup
+    // skips a *_aristotle copy when a sibling git repo for the same id exists.
+    entries.sort_by(|a, b| {
+        a.file_name().to_string_lossy().len().cmp(&b.file_name().to_string_lossy().len())
+    });
+    let mut seen_ids: std::collections::HashSet<String> = std::collections::HashSet::new();
+    for entry in entries {
         let path = entry.path();
-        if path.is_dir() {
-            let is_git_repo = path.join(".git").is_dir();
-            if let Some(name) = path.file_name() {
-                if let Some(name_str) = name.to_str() {
-                    if name_str.ends_with("_aristotle") || is_git_repo {
-                        debug!(project = name_str, is_git = is_git_repo, "Found project directory");
-                        dirs.push(path);
+        if !path.is_dir() {
+            continue;
+        }
+        let is_git_repo = path.join(".git").is_dir();
+        if let Some(name) = path.file_name() {
+            if let Some(name_str) = name.to_str() {
+                if name_str.ends_with("_aristotle") || is_git_repo {
+                    let id = name_str.trim_end_matches("_aristotle").to_string();
+                    if !seen_ids.insert(id) {
+                        debug!(project = name_str, "Skipping duplicate project dir");
+                        continue;
                     }
+                    debug!(project = name_str, is_git = is_git_repo, "Found project directory");
+                    dirs.push(path);
                 }
             }
         }
