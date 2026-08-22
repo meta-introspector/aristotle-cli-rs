@@ -118,6 +118,9 @@ enum Commands {
     Ask {
         project_id: String,
         prompt: String,
+        /// Attach an archive or other input file to the follow-up prompt.
+        #[arg(long)]
+        attachment: Option<PathBuf>,
         #[arg(long)]
         wait: bool,
     },
@@ -909,16 +912,53 @@ async fn cmd_submit(
 }
 
 #[instrument(skip_all)]
-async fn cmd_ask(project_id: String, prompt: String, wait: bool) -> Result<()> {
+async fn cmd_ask(
+    project_id: String,
+    prompt: String,
+    attachment: Option<PathBuf>,
+    wait: bool,
+) -> Result<()> {
     let api_key = get_api_key()?;
-    let client = aristotle_client(300)?;
-    let task: AgentTask = api_post_json(
-        &client,
-        &api_key,
-        &format!("/project/{}/ask", project_id),
-        serde_json::json!({ "prompt": prompt }),
-    )
-    .await?;
+    let client = aristotle_client(if attachment.is_some() { 1800 } else { 300 })?;
+    let endpoint = format!("/project/{}/ask", project_id);
+    let task: AgentTask = if let Some(attachment) = attachment {
+        let bytes = fs::read(&attachment).with_context(|| {
+            format!("Failed to read attachment {}", attachment.display())
+        })?;
+        let filename = attachment
+            .file_name()
+            .and_then(|name| name.to_str())
+            .unwrap_or("attachment.tar.gz")
+            .to_string();
+        let part = multipart::Part::bytes(bytes)
+            .file_name(filename)
+            .mime_str("application/x-tar")?;
+        // `/project/{id}/ask` parses multipart follow-ups as form fields (unlike
+        // `/project`, whose multipart payload contains a JSON `body` field).
+        let form = multipart::Form::new().text("prompt", prompt).part("input", part);
+        let response = client
+            .post(format!("{}/{}", API_BASE_URL, endpoint.trim_start_matches('/')))
+            .header("X-API-Key", &api_key)
+            .multipart(form)
+            .send()
+            .await
+            .context("Failed to submit follow-up attachment")?;
+        if !response.status().is_success() {
+            return Err(api_error(response, "POST /project/{id}/ask").await);
+        }
+        response
+            .json()
+            .await
+            .context("Failed to parse follow-up task response")?
+    } else {
+        api_post_json(
+            &client,
+            &api_key,
+            &endpoint,
+            serde_json::json!({ "prompt": prompt }),
+        )
+        .await?
+    };
     println!("Prompt submitted to project {}", project_id);
     print_task(&task);
 
@@ -2309,10 +2349,11 @@ async fn main() -> Result<()> {
         Commands::Ask {
             project_id,
             prompt,
+            attachment,
             wait,
         } => {
-            info!(project_id, wait, "Executing ask command");
-            cmd_ask(project_id.clone(), prompt.clone(), *wait).await?;
+            info!(project_id, ?attachment, wait, "Executing ask command");
+            cmd_ask(project_id.clone(), prompt.clone(), attachment.clone(), *wait).await?;
         }
         Commands::Tasks {
             project_id,

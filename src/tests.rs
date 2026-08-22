@@ -548,10 +548,12 @@ fn test_cli_parsing_ask() {
         Commands::Ask {
             project_id,
             prompt,
+            attachment,
             wait,
         } => {
             assert_eq!(project_id, "project-123");
             assert_eq!(prompt, "How does this proof work?");
+            assert!(attachment.is_none());
             assert!(!wait);
         }
         _ => panic!("Expected Ask command"),
