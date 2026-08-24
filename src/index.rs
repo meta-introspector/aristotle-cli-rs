@@ -3,7 +3,7 @@
 
 use std::collections::HashMap;
 use std::fs;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use anyhow::Context;
 use tracing::{debug, info, instrument, warn};
 
@@ -87,10 +87,104 @@ fn extract_title(summary_text: &str, fallback: &str) -> String {
     fallback.chars().take(50).collect()
 }
 
+/// Read the run's summary: prefer top-level ARISTOTLE_SUMMARY.md, fall back to
+/// output-final_aristotle/ARISTOTLE_SUMMARY.md where the real summaries live.
+fn read_summary(run_dir: &Path) -> String {
+    let top = run_dir.join("ARISTOTLE_SUMMARY.md");
+    if top.exists() {
+        if let Ok(t) = fs::read_to_string(&top) {
+            if !t.trim().is_empty() {
+                return t;
+            }
+        }
+    }
+    let nested = run_dir.join("output-final_aristotle").join("ARISTOTLE_SUMMARY.md");
+    if nested.exists() {
+        if let Ok(t) = fs::read_to_string(&nested) {
+            return t;
+        }
+    }
+    String::new()
+}
+
+/// Collect RequestProject *.lean basenames (both top-level and output-final layouts).
+fn collect_lean_names(run_dir: &Path) -> Vec<String> {
+    let mut names = Vec::new();
+    let mut roots = vec![run_dir.join("RequestProject")];
+    let of = run_dir.join("output-final_aristotle");
+    if of.exists() {
+        roots.push(of.join("RequestProject"));
+    }
+    for root in roots {
+        if let Ok(entries) = fs::read_dir(&root) {
+            for e in entries.flatten() {
+                let p = e.path();
+                if p.extension().map(|x| x == "lean").unwrap_or(false) {
+                    if let Some(n) = p.file_stem().and_then(|s| s.to_str()) {
+                        names.push(n.to_string());
+                    }
+                }
+            }
+        }
+    }
+    names
+}
+
+/// DASL/IPLD signal from lean file names (DagCbor*, DASL*, CID*, CBOR*, CAR*, DRISL*).
+fn lean_names_hint_dasl(names: &[String]) -> bool {
+    names.iter().any(|n| {
+        let l = n.to_lowercase();
+        l.contains("dasl") || l.contains("dagcbor") || l.contains("cbor")
+            || l.contains("ipld") || l.contains("drisl") || l.contains("carheader")
+            || l.contains("cid") || l.contains("multihash") || l.contains("shmem")
+            || l.contains("fuzz") || l.contains("dag_")
+    })
+}
+
+/// Load aristo-projects.json track->main_project-id map for authoritative seeding.
+fn load_track_main_ids() -> HashMap<String, String> {
+    let mut map = HashMap::new();
+    let candidates = vec![
+        PathBuf::from("/mnt/data1/dasl-planning2/aristo-projects.json"),
+        PathBuf::from("aristo-projects.json"),
+    ];
+    for cand in candidates {
+        if !cand.exists() {
+            continue;
+        }
+        if let Ok(text) = fs::read_to_string(&cand) {
+            if let Ok(v) = serde_json::from_str::<serde_json::Value>(&text) {
+                if let Some(tracks) = v["tracks"].as_array() {
+                    for t in tracks {
+                        let track = t["track"].as_str().unwrap_or("");
+                        let id = t["main_project"]["id"].as_str().unwrap_or("");
+                        if !track.is_empty() && !id.is_empty() {
+                            map.insert(id.to_string(), track.to_string());
+                        }
+                    }
+                }
+            }
+        }
+        break;
+    }
+    map
+}
+
+/// Category for a known track from the manifest (seeded regardless of content).
+fn track_category(track: &str) -> &'static str {
+    match track {
+        "dasl" => "DASL/IPLD",
+        "drisl" => "DASL/IPLD",
+        "solfunmeme" => "MATH/MONSTER",
+        _ => "MATH/OTHER",
+    }
+}
+
 #[instrument(skip(output))]
 pub fn cmd_index(output: Option<PathBuf>) -> anyhow::Result<()> {
     let config = load_config()?;
     let output_path = output.unwrap_or_else(|| config.results_dir.join("aristotle-blocks.json"));
+    let track_map = load_track_main_ids();
 
     // Source directories to scan
     let source_dirs: Vec<(&str, PathBuf)> = vec![
@@ -98,10 +192,21 @@ pub fn cmd_index(output: Option<PathBuf>) -> anyhow::Result<()> {
         ("arist", config.base_dir.clone()),
     ];
 
+    // Deduplicate identical dirs (results_dir may equal base_dir) so each
+    // unique run is indexed exactly once.
+    let mut seen_dirs: std::collections::HashSet<PathBuf> = std::collections::HashSet::new();
+    let mut unique_sources: Vec<(&str, PathBuf)> = Vec::new();
+    for (name, dir) in &source_dirs {
+        let canon = std::fs::canonicalize(dir).unwrap_or_else(|_| dir.clone());
+        if seen_dirs.insert(canon) {
+            unique_sources.push((name, dir.clone()));
+        }
+    }
+
     let mut blocks: Vec<serde_json::Value> = Vec::new();
     let mut stats: HashMap<String, usize> = HashMap::new();
 
-    for (source_name, source_dir) in &source_dirs {
+    for (source_name, source_dir) in &unique_sources {
         if !source_dir.exists() {
             warn!(dir = %source_dir.display(), "Source directory does not exist");
             continue;
@@ -133,16 +238,18 @@ pub fn cmd_index(output: Option<PathBuf>) -> anyhow::Result<()> {
             }
 
             let run_id = name.trim_end_matches("_aristotle").to_string();
-            let summary_path = path.join("ARISTOTLE_SUMMARY.md");
-
-            let summary_text = if summary_path.exists() {
-                fs::read_to_string(&summary_path).unwrap_or_default()
-            } else {
-                String::new()
-            };
+            let summary_text = read_summary(&path);
+            let lean_names = collect_lean_names(&path);
 
             let title = extract_title(&summary_text, &run_id);
-            let category = categorize(&summary_text);
+            let track = track_map.get(&run_id).map(|s| s.as_str()).unwrap_or("");
+            let category = if !track.is_empty() {
+                track_category(track)
+            } else if lean_names_hint_dasl(&lean_names) {
+                "DASL/IPLD"
+            } else {
+                categorize(&summary_text)
+            };
 
             *stats.entry(category.to_string()).or_insert(0) += 1;
 
@@ -150,9 +257,11 @@ pub fn cmd_index(output: Option<PathBuf>) -> anyhow::Result<()> {
                 "path": format!("aristotle/{}/{}/{}", source_name, category, run_id),
                 "description": title,
                 "size": summary_text.len(),
+                "lean_files": lean_names.len(),
                 "cid": "",
                 "read_only": false,
                 "category": category,
+                "track": track,
             });
 
             blocks.push(block);
@@ -226,5 +335,21 @@ mod tests {
     fn test_extract_title() {
         let text = "# Umbral Moonshine Conjecture — Formalization Complete\n\nSome body text.";
         assert_eq!(extract_title(text, "fallback"), "Umbral Moonshine Conjecture — Formalization Complete");
+    }
+
+    #[test]
+    fn test_lean_names_hint_dasl() {
+        assert!(lean_names_hint_dasl(&["DagCborBranchCoverage".to_string()]));
+        assert!(lean_names_hint_dasl(&["DaslStateRefresh".to_string(), "Main".to_string()]));
+        assert!(!lean_names_hint_dasl(&["Main".to_string(), "GroupTheory".to_string()]));
+        assert!(!lean_names_hint_dasl(&["Ring".to_string(), "Topology".to_string()]));
+    }
+
+    #[test]
+    fn test_track_category() {
+        assert_eq!(track_category("dasl"), "DASL/IPLD");
+        assert_eq!(track_category("drisl"), "DASL/IPLD");
+        assert_eq!(track_category("solfunmeme"), "MATH/MONSTER");
+        assert_eq!(track_category("unknown"), "MATH/OTHER");
     }
 }

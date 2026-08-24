@@ -2,7 +2,7 @@ use std::collections::HashSet;
 use std::env;
 use std::fs::{self, File, OpenOptions};
 use std::io::Write;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use std::process::Command;
 use std::sync::Arc;
 use std::time::Duration;
@@ -262,6 +262,34 @@ enum Commands {
         project_dir: Option<PathBuf>,
         #[arg(long)]
         wait: bool,
+    },
+    /// Git sync: push local git commits to an Aristotle project
+    ///
+    /// Detects changed files since last sync and sends them to the project.
+    /// For running projects: sends file contents as text via `ask`.
+    /// For stopped projects: sends file contents via `ask-with-files` (inline JSON).
+    /// Tracks sync state in .aristotle-sync.json within the repo.
+    GitSync {
+        /// Aristotle project ID to sync to
+        project_id: String,
+        /// Local git repo path (defaults to current directory)
+        #[arg(long, default_value = ".")]
+        repo_dir: PathBuf,
+        /// Sync from a specific commit (defaults to last synced commit or HEAD~1)
+        #[arg(long)]
+        from_commit: Option<String>,
+        /// Sync up to a specific commit (defaults to HEAD)
+        #[arg(long, default_value = "HEAD")]
+        to_commit: String,
+        /// Force sync all files (ignore sync state, send everything)
+        #[arg(long)]
+        force: bool,
+        /// Dry run: show what would be synced without sending
+        #[arg(long)]
+        dry_run: bool,
+        /// File extensions to sync (defaults to .lean)
+        #[arg(long, default_value = "lean")]
+        ext: String,
     },
     /// Check status of a submitted Aristotle project
     Check {
@@ -2293,6 +2321,7 @@ fn sanitize_name(name: &str) -> String {
 /// ── Merge command ────────────────────────────────────────────────────────
 
 #[instrument(skip(input_dir, output_dir))]
+
 fn cmd_merge(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<()> {
     let config = load_config()?;
     let input_dir =
@@ -2327,10 +2356,14 @@ fn cmd_merge(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
             let content = fs::read_to_string(path)?;
             if output.exists() {
                 let existing = fs::read_to_string(&output)?;
-                if !existing.contains(&content) {
-                    fs::write(&output, format!("{}\n{}", existing, content))?;
-                    debug!(file = %path.display(), "Merged content");
-                    merged += 1;
+                // Use exact content comparison to avoid false positives from substring matching
+                if existing.trim() != content.trim() {
+                    // Check if content is already present as a complete declaration
+                    if !existing.contains(&content) {
+                        fs::write(&output, format!("{}\n{}", existing, content))?;
+                        debug!(file = %path.display(), "Merged content");
+                        merged += 1;
+                    }
                 }
             } else {
                 fs::copy(path, &output)?;
@@ -2349,7 +2382,6 @@ fn cmd_merge(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Result<
     );
     Ok(())
 }
-
 /// ── Consolidate command ──────────────────────────────────────────────────
 
 #[instrument(skip(output_dir))]
@@ -2372,7 +2404,11 @@ fn cmd_consolidate(project_id: &str, output_dir: Option<PathBuf>) -> Result<()> 
     consolidate_project(&project_dir, &output_dir, project_id)
 }
 
+
+    use std::hash::Hash;
+/// Consolidate declarations from an Aristotle project into a single Lean file with dedup
 fn consolidate_project(project_dir: &PathBuf, output_dir: &PathBuf, project_id: &str) -> Result<()> {
+    use std::hash::Hasher;
     let mut lean_files: Vec<PathBuf> = Vec::new();
     for entry in WalkDir::new(project_dir).max_depth(10).into_iter().filter_map(|e| e.ok()) {
         if entry.path().extension().map_or(false, |ext| ext == "lean") {
@@ -2432,11 +2468,12 @@ fn consolidate_project(project_dir: &PathBuf, output_dir: &PathBuf, project_id: 
                     .next().unwrap_or("").to_string();
                 if name.is_empty() || name == "-" || name == "_" { continue; }
 
-                use std::hash::{Hash, Hasher};
+                // Compute CID for this declaration
                 let mut hasher = std::collections::hash_map::DefaultHasher::new();
                 line.hash(&mut hasher);
                 let cid = format!("decl-cid-{:016x}", hasher.finish());
 
+                // Extract dependencies from the name part
                 let mut deps: Vec<String> = Vec::new();
                 for word in name_part.split_whitespace() {
                     let w = word.trim_matches(|c: char| c == ',' || c == ')' || c == '(' || c == ':');
@@ -2446,9 +2483,21 @@ fn consolidate_project(project_dir: &PathBuf, output_dir: &PathBuf, project_id: 
                 }
                 deps.sort(); deps.dedup();
 
-                let dedup_key = format!("{}::{}", kind, name);
+                // Dedup key includes content hash to avoid false positives for same name/kind but different content
+                let mut hasher = std::collections::hash_map::DefaultHasher::new();
+                line.hash(&mut hasher);
+                let content_hash = format!("{:016x}", hasher.finish());
+                let dedup_key = format!("{}::{}::{}", kind, name, content_hash);
                 if seen.insert(dedup_key) {
-                    declarations.push(Declaration { name, kind: kind.to_string(), file: file_name.to_string(), line: line_num, content: line.to_string(), cid, dependencies: deps });
+                    declarations.push(Declaration { 
+                        name, 
+                        kind: kind.to_string(), 
+                        file: file_name.to_string(), 
+                        line: line_num, 
+                        content: line.to_string(), 
+                        cid, 
+                        dependencies: deps 
+                    });
                 }
             }
         }
@@ -2490,7 +2539,6 @@ fn consolidate_project(project_dir: &PathBuf, output_dir: &PathBuf, project_id: 
     for (kind, count) in &bk { println!("  {:>12}: {}", kind, count); }
     Ok(())
 }
-
 /// ── Enrich command: task-enricher + GOAP pipeline ──
 
 fn cmd_enrich(project_id: &str, run_task_enricher: bool, run_goap: bool) -> Result<()> {
@@ -2610,81 +2658,562 @@ fn cmd_submit(prompt: &str, project_dir: Option<PathBuf>, _wait: bool) -> Result
     Ok(())
 }
 
-fn ask_aristotle_sync(api_key: &str, project_id: &str, prompt: &str) -> Result<String> {
+/// ── Git sync: push local git commits to an Aristotle project ──────────
+///
+/// Tracks sync state in `.aristotle-sync.json` within the repo.
+/// For running projects: sends file contents as text via `ask`.
+/// For stopped projects: sends file contents via `ask-with-files` (inline JSON).
+
+#[derive(Debug, Serialize, Deserialize)]
+struct SyncState {
+    /// Last commit hash that was synced to Aristotle
+    last_synced_commit: String,
+    /// ISO timestamp of last sync
+    last_synced_at: String,
+    /// Aristotle project ID synced to
+    project_id: String,
+}
+
+const SYNC_STATE_FILE: &str = ".aristotle-sync.json";
+
+fn load_sync_state(repo_dir: &Path) -> Option<SyncState> {
+    let path = repo_dir.join(SYNC_STATE_FILE);
+    let content = fs::read_to_string(&path).ok()?;
+    serde_json::from_str(&content).ok()
+}
+
+fn save_sync_state(repo_dir: &Path, state: &SyncState) -> Result<()> {
+    let path = repo_dir.join(SYNC_STATE_FILE);
+    let content = serde_json::to_string_pretty(state)?;
+    fs::write(&path, content)?;
+    Ok(())
+}
+
+/// Get the list of changed files between two commits, filtered by extension
+fn get_changed_files(repo_dir: &Path, from: &str, to: &str, ext: &str) -> Result<Vec<(String, String)>> {
+    // If from == to, list all files in that commit (initial sync case)
+    let files: Vec<String> = if from == to {
+        // List all files at this commit
+        let output = Command::new("git")
+            .args(["ls-tree", "-r", "--name-only", to])
+            .current_dir(repo_dir)
+            .output()
+            .context("Failed to run git ls-tree")?;
+
+        if !output.status.success() {
+            return Err(anyhow::anyhow!(
+                "git ls-tree failed: {}",
+                String::from_utf8_lossy(&output.stderr)
+            ));
+        }
+
+        String::from_utf8_lossy(&output.stdout)
+            .lines()
+            .filter(|l| !l.is_empty())
+            .filter(|l| l.ends_with(&format!(".{}", ext)))
+            .map(|l| l.to_string())
+            .collect()
+    } else {
+        // git diff --name-only --diff-filter=AM <from>..<to>
+        let output = Command::new("git")
+            .args(["diff", "--name-only", "--diff-filter=AM", &format!("{}..{}", from, to)])
+            .current_dir(repo_dir)
+            .output()
+            .context("Failed to run git diff")?;
+
+        if !output.status.success() {
+            return Err(anyhow::anyhow!(
+                "git diff failed: {}",
+                String::from_utf8_lossy(&output.stderr)
+            ));
+        }
+
+        String::from_utf8_lossy(&output.stdout)
+            .lines()
+            .filter(|l| !l.is_empty())
+            .filter(|l| l.ends_with(&format!(".{}", ext)))
+            .map(|l| l.to_string())
+            .collect()
+    };
+
+    // For each changed file, get the content at the `to` commit
+    let mut result = Vec::new();
+    for file_path in &files {
+        let content = Command::new("git")
+            .args(["show", &format!("{}:{}", to, file_path)])
+            .current_dir(repo_dir)
+            .output()
+            .context("Failed to run git show")?;
+
+        if content.status.success() {
+            let file_content = String::from_utf8_lossy(&content.stdout).to_string();
+            result.push((file_path.clone(), file_content));
+        } else {
+            warn!(file = %file_path, "Could not read file content, skipping");
+        }
+    }
+
+    Ok(result)
+}
+
+/// Check if an Aristotle project is running (status == 1) or stopped (status == 2)
+fn check_project_status(api_key: &str, project_id: &str) -> Result<bool> {
     let client = reqwest::blocking::Client::builder()
-        .timeout(Duration::from_secs(60))
+        .timeout(Duration::from_secs(30))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    let url = format!("{}/project/{}", API_BASE_URL, project_id);
+    let response = client
+        .get(&url)
+        .header("x-api-key", api_key)
+        .send()
+        .context("Failed to query project status")?;
+
+    let body = response.text().unwrap_or_default();
+    if let Ok(json) = serde_json::from_str::<Value>(&body) {
+        // status: 0 = unknown, 1 = running, 2 = idle
+        let status = json["status"].as_i64().unwrap_or(0);
+        Ok(status == 1)
+    } else {
+        Err(anyhow::anyhow!("Could not parse project status: {}", body))
+    }
+}
+
+/// Wait for a project to become idle (status=2), polling every `interval` seconds.
+/// Returns Ok(true) if idle, Ok(false) if timeout reached.
+fn wait_for_idle(api_key: &str, project_id: &str, interval: u64, max_wait_secs: u64) -> Result<bool> {
+    let client = reqwest::blocking::Client::builder()
+        .timeout(Duration::from_secs(30))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    let url = format!("{}/project/{}", API_BASE_URL, project_id);
+    let start = std::time::Instant::now();
+
+    loop {
+        let response = client
+            .get(&url)
+            .header("x-api-key", api_key)
+            .send()
+            .context("Failed to query project status")?;
+
+        let body = response.text().unwrap_or_default();
+        if let Ok(json) = serde_json::from_str::<Value>(&body) {
+            let status = json["status"].as_i64().unwrap_or(0);
+            // status: 0 = unknown, 1 = running, 2 = idle
+            if status == 2 {
+                return Ok(true);
+            }
+            if status == 1 {
+                let elapsed = start.elapsed().as_secs();
+                if elapsed >= max_wait_secs {
+                    warn!(elapsed, "Timeout waiting for project to become idle");
+                    return Ok(false);
+                }
+                info!(elapsed, max_wait = max_wait_secs, status, "Project still running, waiting...");
+                std::thread::sleep(Duration::from_secs(interval));
+            } else {
+                // Unknown status — might be a new project or error
+                warn!(status, "Unexpected project status while waiting for idle");
+                return Ok(false);
+            }
+        } else {
+            return Err(anyhow::anyhow!("Could not parse project status: {}", body));
+        }
+    }
+}
+
+#[instrument(skip(project_id, repo_dir))]
+fn cmd_git_sync(
+    project_id: String,
+    repo_dir: PathBuf,
+    from_commit: Option<String>,
+    to_commit: String,
+    force: bool,
+    dry_run: bool,
+    ext: String,
+) -> Result<()> {
+    let api_key = get_api_key()?;
+
+    // Resolve repo dir to absolute
+    let repo_dir = repo_dir.canonicalize().unwrap_or_else(|_| repo_dir.clone());
+
+    // Check it's a git repo
+    let git_check = Command::new("git")
+        .args(["rev-parse", "--git-dir"])
+        .current_dir(&repo_dir)
+        .output()
+        .context("Not a git repository")?;
+
+    if !git_check.status.success() {
+        return Err(anyhow::anyhow!(
+            "Not a git repository: {}",
+            repo_dir.display()
+        ));
+    }
+
+    // Get the current HEAD commit
+    let head_output = Command::new("git")
+        .args(["rev-parse", "HEAD"])
+        .current_dir(&repo_dir)
+        .output()
+        .context("Failed to get HEAD")?;
+
+    let head_commit = String::from_utf8_lossy(&head_output.stdout).trim().to_string();
+    info!(head = %head_commit, "Current HEAD");
+
+    // Determine the from-commit
+    let from = if force {
+        // Force: sync everything from the root commit
+        let root_output = Command::new("git")
+            .args(["rev-list", "--max-parents=0", "HEAD"])
+            .current_dir(&repo_dir)
+            .output()
+            .context("Failed to get root commit")?;
+        String::from_utf8_lossy(&root_output.stdout).trim().to_string()
+    } else if let Some(fc) = from_commit {
+        fc
+    } else if let Some(state) = load_sync_state(&repo_dir) {
+        if state.project_id == project_id {
+            state.last_synced_commit
+        } else {
+            // Different project, start from root
+            warn!("Sync state exists for different project, starting from HEAD~1");
+            format!("{}~1", to_commit)
+        }
+    } else {
+        // No sync state: sync everything from the root commit
+        warn!("No sync state found, syncing all files from root commit");
+        let root_output = Command::new("git")
+            .args(["rev-list", "--max-parents=0", "HEAD"])
+            .current_dir(&repo_dir)
+            .output()
+            .context("Failed to get root commit")?;
+        String::from_utf8_lossy(&root_output.stdout).trim().to_string()
+    };
+
+    // Resolve to_commit to a full hash for comparison
+    let to_resolved = Command::new("git")
+        .args(["rev-parse", &to_commit])
+        .current_dir(&repo_dir)
+        .output()
+        .context("Failed to resolve to_commit")?;
+    let to_hash = String::from_utf8_lossy(&to_resolved.stdout).trim().to_string();
+
+    info!(from = %from, to = %to_hash, "Sync range");
+
+    // Get changed files
+    let changed_files = get_changed_files(&repo_dir, &from, &to_hash, &ext)?;
+
+    if changed_files.is_empty() {
+        println!("No .{} files changed between {} and {}", ext, from, to_commit);
+        // Still save sync state
+        if !dry_run {
+            let state = SyncState {
+                last_synced_commit: head_commit.clone(),
+                last_synced_at: chrono::Local::now().to_rfc3339(),
+                project_id: project_id.clone(),
+            };
+            save_sync_state(&repo_dir, &state)?;
+        }
+        return Ok(());
+    }
+
+    println!("Found {} changed .{} files:", changed_files.len(), ext);
+    for (path, _) in &changed_files {
+        println!("  {}", path);
+    }
+
+    if dry_run {
+        println!("\nDry run — not sending to Aristotle");
+        return Ok(());
+    }
+
+    // Check project status
+    let is_running = check_project_status(&api_key, &project_id)?;
+    info!(is_running, "Project status");
+
+    if is_running {
+        // Running project: can't upload files (only INSTRUCT on IDLE allows files)
+        // Send file contents embedded in prompt text via ask (INSTRUCT mode)
+        println!("\nProject is running — sending files via ask (text mode, INSTRUCT)...");
+        for (file_path, content) in &changed_files {
+            let prompt = format!(
+                "Here is the updated file `{}`:\n\n=== {} ===\n{}\n=== END FILE ===",
+                file_path, file_path, content
+            );
+            match ask_aristotle_sync(&api_key, &project_id, &prompt) {
+                Ok(_resp) => {
+                    info!(file = %file_path, "Sent successfully");
+                    println!("  ✓ {}", file_path);
+                }
+                Err(e) => {
+                    error!(file = %file_path, error = %e, "Failed to send");
+                    eprintln!("  ✗ {} — {}", file_path, e);
+                }
+            }
+        }
+    } else {
+        // Idle/stopped project: send files via multipart upload (INSTRUCT mode)
+        // Aristotle enforces a maximum of 5 files per request, so batch in groups of 5.
+        // After each batch, the project becomes running — wait for it to go idle again.
+        println!("\nProject is idle — sending files via multipart upload (INSTRUCT mode, batches of 5)...");
+        let total = changed_files.len();
+        let mut sent = 0;
+        let chunks: Vec<_> = changed_files.chunks(5).collect();
+        let num_batches = chunks.len();
+
+        for (i, chunk) in chunks.iter().enumerate() {
+            // Before each batch (except the first), wait for the project to be idle
+            if i > 0 {
+                info!(batch = i + 1, total_batches = num_batches, "Waiting for project to become idle before next batch...");
+                print!("  Waiting for project to become idle...");
+                let idle = wait_for_idle(&api_key, &project_id, 10, 300)?;
+                if !idle {
+                    eprintln!("\n  ✗ Project did not become idle within timeout, stopping");
+                    break;
+                }
+                println!(" idle!");
+            }
+
+            info!(batch = i + 1, total_batches = num_batches, files_in_batch = chunk.len(), "Sending batch");
+            let result = ask_aristotle_with_files(
+                &api_key,
+                &project_id,
+                "Here are updated files from the local git repo. Please incorporate them into the project.",
+                None, // no files_dir
+                None, // no single file
+                Some(chunk), // pass the chunk of changed files directly
+            );
+            match result {
+                Ok(_resp) => {
+                    sent += chunk.len();
+                    println!("  ✓ Sent batch {}/{} — {} files ({}/{})",
+                        i + 1, num_batches, chunk.len(), sent, total);
+                }
+                Err(e) => {
+                    error!(error = %e, batch = i + 1, "Failed to send batch");
+                    eprintln!("  ✗ Batch {}/{} failed: {}", i + 1, num_batches, e);
+                    // If the error is "Cannot add files to a running project", wait and retry
+                    if e.to_string().contains("running project") {
+                        info!("Retrying after waiting for idle...");
+                        let idle = wait_for_idle(&api_key, &project_id, 10, 300)?;
+                        if idle {
+                            let retry = ask_aristotle_with_files(
+                                &api_key, &project_id,
+                                "Here are updated files from the local git repo. Please incorporate them into the project.",
+                                None, None, Some(chunk),
+                            );
+                            match retry {
+                                Ok(_resp) => {
+                                    sent += chunk.len();
+                                    println!("  ✓ Sent batch {}/{} on retry — {} files ({}/{})",
+                                        i + 1, num_batches, chunk.len(), sent, total);
+                                }
+                                Err(e2) => {
+                                    eprintln!("  ✗ Batch {}/{} retry also failed: {}", i + 1, num_batches, e2);
+                                    break;
+                                }
+                            }
+                        } else {
+                            eprintln!("  ✗ Project did not become idle, cannot retry");
+                            break;
+                        }
+                    } else {
+                        break;
+                    }
+                }
+            }
+        }
+        println!("  Total: {}/{} files sent", sent, total);
+    }
+
+    // Save sync state
+    let state = SyncState {
+        last_synced_commit: head_commit,
+        last_synced_at: chrono::Local::now().to_rfc3339(),
+        project_id,
+    };
+    save_sync_state(&repo_dir, &state)?;
+    println!("\nSync state saved to {}", repo_dir.join(SYNC_STATE_FILE).display());
+
+    Ok(())
+}
+
+fn ask_aristotle_sync(api_key: &str, project_id: &str, prompt: &str) -> Result<String> {
+    ask_aristotle(api_key, project_id, prompt, FollowUpMode::Instruct, &[], AgentQuestions::Disabled)
+}
+
+/// Follow-up mode for ask endpoint
+#[derive(Clone, Copy, Debug)]
+enum FollowUpMode {
+    Ask = 1,
+    Instruct = 2,
+}
+
+/// Agent questions setting
+#[derive(Clone, Copy, Debug)]
+enum AgentQuestions {
+    Disabled = 1,
+    Timeout15Min = 2,
+}
+
+/// Core ask function — sends multipart/form-data to /project/{id}/ask
+/// matching the aristotlelib Python client protocol.
+///
+/// - mode=INSTRUCT (2): changes direction if running, starts new task if idle
+/// - mode=ASK (1): asks question about most recent task
+/// - files: only allowed in INSTRUCT mode on idle projects
+/// - agent_questions_setting: DISABLED (1) by default
+fn ask_aristotle(
+    api_key: &str,
+    project_id: &str,
+    prompt: &str,
+    mode: FollowUpMode,
+    files: &[PathBuf],
+    agent_questions: AgentQuestions,
+) -> Result<String> {
+    let client = reqwest::blocking::Client::builder()
+        .timeout(Duration::from_secs(120))
         .build()
         .context("Failed to build HTTP client")?;
 
     let url = format!("{}/project/{}/ask", API_BASE_URL, project_id);
-    info!(url = %url, "Asking Aristotle (native HTTP)");
+    let mode_str = mode as u8;
+    let aq_str = agent_questions as u8;
+    info!(url = %url, prompt_len = prompt.len(), mode = mode_str, agent_questions = aq_str, file_count = files.len(), "Asking Aristotle (multipart/form-data)");
+
+    // Build multipart form: data fields + file attachments
+    // The Python lib sends: data={"prompt": ..., "mode": "2", "agent_questions_setting": "1"}
+    //                      files=[("files", (filename, file_obj, "application/octet-stream")), ...]
+    // When no files: files=[("_", (None, ""))] — dummy entry to force multipart
+    let mut form = reqwest::blocking::multipart::Form::new()
+        .text("prompt", prompt.to_string())
+        .text("mode", mode_str.to_string())
+        .text("agent_questions_setting", aq_str.to_string());
+
+    if files.is_empty() {
+        // Python lib sends files=[("_", (None, ""))] to force multipart
+        form = form.part("_", reqwest::blocking::multipart::Part::text(""));
+    } else {
+        for file_path in files {
+            if !file_path.exists() {
+                warn!(file = %file_path.display(), "File does not exist, skipping");
+                continue;
+            }
+            let content = fs::read(file_path)
+                .with_context(|| format!("Failed to read file: {}", file_path.display()))?;
+            let filename = file_path
+                .file_name()
+                .map(|n| n.to_string_lossy().to_string())
+                .unwrap_or_else(|| "file".to_string());
+            let part = reqwest::blocking::multipart::Part::bytes(content)
+                .file_name(filename.clone())
+                .mime_str("application/octet-stream")
+                .context("Failed to set mime type")?;
+            form = form.part("files", part);
+            debug!(file = %filename, path = %file_path.display(), "Attached file");
+        }
+    }
+
+    debug!(url = %url, "Sending multipart request");
 
     let response = client
         .post(&url)
         .header("x-api-key", api_key)
-        .json(&serde_json::json!({"prompt": prompt}))
+        .multipart(form)
         .send()
         .context("Failed to ask Aristotle")?;
 
     let status = response.status();
     let body = response.text().unwrap_or_default();
+    info!(status = %status, body_len = body.len(), "Ask response received");
+    debug!(body_preview = %&body[..body.len().min(500)], "Response body preview");
     if !status.is_success() {
+        error!(status = %status, body = %body, "Ask failed");
         return Err(anyhow::anyhow!("Ask failed: HTTP {} — {}", status, body));
     }
     Ok(body)
 }
 
 /// Ask with files attached (Lean4 proofs, data files)
-fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files_dir: Option<&PathBuf>, file: Option<&PathBuf>) -> Result<String> {
-    let client = reqwest::blocking::Client::builder()
-        .timeout(Duration::from_secs(120))
-        .build()
-        .context("Failed to build HTTP client")?;
+fn ask_aristotle_with_files(
+    api_key: &str,
+    project_id: &str,
+    prompt: &str,
+    files_dir: Option<&PathBuf>,
+    file: Option<&PathBuf>,
+    preloaded_files: Option<&[(String, String)]>,
+) -> Result<String> {
+    // Collect file paths to upload as multipart attachments
+    let mut file_paths: Vec<PathBuf> = Vec::new();
+    let mut temp_files: Vec<tempfile::NamedTempFile> = Vec::new();
 
-    // Build body JSON with prompt + inline file contents
-    let mut body = serde_json::json!({"prompt": prompt});
-    let mut files_map = serde_json::Map::new();
+    // Add preloaded files (from git-sync) — write to temp files for multipart upload
+    if let Some(files) = preloaded_files {
+        info!(count = files.len(), "Adding preloaded files from git-sync");
+        for (name, content) in files {
+            // Write content to a temp file so we can upload it as multipart
+            let mut tmp = tempfile::NamedTempFile::new()
+                .context("Failed to create temp file for preloaded file")?;
+            std::io::Write::write_all(&mut tmp, content.as_bytes())
+                .context("Failed to write preloaded file content")?;
+            debug!(file = %name, content_len = content.len(), "Preloaded file → temp");
+            // Keep the temp file alive (don't persist — we'll read before drop)
+            let path = tmp.path().to_path_buf();
+            temp_files.push(tmp);
+            file_paths.push(path);
+        }
+    }
 
+    // Add files from directory
     if let Some(dir) = files_dir {
         if dir.exists() {
+            info!(dir = %dir.display(), "Scanning files_dir for .lean files");
+            let mut found = 0;
             for entry in WalkDir::new(dir).max_depth(2).into_iter().filter_map(|e| e.ok()) {
                 if entry.path().extension().map_or(false, |e| e == "lean") {
-                    let content = fs::read_to_string(entry.path())?;
-                    let name = entry.file_name().to_string_lossy().to_string();
-                    files_map.insert(name, serde_json::json!(content));
+                    file_paths.push(entry.path().to_path_buf());
+                    debug!(file = %entry.path().display(), "Adding .lean file from dir");
+                    found += 1;
                 }
             }
+            info!(found = found, "Found .lean files in dir");
+        } else {
+            warn!(dir = %dir.display(), "files_dir does not exist");
         }
     }
 
+    // Add single file
     if let Some(f) = file {
         if f.exists() {
-            let content = fs::read_to_string(f)?;
-            let name = f.file_name().unwrap().to_string_lossy().to_string();
-            files_map.insert(name, serde_json::json!(content));
+            file_paths.push(f.clone());
+            debug!(file = %f.display(), "Adding single file");
+        } else {
+            warn!(file = %f.display(), "Single file does not exist");
         }
     }
 
-    if !files_map.is_empty() {
-        body["files"] = serde_json::json!(files_map);
+    let file_count = file_paths.len();
+    info!(file_count, prompt_len = prompt.len(), "Built ask-with-files payload (multipart)");
+
+    if file_count == 0 {
+        warn!("No files collected — sending text-only ask despite ask-with-files call");
     }
 
-    let url = format!("{}/project/{}/ask", API_BASE_URL, project_id);
-    info!(url = %url, "Asking Aristotle with files (native HTTP)");
+    // Use the core ask function with INSTRUCT mode and files as multipart attachments
+    let result = ask_aristotle(
+        api_key,
+        project_id,
+        prompt,
+        FollowUpMode::Instruct,
+        &file_paths,
+        AgentQuestions::Disabled,
+    );
 
-    let response = client
-        .post(&url)
-        .header("x-api-key", api_key)
-        .json(&body)
-        .send()
-        .context("Failed to ask Aristotle with files")?;
-
-    let status = response.status();
-    let resp_body = response.text().unwrap_or_default();
-    if !status.is_success() {
-        return Err(anyhow::anyhow!("Ask with files failed: HTTP {} — {}", status, resp_body));
-    }
-    Ok(resp_body)
+    // temp_files are dropped here, cleaning up temp files
+    result
 }
 
 /// ── Check command: query project status from Aristotle API ──────────
@@ -5696,6 +6225,19 @@ async fn main() -> Result<()> {
             info!("Executing submit command");
             cmd_submit(prompt, project_dir.clone(), *wait)?;
         }
+        Commands::GitSync { project_id, repo_dir, from_commit, to_commit, force, dry_run, ext } => {
+            info!("Executing git-sync command");
+            let pid = project_id.clone();
+            let rd = repo_dir.clone();
+            let fc = from_commit.clone();
+            let tc = to_commit.clone();
+            let f = *force;
+            let dr = *dry_run;
+            let e = ext.clone();
+            tokio::task::spawn_blocking(move || {
+                cmd_git_sync(pid, rd, fc, tc, f, dr, e)
+            }).await??;
+        }
         Commands::Check { project_id, limit, trace, verbose } => {
             info!(?project_id, ?limit, trace, "Executing check command");
             cmd_check(project_id.clone(), *limit, *verbose).await?;
@@ -5714,7 +6256,13 @@ async fn main() -> Result<()> {
         }
         Commands::Ask { project_id, prompt, file, inject_dir } => {
             info!("Executing ask command");
-            cmd_ask(project_id.clone(), prompt.clone(), file.clone(), inject_dir.clone())?;
+            let pid = project_id.clone();
+            let p = prompt.clone();
+            let f = file.clone();
+            let d = inject_dir.clone();
+            tokio::task::spawn_blocking(move || cmd_ask(pid, p, f, d))
+                .await
+                .context("spawn_blocking for cmd_ask")??;
         }
         Commands::Patch { project_id, prereq_dir, interval, max_rounds } => {
             info!("Executing patch command");
@@ -5835,7 +6383,13 @@ async fn main() -> Result<()> {
         Commands::AskWithFiles { project_id, prompt, files_dir, file } => {
             info!("Executing ask-with-files");
             let api_key = get_api_key()?;
-            let result = ask_aristotle_with_files(&api_key, project_id, prompt, files_dir.as_ref(), file.as_ref())?;
+            let pid = project_id.clone();
+            let p = prompt.clone();
+            let fd = files_dir.clone();
+            let f = file.clone();
+            let result = tokio::task::spawn_blocking(move || {
+                ask_aristotle_with_files(&api_key, &pid, &p, fd.as_ref(), f.as_ref(), None)
+            }).await??;
             println!("{}", result);
         }
         Commands::Serve { port, forward } => {

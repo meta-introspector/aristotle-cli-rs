@@ -120,9 +120,14 @@ fn commit_project(repo: &Path, project_dir: &Path) -> anyhow::Result<Option<Stri
             Err(_) => continue,
         };
 
-        // Check if this path is inside a nested _aristotle directory
+        // Check if this path is inside a nested _aristotle directory.
+        // Skip a path component that ends with "_aristotle" EXCEPT the standard
+        // output-final_aristotle dir (which legitimately contains the output).
         if let Some(rel_str) = rel.to_str() {
-            if rel_str.contains("_aristotle/") || rel_str.contains("/_aristotle") {
+            let nested = rel_str.split('/').any(|comp| {
+                comp.ends_with("_aristotle") && comp != "output-final_aristotle"
+            });
+            if nested {
                 debug!(project = %project_name, path = %rel_str, "Skipping nested _aristotle directory");
                 continue;
             }
