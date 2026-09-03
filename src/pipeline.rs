@@ -10,7 +10,10 @@ use crate::load_config;
 
 /// Try to build a Lean project with lake, returning (success, stdout)
 fn lake_build(project_dir: &PathBuf) -> (bool, String) {
-    let lake = find_lake_binary();
+    if let Err(error) = crate::shared_lean::configure_project(project_dir) {
+        return (false, format!("shared Lean setup failed: {}", error));
+    }
+    let lake = crate::shared_lean::lake_binary();
     
     let output = Command::new(&lake)
         .args(["build"])
@@ -26,20 +29,6 @@ fn lake_build(project_dir: &PathBuf) -> (bool, String) {
         }
         Err(e) => (false, format!("lake not found: {}", e)),
     }
-}
-
-fn find_lake_binary() -> String {
-    // Try nix store lean first, then PATH
-    for candidate in &[
-        "/nix/store/aqpyjzpqhs988lpqs8rnq8rw3i7ihrmi-lean/bin/lake",
-        "/nix/store/*lean*/bin/lake",
-    ] {
-        if PathBuf::from(candidate).exists() {
-            return candidate.to_string();
-        }
-    }
-    // Fallback to PATH
-    "lake".to_string()
 }
 
 /// Run the full pipeline on new/changed Aristotle outputs

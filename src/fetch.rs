@@ -163,6 +163,7 @@ pub async fn cmd_fetch(
                 let gz = flate2::read::GzDecoder::new(&bytes[..]);
                 let mut archive = tar::Archive::new(gz);
                 archive.unpack(&extract_dir)?;
+                crate::shared_lean::configure_project(&extract_dir)?;
 
                 // Save metadata
                 let metadata = serde_json::json!({
