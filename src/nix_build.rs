@@ -5,10 +5,7 @@ use tracing::info;
 
 use crate::load_config;
 
-/// Nix-build: compile Lean project using nix store's lean binary + pre-built oleans.
-///
-/// Uses the nix store's Lean 4.29.1 installation which has 2,209 pre-compiled
-/// Init + Std .olean files. Generates lakefile.lean and flake.nix automatically.
+/// Compile a Lean project with the shared Lean 4.28 toolchain and pre-built oleans.
 pub fn cmd_nix_build(
     input_dir: PathBuf,
     output_dir: Option<PathBuf>,
@@ -20,9 +17,7 @@ pub fn cmd_nix_build(
     let output_dir = output_dir.unwrap_or_else(|| input_dir.join("build-out"));
     let nix_store = nix_store
         .or_else(|| config.nix_store_path.clone())
-        .unwrap_or_else(|| {
-            "/mnt/data1/nix-store/store/yy02jnq1m13zbmsahh87v5z9w91k4wwa-lean4-4.29.1".into()
-        });
+        .unwrap_or_else(|| crate::shared_lean::LEAN_STORE.into());
     let lean_bin = format!("{}/bin/lean", nix_store);
     let lean_path = format!("{}/lib/lean", nix_store);
 
@@ -32,6 +27,8 @@ pub fn cmd_nix_build(
         nix_store = %nix_store,
         "Starting nix-build"
     );
+
+    crate::shared_lean::configure_project(&input_dir)?;
 
     // 1. Check input directory has .lean files
     let lean_files: Vec<_> = std::fs::read_dir(&input_dir)?
