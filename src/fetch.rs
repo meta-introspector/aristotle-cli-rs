@@ -14,12 +14,43 @@ pub async fn cmd_fetch(
     _limit: Option<usize>,
     dry_run: bool,
     recent_days: u64,
+    project_id: Option<String>,
 ) -> anyhow::Result<()> {
     let config = load_config()?;
     let results_dir = &config.results_dir;
     fs::create_dir_all(results_dir)?;
 
     println!("=== Aristotle Fetch (incremental) ===");
+
+    // If project_id is provided, fetch just that one
+    if let Some(pid) = project_id {
+        println!("Fetching single project: {}", pid);
+        // Download/fetch just this project
+        let client = reqwest::Client::builder()
+            .timeout(Duration::from_secs(300))
+            .build()?;
+        let api_key = crate::get_api_key()?;
+        
+        // Check if already downloaded
+        let project_dir = results_dir.join(format!("{}_aristotle", pid));
+        if project_dir.exists() {
+            println!("Project already downloaded: {}", project_dir.display());
+        } else {
+            println!("Downloading project {}...", pid);
+            // Use the existing download mechanism
+            crate::download_single_result(
+                &client, 
+                &api_key, 
+                &pid, 
+                results_dir, 
+                results_dir, 
+                config.retry_wait_seconds, 
+                config.max_retries
+            ).await?;
+            println!("Downloaded to: {}", results_dir.join(format!("{}_aristotle", pid)).display());
+        }
+        return Ok(());
+    }
 
     let cutoff = chrono::Utc::now() - chrono::Duration::days(recent_days as i64);
     let cutoff_str = cutoff.to_rfc3339();

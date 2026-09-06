@@ -288,6 +288,34 @@ enum Commands {
         #[arg(long)]
         wait: bool,
     },
+    /// Git sync: push local git commits to an Aristotle project
+    ///
+    /// Detects changed files since last sync and sends them to the project.
+    /// For running projects: sends file contents as text via `ask`.
+    /// For stopped projects: sends file contents via `ask-with-files` (inline JSON).
+    /// Tracks sync state in .aristotle-sync.json within the repo.
+    GitSync {
+        /// Aristotle project ID to sync to
+        project_id: String,
+        /// Local git repo path (defaults to current directory)
+        #[arg(long, default_value = ".")]
+        repo_dir: PathBuf,
+        /// Sync from a specific commit (defaults to last synced commit or HEAD~1)
+        #[arg(long)]
+        from_commit: Option<String>,
+        /// Sync up to a specific commit (defaults to HEAD)
+        #[arg(long, default_value = "HEAD")]
+        to_commit: String,
+        /// Force sync all files (ignore sync state, send everything)
+        #[arg(long)]
+        force: bool,
+        /// Dry run: show what would be synced without sending
+        #[arg(long)]
+        dry_run: bool,
+        /// File extensions to sync (defaults to .lean)
+        #[arg(long, default_value = "lean")]
+        ext: String,
+    },
     /// Check status of a submitted Aristotle project
     Check {
         /// Project ID to check (omit to list recent)
@@ -351,6 +379,9 @@ enum Commands {
         /// Dry run - show what would be deployed
         #[arg(long)]
         dry_run: bool,
+        /// Mark files as private (exclude from deployment)
+        #[arg(long)]
+        private: bool,
     },
     /// Serve an Aristotle project with HTTP server
     ServeProject {
@@ -436,6 +467,8 @@ enum Commands {
         dry_run: bool,
         #[arg(long, default_value = "7")]
         recent_days: u64,
+        #[arg(long)]
+        project_id: Option<String>,
     },
     /// Full pipeline: fetch → split → verify (lake build) → version → merge
     Pipeline {
@@ -947,7 +980,7 @@ async fn cmd_poll(download_only: bool, parallel: usize) -> Result<()> {
 
     if new_count > 0 {
         println!("\nDownloading {} new projects...", new_count);
-        crate::fetch::cmd_fetch(parallel, None, false, 7).await?;
+        crate::fetch::cmd_fetch(parallel, None, false, 7, None).await?;
     } else if download_only {
         println!("\n  Nothing new — exiting (download-only mode).");
         return Ok(());
@@ -2740,13 +2773,12 @@ fn ask_aristotle_sync(api_key: &str, project_id: &str, prompt: &str) -> Result<S
 }
 
 /// Ask with files attached (Lean4 proofs, data files)
-fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files_dir: Option<&PathBuf>, file: Option<&PathBuf>) -> Result<String> {
+fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files_dir: Option<&PathBuf>, file: Option<&PathBuf>, files: Option<&[(String, String)]>) -> Result<String> {
     let client = reqwest::blocking::Client::builder()
         .timeout(Duration::from_secs(120))
         .build()
         .context("Failed to build HTTP client")?;
 
-    // Build body JSON with prompt + inline file contents
     let mut body = serde_json::json!({"prompt": prompt});
     let mut files_map = serde_json::Map::new();
 
@@ -2770,6 +2802,12 @@ fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files
         }
     }
 
+    if let Some(files_chunk) = files {
+        for (name, content) in files_chunk {
+            files_map.insert(name.clone(), serde_json::json!(content));
+        }
+    }
+
     if !files_map.is_empty() {
         body["files"] = serde_json::json!(files_map);
     }
@@ -2790,6 +2828,362 @@ fn ask_aristotle_with_files(api_key: &str, project_id: &str, prompt: &str, files
         return Err(anyhow::anyhow!("Ask with files failed: HTTP {} — {}", status, resp_body));
     }
     Ok(resp_body)
+}
+
+/// ── Git sync: push local git commits to an Aristotle project ──────────
+///
+/// Tracks sync state in `.aristotle-sync.json` within the repo.
+/// For running projects: sends file contents as text via `ask`.
+/// For stopped projects: sends file contents via `ask-with-files` (inline JSON).
+
+#[derive(Debug, Serialize, Deserialize)]
+struct SyncState {
+    /// Last commit hash that was synced to Aristotle
+    last_synced_commit: String,
+    /// ISO timestamp of last sync
+    last_synced_at: String,
+    /// Aristotle project ID synced to
+    project_id: String,
+}
+
+const SYNC_STATE_FILE: &str = ".aristotle-sync.json";
+
+fn load_sync_state(repo_dir: &Path) -> Option<SyncState> {
+    let path = repo_dir.join(SYNC_STATE_FILE);
+    let content = fs::read_to_string(&path).ok()?;
+    serde_json::from_str(&content).ok()
+}
+
+fn save_sync_state(repo_dir: &Path, state: &SyncState) -> Result<()> {
+    let path = repo_dir.join(SYNC_STATE_FILE);
+    let content = serde_json::to_string_pretty(state)?;
+    fs::write(&path, content)?;
+    Ok(())
+}
+
+/// Get the list of changed files between two commits, filtered by extension
+fn get_changed_files(repo_dir: &Path, from: &str, to: &str, ext: &str) -> Result<Vec<(String, String)>> {
+    let files: Vec<String> = if from == to {
+        let output = Command::new("git")
+            .args(["ls-tree", "-r", "--name-only", to])
+            .current_dir(repo_dir)
+            .output()
+            .context("Failed to run git ls-tree")?;
+
+        if !output.status.success() {
+            return Err(anyhow::anyhow!(
+                "git ls-tree failed: {}",
+                String::from_utf8_lossy(&output.stderr)
+            ));
+        }
+
+        String::from_utf8_lossy(&output.stdout)
+            .lines()
+            .filter(|l| !l.is_empty())
+            .filter(|l| l.ends_with(&format!(".{}", ext)))
+            .map(|l| l.to_string())
+            .collect()
+    } else {
+        let output = Command::new("git")
+            .args(["diff", "--name-only", "--diff-filter=AM", &format!("{}..{}", from, to)])
+            .current_dir(repo_dir)
+            .output()
+            .context("Failed to run git diff")?;
+
+        if !output.status.success() {
+            return Err(anyhow::anyhow!(
+                "git diff failed: {}",
+                String::from_utf8_lossy(&output.stderr)
+            ));
+        }
+
+        String::from_utf8_lossy(&output.stdout)
+            .lines()
+            .filter(|l| !l.is_empty())
+            .filter(|l| l.ends_with(&format!(".{}", ext)))
+            .map(|l| l.to_string())
+            .collect()
+    };
+
+    let mut result = Vec::new();
+    for file_path in &files {
+        let content = Command::new("git")
+            .args(["show", &format!("{}:{}", to, file_path)])
+            .current_dir(repo_dir)
+            .output()
+            .context("Failed to run git show")?;
+
+        if content.status.success() {
+            let file_content = String::from_utf8_lossy(&content.stdout).to_string();
+            result.push((file_path.clone(), file_content));
+        } else {
+            warn!(file = %file_path, "Could not read file content, skipping");
+        }
+    }
+
+    Ok(result)
+}
+
+/// Check if an Aristotle project is running (status == 1) or stopped (status == 2)
+fn check_project_status(api_key: &str, project_id: &str) -> Result<bool> {
+    let client = reqwest::blocking::Client::builder()
+        .timeout(Duration::from_secs(30))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    let url = format!("{}/project/{}", API_BASE_URL, project_id);
+    let response = client
+        .get(&url)
+        .header("x-api-key", api_key)
+        .send()
+        .context("Failed to query project status")?;
+
+    let body = response.text().unwrap_or_default();
+    if let Ok(json) = serde_json::from_str::<Value>(&body) {
+        let status = json["status"].as_i64().unwrap_or(0);
+        Ok(status == 1)
+    } else {
+        Err(anyhow::anyhow!("Could not parse project status: {}", body))
+    }
+}
+
+/// Wait for a project to become idle (status=2), polling every `interval` seconds.
+fn wait_for_idle(api_key: &str, project_id: &str, interval: u64, max_wait_secs: u64) -> Result<bool> {
+    let client = reqwest::blocking::Client::builder()
+        .timeout(Duration::from_secs(30))
+        .build()
+        .context("Failed to build HTTP client")?;
+
+    let url = format!("{}/project/{}", API_BASE_URL, project_id);
+    let start = std::time::Instant::now();
+
+    loop {
+        let response = client
+            .get(&url)
+            .header("x-api-key", api_key)
+            .send()
+            .context("Failed to query project status")?;
+
+        let body = response.text().unwrap_or_default();
+        if let Ok(json) = serde_json::from_str::<Value>(&body) {
+            let status = json["status"].as_i64().unwrap_or(0);
+            if status == 2 {
+                return Ok(true);
+            }
+            if status == 1 {
+                let elapsed = start.elapsed().as_secs();
+                if elapsed >= max_wait_secs {
+                    warn!(elapsed, "Timeout waiting for project to become idle");
+                    return Ok(false);
+                }
+                info!(elapsed, max_wait = max_wait_secs, status, "Project still running, waiting...");
+                std::thread::sleep(Duration::from_secs(interval));
+            } else {
+                warn!(status, "Unexpected project status while waiting for idle");
+                return Ok(false);
+            }
+        } else {
+            return Err(anyhow::anyhow!("Could not parse project status: {}", body));
+        }
+    }
+}
+
+#[instrument(skip(project_id, repo_dir))]
+fn cmd_git_sync(
+    project_id: String,
+    repo_dir: PathBuf,
+    from_commit: Option<String>,
+    to_commit: String,
+    force: bool,
+    dry_run: bool,
+    ext: String,
+) -> Result<()> {
+    let api_key = get_api_key()?;
+
+    let repo_dir = repo_dir.canonicalize().unwrap_or_else(|_| repo_dir.clone());
+
+    let git_check = Command::new("git")
+        .args(["rev-parse", "--git-dir"])
+        .current_dir(&repo_dir)
+        .output()
+        .context("Not a git repository")?;
+
+    if !git_check.status.success() {
+        return Err(anyhow::anyhow!(
+            "Not a git repository: {}",
+            repo_dir.display()
+        ));
+    }
+
+    let head_output = Command::new("git")
+        .args(["rev-parse", "HEAD"])
+        .current_dir(&repo_dir)
+        .output()
+        .context("Failed to get HEAD")?;
+
+    let head_commit = String::from_utf8_lossy(&head_output.stdout).trim().to_string();
+    info!(head = %head_commit, "Current HEAD");
+
+    let from = if force {
+        let root_output = Command::new("git")
+            .args(["rev-list", "--max-parents=0", "HEAD"])
+            .current_dir(&repo_dir)
+            .output()
+            .context("Failed to get root commit")?;
+        String::from_utf8_lossy(&root_output.stdout).trim().to_string()
+    } else if let Some(fc) = from_commit {
+        fc
+    } else if let Some(state) = load_sync_state(&repo_dir) {
+        if state.project_id == project_id {
+            state.last_synced_commit
+        } else {
+            warn!("Sync state exists for different project, starting from HEAD~1");
+            format!("{}~1", to_commit)
+        }
+    } else {
+        warn!("No sync state found, syncing all files from root commit");
+        let root_output = Command::new("git")
+            .args(["rev-list", "--max-parents=0", "HEAD"])
+            .current_dir(&repo_dir)
+            .output()
+            .context("Failed to get root commit")?;
+        String::from_utf8_lossy(&root_output.stdout).trim().to_string()
+    };
+
+    let to_resolved = Command::new("git")
+        .args(["rev-parse", &to_commit])
+        .current_dir(&repo_dir)
+        .output()
+        .context("Failed to resolve to_commit")?;
+    let to_hash = String::from_utf8_lossy(&to_resolved.stdout).trim().to_string();
+
+    info!(from = %from, to = %to_hash, "Sync range");
+
+    let changed_files = get_changed_files(&repo_dir, &from, &to_hash, &ext)?;
+
+    if changed_files.is_empty() {
+        println!("No .{} files changed between {} and {}", ext, from, to_commit);
+        if !dry_run {
+            let state = SyncState {
+                last_synced_commit: head_commit.clone(),
+                last_synced_at: chrono::Local::now().to_rfc3339(),
+                project_id: project_id.clone(),
+            };
+            save_sync_state(&repo_dir, &state)?;
+        }
+        return Ok(());
+    }
+
+    println!("Found {} changed .{} files:", changed_files.len(), ext);
+    for (path, _) in &changed_files {
+        println!("  {}", path);
+    }
+
+    if dry_run {
+        println!("\nDry run — not sending to Aristotle");
+        return Ok(());
+    }
+
+    let is_running = check_project_status(&api_key, &project_id)?;
+    info!(is_running, "Project status");
+
+    if is_running {
+        println!("\nProject is running — sending files via ask (text mode, INSTRUCT)...");
+        for (file_path, content) in &changed_files {
+            let prompt = format!(
+                "Here is the updated file `{}`:\n\n=== {} ===\n{}\n=== END FILE ===",
+                file_path, file_path, content
+            );
+            match ask_aristotle_sync(&api_key, &project_id, &prompt) {
+                Ok(_resp) => {
+                    info!(file = %file_path, "Sent successfully");
+                    println!("  ✓ {}", file_path);
+                }
+                Err(e) => {
+                    error!(file = %file_path, error = %e, "Failed to send");
+                    eprintln!("  ✗ {} — {}", file_path, e);
+                }
+            }
+        }
+    } else {
+        println!("\nProject is idle — sending files via multipart upload (INSTRUCT mode, batches of 5)...");
+        let total = changed_files.len();
+        let mut sent = 0;
+        let chunks: Vec<_> = changed_files.chunks(5).collect();
+        let num_batches = chunks.len();
+
+        for (i, chunk) in chunks.iter().enumerate() {
+            if i > 0 {
+                info!(batch = i + 1, total_batches = num_batches, "Waiting for project to become idle before next batch...");
+                print!("  Waiting for project to become idle...");
+                let idle = wait_for_idle(&api_key, &project_id, 10, 300)?;
+                if !idle {
+                    eprintln!("\n  ✗ Project did not become idle within timeout, stopping");
+                    break;
+                }
+                println!(" idle!");
+            }
+
+            info!(batch = i + 1, total_batches = num_batches, files_in_batch = chunk.len(), "Sending batch");
+            let result = ask_aristotle_with_files(
+                &api_key,
+                &project_id,
+                "Here are updated files from the local git repo. Please incorporate them into the project.",
+                None,
+                None,
+                Some(chunk),
+            );
+            match result {
+                Ok(_resp) => {
+                    sent += chunk.len();
+                    println!("  ✓ Sent batch {}/{} — {} files ({}/{})",
+                        i + 1, num_batches, chunk.len(), sent, total);
+                }
+                Err(e) => {
+                    error!(error = %e, batch = i + 1, "Failed to send batch");
+                    eprintln!("  ✗ Batch {}/{} failed: {}", i + 1, num_batches, e);
+                    if e.to_string().contains("running project") {
+                        info!("Retrying after waiting for idle...");
+                        let idle = wait_for_idle(&api_key, &project_id, 10, 300)?;
+                        if idle {
+                            let retry = ask_aristotle_with_files(
+                                &api_key, &project_id,
+                                "Here are updated files from the local git repo. Please incorporate them into the project.",
+                                None, None, Some(chunk),
+                            );
+                            match retry {
+                                Ok(_resp) => {
+                                    sent += chunk.len();
+                                    println!("  ✓ Sent batch {}/{} on retry — {} files ({}/{})",
+                                        i + 1, num_batches, chunk.len(), sent, total);
+                                }
+                                Err(e2) => {
+                                    eprintln!("  ✗ Batch {}/{} retry also failed: {}", i + 1, num_batches, e2);
+                                    break;
+                                }
+                            }
+                        } else {
+                            eprintln!("  ✗ Project did not become idle, cannot retry");
+                            break;
+                        }
+                    } else {
+                        break;
+                    }
+                }
+            }
+        }
+        println!("  Total: {}/{} files sent", sent, total);
+    }
+
+    let state = SyncState {
+        last_synced_commit: head_commit,
+        last_synced_at: chrono::Local::now().to_rfc3339(),
+        project_id,
+    };
+    save_sync_state(&repo_dir, &state)?;
+    println!("\nSync state saved to {}", repo_dir.join(SYNC_STATE_FILE).display());
+
+    Ok(())
 }
 
 /// ── Check command: query project status from Aristotle API ──────────
@@ -3154,6 +3548,7 @@ async fn cmd_deploy(
     ignore_file: Option<PathBuf>,
     url: Option<String>,
     dry_run: bool,
+    private: bool,
 ) -> Result<()> {
     let config = load_config()?;
     let results_dir = output_dir.clone().unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
@@ -6079,6 +6474,10 @@ async fn main() -> Result<()> {
             info!("Executing submit command");
             cmd_submit(prompt, project_dir.clone(), *wait)?;
         }
+        Commands::GitSync { project_id, repo_dir, from_commit, to_commit, force, dry_run, ext } => {
+            info!("Executing git-sync command");
+            cmd_git_sync(project_id.clone(), repo_dir.clone(), from_commit.clone(), to_commit.clone(), *force, *dry_run, ext.clone())?;
+        }
         Commands::Check { project_id, limit, trace, verbose } => {
             info!(?project_id, ?limit, trace, "Executing check command");
             let resolved = if let Some(id) = project_id {
@@ -6101,10 +6500,10 @@ async fn main() -> Result<()> {
             let resolved = resolve_project_id(project_id)?;
             cmd_download_result(&resolved, output_dir.clone(), *verbose).await?;
         }
-        Commands::Deploy { project_id, output_dir, max_size, ignore, ignore_file, url, dry_run } => {
+        Commands::Deploy { project_id, output_dir, max_size, ignore, ignore_file, url, dry_run, private } => {
             info!("Executing deploy command");
             let resolved = resolve_project_id(project_id)?;
-            cmd_deploy(&resolved, output_dir.clone(), *max_size, ignore.clone(), ignore_file.clone(), url.clone(), *dry_run).await?;
+            cmd_deploy(&resolved, output_dir.clone(), *max_size, ignore.clone(), ignore_file.clone(), url.clone(), *dry_run, *private).await?;
         }
         Commands::ServeProject { project_id, port, host, dir } => {
             info!("Executing serve-project command");
@@ -6179,9 +6578,9 @@ async fn main() -> Result<()> {
             info!("Executing scan-index command");
             file_index::cmd_scan_index(index_dir.clone(), output_dir.clone(), prefix_filter.clone())?;
         }
-        Commands::Fetch { parallel, limit, dry_run, recent_days } => {
+        Commands::Fetch { parallel, limit, dry_run, recent_days, project_id } => {
             info!("Executing fetch command");
-            fetch::cmd_fetch(*parallel, *limit, *dry_run, *recent_days).await?;
+            fetch::cmd_fetch(*parallel, *limit, *dry_run, *recent_days, project_id.clone()).await?;
         }
         Commands::Pipeline { parallel, limit, dry_run, recent_days } => {
             info!("Executing pipeline command");
@@ -6249,7 +6648,7 @@ async fn main() -> Result<()> {
             info!("Executing ask-with-files");
             let api_key = get_api_key()?;
             let resolved = resolve_project_id(project_id)?;
-            let result = ask_aristotle_with_files(&api_key, &resolved, prompt, files_dir.as_ref(), file.as_ref())?;
+            let result = ask_aristotle_with_files(&api_key, &resolved, prompt, files_dir.as_ref(), file.as_ref(), None)?;
             println!("{}", result);
         }
         Commands::Serve { port, forward } => {

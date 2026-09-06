@@ -51,9 +51,9 @@ pub async fn cmd_pipeline(
     // ── Step 1: Fetch ──────────────────────────────────────────────
     println!("═══ [1/5] Fetch ═══");
     if !dry_run {
-        crate::fetch::cmd_fetch(parallel, limit, false, recent_days).await?;
+        crate::fetch::cmd_fetch(parallel, limit, false, recent_days, None).await?;
     } else {
-        crate::fetch::cmd_fetch(parallel, limit, true, recent_days).await?;
+        crate::fetch::cmd_fetch(parallel, limit, true, recent_days, None).await?;
         println!("  (dry run — skipping remaining steps)");
         return Ok(());
     }
