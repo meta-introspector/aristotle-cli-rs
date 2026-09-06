@@ -3156,7 +3156,7 @@ async fn cmd_deploy(
     dry_run: bool,
 ) -> Result<()> {
     let config = load_config()?;
-    let results_dir = output_dir.unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
+    let results_dir = output_dir.clone().unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
     fs::create_dir_all(&results_dir)?;
 
     // Project is downloaded to <results_dir>/<project_id>_aristotle/output-final_aristotle
