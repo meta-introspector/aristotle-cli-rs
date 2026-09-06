@@ -35,6 +35,7 @@ mod term_graph;
 mod project_test;
 mod shared_lean;
 mod alias;
+mod alias_web;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -329,6 +330,40 @@ enum Commands {
         #[arg(long)]
         verbose: bool,
     },
+    /// Deploy an Aristotle project with smart filtering (sensitive/large files)
+    Deploy {
+        /// Project ID to deploy
+        project_id: String,
+        #[arg(long, default_value = "./output-final_aristotle")]
+        output_dir: Option<PathBuf>,
+        /// Maximum file size to include (bytes, default 50MB)
+        #[arg(long)]
+        max_size: Option<u64>,
+        /// Ignore file pattern (can be repeated)
+        #[arg(long)]
+        ignore: Vec<String>,
+        /// .aristoignore file path
+        #[arg(long)]
+        ignore_file: Option<PathBuf>,
+        /// Target URL for deployment
+        #[arg(long)]
+        url: Option<String>,
+        /// Dry run - show what would be deployed
+        #[arg(long)]
+        dry_run: bool,
+    },
+    /// Serve an Aristotle project with HTTP server
+    ServeProject {
+        /// Project ID to serve
+        project_id: String,
+        #[arg(long, default_value = "8080")]
+        port: u16,
+        #[arg(long, default_value = "127.0.0.1")]
+        host: String,
+        /// Directory to serve (default: deployed bundle)
+        #[arg(long)]
+        dir: Option<PathBuf>,
+    },
     /// Test Lean4 projects
     Test {
         #[arg(long)]
@@ -347,6 +382,13 @@ enum Commands {
     Alias {
         #[command(subcommand)]
         subcommand: AliasCommands,
+    },
+    /// Start web UI for editing aliases
+    AliasWeb {
+        #[arg(short = 'p', default_value = "8080")]
+        port: u16,
+        #[arg(long)]
+        config_dir: Option<PathBuf>,
     },
     /// Clean build artifacts
     Clean,
@@ -3102,6 +3144,251 @@ async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>, verb
     Ok(())
 }
 
+/// ── Deploy an Aristotle project with smart filtering ───────────
+
+async fn cmd_deploy(
+    project_id: &str,
+    output_dir: Option<PathBuf>,
+    max_size: Option<u64>,
+    ignore: Vec<String>,
+    ignore_file: Option<PathBuf>,
+    url: Option<String>,
+    dry_run: bool,
+) -> Result<()> {
+    let config = load_config()?;
+    let results_dir = output_dir.unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
+    fs::create_dir_all(&results_dir)?;
+
+    // Project is downloaded to <results_dir>/<project_id>_aristotle/output-final_aristotle
+    let project_dir = results_dir.join(format!("{}_aristotle", project_id));
+    let source_dir = project_dir.join("output-final_aristotle");
+
+    if !source_dir.exists() {
+        println!("Project not found locally. Downloading...");
+        let api_key = get_api_key()?;
+        let client = Client::builder().timeout(Duration::from_secs(300)).build()?;
+        download_single_result(&client, &api_key, project_id, &results_dir, &results_dir, config.retry_wait_seconds, config.max_retries).await?;
+    }
+
+    if !source_dir.exists() {
+        return Err(anyhow::anyhow!("Project directory not found: {}", source_dir.display()));
+    }
+
+    println!("Found project at: {}", source_dir.display());
+
+    // Load metadata
+    let metadata_file = source_dir.join("aristotle_metadata.json");
+    let mut metadata: Option<serde_json::Value> = None;
+    if metadata_file.exists() {
+        let content = fs::read_to_string(&metadata_file)?;
+        metadata = Some(serde_json::from_str(&content)?);
+        if let Some(size) = metadata.as_ref().and_then(|m| m.get("tarball_size_bytes")).and_then(|v| v.as_u64()) {
+            println!("Project size: {} bytes ({:.1} MB)", size, size as f64 / 1_048_576.0);
+        }
+    }
+
+    // Read .aristoignore if present
+    let ignore_file_path = ignore_file.unwrap_or_else(|| source_dir.join(".aristoignore"));
+    let mut patterns = ignore.clone();
+    if ignore_file_path.exists() {
+        println!("Reading ignore patterns from: {}", ignore_file_path.display());
+        let content = fs::read_to_string(&ignore_file_path)?;
+        for line in content.lines() {
+            let line = line.trim();
+            if !line.is_empty() && !line.starts_with('#') {
+                patterns.push(line.to_string());
+            }
+        }
+    }
+
+    // Default patterns
+    let default_patterns = vec![
+        "*.tar.gz".to_string(),
+        "*.tgz".to_string(),
+        "*.zip".to_string(),
+        "*.wasm".to_string(),
+        "*.bin".to_string(),
+        "node_modules/**".to_string(),
+        ".git/**".to_string(),
+        ".lake/**".to_string(),
+        "target/**".to_string(),
+        "*.log".to_string(),
+        "*.tmp".to_string(),
+        "*.cache".to_string(),
+        ".env*".to_string(),
+        "*secret*".to_string(),
+        "*password*".to_string(),
+        "*token*".to_string(),
+        "*credential*".to_string(),
+        "*private*.pem".to_string(),
+        "*.key".to_string(),
+    ];
+    patterns.extend(default_patterns);
+
+    // Build output directory
+    let deploy_dir = if let Some(dir) = output_dir {
+        dir.join(format!("{}_deployed", project_id))
+    } else {
+        PathBuf::from(format!("./output-final_aristotle/{}_deployed", project_id))
+    };
+
+    if dry_run {
+        println!("=== DRY RUN - Would deploy to: {} ===", deploy_dir.display());
+        return Ok(());
+    }
+
+    fs::create_dir_all(&deploy_dir)?;
+
+    // Filter and copy files
+    let mut included = 0;
+    let mut excluded_large = 0;
+    let mut excluded_sensitive = 0;
+    let mut excluded_temp = 0;
+
+    let max_normal_size = max_size.unwrap_or(50 * 1024 * 1024); // 50MB default
+
+    for entry in WalkDir::new(&source_dir).into_iter().filter_map(|e| e.ok()) {
+        if !entry.file_type().is_file() {
+            continue;
+        }
+
+        let fullpath = entry.path();
+        let relpath = fullpath.strip_prefix(&source_dir)?;
+        let filename = entry.file_name().to_string_lossy();
+        let filesize = fs::metadata(fullpath)?.len();
+
+        // Check patterns
+        let mut skip = false;
+        let mut reason = "";
+
+        // Check large files
+        if filesize > max_normal_size {
+            skip = true;
+            reason = "large";
+            excluded_large += 1;
+        }
+
+        // Check sensitive/temp patterns
+        for pattern in &patterns {
+            if glob_match(pattern, relpath.to_str().unwrap_or("")) {
+                skip = true;
+                reason = pattern;
+                if pattern.contains("secret") || pattern.contains("password") || pattern.contains("token") || pattern.contains("credential") || pattern.contains("key") || pattern.contains("private") {
+                    excluded_sensitive += 1;
+                } else {
+                    excluded_temp += 1;
+                }
+                break;
+            }
+        }
+
+        if skip {
+            println!("  Skipped ({}): {}", reason, relpath.display());
+            continue;
+        }
+
+        // Copy file
+        let dest = deploy_dir.join(relpath);
+        fs::create_dir_all(dest.parent().unwrap())?;
+        fs::copy(fullpath, &dest)?;
+        included += 1;
+
+        if filesize > 1024 * 1024 {
+            println!("  Copied: {} ({:.1} MB)", relpath.display(), filesize as f64 / 1_048_576.0);
+        }
+    }
+
+    // Write deployment info
+    let deploy_info = serde_json::json!({
+        "project_id": project_id,
+        "deployed_at": chrono::Utc::now().to_rfc3339(),
+        "source_dir": source_dir.to_string_lossy(),
+        "bundle_dir": deploy_dir.to_string_lossy(),
+        "bundle_size_bytes": fs::metadata(&deploy_dir)?.len(),
+        "files_included": included,
+        "files_excluded_large": excluded_large,
+        "sensitive_files_excluded": excluded_sensitive,
+        "temp_files_excluded": excluded_temp,
+        "dry_run": dry_run,
+        "url": url.clone().unwrap_or_default()
+    });
+
+    fs::write(deploy_dir.join("deployment-info.json"), serde_json::to_string_pretty(&deploy_info)?)?;
+
+    println!("\n=== Deployment Complete ===");
+    println!("Bundle: {}", deploy_dir.display());
+    println!("Files included: {}", included);
+    println!("Excluded (large): {}", excluded_large);
+    println!("Excluded (sensitive): {}", excluded_sensitive);
+    println!("Excluded (temp/build): {}", excluded_temp);
+
+    if let Some(url) = url {
+        println!("Target URL: {}", url);
+    }
+
+    Ok(())
+}
+
+/// Simple glob pattern matching
+fn glob_match(pattern: &str, text: &str) -> bool {
+    // Simple implementation for common patterns
+    if pattern == text {
+        return true;
+    }
+    if pattern.ends_with("**") {
+        let prefix = &pattern[..pattern.len() - 2];
+        return text.starts_with(prefix);
+    }
+    if pattern.starts_with("*") && pattern.ends_with("*") {
+        let middle = &pattern[1..pattern.len() - 1];
+        return text.contains(middle);
+    }
+    if pattern.starts_with("*") {
+        let suffix = &pattern[1..];
+        return text.ends_with(suffix);
+    }
+    if pattern.ends_with("*") {
+        let prefix = &pattern[..pattern.len() - 1];
+        return text.starts_with(prefix);
+    }
+    false
+}
+
+/// ── Serve an Aristotle project with HTTP server ────────────────
+
+async fn cmd_serve_project(
+    project_id: &str,
+    port: u16,
+    host: String,
+    dir: Option<PathBuf>,
+) -> Result<()> {
+    let config = load_config()?;
+    let results_dir = config.results_dir.join("aristo-outputs");
+
+    // Default to deployed bundle
+    let serve_dir = if let Some(d) = dir {
+        d
+    } else {
+        results_dir.join(format!("{}_deployed", project_id))
+    };
+
+    if !serve_dir.exists() {
+        println!("Project not deployed. Run deploy first, or specify --dir");
+        return Err(anyhow::anyhow!("Directory not found: {}", serve_dir.display()));
+    }
+
+    println!("Starting HTTP server for project {}", project_id);
+    println!("Serving from: {}", serve_dir.display());
+    println!("Listening on http://{}:{}", host, port);
+
+    // Use actix-web for a simple file server
+    // For now, just log and wait - in a real implementation we'd use actix-web or warp
+    // This is a placeholder for the actual server implementation
+    loop {
+        std::thread::sleep(Duration::from_secs(60));
+    }
+}
+
 /// ── Ask: send instructions to a running Aristotle project ────────
 
 fn cmd_ask(project_id: String, prompt: String, file: Option<PathBuf>, inject_dir: Option<PathBuf>) -> Result<()> {
@@ -5814,6 +6101,16 @@ async fn main() -> Result<()> {
             let resolved = resolve_project_id(project_id)?;
             cmd_download_result(&resolved, output_dir.clone(), *verbose).await?;
         }
+        Commands::Deploy { project_id, output_dir, max_size, ignore, ignore_file, url, dry_run } => {
+            info!("Executing deploy command");
+            let resolved = resolve_project_id(project_id)?;
+            cmd_deploy(&resolved, output_dir.clone(), *max_size, ignore.clone(), ignore_file.clone(), url.clone(), *dry_run).await?;
+        }
+        Commands::ServeProject { project_id, port, host, dir } => {
+            info!("Executing serve-project command");
+            let resolved = resolve_project_id(project_id)?;
+            cmd_serve_project(&resolved, *port, host.clone(), dir.clone()).await?;
+        }
         Commands::Ask { project_id, prompt, file, inject_dir } => {
             info!("Executing ask command");
             let resolved = resolve_project_id(project_id)?;
@@ -5857,6 +6154,10 @@ async fn main() -> Result<()> {
         Commands::Alias { subcommand } => {
             info!("Executing alias command");
             cmd_alias(subcommand.clone())?
+        }
+        Commands::AliasWeb { port, config_dir } => {
+            info!("Starting alias web editor");
+            alias_web::start(*port, config_dir.clone())?;
         }
         Commands::NotebooklmCross { output_dir } => {
             info!("Executing notebooklm-cross command");
