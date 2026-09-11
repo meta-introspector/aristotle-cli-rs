@@ -64,10 +64,9 @@ pub fn load_config() -> Result<Config> {
     let mut config: Config = toml::from_str(&toml)
         .with_context(|| format!("Failed to parse config at {}", config_path.display()))?;
 
-    let current_dir = env::current_dir()?;
-    if current_dir.to_string_lossy() == "/mnt/data1/time-2026/05-may/07/arist" {
-        config.git_base = current_dir;
-    }
+    // git_base comes from config.toml only — no cwd override.
+    // The old override re-created per-project git repos inside the arist
+    // checkout; git versions now live at /mnt/data1/aristotle-git-versions.
 
     debug!(
         base_dir = %config.base_dir.display(),
