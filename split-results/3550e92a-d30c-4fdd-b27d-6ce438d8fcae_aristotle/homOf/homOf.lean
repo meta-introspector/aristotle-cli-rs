@@ -1,2 +1,0 @@
--- Declaration: homOf
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: expandWindow
--- Extracted by StaticSplit

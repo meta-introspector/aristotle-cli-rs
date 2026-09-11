@@ -1,2 +1,0 @@
--- Declaration: chartDiagonal
--- Extracted by StaticSplit

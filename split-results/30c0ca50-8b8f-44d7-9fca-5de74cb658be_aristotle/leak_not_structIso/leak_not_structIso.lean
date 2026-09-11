@@ -1,2 +1,0 @@
--- Declaration: leak_not_structIso
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: JourneyStage.toNat_injective
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: PositiveFraction
--- Extracted by StaticSplit

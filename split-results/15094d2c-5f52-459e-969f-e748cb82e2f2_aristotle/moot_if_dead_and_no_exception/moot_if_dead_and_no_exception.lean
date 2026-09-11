@@ -1,2 +1,0 @@
--- Declaration: moot_if_dead_and_no_exception
--- Extracted by StaticSplit

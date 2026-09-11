@@ -1,2 +1,0 @@
--- Declaration: maskHammingDist
--- Extracted by StaticSplit

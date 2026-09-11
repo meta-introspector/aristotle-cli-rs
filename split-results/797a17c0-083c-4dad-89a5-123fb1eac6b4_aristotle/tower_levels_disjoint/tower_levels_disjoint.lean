@@ -1,2 +1,0 @@
--- Declaration: tower_levels_disjoint
--- Extracted by StaticSplit

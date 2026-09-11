@@ -1,2 +1,0 @@
--- Declaration: ramanujanPsi_term
--- Extracted by StaticSplit

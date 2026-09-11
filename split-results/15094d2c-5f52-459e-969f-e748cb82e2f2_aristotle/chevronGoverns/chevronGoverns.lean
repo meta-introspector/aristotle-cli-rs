@@ -1,2 +1,0 @@
--- Declaration: chevronGoverns
--- Extracted by StaticSplit

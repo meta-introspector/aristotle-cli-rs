@@ -1,2 +1,0 @@
--- Declaration: NeuralRole
--- Extracted by StaticSplit

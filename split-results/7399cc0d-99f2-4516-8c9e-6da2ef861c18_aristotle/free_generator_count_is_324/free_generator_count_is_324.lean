@@ -1,2 +1,0 @@
--- Declaration: free_generator_count_is_324
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cosmicFunctor
--- Extracted by StaticSplit

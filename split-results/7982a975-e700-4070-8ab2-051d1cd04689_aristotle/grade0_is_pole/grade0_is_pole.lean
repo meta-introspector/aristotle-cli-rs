@@ -1,2 +1,0 @@
--- Declaration: grade0_is_pole
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: stab_order
--- Extracted by StaticSplit

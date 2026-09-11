@@ -1,2 +1,0 @@
--- Declaration: arrow_count
--- Extracted by StaticSplit

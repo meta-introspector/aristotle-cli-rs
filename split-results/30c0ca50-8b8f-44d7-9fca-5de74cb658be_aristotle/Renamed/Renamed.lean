@@ -1,2 +1,0 @@
--- Declaration: Renamed
--- Extracted by StaticSplit

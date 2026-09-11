@@ -1,2 +1,0 @@
--- Declaration: GoalBearingName.currentPos
--- Extracted by StaticSplit

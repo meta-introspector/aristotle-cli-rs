@@ -1,2 +1,0 @@
--- Declaration: mckay_residue
--- Extracted by StaticSplit

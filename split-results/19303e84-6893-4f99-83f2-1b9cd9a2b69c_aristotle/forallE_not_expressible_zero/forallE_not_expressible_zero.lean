@@ -1,2 +1,0 @@
--- Declaration: forallE_not_expressible_zero
--- Extracted by StaticSplit

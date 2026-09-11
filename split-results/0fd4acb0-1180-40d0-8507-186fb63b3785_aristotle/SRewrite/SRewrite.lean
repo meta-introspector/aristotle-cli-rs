@@ -1,2 +1,0 @@
--- Declaration: SRewrite
--- Extracted by StaticSplit

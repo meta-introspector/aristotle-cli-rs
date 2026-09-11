@@ -1,2 +1,0 @@
--- Declaration: GoalBearingName.reaches_target
--- Extracted by StaticSplit

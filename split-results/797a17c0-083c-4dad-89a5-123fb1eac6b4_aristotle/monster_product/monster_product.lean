@@ -1,2 +1,0 @@
--- Declaration: monster_product
--- Extracted by StaticSplit

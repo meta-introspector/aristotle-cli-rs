@@ -1,2 +1,0 @@
--- Declaration: stage3_is_square
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: stealth_is_AP
--- Extracted by StaticSplit

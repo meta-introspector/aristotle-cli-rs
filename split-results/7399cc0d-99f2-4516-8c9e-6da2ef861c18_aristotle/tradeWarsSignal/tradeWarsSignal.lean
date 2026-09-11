@@ -1,2 +1,0 @@
--- Declaration: tradeWarsSignal
--- Extracted by StaticSplit

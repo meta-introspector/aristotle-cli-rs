@@ -1,2 +1,0 @@
--- Declaration: prime_partition_monster
--- Extracted by StaticSplit

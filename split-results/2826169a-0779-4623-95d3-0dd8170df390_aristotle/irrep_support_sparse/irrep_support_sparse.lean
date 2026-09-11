@@ -1,2 +1,0 @@
--- Declaration: irrep_support_sparse
--- Extracted by StaticSplit

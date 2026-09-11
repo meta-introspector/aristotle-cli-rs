@@ -1,2 +1,0 @@
--- Declaration: no_original_jurisdiction_outside_enumeration
--- Extracted by StaticSplit

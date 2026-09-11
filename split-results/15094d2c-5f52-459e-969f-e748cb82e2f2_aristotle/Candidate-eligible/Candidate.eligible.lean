@@ -1,2 +1,0 @@
--- Declaration: Candidate.eligible
--- Extracted by StaticSplit

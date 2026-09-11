@@ -1,2 +1,0 @@
--- Declaration: lattice_cardinality
--- Extracted by StaticSplit

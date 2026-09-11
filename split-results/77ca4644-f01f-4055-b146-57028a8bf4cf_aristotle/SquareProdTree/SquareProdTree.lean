@@ -1,2 +1,0 @@
--- Declaration: SquareProdTree
--- Extracted by StaticSplit

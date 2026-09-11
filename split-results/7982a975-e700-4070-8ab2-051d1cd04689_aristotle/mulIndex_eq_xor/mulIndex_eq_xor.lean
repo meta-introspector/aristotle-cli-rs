@@ -1,2 +1,0 @@
--- Declaration: mulIndex_eq_xor
--- Extracted by StaticSplit

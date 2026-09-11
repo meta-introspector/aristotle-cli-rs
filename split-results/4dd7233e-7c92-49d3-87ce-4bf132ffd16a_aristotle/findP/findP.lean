@@ -1,2 +1,0 @@
--- Declaration: findP
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: thompson_series_count
--- Extracted by StaticSplit

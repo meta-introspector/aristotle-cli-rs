@@ -1,2 +1,0 @@
--- Declaration: faber_P2_result
--- Extracted by StaticSplit

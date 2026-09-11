@@ -1,2 +1,0 @@
--- Declaration: cliffordDegree_lt_8
--- Extracted by StaticSplit

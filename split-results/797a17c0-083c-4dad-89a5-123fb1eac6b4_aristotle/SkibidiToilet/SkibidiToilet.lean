@@ -1,2 +1,0 @@
--- Declaration: SkibidiToilet
--- Extracted by StaticSplit

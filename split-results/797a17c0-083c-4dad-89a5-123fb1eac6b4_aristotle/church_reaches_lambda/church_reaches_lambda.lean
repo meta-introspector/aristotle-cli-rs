@@ -1,2 +1,0 @@
--- Declaration: church_reaches_lambda
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cringeScore
--- Extracted by StaticSplit

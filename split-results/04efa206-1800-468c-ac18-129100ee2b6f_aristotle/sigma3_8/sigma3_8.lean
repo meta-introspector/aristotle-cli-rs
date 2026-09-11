@@ -1,2 +1,0 @@
--- Declaration: sigma3_8
--- Extracted by StaticSplit

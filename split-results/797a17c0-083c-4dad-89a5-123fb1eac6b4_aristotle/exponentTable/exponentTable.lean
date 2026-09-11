@@ -1,2 +1,0 @@
--- Declaration: exponentTable
--- Extracted by StaticSplit

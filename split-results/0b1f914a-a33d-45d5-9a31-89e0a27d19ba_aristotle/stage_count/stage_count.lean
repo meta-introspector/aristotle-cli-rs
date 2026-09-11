@@ -1,2 +1,0 @@
--- Declaration: stage_count
--- Extracted by StaticSplit

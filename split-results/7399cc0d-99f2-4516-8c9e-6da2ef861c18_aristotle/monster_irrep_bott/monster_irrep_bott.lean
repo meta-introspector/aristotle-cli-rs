@@ -1,2 +1,0 @@
--- Declaration: monster_irrep_bott
--- Extracted by StaticSplit

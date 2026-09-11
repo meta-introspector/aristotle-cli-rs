@@ -1,2 +1,0 @@
--- Declaration: rs_majority
--- Extracted by StaticSplit

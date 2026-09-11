@@ -1,2 +1,0 @@
--- Declaration: eigenspace_dim_sum
--- Extracted by StaticSplit

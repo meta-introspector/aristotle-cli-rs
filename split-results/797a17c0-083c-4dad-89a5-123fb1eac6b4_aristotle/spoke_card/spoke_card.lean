@@ -1,2 +1,0 @@
--- Declaration: spoke_card
--- Extracted by StaticSplit

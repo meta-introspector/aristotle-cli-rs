@@ -1,2 +1,0 @@
--- Declaration: bottFold_wellLayered
--- Extracted by StaticSplit

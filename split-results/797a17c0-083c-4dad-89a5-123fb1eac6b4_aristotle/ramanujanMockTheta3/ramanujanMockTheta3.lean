@@ -1,2 +1,0 @@
--- Declaration: ramanujanMockTheta3
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: toZMod2Prod_surjective
--- Extracted by StaticSplit

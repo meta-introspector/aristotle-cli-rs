@@ -1,2 +1,0 @@
--- Declaration: oggorial_grade
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: StateCourtAppeal
--- Extracted by StaticSplit

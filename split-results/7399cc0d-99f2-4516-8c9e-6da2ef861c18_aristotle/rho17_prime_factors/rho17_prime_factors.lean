@@ -1,2 +1,0 @@
--- Declaration: rho17_prime_factors
--- Extracted by StaticSplit

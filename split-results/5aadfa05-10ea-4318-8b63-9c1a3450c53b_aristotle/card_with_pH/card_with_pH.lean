@@ -1,2 +1,0 @@
--- Declaration: card_with_pH
--- Extracted by StaticSplit

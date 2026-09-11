@@ -1,2 +1,0 @@
--- Declaration: project_bott_classes
--- Extracted by StaticSplit

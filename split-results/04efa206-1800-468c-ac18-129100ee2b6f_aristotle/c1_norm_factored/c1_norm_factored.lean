@@ -1,2 +1,0 @@
--- Declaration: c1_norm_factored
--- Extracted by StaticSplit

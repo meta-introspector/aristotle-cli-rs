@@ -1,2 +1,0 @@
--- Declaration: modusPonens
--- Extracted by StaticSplit

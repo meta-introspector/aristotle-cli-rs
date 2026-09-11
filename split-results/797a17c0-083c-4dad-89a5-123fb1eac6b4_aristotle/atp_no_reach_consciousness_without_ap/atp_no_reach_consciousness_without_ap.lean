@@ -1,2 +1,0 @@
--- Declaration: atp_no_reach_consciousness_without_ap
--- Extracted by StaticSplit

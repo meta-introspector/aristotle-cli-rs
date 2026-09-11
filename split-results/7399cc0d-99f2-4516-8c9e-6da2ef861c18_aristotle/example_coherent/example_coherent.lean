@@ -1,2 +1,0 @@
--- Declaration: example_coherent
--- Extracted by StaticSplit

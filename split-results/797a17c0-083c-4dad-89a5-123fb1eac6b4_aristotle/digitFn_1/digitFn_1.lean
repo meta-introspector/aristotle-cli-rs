@@ -1,2 +1,0 @@
--- Declaration: digitFn_1
--- Extracted by StaticSplit

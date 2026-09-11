@@ -1,2 +1,0 @@
--- Declaration: inducedStalk
--- Extracted by StaticSplit

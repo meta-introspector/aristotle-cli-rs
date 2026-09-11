@@ -1,2 +1,0 @@
--- Declaration: CliffordNode
--- Extracted by StaticSplit

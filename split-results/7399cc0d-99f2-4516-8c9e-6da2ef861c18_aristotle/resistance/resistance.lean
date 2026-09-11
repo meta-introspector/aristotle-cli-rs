@@ -1,2 +1,0 @@
--- Declaration: resistance
--- Extracted by StaticSplit

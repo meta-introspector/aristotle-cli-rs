@@ -1,2 +1,0 @@
--- Declaration: mckay_mod8
--- Extracted by StaticSplit

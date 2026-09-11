@@ -1,2 +1,0 @@
--- Declaration: GaugeRow.omegaCount
--- Extracted by StaticSplit

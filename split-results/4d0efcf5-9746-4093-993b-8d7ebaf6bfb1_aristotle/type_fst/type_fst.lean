@@ -1,2 +1,0 @@
--- Declaration: type_fst
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cl10_faithful_rep_injective
--- Extracted by StaticSplit

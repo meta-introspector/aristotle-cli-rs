@@ -1,2 +1,0 @@
--- Declaration: moonshine_is_compatible
--- Extracted by StaticSplit

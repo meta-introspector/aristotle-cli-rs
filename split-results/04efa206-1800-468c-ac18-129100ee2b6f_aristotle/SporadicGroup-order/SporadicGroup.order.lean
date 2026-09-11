@@ -1,2 +1,0 @@
--- Declaration: SporadicGroup.order
--- Extracted by StaticSplit

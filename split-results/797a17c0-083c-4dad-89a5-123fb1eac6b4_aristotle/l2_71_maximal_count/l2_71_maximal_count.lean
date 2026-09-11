@@ -1,2 +1,0 @@
--- Declaration: l2_71_maximal_count
--- Extracted by StaticSplit

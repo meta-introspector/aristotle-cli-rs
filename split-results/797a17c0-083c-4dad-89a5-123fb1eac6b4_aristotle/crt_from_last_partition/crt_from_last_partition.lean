@@ -1,2 +1,0 @@
--- Declaration: crt_from_last_partition
--- Extracted by StaticSplit

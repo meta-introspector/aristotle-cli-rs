@@ -1,2 +1,0 @@
--- Declaration: harmonic_bridge_gcd
--- Extracted by StaticSplit

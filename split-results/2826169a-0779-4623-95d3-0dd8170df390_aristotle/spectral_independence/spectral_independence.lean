@@ -1,2 +1,0 @@
--- Declaration: spectral_independence
--- Extracted by StaticSplit

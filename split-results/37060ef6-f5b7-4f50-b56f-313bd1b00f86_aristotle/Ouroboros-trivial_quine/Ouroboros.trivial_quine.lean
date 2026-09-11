@@ -1,2 +1,0 @@
--- Declaration: Ouroboros.trivial_quine
--- Extracted by StaticSplit

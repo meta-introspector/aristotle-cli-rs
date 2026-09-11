@@ -1,2 +1,0 @@
--- Declaration: MemeComonadMonadPair
--- Extracted by StaticSplit

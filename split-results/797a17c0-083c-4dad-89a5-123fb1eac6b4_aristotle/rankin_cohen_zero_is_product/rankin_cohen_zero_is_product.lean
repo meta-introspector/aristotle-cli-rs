@@ -1,2 +1,0 @@
--- Declaration: rankin_cohen_zero_is_product
--- Extracted by StaticSplit

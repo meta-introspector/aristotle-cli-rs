@@ -1,2 +1,0 @@
--- Declaration: Renamed.refl
--- Extracted by StaticSplit

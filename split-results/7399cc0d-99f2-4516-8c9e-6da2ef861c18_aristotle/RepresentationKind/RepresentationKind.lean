@@ -1,2 +1,0 @@
--- Declaration: RepresentationKind
--- Extracted by StaticSplit

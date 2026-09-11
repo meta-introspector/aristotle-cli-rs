@@ -1,2 +1,0 @@
--- Declaration: ontology_sublattice_product
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: wake_up
--- Extracted by StaticSplit

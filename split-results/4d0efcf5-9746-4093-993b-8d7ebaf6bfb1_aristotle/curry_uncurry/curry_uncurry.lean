@@ -1,2 +1,0 @@
--- Declaration: curry_uncurry
--- Extracted by StaticSplit

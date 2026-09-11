@@ -1,2 +1,0 @@
--- Declaration: hashPartitionKey
--- Extracted by StaticSplit

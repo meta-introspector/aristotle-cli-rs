@@ -1,2 +1,0 @@
--- Declaration: oggorial_primeFactors
--- Extracted by StaticSplit

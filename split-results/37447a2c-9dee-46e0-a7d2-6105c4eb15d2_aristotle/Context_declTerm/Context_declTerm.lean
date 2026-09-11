@@ -1,2 +1,0 @@
--- Declaration: Context_declTerm
--- Extracted by StaticSplit

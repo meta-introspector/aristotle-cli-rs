@@ -1,2 +1,0 @@
--- Declaration: gmul_self
--- Extracted by StaticSplit

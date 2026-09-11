@@ -1,2 +1,0 @@
--- Declaration: shift71_preserves_vanishing
--- Extracted by StaticSplit

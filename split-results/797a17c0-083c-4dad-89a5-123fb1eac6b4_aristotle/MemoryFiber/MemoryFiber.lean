@@ -1,2 +1,0 @@
--- Declaration: MemoryFiber
--- Extracted by StaticSplit

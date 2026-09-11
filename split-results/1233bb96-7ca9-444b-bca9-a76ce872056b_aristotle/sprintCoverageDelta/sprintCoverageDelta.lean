@@ -1,2 +1,0 @@
--- Declaration: sprintCoverageDelta
--- Extracted by StaticSplit

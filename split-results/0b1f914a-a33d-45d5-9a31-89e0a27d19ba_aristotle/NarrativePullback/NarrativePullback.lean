@@ -1,2 +1,0 @@
--- Declaration: NarrativePullback
--- Extracted by StaticSplit

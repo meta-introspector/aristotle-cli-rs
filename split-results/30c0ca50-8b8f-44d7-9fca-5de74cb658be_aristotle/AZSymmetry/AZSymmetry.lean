@@ -1,2 +1,0 @@
--- Declaration: AZSymmetry
--- Extracted by StaticSplit

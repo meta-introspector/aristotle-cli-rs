@@ -1,2 +1,0 @@
--- Declaration: bottTower_pow2
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: nat_iso_symm
--- Extracted by StaticSplit

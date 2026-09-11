@@ -1,2 +1,0 @@
--- Declaration: isProductOfAmericanFisheries
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: goedelCounterexample_sound
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: sorted_filter_split
--- Extracted by StaticSplit

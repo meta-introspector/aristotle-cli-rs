@@ -1,2 +1,0 @@
--- Declaration: grind_diePlate
--- Extracted by StaticSplit

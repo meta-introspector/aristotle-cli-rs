@@ -1,2 +1,0 @@
--- Declaration: sigma_three_twelve_mult
--- Extracted by StaticSplit

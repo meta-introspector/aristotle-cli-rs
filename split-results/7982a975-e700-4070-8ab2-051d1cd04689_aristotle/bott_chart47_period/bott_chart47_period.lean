@@ -1,2 +1,0 @@
--- Declaration: bott_chart47_period
--- Extracted by StaticSplit

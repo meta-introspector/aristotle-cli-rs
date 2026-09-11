@@ -1,2 +1,0 @@
--- Declaration: HeckeAlgebra.composition_coprime
--- Extracted by StaticSplit

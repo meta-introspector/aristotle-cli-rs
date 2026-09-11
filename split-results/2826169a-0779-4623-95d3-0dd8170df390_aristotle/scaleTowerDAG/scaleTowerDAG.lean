@@ -1,2 +1,0 @@
--- Declaration: scaleTowerDAG
--- Extracted by StaticSplit

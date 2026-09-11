@@ -1,2 +1,0 @@
--- Declaration: complexIndex
--- Extracted by StaticSplit

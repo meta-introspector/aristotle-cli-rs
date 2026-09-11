@@ -1,2 +1,0 @@
--- Declaration: factorial_21_mod_196883
--- Extracted by StaticSplit

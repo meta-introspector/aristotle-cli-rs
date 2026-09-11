@@ -1,2 +1,0 @@
--- Declaration: count_air_6
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cartan_imag_3
--- Extracted by StaticSplit

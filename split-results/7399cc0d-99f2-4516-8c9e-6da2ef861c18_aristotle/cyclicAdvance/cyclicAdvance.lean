@@ -1,2 +1,0 @@
--- Declaration: cyclicAdvance
--- Extracted by StaticSplit

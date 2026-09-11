@@ -1,2 +1,0 @@
--- Declaration: aristotleTypescriptToOrderBook
--- Extracted by StaticSplit

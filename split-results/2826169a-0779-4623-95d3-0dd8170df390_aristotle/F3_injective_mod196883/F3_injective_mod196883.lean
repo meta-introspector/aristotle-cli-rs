@@ -1,2 +1,0 @@
--- Declaration: F3_injective_mod196883
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: C4_nirreps
--- Extracted by StaticSplit

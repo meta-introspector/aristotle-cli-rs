@@ -1,2 +1,0 @@
--- Declaration: r_split19
--- Extracted by StaticSplit

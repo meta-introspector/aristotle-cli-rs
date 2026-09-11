@@ -1,2 +1,0 @@
--- Declaration: hashFold
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: handleResponse
--- Extracted by StaticSplit

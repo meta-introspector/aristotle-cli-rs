@@ -1,2 +1,0 @@
--- Declaration: fusionAlgebra
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: e6_q2_coeff
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: evolve_fleischwolf_invariant
--- Extracted by StaticSplit

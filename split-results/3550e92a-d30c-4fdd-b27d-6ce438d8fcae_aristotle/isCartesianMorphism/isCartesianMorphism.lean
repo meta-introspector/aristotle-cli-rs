@@ -1,2 +1,0 @@
--- Declaration: isCartesianMorphism
--- Extracted by StaticSplit

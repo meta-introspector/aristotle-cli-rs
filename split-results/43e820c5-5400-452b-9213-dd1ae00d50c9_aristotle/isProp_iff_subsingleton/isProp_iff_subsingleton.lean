@@ -1,2 +1,0 @@
--- Declaration: isProp_iff_subsingleton
--- Extracted by StaticSplit

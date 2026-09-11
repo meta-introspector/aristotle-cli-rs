@@ -1,2 +1,0 @@
--- Declaration: PropagationChain.sourceInvariant
--- Extracted by StaticSplit

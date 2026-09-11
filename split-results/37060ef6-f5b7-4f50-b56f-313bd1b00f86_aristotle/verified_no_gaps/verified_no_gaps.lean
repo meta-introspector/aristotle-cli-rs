@@ -1,2 +1,0 @@
--- Declaration: verified_no_gaps
--- Extracted by StaticSplit

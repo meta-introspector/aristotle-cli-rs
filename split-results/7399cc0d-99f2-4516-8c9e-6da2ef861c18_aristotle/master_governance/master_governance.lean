@@ -1,2 +1,0 @@
--- Declaration: master_governance
--- Extracted by StaticSplit

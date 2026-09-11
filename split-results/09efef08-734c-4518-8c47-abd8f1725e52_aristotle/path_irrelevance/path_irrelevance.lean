@@ -1,2 +1,0 @@
--- Declaration: path_irrelevance
--- Extracted by StaticSplit

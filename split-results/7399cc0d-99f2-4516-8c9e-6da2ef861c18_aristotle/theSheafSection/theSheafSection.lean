@@ -1,2 +1,0 @@
--- Declaration: theSheafSection
--- Extracted by StaticSplit

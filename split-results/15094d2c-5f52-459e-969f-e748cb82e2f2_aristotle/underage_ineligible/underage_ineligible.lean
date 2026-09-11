@@ -1,2 +1,0 @@
--- Declaration: underage_ineligible
--- Extracted by StaticSplit

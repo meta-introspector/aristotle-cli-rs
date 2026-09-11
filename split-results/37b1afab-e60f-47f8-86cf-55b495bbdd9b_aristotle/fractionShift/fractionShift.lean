@@ -1,2 +1,0 @@
--- Declaration: fractionShift
--- Extracted by StaticSplit

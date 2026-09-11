@@ -1,2 +1,0 @@
--- Declaration: isolatedCount
--- Extracted by StaticSplit

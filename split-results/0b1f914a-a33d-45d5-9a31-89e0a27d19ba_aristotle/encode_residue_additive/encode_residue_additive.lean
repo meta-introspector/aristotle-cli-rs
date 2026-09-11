@@ -1,2 +1,0 @@
--- Declaration: encode_residue_additive
--- Extracted by StaticSplit

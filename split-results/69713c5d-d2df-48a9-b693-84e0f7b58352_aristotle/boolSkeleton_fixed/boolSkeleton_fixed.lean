@@ -1,2 +1,0 @@
--- Declaration: boolSkeleton_fixed
--- Extracted by StaticSplit

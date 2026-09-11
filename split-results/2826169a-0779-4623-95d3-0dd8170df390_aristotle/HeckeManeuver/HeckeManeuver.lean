@@ -1,2 +1,0 @@
--- Declaration: HeckeManeuver
--- Extracted by StaticSplit

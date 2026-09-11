@@ -1,2 +1,0 @@
--- Declaration: three_pow_five
--- Extracted by StaticSplit

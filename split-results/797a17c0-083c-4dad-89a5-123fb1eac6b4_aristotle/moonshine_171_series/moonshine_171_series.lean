@@ -1,2 +1,0 @@
--- Declaration: moonshine_171_series
--- Extracted by StaticSplit

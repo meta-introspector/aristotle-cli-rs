@@ -1,2 +1,0 @@
--- Declaration: azSpectrumPeriod
--- Extracted by StaticSplit

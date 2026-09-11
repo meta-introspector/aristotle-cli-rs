@@ -1,2 +1,0 @@
--- Declaration: ProjectStage.toNat
--- Extracted by StaticSplit

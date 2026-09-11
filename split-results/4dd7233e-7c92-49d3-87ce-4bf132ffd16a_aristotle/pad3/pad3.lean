@@ -1,2 +1,0 @@
--- Declaration: pad3
--- Extracted by StaticSplit

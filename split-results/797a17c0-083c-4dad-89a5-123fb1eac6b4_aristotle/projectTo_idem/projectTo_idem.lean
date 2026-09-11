@@ -1,2 +1,0 @@
--- Declaration: projectTo_idem
--- Extracted by StaticSplit

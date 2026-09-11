@@ -1,2 +1,0 @@
--- Declaration: step1_fires
--- Extracted by StaticSplit

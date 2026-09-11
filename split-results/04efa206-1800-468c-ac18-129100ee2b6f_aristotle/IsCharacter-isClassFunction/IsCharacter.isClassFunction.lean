@@ -1,2 +1,0 @@
--- Declaration: IsCharacter.isClassFunction
--- Extracted by StaticSplit

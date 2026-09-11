@@ -1,2 +1,0 @@
--- Declaration: FeedbackMorphism.id
--- Extracted by StaticSplit

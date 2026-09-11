@@ -1,2 +1,0 @@
--- Declaration: symmetry_compression
--- Extracted by StaticSplit

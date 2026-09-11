@@ -1,2 +1,0 @@
--- Declaration: not_introduced_if_sponsor_not_member
--- Extracted by StaticSplit

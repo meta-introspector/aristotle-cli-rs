@@ -1,2 +1,0 @@
--- Declaration: nonzero_drift_detectable
--- Extracted by StaticSplit

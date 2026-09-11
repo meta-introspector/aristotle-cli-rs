@@ -1,2 +1,0 @@
--- Declaration: toNat
--- Extracted by StaticSplit

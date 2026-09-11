@@ -1,2 +1,0 @@
--- Declaration: walkDown_spacetime
--- Extracted by StaticSplit

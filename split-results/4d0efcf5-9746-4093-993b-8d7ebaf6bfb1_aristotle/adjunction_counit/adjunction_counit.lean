@@ -1,2 +1,0 @@
--- Declaration: adjunction_counit
--- Extracted by StaticSplit

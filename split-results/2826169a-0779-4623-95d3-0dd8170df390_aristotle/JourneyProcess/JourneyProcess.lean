@@ -1,2 +1,0 @@
--- Declaration: JourneyProcess
--- Extracted by StaticSplit

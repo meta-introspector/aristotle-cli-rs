@@ -1,2 +1,0 @@
--- Declaration: cluster_count_is_bott_period
--- Extracted by StaticSplit

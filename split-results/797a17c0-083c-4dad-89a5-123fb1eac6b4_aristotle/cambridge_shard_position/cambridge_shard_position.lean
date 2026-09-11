@@ -1,2 +1,0 @@
--- Declaration: cambridge_shard_position
--- Extracted by StaticSplit

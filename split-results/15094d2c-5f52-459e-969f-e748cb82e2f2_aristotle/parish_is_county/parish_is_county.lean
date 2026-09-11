@@ -1,2 +1,0 @@
--- Declaration: parish_is_county
--- Extracted by StaticSplit

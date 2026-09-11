@@ -1,2 +1,0 @@
--- Declaration: EnvStore
--- Extracted by StaticSplit

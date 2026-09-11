@@ -1,2 +1,0 @@
--- Declaration: NiemeierRootSystem.coxeterNumber
--- Extracted by StaticSplit

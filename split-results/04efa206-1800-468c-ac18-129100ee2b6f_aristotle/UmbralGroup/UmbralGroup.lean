@@ -1,2 +1,0 @@
--- Declaration: UmbralGroup
--- Extracted by StaticSplit

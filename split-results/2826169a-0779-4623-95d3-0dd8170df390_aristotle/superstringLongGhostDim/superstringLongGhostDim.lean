@@ -1,2 +1,0 @@
--- Declaration: superstringLongGhostDim
--- Extracted by StaticSplit

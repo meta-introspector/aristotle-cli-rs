@@ -1,2 +1,0 @@
--- Declaration: empty_sequent_not_provable
--- Extracted by StaticSplit

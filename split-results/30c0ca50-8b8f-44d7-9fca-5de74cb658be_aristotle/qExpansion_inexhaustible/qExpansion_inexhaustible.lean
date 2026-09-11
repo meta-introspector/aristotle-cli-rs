@@ -1,2 +1,0 @@
--- Declaration: qExpansion_inexhaustible
--- Extracted by StaticSplit

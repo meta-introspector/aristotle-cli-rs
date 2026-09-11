@@ -1,2 +1,0 @@
--- Declaration: gearbox_generator_count
--- Extracted by StaticSplit

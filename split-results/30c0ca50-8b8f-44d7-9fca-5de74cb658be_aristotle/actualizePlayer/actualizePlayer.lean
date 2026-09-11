@@ -1,2 +1,0 @@
--- Declaration: actualizePlayer
--- Extracted by StaticSplit

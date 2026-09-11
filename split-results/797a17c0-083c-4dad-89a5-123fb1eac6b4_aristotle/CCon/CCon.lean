@@ -1,2 +1,0 @@
--- Declaration: CCon
--- Extracted by StaticSplit

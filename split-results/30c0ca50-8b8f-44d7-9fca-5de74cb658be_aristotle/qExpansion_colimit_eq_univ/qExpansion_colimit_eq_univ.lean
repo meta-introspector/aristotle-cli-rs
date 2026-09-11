@@ -1,2 +1,0 @@
--- Declaration: qExpansion_colimit_eq_univ
--- Extracted by StaticSplit

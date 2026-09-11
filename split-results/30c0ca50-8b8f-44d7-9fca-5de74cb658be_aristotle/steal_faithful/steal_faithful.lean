@@ -1,2 +1,0 @@
--- Declaration: steal_faithful
--- Extracted by StaticSplit

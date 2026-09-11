@@ -1,2 +1,0 @@
--- Declaration: defaultProtocol
--- Extracted by StaticSplit

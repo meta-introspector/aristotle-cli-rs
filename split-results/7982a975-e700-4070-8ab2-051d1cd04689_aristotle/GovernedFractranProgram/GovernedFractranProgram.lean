@@ -1,2 +1,0 @@
--- Declaration: GovernedFractranProgram
--- Extracted by StaticSplit

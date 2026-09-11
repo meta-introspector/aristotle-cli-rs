@@ -1,2 +1,0 @@
--- Declaration: Capability
--- Extracted by StaticSplit

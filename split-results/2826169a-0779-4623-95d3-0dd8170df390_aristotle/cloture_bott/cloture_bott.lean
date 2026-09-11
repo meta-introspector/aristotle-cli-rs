@@ -1,2 +1,0 @@
--- Declaration: cloture_bott
--- Extracted by StaticSplit

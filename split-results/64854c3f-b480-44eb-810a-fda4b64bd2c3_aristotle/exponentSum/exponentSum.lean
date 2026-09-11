@@ -1,2 +1,0 @@
--- Declaration: exponentSum
--- Extracted by StaticSplit

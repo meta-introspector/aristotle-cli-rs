@@ -1,2 +1,0 @@
--- Declaration: prime_37_not_ssp
--- Extracted by StaticSplit

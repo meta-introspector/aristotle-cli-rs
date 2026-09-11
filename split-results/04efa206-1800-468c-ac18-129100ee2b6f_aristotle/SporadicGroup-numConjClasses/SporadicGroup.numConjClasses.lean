@@ -1,2 +1,0 @@
--- Declaration: SporadicGroup.numConjClasses
--- Extracted by StaticSplit

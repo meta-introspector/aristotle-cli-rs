@@ -1,2 +1,0 @@
--- Declaration: one_prime_35_38
--- Extracted by StaticSplit

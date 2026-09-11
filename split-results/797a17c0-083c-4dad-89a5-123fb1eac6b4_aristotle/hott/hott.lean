@@ -1,2 +1,0 @@
--- Declaration: hott
--- Extracted by StaticSplit

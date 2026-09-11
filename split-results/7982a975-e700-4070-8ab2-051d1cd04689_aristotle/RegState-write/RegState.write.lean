@@ -1,2 +1,0 @@
--- Declaration: RegState.write
--- Extracted by StaticSplit

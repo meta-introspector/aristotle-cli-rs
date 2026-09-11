@@ -1,2 +1,0 @@
--- Declaration: classAB_total
--- Extracted by StaticSplit

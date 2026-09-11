@@ -1,2 +1,0 @@
--- Declaration: IsBoardQuorum
--- Extracted by StaticSplit

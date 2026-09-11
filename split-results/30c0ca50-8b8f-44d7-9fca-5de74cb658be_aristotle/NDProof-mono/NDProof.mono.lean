@@ -1,2 +1,0 @@
--- Declaration: NDProof.mono
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: primaryHeckeIndex
--- Extracted by StaticSplit

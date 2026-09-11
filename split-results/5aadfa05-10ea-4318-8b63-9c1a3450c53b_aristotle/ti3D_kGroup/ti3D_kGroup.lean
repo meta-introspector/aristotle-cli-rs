@@ -1,2 +1,0 @@
--- Declaration: ti3D_kGroup
--- Extracted by StaticSplit

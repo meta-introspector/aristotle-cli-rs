@@ -1,2 +1,0 @@
--- Declaration: scaleTowerDAG_strictly_increasing
--- Extracted by StaticSplit

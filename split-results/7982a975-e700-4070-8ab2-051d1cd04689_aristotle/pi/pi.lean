@@ -1,2 +1,0 @@
--- Declaration: pi
--- Extracted by StaticSplit

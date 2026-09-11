@@ -1,2 +1,0 @@
--- Declaration: NDProof.sound
--- Extracted by StaticSplit

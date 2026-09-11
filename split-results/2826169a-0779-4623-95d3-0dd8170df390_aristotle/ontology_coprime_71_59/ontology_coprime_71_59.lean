@@ -1,2 +1,0 @@
--- Declaration: ontology_coprime_71_59
--- Extracted by StaticSplit

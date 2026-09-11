@@ -1,2 +1,0 @@
--- Declaration: massGrading_c2
--- Extracted by StaticSplit

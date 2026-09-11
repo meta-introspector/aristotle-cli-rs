@@ -1,2 +1,0 @@
--- Declaration: encodeFiber
--- Extracted by StaticSplit

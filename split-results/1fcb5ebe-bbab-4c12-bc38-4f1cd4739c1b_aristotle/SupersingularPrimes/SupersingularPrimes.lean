@@ -1,2 +1,0 @@
--- Declaration: SupersingularPrimes
--- Extracted by StaticSplit

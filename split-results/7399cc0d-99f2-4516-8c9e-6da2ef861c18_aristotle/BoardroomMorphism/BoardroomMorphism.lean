@@ -1,2 +1,0 @@
--- Declaration: BoardroomMorphism
--- Extracted by StaticSplit

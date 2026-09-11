@@ -1,2 +1,0 @@
--- Declaration: TypeDefnMap
--- Extracted by StaticSplit

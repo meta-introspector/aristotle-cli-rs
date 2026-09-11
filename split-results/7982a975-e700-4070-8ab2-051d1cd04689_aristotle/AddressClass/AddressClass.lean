@@ -1,2 +1,0 @@
--- Declaration: AddressClass
--- Extracted by StaticSplit

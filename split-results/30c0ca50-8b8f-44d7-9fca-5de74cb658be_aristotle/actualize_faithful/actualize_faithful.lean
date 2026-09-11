@@ -1,2 +1,0 @@
--- Declaration: actualize_faithful
--- Extracted by StaticSplit

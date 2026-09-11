@@ -1,2 +1,0 @@
--- Declaration: rs_fault_tolerance
--- Extracted by StaticSplit

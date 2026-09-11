@@ -1,2 +1,0 @@
--- Declaration: Nat
--- Extracted by StaticSplit

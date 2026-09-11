@@ -1,2 +1,0 @@
--- Declaration: hash_sol_get_clock_sysvar
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: PrecedentLog.patternCount
--- Extracted by StaticSplit

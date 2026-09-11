@@ -1,2 +1,0 @@
--- Declaration: monster_order_via_axes
--- Extracted by StaticSplit

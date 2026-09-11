@@ -1,2 +1,0 @@
--- Declaration: mckay_coefficient_not_ssp_smooth
--- Extracted by StaticSplit

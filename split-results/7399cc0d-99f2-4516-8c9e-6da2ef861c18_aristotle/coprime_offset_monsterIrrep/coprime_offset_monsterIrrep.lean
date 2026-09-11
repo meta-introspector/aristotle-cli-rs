@@ -1,2 +1,0 @@
--- Declaration: coprime_offset_monsterIrrep
--- Extracted by StaticSplit

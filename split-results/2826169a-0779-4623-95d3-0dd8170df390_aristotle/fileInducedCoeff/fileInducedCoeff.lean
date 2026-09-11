@@ -1,2 +1,0 @@
--- Declaration: fileInducedCoeff
--- Extracted by StaticSplit

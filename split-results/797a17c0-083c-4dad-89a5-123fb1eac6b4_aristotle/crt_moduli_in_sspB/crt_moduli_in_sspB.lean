@@ -1,2 +1,0 @@
--- Declaration: crt_moduli_in_sspB
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: qCount
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: crt_product_is_irrep
--- Extracted by StaticSplit

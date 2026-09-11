@@ -1,2 +1,0 @@
--- Declaration: cl07_omega_sq
--- Extracted by StaticSplit

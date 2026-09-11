@@ -1,2 +1,0 @@
--- Declaration: concreteDAOGov
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ofSyn
--- Extracted by StaticSplit

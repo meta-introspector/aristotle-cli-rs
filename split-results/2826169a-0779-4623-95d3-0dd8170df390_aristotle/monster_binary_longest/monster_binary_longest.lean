@@ -1,2 +1,0 @@
--- Declaration: monster_binary_longest
--- Extracted by StaticSplit

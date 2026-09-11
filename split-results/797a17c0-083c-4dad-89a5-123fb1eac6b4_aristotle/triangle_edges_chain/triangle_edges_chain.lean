@@ -1,2 +1,0 @@
--- Declaration: triangle_edges_chain
--- Extracted by StaticSplit

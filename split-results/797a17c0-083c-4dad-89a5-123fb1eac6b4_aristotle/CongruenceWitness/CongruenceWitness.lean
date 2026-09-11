@@ -1,2 +1,0 @@
--- Declaration: CongruenceWitness
--- Extracted by StaticSplit

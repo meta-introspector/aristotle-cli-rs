@@ -1,2 +1,0 @@
--- Declaration: monster_cc_factored
--- Extracted by StaticSplit

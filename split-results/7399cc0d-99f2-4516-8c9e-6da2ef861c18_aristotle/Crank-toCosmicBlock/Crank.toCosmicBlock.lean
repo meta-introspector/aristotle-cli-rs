@@ -1,2 +1,0 @@
--- Declaration: Crank.toCosmicBlock
--- Extracted by StaticSplit

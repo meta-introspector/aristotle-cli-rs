@@ -1,2 +1,0 @@
--- Declaration: azKGroupIsTrivial
--- Extracted by StaticSplit

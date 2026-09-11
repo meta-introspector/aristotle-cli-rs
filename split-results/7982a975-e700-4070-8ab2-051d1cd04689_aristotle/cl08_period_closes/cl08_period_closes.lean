@@ -1,2 +1,0 @@
--- Declaration: cl08_period_closes
--- Extracted by StaticSplit

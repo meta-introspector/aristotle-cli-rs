@@ -1,2 +1,0 @@
--- Declaration: finrank_cechH1
--- Extracted by StaticSplit

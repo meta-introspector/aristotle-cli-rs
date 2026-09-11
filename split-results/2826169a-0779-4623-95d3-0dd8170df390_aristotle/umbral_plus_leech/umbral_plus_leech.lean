@@ -1,2 +1,0 @@
--- Declaration: umbral_plus_leech
--- Extracted by StaticSplit

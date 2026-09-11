@@ -1,2 +1,0 @@
--- Declaration: itil_transition_monotone
--- Extracted by StaticSplit

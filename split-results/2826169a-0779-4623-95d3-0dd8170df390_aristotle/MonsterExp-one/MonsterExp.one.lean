@@ -1,2 +1,0 @@
--- Declaration: MonsterExp.one
--- Extracted by StaticSplit

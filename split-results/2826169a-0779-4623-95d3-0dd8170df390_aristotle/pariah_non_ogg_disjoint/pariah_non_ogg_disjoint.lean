@@ -1,2 +1,0 @@
--- Declaration: pariah_non_ogg_disjoint
--- Extracted by StaticSplit

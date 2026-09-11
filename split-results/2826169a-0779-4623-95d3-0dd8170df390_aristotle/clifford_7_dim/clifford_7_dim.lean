@@ -1,2 +1,0 @@
--- Declaration: clifford_7_dim
--- Extracted by StaticSplit

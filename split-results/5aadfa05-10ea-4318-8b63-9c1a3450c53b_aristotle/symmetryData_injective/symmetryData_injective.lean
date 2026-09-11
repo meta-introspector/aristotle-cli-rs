@@ -1,2 +1,0 @@
--- Declaration: symmetryData_injective
--- Extracted by StaticSplit

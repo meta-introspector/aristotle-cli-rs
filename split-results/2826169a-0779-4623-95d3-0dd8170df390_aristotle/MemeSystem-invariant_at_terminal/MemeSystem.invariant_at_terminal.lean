@@ -1,2 +1,0 @@
--- Declaration: MemeSystem.invariant_at_terminal
--- Extracted by StaticSplit

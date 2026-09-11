@@ -1,2 +1,0 @@
--- Declaration: two_three_dominant_in_monster
--- Extracted by StaticSplit

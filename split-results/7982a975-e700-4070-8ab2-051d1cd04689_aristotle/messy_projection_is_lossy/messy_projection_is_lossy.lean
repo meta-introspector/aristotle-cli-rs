@@ -1,2 +1,0 @@
--- Declaration: messy_projection_is_lossy
--- Extracted by StaticSplit

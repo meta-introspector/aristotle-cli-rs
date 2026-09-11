@@ -1,2 +1,0 @@
--- Declaration: bootstrapEmoji_chart59_correct
--- Extracted by StaticSplit

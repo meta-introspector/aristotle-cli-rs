@@ -1,2 +1,0 @@
--- Declaration: ramanujan_tau_mult_2_5
--- Extracted by StaticSplit

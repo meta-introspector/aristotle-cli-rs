@@ -1,2 +1,0 @@
--- Declaration: stalk_solar
--- Extracted by StaticSplit

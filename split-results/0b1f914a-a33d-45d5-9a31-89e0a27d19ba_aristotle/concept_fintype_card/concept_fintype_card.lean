@@ -1,2 +1,0 @@
--- Declaration: concept_fintype_card
--- Extracted by StaticSplit

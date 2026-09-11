@@ -1,2 +1,0 @@
--- Declaration: BillJourney.passedBothChambers
--- Extracted by StaticSplit

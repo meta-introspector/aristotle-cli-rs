@@ -1,2 +1,0 @@
--- Declaration: Ecosystem
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: herosJourney
--- Extracted by StaticSplit

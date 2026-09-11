@@ -1,2 +1,0 @@
--- Declaration: FuzzWitness.isValid
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: every_cluster_reaches_four
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: boardRoomAddress_crt
--- Extracted by StaticSplit

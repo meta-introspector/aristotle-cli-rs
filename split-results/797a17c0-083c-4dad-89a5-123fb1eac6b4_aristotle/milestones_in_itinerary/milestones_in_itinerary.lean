@@ -1,2 +1,0 @@
--- Declaration: milestones_in_itinerary
--- Extracted by StaticSplit

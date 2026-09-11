@@ -1,2 +1,0 @@
--- Declaration: clean_projection_is_pure
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: card_indicesBelow
--- Extracted by StaticSplit

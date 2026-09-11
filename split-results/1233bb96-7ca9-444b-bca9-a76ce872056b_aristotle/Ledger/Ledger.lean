@@ -1,2 +1,0 @@
--- Declaration: Ledger
--- Extracted by StaticSplit

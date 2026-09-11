@@ -1,2 +1,0 @@
--- Declaration: InductiveRef
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: prime_lambencies
--- Extracted by StaticSplit

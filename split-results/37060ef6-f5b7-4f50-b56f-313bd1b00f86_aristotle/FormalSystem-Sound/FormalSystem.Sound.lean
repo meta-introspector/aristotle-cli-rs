@@ -1,2 +1,0 @@
--- Declaration: FormalSystem.Sound
--- Extracted by StaticSplit

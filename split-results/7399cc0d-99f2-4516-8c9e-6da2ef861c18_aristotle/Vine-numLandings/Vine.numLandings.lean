@@ -1,2 +1,0 @@
--- Declaration: Vine.numLandings
--- Extracted by StaticSplit

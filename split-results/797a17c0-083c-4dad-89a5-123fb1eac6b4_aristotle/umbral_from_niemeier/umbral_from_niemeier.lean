@@ -1,2 +1,0 @@
--- Declaration: umbral_from_niemeier
--- Extracted by StaticSplit

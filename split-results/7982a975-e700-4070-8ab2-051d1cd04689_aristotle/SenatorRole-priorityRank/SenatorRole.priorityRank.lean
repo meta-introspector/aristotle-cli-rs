@@ -1,2 +1,0 @@
--- Declaration: SenatorRole.priorityRank
--- Extracted by StaticSplit

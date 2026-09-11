@@ -1,2 +1,0 @@
--- Declaration: ddc_implies_consistency
--- Extracted by StaticSplit

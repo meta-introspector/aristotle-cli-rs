@@ -1,2 +1,0 @@
--- Declaration: bottHecke_injective
--- Extracted by StaticSplit

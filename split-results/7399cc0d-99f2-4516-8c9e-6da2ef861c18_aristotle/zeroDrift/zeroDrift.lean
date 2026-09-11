@@ -1,2 +1,0 @@
--- Declaration: zeroDrift
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: short_vectors_double
--- Extracted by StaticSplit

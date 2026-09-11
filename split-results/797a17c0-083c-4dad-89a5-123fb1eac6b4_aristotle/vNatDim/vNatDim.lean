@@ -1,2 +1,0 @@
--- Declaration: vNatDim
--- Extracted by StaticSplit

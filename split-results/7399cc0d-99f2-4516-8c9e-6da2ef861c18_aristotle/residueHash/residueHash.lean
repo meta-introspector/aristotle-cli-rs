@@ -1,2 +1,0 @@
--- Declaration: residueHash
--- Extracted by StaticSplit

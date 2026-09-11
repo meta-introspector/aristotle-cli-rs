@@ -1,2 +1,0 @@
--- Declaration: splitMod3_sdimH1
--- Extracted by StaticSplit

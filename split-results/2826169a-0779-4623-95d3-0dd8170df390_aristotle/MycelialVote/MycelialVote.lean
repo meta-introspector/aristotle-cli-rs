@@ -1,2 +1,0 @@
--- Declaration: MycelialVote
--- Extracted by StaticSplit

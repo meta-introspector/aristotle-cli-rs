@@ -1,2 +1,0 @@
--- Declaration: bottClass_phase0
--- Extracted by StaticSplit

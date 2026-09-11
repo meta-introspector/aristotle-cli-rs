@@ -1,2 +1,0 @@
--- Declaration: ShipLogEntry
--- Extracted by StaticSplit

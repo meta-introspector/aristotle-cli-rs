@@ -1,2 +1,0 @@
--- Declaration: monodromy_equals_crossing
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: selfEncodingPoint
--- Extracted by StaticSplit

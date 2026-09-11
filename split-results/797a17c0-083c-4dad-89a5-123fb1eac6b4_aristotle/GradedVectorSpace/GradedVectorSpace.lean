@@ -1,2 +1,0 @@
--- Declaration: GradedVectorSpace
--- Extracted by StaticSplit

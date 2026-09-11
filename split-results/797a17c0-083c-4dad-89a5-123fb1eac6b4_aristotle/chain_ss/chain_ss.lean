@@ -1,2 +1,0 @@
--- Declaration: chain_ss
--- Extracted by StaticSplit

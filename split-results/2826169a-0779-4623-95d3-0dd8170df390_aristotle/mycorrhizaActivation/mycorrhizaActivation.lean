@@ -1,2 +1,0 @@
--- Declaration: mycorrhizaActivation
--- Extracted by StaticSplit

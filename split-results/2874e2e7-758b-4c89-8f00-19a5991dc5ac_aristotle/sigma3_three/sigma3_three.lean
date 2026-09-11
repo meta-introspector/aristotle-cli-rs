@@ -1,2 +1,0 @@
--- Declaration: sigma3_three
--- Extracted by StaticSplit

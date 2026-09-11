@@ -1,2 +1,0 @@
--- Declaration: clifford_tensor_dim
--- Extracted by StaticSplit

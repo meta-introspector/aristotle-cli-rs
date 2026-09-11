@@ -1,2 +1,0 @@
--- Declaration: Graph.layerOf
--- Extracted by StaticSplit

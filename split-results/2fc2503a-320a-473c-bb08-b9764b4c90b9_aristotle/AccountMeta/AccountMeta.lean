@@ -1,2 +1,0 @@
--- Declaration: AccountMeta
--- Extracted by StaticSplit

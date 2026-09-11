@@ -1,2 +1,0 @@
--- Declaration: containment_advance_monotone
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: quine_of_bott_fixed
--- Extracted by StaticSplit

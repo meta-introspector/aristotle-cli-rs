@@ -1,2 +1,0 @@
--- Declaration: moonshine_crt_equivariant
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: DASLCertificate.orbifoldTrace
--- Extracted by StaticSplit

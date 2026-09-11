@@ -1,2 +1,0 @@
--- Declaration: projectFiber_injective
--- Extracted by StaticSplit

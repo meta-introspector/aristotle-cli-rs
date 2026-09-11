@@ -1,2 +1,0 @@
--- Declaration: Fi22_order_factored
--- Extracted by StaticSplit

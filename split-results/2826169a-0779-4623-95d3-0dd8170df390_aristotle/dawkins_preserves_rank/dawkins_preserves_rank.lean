@@ -1,2 +1,0 @@
--- Declaration: dawkins_preserves_rank
--- Extracted by StaticSplit

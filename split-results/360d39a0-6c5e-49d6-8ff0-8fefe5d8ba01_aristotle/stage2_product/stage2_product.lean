@@ -1,2 +1,0 @@
--- Declaration: stage2_product
--- Extracted by StaticSplit

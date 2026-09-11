@@ -1,2 +1,0 @@
--- Declaration: metameme42_post_sub_length
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: eightStepStabilityProfile
--- Extracted by StaticSplit

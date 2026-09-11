@@ -1,2 +1,0 @@
--- Declaration: seed_product
--- Extracted by StaticSplit

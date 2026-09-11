@@ -1,2 +1,0 @@
--- Declaration: linkT71A
--- Extracted by StaticSplit

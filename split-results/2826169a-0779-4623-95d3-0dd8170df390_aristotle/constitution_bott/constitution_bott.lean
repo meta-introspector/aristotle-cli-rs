@@ -1,2 +1,0 @@
--- Declaration: constitution_bott
--- Extracted by StaticSplit

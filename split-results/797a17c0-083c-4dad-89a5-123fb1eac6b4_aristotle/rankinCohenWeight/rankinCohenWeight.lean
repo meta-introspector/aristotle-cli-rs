@@ -1,2 +1,0 @@
--- Declaration: rankinCohenWeight
--- Extracted by StaticSplit

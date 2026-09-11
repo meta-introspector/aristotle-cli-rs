@@ -1,2 +1,0 @@
--- Declaration: L2_7_sum_sq_degrees
--- Extracted by StaticSplit

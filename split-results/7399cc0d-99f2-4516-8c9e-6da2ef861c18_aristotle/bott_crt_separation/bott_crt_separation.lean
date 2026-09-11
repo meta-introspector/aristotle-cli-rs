@@ -1,2 +1,0 @@
--- Declaration: bott_crt_separation
--- Extracted by StaticSplit

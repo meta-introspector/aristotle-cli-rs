@@ -1,2 +1,0 @@
--- Declaration: kind_ofInt
--- Extracted by StaticSplit

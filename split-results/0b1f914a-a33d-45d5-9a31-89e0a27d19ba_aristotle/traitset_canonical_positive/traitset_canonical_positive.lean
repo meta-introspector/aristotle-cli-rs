@@ -1,2 +1,0 @@
--- Declaration: traitset_canonical_positive
--- Extracted by StaticSplit

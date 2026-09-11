@@ -1,2 +1,0 @@
--- Declaration: smooth23_pos
--- Extracted by StaticSplit

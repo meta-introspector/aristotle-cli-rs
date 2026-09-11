@@ -1,2 +1,0 @@
--- Declaration: VibeStepRecord.addressShift
--- Extracted by StaticSplit

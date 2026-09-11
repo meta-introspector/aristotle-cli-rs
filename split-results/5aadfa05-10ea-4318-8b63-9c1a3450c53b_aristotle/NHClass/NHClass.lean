@@ -1,2 +1,0 @@
--- Declaration: NHClass
--- Extracted by StaticSplit

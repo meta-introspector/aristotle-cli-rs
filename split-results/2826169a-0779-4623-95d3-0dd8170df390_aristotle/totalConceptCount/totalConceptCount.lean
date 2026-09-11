@@ -1,2 +1,0 @@
--- Declaration: totalConceptCount
--- Extracted by StaticSplit

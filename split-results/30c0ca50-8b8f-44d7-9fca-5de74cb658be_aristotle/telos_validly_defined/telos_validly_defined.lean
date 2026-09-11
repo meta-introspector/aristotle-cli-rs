@@ -1,2 +1,0 @@
--- Declaration: telos_validly_defined
--- Extracted by StaticSplit

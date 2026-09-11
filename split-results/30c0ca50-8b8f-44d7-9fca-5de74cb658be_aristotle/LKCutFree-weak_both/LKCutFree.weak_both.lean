@@ -1,2 +1,0 @@
--- Declaration: LKCutFree.weak_both
--- Extracted by StaticSplit

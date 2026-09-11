@@ -1,2 +1,0 @@
--- Declaration: gap_ratio
--- Extracted by StaticSplit

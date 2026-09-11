@@ -1,2 +1,0 @@
--- Declaration: theOrigin
--- Extracted by StaticSplit

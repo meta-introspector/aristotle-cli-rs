@@ -1,2 +1,0 @@
--- Declaration: unsound_goedel_no_incompleteness
--- Extracted by StaticSplit

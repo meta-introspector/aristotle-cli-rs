@@ -1,2 +1,0 @@
--- Declaration: selfLifting_chart71_visible
--- Extracted by StaticSplit

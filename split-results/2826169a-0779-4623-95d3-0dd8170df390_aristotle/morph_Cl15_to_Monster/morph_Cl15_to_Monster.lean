@@ -1,2 +1,0 @@
--- Declaration: morph_Cl15_to_Monster
--- Extracted by StaticSplit

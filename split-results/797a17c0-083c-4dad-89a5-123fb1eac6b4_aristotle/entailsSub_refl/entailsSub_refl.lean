@@ -1,2 +1,0 @@
--- Declaration: entailsSub_refl
--- Extracted by StaticSplit

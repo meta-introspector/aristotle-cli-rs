@@ -1,2 +1,0 @@
--- Declaration: shard_prime_supersingular
--- Extracted by StaticSplit

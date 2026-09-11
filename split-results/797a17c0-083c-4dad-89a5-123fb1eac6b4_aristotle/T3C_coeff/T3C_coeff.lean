@@ -1,2 +1,0 @@
--- Declaration: T3C_coeff
--- Extracted by StaticSplit

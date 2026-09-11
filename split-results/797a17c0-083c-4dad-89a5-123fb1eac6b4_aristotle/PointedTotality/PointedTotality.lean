@@ -1,2 +1,0 @@
--- Declaration: PointedTotality
--- Extracted by StaticSplit

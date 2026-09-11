@@ -1,2 +1,0 @@
--- Declaration: mind_is_coatomic
--- Extracted by StaticSplit

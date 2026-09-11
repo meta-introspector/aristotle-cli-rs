@@ -1,2 +1,0 @@
--- Declaration: review_distinct_from_chapter5
--- Extracted by StaticSplit

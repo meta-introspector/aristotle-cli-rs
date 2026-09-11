@@ -1,2 +1,0 @@
--- Declaration: bottCoil_phase_periodic
--- Extracted by StaticSplit

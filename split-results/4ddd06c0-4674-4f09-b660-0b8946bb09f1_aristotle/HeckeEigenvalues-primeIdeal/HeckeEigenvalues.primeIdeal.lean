@@ -1,2 +1,0 @@
--- Declaration: HeckeEigenvalues.primeIdeal
--- Extracted by StaticSplit

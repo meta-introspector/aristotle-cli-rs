@@ -1,2 +1,0 @@
--- Declaration: struct_repr_count
--- Extracted by StaticSplit

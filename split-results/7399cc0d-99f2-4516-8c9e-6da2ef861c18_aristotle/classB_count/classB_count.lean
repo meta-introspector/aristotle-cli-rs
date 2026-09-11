@@ -1,2 +1,0 @@
--- Declaration: classB_count
--- Extracted by StaticSplit

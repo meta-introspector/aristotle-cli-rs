@@ -1,2 +1,0 @@
--- Declaration: tensor_unit_mult
--- Extracted by StaticSplit

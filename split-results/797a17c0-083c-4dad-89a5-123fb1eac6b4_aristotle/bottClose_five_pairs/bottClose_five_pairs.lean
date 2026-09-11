@@ -1,2 +1,0 @@
--- Declaration: bottClose_five_pairs
--- Extracted by StaticSplit

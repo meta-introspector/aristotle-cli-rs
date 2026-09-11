@@ -1,2 +1,0 @@
--- Declaration: leech_theta_identity_q3
--- Extracted by StaticSplit

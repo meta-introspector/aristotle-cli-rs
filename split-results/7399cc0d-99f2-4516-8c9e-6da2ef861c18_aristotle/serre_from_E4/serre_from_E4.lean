@@ -1,2 +1,0 @@
--- Declaration: serre_from_E4
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: CambridgeAnomalyData
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: srinivasaJourney
--- Extracted by StaticSplit

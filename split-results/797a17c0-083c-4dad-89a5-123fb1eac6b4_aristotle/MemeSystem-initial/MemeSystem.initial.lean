@@ -1,2 +1,0 @@
--- Declaration: MemeSystem.initial
--- Extracted by StaticSplit

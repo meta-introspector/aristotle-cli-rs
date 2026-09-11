@@ -1,2 +1,0 @@
--- Declaration: bottCoil_clifford_periodic
--- Extracted by StaticSplit

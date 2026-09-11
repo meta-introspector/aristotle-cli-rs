@@ -1,2 +1,0 @@
--- Declaration: morphismRegistry
--- Extracted by StaticSplit

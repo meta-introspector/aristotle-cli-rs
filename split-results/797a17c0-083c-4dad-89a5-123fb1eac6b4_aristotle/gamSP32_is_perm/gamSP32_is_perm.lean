@@ -1,2 +1,0 @@
--- Declaration: gamSP32_is_perm
--- Extracted by StaticSplit

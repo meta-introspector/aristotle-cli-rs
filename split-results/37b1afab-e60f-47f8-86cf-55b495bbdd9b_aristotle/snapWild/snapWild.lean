@@ -1,2 +1,0 @@
--- Declaration: snapWild
--- Extracted by StaticSplit

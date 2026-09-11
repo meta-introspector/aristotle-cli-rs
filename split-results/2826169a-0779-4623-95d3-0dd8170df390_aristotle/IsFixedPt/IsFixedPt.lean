@@ -1,2 +1,0 @@
--- Declaration: IsFixedPt
--- Extracted by StaticSplit

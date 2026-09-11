@@ -1,2 +1,0 @@
--- Declaration: WindowShape.narrow
--- Extracted by StaticSplit

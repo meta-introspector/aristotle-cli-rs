@@ -1,2 +1,0 @@
--- Declaration: modus_ponens_is_application
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: FungalLifecyclePhase.toJourneyPhase
--- Extracted by StaticSplit

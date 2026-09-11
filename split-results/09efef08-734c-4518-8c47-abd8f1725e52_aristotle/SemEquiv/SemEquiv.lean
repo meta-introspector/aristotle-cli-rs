@@ -1,2 +1,0 @@
--- Declaration: SemEquiv
--- Extracted by StaticSplit

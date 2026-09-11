@@ -1,2 +1,0 @@
--- Declaration: senate_threshold_gap
--- Extracted by StaticSplit

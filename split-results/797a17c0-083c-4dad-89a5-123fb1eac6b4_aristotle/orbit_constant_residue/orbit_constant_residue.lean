@@ -1,2 +1,0 @@
--- Declaration: orbit_constant_residue
--- Extracted by StaticSplit

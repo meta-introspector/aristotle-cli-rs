@@ -1,2 +1,0 @@
--- Declaration: monsterIrrep_mod8
--- Extracted by StaticSplit

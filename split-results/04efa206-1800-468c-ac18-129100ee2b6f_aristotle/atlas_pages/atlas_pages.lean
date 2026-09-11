@@ -1,2 +1,0 @@
--- Declaration: atlas_pages
--- Extracted by StaticSplit

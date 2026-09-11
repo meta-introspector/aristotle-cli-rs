@@ -1,2 +1,0 @@
--- Declaration: Comonad
--- Extracted by StaticSplit

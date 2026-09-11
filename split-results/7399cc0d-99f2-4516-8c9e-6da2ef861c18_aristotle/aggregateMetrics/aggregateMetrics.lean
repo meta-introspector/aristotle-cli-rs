@@ -1,2 +1,0 @@
--- Declaration: aggregateMetrics
--- Extracted by StaticSplit

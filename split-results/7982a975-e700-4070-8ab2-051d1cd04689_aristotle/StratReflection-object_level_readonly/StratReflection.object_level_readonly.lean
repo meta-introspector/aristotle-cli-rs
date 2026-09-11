@@ -1,2 +1,0 @@
--- Declaration: StratReflection.object_level_readonly
--- Extracted by StaticSplit

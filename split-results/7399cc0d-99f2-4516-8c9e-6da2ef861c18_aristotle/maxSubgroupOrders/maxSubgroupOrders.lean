@@ -1,2 +1,0 @@
--- Declaration: maxSubgroupOrders
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: museEigenvalue
--- Extracted by StaticSplit

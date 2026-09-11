@@ -1,2 +1,0 @@
--- Declaration: charStep
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: resClassProfile_mod6
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: eq_iff_toNat_eq
--- Extracted by StaticSplit

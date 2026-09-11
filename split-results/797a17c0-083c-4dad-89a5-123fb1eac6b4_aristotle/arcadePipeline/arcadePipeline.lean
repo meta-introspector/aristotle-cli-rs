@@ -1,2 +1,0 @@
--- Declaration: arcadePipeline
--- Extracted by StaticSplit

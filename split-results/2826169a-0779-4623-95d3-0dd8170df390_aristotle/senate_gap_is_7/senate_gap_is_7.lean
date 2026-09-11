@@ -1,2 +1,0 @@
--- Declaration: senate_gap_is_7
--- Extracted by StaticSplit

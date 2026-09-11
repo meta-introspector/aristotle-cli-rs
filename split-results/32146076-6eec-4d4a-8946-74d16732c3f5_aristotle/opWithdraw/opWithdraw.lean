@@ -1,2 +1,0 @@
--- Declaration: opWithdraw
--- Extracted by StaticSplit

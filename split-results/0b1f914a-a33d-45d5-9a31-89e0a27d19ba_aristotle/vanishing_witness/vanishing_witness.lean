@@ -1,2 +1,0 @@
--- Declaration: vanishing_witness
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: mockProve_hard
--- Extracted by StaticSplit

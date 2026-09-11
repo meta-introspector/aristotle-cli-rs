@@ -1,2 +1,0 @@
--- Declaration: selfLifting_dimension
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: heckeTransported_Spoke
--- Extracted by StaticSplit

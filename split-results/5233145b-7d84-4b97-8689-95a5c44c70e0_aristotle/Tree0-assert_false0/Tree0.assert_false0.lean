@@ -1,2 +1,0 @@
--- Declaration: Tree0.assert_false0
--- Extracted by StaticSplit

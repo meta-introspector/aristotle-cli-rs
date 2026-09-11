@@ -1,2 +1,0 @@
--- Declaration: isComplexU8_eq
--- Extracted by StaticSplit

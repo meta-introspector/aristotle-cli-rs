@@ -1,2 +1,0 @@
--- Declaration: TheoremConcept
--- Extracted by StaticSplit

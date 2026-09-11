@@ -1,2 +1,0 @@
--- Declaration: not_final_if_not_consummated
--- Extracted by StaticSplit

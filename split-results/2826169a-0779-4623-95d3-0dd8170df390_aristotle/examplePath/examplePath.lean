@@ -1,2 +1,0 @@
--- Declaration: examplePath
--- Extracted by StaticSplit

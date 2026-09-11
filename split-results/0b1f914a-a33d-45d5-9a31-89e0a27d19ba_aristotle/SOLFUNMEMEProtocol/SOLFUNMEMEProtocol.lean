@@ -1,2 +1,0 @@
--- Declaration: SOLFUNMEMEProtocol
--- Extracted by StaticSplit

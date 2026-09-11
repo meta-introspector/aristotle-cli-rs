@@ -1,2 +1,0 @@
--- Declaration: mvs_arithmetic_space
--- Extracted by StaticSplit

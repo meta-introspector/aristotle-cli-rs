@@ -1,2 +1,0 @@
--- Declaration: bott_trajectory
--- Extracted by StaticSplit

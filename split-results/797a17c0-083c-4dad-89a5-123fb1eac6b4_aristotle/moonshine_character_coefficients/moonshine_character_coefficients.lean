@@ -1,2 +1,0 @@
--- Declaration: moonshine_character_coefficients
--- Extracted by StaticSplit

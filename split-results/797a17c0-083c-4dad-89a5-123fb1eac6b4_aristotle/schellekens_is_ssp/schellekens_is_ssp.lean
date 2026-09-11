@@ -1,2 +1,0 @@
--- Declaration: schellekens_is_ssp
--- Extracted by StaticSplit

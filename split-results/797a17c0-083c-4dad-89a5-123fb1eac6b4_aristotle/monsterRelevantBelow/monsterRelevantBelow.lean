@@ -1,2 +1,0 @@
--- Declaration: monsterRelevantBelow
--- Extracted by StaticSplit

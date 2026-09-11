@@ -1,2 +1,0 @@
--- Declaration: dmz_is_trustworthy
--- Extracted by StaticSplit

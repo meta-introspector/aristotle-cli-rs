@@ -1,2 +1,0 @@
--- Declaration: proofSearch_tautology
--- Extracted by StaticSplit

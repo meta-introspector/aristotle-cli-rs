@@ -1,2 +1,0 @@
--- Declaration: delta_obj_unique
--- Extracted by StaticSplit

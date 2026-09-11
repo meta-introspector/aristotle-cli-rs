@@ -1,2 +1,0 @@
--- Declaration: LiftProject.comp
--- Extracted by StaticSplit

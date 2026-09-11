@@ -1,2 +1,0 @@
--- Declaration: IrrepDims
--- Extracted by StaticSplit

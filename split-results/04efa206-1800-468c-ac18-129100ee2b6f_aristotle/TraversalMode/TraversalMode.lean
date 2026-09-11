@@ -1,2 +1,0 @@
--- Declaration: TraversalMode
--- Extracted by StaticSplit

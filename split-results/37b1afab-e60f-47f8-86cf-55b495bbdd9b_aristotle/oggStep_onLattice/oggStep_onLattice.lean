@@ -1,2 +1,0 @@
--- Declaration: oggStep_onLattice
--- Extracted by StaticSplit

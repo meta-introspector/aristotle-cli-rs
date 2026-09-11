@@ -1,2 +1,0 @@
--- Declaration: orderGL
--- Extracted by StaticSplit

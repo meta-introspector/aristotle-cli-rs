@@ -1,2 +1,0 @@
--- Declaration: firstReflection_initial
--- Extracted by StaticSplit

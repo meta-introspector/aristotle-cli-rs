@@ -1,2 +1,0 @@
--- Declaration: structured_rule_bars_unlisted
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MonsterProtocolData
--- Extracted by StaticSplit

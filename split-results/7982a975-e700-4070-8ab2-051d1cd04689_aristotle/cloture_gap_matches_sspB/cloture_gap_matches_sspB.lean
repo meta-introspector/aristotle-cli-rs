@@ -1,2 +1,0 @@
--- Declaration: cloture_gap_matches_sspB
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: solved_not_all_informal
--- Extracted by StaticSplit

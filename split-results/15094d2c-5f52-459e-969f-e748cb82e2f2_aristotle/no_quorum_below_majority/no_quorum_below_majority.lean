@@ -1,2 +1,0 @@
--- Declaration: no_quorum_below_majority
--- Extracted by StaticSplit

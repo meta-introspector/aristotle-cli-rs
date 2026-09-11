@@ -1,2 +1,0 @@
--- Declaration: iterateExtend
--- Extracted by StaticSplit

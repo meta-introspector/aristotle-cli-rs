@@ -1,2 +1,0 @@
--- Declaration: sigma_prime_power_eq_geom_sum
--- Extracted by StaticSplit

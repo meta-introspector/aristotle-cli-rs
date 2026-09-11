@@ -1,2 +1,0 @@
--- Declaration: exampleNestedCID
--- Extracted by StaticSplit

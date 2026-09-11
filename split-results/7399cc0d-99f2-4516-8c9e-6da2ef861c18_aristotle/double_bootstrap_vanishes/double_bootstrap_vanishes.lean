@@ -1,2 +1,0 @@
--- Declaration: double_bootstrap_vanishes
--- Extracted by StaticSplit

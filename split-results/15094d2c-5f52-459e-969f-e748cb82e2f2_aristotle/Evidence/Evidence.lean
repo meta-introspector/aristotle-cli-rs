@@ -1,2 +1,0 @@
--- Declaration: Evidence
--- Extracted by StaticSplit

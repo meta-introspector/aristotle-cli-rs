@@ -1,2 +1,0 @@
--- Declaration: steady_state_response
--- Extracted by StaticSplit

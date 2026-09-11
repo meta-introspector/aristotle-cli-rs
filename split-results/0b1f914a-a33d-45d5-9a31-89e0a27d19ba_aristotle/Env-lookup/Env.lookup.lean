@@ -1,2 +1,0 @@
--- Declaration: Env.lookup
--- Extracted by StaticSplit

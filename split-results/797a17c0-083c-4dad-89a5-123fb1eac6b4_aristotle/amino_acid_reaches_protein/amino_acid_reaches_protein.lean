@@ -1,2 +1,0 @@
--- Declaration: amino_acid_reaches_protein
--- Extracted by StaticSplit

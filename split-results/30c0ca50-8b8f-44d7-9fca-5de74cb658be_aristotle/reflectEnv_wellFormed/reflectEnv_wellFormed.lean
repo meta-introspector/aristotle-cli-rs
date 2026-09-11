@@ -1,2 +1,0 @@
--- Declaration: reflectEnv_wellFormed
--- Extracted by StaticSplit

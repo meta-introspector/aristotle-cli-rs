@@ -1,2 +1,0 @@
--- Declaration: Phi_injective
--- Extracted by StaticSplit

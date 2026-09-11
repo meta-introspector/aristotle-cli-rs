@@ -1,2 +1,0 @@
--- Declaration: clashMatrix
--- Extracted by StaticSplit

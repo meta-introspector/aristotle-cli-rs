@@ -1,2 +1,0 @@
--- Declaration: hash_abort
--- Extracted by StaticSplit

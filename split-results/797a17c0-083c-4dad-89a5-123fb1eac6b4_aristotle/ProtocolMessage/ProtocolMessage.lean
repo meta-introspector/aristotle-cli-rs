@@ -1,2 +1,0 @@
--- Declaration: ProtocolMessage
--- Extracted by StaticSplit

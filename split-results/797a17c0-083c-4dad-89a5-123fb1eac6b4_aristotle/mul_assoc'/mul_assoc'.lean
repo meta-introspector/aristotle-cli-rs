@@ -1,2 +1,0 @@
--- Declaration: mul_assoc'
--- Extracted by StaticSplit

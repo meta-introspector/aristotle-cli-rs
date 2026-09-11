@@ -1,2 +1,0 @@
--- Declaration: traj
--- Extracted by StaticSplit

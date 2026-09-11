@@ -1,2 +1,0 @@
--- Declaration: umbralGroup_Z2_card_A11_D7E6
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: unique_vanishing_mod71
--- Extracted by StaticSplit

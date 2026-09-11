@@ -1,2 +1,0 @@
--- Declaration: erdfa_coords
--- Extracted by StaticSplit

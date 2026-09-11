@@ -1,2 +1,0 @@
--- Declaration: OriginalJurisdictionCategory
--- Extracted by StaticSplit

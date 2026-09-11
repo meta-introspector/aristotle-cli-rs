@@ -1,2 +1,0 @@
--- Declaration: ClusterWorld
--- Extracted by StaticSplit

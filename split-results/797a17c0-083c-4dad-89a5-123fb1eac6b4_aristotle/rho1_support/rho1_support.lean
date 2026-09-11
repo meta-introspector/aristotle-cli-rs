@@ -1,2 +1,0 @@
--- Declaration: rho1_support
--- Extracted by StaticSplit

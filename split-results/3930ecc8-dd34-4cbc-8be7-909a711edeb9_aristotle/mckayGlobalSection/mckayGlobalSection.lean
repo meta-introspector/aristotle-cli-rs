@@ -1,2 +1,0 @@
--- Declaration: mckayGlobalSection
--- Extracted by StaticSplit

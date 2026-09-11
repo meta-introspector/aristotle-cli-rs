@@ -1,2 +1,0 @@
--- Declaration: splitOmegaParity
--- Extracted by StaticSplit

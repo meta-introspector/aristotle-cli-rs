@@ -1,2 +1,0 @@
--- Declaration: cross_domain_71_axis
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: weylGroupOrder
--- Extracted by StaticSplit

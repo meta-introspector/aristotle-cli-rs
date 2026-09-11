@@ -1,2 +1,0 @@
--- Declaration: commentWindowOpen
--- Extracted by StaticSplit

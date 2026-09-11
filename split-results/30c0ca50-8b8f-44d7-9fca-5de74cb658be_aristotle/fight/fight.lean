@@ -1,2 +1,0 @@
--- Declaration: fight
--- Extracted by StaticSplit

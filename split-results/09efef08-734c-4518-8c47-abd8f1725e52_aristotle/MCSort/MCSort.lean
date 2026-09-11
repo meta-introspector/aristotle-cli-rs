@@ -1,2 +1,0 @@
--- Declaration: MCSort
--- Extracted by StaticSplit

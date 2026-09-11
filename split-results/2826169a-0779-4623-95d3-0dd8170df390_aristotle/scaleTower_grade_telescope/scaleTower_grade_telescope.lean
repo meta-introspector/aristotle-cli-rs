@@ -1,2 +1,0 @@
--- Declaration: scaleTower_grade_telescope
--- Extracted by StaticSplit

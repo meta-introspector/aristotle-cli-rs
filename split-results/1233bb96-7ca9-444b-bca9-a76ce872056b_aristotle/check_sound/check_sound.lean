@@ -1,2 +1,0 @@
--- Declaration: check_sound
--- Extracted by StaticSplit

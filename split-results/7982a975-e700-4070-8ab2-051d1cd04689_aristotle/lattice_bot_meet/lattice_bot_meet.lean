@@ -1,2 +1,0 @@
--- Declaration: lattice_bot_meet
--- Extracted by StaticSplit

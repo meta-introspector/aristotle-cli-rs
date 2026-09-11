@@ -1,2 +1,0 @@
--- Declaration: e4_twice
--- Extracted by StaticSplit

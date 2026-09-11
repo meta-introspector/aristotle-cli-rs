@@ -1,2 +1,0 @@
--- Declaration: Byte.toChar
--- Extracted by StaticSplit

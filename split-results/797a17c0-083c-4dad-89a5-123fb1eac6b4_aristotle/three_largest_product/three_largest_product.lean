@@ -1,2 +1,0 @@
--- Declaration: three_largest_product
--- Extracted by StaticSplit

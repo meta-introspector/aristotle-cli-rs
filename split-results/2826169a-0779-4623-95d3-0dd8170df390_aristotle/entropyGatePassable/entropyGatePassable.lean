@@ -1,2 +1,0 @@
--- Declaration: entropyGatePassable
--- Extracted by StaticSplit

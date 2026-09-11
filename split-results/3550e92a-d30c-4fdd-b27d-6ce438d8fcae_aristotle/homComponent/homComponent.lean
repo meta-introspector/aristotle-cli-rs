@@ -1,2 +1,0 @@
--- Declaration: homComponent
--- Extracted by StaticSplit

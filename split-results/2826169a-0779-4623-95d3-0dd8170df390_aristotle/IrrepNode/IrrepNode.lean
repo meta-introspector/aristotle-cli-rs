@@ -1,2 +1,0 @@
--- Declaration: IrrepNode
--- Extracted by StaticSplit

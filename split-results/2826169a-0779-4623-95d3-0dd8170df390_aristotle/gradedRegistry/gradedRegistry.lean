@@ -1,2 +1,0 @@
--- Declaration: gradedRegistry
--- Extracted by StaticSplit

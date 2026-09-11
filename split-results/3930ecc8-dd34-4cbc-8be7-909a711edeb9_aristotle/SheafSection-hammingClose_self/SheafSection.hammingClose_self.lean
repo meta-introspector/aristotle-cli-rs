@@ -1,2 +1,0 @@
--- Declaration: SheafSection.hammingClose_self
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: scaleTower
--- Extracted by StaticSplit

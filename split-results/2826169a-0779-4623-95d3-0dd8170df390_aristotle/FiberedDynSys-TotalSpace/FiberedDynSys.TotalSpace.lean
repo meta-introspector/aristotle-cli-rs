@@ -1,2 +1,0 @@
--- Declaration: FiberedDynSys.TotalSpace
--- Extracted by StaticSplit

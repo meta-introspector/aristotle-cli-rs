@@ -1,2 +1,0 @@
--- Declaration: gapmap
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: exponentOne_block
--- Extracted by StaticSplit

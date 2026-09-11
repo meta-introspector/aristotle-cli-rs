@@ -1,2 +1,0 @@
--- Declaration: MonomythTrajectory
--- Extracted by StaticSplit

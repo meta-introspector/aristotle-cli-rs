@@ -1,2 +1,0 @@
--- Declaration: apiVersion
--- Extracted by StaticSplit

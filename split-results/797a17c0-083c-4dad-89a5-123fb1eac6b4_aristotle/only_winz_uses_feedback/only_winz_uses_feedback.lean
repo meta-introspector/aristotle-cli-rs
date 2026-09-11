@@ -1,2 +1,0 @@
--- Declaration: only_winz_uses_feedback
--- Extracted by StaticSplit

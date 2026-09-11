@@ -1,2 +1,0 @@
--- Declaration: Fibration
--- Extracted by StaticSplit

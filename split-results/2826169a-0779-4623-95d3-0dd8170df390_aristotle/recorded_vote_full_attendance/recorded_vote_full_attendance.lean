@@ -1,2 +1,0 @@
--- Declaration: recorded_vote_full_attendance
--- Extracted by StaticSplit

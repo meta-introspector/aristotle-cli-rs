@@ -1,2 +1,0 @@
--- Declaration: MultiMoonshinePipeline
--- Extracted by StaticSplit

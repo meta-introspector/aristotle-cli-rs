@@ -1,2 +1,0 @@
--- Declaration: cartPow_eight_bottGrade
--- Extracted by StaticSplit

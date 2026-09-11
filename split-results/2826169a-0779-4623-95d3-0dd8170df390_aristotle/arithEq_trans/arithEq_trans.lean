@@ -1,2 +1,0 @@
--- Declaration: arithEq_trans
--- Extracted by StaticSplit

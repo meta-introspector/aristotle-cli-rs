@@ -1,2 +1,0 @@
--- Declaration: aristotleTelos
--- Extracted by StaticSplit

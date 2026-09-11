@@ -1,2 +1,0 @@
--- Declaration: padic_norm_prime
--- Extracted by StaticSplit

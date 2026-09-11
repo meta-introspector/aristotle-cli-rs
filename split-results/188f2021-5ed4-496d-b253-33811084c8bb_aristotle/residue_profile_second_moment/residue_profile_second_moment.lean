@@ -1,2 +1,0 @@
--- Declaration: residue_profile_second_moment
--- Extracted by StaticSplit

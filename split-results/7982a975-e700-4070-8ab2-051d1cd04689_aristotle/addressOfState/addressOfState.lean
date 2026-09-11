@@ -1,2 +1,0 @@
--- Declaration: addressOfState
--- Extracted by StaticSplit

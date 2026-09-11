@@ -1,2 +1,0 @@
--- Declaration: primary_grid_dim
--- Extracted by StaticSplit

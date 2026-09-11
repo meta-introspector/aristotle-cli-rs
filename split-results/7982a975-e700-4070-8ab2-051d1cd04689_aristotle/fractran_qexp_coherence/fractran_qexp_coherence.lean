@@ -1,2 +1,0 @@
--- Declaration: fractran_qexp_coherence
--- Extracted by StaticSplit

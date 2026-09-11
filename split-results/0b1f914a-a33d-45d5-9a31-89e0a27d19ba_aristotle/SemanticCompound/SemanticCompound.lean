@@ -1,2 +1,0 @@
--- Declaration: SemanticCompound
--- Extracted by StaticSplit

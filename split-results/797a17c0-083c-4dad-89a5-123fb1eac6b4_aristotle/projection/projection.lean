@@ -1,2 +1,0 @@
--- Declaration: projection
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: superstringItinerary
--- Extracted by StaticSplit

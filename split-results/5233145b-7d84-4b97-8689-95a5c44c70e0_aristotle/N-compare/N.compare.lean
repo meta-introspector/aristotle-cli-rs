@@ -1,2 +1,0 @@
--- Declaration: N.compare
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: self_dot_crystal
--- Extracted by StaticSplit

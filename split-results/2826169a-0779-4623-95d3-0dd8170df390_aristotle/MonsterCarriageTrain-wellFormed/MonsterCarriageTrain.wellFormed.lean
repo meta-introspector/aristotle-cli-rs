@@ -1,2 +1,0 @@
--- Declaration: MonsterCarriageTrain.wellFormed
--- Extracted by StaticSplit

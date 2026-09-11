@@ -1,2 +1,0 @@
--- Declaration: meme_hierarchy_depth
--- Extracted by StaticSplit

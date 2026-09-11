@@ -1,2 +1,0 @@
--- Declaration: defaultShardMetadata_moduli_are_ssp
--- Extracted by StaticSplit

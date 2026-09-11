@@ -1,2 +1,0 @@
--- Declaration: Iso
--- Extracted by StaticSplit

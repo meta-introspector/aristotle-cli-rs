@@ -1,2 +1,0 @@
--- Declaration: BosonicSector
--- Extracted by StaticSplit

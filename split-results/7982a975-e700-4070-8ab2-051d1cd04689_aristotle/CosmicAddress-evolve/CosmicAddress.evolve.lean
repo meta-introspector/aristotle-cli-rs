@@ -1,2 +1,0 @@
--- Declaration: CosmicAddress.evolve
--- Extracted by StaticSplit

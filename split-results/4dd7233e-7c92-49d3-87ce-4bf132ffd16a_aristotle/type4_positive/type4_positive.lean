@@ -1,2 +1,0 @@
--- Declaration: type4_positive
--- Extracted by StaticSplit

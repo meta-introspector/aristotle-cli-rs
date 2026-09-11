@@ -1,2 +1,0 @@
--- Declaration: p_minus_mul_plus
--- Extracted by StaticSplit

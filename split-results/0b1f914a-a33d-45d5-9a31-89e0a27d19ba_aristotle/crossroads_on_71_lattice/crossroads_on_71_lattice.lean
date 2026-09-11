@@ -1,2 +1,0 @@
--- Declaration: crossroads_on_71_lattice
--- Extracted by StaticSplit

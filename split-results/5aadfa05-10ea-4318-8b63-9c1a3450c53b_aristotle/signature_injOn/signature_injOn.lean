@@ -1,2 +1,0 @@
--- Declaration: signature_injOn
--- Extracted by StaticSplit

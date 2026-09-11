@@ -1,2 +1,0 @@
--- Declaration: crankEquiv_symm
--- Extracted by StaticSplit

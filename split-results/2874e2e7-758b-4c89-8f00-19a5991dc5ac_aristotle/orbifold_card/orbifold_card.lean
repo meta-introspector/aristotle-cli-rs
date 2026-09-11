@@ -1,2 +1,0 @@
--- Declaration: orbifold_card
--- Extracted by StaticSplit

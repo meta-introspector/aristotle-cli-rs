@@ -1,2 +1,0 @@
--- Declaration: primes_below_37_are_ssp
--- Extracted by StaticSplit

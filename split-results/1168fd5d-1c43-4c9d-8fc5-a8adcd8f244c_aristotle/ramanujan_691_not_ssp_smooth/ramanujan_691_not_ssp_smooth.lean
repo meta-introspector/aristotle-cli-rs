@@ -1,2 +1,0 @@
--- Declaration: ramanujan_691_not_ssp_smooth
--- Extracted by StaticSplit

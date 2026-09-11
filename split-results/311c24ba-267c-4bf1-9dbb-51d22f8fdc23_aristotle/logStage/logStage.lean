@@ -1,2 +1,0 @@
--- Declaration: logStage
--- Extracted by StaticSplit

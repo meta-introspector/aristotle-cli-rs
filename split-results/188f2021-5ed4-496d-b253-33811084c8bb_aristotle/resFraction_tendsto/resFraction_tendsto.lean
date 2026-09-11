@@ -1,2 +1,0 @@
--- Declaration: resFraction_tendsto
--- Extracted by StaticSplit

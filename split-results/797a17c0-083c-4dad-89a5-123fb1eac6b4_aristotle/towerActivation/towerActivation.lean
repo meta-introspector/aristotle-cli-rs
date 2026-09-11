@@ -1,2 +1,0 @@
--- Declaration: towerActivation
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: KernelStore.empty
--- Extracted by StaticSplit

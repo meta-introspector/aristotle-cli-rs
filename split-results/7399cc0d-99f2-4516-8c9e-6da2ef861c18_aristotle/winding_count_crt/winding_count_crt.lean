@@ -1,2 +1,0 @@
--- Declaration: winding_count_crt
--- Extracted by StaticSplit

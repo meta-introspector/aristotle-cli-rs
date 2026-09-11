@@ -1,2 +1,0 @@
--- Declaration: ogg_observation
--- Extracted by StaticSplit

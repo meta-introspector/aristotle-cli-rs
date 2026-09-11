@@ -1,2 +1,0 @@
--- Declaration: tower_level0_prime
--- Extracted by StaticSplit

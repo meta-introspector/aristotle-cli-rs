@@ -1,2 +1,0 @@
--- Declaration: deltaCoeffs
--- Extracted by StaticSplit

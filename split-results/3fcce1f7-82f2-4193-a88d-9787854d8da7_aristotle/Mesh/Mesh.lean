@@ -1,2 +1,0 @@
--- Declaration: Mesh
--- Extracted by StaticSplit

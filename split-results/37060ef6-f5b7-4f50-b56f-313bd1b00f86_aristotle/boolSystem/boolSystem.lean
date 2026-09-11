@@ -1,2 +1,0 @@
--- Declaration: boolSystem
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: foundational_thinkers_in_math
--- Extracted by StaticSplit

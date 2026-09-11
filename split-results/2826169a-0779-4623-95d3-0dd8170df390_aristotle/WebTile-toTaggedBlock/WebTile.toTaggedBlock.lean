@@ -1,2 +1,0 @@
--- Declaration: WebTile.toTaggedBlock
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: NetworkGraph.isConnected
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: flagLattice_card
--- Extracted by StaticSplit

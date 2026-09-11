@@ -1,2 +1,0 @@
--- Declaration: weightSite_off_origin
--- Extracted by StaticSplit

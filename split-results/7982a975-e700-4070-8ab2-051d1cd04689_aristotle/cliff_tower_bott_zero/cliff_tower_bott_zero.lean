@@ -1,2 +1,0 @@
--- Declaration: cliff_tower_bott_zero
--- Extracted by StaticSplit

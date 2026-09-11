@@ -1,2 +1,0 @@
--- Declaration: imaginary_roots_have_mult
--- Extracted by StaticSplit

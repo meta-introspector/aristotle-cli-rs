@@ -1,2 +1,0 @@
--- Declaration: vacuum_grade_zero
--- Extracted by StaticSplit

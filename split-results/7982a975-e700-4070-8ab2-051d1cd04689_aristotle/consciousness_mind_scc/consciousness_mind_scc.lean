@@ -1,2 +1,0 @@
--- Declaration: consciousness_mind_scc
--- Extracted by StaticSplit

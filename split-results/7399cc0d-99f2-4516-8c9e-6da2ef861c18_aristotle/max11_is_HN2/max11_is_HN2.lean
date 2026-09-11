@@ -1,2 +1,0 @@
--- Declaration: max11_is_HN2
--- Extracted by StaticSplit

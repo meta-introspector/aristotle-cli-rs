@@ -1,2 +1,0 @@
--- Declaration: bias_strict_increase
--- Extracted by StaticSplit

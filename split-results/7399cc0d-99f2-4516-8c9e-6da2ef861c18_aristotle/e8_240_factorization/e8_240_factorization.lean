@@ -1,2 +1,0 @@
--- Declaration: e8_240_factorization
--- Extracted by StaticSplit

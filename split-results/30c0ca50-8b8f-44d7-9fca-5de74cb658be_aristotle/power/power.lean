@@ -1,2 +1,0 @@
--- Declaration: power
--- Extracted by StaticSplit

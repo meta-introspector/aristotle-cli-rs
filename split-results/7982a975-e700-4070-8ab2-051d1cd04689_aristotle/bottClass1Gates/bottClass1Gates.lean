@@ -1,2 +1,0 @@
--- Declaration: bottClass1Gates
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: teslaTriad
--- Extracted by StaticSplit

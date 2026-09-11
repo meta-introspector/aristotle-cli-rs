@@ -1,2 +1,0 @@
--- Declaration: reflectLevel
--- Extracted by StaticSplit

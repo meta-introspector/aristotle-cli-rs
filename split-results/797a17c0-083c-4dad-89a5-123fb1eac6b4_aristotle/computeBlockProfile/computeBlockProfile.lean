@@ -1,2 +1,0 @@
--- Declaration: computeBlockProfile
--- Extracted by StaticSplit

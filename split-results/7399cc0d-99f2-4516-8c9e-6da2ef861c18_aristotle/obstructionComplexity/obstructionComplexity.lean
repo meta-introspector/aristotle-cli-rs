@@ -1,2 +1,0 @@
--- Declaration: obstructionComplexity
--- Extracted by StaticSplit

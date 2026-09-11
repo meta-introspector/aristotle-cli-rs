@@ -1,2 +1,0 @@
--- Declaration: CoqN
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: vibeShift_assoc
--- Extracted by StaticSplit

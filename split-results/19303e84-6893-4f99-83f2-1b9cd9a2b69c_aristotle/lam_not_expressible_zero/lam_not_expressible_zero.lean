@@ -1,2 +1,0 @@
--- Declaration: lam_not_expressible_zero
--- Extracted by StaticSplit

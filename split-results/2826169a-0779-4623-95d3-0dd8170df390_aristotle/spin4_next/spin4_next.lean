@@ -1,2 +1,0 @@
--- Declaration: spin4_next
--- Extracted by StaticSplit

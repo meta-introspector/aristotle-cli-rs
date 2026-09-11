@@ -1,2 +1,0 @@
--- Declaration: integrated_address_card
--- Extracted by StaticSplit

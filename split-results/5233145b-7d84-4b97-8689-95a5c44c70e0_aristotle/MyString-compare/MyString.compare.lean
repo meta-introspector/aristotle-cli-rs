@@ -1,2 +1,0 @@
--- Declaration: MyString.compare
--- Extracted by StaticSplit

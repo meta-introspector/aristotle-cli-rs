@@ -1,2 +1,0 @@
--- Declaration: ogg_prime_onOggLattice
--- Extracted by StaticSplit

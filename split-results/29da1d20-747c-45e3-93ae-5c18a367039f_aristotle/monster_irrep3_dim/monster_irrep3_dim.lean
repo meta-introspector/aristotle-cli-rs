@@ -1,2 +1,0 @@
--- Declaration: monster_irrep3_dim
--- Extracted by StaticSplit

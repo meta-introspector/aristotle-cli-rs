@@ -1,2 +1,0 @@
--- Declaration: SheafMorphism.id_comp
--- Extracted by StaticSplit

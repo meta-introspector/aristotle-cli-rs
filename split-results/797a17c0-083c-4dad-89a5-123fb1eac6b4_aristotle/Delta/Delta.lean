@@ -1,2 +1,0 @@
--- Declaration: Delta
--- Extracted by StaticSplit

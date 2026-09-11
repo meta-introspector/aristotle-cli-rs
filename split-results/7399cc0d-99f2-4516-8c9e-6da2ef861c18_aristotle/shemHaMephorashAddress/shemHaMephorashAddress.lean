@@ -1,2 +1,0 @@
--- Declaration: shemHaMephorashAddress
--- Extracted by StaticSplit

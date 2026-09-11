@@ -1,2 +1,0 @@
--- Declaration: SL23_nirreps
--- Extracted by StaticSplit

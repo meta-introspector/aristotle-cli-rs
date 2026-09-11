@@ -1,2 +1,0 @@
--- Declaration: skibidi
--- Extracted by StaticSplit

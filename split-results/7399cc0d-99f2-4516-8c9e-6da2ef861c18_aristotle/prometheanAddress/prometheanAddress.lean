@@ -1,2 +1,0 @@
--- Declaration: prometheanAddress
--- Extracted by StaticSplit

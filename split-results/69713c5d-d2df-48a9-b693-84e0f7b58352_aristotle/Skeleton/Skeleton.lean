@@ -1,2 +1,0 @@
--- Declaration: Skeleton
--- Extracted by StaticSplit

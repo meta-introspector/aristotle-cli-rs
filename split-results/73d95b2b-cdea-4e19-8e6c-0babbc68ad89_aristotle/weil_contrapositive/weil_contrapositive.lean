@@ -1,2 +1,0 @@
--- Declaration: weil_contrapositive
--- Extracted by StaticSplit

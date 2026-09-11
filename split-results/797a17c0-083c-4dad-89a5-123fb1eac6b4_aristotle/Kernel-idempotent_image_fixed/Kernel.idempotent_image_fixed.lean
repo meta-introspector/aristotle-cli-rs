@@ -1,2 +1,0 @@
--- Declaration: Kernel.idempotent_image_fixed
--- Extracted by StaticSplit

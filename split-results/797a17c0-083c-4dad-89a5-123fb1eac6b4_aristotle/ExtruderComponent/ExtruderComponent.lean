@@ -1,2 +1,0 @@
--- Declaration: ExtruderComponent
--- Extracted by StaticSplit

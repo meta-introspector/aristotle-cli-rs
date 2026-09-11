@@ -1,2 +1,0 @@
--- Declaration: self_describing_small
--- Extracted by StaticSplit

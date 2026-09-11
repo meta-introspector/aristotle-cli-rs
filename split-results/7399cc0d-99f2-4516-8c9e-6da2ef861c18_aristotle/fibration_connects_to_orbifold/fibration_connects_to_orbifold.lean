@@ -1,2 +1,0 @@
--- Declaration: fibration_connects_to_orbifold
--- Extracted by StaticSplit

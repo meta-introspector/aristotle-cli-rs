@@ -1,2 +1,0 @@
--- Declaration: packResourceClaim
--- Extracted by StaticSplit

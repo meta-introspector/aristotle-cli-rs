@@ -1,2 +1,0 @@
--- Declaration: MonsterInstruction
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: horizonSafe
--- Extracted by StaticSplit

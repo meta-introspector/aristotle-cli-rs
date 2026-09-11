@@ -1,2 +1,0 @@
--- Declaration: CRTPair.reconstruct_snd
--- Extracted by StaticSplit

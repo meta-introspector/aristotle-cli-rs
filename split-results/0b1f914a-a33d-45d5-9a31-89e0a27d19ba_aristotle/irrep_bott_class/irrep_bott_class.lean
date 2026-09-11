@@ -1,2 +1,0 @@
--- Declaration: irrep_bott_class
--- Extracted by StaticSplit

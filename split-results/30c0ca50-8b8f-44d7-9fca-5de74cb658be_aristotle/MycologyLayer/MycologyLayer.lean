@@ -1,2 +1,0 @@
--- Declaration: MycologyLayer
--- Extracted by StaticSplit

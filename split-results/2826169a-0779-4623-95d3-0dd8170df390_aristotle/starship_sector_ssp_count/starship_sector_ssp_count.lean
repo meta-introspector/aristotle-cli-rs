@@ -1,2 +1,0 @@
--- Declaration: starship_sector_ssp_count
--- Extracted by StaticSplit

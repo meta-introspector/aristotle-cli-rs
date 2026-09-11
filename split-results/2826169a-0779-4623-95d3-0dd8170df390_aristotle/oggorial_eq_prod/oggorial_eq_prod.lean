@@ -1,2 +1,0 @@
--- Declaration: oggorial_eq_prod
--- Extracted by StaticSplit

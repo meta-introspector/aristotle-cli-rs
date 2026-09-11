@@ -1,2 +1,0 @@
--- Declaration: theCertificate
--- Extracted by StaticSplit

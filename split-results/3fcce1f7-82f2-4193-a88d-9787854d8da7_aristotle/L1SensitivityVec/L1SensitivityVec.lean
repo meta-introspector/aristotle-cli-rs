@@ -1,2 +1,0 @@
--- Declaration: L1SensitivityVec
--- Extracted by StaticSplit

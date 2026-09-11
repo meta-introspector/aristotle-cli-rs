@@ -1,2 +1,0 @@
--- Declaration: towerValue_pure3
--- Extracted by StaticSplit

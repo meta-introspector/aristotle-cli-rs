@@ -1,2 +1,0 @@
--- Declaration: maximalSubgroupsA5_description
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: godel_always_slaps
--- Extracted by StaticSplit

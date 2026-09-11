@@ -1,2 +1,0 @@
--- Declaration: exampleReferral_effective
--- Extracted by StaticSplit

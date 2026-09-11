@@ -1,2 +1,0 @@
--- Declaration: sshChain_kGroup
--- Extracted by StaticSplit

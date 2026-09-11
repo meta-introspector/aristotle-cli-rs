@@ -1,2 +1,0 @@
--- Declaration: Carriage
--- Extracted by StaticSplit

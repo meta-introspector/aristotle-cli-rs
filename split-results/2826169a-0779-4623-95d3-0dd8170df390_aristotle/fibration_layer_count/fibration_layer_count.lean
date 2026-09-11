@@ -1,2 +1,0 @@
--- Declaration: fibration_layer_count
--- Extracted by StaticSplit

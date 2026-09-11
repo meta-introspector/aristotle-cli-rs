@@ -1,2 +1,0 @@
--- Declaration: Generalization
--- Extracted by StaticSplit

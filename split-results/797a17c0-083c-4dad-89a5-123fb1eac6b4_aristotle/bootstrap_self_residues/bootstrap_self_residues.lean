@@ -1,2 +1,0 @@
--- Declaration: bootstrap_self_residues
--- Extracted by StaticSplit

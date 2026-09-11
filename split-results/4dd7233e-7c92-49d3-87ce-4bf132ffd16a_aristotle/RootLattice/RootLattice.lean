@@ -1,2 +1,0 @@
--- Declaration: RootLattice
--- Extracted by StaticSplit

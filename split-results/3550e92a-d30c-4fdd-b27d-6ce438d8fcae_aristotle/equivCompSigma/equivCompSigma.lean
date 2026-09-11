@@ -1,2 +1,0 @@
--- Declaration: equivCompSigma
--- Extracted by StaticSplit

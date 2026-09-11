@@ -1,2 +1,0 @@
--- Declaration: StandingFacts.hasStanding
--- Extracted by StaticSplit

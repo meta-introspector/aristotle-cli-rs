@@ -1,2 +1,0 @@
--- Declaration: clean_rate
--- Extracted by StaticSplit

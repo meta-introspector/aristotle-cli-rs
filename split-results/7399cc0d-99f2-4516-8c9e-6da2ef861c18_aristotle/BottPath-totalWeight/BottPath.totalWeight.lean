@@ -1,2 +1,0 @@
--- Declaration: BottPath.totalWeight
--- Extracted by StaticSplit

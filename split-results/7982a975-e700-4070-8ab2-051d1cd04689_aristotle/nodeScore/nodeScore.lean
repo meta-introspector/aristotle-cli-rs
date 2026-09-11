@@ -1,2 +1,0 @@
--- Declaration: nodeScore
--- Extracted by StaticSplit

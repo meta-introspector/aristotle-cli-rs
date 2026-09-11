@@ -1,2 +1,0 @@
--- Declaration: Proposal.minQuorum
--- Extracted by StaticSplit

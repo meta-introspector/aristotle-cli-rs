@@ -1,2 +1,0 @@
--- Declaration: BottFunctor.obj
--- Extracted by StaticSplit

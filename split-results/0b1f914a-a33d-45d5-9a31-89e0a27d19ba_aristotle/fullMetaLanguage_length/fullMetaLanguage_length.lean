@@ -1,2 +1,0 @@
--- Declaration: fullMetaLanguage_length
--- Extracted by StaticSplit

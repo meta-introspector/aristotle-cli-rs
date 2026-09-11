@@ -1,2 +1,0 @@
--- Declaration: tagToEmoji
--- Extracted by StaticSplit

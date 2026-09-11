@@ -1,2 +1,0 @@
--- Declaration: Mythos
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: HeckeEigenvalues.one_not_in_prime
--- Extracted by StaticSplit

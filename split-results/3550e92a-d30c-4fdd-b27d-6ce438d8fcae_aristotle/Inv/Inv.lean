@@ -1,2 +1,0 @@
--- Declaration: Inv
--- Extracted by StaticSplit

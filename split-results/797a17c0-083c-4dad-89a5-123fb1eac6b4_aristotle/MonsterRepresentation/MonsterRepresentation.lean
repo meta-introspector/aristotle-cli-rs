@@ -1,2 +1,0 @@
--- Declaration: MonsterRepresentation
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: sameClass
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: supersingularPrimes_gt_three
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: senate_majority_strict
--- Extracted by StaticSplit

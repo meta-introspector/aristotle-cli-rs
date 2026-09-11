@@ -1,2 +1,0 @@
--- Declaration: phi4
--- Extracted by StaticSplit

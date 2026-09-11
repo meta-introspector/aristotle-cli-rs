@@ -1,2 +1,0 @@
--- Declaration: ThinCatData
--- Extracted by StaticSplit

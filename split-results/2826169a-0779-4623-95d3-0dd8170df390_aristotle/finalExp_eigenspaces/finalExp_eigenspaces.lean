@@ -1,2 +1,0 @@
--- Declaration: finalExp_eigenspaces
--- Extracted by StaticSplit

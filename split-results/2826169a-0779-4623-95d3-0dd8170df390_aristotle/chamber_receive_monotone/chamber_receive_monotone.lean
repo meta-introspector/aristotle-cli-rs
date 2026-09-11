@@ -1,2 +1,0 @@
--- Declaration: chamber_receive_monotone
--- Extracted by StaticSplit

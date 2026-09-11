@@ -1,2 +1,0 @@
--- Declaration: total_components
--- Extracted by StaticSplit

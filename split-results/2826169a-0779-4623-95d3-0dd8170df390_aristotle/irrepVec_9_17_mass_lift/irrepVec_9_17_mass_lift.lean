@@ -1,2 +1,0 @@
--- Declaration: irrepVec_9_17_mass_lift
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Ternary.oppositeSigned_symm
--- Extracted by StaticSplit

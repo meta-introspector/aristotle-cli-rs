@@ -1,2 +1,0 @@
--- Declaration: liveness_with_faults
--- Extracted by StaticSplit

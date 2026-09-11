@@ -1,2 +1,0 @@
--- Declaration: monsterIrrep_omega
--- Extracted by StaticSplit

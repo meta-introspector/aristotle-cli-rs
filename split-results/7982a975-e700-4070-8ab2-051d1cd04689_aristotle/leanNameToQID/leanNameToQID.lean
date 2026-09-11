@@ -1,2 +1,0 @@
--- Declaration: leanNameToQID
--- Extracted by StaticSplit

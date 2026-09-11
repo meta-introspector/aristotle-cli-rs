@@ -1,2 +1,0 @@
--- Declaration: introspect
--- Extracted by StaticSplit

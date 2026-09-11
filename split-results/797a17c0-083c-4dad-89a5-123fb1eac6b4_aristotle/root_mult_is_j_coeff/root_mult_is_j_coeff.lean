@@ -1,2 +1,0 @@
--- Declaration: root_mult_is_j_coeff
--- Extracted by StaticSplit

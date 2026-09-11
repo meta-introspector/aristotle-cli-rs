@@ -1,2 +1,0 @@
--- Declaration: size_iterNeg
--- Extracted by StaticSplit

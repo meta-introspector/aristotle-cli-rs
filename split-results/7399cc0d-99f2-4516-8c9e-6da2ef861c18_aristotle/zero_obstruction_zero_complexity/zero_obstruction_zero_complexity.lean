@@ -1,2 +1,0 @@
--- Declaration: zero_obstruction_zero_complexity
--- Extracted by StaticSplit

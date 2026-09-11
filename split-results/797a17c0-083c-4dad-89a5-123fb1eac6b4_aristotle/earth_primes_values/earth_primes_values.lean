@@ -1,2 +1,0 @@
--- Declaration: earth_primes_values
--- Extracted by StaticSplit

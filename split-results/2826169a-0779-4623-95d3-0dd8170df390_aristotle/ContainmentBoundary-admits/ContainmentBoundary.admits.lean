@@ -1,2 +1,0 @@
--- Declaration: ContainmentBoundary.admits
--- Extracted by StaticSplit

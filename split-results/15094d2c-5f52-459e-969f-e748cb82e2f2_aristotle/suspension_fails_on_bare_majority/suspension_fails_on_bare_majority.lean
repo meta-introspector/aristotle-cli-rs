@@ -1,2 +1,0 @@
--- Declaration: suspension_fails_on_bare_majority
--- Extracted by StaticSplit

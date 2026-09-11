@@ -1,2 +1,0 @@
--- Declaration: torusAdd_assoc
--- Extracted by StaticSplit

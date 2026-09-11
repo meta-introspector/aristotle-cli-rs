@@ -1,2 +1,0 @@
--- Declaration: AuditRule
--- Extracted by StaticSplit

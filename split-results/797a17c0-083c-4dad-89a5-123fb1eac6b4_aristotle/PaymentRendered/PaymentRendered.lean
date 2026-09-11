@@ -1,2 +1,0 @@
--- Declaration: PaymentRendered
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: genesisBlock
--- Extracted by StaticSplit

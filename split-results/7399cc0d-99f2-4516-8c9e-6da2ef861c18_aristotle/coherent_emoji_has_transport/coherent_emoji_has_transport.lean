@@ -1,2 +1,0 @@
--- Declaration: coherent_emoji_has_transport
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: election_fraction
--- Extracted by StaticSplit

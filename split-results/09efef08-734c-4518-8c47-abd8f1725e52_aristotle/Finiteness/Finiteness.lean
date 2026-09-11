@@ -1,2 +1,0 @@
--- Declaration: Finiteness
--- Extracted by StaticSplit

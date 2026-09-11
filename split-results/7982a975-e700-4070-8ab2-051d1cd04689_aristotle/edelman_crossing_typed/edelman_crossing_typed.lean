@@ -1,2 +1,0 @@
--- Declaration: edelman_crossing_typed
--- Extracted by StaticSplit

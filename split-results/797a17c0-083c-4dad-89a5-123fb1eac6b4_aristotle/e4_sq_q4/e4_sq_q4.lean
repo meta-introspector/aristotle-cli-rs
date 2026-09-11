@@ -1,2 +1,0 @@
--- Declaration: e4_sq_q4
--- Extracted by StaticSplit

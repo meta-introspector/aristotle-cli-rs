@@ -1,2 +1,0 @@
--- Declaration: encodeTrain
--- Extracted by StaticSplit

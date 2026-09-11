@@ -1,2 +1,0 @@
--- Declaration: obj_golay256
--- Extracted by StaticSplit

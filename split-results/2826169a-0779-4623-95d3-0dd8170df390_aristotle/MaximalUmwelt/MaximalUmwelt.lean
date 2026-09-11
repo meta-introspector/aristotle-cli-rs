@@ -1,2 +1,0 @@
--- Declaration: MaximalUmwelt
--- Extracted by StaticSplit

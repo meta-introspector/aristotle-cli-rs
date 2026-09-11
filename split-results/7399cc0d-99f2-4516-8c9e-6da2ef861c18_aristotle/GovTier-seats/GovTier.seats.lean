@@ -1,2 +1,0 @@
--- Declaration: GovTier.seats
--- Extracted by StaticSplit

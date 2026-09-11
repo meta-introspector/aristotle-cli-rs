@@ -1,2 +1,0 @@
--- Declaration: MoonshineData
--- Extracted by StaticSplit

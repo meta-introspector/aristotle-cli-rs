@@ -1,2 +1,0 @@
--- Declaration: monster_order_div_j1
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: grade_walkTrace
--- Extracted by StaticSplit

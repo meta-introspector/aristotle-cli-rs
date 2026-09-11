@@ -1,2 +1,0 @@
--- Declaration: cl06_img
--- Extracted by StaticSplit

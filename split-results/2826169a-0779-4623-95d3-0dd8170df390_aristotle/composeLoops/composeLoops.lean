@@ -1,2 +1,0 @@
--- Declaration: composeLoops
--- Extracted by StaticSplit

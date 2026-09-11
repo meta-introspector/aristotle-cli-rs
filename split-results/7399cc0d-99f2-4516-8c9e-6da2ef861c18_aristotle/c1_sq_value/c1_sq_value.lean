@@ -1,2 +1,0 @@
--- Declaration: c1_sq_value
--- Extracted by StaticSplit

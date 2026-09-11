@@ -1,2 +1,0 @@
--- Declaration: LKCutFree.idAx
--- Extracted by StaticSplit

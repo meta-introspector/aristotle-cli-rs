@@ -1,2 +1,0 @@
--- Declaration: MutualInductiveBody.getOneInductives
--- Extracted by StaticSplit

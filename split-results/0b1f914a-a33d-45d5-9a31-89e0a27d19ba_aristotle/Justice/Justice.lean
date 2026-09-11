@@ -1,2 +1,0 @@
--- Declaration: Justice
--- Extracted by StaticSplit

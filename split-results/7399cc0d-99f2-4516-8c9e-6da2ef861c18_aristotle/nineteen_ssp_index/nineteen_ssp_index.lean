@@ -1,2 +1,0 @@
--- Declaration: nineteen_ssp_index
--- Extracted by StaticSplit

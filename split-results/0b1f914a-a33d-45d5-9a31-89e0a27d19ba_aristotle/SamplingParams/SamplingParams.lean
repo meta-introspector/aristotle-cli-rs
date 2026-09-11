@@ -1,2 +1,0 @@
--- Declaration: SamplingParams
--- Extracted by StaticSplit

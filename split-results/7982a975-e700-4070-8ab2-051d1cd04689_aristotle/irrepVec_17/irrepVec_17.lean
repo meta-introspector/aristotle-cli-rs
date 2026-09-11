@@ -1,2 +1,0 @@
--- Declaration: irrepVec_17
--- Extracted by StaticSplit

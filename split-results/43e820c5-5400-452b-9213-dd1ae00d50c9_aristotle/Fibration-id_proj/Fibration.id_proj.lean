@@ -1,2 +1,0 @@
--- Declaration: Fibration.id_proj
--- Extracted by StaticSplit

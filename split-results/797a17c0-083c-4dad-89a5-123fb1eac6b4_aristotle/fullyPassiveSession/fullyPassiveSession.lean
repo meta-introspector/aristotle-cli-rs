@@ -1,2 +1,0 @@
--- Declaration: fullyPassiveSession
--- Extracted by StaticSplit

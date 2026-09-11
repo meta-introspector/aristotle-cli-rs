@@ -1,2 +1,0 @@
--- Declaration: niemeier_minus_leech
--- Extracted by StaticSplit

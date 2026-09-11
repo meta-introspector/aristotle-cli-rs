@@ -1,2 +1,0 @@
--- Declaration: SlotKind
--- Extracted by StaticSplit

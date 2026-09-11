@@ -1,2 +1,0 @@
--- Declaration: monsterTorusDim
--- Extracted by StaticSplit

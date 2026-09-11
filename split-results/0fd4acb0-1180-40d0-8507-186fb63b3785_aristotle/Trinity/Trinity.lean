@@ -1,2 +1,0 @@
--- Declaration: Trinity
--- Extracted by StaticSplit

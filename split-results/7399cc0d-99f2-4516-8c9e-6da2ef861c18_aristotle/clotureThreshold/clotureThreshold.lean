@@ -1,2 +1,0 @@
--- Declaration: clotureThreshold
--- Extracted by StaticSplit

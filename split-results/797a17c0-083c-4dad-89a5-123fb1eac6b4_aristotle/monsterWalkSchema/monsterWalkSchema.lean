@@ -1,2 +1,0 @@
--- Declaration: monsterWalkSchema
--- Extracted by StaticSplit

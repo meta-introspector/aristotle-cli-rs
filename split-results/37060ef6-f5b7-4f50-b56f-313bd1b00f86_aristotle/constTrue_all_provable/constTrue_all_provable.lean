@@ -1,2 +1,0 @@
--- Declaration: constTrue_all_provable
--- Extracted by StaticSplit

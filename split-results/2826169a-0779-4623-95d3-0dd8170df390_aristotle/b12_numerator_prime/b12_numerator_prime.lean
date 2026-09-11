@@ -1,2 +1,0 @@
--- Declaration: b12_numerator_prime
--- Extracted by StaticSplit

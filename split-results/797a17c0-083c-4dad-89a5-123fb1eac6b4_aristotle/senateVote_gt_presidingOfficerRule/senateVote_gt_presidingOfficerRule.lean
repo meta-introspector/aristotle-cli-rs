@@ -1,2 +1,0 @@
--- Declaration: senateVote_gt_presidingOfficerRule
--- Extracted by StaticSplit

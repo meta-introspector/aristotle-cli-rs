@@ -1,2 +1,0 @@
--- Declaration: prime43_not_dvd_monster
--- Extracted by StaticSplit

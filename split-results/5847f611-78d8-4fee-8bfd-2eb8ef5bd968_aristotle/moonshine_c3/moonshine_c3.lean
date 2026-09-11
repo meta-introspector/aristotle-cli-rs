@@ -1,2 +1,0 @@
--- Declaration: moonshine_c3
--- Extracted by StaticSplit

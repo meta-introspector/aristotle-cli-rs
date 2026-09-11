@@ -1,2 +1,0 @@
--- Declaration: fileResidueCoord
--- Extracted by StaticSplit

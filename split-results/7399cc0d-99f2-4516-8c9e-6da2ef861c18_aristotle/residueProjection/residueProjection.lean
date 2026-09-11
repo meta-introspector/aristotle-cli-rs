@@ -1,2 +1,0 @@
--- Declaration: residueProjection
--- Extracted by StaticSplit

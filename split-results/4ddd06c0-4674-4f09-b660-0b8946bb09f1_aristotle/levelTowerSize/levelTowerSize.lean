@@ -1,2 +1,0 @@
--- Declaration: levelTowerSize
--- Extracted by StaticSplit

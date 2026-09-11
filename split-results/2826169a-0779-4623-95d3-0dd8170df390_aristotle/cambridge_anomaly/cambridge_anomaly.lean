@@ -1,2 +1,0 @@
--- Declaration: cambridge_anomaly
--- Extracted by StaticSplit

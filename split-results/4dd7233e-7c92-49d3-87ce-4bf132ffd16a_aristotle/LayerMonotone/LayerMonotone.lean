@@ -1,2 +1,0 @@
--- Declaration: LayerMonotone
--- Extracted by StaticSplit

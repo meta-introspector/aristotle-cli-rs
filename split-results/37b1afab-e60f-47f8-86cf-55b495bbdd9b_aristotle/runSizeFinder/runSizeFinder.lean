@@ -1,2 +1,0 @@
--- Declaration: runSizeFinder
--- Extracted by StaticSplit

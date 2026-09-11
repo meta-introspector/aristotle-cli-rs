@@ -1,2 +1,0 @@
--- Declaration: oggWeight_one
--- Extracted by StaticSplit

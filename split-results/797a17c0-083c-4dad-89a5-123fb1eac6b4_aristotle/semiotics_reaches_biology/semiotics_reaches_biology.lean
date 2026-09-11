@@ -1,2 +1,0 @@
--- Declaration: semiotics_reaches_biology
--- Extracted by StaticSplit

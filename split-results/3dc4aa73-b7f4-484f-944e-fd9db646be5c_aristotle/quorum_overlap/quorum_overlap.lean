@@ -1,2 +1,0 @@
--- Declaration: quorum_overlap
--- Extracted by StaticSplit

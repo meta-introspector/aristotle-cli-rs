@@ -1,2 +1,0 @@
--- Declaration: upperGaugeUnit
--- Extracted by StaticSplit

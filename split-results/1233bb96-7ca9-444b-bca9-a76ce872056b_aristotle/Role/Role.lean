@@ -1,2 +1,0 @@
--- Declaration: Role
--- Extracted by StaticSplit

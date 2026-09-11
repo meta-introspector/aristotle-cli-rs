@@ -1,2 +1,0 @@
--- Declaration: ipld_monster_consistent
--- Extracted by StaticSplit

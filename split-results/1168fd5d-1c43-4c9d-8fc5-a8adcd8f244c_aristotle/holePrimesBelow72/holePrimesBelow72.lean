@@ -1,2 +1,0 @@
--- Declaration: holePrimesBelow72
--- Extracted by StaticSplit

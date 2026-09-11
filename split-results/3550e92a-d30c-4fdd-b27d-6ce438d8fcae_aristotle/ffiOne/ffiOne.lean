@@ -1,2 +1,0 @@
--- Declaration: ffiOne
--- Extracted by StaticSplit

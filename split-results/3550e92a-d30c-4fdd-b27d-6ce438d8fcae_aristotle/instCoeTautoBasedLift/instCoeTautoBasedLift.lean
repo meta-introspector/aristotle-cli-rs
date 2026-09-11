@@ -1,2 +1,0 @@
--- Declaration: instCoeTautoBasedLift
--- Extracted by StaticSplit

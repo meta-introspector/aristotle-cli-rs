@@ -1,2 +1,0 @@
--- Declaration: Heap.readCdr_alloc
--- Extracted by StaticSplit

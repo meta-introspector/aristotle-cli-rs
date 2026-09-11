@@ -1,2 +1,0 @@
--- Declaration: IntegratedBrainrot
--- Extracted by StaticSplit

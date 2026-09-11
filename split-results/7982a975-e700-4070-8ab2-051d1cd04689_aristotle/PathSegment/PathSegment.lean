@@ -1,2 +1,0 @@
--- Declaration: PathSegment
--- Extracted by StaticSplit

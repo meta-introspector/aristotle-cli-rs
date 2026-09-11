@@ -1,2 +1,0 @@
--- Declaration: link_no_contamination
--- Extracted by StaticSplit

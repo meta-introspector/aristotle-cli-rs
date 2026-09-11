@@ -1,2 +1,0 @@
--- Declaration: projectPair
--- Extracted by StaticSplit

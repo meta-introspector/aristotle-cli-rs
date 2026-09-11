@@ -1,2 +1,0 @@
--- Declaration: umbral_moonshine_conjecture
--- Extracted by StaticSplit

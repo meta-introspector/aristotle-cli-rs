@@ -1,2 +1,0 @@
--- Declaration: monodromy_preserves_class
--- Extracted by StaticSplit

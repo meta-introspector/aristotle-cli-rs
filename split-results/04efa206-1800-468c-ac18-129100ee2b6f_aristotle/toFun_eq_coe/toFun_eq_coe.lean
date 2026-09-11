@@ -1,2 +1,0 @@
--- Declaration: toFun_eq_coe
--- Extracted by StaticSplit

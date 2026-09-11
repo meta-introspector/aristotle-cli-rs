@@ -1,2 +1,0 @@
--- Declaration: promptMarkdown
--- Extracted by StaticSplit

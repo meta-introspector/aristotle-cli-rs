@@ -1,2 +1,0 @@
--- Declaration: earning_chain
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: FinalRule
--- Extracted by StaticSplit

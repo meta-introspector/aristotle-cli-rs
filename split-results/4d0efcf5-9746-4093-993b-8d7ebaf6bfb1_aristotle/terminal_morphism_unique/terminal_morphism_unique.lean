@@ -1,2 +1,0 @@
--- Declaration: terminal_morphism_unique
--- Extracted by StaticSplit

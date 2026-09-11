@@ -1,2 +1,0 @@
--- Declaration: continuing_seats_value
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: azClassCliffordDegree
--- Extracted by StaticSplit

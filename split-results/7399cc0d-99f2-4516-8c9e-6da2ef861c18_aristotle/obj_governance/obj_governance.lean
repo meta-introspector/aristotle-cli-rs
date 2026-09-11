@@ -1,2 +1,0 @@
--- Declaration: obj_governance
--- Extracted by StaticSplit

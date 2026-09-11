@@ -1,2 +1,0 @@
--- Declaration: f3_inert
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Slot
--- Extracted by StaticSplit

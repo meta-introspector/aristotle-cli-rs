@@ -1,2 +1,0 @@
--- Declaration: lightPrimes
--- Extracted by StaticSplit

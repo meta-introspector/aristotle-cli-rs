@@ -1,2 +1,0 @@
--- Declaration: hecke_op_eval
--- Extracted by StaticSplit

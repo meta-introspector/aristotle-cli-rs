@@ -1,2 +1,0 @@
--- Declaration: neuroIsBiology
--- Extracted by StaticSplit

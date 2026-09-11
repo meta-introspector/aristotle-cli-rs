@@ -1,2 +1,0 @@
--- Declaration: monsterOrder_bitsCost
--- Extracted by StaticSplit

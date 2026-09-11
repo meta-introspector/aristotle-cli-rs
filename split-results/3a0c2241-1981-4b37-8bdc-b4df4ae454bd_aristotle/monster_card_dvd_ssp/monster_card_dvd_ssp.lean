@@ -1,2 +1,0 @@
--- Declaration: monster_card_dvd_ssp
--- Extracted by StaticSplit

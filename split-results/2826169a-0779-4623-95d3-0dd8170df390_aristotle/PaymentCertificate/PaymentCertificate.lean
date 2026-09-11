@@ -1,2 +1,0 @@
--- Declaration: PaymentCertificate
--- Extracted by StaticSplit

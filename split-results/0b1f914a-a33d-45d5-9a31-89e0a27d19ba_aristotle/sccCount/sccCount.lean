@@ -1,2 +1,0 @@
--- Declaration: sccCount
--- Extracted by StaticSplit

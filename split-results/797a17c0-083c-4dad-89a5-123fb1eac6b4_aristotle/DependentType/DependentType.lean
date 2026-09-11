@@ -1,2 +1,0 @@
--- Declaration: DependentType
--- Extracted by StaticSplit

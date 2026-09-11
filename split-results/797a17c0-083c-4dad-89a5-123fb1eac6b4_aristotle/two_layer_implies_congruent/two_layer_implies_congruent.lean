@@ -1,2 +1,0 @@
--- Declaration: two_layer_implies_congruent
--- Extracted by StaticSplit

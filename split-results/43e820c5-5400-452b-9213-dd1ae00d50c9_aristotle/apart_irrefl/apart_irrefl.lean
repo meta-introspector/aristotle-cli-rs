@@ -1,2 +1,0 @@
--- Declaration: apart_irrefl
--- Extracted by StaticSplit

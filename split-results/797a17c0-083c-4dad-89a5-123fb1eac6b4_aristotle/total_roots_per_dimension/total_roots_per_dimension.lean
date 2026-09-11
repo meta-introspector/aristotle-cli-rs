@@ -1,2 +1,0 @@
--- Declaration: total_roots_per_dimension
--- Extracted by StaticSplit

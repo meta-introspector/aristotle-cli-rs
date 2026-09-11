@@ -1,2 +1,0 @@
--- Declaration: max6_factored
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Z.compare
--- Extracted by StaticSplit

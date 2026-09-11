@@ -1,2 +1,0 @@
--- Declaration: bottTable_correct_classes
--- Extracted by StaticSplit

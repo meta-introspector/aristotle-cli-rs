@@ -1,2 +1,0 @@
--- Declaration: ext53L35_divides_ly
--- Extracted by StaticSplit

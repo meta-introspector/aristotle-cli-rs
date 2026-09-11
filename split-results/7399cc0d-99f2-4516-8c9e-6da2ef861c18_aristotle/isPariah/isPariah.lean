@@ -1,2 +1,0 @@
--- Declaration: isPariah
--- Extracted by StaticSplit

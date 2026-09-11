@@ -1,2 +1,0 @@
--- Declaration: AnchoredValuationNode
--- Extracted by StaticSplit

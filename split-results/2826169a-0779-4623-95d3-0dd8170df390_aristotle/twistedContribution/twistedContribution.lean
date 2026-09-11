@@ -1,2 +1,0 @@
--- Declaration: twistedContribution
--- Extracted by StaticSplit

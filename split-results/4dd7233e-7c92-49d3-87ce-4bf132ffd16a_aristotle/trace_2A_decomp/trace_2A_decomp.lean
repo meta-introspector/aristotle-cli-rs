@@ -1,2 +1,0 @@
--- Declaration: trace_2A_decomp
--- Extracted by StaticSplit

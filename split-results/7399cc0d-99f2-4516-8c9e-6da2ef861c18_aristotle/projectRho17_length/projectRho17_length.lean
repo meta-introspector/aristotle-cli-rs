@@ -1,2 +1,0 @@
--- Declaration: projectRho17_length
--- Extracted by StaticSplit

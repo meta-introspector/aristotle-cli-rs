@@ -1,2 +1,0 @@
--- Declaration: hash_sol_get_stack_height
--- Extracted by StaticSplit

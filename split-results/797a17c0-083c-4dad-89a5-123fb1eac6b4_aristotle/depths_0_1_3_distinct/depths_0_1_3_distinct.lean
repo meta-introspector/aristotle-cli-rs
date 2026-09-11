@@ -1,2 +1,0 @@
--- Declaration: depths_0_1_3_distinct
--- Extracted by StaticSplit

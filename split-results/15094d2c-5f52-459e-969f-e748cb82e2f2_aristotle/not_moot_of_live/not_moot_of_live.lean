@@ -1,2 +1,0 @@
--- Declaration: not_moot_of_live
--- Extracted by StaticSplit

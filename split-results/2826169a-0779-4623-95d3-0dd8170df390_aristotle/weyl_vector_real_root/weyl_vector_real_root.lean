@@ -1,2 +1,0 @@
--- Declaration: weyl_vector_real_root
--- Extracted by StaticSplit

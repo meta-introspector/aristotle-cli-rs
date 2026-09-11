@@ -1,2 +1,0 @@
--- Declaration: unanimity_is_all
--- Extracted by StaticSplit

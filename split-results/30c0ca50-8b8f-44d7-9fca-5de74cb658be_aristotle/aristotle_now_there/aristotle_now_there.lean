@@ -1,2 +1,0 @@
--- Declaration: aristotle_now_there
--- Extracted by StaticSplit

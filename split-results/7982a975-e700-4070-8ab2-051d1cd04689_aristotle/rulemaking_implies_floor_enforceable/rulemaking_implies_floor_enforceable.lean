@@ -1,2 +1,0 @@
--- Declaration: rulemaking_implies_floor_enforceable
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: primorial_primeFactors
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: exampleDocket
--- Extracted by StaticSplit

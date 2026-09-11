@@ -1,2 +1,0 @@
--- Declaration: mes_seed_genus_zero
--- Extracted by StaticSplit

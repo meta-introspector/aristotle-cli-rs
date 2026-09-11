@@ -1,2 +1,0 @@
--- Declaration: boardRoom_near_selfref
--- Extracted by StaticSplit

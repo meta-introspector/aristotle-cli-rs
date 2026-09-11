@@ -1,2 +1,0 @@
--- Declaration: encodeString
--- Extracted by StaticSplit

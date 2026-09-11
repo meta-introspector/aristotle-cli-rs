@@ -1,2 +1,0 @@
--- Declaration: SliceTileProduct.toContextWindow
--- Extracted by StaticSplit

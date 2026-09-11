@@ -1,2 +1,0 @@
--- Declaration: approval_requires_qa
--- Extracted by StaticSplit

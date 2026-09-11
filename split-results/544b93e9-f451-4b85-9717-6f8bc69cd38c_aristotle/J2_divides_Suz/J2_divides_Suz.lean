@@ -1,2 +1,0 @@
--- Declaration: J2_divides_Suz
--- Extracted by StaticSplit

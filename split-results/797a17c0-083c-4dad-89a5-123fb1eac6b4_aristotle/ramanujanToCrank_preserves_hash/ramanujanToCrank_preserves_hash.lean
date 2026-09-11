@@ -1,2 +1,0 @@
--- Declaration: ramanujanToCrank_preserves_hash
--- Extracted by StaticSplit

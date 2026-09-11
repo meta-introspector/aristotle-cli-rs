@@ -1,2 +1,0 @@
--- Declaration: MaximalSubgroupEntry
--- Extracted by StaticSplit

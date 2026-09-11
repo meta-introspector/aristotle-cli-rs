@@ -1,2 +1,0 @@
--- Declaration: consciousness_reaches_mind
--- Extracted by StaticSplit

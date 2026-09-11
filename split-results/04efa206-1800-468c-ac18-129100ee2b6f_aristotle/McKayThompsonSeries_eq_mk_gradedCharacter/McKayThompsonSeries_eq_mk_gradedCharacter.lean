@@ -1,2 +1,0 @@
--- Declaration: McKayThompsonSeries_eq_mk_gradedCharacter
--- Extracted by StaticSplit

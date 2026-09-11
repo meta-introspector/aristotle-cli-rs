@@ -1,2 +1,0 @@
--- Declaration: Chamber.empty
--- Extracted by StaticSplit

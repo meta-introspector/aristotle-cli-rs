@@ -1,2 +1,0 @@
--- Declaration: SPermRep
--- Extracted by StaticSplit

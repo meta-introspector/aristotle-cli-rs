@@ -1,2 +1,0 @@
--- Declaration: umwelt_covers_monster
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: thirdness_reaches_consciousness
--- Extracted by StaticSplit

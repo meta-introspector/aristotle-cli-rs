@@ -1,2 +1,0 @@
--- Declaration: sheaf_shard_crt
--- Extracted by StaticSplit

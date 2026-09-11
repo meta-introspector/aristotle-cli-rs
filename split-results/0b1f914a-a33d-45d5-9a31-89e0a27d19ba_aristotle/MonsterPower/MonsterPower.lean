@@ -1,2 +1,0 @@
--- Declaration: MonsterPower
--- Extracted by StaticSplit

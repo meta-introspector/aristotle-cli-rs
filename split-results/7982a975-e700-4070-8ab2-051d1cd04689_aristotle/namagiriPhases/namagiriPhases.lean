@@ -1,2 +1,0 @@
--- Declaration: namagiriPhases
--- Extracted by StaticSplit

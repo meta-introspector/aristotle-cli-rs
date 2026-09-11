@@ -1,2 +1,0 @@
--- Declaration: loper_respects_express_delegation
--- Extracted by StaticSplit

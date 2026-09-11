@@ -1,2 +1,0 @@
--- Declaration: Ledger.lookup?
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: valuation_independence
--- Extracted by StaticSplit

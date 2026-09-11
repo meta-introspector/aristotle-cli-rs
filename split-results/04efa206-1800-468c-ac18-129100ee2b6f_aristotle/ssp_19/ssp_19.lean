@@ -1,2 +1,0 @@
--- Declaration: ssp_19
--- Extracted by StaticSplit

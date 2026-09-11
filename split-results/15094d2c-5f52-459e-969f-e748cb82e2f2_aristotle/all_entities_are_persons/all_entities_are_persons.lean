@@ -1,2 +1,0 @@
--- Declaration: all_entities_are_persons
--- Extracted by StaticSplit

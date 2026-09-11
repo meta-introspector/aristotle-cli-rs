@@ -1,2 +1,0 @@
--- Declaration: Vine
--- Extracted by StaticSplit

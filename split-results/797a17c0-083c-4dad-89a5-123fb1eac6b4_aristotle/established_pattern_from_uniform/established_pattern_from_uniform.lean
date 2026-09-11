@@ -1,2 +1,0 @@
--- Declaration: established_pattern_from_uniform
--- Extracted by StaticSplit

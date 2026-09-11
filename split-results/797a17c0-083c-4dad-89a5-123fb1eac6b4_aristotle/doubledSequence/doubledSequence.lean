@@ -1,2 +1,0 @@
--- Declaration: doubledSequence
--- Extracted by StaticSplit

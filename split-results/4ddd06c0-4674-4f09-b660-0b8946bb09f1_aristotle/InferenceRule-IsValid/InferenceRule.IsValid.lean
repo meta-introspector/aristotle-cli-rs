@@ -1,2 +1,0 @@
--- Declaration: InferenceRule.IsValid
--- Extracted by StaticSplit

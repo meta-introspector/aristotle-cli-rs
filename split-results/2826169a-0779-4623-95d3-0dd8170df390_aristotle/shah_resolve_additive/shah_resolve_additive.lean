@@ -1,2 +1,0 @@
--- Declaration: shah_resolve_additive
--- Extracted by StaticSplit

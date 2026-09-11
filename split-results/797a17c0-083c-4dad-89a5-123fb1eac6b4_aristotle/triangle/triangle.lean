@@ -1,2 +1,0 @@
--- Declaration: triangle
--- Extracted by StaticSplit

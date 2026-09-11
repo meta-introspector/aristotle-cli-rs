@@ -1,2 +1,0 @@
--- Declaration: cartFunctor
--- Extracted by StaticSplit

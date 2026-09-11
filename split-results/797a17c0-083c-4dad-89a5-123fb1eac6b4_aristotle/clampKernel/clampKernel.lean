@@ -1,2 +1,0 @@
--- Declaration: clampKernel
--- Extracted by StaticSplit

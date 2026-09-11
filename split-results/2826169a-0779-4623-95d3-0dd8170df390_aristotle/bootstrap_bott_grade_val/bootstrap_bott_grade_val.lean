@@ -1,2 +1,0 @@
--- Declaration: bootstrap_bott_grade_val
--- Extracted by StaticSplit

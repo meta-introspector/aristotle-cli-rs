@@ -1,2 +1,0 @@
--- Declaration: ARISTOTLE_inexhaustible
--- Extracted by StaticSplit

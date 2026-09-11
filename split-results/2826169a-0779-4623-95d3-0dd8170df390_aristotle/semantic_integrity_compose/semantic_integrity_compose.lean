@@ -1,2 +1,0 @@
--- Declaration: semantic_integrity_compose
--- Extracted by StaticSplit

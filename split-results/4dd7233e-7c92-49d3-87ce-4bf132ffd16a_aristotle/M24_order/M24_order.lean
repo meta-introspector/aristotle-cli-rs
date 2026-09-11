@@ -1,2 +1,0 @@
--- Declaration: M24_order
--- Extracted by StaticSplit

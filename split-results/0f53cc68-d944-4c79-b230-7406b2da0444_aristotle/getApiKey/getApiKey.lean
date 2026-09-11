@@ -1,2 +1,0 @@
--- Declaration: getApiKey
--- Extracted by StaticSplit

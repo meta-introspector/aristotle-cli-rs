@@ -1,2 +1,0 @@
--- Declaration: addPosEmojilang_complete
--- Extracted by StaticSplit

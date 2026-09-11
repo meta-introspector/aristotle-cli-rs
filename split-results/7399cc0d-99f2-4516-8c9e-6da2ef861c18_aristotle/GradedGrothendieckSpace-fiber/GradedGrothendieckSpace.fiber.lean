@@ -1,2 +1,0 @@
--- Declaration: GradedGrothendieckSpace.fiber
--- Extracted by StaticSplit

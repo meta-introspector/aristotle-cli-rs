@@ -1,2 +1,0 @@
--- Declaration: trs
--- Extracted by StaticSplit

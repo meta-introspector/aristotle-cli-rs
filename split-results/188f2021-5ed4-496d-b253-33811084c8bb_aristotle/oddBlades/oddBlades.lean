@@ -1,2 +1,0 @@
--- Declaration: oddBlades
--- Extracted by StaticSplit

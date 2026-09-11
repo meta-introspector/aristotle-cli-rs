@@ -1,2 +1,0 @@
--- Declaration: bottClose_distinct_indices
--- Extracted by StaticSplit

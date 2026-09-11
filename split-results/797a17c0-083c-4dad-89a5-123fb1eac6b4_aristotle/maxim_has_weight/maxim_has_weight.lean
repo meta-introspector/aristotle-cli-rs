@@ -1,2 +1,0 @@
--- Declaration: maxim_has_weight
--- Extracted by StaticSplit

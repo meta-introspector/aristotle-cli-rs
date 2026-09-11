@@ -1,2 +1,0 @@
--- Declaration: superstringCentralCharge
--- Extracted by StaticSplit

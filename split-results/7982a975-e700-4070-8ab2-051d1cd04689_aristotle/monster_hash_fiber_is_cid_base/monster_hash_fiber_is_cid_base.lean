@@ -1,2 +1,0 @@
--- Declaration: monster_hash_fiber_is_cid_base
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: person_iff_whoever
--- Extracted by StaticSplit

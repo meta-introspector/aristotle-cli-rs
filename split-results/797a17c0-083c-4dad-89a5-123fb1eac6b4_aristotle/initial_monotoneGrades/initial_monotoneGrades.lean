@@ -1,2 +1,0 @@
--- Declaration: initial_monotoneGrades
--- Extracted by StaticSplit

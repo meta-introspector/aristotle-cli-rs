@@ -1,2 +1,0 @@
--- Declaration: Sequencer.append
--- Extracted by StaticSplit

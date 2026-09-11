@@ -1,2 +1,0 @@
--- Declaration: Vpoly
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: classifyQuadrant_threeOnly_iff
--- Extracted by StaticSplit

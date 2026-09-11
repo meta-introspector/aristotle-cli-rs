@@ -1,2 +1,0 @@
--- Declaration: A8_L3_4_same_order
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: morph_Walk_uses_Monster
--- Extracted by StaticSplit

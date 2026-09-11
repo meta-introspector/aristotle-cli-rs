@@ -1,2 +1,0 @@
--- Declaration: check_iff_conformal
--- Extracted by StaticSplit

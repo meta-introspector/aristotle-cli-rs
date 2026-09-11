@@ -1,2 +1,0 @@
--- Declaration: MinichargedSector
--- Extracted by StaticSplit

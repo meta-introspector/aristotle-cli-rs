@@ -1,2 +1,0 @@
--- Declaration: monster_base_size
--- Extracted by StaticSplit

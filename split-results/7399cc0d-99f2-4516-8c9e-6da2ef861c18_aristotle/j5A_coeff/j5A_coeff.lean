@@ -1,2 +1,0 @@
--- Declaration: j5A_coeff
--- Extracted by StaticSplit

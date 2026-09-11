@@ -1,2 +1,0 @@
--- Declaration: A001379_sdimH0
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: compose_allViolations
--- Extracted by StaticSplit

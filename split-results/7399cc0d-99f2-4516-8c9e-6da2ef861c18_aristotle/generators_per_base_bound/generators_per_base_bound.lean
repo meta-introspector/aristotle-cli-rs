@@ -1,2 +1,0 @@
--- Declaration: generators_per_base_bound
--- Extracted by StaticSplit

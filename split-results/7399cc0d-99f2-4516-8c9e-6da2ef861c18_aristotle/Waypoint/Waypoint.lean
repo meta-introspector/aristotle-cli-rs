@@ -1,2 +1,0 @@
--- Declaration: Waypoint
--- Extracted by StaticSplit

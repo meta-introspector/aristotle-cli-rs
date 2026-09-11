@@ -1,2 +1,0 @@
--- Declaration: crtTriple
--- Extracted by StaticSplit

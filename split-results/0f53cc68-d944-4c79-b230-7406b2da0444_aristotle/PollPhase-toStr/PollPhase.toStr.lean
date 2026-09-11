@@ -1,2 +1,0 @@
--- Declaration: PollPhase.toStr
--- Extracted by StaticSplit

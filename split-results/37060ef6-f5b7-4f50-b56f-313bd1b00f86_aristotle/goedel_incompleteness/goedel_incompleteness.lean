@@ -1,2 +1,0 @@
--- Declaration: goedel_incompleteness
--- Extracted by StaticSplit

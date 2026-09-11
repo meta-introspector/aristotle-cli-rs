@@ -1,2 +1,0 @@
--- Declaration: coplayers_unchanged
--- Extracted by StaticSplit

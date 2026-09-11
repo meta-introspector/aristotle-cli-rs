@@ -1,2 +1,0 @@
--- Declaration: orth_mul_M8Z
--- Extracted by StaticSplit

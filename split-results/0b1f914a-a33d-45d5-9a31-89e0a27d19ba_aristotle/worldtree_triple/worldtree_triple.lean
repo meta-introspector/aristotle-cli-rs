@@ -1,2 +1,0 @@
--- Declaration: worldtree_triple
--- Extracted by StaticSplit

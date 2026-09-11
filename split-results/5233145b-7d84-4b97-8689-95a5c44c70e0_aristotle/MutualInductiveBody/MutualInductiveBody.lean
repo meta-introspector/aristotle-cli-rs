@@ -1,2 +1,0 @@
--- Declaration: MutualInductiveBody
--- Extracted by StaticSplit

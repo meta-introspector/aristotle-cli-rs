@@ -1,2 +1,0 @@
--- Declaration: isOntologicalAtomMember
--- Extracted by StaticSplit

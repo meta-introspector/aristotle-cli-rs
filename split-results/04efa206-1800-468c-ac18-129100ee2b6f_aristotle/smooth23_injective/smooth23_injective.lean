@@ -1,2 +1,0 @@
--- Declaration: smooth23_injective
--- Extracted by StaticSplit

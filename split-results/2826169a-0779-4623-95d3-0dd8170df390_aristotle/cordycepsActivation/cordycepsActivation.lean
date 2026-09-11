@@ -1,2 +1,0 @@
--- Declaration: cordycepsActivation
--- Extracted by StaticSplit

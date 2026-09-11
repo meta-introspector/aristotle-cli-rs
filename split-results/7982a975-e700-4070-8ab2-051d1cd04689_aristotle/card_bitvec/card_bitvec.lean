@@ -1,2 +1,0 @@
--- Declaration: card_bitvec
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: numIrreps
--- Extracted by StaticSplit

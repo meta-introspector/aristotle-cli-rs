@@ -1,2 +1,0 @@
--- Declaration: crt_torus_period
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Bucket
--- Extracted by StaticSplit

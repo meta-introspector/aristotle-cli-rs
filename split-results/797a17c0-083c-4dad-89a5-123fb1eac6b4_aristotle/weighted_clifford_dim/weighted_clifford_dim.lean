@@ -1,2 +1,0 @@
--- Declaration: weighted_clifford_dim
--- Extracted by StaticSplit

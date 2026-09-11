@@ -1,2 +1,0 @@
--- Declaration: geomSign
--- Extracted by StaticSplit

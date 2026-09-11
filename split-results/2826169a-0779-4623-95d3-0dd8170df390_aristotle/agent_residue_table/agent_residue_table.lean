@@ -1,2 +1,0 @@
--- Declaration: agent_residue_table
--- Extracted by StaticSplit

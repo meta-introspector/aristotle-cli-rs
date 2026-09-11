@@ -1,2 +1,0 @@
--- Declaration: traversal_preservation
--- Extracted by StaticSplit

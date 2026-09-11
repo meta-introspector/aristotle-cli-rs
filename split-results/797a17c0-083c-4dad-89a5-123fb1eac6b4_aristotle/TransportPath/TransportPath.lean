@@ -1,2 +1,0 @@
--- Declaration: TransportPath
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: obstruction_product
--- Extracted by StaticSplit

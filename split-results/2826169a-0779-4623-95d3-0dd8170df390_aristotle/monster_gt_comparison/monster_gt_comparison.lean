@@ -1,2 +1,0 @@
--- Declaration: monster_gt_comparison
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: rewrite_step_adds_three
--- Extracted by StaticSplit

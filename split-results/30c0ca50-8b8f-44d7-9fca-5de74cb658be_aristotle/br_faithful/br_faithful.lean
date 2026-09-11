@@ -1,2 +1,0 @@
--- Declaration: br_faithful
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: compose_empty_right
--- Extracted by StaticSplit

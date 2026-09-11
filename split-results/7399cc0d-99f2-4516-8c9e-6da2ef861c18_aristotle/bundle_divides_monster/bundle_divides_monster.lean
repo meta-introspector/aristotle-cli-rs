@@ -1,2 +1,0 @@
--- Declaration: bundle_divides_monster
--- Extracted by StaticSplit

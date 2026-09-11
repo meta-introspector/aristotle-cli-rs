@@ -1,2 +1,0 @@
--- Declaration: splitSquarefree_H0_finrank
--- Extracted by StaticSplit

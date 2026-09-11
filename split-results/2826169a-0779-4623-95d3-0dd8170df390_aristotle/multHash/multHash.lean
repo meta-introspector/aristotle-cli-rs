@@ -1,2 +1,0 @@
--- Declaration: multHash
--- Extracted by StaticSplit

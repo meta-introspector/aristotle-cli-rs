@@ -1,2 +1,0 @@
--- Declaration: eval_neg
--- Extracted by StaticSplit

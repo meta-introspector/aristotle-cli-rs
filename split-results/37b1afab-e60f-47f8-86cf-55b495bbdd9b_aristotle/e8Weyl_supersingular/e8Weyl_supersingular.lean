@@ -1,2 +1,0 @@
--- Declaration: e8Weyl_supersingular
--- Extracted by StaticSplit

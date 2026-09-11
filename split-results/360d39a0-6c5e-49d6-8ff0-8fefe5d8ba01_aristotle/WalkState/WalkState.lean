@@ -1,2 +1,0 @@
--- Declaration: WalkState
--- Extracted by StaticSplit

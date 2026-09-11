@@ -1,2 +1,0 @@
--- Declaration: ssp3_pairwise_coprime
--- Extracted by StaticSplit

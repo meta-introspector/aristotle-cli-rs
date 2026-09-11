@@ -1,2 +1,0 @@
--- Declaration: forget_boundary_succ
--- Extracted by StaticSplit

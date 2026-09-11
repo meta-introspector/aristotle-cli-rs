@@ -1,2 +1,0 @@
--- Declaration: observer_is_elixir
--- Extracted by StaticSplit

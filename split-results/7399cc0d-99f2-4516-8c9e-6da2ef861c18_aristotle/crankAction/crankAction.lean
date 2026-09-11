@@ -1,2 +1,0 @@
--- Declaration: crankAction
--- Extracted by StaticSplit

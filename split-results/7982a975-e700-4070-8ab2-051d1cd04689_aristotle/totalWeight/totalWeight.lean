@@ -1,2 +1,0 @@
--- Declaration: totalWeight
--- Extracted by StaticSplit

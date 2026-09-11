@@ -1,2 +1,0 @@
--- Declaration: MonsterFactorization
--- Extracted by StaticSplit

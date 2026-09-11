@@ -1,2 +1,0 @@
--- Declaration: ramanujanDelta
--- Extracted by StaticSplit

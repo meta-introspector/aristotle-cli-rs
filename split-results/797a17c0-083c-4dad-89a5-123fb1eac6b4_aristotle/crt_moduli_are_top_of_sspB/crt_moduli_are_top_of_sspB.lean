@@ -1,2 +1,0 @@
--- Declaration: crt_moduli_are_top_of_sspB
--- Extracted by StaticSplit

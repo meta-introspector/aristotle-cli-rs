@@ -1,2 +1,0 @@
--- Declaration: twoChartModulus_eq
--- Extracted by StaticSplit

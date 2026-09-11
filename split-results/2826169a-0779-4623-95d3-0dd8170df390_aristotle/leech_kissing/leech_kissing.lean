@@ -1,2 +1,0 @@
--- Declaration: leech_kissing
--- Extracted by StaticSplit

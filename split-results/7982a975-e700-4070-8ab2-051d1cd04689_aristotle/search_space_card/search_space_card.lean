@@ -1,2 +1,0 @@
--- Declaration: search_space_card
--- Extracted by StaticSplit

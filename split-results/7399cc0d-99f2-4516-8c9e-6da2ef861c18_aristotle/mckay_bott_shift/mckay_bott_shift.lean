@@ -1,2 +1,0 @@
--- Declaration: mckay_bott_shift
--- Extracted by StaticSplit

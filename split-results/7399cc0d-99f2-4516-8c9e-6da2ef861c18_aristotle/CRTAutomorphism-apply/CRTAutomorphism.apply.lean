@@ -1,2 +1,0 @@
--- Declaration: CRTAutomorphism.apply
--- Extracted by StaticSplit

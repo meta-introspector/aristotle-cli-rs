@@ -1,2 +1,0 @@
--- Declaration: zownakairufication_fixed_nat
--- Extracted by StaticSplit

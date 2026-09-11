@@ -1,2 +1,0 @@
--- Declaration: finrank_cliffordAlgebra_even_eq_evenBlades_card
--- Extracted by StaticSplit

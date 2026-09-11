@@ -1,2 +1,0 @@
--- Declaration: SubstrateTile
--- Extracted by StaticSplit

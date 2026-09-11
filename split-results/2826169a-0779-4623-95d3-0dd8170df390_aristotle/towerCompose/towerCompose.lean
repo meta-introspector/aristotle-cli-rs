@@ -1,2 +1,0 @@
--- Declaration: towerCompose
--- Extracted by StaticSplit

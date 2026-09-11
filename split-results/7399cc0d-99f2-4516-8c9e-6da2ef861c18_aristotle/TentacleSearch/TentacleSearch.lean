@@ -1,2 +1,0 @@
--- Declaration: TentacleSearch
--- Extracted by StaticSplit

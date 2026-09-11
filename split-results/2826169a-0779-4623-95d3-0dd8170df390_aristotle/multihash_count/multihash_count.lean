@@ -1,2 +1,0 @@
--- Declaration: multihash_count
--- Extracted by StaticSplit

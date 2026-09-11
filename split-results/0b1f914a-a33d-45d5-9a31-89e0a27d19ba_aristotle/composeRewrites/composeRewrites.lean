@@ -1,2 +1,0 @@
--- Declaration: composeRewrites
--- Extracted by StaticSplit

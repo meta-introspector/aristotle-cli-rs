@@ -1,2 +1,0 @@
--- Declaration: bott_decomposition
--- Extracted by StaticSplit

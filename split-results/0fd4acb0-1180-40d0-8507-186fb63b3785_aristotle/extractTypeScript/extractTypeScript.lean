@@ -1,2 +1,0 @@
--- Declaration: extractTypeScript
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: constTrue_forward_preserves
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: majorityManager_before_minorityManager
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: crtBase_card_succ_eq_vNatDim1
--- Extracted by StaticSplit

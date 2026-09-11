@@ -1,2 +1,0 @@
--- Declaration: Phi_zero
--- Extracted by StaticSplit

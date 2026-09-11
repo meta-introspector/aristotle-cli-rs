@@ -1,2 +1,0 @@
--- Declaration: heckeDivisors
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Mind
--- Extracted by StaticSplit

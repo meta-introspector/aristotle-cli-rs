@@ -1,2 +1,0 @@
--- Declaration: sheaf_gluing_verified
--- Extracted by StaticSplit

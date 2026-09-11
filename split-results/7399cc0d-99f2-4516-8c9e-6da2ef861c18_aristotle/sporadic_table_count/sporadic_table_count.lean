@@ -1,2 +1,0 @@
--- Declaration: sporadic_table_count
--- Extracted by StaticSplit

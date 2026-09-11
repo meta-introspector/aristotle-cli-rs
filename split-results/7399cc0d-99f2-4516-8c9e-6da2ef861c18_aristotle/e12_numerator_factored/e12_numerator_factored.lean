@@ -1,2 +1,0 @@
--- Declaration: e12_numerator_factored
--- Extracted by StaticSplit

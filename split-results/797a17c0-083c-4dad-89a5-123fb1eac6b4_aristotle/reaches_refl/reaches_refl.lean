@@ -1,2 +1,0 @@
--- Declaration: reaches_refl
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ExponentVector
--- Extracted by StaticSplit

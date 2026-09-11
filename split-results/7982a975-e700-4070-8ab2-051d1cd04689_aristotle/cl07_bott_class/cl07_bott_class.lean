@@ -1,2 +1,0 @@
--- Declaration: cl07_bott_class
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: computation_not_reaches_math
--- Extracted by StaticSplit

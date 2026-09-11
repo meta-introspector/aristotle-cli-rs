@@ -1,2 +1,0 @@
--- Declaration: encoding_crystal_ball
--- Extracted by StaticSplit

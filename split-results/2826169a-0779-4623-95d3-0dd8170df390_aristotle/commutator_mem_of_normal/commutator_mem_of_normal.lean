@@ -1,2 +1,0 @@
--- Declaration: commutator_mem_of_normal
--- Extracted by StaticSplit

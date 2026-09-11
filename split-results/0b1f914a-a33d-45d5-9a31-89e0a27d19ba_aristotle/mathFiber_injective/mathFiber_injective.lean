@@ -1,2 +1,0 @@
--- Declaration: mathFiber_injective
--- Extracted by StaticSplit

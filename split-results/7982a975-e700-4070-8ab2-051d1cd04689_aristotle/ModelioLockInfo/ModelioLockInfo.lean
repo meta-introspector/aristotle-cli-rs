@@ -1,2 +1,0 @@
--- Declaration: ModelioLockInfo
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: QMSDocType
--- Extracted by StaticSplit

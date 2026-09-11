@@ -1,2 +1,0 @@
--- Declaration: fungalPartialChain_total_work
--- Extracted by StaticSplit

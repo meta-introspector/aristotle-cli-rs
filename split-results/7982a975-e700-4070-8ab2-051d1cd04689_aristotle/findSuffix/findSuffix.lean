@@ -1,2 +1,0 @@
--- Declaration: findSuffix
--- Extracted by StaticSplit

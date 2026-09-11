@@ -1,2 +1,0 @@
--- Declaration: MultiFiberedDynSys.apply_preserves_base
--- Extracted by StaticSplit

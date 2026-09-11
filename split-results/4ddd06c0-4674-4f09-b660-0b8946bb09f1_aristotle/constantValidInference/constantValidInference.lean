@@ -1,2 +1,0 @@
--- Declaration: constantValidInference
--- Extracted by StaticSplit

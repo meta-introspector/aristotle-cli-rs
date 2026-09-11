@@ -1,2 +1,0 @@
--- Declaration: Positive.pred_double
--- Extracted by StaticSplit

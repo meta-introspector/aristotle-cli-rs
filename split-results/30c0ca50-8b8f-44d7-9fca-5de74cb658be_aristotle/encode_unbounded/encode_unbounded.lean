@@ -1,2 +1,0 @@
--- Declaration: encode_unbounded
--- Extracted by StaticSplit

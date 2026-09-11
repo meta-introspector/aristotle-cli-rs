@@ -1,2 +1,0 @@
--- Declaration: tail_binary_card
--- Extracted by StaticSplit

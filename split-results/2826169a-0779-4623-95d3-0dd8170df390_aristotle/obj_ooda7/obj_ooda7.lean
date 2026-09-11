@@ -1,2 +1,0 @@
--- Declaration: obj_ooda7
--- Extracted by StaticSplit

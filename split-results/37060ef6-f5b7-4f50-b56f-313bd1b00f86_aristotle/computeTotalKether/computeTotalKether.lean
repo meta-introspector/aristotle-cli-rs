@@ -1,2 +1,0 @@
--- Declaration: computeTotalKether
--- Extracted by StaticSplit

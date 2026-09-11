@@ -1,2 +1,0 @@
--- Declaration: gate_263_is_universal
--- Extracted by StaticSplit

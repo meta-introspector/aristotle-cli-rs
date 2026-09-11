@@ -1,2 +1,0 @@
--- Declaration: M12_order_factored
--- Extracted by StaticSplit

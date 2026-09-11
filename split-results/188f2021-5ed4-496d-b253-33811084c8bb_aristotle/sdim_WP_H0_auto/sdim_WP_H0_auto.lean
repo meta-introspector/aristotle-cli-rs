@@ -1,2 +1,0 @@
--- Declaration: sdim_WP_H0_auto
--- Extracted by StaticSplit

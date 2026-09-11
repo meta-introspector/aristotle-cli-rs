@@ -1,2 +1,0 @@
--- Declaration: sspDisplacement
--- Extracted by StaticSplit

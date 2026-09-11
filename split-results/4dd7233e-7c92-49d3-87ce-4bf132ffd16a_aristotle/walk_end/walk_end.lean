@@ -1,2 +1,0 @@
--- Declaration: walk_end
--- Extracted by StaticSplit

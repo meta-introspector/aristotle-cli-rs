@@ -1,2 +1,0 @@
--- Declaration: total_torus_monodromy
--- Extracted by StaticSplit

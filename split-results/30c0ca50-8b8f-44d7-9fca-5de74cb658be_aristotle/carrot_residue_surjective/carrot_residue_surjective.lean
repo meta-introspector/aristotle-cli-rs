@@ -1,2 +1,0 @@
--- Declaration: carrot_residue_surjective
--- Extracted by StaticSplit

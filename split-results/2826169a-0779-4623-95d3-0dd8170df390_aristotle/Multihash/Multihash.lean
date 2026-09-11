@@ -1,2 +1,0 @@
--- Declaration: Multihash
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: GovernanceDecision
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SSP_eq_monster_prime_factors
--- Extracted by StaticSplit

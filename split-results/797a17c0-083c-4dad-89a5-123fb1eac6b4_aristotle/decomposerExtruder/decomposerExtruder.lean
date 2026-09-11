@@ -1,2 +1,0 @@
--- Declaration: decomposerExtruder
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: registry_count
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: M11_orthogonality_1A_2A
--- Extracted by StaticSplit

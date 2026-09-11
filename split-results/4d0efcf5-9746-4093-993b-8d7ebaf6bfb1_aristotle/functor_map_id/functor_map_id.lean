@@ -1,2 +1,0 @@
--- Declaration: functor_map_id
--- Extracted by StaticSplit

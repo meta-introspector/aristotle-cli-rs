@@ -1,2 +1,0 @@
--- Declaration: supersingularPrimesList_length
--- Extracted by StaticSplit

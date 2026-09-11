@@ -1,2 +1,0 @@
--- Declaration: leechDet
--- Extracted by StaticSplit

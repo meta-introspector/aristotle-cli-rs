@@ -1,2 +1,0 @@
--- Declaration: fuse_items_assoc
--- Extracted by StaticSplit

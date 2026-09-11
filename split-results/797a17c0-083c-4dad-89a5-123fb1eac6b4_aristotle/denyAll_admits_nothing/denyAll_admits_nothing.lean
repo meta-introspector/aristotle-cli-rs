@@ -1,2 +1,0 @@
--- Declaration: denyAll_admits_nothing
--- Extracted by StaticSplit

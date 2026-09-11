@@ -1,2 +1,0 @@
--- Declaration: halts
--- Extracted by StaticSplit

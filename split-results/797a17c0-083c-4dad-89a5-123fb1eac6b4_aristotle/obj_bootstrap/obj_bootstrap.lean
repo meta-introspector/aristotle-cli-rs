@@ -1,2 +1,0 @@
--- Declaration: obj_bootstrap
--- Extracted by StaticSplit

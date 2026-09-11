@@ -1,2 +1,0 @@
--- Declaration: max3_factored
--- Extracted by StaticSplit

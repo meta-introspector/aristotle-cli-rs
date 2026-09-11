@@ -1,2 +1,0 @@
--- Declaration: depth_8_coprime
--- Extracted by StaticSplit

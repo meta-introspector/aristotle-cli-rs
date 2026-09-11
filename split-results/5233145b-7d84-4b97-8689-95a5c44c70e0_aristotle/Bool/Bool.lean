@@ -1,2 +1,0 @@
--- Declaration: Bool
--- Extracted by StaticSplit

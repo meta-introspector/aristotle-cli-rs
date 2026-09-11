@@ -1,2 +1,0 @@
--- Declaration: offsetEmbedIsometry
--- Extracted by StaticSplit

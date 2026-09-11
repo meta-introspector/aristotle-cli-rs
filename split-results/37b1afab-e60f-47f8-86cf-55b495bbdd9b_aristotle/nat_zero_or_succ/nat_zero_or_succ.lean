@@ -1,2 +1,0 @@
--- Declaration: nat_zero_or_succ
--- Extracted by StaticSplit

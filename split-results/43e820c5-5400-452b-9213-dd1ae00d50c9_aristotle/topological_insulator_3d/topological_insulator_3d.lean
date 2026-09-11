@@ -1,2 +1,0 @@
--- Declaration: topological_insulator_3d
--- Extracted by StaticSplit

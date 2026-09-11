@@ -1,2 +1,0 @@
--- Declaration: ABIConformant.of_refines
--- Extracted by StaticSplit

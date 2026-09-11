@@ -1,2 +1,0 @@
--- Declaration: void_elimination
--- Extracted by StaticSplit

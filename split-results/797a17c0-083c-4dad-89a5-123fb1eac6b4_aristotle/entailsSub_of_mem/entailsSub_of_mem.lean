@@ -1,2 +1,0 @@
--- Declaration: entailsSub_of_mem
--- Extracted by StaticSplit

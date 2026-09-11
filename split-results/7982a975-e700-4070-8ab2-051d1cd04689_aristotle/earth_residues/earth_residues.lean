@@ -1,2 +1,0 @@
--- Declaration: earth_residues
--- Extracted by StaticSplit

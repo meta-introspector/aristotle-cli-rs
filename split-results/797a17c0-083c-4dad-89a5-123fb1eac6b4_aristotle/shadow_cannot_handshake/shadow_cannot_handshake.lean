@@ -1,2 +1,0 @@
--- Declaration: shadow_cannot_handshake
--- Extracted by StaticSplit

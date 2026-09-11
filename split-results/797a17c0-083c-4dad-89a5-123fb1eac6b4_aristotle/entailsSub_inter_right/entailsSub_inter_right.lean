@@ -1,2 +1,0 @@
--- Declaration: entailsSub_inter_right
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: towerOffset
--- Extracted by StaticSplit

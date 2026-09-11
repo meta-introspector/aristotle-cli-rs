@@ -1,2 +1,0 @@
--- Declaration: twisted_factored
--- Extracted by StaticSplit

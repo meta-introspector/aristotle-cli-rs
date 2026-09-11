@@ -1,2 +1,0 @@
--- Declaration: fibration_modulus_factorization
--- Extracted by StaticSplit

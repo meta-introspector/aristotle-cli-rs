@@ -1,2 +1,0 @@
--- Declaration: theDivineEcho
--- Extracted by StaticSplit

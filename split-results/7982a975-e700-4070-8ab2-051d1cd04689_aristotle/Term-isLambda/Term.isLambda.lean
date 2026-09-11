@@ -1,2 +1,0 @@
--- Declaration: Term.isLambda
--- Extracted by StaticSplit

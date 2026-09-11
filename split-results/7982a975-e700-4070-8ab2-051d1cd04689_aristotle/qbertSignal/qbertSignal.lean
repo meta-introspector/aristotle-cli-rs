@@ -1,2 +1,0 @@
--- Declaration: qbertSignal
--- Extracted by StaticSplit

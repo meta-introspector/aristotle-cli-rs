@@ -1,2 +1,0 @@
--- Declaration: convergents_bound_194
--- Extracted by StaticSplit

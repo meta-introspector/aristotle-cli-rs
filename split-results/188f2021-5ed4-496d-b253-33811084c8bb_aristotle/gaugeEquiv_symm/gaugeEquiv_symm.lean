@@ -1,2 +1,0 @@
--- Declaration: gaugeEquiv_symm
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: skidmore_does_not_control
--- Extracted by StaticSplit

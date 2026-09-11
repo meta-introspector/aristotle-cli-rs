@@ -1,2 +1,0 @@
--- Declaration: π₄₇
--- Extracted by StaticSplit

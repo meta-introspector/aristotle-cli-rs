@@ -1,2 +1,0 @@
--- Declaration: prime37_divides_ly
--- Extracted by StaticSplit

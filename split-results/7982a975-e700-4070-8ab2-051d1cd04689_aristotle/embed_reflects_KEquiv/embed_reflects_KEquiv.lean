@@ -1,2 +1,0 @@
--- Declaration: embed_reflects_KEquiv
--- Extracted by StaticSplit

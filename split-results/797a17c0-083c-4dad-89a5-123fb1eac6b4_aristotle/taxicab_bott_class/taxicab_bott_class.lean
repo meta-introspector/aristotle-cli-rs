@@ -1,2 +1,0 @@
--- Declaration: taxicab_bott_class
--- Extracted by StaticSplit

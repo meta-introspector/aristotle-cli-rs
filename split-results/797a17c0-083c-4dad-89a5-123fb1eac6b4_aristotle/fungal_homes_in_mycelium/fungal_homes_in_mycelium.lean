@@ -1,2 +1,0 @@
--- Declaration: fungal_homes_in_mycelium
--- Extracted by StaticSplit

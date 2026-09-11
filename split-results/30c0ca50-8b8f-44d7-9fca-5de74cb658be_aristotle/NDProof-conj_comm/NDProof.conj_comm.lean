@@ -1,2 +1,0 @@
--- Declaration: NDProof.conj_comm
--- Extracted by StaticSplit

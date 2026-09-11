@@ -1,2 +1,0 @@
--- Declaration: initialRuntime
--- Extracted by StaticSplit

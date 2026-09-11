@@ -1,2 +1,0 @@
--- Declaration: cube_contains_firstCell
--- Extracted by StaticSplit

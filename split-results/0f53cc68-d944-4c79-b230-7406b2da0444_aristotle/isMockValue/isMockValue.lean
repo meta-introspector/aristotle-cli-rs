@@ -1,2 +1,0 @@
--- Declaration: isMockValue
--- Extracted by StaticSplit

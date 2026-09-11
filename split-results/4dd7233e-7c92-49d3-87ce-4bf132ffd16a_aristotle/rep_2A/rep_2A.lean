@@ -1,2 +1,0 @@
--- Declaration: rep_2A
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: hasPowerToPersuade
--- Extracted by StaticSplit

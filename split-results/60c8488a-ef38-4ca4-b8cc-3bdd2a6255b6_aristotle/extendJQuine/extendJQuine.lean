@@ -1,2 +1,0 @@
--- Declaration: extendJQuine
--- Extracted by StaticSplit

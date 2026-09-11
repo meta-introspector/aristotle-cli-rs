@@ -1,2 +1,0 @@
--- Declaration: HolomorphicVOA
--- Extracted by StaticSplit

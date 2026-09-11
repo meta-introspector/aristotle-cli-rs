@@ -1,2 +1,0 @@
--- Declaration: sccOf
--- Extracted by StaticSplit

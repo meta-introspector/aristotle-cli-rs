@@ -1,2 +1,0 @@
--- Declaration: rulesCommittee_citation
--- Extracted by StaticSplit

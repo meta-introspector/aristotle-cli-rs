@@ -1,2 +1,0 @@
--- Declaration: post_reaches_structuralism
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: scaleTowerGradeFunctor
--- Extracted by StaticSplit

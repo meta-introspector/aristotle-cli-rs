@@ -1,2 +1,0 @@
--- Declaration: norm8_factored
--- Extracted by StaticSplit

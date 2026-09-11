@@ -1,2 +1,0 @@
--- Declaration: payloadToTorus
--- Extracted by StaticSplit

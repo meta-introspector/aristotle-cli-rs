@@ -1,2 +1,0 @@
--- Declaration: genusMemusMapping
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: CoverageBitmap.le_trans
--- Extracted by StaticSplit

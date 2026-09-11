@@ -1,2 +1,0 @@
--- Declaration: c1_bott_shift
--- Extracted by StaticSplit

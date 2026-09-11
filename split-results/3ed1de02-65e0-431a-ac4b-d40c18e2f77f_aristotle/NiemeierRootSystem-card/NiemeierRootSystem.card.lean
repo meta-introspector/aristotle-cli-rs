@@ -1,2 +1,0 @@
--- Declaration: NiemeierRootSystem.card
--- Extracted by StaticSplit

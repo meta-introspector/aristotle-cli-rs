@@ -1,2 +1,0 @@
--- Declaration: gatesByResonance
--- Extracted by StaticSplit

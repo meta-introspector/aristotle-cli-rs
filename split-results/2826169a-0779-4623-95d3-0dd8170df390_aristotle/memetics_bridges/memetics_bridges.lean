@@ -1,2 +1,0 @@
--- Declaration: memetics_bridges
--- Extracted by StaticSplit

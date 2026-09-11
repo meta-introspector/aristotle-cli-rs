@@ -1,2 +1,0 @@
--- Declaration: pPlusIp
--- Extracted by StaticSplit

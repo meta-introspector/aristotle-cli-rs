@@ -1,2 +1,0 @@
--- Declaration: citeRuleX
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: sections_same_ss_product
--- Extracted by StaticSplit

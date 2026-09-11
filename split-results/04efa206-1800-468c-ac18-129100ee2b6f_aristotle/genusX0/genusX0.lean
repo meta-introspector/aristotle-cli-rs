@@ -1,2 +1,0 @@
--- Declaration: genusX0
--- Extracted by StaticSplit

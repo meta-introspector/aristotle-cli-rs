@@ -1,2 +1,0 @@
--- Declaration: q42Primes
--- Extracted by StaticSplit

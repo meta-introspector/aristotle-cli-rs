@@ -1,2 +1,0 @@
--- Declaration: empty_env_fixed_point
--- Extracted by StaticSplit

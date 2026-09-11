@@ -1,2 +1,0 @@
--- Declaration: UCAgree
--- Extracted by StaticSplit

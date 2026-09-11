@@ -1,2 +1,0 @@
--- Declaration: registry_combined_no_collisions
--- Extracted by StaticSplit

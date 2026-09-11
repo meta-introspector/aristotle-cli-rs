@@ -1,2 +1,0 @@
--- Declaration: bootstrap_no_drift
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ssp_gate_count
--- Extracted by StaticSplit

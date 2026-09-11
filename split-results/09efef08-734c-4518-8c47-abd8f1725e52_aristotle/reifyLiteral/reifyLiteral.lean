@@ -1,2 +1,0 @@
--- Declaration: reifyLiteral
--- Extracted by StaticSplit

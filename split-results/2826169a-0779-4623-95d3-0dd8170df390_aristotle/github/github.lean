@@ -1,2 +1,0 @@
--- Declaration: github
--- Extracted by StaticSplit

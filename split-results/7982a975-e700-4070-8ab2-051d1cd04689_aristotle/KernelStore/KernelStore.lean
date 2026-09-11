@@ -1,2 +1,0 @@
--- Declaration: KernelStore
--- Extracted by StaticSplit

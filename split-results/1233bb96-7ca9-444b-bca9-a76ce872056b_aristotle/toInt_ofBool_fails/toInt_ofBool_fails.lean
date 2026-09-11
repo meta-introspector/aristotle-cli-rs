@@ -1,2 +1,0 @@
--- Declaration: toInt_ofBool_fails
--- Extracted by StaticSplit

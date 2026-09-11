@@ -1,2 +1,0 @@
--- Declaration: showBrainrot
--- Extracted by StaticSplit

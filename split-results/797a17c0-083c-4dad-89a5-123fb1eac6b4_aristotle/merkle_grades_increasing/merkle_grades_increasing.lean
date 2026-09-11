@@ -1,2 +1,0 @@
--- Declaration: merkle_grades_increasing
--- Extracted by StaticSplit

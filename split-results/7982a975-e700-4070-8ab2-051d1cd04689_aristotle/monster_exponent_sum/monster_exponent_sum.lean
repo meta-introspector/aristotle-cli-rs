@@ -1,2 +1,0 @@
--- Declaration: monster_exponent_sum
--- Extracted by StaticSplit

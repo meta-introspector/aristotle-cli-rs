@@ -1,2 +1,0 @@
--- Declaration: obj_e8roots
--- Extracted by StaticSplit

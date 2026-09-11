@@ -1,2 +1,0 @@
--- Declaration: grand_ontological_theorem
--- Extracted by StaticSplit

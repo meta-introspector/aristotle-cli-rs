@@ -1,2 +1,0 @@
--- Declaration: governed_cut_elimination
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: aristotle
--- Extracted by StaticSplit

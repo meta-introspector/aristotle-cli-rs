@@ -1,2 +1,0 @@
--- Declaration: helium3_B
--- Extracted by StaticSplit

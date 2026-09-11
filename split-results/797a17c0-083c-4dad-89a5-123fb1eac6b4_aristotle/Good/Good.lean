@@ -1,2 +1,0 @@
--- Declaration: Good
--- Extracted by StaticSplit

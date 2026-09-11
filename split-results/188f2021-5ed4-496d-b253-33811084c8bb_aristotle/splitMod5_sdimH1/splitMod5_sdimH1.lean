@@ -1,2 +1,0 @@
--- Declaration: splitMod5_sdimH1
--- Extracted by StaticSplit

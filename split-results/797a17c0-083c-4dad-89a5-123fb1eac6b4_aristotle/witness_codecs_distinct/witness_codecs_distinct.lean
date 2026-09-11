@@ -1,2 +1,0 @@
--- Declaration: witness_codecs_distinct
--- Extracted by StaticSplit

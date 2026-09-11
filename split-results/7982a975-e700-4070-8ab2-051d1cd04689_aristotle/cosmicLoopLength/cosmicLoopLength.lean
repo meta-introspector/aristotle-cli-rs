@@ -1,2 +1,0 @@
--- Declaration: cosmicLoopLength
--- Extracted by StaticSplit

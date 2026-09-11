@@ -1,2 +1,0 @@
--- Declaration: MemeChain
--- Extracted by StaticSplit

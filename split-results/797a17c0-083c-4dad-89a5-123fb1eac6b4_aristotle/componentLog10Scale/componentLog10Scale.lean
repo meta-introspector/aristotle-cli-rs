@@ -1,2 +1,0 @@
--- Declaration: componentLog10Scale
--- Extracted by StaticSplit

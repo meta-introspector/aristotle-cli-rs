@@ -1,2 +1,0 @@
--- Declaration: shardVoteToReflection
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: lambency_iff
--- Extracted by StaticSplit

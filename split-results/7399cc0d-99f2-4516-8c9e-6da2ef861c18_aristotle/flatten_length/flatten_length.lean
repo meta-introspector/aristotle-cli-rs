@@ -1,2 +1,0 @@
--- Declaration: flatten_length
--- Extracted by StaticSplit

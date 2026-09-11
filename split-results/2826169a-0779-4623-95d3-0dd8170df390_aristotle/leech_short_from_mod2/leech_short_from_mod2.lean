@@ -1,2 +1,0 @@
--- Declaration: leech_short_from_mod2
--- Extracted by StaticSplit

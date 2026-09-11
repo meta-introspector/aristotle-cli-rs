@@ -1,2 +1,0 @@
--- Declaration: bbf15_champ
--- Extracted by StaticSplit

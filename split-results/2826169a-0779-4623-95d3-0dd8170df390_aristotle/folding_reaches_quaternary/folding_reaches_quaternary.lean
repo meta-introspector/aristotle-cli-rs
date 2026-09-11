@@ -1,2 +1,0 @@
--- Declaration: folding_reaches_quaternary
--- Extracted by StaticSplit

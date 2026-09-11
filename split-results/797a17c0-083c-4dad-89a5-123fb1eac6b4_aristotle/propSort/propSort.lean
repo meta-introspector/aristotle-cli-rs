@@ -1,2 +1,0 @@
--- Declaration: propSort
--- Extracted by StaticSplit

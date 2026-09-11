@@ -1,2 +1,0 @@
--- Declaration: golayReflexivity
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: hott_realizes_unimath
--- Extracted by StaticSplit

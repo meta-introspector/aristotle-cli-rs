@@ -1,2 +1,0 @@
--- Declaration: contextSelect_wellFormed
--- Extracted by StaticSplit

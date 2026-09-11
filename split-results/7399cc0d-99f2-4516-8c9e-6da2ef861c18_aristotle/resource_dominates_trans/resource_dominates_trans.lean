@@ -1,2 +1,0 @@
--- Declaration: resource_dominates_trans
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: moonshineGraph
--- Extracted by StaticSplit

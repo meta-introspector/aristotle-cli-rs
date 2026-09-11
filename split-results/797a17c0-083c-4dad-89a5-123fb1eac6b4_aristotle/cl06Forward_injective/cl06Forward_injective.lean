@@ -1,2 +1,0 @@
--- Declaration: cl06Forward_injective
--- Extracted by StaticSplit

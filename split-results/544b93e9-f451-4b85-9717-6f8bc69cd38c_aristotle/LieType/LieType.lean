@@ -1,2 +1,0 @@
--- Declaration: LieType
--- Extracted by StaticSplit

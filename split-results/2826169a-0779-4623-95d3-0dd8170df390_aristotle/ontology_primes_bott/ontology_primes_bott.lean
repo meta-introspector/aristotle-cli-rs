@@ -1,2 +1,0 @@
--- Declaration: ontology_primes_bott
--- Extracted by StaticSplit

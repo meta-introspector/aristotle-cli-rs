@@ -1,2 +1,0 @@
--- Declaration: grade_196883_is_3
--- Extracted by StaticSplit

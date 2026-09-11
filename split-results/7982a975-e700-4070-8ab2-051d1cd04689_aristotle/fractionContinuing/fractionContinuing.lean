@@ -1,2 +1,0 @@
--- Declaration: fractionContinuing
--- Extracted by StaticSplit

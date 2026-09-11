@@ -1,2 +1,0 @@
--- Declaration: tau_47_mod24
--- Extracted by StaticSplit

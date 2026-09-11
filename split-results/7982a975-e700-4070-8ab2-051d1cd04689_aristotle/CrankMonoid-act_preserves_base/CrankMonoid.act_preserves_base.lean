@@ -1,2 +1,0 @@
--- Declaration: CrankMonoid.act_preserves_base
--- Extracted by StaticSplit

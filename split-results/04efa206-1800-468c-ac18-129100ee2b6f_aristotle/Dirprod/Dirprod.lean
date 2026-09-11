@@ -1,2 +1,0 @@
--- Declaration: Dirprod
--- Extracted by StaticSplit

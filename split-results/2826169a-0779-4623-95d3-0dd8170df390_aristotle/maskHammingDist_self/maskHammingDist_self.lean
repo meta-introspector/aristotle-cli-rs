@@ -1,2 +1,0 @@
--- Declaration: maskHammingDist_self
--- Extracted by StaticSplit

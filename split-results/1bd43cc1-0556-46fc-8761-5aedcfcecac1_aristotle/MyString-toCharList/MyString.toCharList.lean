@@ -1,2 +1,0 @@
--- Declaration: MyString.toCharList
--- Extracted by StaticSplit

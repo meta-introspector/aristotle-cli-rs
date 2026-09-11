@@ -1,2 +1,0 @@
--- Declaration: trustedBaseSize
--- Extracted by StaticSplit

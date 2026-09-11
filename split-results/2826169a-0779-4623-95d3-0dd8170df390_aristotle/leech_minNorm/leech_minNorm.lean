@@ -1,2 +1,0 @@
--- Declaration: leech_minNorm
--- Extracted by StaticSplit

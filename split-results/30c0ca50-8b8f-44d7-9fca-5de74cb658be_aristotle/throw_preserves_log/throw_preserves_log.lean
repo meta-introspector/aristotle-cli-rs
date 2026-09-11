@@ -1,2 +1,0 @@
--- Declaration: throw_preserves_log
--- Extracted by StaticSplit

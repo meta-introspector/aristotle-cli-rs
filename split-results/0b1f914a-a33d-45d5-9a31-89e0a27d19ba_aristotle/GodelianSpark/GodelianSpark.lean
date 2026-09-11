@@ -1,2 +1,0 @@
--- Declaration: GodelianSpark
--- Extracted by StaticSplit

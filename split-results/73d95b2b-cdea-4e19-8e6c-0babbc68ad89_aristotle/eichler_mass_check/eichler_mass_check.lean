@@ -1,2 +1,0 @@
--- Declaration: eichler_mass_check
--- Extracted by StaticSplit

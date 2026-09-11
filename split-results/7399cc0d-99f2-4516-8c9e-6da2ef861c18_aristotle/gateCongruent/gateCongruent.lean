@@ -1,2 +1,0 @@
--- Declaration: gateCongruent
--- Extracted by StaticSplit

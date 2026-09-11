@@ -1,2 +1,0 @@
--- Declaration: Co1_Co2_index_eq
--- Extracted by StaticSplit

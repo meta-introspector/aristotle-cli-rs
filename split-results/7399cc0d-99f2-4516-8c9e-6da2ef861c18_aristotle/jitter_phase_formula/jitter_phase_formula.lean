@@ -1,2 +1,0 @@
--- Declaration: jitter_phase_formula
--- Extracted by StaticSplit

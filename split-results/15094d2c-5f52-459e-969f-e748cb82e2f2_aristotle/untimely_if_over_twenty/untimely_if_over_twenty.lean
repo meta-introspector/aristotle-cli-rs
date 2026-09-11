@@ -1,2 +1,0 @@
--- Declaration: untimely_if_over_twenty
--- Extracted by StaticSplit

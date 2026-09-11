@@ -1,2 +1,0 @@
--- Declaration: doHeist
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: radicalDivisors_head
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: A5_degrees_divide_order
--- Extracted by StaticSplit

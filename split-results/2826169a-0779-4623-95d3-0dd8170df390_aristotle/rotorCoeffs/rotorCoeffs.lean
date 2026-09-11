@@ -1,2 +1,0 @@
--- Declaration: rotorCoeffs
--- Extracted by StaticSplit

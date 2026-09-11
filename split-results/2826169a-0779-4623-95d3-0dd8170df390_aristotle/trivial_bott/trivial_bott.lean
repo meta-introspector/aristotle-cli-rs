@@ -1,2 +1,0 @@
--- Declaration: trivial_bott
--- Extracted by StaticSplit

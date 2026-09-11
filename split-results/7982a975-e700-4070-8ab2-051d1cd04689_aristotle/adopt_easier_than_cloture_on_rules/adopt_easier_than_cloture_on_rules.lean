@@ -1,2 +1,0 @@
--- Declaration: adopt_easier_than_cloture_on_rules
--- Extracted by StaticSplit

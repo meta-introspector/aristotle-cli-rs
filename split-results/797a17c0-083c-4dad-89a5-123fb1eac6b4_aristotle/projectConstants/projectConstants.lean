@@ -1,2 +1,0 @@
--- Declaration: projectConstants
--- Extracted by StaticSplit

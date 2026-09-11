@@ -1,2 +1,0 @@
--- Declaration: prop_univalence
--- Extracted by StaticSplit

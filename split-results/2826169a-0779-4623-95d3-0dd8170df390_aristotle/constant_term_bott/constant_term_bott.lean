@@ -1,2 +1,0 @@
--- Declaration: constant_term_bott
--- Extracted by StaticSplit

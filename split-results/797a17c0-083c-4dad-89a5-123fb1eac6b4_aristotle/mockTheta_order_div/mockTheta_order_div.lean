@@ -1,2 +1,0 @@
--- Declaration: mockTheta_order_div
--- Extracted by StaticSplit

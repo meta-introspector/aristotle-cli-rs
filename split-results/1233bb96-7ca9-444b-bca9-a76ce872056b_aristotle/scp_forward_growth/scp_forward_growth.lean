@@ -1,2 +1,0 @@
--- Declaration: scp_forward_growth
--- Extracted by StaticSplit

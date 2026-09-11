@@ -1,2 +1,0 @@
--- Declaration: spokeState
--- Extracted by StaticSplit

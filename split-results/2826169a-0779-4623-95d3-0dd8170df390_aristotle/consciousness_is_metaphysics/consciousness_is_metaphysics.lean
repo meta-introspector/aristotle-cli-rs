@@ -1,2 +1,0 @@
--- Declaration: consciousness_is_metaphysics
--- Extracted by StaticSplit

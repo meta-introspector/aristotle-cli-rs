@@ -1,2 +1,0 @@
--- Declaration: fungalArcadeFamily
--- Extracted by StaticSplit

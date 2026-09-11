@@ -1,2 +1,0 @@
--- Declaration: Kername
--- Extracted by StaticSplit

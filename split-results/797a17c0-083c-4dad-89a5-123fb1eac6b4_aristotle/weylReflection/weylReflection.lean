@@ -1,2 +1,0 @@
--- Declaration: weylReflection
--- Extracted by StaticSplit

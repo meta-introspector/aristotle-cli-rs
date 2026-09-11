@@ -1,2 +1,0 @@
--- Declaration: liftSrc
--- Extracted by StaticSplit

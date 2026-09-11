@@ -1,2 +1,0 @@
--- Declaration: repr_is_bott_period
--- Extracted by StaticSplit

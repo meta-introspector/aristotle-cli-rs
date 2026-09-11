@@ -1,2 +1,0 @@
--- Declaration: oggPrimes_prime
--- Extracted by StaticSplit

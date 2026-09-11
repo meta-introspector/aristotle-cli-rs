@@ -1,2 +1,0 @@
--- Declaration: recover_faithful
--- Extracted by StaticSplit

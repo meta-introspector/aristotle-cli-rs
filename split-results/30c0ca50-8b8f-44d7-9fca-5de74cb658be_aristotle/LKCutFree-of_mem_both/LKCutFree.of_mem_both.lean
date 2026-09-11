@@ -1,2 +1,0 @@
--- Declaration: LKCutFree.of_mem_both
--- Extracted by StaticSplit

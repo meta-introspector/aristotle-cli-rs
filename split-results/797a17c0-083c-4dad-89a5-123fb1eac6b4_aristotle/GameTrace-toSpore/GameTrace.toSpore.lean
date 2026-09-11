@@ -1,2 +1,0 @@
--- Declaration: GameTrace.toSpore
--- Extracted by StaticSplit

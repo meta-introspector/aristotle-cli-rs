@@ -1,2 +1,0 @@
--- Declaration: removed_on_impeachment_and_conviction
--- Extracted by StaticSplit

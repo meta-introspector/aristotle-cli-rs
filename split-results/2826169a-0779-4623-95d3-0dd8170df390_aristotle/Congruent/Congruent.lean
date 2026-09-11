@@ -1,2 +1,0 @@
--- Declaration: Congruent
--- Extracted by StaticSplit

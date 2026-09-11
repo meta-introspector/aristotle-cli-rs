@@ -1,2 +1,0 @@
--- Declaration: gammaR16_linearIndependent
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: fixed_point_is_56th_prime
--- Extracted by StaticSplit

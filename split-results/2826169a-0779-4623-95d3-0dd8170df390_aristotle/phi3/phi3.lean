@@ -1,2 +1,0 @@
--- Declaration: phi3
--- Extracted by StaticSplit

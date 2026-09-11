@@ -1,2 +1,0 @@
--- Declaration: narrative_transport_preserves_shadow
--- Extracted by StaticSplit

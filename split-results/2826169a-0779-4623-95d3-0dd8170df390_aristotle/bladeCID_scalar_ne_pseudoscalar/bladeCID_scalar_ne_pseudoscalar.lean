@@ -1,2 +1,0 @@
--- Declaration: bladeCID_scalar_ne_pseudoscalar
--- Extracted by StaticSplit

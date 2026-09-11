@@ -1,2 +1,0 @@
--- Declaration: SSPFractranProg
--- Extracted by StaticSplit

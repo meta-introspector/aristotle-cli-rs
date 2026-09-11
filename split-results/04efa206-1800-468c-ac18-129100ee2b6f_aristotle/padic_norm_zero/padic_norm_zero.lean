@@ -1,2 +1,0 @@
--- Declaration: padic_norm_zero
--- Extracted by StaticSplit

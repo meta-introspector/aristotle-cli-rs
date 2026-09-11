@@ -1,2 +1,0 @@
--- Declaration: all_clusters_bridged
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: j_coeff_1_lt_monster_order
--- Extracted by StaticSplit

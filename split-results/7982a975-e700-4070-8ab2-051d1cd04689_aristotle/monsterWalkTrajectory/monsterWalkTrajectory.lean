@@ -1,2 +1,0 @@
--- Declaration: monsterWalkTrajectory
--- Extracted by StaticSplit

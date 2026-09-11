@@ -1,2 +1,0 @@
--- Declaration: k0_class_eq_base
--- Extracted by StaticSplit

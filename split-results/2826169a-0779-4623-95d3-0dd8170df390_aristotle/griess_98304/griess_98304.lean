@@ -1,2 +1,0 @@
--- Declaration: griess_98304
--- Extracted by StaticSplit

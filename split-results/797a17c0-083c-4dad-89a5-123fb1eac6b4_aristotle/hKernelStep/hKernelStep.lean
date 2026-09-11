@@ -1,2 +1,0 @@
--- Declaration: hKernelStep
--- Extracted by StaticSplit

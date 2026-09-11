@@ -1,2 +1,0 @@
--- Declaration: mckay_expr_complexity
--- Extracted by StaticSplit

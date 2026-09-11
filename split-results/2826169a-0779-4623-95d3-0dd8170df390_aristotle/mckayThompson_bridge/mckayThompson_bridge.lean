@@ -1,2 +1,0 @@
--- Declaration: mckayThompson_bridge
--- Extracted by StaticSplit

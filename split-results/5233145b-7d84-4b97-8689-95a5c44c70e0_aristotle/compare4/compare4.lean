@@ -1,2 +1,0 @@
--- Declaration: compare4
--- Extracted by StaticSplit

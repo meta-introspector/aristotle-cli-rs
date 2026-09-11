@@ -1,2 +1,0 @@
--- Declaration: WebsiteSnapshot
--- Extracted by StaticSplit

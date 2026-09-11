@@ -1,2 +1,0 @@
--- Declaration: eval_nil
--- Extracted by StaticSplit

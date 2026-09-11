@@ -1,2 +1,0 @@
--- Declaration: demo_trajectory
--- Extracted by StaticSplit

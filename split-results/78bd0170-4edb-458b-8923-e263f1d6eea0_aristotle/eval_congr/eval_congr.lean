@@ -1,2 +1,0 @@
--- Declaration: eval_congr
--- Extracted by StaticSplit

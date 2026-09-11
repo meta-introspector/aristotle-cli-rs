@@ -1,2 +1,0 @@
--- Declaration: FiberState.atBase
--- Extracted by StaticSplit

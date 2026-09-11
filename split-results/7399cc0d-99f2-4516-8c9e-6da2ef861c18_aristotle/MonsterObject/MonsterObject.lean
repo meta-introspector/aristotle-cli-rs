@@ -1,2 +1,0 @@
--- Declaration: MonsterObject
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: census
--- Extracted by StaticSplit

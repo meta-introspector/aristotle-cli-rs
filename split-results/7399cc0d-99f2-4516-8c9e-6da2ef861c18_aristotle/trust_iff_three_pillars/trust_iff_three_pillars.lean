@@ -1,2 +1,0 @@
--- Declaration: trust_iff_three_pillars
--- Extracted by StaticSplit

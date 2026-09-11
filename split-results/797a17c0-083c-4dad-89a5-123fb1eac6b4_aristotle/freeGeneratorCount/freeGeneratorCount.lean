@@ -1,2 +1,0 @@
--- Declaration: freeGeneratorCount
--- Extracted by StaticSplit

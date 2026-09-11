@@ -1,2 +1,0 @@
--- Declaration: exponentDistance
--- Extracted by StaticSplit

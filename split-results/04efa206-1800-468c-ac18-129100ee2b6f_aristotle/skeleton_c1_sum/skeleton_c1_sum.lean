@@ -1,2 +1,0 @@
--- Declaration: skeleton_c1_sum
--- Extracted by StaticSplit

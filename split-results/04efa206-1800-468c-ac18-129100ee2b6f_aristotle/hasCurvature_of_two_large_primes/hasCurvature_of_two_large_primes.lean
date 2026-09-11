@@ -1,2 +1,0 @@
--- Declaration: hasCurvature_of_two_large_primes
--- Extracted by StaticSplit

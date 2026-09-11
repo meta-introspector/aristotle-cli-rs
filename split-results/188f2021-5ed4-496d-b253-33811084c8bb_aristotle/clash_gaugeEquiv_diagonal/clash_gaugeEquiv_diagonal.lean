@@ -1,2 +1,0 @@
--- Declaration: clash_gaugeEquiv_diagonal
--- Extracted by StaticSplit

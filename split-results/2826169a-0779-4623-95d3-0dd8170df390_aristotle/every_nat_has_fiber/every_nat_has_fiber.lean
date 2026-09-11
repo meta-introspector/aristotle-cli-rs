@@ -1,2 +1,0 @@
--- Declaration: every_nat_has_fiber
--- Extracted by StaticSplit

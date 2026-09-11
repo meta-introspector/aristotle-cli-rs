@@ -1,2 +1,0 @@
--- Declaration: frameLookup_bind
--- Extracted by StaticSplit

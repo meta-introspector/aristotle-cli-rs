@@ -1,2 +1,0 @@
--- Declaration: VectorSpace
--- Extracted by StaticSplit

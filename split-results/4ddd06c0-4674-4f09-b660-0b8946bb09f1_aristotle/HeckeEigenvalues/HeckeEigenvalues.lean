@@ -1,2 +1,0 @@
--- Declaration: HeckeEigenvalues
--- Extracted by StaticSplit

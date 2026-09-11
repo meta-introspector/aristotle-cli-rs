@@ -1,2 +1,0 @@
--- Declaration: AdmissibilityCondition
--- Extracted by StaticSplit

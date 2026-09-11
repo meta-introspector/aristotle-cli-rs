@@ -1,2 +1,0 @@
--- Declaration: SemanticCategory
--- Extracted by StaticSplit

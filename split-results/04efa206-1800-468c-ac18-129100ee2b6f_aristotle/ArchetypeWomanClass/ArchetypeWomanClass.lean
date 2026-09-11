@@ -1,2 +1,0 @@
--- Declaration: ArchetypeWomanClass
--- Extracted by StaticSplit

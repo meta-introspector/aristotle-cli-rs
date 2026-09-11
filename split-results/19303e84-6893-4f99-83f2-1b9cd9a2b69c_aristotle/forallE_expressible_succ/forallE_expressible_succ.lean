@@ -1,2 +1,0 @@
--- Declaration: forallE_expressible_succ
--- Extracted by StaticSplit

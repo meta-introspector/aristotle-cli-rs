@@ -1,2 +1,0 @@
--- Declaration: trivial_irrep_empty_support
--- Extracted by StaticSplit

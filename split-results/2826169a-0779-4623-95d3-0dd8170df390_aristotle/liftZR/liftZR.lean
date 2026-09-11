@@ -1,2 +1,0 @@
--- Declaration: liftZR
--- Extracted by StaticSplit

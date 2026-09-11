@@ -1,2 +1,0 @@
--- Declaration: spokeGrade
--- Extracted by StaticSplit

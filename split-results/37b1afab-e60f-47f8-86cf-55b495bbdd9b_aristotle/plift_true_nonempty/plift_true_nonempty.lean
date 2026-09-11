@@ -1,2 +1,0 @@
--- Declaration: plift_true_nonempty
--- Extracted by StaticSplit

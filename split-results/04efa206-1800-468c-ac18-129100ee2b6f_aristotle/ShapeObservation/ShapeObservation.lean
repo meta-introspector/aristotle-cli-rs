@@ -1,2 +1,0 @@
--- Declaration: ShapeObservation
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: vibe_mints_payment
--- Extracted by StaticSplit

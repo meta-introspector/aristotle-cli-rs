@@ -1,2 +1,0 @@
--- Declaration: tower_hierarchy_ordered
--- Extracted by StaticSplit

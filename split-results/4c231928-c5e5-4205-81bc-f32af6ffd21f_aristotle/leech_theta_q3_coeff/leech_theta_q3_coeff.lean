@@ -1,2 +1,0 @@
--- Declaration: leech_theta_q3_coeff
--- Extracted by StaticSplit

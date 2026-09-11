@@ -1,2 +1,0 @@
--- Declaration: spine_arrow_count
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: supersingularPrimes_eq_list_toFinset
--- Extracted by StaticSplit

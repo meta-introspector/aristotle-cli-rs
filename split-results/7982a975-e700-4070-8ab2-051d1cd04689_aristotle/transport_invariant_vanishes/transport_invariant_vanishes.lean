@@ -1,2 +1,0 @@
--- Declaration: transport_invariant_vanishes
--- Extracted by StaticSplit

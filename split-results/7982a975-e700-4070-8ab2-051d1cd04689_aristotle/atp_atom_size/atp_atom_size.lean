@@ -1,2 +1,0 @@
--- Declaration: atp_atom_size
--- Extracted by StaticSplit

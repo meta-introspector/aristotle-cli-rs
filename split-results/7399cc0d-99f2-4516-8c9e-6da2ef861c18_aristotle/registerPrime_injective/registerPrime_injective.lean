@@ -1,2 +1,0 @@
--- Declaration: registerPrime_injective
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ExtConcept
--- Extracted by StaticSplit

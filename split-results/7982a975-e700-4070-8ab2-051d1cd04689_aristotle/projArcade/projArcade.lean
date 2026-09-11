@@ -1,2 +1,0 @@
--- Declaration: projArcade
--- Extracted by StaticSplit

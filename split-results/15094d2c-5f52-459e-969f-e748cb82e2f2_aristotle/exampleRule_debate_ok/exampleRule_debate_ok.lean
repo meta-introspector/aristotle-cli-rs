@@ -1,2 +1,0 @@
--- Declaration: exampleRule_debate_ok
--- Extracted by StaticSplit

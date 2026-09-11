@@ -1,2 +1,0 @@
--- Declaration: padicVector
--- Extracted by StaticSplit

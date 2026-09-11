@@ -1,2 +1,0 @@
--- Declaration: v2_layer_size
--- Extracted by StaticSplit

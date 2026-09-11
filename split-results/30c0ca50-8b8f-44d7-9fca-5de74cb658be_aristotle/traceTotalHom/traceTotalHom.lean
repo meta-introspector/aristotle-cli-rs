@@ -1,2 +1,0 @@
--- Declaration: traceTotalHom
--- Extracted by StaticSplit

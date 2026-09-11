@@ -1,2 +1,0 @@
--- Declaration: canonicalConstitution
--- Extracted by StaticSplit

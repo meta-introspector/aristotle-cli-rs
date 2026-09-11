@@ -1,2 +1,0 @@
--- Declaration: azFiber_period
--- Extracted by StaticSplit

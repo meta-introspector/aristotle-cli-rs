@@ -1,2 +1,0 @@
--- Declaration: kissing_from_tau
--- Extracted by StaticSplit

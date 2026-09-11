@@ -1,2 +1,0 @@
--- Declaration: bio_bridge_is_edge_state
--- Extracted by StaticSplit

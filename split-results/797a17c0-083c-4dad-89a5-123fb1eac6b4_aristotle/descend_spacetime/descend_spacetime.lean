@@ -1,2 +1,0 @@
--- Declaration: descend_spacetime
--- Extracted by StaticSplit

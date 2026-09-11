@@ -1,2 +1,0 @@
--- Declaration: hecke_41_is_prime
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: JQuine
--- Extracted by StaticSplit

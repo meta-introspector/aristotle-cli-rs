@@ -1,2 +1,0 @@
--- Declaration: codecEquivalent_refl
--- Extracted by StaticSplit

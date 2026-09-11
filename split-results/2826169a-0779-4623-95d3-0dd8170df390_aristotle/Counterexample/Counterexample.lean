@@ -1,2 +1,0 @@
--- Declaration: Counterexample
--- Extracted by StaticSplit

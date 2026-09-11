@@ -1,2 +1,0 @@
--- Declaration: true_inhabited
--- Extracted by StaticSplit

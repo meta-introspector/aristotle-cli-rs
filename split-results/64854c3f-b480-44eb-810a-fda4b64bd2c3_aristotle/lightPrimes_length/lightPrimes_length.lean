@@ -1,2 +1,0 @@
--- Declaration: lightPrimes_length
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: skibidi_reaches_memus
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: emoji_soundness_crt
--- Extracted by StaticSplit

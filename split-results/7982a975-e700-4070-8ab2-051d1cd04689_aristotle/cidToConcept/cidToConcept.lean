@@ -1,2 +1,0 @@
--- Declaration: cidToConcept
--- Extracted by StaticSplit

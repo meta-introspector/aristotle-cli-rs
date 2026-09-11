@@ -1,2 +1,0 @@
--- Declaration: fight_faithful
--- Extracted by StaticSplit

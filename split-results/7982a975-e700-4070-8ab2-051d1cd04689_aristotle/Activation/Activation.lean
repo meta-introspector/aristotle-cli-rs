@@ -1,2 +1,0 @@
--- Declaration: Activation
--- Extracted by StaticSplit

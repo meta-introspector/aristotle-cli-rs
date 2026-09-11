@@ -1,2 +1,0 @@
--- Declaration: TConnectionType2
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: tailPrimeAt
--- Extracted by StaticSplit

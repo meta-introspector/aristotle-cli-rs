@@ -1,2 +1,0 @@
--- Declaration: embed
--- Extracted by StaticSplit

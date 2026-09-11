@@ -1,2 +1,0 @@
--- Declaration: sspB_harder_than_sspA
--- Extracted by StaticSplit

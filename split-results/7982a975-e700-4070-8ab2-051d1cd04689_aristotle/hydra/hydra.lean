@@ -1,2 +1,0 @@
--- Declaration: hydra
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: byteSum
--- Extracted by StaticSplit

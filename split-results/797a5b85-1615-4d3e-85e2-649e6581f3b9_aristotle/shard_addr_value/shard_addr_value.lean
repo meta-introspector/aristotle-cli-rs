@@ -1,2 +1,0 @@
--- Declaration: shard_addr_value
--- Extracted by StaticSplit

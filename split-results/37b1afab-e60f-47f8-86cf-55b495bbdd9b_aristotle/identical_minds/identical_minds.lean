@@ -1,2 +1,0 @@
--- Declaration: identical_minds
--- Extracted by StaticSplit

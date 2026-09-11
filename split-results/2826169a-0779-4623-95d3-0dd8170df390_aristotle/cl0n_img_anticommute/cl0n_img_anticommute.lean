@@ -1,2 +1,0 @@
--- Declaration: cl0n_img_anticommute
--- Extracted by StaticSplit

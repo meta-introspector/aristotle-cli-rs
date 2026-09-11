@@ -1,2 +1,0 @@
--- Declaration: extra_points
--- Extracted by StaticSplit

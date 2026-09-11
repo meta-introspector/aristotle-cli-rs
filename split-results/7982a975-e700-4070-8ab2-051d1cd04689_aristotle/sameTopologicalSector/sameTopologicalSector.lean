@@ -1,2 +1,0 @@
--- Declaration: sameTopologicalSector
--- Extracted by StaticSplit

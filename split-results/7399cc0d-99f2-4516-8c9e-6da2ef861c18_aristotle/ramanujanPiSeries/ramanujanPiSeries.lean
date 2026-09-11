@@ -1,2 +1,0 @@
--- Declaration: ramanujanPiSeries
--- Extracted by StaticSplit

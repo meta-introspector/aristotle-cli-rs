@@ -1,2 +1,0 @@
--- Declaration: diagonal_generator
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: projection_law_clean
--- Extracted by StaticSplit

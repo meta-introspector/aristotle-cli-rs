@@ -1,2 +1,0 @@
--- Declaration: houseMembership
--- Extracted by StaticSplit

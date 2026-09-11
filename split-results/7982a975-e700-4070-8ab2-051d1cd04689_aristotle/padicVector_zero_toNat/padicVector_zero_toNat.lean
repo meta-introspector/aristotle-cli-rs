@@ -1,2 +1,0 @@
--- Declaration: padicVector_zero_toNat
--- Extracted by StaticSplit

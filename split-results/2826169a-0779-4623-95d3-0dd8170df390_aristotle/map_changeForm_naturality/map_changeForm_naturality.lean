@@ -1,2 +1,0 @@
--- Declaration: map_changeForm_naturality
--- Extracted by StaticSplit

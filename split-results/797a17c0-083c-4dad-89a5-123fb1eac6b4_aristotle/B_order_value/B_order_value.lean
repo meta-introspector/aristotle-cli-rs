@@ -1,2 +1,0 @@
--- Declaration: B_order_value
--- Extracted by StaticSplit

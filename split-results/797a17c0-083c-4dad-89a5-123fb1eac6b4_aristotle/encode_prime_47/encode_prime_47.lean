@@ -1,2 +1,0 @@
--- Declaration: encode_prime_47
--- Extracted by StaticSplit

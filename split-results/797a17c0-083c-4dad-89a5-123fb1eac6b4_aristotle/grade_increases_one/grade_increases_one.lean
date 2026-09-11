@@ -1,2 +1,0 @@
--- Declaration: grade_increases_one
--- Extracted by StaticSplit

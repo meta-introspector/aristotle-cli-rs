@@ -1,2 +1,0 @@
--- Declaration: enriched_edge_count
--- Extracted by StaticSplit

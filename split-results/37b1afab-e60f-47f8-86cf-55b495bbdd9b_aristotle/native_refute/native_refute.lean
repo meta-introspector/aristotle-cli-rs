@@ -1,2 +1,0 @@
--- Declaration: native_refute
--- Extracted by StaticSplit

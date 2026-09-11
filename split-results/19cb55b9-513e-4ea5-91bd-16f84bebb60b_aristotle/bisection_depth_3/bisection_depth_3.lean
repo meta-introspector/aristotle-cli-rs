@@ -1,2 +1,0 @@
--- Declaration: bisection_depth_3
--- Extracted by StaticSplit

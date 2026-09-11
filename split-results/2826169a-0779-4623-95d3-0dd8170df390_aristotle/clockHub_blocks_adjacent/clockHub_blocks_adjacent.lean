@@ -1,2 +1,0 @@
--- Declaration: clockHub_blocks_adjacent
--- Extracted by StaticSplit

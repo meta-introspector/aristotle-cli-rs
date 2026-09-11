@@ -1,2 +1,0 @@
--- Declaration: p_plus_sq
--- Extracted by StaticSplit

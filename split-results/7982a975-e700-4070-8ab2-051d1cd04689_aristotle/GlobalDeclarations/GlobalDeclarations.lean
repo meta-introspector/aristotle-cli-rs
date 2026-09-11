@@ -1,2 +1,0 @@
--- Declaration: GlobalDeclarations
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: majorityOfList_uniform_neg
--- Extracted by StaticSplit

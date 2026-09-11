@@ -1,2 +1,0 @@
--- Declaration: pair_distinct
--- Extracted by StaticSplit

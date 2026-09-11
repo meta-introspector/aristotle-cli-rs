@@ -1,2 +1,0 @@
--- Declaration: isLogicalOutgrowth
--- Extracted by StaticSplit

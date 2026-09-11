@@ -1,2 +1,0 @@
--- Declaration: conway0_supersingular
--- Extracted by StaticSplit

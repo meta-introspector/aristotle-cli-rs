@@ -1,2 +1,0 @@
--- Declaration: sperm_trace_eq
--- Extracted by StaticSplit

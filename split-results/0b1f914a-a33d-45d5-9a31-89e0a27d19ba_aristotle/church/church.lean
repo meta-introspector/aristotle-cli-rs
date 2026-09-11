@@ -1,2 +1,0 @@
--- Declaration: church
--- Extracted by StaticSplit

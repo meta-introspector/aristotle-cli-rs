@@ -1,2 +1,0 @@
--- Declaration: CommitteeRulesVenue.mandatory
--- Extracted by StaticSplit

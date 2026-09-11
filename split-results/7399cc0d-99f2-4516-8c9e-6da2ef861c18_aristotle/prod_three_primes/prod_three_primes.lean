@@ -1,2 +1,0 @@
--- Declaration: prod_three_primes
--- Extracted by StaticSplit

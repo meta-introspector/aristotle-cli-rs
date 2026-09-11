@@ -1,2 +1,0 @@
--- Declaration: neighbors
--- Extracted by StaticSplit

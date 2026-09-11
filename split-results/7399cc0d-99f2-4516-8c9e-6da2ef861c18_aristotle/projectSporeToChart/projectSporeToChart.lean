@@ -1,2 +1,0 @@
--- Declaration: projectSporeToChart
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: toDict_counterexample_iff
--- Extracted by StaticSplit

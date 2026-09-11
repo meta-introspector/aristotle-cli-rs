@@ -1,2 +1,0 @@
--- Declaration: babyMonsterScore
--- Extracted by StaticSplit

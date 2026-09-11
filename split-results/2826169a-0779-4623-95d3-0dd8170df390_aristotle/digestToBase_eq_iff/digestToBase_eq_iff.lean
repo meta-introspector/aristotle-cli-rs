@@ -1,2 +1,0 @@
--- Declaration: digestToBase_eq_iff
--- Extracted by StaticSplit

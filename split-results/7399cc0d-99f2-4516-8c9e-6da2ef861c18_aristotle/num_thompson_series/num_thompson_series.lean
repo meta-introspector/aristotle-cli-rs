@@ -1,2 +1,0 @@
--- Declaration: num_thompson_series
--- Extracted by StaticSplit

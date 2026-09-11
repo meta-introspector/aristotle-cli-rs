@@ -1,2 +1,0 @@
--- Declaration: base_space_card
--- Extracted by StaticSplit

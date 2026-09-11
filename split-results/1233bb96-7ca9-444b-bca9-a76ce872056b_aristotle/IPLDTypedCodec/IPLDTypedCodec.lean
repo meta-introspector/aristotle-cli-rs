@@ -1,2 +1,0 @@
--- Declaration: IPLDTypedCodec
--- Extracted by StaticSplit

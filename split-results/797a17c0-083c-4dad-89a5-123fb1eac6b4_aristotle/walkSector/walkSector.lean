@@ -1,2 +1,0 @@
--- Declaration: walkSector
--- Extracted by StaticSplit

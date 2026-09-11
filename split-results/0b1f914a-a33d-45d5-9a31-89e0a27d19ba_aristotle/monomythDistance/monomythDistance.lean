@@ -1,2 +1,0 @@
--- Declaration: monomythDistance
--- Extracted by StaticSplit

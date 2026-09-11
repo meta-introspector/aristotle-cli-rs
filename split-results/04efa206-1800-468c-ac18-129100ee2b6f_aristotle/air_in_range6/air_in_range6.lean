@@ -1,2 +1,0 @@
--- Declaration: air_in_range6
--- Extracted by StaticSplit

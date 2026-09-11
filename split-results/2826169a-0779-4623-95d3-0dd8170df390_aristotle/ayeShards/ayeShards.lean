@@ -1,2 +1,0 @@
--- Declaration: ayeShards
--- Extracted by StaticSplit

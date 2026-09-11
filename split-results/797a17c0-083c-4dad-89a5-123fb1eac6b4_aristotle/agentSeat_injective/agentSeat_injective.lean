@@ -1,2 +1,0 @@
--- Declaration: agentSeat_injective
--- Extracted by StaticSplit

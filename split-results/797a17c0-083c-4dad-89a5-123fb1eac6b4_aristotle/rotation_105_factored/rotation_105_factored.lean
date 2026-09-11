@@ -1,2 +1,0 @@
--- Declaration: rotation_105_factored
--- Extracted by StaticSplit

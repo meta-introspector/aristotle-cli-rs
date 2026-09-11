@@ -1,2 +1,0 @@
--- Declaration: maxSubgroups_divide_B
--- Extracted by StaticSplit

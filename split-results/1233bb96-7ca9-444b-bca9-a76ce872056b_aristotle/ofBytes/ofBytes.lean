@@ -1,2 +1,0 @@
--- Declaration: ofBytes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ru_order_value
--- Extracted by StaticSplit

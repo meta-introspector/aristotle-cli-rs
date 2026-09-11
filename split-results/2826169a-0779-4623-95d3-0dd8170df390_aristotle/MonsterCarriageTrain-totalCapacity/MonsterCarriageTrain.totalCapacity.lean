@@ -1,2 +1,0 @@
--- Declaration: MonsterCarriageTrain.totalCapacity
--- Extracted by StaticSplit

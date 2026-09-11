@@ -1,2 +1,0 @@
--- Declaration: constitution_floor_enforceable
--- Extracted by StaticSplit

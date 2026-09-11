@@ -1,2 +1,0 @@
--- Declaration: Generator.all
--- Extracted by StaticSplit

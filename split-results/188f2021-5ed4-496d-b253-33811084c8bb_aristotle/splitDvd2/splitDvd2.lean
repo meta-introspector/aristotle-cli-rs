@@ -1,2 +1,0 @@
--- Declaration: splitDvd2
--- Extracted by StaticSplit

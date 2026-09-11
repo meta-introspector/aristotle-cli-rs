@@ -1,2 +1,0 @@
--- Declaration: betaStep_iterate_Omega
--- Extracted by StaticSplit

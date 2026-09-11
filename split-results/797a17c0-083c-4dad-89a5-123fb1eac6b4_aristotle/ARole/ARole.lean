@@ -1,2 +1,0 @@
--- Declaration: ARole
--- Extracted by StaticSplit

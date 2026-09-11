@@ -1,2 +1,0 @@
--- Declaration: mesCrank_coordinate
--- Extracted by StaticSplit

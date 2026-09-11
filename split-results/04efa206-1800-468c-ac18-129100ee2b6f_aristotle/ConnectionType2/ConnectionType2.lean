@@ -1,2 +1,0 @@
--- Declaration: ConnectionType2
--- Extracted by StaticSplit

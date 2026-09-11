@@ -1,2 +1,0 @@
--- Declaration: ss_divisors_are_supersingular
--- Extracted by StaticSplit

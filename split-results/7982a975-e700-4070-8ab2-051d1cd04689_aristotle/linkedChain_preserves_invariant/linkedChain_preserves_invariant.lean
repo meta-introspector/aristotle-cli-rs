@@ -1,2 +1,0 @@
--- Declaration: linkedChain_preserves_invariant
--- Extracted by StaticSplit

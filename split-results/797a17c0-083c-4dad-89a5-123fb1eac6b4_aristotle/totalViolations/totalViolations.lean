@@ -1,2 +1,0 @@
--- Declaration: totalViolations
--- Extracted by StaticSplit

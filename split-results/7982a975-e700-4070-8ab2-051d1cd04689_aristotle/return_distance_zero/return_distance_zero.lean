@@ -1,2 +1,0 @@
--- Declaration: return_distance_zero
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: weighted_card_divisors
--- Extracted by StaticSplit

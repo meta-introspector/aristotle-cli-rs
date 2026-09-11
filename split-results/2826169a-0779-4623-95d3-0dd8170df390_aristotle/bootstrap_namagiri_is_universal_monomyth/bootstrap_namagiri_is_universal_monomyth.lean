@@ -1,2 +1,0 @@
--- Declaration: bootstrap_namagiri_is_universal_monomyth
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: CID.ofString
--- Extracted by StaticSplit

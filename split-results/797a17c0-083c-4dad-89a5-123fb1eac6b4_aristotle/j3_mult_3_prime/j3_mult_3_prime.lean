@@ -1,2 +1,0 @@
--- Declaration: j3_mult_3_prime
--- Extracted by StaticSplit

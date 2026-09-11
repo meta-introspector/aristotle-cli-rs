@@ -1,2 +1,0 @@
--- Declaration: initial_bott_wf
--- Extracted by StaticSplit

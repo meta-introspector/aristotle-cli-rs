@@ -1,2 +1,0 @@
--- Declaration: certificate_fact_count
--- Extracted by StaticSplit

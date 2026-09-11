@@ -1,2 +1,0 @@
--- Declaration: resClassProfile
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Causality
--- Extracted by StaticSplit

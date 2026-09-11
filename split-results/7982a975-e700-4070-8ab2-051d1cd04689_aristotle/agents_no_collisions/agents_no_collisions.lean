@@ -1,2 +1,0 @@
--- Declaration: agents_no_collisions
--- Extracted by StaticSplit

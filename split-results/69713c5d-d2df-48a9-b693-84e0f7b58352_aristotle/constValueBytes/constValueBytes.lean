@@ -1,2 +1,0 @@
--- Declaration: constValueBytes
--- Extracted by StaticSplit

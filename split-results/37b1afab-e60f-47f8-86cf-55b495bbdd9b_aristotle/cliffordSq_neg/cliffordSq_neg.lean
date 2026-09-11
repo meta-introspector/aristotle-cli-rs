@@ -1,2 +1,0 @@
--- Declaration: cliffordSq_neg
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: min_nonzero_row_sum
--- Extracted by StaticSplit

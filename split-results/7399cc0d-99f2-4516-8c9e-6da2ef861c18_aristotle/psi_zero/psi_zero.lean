@@ -1,2 +1,0 @@
--- Declaration: psi_zero
--- Extracted by StaticSplit

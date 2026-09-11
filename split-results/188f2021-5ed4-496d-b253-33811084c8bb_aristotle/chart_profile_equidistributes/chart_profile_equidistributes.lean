@@ -1,2 +1,0 @@
--- Declaration: chart_profile_equidistributes
--- Extracted by StaticSplit

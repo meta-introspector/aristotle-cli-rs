@@ -1,2 +1,0 @@
--- Declaration: collatzBBf21Traj
--- Extracted by StaticSplit

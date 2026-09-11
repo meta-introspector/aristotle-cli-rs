@@ -1,2 +1,0 @@
--- Declaration: tesla_clifford_classes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: syncWindowConstraint
--- Extracted by StaticSplit

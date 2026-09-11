@@ -1,2 +1,0 @@
--- Declaration: semEquiv_groupoid
--- Extracted by StaticSplit

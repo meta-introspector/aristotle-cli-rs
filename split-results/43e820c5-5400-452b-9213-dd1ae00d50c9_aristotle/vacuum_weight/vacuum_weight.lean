@@ -1,2 +1,0 @@
--- Declaration: vacuum_weight
--- Extracted by StaticSplit

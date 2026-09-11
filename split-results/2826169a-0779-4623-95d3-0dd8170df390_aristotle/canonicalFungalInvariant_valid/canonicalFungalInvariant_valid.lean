@@ -1,2 +1,0 @@
--- Declaration: canonicalFungalInvariant_valid
--- Extracted by StaticSplit

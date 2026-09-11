@@ -1,2 +1,0 @@
--- Declaration: taxicabCoord
--- Extracted by StaticSplit

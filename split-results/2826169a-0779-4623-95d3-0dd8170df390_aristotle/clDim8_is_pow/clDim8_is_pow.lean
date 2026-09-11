@@ -1,2 +1,0 @@
--- Declaration: clDim8_is_pow
--- Extracted by StaticSplit

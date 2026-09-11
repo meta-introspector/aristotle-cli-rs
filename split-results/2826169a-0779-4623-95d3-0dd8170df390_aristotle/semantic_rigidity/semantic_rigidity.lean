@@ -1,2 +1,0 @@
--- Declaration: semantic_rigidity
--- Extracted by StaticSplit

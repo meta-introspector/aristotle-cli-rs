@@ -1,2 +1,0 @@
--- Declaration: baseSequence
--- Extracted by StaticSplit

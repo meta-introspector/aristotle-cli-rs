@@ -1,2 +1,0 @@
--- Declaration: matchRatPattern
--- Extracted by StaticSplit

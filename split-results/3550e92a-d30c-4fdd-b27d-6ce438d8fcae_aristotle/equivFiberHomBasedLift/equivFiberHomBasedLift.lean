@@ -1,2 +1,0 @@
--- Declaration: equivFiberHomBasedLift
--- Extracted by StaticSplit

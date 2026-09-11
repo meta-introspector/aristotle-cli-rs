@@ -1,2 +1,0 @@
--- Declaration: FiberedDynSys
--- Extracted by StaticSplit

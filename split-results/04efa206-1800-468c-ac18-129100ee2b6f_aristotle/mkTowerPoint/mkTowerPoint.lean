@@ -1,2 +1,0 @@
--- Declaration: mkTowerPoint
--- Extracted by StaticSplit

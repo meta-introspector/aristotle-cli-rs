@@ -1,2 +1,0 @@
--- Declaration: GrothendieckSpace.embed
--- Extracted by StaticSplit

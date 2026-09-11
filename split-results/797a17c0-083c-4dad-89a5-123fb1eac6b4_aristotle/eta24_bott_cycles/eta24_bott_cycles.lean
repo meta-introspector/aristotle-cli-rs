@@ -1,2 +1,0 @@
--- Declaration: eta24_bott_cycles
--- Extracted by StaticSplit

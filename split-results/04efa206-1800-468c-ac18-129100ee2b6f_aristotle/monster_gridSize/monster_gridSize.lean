@@ -1,2 +1,0 @@
--- Declaration: monster_gridSize
--- Extracted by StaticSplit

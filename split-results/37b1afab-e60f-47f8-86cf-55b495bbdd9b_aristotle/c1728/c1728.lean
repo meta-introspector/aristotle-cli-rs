@@ -1,2 +1,0 @@
--- Declaration: c1728
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ATPConcept.all
--- Extracted by StaticSplit

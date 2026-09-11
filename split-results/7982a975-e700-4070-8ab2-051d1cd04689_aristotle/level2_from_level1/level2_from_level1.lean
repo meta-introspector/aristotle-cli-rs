@@ -1,2 +1,0 @@
--- Declaration: level2_from_level1
--- Extracted by StaticSplit

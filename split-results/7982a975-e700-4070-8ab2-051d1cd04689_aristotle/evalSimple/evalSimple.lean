@@ -1,2 +1,0 @@
--- Declaration: evalSimple
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: walk_stays_at_origin
--- Extracted by StaticSplit

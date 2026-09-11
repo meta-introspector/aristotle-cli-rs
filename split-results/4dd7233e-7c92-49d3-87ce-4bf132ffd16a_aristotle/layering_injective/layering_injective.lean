@@ -1,2 +1,0 @@
--- Declaration: layering_injective
--- Extracted by StaticSplit

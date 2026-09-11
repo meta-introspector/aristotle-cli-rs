@@ -1,2 +1,0 @@
--- Declaration: twentyfour_dvd_kissing
--- Extracted by StaticSplit

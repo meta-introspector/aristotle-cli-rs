@@ -1,2 +1,0 @@
--- Declaration: decodeProfile
--- Extracted by StaticSplit

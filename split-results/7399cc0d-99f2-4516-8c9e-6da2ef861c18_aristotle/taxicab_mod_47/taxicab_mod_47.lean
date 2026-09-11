@@ -1,2 +1,0 @@
--- Declaration: taxicab_mod_47
--- Extracted by StaticSplit

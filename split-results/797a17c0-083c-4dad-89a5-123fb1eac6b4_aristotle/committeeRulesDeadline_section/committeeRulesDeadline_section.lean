@@ -1,2 +1,0 @@
--- Declaration: committeeRulesDeadline_section
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: oggorial_num_divisors
--- Extracted by StaticSplit

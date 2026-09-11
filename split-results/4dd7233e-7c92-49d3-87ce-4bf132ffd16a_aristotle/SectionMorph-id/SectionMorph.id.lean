@@ -1,2 +1,0 @@
--- Declaration: SectionMorph.id
--- Extracted by StaticSplit

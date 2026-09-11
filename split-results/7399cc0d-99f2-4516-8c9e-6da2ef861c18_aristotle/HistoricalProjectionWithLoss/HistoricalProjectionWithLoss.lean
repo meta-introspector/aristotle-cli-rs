@@ -1,2 +1,0 @@
--- Declaration: HistoricalProjectionWithLoss
--- Extracted by StaticSplit

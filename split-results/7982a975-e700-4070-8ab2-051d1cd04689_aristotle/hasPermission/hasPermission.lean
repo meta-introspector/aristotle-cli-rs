@@ -1,2 +1,0 @@
--- Declaration: hasPermission
--- Extracted by StaticSplit

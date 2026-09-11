@@ -1,2 +1,0 @@
--- Declaration: all_canonical_extruders_agree
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: committee_veto
--- Extracted by StaticSplit

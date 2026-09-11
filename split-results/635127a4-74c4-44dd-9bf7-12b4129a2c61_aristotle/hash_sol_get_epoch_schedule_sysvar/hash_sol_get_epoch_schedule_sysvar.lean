@@ -1,2 +1,0 @@
--- Declaration: hash_sol_get_epoch_schedule_sysvar
--- Extracted by StaticSplit

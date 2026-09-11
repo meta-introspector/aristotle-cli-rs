@@ -1,2 +1,0 @@
--- Declaration: writePrompt
--- Extracted by StaticSplit

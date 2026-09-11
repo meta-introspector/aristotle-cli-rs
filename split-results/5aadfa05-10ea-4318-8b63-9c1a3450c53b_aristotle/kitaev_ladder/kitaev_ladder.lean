@@ -1,2 +1,0 @@
--- Declaration: kitaev_ladder
--- Extracted by StaticSplit

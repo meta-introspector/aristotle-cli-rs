@@ -1,2 +1,0 @@
--- Declaration: M22_order_factored
--- Extracted by StaticSplit

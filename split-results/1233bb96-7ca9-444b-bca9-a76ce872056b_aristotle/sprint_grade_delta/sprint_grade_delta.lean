@@ -1,2 +1,0 @@
--- Declaration: sprint_grade_delta
--- Extracted by StaticSplit

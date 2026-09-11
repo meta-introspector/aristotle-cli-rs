@@ -1,2 +1,0 @@
--- Declaration: ImpProof.rfl
--- Extracted by StaticSplit

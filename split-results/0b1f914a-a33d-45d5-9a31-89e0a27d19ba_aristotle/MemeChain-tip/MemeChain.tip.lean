@@ -1,2 +1,0 @@
--- Declaration: MemeChain.tip
--- Extracted by StaticSplit

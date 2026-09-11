@@ -1,2 +1,0 @@
--- Declaration: rulingNotAppealed_origin
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: kInvariant_bott8
--- Extracted by StaticSplit

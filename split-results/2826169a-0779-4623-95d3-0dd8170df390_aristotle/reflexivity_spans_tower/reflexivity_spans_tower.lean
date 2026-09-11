@@ -1,2 +1,0 @@
--- Declaration: reflexivity_spans_tower
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: f2pow
--- Extracted by StaticSplit

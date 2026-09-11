@@ -1,2 +1,0 @@
--- Declaration: exactly_threshold_insufficient
--- Extracted by StaticSplit

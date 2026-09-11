@@ -1,2 +1,0 @@
--- Declaration: AnnotatedSequencer
--- Extracted by StaticSplit

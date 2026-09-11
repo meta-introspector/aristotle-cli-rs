@@ -1,2 +1,0 @@
--- Declaration: appellLerchTerm
--- Extracted by StaticSplit

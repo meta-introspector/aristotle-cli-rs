@@ -1,2 +1,0 @@
--- Declaration: entropyGap
--- Extracted by StaticSplit

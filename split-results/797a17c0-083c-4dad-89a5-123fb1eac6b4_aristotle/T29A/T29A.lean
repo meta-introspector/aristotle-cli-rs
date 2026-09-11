@@ -1,2 +1,0 @@
--- Declaration: T29A
--- Extracted by StaticSplit

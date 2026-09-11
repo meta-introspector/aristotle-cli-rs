@@ -1,2 +1,0 @@
--- Declaration: adjudication_distinct_from_constitution
--- Extracted by StaticSplit

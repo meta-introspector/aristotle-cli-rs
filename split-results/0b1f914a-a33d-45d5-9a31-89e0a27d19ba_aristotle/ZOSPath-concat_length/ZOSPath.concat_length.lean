@@ -1,2 +1,0 @@
--- Declaration: ZOSPath.concat_length
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: graded_assembly
--- Extracted by StaticSplit

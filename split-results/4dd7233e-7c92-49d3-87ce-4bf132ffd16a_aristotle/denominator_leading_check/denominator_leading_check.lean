@@ -1,2 +1,0 @@
--- Declaration: denominator_leading_check
--- Extracted by StaticSplit

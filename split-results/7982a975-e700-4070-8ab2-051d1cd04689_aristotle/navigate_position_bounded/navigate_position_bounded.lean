@@ -1,2 +1,0 @@
--- Declaration: navigate_position_bounded
--- Extracted by StaticSplit

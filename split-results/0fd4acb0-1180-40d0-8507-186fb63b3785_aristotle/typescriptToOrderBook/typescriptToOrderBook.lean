@@ -1,2 +1,0 @@
--- Declaration: typescriptToOrderBook
--- Extracted by StaticSplit

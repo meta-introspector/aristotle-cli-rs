@@ -1,2 +1,0 @@
--- Declaration: substAt
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: popcount
--- Extracted by StaticSplit

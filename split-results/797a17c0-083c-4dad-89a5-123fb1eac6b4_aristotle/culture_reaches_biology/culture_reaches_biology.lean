@@ -1,2 +1,0 @@
--- Declaration: culture_reaches_biology
--- Extracted by StaticSplit

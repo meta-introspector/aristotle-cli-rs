@@ -1,2 +1,0 @@
--- Declaration: LiftProject.no_spurious_defect
--- Extracted by StaticSplit

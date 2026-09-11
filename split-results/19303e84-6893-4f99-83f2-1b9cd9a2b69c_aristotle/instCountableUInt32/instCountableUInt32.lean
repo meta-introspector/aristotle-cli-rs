@@ -1,2 +1,0 @@
--- Declaration: instCountableUInt32
--- Extracted by StaticSplit

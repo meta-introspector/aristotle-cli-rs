@@ -1,2 +1,0 @@
--- Declaration: EventConcept
--- Extracted by StaticSplit

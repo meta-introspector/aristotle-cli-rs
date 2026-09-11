@@ -1,2 +1,0 @@
--- Declaration: castAssoc
--- Extracted by StaticSplit

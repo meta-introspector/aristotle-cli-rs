@@ -1,2 +1,0 @@
--- Declaration: fullPropagationChain
--- Extracted by StaticSplit

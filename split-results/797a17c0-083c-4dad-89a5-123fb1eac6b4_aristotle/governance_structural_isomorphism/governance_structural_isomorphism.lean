@@ -1,2 +1,0 @@
--- Declaration: governance_structural_isomorphism
--- Extracted by StaticSplit

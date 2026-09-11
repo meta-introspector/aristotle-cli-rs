@@ -1,2 +1,0 @@
--- Declaration: juggledAristotle
--- Extracted by StaticSplit

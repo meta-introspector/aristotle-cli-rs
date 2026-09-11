@@ -1,2 +1,0 @@
--- Declaration: index
--- Extracted by StaticSplit

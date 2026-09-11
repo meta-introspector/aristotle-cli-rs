@@ -1,2 +1,0 @@
--- Declaration: mckay_from_voa
--- Extracted by StaticSplit

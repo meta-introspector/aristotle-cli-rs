@@ -1,2 +1,0 @@
--- Declaration: BiasM.lossy
--- Extracted by StaticSplit

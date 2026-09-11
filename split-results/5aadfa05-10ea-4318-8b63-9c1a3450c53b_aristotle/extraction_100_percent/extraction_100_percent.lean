@@ -1,2 +1,0 @@
--- Declaration: extraction_100_percent
--- Extracted by StaticSplit

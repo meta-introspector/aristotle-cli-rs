@@ -1,2 +1,0 @@
--- Declaration: mintBlock
--- Extracted by StaticSplit

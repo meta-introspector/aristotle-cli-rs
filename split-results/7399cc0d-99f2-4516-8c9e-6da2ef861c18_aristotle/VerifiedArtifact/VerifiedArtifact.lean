@@ -1,2 +1,0 @@
--- Declaration: VerifiedArtifact
--- Extracted by StaticSplit

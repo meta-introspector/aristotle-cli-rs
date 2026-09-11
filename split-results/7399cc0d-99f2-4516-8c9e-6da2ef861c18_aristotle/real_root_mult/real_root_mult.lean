@@ -1,2 +1,0 @@
--- Declaration: real_root_mult
--- Extracted by StaticSplit

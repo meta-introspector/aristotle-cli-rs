@@ -1,2 +1,0 @@
--- Declaration: bottRealDim
--- Extracted by StaticSplit

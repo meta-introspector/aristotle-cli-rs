@@ -1,2 +1,0 @@
--- Declaration: sheafBlock_Earth
--- Extracted by StaticSplit

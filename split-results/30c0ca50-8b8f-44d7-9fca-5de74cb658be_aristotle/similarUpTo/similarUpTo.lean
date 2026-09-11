@@ -1,2 +1,0 @@
--- Declaration: similarUpTo
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: parametric_historical_divergence
--- Extracted by StaticSplit

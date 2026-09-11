@@ -1,2 +1,0 @@
--- Declaration: TorusLoop.monodromyWeight
--- Extracted by StaticSplit

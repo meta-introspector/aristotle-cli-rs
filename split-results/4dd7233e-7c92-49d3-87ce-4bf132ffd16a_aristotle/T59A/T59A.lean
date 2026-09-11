@@ -1,2 +1,0 @@
--- Declaration: T59A
--- Extracted by StaticSplit

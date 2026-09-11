@@ -1,2 +1,0 @@
--- Declaration: growthGen
--- Extracted by StaticSplit

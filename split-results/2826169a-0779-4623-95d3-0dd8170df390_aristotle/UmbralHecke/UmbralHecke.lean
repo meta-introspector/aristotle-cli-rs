@@ -1,2 +1,0 @@
--- Declaration: UmbralHecke
--- Extracted by StaticSplit

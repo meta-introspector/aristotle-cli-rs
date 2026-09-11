@@ -1,2 +1,0 @@
--- Declaration: eta_24_is_delta
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: rho1_bott
--- Extracted by StaticSplit

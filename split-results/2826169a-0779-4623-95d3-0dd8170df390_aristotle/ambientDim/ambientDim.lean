@@ -1,2 +1,0 @@
--- Declaration: ambientDim
--- Extracted by StaticSplit

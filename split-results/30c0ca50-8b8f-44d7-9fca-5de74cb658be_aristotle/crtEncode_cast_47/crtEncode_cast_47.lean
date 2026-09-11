@@ -1,2 +1,0 @@
--- Declaration: crtEncode_cast_47
--- Extracted by StaticSplit

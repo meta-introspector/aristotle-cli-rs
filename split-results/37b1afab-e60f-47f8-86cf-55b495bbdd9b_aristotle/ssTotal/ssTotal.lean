@@ -1,2 +1,0 @@
--- Declaration: ssTotal
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: qid_semiotics_cid
--- Extracted by StaticSplit

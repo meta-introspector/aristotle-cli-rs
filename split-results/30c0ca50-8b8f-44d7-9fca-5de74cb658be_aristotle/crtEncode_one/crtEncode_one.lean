@@ -1,2 +1,0 @@
--- Declaration: crtEncode_one
--- Extracted by StaticSplit

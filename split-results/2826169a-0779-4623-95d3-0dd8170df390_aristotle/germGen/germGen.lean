@@ -1,2 +1,0 @@
--- Declaration: germGen
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MesState.toConfig
--- Extracted by StaticSplit

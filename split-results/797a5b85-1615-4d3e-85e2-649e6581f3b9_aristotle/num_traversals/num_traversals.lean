@@ -1,2 +1,0 @@
--- Declaration: num_traversals
--- Extracted by StaticSplit

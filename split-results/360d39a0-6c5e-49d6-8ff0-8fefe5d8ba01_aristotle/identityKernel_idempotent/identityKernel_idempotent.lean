@@ -1,2 +1,0 @@
--- Declaration: identityKernel_idempotent
--- Extracted by StaticSplit

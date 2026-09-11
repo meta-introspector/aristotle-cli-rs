@@ -1,2 +1,0 @@
--- Declaration: phosphorus_supersingular_coincidence
--- Extracted by StaticSplit

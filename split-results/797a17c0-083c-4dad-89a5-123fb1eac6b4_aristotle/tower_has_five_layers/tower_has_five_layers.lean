@@ -1,2 +1,0 @@
--- Declaration: tower_has_five_layers
--- Extracted by StaticSplit

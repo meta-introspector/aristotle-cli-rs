@@ -1,2 +1,0 @@
--- Declaration: zeta_four
--- Extracted by StaticSplit

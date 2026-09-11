@@ -1,2 +1,0 @@
--- Declaration: SenatorRole
--- Extracted by StaticSplit

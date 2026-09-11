@@ -1,2 +1,0 @@
--- Declaration: walkItinerary
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: decodeBrainrot
--- Extracted by StaticSplit

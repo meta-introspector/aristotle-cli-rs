@@ -1,2 +1,0 @@
--- Declaration: clIndex_degree_complex
--- Extracted by StaticSplit

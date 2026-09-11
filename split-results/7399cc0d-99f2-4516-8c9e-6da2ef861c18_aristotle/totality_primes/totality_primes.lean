@@ -1,2 +1,0 @@
--- Declaration: totality_primes
--- Extracted by StaticSplit

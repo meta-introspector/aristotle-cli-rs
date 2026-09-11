@@ -1,2 +1,0 @@
--- Declaration: voteWeight
--- Extracted by StaticSplit

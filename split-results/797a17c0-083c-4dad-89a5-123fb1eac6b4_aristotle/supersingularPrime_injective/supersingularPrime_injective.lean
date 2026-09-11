@@ -1,2 +1,0 @@
--- Declaration: supersingularPrime_injective
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: full_torus_windings
--- Extracted by StaticSplit

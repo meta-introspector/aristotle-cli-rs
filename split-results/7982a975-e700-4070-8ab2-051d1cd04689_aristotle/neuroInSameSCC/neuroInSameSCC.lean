@@ -1,2 +1,0 @@
--- Declaration: neuroInSameSCC
--- Extracted by StaticSplit

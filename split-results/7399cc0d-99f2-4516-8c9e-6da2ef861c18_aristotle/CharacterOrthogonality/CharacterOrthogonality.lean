@@ -1,2 +1,0 @@
--- Declaration: CharacterOrthogonality
--- Extracted by StaticSplit

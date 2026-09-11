@@ -1,2 +1,0 @@
--- Declaration: composite_3647
--- Extracted by StaticSplit

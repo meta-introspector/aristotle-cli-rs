@@ -1,2 +1,0 @@
--- Declaration: TGlobalDeclaration
--- Extracted by StaticSplit

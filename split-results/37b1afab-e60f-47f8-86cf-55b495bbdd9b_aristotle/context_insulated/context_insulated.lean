@@ -1,2 +1,0 @@
--- Declaration: context_insulated
--- Extracted by StaticSplit

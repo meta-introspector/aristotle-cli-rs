@@ -1,2 +1,0 @@
--- Declaration: metaM
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: LKG3.sound
--- Extracted by StaticSplit

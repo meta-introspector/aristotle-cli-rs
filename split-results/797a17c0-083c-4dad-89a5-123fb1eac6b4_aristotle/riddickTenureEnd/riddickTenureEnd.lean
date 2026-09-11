@@ -1,2 +1,0 @@
--- Declaration: riddickTenureEnd
--- Extracted by StaticSplit

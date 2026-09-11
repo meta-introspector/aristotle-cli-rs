@@ -1,2 +1,0 @@
--- Declaration: TypeDefnLink
--- Extracted by StaticSplit

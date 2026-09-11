@@ -1,2 +1,0 @@
--- Declaration: gate_additive
--- Extracted by StaticSplit

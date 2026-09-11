@@ -1,2 +1,0 @@
--- Declaration: HexTruth
--- Extracted by StaticSplit

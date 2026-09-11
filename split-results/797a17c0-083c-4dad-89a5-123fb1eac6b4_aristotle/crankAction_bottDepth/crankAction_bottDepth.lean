@@ -1,2 +1,0 @@
--- Declaration: crankAction_bottDepth
--- Extracted by StaticSplit

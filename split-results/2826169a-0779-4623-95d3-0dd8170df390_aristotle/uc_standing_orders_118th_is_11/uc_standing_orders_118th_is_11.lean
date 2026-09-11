@@ -1,2 +1,0 @@
--- Declaration: uc_standing_orders_118th_is_11
--- Extracted by StaticSplit

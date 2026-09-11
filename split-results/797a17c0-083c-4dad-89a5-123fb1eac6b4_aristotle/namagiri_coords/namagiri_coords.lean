@@ -1,2 +1,0 @@
--- Declaration: namagiri_coords
--- Extracted by StaticSplit

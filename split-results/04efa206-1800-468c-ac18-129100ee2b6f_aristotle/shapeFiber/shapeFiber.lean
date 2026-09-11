@@ -1,2 +1,0 @@
--- Declaration: shapeFiber
--- Extracted by StaticSplit

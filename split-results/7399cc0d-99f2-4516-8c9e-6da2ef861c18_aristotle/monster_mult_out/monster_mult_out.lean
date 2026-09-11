@@ -1,2 +1,0 @@
--- Declaration: monster_mult_out
--- Extracted by StaticSplit

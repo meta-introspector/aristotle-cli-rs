@@ -1,2 +1,0 @@
--- Declaration: NHClass.isNontrivial
--- Extracted by StaticSplit

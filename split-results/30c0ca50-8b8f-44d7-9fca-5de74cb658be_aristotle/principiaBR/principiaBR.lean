@@ -1,2 +1,0 @@
--- Declaration: principiaBR
--- Extracted by StaticSplit

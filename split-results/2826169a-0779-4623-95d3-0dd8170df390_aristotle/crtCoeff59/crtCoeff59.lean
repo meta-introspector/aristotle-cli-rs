@@ -1,2 +1,0 @@
--- Declaration: crtCoeff59
--- Extracted by StaticSplit

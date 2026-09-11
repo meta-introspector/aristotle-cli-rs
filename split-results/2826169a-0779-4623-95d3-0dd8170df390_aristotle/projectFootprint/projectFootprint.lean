@@ -1,2 +1,0 @@
--- Declaration: projectFootprint
--- Extracted by StaticSplit

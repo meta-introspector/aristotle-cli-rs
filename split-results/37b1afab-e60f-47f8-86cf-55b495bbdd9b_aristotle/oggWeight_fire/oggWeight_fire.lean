@@ -1,2 +1,0 @@
--- Declaration: oggWeight_fire
--- Extracted by StaticSplit

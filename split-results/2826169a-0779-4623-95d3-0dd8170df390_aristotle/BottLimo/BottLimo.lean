@@ -1,2 +1,0 @@
--- Declaration: BottLimo
--- Extracted by StaticSplit

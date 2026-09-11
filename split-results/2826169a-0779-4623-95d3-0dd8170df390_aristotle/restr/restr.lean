@@ -1,2 +1,0 @@
--- Declaration: restr
--- Extracted by StaticSplit

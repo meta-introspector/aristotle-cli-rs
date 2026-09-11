@@ -1,2 +1,0 @@
--- Declaration: TypeDefnBytes
--- Extracted by StaticSplit

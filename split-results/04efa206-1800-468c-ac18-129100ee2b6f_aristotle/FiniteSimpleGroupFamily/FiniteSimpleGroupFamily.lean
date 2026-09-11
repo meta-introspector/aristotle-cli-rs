@@ -1,2 +1,0 @@
--- Declaration: FiniteSimpleGroupFamily
--- Extracted by StaticSplit

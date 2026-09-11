@@ -1,2 +1,0 @@
--- Declaration: SpineLayer
--- Extracted by StaticSplit

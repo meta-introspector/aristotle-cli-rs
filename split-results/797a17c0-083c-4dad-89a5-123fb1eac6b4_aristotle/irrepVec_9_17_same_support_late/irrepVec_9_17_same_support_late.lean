@@ -1,2 +1,0 @@
--- Declaration: irrepVec_9_17_same_support_late
--- Extracted by StaticSplit

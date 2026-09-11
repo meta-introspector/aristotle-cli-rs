@@ -1,2 +1,0 @@
--- Declaration: normalization_reduces_or_preserves
--- Extracted by StaticSplit

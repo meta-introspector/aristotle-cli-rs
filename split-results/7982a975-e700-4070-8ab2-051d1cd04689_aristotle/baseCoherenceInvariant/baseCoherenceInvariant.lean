@@ -1,2 +1,0 @@
--- Declaration: baseCoherenceInvariant
--- Extracted by StaticSplit

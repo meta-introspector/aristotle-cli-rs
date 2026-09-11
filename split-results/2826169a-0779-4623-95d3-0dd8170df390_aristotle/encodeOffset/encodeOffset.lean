@@ -1,2 +1,0 @@
--- Declaration: encodeOffset
--- Extracted by StaticSplit

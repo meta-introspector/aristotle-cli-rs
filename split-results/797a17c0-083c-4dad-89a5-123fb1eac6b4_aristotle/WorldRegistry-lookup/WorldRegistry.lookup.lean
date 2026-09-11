@@ -1,2 +1,0 @@
--- Declaration: WorldRegistry.lookup
--- Extracted by StaticSplit

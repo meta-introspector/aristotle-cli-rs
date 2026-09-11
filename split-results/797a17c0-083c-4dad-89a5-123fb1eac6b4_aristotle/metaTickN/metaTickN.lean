@@ -1,2 +1,0 @@
--- Declaration: metaTickN
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: spore_count
--- Extracted by StaticSplit

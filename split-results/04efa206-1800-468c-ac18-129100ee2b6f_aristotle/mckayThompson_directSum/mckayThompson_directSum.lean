@@ -1,2 +1,0 @@
--- Declaration: mckayThompson_directSum
--- Extracted by StaticSplit

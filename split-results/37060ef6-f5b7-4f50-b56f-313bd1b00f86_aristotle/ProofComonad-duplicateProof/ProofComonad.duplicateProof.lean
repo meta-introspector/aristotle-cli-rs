@@ -1,2 +1,0 @@
--- Declaration: ProofComonad.duplicateProof
--- Extracted by StaticSplit

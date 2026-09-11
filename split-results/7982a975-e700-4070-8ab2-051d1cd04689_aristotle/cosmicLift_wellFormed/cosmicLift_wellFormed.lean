@@ -1,2 +1,0 @@
--- Declaration: cosmicLift_wellFormed
--- Extracted by StaticSplit

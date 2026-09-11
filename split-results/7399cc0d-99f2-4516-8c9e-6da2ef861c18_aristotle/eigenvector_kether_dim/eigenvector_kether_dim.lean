@@ -1,2 +1,0 @@
--- Declaration: eigenvector_kether_dim
--- Extracted by StaticSplit

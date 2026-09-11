@@ -1,2 +1,0 @@
--- Declaration: perfectReconstruction
--- Extracted by StaticSplit

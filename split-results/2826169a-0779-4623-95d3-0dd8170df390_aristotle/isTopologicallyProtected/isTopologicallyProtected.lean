@@ -1,2 +1,0 @@
--- Declaration: isTopologicallyProtected
--- Extracted by StaticSplit

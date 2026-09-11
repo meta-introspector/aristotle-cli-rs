@@ -1,2 +1,0 @@
--- Declaration: mcKay_bridge_unique
--- Extracted by StaticSplit

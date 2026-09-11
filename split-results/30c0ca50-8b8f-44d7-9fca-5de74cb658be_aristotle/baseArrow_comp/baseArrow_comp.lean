@@ -1,2 +1,0 @@
--- Declaration: baseArrow_comp
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: scaleDiagram
--- Extracted by StaticSplit

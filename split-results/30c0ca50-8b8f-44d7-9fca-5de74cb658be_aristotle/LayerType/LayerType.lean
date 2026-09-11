@@ -1,2 +1,0 @@
--- Declaration: LayerType
--- Extracted by StaticSplit

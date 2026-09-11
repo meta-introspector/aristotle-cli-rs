@@ -1,2 +1,0 @@
--- Declaration: Exemption
--- Extracted by StaticSplit

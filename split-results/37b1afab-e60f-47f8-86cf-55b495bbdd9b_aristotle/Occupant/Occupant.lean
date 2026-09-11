@@ -1,2 +1,0 @@
--- Declaration: Occupant
--- Extracted by StaticSplit

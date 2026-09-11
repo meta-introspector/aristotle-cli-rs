@@ -1,2 +1,0 @@
--- Declaration: serverReady
--- Extracted by StaticSplit

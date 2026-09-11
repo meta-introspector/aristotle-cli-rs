@@ -1,2 +1,0 @@
--- Declaration: mckay_spiral
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: mckay_trivector
--- Extracted by StaticSplit

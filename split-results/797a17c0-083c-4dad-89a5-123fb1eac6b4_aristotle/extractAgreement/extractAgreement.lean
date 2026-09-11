@@ -1,2 +1,0 @@
--- Declaration: extractAgreement
--- Extracted by StaticSplit

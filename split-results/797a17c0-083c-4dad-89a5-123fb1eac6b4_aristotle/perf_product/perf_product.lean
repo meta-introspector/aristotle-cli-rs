@@ -1,2 +1,0 @@
--- Declaration: perf_product
--- Extracted by StaticSplit

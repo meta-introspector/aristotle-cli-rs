@@ -1,2 +1,0 @@
--- Declaration: new_carrot_appears
--- Extracted by StaticSplit

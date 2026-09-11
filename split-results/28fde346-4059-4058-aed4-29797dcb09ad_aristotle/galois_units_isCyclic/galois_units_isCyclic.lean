@@ -1,2 +1,0 @@
--- Declaration: galois_units_isCyclic
--- Extracted by StaticSplit

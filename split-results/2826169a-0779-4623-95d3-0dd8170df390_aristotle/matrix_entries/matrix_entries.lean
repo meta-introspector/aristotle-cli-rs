@@ -1,2 +1,0 @@
--- Declaration: matrix_entries
--- Extracted by StaticSplit

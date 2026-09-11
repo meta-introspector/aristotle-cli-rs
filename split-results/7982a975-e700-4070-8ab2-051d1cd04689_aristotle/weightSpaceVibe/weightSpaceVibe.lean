@@ -1,2 +1,0 @@
--- Declaration: weightSpaceVibe
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monster_coordinate_trace
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: StepKind.authorizes
--- Extracted by StaticSplit

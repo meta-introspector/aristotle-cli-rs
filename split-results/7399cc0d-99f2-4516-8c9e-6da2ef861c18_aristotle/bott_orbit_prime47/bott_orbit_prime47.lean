@@ -1,2 +1,0 @@
--- Declaration: bott_orbit_prime47
--- Extracted by StaticSplit

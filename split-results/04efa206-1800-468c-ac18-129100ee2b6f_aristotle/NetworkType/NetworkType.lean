@@ -1,2 +1,0 @@
--- Declaration: NetworkType
--- Extracted by StaticSplit

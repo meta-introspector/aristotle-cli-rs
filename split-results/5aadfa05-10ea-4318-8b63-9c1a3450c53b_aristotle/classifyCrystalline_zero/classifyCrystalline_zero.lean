@@ -1,2 +1,0 @@
--- Declaration: classifyCrystalline_zero
--- Extracted by StaticSplit

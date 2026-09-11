@@ -1,2 +1,0 @@
--- Declaration: cl06_monoSpan_eq_top
--- Extracted by StaticSplit

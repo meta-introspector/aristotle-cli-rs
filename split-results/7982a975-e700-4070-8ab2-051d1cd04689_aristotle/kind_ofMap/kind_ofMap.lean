@@ -1,2 +1,0 @@
--- Declaration: kind_ofMap
--- Extracted by StaticSplit

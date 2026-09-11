@@ -1,2 +1,0 @@
--- Declaration: solfunmeme_functor_preserves_comp
--- Extracted by StaticSplit

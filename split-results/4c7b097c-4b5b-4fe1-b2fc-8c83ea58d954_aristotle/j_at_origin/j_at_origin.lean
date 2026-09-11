@@ -1,2 +1,0 @@
--- Declaration: j_at_origin
--- Extracted by StaticSplit

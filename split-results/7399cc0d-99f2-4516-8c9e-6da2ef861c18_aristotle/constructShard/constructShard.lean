@@ -1,2 +1,0 @@
--- Declaration: constructShard
--- Extracted by StaticSplit

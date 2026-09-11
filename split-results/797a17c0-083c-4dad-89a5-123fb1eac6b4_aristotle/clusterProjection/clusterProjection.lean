@@ -1,2 +1,0 @@
--- Declaration: clusterProjection
--- Extracted by StaticSplit

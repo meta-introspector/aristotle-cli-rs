@@ -1,2 +1,0 @@
--- Declaration: sspA_regime
--- Extracted by StaticSplit

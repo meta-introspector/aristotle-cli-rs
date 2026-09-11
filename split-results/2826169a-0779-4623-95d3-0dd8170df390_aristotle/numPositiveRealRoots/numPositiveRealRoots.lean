@@ -1,2 +1,0 @@
--- Declaration: numPositiveRealRoots
--- Extracted by StaticSplit

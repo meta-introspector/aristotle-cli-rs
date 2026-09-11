@@ -1,2 +1,0 @@
--- Declaration: Mechanism
--- Extracted by StaticSplit

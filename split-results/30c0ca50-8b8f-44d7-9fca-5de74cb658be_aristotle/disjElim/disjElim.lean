@@ -1,2 +1,0 @@
--- Declaration: disjElim
--- Extracted by StaticSplit

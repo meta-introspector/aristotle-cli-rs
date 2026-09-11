@@ -1,2 +1,0 @@
--- Declaration: consciousness_scc_nontrivial
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Representation.character'
--- Extracted by StaticSplit

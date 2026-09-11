@@ -1,2 +1,0 @@
--- Declaration: lam_expressible_succ
--- Extracted by StaticSplit

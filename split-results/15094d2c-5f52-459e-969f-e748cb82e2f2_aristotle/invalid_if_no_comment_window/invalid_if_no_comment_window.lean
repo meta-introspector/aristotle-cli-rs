@@ -1,2 +1,0 @@
--- Declaration: invalid_if_no_comment_window
--- Extracted by StaticSplit

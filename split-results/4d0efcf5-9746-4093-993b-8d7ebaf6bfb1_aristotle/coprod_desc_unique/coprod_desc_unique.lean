@@ -1,2 +1,0 @@
--- Declaration: coprod_desc_unique
--- Extracted by StaticSplit

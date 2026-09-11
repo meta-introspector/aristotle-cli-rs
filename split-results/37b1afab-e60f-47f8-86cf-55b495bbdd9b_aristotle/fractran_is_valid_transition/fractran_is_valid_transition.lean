@@ -1,2 +1,0 @@
--- Declaration: fractran_is_valid_transition
--- Extracted by StaticSplit

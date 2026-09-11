@@ -1,2 +1,0 @@
--- Declaration: watercraft_is_vessel
--- Extracted by StaticSplit

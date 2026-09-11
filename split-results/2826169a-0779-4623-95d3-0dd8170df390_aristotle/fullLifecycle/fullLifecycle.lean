@@ -1,2 +1,0 @@
--- Declaration: fullLifecycle
--- Extracted by StaticSplit

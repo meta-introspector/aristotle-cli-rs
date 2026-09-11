@@ -1,2 +1,0 @@
--- Declaration: house_origin_valid
--- Extracted by StaticSplit

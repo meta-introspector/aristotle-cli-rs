@@ -1,2 +1,0 @@
--- Declaration: gram9_orthogonality
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: vertCartIso
--- Extracted by StaticSplit

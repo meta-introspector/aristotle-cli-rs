@@ -1,2 +1,0 @@
--- Declaration: standingOrder_from_rulemaking
--- Extracted by StaticSplit

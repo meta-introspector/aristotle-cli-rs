@@ -1,2 +1,0 @@
--- Declaration: journey_is_closed
--- Extracted by StaticSplit

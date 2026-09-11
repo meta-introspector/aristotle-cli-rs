@@ -1,2 +1,0 @@
--- Declaration: essSurj_toDom
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: main
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ConjClassWeight
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: maximal_chain
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: AGL32_sumsq
--- Extracted by StaticSplit

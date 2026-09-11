@@ -1,2 +1,0 @@
--- Declaration: hex_nibble_sum
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: AuthType
--- Extracted by StaticSplit

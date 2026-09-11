@@ -1,2 +1,0 @@
--- Declaration: heckeAction_eq_moonshineE2
--- Extracted by StaticSplit

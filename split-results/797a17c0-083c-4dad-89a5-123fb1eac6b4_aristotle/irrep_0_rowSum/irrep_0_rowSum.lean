@@ -1,2 +1,0 @@
--- Declaration: irrep_0_rowSum
--- Extracted by StaticSplit

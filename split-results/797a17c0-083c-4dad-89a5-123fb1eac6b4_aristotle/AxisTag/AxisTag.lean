@@ -1,2 +1,0 @@
--- Declaration: AxisTag
--- Extracted by StaticSplit

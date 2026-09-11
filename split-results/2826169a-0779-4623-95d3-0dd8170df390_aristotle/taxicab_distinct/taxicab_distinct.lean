@@ -1,2 +1,0 @@
--- Declaration: taxicab_distinct
--- Extracted by StaticSplit

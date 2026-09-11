@@ -1,2 +1,0 @@
--- Declaration: toPrimeSet_zero
--- Extracted by StaticSplit

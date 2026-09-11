@@ -1,2 +1,0 @@
--- Declaration: Vector9D
--- Extracted by StaticSplit

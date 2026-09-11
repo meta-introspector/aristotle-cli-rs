@@ -1,2 +1,0 @@
--- Declaration: flipMask_involutive
--- Extracted by StaticSplit

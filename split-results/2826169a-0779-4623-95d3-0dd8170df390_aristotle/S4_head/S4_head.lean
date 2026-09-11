@@ -1,2 +1,0 @@
--- Declaration: S4_head
--- Extracted by StaticSplit

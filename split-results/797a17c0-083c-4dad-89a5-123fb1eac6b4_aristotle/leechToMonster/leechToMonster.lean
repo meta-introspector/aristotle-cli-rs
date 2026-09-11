@@ -1,2 +1,0 @@
--- Declaration: leechToMonster
--- Extracted by StaticSplit

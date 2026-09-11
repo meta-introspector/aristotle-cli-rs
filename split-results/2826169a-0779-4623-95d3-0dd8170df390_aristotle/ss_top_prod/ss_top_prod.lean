@@ -1,2 +1,0 @@
--- Declaration: ss_top_prod
--- Extracted by StaticSplit

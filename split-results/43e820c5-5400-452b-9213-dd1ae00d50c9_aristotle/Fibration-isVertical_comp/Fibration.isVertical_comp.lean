@@ -1,2 +1,0 @@
--- Declaration: Fibration.isVertical_comp
--- Extracted by StaticSplit

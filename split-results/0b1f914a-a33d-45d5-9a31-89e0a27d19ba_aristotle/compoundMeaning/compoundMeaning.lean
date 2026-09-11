@@ -1,2 +1,0 @@
--- Declaration: compoundMeaning
--- Extracted by StaticSplit

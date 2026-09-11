@@ -1,2 +1,0 @@
--- Declaration: brandt_dimension
--- Extracted by StaticSplit

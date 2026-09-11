@@ -1,2 +1,0 @@
--- Declaration: orbifold_crt
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: toNat_injective
--- Extracted by StaticSplit

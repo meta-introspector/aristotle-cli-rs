@@ -1,2 +1,0 @@
--- Declaration: merger_is_successor
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: irrepVec_9_sum
--- Extracted by StaticSplit

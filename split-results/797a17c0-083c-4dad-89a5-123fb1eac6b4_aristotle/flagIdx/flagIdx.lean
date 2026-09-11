@@ -1,2 +1,0 @@
--- Declaration: flagIdx
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: three_plus_five_is_bott
--- Extracted by StaticSplit

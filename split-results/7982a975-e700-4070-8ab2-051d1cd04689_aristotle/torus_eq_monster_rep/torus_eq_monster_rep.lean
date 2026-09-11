@@ -1,2 +1,0 @@
--- Declaration: torus_eq_monster_rep
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: containerCube
--- Extracted by StaticSplit

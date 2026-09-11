@@ -1,2 +1,0 @@
--- Declaration: bitView_oggorial
--- Extracted by StaticSplit

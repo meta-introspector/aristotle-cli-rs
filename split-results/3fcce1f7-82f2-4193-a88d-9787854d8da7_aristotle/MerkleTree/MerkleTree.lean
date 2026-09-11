@@ -1,2 +1,0 @@
--- Declaration: MerkleTree
--- Extracted by StaticSplit

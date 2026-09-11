@@ -1,2 +1,0 @@
--- Declaration: origin_universal_fixedPoint
--- Extracted by StaticSplit

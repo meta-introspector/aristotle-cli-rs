@@ -1,2 +1,0 @@
--- Declaration: canonicalSection_admissible
--- Extracted by StaticSplit

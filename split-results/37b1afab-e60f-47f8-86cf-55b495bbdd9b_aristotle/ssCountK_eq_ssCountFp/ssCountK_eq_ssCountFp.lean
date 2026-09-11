@@ -1,2 +1,0 @@
--- Declaration: ssCountK_eq_ssCountFp
--- Extracted by StaticSplit

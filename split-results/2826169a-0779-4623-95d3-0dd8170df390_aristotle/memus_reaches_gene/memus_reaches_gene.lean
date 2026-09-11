@@ -1,2 +1,0 @@
--- Declaration: memus_reaches_gene
--- Extracted by StaticSplit

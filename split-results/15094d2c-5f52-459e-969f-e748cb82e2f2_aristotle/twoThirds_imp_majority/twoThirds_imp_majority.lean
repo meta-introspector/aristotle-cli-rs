@@ -1,2 +1,0 @@
--- Declaration: twoThirds_imp_majority
--- Extracted by StaticSplit

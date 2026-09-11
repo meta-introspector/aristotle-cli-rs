@@ -1,2 +1,0 @@
--- Declaration: toFloat
--- Extracted by StaticSplit

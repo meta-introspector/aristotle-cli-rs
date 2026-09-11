@@ -1,2 +1,0 @@
--- Declaration: c3_v3
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SchemaValid
--- Extracted by StaticSplit

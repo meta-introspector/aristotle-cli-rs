@@ -1,2 +1,0 @@
--- Declaration: GitConcept
--- Extracted by StaticSplit

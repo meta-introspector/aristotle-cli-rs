@@ -1,2 +1,0 @@
--- Declaration: mckayThompson_conjugation_invariant
--- Extracted by StaticSplit

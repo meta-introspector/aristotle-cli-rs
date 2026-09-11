@@ -1,2 +1,0 @@
--- Declaration: Candidate
--- Extracted by StaticSplit

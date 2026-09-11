@@ -1,2 +1,0 @@
--- Declaration: hom_ext
--- Extracted by StaticSplit

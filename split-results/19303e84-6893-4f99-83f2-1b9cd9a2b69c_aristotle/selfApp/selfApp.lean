@@ -1,2 +1,0 @@
--- Declaration: selfApp
--- Extracted by StaticSplit

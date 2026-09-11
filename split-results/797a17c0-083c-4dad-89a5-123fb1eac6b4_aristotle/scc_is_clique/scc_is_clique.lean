@@ -1,2 +1,0 @@
--- Declaration: scc_is_clique
--- Extracted by StaticSplit

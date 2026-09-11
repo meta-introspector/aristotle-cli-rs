@@ -1,2 +1,0 @@
--- Declaration: ontology_divides_rho1
--- Extracted by StaticSplit

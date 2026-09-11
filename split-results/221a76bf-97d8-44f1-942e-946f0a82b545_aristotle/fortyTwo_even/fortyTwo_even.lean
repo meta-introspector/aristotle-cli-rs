@@ -1,2 +1,0 @@
--- Declaration: fortyTwo_even
--- Extracted by StaticSplit

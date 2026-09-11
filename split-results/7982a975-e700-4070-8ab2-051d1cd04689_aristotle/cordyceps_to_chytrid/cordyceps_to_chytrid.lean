@@ -1,2 +1,0 @@
--- Declaration: cordyceps_to_chytrid
--- Extracted by StaticSplit

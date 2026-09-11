@@ -1,2 +1,0 @@
--- Declaration: empty_wellFormed
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: toy_vacuum_grade
--- Extracted by StaticSplit

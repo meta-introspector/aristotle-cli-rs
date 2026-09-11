@@ -1,2 +1,0 @@
--- Declaration: harmonicCollapse
--- Extracted by StaticSplit

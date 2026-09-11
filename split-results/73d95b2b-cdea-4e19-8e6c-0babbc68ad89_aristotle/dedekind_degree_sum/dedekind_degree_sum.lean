@@ -1,2 +1,0 @@
--- Declaration: dedekind_degree_sum
--- Extracted by StaticSplit

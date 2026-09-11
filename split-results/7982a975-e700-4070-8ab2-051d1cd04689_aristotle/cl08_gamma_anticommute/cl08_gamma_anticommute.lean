@@ -1,2 +1,0 @@
--- Declaration: cl08_gamma_anticommute
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monster_rep_factors
--- Extracted by StaticSplit

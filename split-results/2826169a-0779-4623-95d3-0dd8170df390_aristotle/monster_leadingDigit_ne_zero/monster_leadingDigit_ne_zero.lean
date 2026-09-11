@@ -1,2 +1,0 @@
--- Declaration: monster_leadingDigit_ne_zero
--- Extracted by StaticSplit

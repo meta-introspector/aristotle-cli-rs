@@ -1,2 +1,0 @@
--- Declaration: chi1_2A
--- Extracted by StaticSplit

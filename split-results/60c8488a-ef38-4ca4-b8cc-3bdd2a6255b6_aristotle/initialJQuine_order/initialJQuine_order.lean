@@ -1,2 +1,0 @@
--- Declaration: initialJQuine_order
--- Extracted by StaticSplit

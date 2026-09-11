@@ -1,2 +1,0 @@
--- Declaration: clifford_quotient_prime
--- Extracted by StaticSplit

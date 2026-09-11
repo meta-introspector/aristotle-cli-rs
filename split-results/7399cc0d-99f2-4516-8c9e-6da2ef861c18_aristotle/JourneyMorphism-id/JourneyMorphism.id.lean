@@ -1,2 +1,0 @@
--- Declaration: JourneyMorphism.id
--- Extracted by StaticSplit

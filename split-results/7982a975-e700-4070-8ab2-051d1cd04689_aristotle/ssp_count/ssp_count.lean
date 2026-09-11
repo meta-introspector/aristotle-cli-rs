@@ -1,2 +1,0 @@
--- Declaration: ssp_count
--- Extracted by StaticSplit

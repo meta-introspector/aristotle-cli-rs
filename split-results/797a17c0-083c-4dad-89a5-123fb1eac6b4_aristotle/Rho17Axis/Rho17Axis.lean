@@ -1,2 +1,0 @@
--- Declaration: Rho17Axis
--- Extracted by StaticSplit

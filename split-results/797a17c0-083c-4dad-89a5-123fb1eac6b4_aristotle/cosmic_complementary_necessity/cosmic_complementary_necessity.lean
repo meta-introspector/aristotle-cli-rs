@@ -1,2 +1,0 @@
--- Declaration: cosmic_complementary_necessity
--- Extracted by StaticSplit

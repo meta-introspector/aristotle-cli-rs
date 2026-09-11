@@ -1,2 +1,0 @@
--- Declaration: mdlCompare
--- Extracted by StaticSplit

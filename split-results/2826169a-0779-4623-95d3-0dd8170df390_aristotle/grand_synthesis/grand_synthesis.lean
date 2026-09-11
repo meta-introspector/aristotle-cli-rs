@@ -1,2 +1,0 @@
--- Declaration: grand_synthesis
--- Extracted by StaticSplit

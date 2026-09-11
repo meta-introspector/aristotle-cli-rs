@@ -1,2 +1,0 @@
--- Declaration: tailDivisorOfBits
--- Extracted by StaticSplit

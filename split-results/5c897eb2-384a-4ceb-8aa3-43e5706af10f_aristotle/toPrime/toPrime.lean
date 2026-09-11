@@ -1,2 +1,0 @@
--- Declaration: toPrime
--- Extracted by StaticSplit

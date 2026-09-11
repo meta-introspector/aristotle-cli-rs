@@ -1,2 +1,0 @@
--- Declaration: count_fire_6
--- Extracted by StaticSplit

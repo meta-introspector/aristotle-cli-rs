@@ -1,2 +1,0 @@
--- Declaration: graded_disjoint
--- Extracted by StaticSplit

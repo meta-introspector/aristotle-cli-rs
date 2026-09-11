@@ -1,2 +1,0 @@
--- Declaration: divisor_count_monsterIrrep
--- Extracted by StaticSplit

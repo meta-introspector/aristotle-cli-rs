@@ -1,2 +1,0 @@
--- Declaration: FiberState.basePoint
--- Extracted by StaticSplit

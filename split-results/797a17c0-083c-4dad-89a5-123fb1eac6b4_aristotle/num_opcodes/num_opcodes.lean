@@ -1,2 +1,0 @@
--- Declaration: num_opcodes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: bladeGrade_le
--- Extracted by StaticSplit

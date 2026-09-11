@@ -1,2 +1,0 @@
--- Declaration: skidmore_needs_thoroughness
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: UnivSort
--- Extracted by StaticSplit

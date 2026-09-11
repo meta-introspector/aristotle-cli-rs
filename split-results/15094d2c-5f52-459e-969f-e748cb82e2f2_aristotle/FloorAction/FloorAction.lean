@@ -1,2 +1,0 @@
--- Declaration: FloorAction
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: loper_keeps_shifted_class
--- Extracted by StaticSplit

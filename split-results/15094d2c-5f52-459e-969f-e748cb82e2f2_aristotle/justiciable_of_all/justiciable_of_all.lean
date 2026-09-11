@@ -1,2 +1,0 @@
--- Declaration: justiciable_of_all
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: projection_values_agree
--- Extracted by StaticSplit

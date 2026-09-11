@@ -1,2 +1,0 @@
--- Declaration: OntologyRelation
--- Extracted by StaticSplit

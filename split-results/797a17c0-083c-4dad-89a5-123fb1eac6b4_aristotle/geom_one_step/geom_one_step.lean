@@ -1,2 +1,0 @@
--- Declaration: geom_one_step
--- Extracted by StaticSplit

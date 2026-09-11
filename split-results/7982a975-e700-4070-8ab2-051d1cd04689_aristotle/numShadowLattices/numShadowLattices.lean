@@ -1,2 +1,0 @@
--- Declaration: numShadowLattices
--- Extracted by StaticSplit

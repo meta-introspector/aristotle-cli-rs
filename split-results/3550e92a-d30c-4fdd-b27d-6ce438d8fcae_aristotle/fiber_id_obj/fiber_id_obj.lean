@@ -1,2 +1,0 @@
--- Declaration: fiber_id_obj
--- Extracted by StaticSplit

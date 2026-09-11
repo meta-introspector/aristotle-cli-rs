@@ -1,2 +1,0 @@
--- Declaration: ColimitFiber.truncate_zero_train
--- Extracted by StaticSplit

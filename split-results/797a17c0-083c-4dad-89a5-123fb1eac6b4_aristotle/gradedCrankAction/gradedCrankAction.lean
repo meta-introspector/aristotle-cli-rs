@@ -1,2 +1,0 @@
--- Declaration: gradedCrankAction
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: fuse_position_is_torusAdd
--- Extracted by StaticSplit

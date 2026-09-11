@@ -1,2 +1,0 @@
--- Declaration: statusMessage_mock
--- Extracted by StaticSplit

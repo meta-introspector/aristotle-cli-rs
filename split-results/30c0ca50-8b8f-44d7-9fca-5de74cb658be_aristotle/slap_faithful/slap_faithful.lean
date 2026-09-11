@@ -1,2 +1,0 @@
--- Declaration: slap_faithful
--- Extracted by StaticSplit

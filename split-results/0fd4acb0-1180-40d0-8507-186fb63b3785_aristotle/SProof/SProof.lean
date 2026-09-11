@@ -1,2 +1,0 @@
--- Declaration: SProof
--- Extracted by StaticSplit

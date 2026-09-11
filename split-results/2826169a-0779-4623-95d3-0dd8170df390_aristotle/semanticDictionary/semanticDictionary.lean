@@ -1,2 +1,0 @@
--- Declaration: semanticDictionary
--- Extracted by StaticSplit

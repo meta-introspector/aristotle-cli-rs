@@ -1,2 +1,0 @@
--- Declaration: f2_inert
--- Extracted by StaticSplit

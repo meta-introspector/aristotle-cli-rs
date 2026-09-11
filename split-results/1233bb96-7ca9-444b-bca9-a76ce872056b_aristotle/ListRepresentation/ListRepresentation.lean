@@ -1,2 +1,0 @@
--- Declaration: ListRepresentation
--- Extracted by StaticSplit

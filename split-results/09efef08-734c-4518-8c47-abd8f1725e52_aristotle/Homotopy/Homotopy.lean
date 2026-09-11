@@ -1,2 +1,0 @@
--- Declaration: Homotopy
--- Extracted by StaticSplit

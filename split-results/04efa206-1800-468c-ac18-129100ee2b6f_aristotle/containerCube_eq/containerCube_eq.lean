@@ -1,2 +1,0 @@
--- Declaration: containerCube_eq
--- Extracted by StaticSplit

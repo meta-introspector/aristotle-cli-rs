@@ -1,2 +1,0 @@
--- Declaration: moonshine_propagation_viable
--- Extracted by StaticSplit

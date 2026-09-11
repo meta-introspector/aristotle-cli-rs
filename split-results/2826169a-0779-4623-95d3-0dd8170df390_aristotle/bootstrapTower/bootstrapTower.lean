@@ -1,2 +1,0 @@
--- Declaration: bootstrapTower
--- Extracted by StaticSplit

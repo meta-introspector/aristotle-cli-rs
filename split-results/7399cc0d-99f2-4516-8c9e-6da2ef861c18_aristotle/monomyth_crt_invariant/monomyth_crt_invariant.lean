@@ -1,2 +1,0 @@
--- Declaration: monomyth_crt_invariant
--- Extracted by StaticSplit

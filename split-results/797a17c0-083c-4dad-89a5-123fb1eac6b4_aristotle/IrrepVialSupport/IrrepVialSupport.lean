@@ -1,2 +1,0 @@
--- Declaration: IrrepVialSupport
--- Extracted by StaticSplit

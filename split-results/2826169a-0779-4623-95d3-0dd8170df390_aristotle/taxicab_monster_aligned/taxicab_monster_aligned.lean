@@ -1,2 +1,0 @@
--- Declaration: taxicab_monster_aligned
--- Extracted by StaticSplit

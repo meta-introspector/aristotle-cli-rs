@@ -1,2 +1,0 @@
--- Declaration: mckay_nonneg
--- Extracted by StaticSplit

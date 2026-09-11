@@ -1,2 +1,0 @@
--- Declaration: isSink
--- Extracted by StaticSplit

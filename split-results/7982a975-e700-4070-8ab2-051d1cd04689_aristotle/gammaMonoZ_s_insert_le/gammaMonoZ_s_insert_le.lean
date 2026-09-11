@@ -1,2 +1,0 @@
--- Declaration: gammaMonoZ_s_insert_le
--- Extracted by StaticSplit

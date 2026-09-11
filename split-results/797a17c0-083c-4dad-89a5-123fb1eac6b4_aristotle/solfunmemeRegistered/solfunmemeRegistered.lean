@@ -1,2 +1,0 @@
--- Declaration: solfunmemeRegistered
--- Extracted by StaticSplit

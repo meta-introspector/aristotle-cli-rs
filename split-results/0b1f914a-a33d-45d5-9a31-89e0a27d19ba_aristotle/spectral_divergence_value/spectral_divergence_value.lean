@@ -1,2 +1,0 @@
--- Declaration: spectral_divergence_value
--- Extracted by StaticSplit

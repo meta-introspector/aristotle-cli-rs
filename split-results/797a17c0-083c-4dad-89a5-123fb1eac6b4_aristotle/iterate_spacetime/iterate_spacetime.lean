@@ -1,2 +1,0 @@
--- Declaration: iterate_spacetime
--- Extracted by StaticSplit

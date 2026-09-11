@@ -1,2 +1,0 @@
--- Declaration: exFalso
--- Extracted by StaticSplit

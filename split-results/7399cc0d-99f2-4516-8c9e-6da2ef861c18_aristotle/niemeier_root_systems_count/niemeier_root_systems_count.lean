@@ -1,2 +1,0 @@
--- Declaration: niemeier_root_systems_count
--- Extracted by StaticSplit

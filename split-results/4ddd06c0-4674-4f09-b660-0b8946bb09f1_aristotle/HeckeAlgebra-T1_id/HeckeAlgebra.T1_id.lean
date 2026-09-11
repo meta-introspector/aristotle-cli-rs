@@ -1,2 +1,0 @@
--- Declaration: HeckeAlgebra.T1_id
--- Extracted by StaticSplit

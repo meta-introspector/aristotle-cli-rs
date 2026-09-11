@@ -1,2 +1,0 @@
--- Declaration: operator_period_6
--- Extracted by StaticSplit

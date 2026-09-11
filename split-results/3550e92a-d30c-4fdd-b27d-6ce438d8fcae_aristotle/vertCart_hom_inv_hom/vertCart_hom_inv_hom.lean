@@ -1,2 +1,0 @@
--- Declaration: vertCart_hom_inv_hom
--- Extracted by StaticSplit

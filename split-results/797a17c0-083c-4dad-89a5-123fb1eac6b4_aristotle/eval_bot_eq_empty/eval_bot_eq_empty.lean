@@ -1,2 +1,0 @@
--- Declaration: eval_bot_eq_empty
--- Extracted by StaticSplit

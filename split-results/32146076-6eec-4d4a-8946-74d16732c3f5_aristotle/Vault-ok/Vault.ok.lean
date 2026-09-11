@@ -1,2 +1,0 @@
--- Declaration: Vault.ok
--- Extracted by StaticSplit

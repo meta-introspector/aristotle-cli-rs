@@ -1,2 +1,0 @@
--- Declaration: verum
--- Extracted by StaticSplit

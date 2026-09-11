@@ -1,2 +1,0 @@
--- Declaration: bivector_count_is_105
--- Extracted by StaticSplit

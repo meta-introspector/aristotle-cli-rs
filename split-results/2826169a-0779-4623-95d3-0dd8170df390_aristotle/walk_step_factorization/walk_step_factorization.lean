@@ -1,2 +1,0 @@
--- Declaration: walk_step_factorization
--- Extracted by StaticSplit

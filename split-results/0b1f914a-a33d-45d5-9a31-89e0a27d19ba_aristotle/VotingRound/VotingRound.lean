@@ -1,2 +1,0 @@
--- Declaration: VotingRound
--- Extracted by StaticSplit

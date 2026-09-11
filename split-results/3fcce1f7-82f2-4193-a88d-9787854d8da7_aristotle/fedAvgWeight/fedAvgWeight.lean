@@ -1,2 +1,0 @@
--- Declaration: fedAvgWeight
--- Extracted by StaticSplit

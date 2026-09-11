@@ -1,2 +1,0 @@
--- Declaration: perron_frobenius_normalization
--- Extracted by StaticSplit

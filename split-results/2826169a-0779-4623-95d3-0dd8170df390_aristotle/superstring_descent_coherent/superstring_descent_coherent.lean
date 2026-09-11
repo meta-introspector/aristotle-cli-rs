@@ -1,2 +1,0 @@
--- Declaration: superstring_descent_coherent
--- Extracted by StaticSplit

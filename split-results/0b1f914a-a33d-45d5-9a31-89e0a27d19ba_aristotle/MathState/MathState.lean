@@ -1,2 +1,0 @@
--- Declaration: MathState
--- Extracted by StaticSplit

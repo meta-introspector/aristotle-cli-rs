@@ -1,2 +1,0 @@
--- Declaration: moonshine_preserves_monomyth
--- Extracted by StaticSplit

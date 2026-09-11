@@ -1,2 +1,0 @@
--- Declaration: bootstrap_partial_stealth
--- Extracted by StaticSplit

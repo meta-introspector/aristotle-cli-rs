@@ -1,2 +1,0 @@
--- Declaration: numHoles_eq_zero_iff
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: revelationPoint
--- Extracted by StaticSplit

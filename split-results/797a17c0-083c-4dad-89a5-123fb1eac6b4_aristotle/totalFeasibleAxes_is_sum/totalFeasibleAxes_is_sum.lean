@@ -1,2 +1,0 @@
--- Declaration: totalFeasibleAxes_is_sum
--- Extracted by StaticSplit

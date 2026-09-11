@@ -1,2 +1,0 @@
--- Declaration: edgeBottShift
--- Extracted by StaticSplit

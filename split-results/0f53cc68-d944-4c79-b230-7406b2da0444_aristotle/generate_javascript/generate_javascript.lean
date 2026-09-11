@@ -1,2 +1,0 @@
--- Declaration: generate_javascript
--- Extracted by StaticSplit

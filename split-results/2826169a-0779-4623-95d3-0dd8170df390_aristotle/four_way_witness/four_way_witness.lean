@@ -1,2 +1,0 @@
--- Declaration: four_way_witness
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: TowerMorphism
--- Extracted by StaticSplit

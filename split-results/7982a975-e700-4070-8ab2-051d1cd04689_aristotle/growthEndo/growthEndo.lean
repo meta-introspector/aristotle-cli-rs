@@ -1,2 +1,0 @@
--- Declaration: growthEndo
--- Extracted by StaticSplit

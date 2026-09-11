@@ -1,2 +1,0 @@
--- Declaration: TopInvariant
--- Extracted by StaticSplit

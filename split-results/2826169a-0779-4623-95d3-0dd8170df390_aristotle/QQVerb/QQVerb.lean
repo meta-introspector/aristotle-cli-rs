@@ -1,2 +1,0 @@
--- Declaration: QQVerb
--- Extracted by StaticSplit

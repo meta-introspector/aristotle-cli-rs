@@ -1,2 +1,0 @@
--- Declaration: taxicab_divides_monster
--- Extracted by StaticSplit

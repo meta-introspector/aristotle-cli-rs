@@ -1,2 +1,0 @@
--- Declaration: gene_exclusively_ontogenetic
--- Extracted by StaticSplit

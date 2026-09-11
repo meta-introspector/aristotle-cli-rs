@@ -1,2 +1,0 @@
--- Declaration: aristotleTypescriptStep
--- Extracted by StaticSplit

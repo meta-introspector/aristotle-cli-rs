@@ -1,2 +1,0 @@
--- Declaration: monster_base_card
--- Extracted by StaticSplit

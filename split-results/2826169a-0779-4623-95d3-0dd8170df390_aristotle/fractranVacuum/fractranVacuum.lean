@@ -1,2 +1,0 @@
--- Declaration: fractranVacuum
--- Extracted by StaticSplit

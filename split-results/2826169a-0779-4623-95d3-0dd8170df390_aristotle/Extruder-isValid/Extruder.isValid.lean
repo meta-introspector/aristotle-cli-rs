@@ -1,2 +1,0 @@
--- Declaration: Extruder.isValid
--- Extracted by StaticSplit

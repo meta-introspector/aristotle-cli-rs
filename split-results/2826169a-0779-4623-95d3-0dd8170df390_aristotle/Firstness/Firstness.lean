@@ -1,2 +1,0 @@
--- Declaration: Firstness
--- Extracted by StaticSplit

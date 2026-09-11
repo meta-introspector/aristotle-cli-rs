@@ -1,2 +1,0 @@
--- Declaration: N0_order
--- Extracted by StaticSplit

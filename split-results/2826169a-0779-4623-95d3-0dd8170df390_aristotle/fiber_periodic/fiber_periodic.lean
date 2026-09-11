@@ -1,2 +1,0 @@
--- Declaration: fiber_periodic
--- Extracted by StaticSplit

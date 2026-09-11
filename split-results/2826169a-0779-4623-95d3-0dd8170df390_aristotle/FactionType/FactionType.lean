@@ -1,2 +1,0 @@
--- Declaration: FactionType
--- Extracted by StaticSplit

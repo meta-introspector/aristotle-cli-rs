@@ -1,2 +1,0 @@
--- Declaration: equivDom
--- Extracted by StaticSplit

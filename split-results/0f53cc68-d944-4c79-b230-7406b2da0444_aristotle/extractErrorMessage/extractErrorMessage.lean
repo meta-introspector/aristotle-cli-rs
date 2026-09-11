@@ -1,2 +1,0 @@
--- Declaration: extractErrorMessage
--- Extracted by StaticSplit

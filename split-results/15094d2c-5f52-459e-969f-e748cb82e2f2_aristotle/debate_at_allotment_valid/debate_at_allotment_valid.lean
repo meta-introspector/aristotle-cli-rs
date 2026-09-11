@@ -1,2 +1,0 @@
--- Declaration: debate_at_allotment_valid
--- Extracted by StaticSplit

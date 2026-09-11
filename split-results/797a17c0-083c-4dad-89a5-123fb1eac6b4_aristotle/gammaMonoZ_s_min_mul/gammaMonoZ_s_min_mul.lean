@@ -1,2 +1,0 @@
--- Declaration: gammaMonoZ_s_min_mul
--- Extracted by StaticSplit

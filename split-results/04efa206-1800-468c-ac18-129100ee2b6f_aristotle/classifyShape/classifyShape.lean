@@ -1,2 +1,0 @@
--- Declaration: classifyShape
--- Extracted by StaticSplit

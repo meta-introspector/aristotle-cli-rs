@@ -1,2 +1,0 @@
--- Declaration: update_fixed_iff
--- Extracted by StaticSplit

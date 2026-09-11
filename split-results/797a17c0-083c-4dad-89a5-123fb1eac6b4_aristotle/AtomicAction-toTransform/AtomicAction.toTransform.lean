@@ -1,2 +1,0 @@
--- Declaration: AtomicAction.toTransform
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: tsf_has_fixed_point
--- Extracted by StaticSplit

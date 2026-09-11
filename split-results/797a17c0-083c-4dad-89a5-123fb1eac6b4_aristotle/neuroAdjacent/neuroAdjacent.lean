@@ -1,2 +1,0 @@
--- Declaration: neuroAdjacent
--- Extracted by StaticSplit

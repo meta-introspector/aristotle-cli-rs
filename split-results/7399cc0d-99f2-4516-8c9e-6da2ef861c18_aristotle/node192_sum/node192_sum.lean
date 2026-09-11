@@ -1,2 +1,0 @@
--- Declaration: node192_sum
--- Extracted by StaticSplit

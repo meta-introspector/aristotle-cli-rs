@@ -1,2 +1,0 @@
--- Declaration: agentResidues
--- Extracted by StaticSplit

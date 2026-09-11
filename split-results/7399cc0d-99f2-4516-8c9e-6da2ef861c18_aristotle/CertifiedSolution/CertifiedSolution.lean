@@ -1,2 +1,0 @@
--- Declaration: CertifiedSolution
--- Extracted by StaticSplit

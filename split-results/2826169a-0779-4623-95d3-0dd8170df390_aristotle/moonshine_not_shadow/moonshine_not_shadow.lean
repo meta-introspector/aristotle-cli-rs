@@ -1,2 +1,0 @@
--- Declaration: moonshine_not_shadow
--- Extracted by StaticSplit

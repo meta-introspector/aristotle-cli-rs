@@ -1,2 +1,0 @@
--- Declaration: ramanujan_to_moonshine
--- Extracted by StaticSplit

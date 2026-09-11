@@ -1,2 +1,0 @@
--- Declaration: N0_Nxyz_index
--- Extracted by StaticSplit

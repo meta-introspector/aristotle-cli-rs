@@ -1,2 +1,0 @@
--- Declaration: slappedVault
--- Extracted by StaticSplit

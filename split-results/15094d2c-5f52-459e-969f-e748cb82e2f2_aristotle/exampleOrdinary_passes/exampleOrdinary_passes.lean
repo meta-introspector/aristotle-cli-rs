@@ -1,2 +1,0 @@
--- Declaration: exampleOrdinary_passes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ArcadeSession.combinedSignal
--- Extracted by StaticSplit

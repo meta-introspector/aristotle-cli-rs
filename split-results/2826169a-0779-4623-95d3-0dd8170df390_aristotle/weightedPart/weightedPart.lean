@@ -1,2 +1,0 @@
--- Declaration: weightedPart
--- Extracted by StaticSplit

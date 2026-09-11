@@ -1,2 +1,0 @@
--- Declaration: ActorRole.extendsContributor
--- Extracted by StaticSplit

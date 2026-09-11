@@ -1,2 +1,0 @@
--- Declaration: branchAnimatedSVG
--- Extracted by StaticSplit

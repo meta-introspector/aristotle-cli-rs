@@ -1,2 +1,0 @@
--- Declaration: padic_strong_triangle
--- Extracted by StaticSplit

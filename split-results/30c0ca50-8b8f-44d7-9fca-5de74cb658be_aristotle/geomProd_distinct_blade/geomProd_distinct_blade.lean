@@ -1,2 +1,0 @@
--- Declaration: geomProd_distinct_blade
--- Extracted by StaticSplit

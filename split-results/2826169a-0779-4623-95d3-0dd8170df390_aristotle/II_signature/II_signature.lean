@@ -1,2 +1,0 @@
--- Declaration: II_signature
--- Extracted by StaticSplit

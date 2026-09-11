@@ -1,2 +1,0 @@
--- Declaration: massRestore_closes_genus_holes
--- Extracted by StaticSplit

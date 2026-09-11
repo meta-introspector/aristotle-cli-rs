@@ -1,2 +1,0 @@
--- Declaration: CoCartesian
--- Extracted by StaticSplit

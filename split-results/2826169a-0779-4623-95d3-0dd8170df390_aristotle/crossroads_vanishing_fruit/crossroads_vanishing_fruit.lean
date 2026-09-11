@@ -1,2 +1,0 @@
--- Declaration: crossroads_vanishing_fruit
--- Extracted by StaticSplit

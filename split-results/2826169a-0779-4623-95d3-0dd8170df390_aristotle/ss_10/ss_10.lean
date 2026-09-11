@@ -1,2 +1,0 @@
--- Declaration: ss_10
--- Extracted by StaticSplit

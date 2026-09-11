@@ -1,2 +1,0 @@
--- Declaration: valid_permR
--- Extracted by StaticSplit

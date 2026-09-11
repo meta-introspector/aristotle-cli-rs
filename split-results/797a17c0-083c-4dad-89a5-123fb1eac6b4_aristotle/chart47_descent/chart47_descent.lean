@@ -1,2 +1,0 @@
--- Declaration: chart47_descent
--- Extracted by StaticSplit

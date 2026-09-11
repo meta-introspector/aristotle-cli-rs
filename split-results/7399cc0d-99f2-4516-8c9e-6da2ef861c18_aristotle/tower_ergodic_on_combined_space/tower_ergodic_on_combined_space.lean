@@ -1,2 +1,0 @@
--- Declaration: tower_ergodic_on_combined_space
--- Extracted by StaticSplit

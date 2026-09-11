@@ -1,2 +1,0 @@
--- Declaration: Layer
--- Extracted by StaticSplit

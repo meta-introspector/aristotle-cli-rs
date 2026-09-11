@@ -1,2 +1,0 @@
--- Declaration: SmoothOver
--- Extracted by StaticSplit

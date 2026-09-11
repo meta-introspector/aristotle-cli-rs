@@ -1,2 +1,0 @@
--- Declaration: GatedPacket
--- Extracted by StaticSplit

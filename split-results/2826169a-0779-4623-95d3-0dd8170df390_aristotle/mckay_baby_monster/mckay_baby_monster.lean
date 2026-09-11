@@ -1,2 +1,0 @@
--- Declaration: mckay_baby_monster
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: semiosis_reaches_consciousness
--- Extracted by StaticSplit

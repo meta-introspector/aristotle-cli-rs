@@ -1,2 +1,0 @@
--- Declaration: Trace.conforms_of_faithful
--- Extracted by StaticSplit

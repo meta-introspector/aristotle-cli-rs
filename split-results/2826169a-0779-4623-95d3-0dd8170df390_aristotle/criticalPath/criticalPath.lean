@@ -1,2 +1,0 @@
--- Declaration: criticalPath
--- Extracted by StaticSplit

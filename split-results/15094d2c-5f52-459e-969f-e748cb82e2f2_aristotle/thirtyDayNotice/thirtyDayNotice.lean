@@ -1,2 +1,0 @@
--- Declaration: thirtyDayNotice
--- Extracted by StaticSplit

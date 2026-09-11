@@ -1,2 +1,0 @@
--- Declaration: niemeier_total
--- Extracted by StaticSplit

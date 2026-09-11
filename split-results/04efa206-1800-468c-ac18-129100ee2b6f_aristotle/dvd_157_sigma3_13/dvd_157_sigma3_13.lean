@@ -1,2 +1,0 @@
--- Declaration: dvd_157_sigma3_13
--- Extracted by StaticSplit

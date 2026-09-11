@@ -1,2 +1,0 @@
--- Declaration: tail_image_eq_divisors
--- Extracted by StaticSplit

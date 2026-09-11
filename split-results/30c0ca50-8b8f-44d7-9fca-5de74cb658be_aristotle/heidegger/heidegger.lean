@@ -1,2 +1,0 @@
--- Declaration: heidegger
--- Extracted by StaticSplit

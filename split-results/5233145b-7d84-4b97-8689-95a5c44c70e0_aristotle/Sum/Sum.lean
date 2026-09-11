@@ -1,2 +1,0 @@
--- Declaration: Sum
--- Extracted by StaticSplit

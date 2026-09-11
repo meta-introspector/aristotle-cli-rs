@@ -1,2 +1,0 @@
--- Declaration: basePrice
--- Extracted by StaticSplit

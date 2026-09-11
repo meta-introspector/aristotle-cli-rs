@@ -1,2 +1,0 @@
--- Declaration: ruOrder
--- Extracted by StaticSplit

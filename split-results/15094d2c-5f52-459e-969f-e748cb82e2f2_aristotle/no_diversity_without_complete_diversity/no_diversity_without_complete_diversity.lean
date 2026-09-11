@@ -1,2 +1,0 @@
--- Declaration: no_diversity_without_complete_diversity
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: isSmooth23_one
--- Extracted by StaticSplit

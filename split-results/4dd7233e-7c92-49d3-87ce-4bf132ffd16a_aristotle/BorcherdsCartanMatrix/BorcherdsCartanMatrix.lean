@@ -1,2 +1,0 @@
--- Declaration: BorcherdsCartanMatrix
--- Extracted by StaticSplit

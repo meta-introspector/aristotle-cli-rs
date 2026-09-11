@@ -1,2 +1,0 @@
--- Declaration: S14_at_512
--- Extracted by StaticSplit

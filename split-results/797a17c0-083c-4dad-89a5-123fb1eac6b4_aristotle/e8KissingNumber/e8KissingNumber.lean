@@ -1,2 +1,0 @@
--- Declaration: e8KissingNumber
--- Extracted by StaticSplit

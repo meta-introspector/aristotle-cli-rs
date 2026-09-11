@@ -1,2 +1,0 @@
--- Declaration: BeliefSystem.SatisfiesGluing
--- Extracted by StaticSplit

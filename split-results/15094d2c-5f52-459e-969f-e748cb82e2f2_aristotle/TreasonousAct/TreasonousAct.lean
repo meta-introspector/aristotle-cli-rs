@@ -1,2 +1,0 @@
--- Declaration: TreasonousAct
--- Extracted by StaticSplit

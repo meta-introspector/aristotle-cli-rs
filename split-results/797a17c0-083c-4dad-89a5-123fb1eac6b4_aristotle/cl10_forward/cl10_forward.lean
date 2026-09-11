@@ -1,2 +1,0 @@
--- Declaration: cl10_forward
--- Extracted by StaticSplit

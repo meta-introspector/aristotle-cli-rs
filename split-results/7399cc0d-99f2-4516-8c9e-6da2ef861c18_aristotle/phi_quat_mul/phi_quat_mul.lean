@@ -1,2 +1,0 @@
--- Declaration: phi_quat_mul
--- Extracted by StaticSplit

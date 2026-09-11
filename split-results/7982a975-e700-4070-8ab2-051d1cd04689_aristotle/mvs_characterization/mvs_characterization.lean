@@ -1,2 +1,0 @@
--- Declaration: mvs_characterization
--- Extracted by StaticSplit

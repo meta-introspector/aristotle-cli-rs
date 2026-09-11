@@ -1,2 +1,0 @@
--- Declaration: bitMask
--- Extracted by StaticSplit

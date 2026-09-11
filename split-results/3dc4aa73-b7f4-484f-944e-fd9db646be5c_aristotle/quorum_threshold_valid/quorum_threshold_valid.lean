@@ -1,2 +1,0 @@
--- Declaration: quorum_threshold_valid
--- Extracted by StaticSplit

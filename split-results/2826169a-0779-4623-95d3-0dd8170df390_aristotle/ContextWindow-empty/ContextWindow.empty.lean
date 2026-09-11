@@ -1,2 +1,0 @@
--- Declaration: ContextWindow.empty
--- Extracted by StaticSplit

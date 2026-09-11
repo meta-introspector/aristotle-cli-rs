@@ -1,2 +1,0 @@
--- Declaration: twoadic_mass_growth
--- Extracted by StaticSplit

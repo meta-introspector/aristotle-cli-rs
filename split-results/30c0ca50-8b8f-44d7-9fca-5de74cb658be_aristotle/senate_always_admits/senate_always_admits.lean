@@ -1,2 +1,0 @@
--- Declaration: senate_always_admits
--- Extracted by StaticSplit

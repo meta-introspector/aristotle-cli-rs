@@ -1,2 +1,0 @@
--- Declaration: cl07_gen
--- Extracted by StaticSplit

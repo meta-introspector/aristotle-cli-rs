@@ -1,2 +1,0 @@
--- Declaration: example_posw
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: M11_indices_valid
--- Extracted by StaticSplit

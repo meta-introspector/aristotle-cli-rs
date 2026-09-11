@@ -1,2 +1,0 @@
--- Declaration: GradedTotal.grade
--- Extracted by StaticSplit

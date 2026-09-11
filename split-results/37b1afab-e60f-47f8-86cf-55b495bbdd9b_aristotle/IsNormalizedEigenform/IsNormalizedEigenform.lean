@@ -1,2 +1,0 @@
--- Declaration: IsNormalizedEigenform
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: degenCount
--- Extracted by StaticSplit

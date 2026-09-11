@@ -1,2 +1,0 @@
--- Declaration: q42Numbers_arithmetic_progression
--- Extracted by StaticSplit

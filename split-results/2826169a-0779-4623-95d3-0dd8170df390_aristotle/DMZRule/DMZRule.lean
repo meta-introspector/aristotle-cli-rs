@@ -1,2 +1,0 @@
--- Declaration: DMZRule
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SpeculativeClaim.toItem
--- Extracted by StaticSplit

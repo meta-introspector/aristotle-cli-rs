@@ -1,2 +1,0 @@
--- Declaration: U1H_U1X_Model
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: eigenMass
--- Extracted by StaticSplit

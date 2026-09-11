@@ -1,2 +1,0 @@
--- Declaration: e4_e6_bracket_0
--- Extracted by StaticSplit

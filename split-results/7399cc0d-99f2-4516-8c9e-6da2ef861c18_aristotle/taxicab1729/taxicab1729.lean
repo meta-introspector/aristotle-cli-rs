@@ -1,2 +1,0 @@
--- Declaration: taxicab1729
--- Extracted by StaticSplit

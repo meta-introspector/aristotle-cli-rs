@@ -1,2 +1,0 @@
--- Declaration: ramanujanJourney
--- Extracted by StaticSplit

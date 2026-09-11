@@ -1,2 +1,0 @@
--- Declaration: five_nontrivial_per_dimension
--- Extracted by StaticSplit

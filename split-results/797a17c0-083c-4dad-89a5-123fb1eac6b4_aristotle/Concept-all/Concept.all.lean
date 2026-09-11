@@ -1,2 +1,0 @@
--- Declaration: Concept.all
--- Extracted by StaticSplit

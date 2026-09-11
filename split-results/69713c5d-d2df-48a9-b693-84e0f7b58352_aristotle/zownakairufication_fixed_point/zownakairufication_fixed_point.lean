@@ -1,2 +1,0 @@
--- Declaration: zownakairufication_fixed_point
--- Extracted by StaticSplit

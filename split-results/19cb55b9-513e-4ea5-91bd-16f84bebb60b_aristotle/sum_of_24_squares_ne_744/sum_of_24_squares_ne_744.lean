@@ -1,2 +1,0 @@
--- Declaration: sum_of_24_squares_ne_744
--- Extracted by StaticSplit

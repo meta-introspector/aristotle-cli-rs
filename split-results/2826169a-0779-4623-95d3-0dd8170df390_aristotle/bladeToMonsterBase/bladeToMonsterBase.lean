@@ -1,2 +1,0 @@
--- Declaration: bladeToMonsterBase
--- Extracted by StaticSplit

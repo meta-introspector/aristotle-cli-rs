@@ -1,2 +1,0 @@
--- Declaration: matchFloatPattern
--- Extracted by StaticSplit

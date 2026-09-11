@@ -1,2 +1,0 @@
--- Declaration: A5_degree_sum
--- Extracted by StaticSplit

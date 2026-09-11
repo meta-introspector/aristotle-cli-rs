@@ -1,2 +1,0 @@
--- Declaration: runTowerGame
--- Extracted by StaticSplit

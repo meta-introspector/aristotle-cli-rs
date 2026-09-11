@@ -1,2 +1,0 @@
--- Declaration: c1_coherence_constraint
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monomythTemplate
--- Extracted by StaticSplit

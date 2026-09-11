@@ -1,2 +1,0 @@
--- Declaration: AllowedEliminations
--- Extracted by StaticSplit

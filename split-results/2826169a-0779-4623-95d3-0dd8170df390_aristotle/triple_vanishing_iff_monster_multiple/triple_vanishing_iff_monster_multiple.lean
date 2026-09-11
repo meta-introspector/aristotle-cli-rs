@@ -1,2 +1,0 @@
--- Declaration: triple_vanishing_iff_monster_multiple
--- Extracted by StaticSplit

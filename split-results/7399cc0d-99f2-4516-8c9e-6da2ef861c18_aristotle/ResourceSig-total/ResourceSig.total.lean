@@ -1,2 +1,0 @@
--- Declaration: ResourceSig.total
--- Extracted by StaticSplit

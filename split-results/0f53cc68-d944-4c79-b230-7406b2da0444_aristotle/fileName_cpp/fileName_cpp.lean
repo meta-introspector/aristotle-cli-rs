@@ -1,2 +1,0 @@
--- Declaration: fileName_cpp
--- Extracted by StaticSplit

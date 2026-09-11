@@ -1,2 +1,0 @@
--- Declaration: frumin_total_tenure
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: exists_unstealable_brainrot
--- Extracted by StaticSplit

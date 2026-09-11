@@ -1,2 +1,0 @@
--- Declaration: mckayThompson_identity_coeff
--- Extracted by StaticSplit

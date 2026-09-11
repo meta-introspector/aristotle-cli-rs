@@ -1,2 +1,0 @@
--- Declaration: idx6_unique_quaternionic
--- Extracted by StaticSplit

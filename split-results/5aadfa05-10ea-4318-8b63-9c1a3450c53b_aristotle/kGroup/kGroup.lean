@@ -1,2 +1,0 @@
--- Declaration: kGroup
--- Extracted by StaticSplit

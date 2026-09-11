@@ -1,2 +1,0 @@
--- Declaration: continuing_exceeds_quorum_fraction
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: DMZ_godel
--- Extracted by StaticSplit

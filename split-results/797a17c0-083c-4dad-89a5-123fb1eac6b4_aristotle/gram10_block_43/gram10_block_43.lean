@@ -1,2 +1,0 @@
--- Declaration: gram10_block_43
--- Extracted by StaticSplit

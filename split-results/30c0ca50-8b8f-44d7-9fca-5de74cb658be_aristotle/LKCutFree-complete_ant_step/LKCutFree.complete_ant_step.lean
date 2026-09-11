@@ -1,2 +1,0 @@
--- Declaration: LKCutFree.complete_ant_step
--- Extracted by StaticSplit

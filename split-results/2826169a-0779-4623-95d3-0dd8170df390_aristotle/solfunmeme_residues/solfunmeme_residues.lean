@@ -1,2 +1,0 @@
--- Declaration: solfunmeme_residues
--- Extracted by StaticSplit

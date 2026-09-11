@@ -1,2 +1,0 @@
--- Declaration: hash_sol_get_processed_sibling_instruction
--- Extracted by StaticSplit

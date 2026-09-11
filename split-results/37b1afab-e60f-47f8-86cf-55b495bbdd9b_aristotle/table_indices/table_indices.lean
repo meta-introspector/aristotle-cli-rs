@@ -1,2 +1,0 @@
--- Declaration: table_indices
--- Extracted by StaticSplit

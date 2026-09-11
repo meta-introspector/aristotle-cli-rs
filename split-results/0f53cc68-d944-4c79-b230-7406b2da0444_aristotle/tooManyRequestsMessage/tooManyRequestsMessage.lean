@@ -1,2 +1,0 @@
--- Declaration: tooManyRequestsMessage
--- Extracted by StaticSplit

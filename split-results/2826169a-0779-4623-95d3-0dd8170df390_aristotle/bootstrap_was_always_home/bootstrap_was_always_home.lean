@@ -1,2 +1,0 @@
--- Declaration: bootstrap_was_always_home
--- Extracted by StaticSplit

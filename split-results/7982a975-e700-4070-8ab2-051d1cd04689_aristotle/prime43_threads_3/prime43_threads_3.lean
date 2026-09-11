@@ -1,2 +1,0 @@
--- Declaration: prime43_threads_3
--- Extracted by StaticSplit

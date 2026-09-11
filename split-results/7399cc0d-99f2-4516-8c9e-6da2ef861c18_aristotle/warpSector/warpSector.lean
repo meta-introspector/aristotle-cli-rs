@@ -1,2 +1,0 @@
--- Declaration: warpSector
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ManualSection
--- Extracted by StaticSplit

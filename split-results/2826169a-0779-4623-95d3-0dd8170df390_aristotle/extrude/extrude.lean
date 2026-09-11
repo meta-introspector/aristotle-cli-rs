@@ -1,2 +1,0 @@
--- Declaration: extrude
--- Extracted by StaticSplit

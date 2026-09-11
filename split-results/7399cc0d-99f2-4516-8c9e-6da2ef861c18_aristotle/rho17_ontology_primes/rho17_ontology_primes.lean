@@ -1,2 +1,0 @@
--- Declaration: rho17_ontology_primes
--- Extracted by StaticSplit

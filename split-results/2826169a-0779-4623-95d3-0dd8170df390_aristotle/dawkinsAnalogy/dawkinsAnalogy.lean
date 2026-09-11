@@ -1,2 +1,0 @@
--- Declaration: dawkinsAnalogy
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: computeSCCs
--- Extracted by StaticSplit

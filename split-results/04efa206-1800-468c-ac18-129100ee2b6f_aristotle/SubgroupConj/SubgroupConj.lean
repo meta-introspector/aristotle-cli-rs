@@ -1,2 +1,0 @@
--- Declaration: SubgroupConj
--- Extracted by StaticSplit

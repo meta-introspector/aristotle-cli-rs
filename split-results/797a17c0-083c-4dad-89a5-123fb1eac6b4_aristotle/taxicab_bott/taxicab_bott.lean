@@ -1,2 +1,0 @@
--- Declaration: taxicab_bott
--- Extracted by StaticSplit

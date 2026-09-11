@@ -1,2 +1,0 @@
--- Declaration: FractranProgram
--- Extracted by StaticSplit

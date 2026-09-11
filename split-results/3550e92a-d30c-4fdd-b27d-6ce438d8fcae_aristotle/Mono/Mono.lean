@@ -1,2 +1,0 @@
--- Declaration: Mono
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: QMSDocument
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: semantic_dictionary_size
--- Extracted by StaticSplit

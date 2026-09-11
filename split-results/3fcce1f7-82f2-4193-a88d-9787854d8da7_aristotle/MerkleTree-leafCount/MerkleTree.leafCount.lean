@@ -1,2 +1,0 @@
--- Declaration: MerkleTree.leafCount
--- Extracted by StaticSplit

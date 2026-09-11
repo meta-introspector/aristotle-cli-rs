@@ -1,2 +1,0 @@
--- Declaration: c1_mod_17
--- Extracted by StaticSplit

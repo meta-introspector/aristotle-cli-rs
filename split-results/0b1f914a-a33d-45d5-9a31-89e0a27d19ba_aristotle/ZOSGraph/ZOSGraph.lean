@@ -1,2 +1,0 @@
--- Declaration: ZOSGraph
--- Extracted by StaticSplit

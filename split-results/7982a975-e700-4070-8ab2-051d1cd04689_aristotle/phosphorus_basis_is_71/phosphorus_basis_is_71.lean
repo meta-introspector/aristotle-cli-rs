@@ -1,2 +1,0 @@
--- Declaration: phosphorus_basis_is_71
--- Extracted by StaticSplit

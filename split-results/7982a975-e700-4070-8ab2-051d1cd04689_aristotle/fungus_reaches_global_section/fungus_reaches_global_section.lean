@@ -1,2 +1,0 @@
--- Declaration: fungus_reaches_global_section
--- Extracted by StaticSplit

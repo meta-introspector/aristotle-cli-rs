@@ -1,2 +1,0 @@
--- Declaration: not_political_question_of_neither
--- Extracted by StaticSplit

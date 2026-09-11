@@ -1,2 +1,0 @@
--- Declaration: bbf_nondecreasing
--- Extracted by StaticSplit

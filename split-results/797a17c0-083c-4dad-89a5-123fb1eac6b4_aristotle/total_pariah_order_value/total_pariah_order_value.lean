@@ -1,2 +1,0 @@
--- Declaration: total_pariah_order_value
--- Extracted by StaticSplit

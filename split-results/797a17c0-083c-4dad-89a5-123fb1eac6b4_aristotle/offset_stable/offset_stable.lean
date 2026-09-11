@@ -1,2 +1,0 @@
--- Declaration: offset_stable
--- Extracted by StaticSplit

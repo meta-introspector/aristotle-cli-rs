@@ -1,2 +1,0 @@
--- Declaration: cluster_coarsens_concepts
--- Extracted by StaticSplit

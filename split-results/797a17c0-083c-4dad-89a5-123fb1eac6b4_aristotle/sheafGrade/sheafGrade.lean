@@ -1,2 +1,0 @@
--- Declaration: sheafGrade
--- Extracted by StaticSplit

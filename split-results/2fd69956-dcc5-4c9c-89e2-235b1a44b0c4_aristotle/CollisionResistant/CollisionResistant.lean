@@ -1,2 +1,0 @@
--- Declaration: CollisionResistant
--- Extracted by StaticSplit

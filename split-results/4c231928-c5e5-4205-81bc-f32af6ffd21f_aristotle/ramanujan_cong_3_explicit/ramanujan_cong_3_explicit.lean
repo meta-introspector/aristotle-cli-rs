@@ -1,2 +1,0 @@
--- Declaration: ramanujan_cong_3_explicit
--- Extracted by StaticSplit

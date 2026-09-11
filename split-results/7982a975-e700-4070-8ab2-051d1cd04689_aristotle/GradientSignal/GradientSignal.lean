@@ -1,2 +1,0 @@
--- Declaration: GradientSignal
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: TorusPoint
--- Extracted by StaticSplit

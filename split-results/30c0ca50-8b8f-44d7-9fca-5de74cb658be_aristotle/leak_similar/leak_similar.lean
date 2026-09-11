@@ -1,2 +1,0 @@
--- Declaration: leak_similar
--- Extracted by StaticSplit

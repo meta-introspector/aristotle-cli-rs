@@ -1,2 +1,0 @@
--- Declaration: mem_setBits_iff
--- Extracted by StaticSplit

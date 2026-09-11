@@ -1,2 +1,0 @@
--- Declaration: GameTrace.length
--- Extracted by StaticSplit

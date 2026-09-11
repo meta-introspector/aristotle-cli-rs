@@ -1,2 +1,0 @@
--- Declaration: ofBool
--- Extracted by StaticSplit

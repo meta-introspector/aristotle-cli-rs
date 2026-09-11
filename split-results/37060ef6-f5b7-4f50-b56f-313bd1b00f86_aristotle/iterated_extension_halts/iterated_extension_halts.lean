@@ -1,2 +1,0 @@
--- Declaration: iterated_extension_halts
--- Extracted by StaticSplit

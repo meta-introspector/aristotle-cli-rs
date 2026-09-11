@@ -1,2 +1,0 @@
--- Declaration: TuringConcept
--- Extracted by StaticSplit

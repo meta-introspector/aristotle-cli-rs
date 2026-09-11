@@ -1,2 +1,0 @@
--- Declaration: toStr
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: arithmetic_bridge_summary
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: agents_disjoint_from_registry
--- Extracted by StaticSplit

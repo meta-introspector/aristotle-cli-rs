@@ -1,2 +1,0 @@
--- Declaration: quorum_addr
--- Extracted by StaticSplit

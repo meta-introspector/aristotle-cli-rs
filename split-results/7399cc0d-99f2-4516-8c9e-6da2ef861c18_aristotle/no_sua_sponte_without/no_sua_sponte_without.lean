@@ -1,2 +1,0 @@
--- Declaration: no_sua_sponte_without
--- Extracted by StaticSplit

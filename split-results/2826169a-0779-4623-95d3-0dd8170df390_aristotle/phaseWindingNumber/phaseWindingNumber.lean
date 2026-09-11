@@ -1,2 +1,0 @@
--- Declaration: phaseWindingNumber
--- Extracted by StaticSplit

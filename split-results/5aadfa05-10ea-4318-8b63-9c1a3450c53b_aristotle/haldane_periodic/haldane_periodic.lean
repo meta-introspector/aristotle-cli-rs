@@ -1,2 +1,0 @@
--- Declaration: haldane_periodic
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: first_mission_score_value
--- Extracted by StaticSplit

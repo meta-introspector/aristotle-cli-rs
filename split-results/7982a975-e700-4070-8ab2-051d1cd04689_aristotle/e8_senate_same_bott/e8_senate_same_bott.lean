@@ -1,2 +1,0 @@
--- Declaration: e8_senate_same_bott
--- Extracted by StaticSplit

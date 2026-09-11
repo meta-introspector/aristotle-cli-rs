@@ -1,2 +1,0 @@
--- Declaration: M11_centralizer_2A
--- Extracted by StaticSplit

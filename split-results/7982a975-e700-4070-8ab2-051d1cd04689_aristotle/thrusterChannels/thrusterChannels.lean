@@ -1,2 +1,0 @@
--- Declaration: thrusterChannels
--- Extracted by StaticSplit

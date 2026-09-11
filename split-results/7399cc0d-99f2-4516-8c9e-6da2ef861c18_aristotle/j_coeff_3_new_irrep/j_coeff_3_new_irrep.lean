@@ -1,2 +1,0 @@
--- Declaration: j_coeff_3_new_irrep
--- Extracted by StaticSplit

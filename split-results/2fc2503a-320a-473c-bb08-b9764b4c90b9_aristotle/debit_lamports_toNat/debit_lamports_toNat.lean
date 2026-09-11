@@ -1,2 +1,0 @@
--- Declaration: debit_lamports_toNat
--- Extracted by StaticSplit

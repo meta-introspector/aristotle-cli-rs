@@ -1,2 +1,0 @@
--- Declaration: Contextual.extend
--- Extracted by StaticSplit

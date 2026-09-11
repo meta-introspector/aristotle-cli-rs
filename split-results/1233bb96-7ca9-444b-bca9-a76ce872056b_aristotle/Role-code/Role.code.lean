@@ -1,2 +1,0 @@
--- Declaration: Role.code
--- Extracted by StaticSplit

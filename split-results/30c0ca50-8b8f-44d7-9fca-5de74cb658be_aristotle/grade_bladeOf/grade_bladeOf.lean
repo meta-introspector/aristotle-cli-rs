@@ -1,2 +1,0 @@
--- Declaration: grade_bladeOf
--- Extracted by StaticSplit

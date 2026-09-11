@@ -1,2 +1,0 @@
--- Declaration: encodeProgram
--- Extracted by StaticSplit

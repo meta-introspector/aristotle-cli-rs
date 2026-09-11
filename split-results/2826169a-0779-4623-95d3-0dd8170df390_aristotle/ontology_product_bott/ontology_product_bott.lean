@@ -1,2 +1,0 @@
--- Declaration: ontology_product_bott
--- Extracted by StaticSplit

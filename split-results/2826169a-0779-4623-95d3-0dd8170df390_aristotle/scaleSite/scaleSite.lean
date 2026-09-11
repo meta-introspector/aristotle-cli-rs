@@ -1,2 +1,0 @@
--- Declaration: scaleSite
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Ternary.pq_roundtrip_rev
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: transitionGen
--- Extracted by StaticSplit

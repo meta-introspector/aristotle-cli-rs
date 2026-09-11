@@ -1,2 +1,0 @@
--- Declaration: GoalBearingName
--- Extracted by StaticSplit

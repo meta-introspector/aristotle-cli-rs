@@ -1,2 +1,0 @@
--- Declaration: j4_maximal_count
--- Extracted by StaticSplit

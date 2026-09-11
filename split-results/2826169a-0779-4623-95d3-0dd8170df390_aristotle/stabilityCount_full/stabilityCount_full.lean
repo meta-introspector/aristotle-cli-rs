@@ -1,2 +1,0 @@
--- Declaration: stabilityCount_full
--- Extracted by StaticSplit

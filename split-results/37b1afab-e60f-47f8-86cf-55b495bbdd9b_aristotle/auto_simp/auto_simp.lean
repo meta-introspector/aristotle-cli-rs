@@ -1,2 +1,0 @@
--- Declaration: auto_simp
--- Extracted by StaticSplit

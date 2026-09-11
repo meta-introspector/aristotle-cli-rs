@@ -1,2 +1,0 @@
--- Declaration: iteratedEncode
--- Extracted by StaticSplit

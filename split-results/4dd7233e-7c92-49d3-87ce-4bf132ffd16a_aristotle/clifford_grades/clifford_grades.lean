@@ -1,2 +1,0 @@
--- Declaration: clifford_grades
--- Extracted by StaticSplit

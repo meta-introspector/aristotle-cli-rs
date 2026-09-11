@@ -1,2 +1,0 @@
--- Declaration: RegisteredWorld
--- Extracted by StaticSplit

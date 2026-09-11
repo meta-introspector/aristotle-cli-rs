@@ -1,2 +1,0 @@
--- Declaration: primeAt_zero
--- Extracted by StaticSplit

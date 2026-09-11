@@ -1,2 +1,0 @@
--- Declaration: even_add_odd_card
--- Extracted by StaticSplit

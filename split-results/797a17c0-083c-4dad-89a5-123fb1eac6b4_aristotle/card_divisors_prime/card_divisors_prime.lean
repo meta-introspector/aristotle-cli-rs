@@ -1,2 +1,0 @@
--- Declaration: card_divisors_prime
--- Extracted by StaticSplit

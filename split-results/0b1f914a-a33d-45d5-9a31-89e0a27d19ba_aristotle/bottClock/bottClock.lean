@@ -1,2 +1,0 @@
--- Declaration: bottClock
--- Extracted by StaticSplit

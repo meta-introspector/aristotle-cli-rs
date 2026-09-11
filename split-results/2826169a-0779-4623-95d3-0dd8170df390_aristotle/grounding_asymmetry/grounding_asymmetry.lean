@@ -1,2 +1,0 @@
--- Declaration: grounding_asymmetry
--- Extracted by StaticSplit

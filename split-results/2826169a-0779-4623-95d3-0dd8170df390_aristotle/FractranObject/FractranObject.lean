@@ -1,2 +1,0 @@
--- Declaration: FractranObject
--- Extracted by StaticSplit

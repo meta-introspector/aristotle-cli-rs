@@ -1,2 +1,0 @@
--- Declaration: AZClass.signature
--- Extracted by StaticSplit

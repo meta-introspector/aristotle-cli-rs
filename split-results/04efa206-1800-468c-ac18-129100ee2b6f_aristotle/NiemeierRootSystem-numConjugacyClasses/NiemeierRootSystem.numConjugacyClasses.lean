@@ -1,2 +1,0 @@
--- Declaration: NiemeierRootSystem.numConjugacyClasses
--- Extracted by StaticSplit

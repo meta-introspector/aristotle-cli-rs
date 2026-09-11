@@ -1,2 +1,0 @@
--- Declaration: HexLatticePos
--- Extracted by StaticSplit

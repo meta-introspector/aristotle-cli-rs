@@ -1,2 +1,0 @@
--- Declaration: ETerm
--- Extracted by StaticSplit

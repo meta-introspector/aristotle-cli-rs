@@ -1,2 +1,0 @@
--- Declaration: signExp
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: enriched_isolated_count
--- Extracted by StaticSplit

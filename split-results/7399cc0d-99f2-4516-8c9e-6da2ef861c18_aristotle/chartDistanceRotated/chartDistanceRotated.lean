@@ -1,2 +1,0 @@
--- Declaration: chartDistanceRotated
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: max_resonance_primes
--- Extracted by StaticSplit

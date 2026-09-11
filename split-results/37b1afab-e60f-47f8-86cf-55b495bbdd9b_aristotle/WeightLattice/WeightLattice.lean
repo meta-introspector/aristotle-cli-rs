@@ -1,2 +1,0 @@
--- Declaration: WeightLattice
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: IsCharacter.nsmul
--- Extracted by StaticSplit

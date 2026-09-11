@@ -1,2 +1,0 @@
--- Declaration: weight_space_row_sum
--- Extracted by StaticSplit

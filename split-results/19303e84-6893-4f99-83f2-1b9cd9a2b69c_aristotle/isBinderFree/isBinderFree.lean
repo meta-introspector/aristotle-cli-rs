@@ -1,2 +1,0 @@
--- Declaration: isBinderFree
--- Extracted by StaticSplit

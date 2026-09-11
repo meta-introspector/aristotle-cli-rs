@@ -1,2 +1,0 @@
--- Declaration: path_induction
--- Extracted by StaticSplit

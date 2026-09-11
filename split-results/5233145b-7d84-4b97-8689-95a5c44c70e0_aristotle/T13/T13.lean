@@ -1,2 +1,0 @@
--- Declaration: T13
--- Extracted by StaticSplit

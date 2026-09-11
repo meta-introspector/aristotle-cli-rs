@@ -1,2 +1,0 @@
--- Declaration: monsterToIPLD
--- Extracted by StaticSplit

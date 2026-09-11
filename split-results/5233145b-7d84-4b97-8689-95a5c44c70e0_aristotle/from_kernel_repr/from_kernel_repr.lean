@@ -1,2 +1,0 @@
--- Declaration: from_kernel_repr
--- Extracted by StaticSplit

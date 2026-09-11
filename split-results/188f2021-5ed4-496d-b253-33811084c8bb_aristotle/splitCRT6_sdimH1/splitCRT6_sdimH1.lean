@@ -1,2 +1,0 @@
--- Declaration: splitCRT6_sdimH1
--- Extracted by StaticSplit

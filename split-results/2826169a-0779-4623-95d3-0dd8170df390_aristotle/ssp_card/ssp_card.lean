@@ -1,2 +1,0 @@
--- Declaration: ssp_card
--- Extracted by StaticSplit

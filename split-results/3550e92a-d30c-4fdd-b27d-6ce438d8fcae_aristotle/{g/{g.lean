@@ -1,2 +1,0 @@
--- Declaration: {g
--- Extracted by StaticSplit

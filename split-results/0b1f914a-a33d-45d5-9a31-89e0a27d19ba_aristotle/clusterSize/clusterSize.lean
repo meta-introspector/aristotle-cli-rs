@@ -1,2 +1,0 @@
--- Declaration: clusterSize
--- Extracted by StaticSplit

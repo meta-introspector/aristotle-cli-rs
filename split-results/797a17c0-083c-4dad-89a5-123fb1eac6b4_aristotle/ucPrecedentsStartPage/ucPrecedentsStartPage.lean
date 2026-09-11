@@ -1,2 +1,0 @@
--- Declaration: ucPrecedentsStartPage
--- Extracted by StaticSplit

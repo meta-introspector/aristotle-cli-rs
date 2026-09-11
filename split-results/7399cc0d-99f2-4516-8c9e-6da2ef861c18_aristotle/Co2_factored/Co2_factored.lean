@@ -1,2 +1,0 @@
--- Declaration: Co2_factored
--- Extracted by StaticSplit

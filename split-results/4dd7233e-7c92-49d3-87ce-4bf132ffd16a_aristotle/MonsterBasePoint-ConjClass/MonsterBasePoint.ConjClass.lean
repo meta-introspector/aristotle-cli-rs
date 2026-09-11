@@ -1,2 +1,0 @@
--- Declaration: MonsterBasePoint.ConjClass
--- Extracted by StaticSplit

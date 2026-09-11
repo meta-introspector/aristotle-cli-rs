@@ -1,2 +1,0 @@
--- Declaration: adoptionStep
--- Extracted by StaticSplit

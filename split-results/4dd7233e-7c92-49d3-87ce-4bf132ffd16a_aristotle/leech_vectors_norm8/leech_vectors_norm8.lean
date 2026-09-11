@@ -1,2 +1,0 @@
--- Declaration: leech_vectors_norm8
--- Extracted by StaticSplit

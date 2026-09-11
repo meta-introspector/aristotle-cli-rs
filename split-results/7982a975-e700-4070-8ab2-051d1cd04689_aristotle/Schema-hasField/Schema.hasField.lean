@@ -1,2 +1,0 @@
--- Declaration: Schema.hasField
--- Extracted by StaticSplit

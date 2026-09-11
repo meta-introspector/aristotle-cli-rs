@@ -1,2 +1,0 @@
--- Declaration: so15_rotation_planes
--- Extracted by StaticSplit

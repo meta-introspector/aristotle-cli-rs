@@ -1,2 +1,0 @@
--- Declaration: hub_fixed_by_one
--- Extracted by StaticSplit

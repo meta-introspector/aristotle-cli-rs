@@ -1,2 +1,0 @@
--- Declaration: F8_smallest_irrep
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ontology_bott_classes
--- Extracted by StaticSplit

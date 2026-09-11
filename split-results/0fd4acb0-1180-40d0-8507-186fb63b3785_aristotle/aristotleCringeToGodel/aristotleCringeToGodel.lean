@@ -1,2 +1,0 @@
--- Declaration: aristotleCringeToGodel
--- Extracted by StaticSplit

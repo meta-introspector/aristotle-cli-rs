@@ -1,2 +1,0 @@
--- Declaration: cl03_forward_lin
--- Extracted by StaticSplit

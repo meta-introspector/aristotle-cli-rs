@@ -1,2 +1,0 @@
--- Declaration: earth_flag_disjoint
--- Extracted by StaticSplit

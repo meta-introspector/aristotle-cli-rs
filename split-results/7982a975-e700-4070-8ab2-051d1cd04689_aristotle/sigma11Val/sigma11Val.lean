@@ -1,2 +1,0 @@
--- Declaration: sigma11Val
--- Extracted by StaticSplit

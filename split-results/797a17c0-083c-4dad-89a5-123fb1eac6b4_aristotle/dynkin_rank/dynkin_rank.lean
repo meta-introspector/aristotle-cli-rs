@@ -1,2 +1,0 @@
--- Declaration: dynkin_rank
--- Extracted by StaticSplit

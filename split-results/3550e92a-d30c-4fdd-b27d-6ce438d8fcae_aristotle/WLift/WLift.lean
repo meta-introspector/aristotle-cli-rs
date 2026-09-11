@@ -1,2 +1,0 @@
--- Declaration: WLift
--- Extracted by StaticSplit

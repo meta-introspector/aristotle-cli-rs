@@ -1,2 +1,0 @@
--- Declaration: natToRotor
--- Extracted by StaticSplit

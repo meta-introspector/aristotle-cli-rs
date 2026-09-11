@@ -1,2 +1,0 @@
--- Declaration: examplePipeline_adoption_provenance
--- Extracted by StaticSplit

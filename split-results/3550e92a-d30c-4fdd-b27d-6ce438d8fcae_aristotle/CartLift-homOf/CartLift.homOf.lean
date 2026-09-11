@@ -1,2 +1,0 @@
--- Declaration: CartLift.homOf
--- Extracted by StaticSplit

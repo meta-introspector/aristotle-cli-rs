@@ -1,2 +1,0 @@
--- Declaration: turing
--- Extracted by StaticSplit

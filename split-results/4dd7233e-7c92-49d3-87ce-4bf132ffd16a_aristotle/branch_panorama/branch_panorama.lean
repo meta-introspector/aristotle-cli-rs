@@ -1,2 +1,0 @@
--- Declaration: branch_panorama
--- Extracted by StaticSplit

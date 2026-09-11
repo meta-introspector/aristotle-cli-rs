@@ -1,2 +1,0 @@
--- Declaration: latticeRank
--- Extracted by StaticSplit

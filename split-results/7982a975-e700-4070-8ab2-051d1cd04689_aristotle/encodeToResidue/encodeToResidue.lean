@@ -1,2 +1,0 @@
--- Declaration: encodeToResidue
--- Extracted by StaticSplit

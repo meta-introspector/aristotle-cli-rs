@@ -1,2 +1,0 @@
--- Declaration: grade_sum_eq_dim
--- Extracted by StaticSplit

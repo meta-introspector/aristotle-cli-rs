@@ -1,2 +1,0 @@
--- Declaration: mod71_separation
--- Extracted by StaticSplit

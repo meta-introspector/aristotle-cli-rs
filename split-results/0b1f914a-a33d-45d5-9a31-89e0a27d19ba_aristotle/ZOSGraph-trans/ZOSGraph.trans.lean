@@ -1,2 +1,0 @@
--- Declaration: ZOSGraph.trans
--- Extracted by StaticSplit

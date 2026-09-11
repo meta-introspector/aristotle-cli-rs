@@ -1,2 +1,0 @@
--- Declaration: goedel_true_but_unprovable
--- Extracted by StaticSplit

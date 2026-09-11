@@ -1,2 +1,0 @@
--- Declaration: gradedMonsterSystem_grade_inc
--- Extracted by StaticSplit

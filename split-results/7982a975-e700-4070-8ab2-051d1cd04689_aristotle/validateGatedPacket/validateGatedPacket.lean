@@ -1,2 +1,0 @@
--- Declaration: validateGatedPacket
--- Extracted by StaticSplit

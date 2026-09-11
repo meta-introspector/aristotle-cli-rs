@@ -1,2 +1,0 @@
--- Declaration: mkCID
--- Extracted by StaticSplit

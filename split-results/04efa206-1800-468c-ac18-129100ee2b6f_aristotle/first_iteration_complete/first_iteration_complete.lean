@@ -1,2 +1,0 @@
--- Declaration: first_iteration_complete
--- Extracted by StaticSplit

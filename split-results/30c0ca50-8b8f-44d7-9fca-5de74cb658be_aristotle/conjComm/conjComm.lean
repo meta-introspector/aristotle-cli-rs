@@ -1,2 +1,0 @@
--- Declaration: conjComm
--- Extracted by StaticSplit

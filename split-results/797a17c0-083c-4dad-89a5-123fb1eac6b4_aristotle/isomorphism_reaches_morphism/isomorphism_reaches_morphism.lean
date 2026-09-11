@@ -1,2 +1,0 @@
--- Declaration: isomorphism_reaches_morphism
--- Extracted by StaticSplit

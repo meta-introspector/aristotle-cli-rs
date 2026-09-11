@@ -1,2 +1,0 @@
--- Declaration: T71A
--- Extracted by StaticSplit

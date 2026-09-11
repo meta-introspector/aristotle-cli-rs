@@ -1,2 +1,0 @@
--- Declaration: obj_Boardroom
--- Extracted by StaticSplit

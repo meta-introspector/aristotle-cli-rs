@@ -1,2 +1,0 @@
--- Declaration: projMyco
--- Extracted by StaticSplit

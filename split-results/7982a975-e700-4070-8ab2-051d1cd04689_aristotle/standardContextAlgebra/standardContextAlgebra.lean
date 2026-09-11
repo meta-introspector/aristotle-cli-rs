@@ -1,2 +1,0 @@
--- Declaration: standardContextAlgebra
--- Extracted by StaticSplit

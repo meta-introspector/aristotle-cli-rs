@@ -1,2 +1,0 @@
--- Declaration: trivialVibe
--- Extracted by StaticSplit

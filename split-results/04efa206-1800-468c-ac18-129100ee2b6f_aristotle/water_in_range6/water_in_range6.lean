@@ -1,2 +1,0 @@
--- Declaration: water_in_range6
--- Extracted by StaticSplit

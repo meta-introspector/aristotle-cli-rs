@@ -1,2 +1,0 @@
--- Declaration: GovernanceInvariant
--- Extracted by StaticSplit

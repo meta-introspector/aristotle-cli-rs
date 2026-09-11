@@ -1,2 +1,0 @@
--- Declaration: DASLType
--- Extracted by StaticSplit

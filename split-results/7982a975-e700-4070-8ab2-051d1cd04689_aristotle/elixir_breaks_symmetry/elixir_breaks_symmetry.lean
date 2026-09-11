@@ -1,2 +1,0 @@
--- Declaration: elixir_breaks_symmetry
--- Extracted by StaticSplit

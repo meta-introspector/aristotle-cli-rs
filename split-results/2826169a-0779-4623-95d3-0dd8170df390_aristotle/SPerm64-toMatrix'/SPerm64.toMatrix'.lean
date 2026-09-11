@@ -1,2 +1,0 @@
--- Declaration: SPerm64.toMatrix'
--- Extracted by StaticSplit

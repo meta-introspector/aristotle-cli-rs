@@ -1,2 +1,0 @@
--- Declaration: HasLift
--- Extracted by StaticSplit

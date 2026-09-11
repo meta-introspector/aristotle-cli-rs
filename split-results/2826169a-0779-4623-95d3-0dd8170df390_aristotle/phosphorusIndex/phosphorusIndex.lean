@@ -1,2 +1,0 @@
--- Declaration: phosphorusIndex
--- Extracted by StaticSplit

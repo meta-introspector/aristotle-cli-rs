@@ -1,2 +1,0 @@
--- Declaration: satisfiesGCI
--- Extracted by StaticSplit

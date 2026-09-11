@@ -1,2 +1,0 @@
--- Declaration: paxos_monotone
--- Extracted by StaticSplit

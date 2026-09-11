@@ -1,2 +1,0 @@
--- Declaration: heckeDyn
--- Extracted by StaticSplit

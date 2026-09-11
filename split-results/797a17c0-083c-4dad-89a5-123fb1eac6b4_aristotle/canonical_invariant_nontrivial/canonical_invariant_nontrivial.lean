@@ -1,2 +1,0 @@
--- Declaration: canonical_invariant_nontrivial
--- Extracted by StaticSplit

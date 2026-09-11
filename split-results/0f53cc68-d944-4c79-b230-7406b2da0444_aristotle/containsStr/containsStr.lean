@@ -1,2 +1,0 @@
--- Declaration: containsStr
--- Extracted by StaticSplit

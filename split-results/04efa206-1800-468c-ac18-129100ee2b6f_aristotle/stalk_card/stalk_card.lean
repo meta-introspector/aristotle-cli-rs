@@ -1,2 +1,0 @@
--- Declaration: stalk_card
--- Extracted by StaticSplit

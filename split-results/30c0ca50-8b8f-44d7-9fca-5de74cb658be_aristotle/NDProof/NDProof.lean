@@ -1,2 +1,0 @@
--- Declaration: NDProof
--- Extracted by StaticSplit

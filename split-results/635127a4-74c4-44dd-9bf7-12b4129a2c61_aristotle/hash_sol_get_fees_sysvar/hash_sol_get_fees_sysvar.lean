@@ -1,2 +1,0 @@
--- Declaration: hash_sol_get_fees_sysvar
--- Extracted by StaticSplit

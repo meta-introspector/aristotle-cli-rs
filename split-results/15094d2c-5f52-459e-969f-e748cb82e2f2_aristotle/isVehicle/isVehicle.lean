@@ -1,2 +1,0 @@
--- Declaration: isVehicle
--- Extracted by StaticSplit

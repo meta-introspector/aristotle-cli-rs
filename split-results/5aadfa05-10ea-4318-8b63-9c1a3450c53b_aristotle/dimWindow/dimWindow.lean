@@ -1,2 +1,0 @@
--- Declaration: dimWindow
--- Extracted by StaticSplit

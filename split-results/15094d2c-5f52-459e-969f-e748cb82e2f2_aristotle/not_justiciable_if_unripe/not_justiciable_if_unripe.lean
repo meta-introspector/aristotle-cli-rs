@@ -1,2 +1,0 @@
--- Declaration: not_justiciable_if_unripe
--- Extracted by StaticSplit

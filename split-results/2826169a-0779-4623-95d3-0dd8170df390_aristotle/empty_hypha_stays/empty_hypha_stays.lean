@@ -1,2 +1,0 @@
--- Declaration: empty_hypha_stays
--- Extracted by StaticSplit

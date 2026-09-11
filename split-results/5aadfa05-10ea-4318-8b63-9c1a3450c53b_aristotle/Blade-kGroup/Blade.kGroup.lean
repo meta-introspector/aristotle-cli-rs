@@ -1,2 +1,0 @@
--- Declaration: Blade.kGroup
--- Extracted by StaticSplit

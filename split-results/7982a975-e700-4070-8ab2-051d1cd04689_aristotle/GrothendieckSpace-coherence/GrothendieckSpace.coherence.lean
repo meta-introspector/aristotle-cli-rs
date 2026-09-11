@@ -1,2 +1,0 @@
--- Declaration: GrothendieckSpace.coherence
--- Extracted by StaticSplit

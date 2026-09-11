@@ -1,2 +1,0 @@
--- Declaration: codecEquivalent
--- Extracted by StaticSplit

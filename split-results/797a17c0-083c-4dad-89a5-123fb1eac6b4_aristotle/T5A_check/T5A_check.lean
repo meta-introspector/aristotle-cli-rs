@@ -1,2 +1,0 @@
--- Declaration: T5A_check
--- Extracted by StaticSplit

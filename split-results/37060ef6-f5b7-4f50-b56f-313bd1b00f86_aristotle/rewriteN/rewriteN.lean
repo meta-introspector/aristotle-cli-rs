@@ -1,2 +1,0 @@
--- Declaration: rewriteN
--- Extracted by StaticSplit

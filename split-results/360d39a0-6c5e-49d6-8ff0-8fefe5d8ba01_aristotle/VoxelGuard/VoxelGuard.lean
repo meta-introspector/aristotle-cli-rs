@@ -1,2 +1,0 @@
--- Declaration: VoxelGuard
--- Extracted by StaticSplit

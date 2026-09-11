@@ -1,2 +1,0 @@
--- Declaration: afterWorld_three_players
--- Extracted by StaticSplit

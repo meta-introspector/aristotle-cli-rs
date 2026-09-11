@@ -1,2 +1,0 @@
--- Declaration: atp_is_unique_bio_bridge
--- Extracted by StaticSplit

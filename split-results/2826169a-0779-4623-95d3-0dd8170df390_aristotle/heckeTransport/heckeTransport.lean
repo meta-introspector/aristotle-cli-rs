@@ -1,2 +1,0 @@
--- Declaration: heckeTransport
--- Extracted by StaticSplit

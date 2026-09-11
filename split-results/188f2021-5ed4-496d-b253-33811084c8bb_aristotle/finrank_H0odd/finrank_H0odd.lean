@@ -1,2 +1,0 @@
--- Declaration: finrank_H0odd
--- Extracted by StaticSplit

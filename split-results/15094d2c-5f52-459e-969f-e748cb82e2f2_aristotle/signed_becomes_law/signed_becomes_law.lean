@@ -1,2 +1,0 @@
--- Declaration: signed_becomes_law
--- Extracted by StaticSplit

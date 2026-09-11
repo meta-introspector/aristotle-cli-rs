@@ -1,2 +1,0 @@
--- Declaration: plateBottGrade
--- Extracted by StaticSplit

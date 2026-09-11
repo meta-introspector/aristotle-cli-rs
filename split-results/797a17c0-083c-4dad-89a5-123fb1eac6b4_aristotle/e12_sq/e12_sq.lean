@@ -1,2 +1,0 @@
--- Declaration: e12_sq
--- Extracted by StaticSplit

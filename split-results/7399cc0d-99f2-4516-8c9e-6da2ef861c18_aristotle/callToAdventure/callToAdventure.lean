@@ -1,2 +1,0 @@
--- Declaration: callToAdventure
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: GodelStatement
--- Extracted by StaticSplit

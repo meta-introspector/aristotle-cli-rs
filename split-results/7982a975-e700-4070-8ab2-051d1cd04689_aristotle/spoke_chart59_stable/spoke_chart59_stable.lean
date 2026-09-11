@@ -1,2 +1,0 @@
--- Declaration: spoke_chart59_stable
--- Extracted by StaticSplit

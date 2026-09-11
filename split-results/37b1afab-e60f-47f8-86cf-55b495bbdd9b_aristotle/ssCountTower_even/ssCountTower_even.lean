@@ -1,2 +1,0 @@
--- Declaration: ssCountTower_even
--- Extracted by StaticSplit

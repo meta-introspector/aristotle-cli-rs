@@ -1,2 +1,0 @@
--- Declaration: PhaseCat.blade
--- Extracted by StaticSplit

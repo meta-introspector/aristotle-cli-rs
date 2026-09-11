@@ -1,2 +1,0 @@
--- Declaration: isCyclicRewriteChainBool
--- Extracted by StaticSplit

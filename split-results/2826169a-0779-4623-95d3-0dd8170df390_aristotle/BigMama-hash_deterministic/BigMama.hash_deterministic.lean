@@ -1,2 +1,0 @@
--- Declaration: BigMama.hash_deterministic
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: canonical_grade_zero
--- Extracted by StaticSplit

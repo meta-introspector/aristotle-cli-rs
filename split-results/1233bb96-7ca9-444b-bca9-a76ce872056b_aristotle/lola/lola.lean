@@ -1,2 +1,0 @@
--- Declaration: lola
--- Extracted by StaticSplit

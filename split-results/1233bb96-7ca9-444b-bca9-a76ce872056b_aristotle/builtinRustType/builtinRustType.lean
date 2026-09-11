@@ -1,2 +1,0 @@
--- Declaration: builtinRustType
--- Extracted by StaticSplit

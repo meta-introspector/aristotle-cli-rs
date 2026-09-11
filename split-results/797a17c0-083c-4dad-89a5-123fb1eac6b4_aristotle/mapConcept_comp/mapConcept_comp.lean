@@ -1,2 +1,0 @@
--- Declaration: mapConcept_comp
--- Extracted by StaticSplit

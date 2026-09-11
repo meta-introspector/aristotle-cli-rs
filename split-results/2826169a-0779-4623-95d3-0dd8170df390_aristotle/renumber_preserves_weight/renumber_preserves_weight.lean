@@ -1,2 +1,0 @@
--- Declaration: renumber_preserves_weight
--- Extracted by StaticSplit

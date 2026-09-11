@@ -1,2 +1,0 @@
--- Declaration: confession_suffices
--- Extracted by StaticSplit

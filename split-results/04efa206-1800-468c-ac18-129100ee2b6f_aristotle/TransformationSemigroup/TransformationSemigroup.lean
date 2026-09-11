@@ -1,2 +1,0 @@
--- Declaration: TransformationSemigroup
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: census_periodic
--- Extracted by StaticSplit

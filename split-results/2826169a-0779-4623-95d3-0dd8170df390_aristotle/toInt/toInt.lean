@@ -1,2 +1,0 @@
--- Declaration: toInt
--- Extracted by StaticSplit

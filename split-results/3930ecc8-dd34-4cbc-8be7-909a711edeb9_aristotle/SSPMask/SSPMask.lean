@@ -1,2 +1,0 @@
--- Declaration: SSPMask
--- Extracted by StaticSplit

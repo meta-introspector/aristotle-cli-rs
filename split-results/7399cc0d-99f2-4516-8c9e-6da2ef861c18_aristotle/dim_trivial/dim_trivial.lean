@@ -1,2 +1,0 @@
--- Declaration: dim_trivial
--- Extracted by StaticSplit

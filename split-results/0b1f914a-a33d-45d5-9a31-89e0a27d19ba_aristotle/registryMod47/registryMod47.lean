@@ -1,2 +1,0 @@
--- Declaration: registryMod47
--- Extracted by StaticSplit

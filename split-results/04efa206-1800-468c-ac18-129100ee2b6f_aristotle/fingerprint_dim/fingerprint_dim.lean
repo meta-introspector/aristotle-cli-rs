@@ -1,2 +1,0 @@
--- Declaration: fingerprint_dim
--- Extracted by StaticSplit

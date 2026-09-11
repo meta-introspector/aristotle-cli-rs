@@ -1,2 +1,0 @@
--- Declaration: MonsterSmallestIrrepDim
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: proofSearch
--- Extracted by StaticSplit

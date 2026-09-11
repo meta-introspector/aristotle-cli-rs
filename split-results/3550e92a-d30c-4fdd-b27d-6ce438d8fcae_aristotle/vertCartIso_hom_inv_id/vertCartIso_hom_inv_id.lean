@@ -1,2 +1,0 @@
--- Declaration: vertCartIso_hom_inv_id
--- Extracted by StaticSplit

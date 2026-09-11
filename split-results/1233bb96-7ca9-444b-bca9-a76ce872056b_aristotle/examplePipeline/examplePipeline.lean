@@ -1,2 +1,0 @@
--- Declaration: examplePipeline
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: instTautoFib
--- Extracted by StaticSplit

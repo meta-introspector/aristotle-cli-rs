@@ -1,2 +1,0 @@
--- Declaration: originBlade
--- Extracted by StaticSplit

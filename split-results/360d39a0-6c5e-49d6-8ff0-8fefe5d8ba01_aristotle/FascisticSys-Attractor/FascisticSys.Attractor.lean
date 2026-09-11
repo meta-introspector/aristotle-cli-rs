@@ -1,2 +1,0 @@
--- Declaration: FascisticSys.Attractor
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cross_phylum_invariant_preserved
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: origin_in_every_orbit
--- Extracted by StaticSplit

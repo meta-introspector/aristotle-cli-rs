@@ -1,2 +1,0 @@
--- Declaration: exampleShardID
--- Extracted by StaticSplit

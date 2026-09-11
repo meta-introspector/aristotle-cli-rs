@@ -1,2 +1,0 @@
--- Declaration: bottPeriodicFactors
--- Extracted by StaticSplit

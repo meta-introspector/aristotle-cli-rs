@@ -1,2 +1,0 @@
--- Declaration: SenateApproved
--- Extracted by StaticSplit

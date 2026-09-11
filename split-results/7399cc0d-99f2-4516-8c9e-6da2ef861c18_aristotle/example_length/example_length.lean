@@ -1,2 +1,0 @@
--- Declaration: example_length
--- Extracted by StaticSplit

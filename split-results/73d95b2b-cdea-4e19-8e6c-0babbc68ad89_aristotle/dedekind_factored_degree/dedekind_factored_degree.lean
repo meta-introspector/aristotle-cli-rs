@@ -1,2 +1,0 @@
--- Declaration: dedekind_factored_degree
--- Extracted by StaticSplit

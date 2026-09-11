@@ -1,2 +1,0 @@
--- Declaration: defaultShardMetadata
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: clIndexOfClass
--- Extracted by StaticSplit

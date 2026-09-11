@@ -1,2 +1,0 @@
--- Declaration: cl04_monoSpan
--- Extracted by StaticSplit

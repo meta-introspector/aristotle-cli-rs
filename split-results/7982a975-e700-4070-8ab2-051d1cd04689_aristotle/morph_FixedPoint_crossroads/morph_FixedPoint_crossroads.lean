@@ -1,2 +1,0 @@
--- Declaration: morph_FixedPoint_crossroads
--- Extracted by StaticSplit

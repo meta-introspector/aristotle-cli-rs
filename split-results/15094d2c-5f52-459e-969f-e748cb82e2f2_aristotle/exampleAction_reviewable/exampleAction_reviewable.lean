@@ -1,2 +1,0 @@
--- Declaration: exampleAction_reviewable
--- Extracted by StaticSplit

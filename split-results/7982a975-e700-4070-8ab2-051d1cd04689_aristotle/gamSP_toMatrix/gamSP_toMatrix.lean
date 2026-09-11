@@ -1,2 +1,0 @@
--- Declaration: gamSP_toMatrix
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Commodity
--- Extracted by StaticSplit

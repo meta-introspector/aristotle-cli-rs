@@ -1,2 +1,0 @@
--- Declaration: defect_denominator_factorization
--- Extracted by StaticSplit

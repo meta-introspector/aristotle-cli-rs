@@ -1,2 +1,0 @@
--- Declaration: Ternary.neg'
--- Extracted by StaticSplit

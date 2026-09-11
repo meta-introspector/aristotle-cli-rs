@@ -1,2 +1,0 @@
--- Declaration: No2Cycle
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: bias_separates
--- Extracted by StaticSplit

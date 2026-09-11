@@ -1,2 +1,0 @@
--- Declaration: obj_FixedPoint
--- Extracted by StaticSplit

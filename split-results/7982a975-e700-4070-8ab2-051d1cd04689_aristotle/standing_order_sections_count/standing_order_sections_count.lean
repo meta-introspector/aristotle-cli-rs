@@ -1,2 +1,0 @@
--- Declaration: standing_order_sections_count
--- Extracted by StaticSplit

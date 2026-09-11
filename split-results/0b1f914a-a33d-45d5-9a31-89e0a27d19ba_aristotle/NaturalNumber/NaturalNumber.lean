@@ -1,2 +1,0 @@
--- Declaration: NaturalNumber
--- Extracted by StaticSplit

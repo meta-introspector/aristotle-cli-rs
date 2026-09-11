@@ -1,2 +1,0 @@
--- Declaration: v2BlockBounds
--- Extracted by StaticSplit

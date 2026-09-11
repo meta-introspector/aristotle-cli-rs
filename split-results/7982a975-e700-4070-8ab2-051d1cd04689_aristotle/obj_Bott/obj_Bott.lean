@@ -1,2 +1,0 @@
--- Declaration: obj_Bott
--- Extracted by StaticSplit

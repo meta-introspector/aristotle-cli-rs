@@ -1,2 +1,0 @@
--- Declaration: WorldRegistry.contains
--- Extracted by StaticSplit

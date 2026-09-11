@@ -1,2 +1,0 @@
--- Declaration: MyString.ofString
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: l2_71_order_value
--- Extracted by StaticSplit

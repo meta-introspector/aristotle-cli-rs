@@ -1,2 +1,0 @@
--- Declaration: defaultConfigs_targets
--- Extracted by StaticSplit

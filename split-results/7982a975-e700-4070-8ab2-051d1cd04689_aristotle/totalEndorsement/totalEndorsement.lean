@@ -1,2 +1,0 @@
--- Declaration: totalEndorsement
--- Extracted by StaticSplit

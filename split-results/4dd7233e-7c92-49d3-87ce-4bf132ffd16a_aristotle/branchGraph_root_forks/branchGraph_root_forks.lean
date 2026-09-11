@@ -1,2 +1,0 @@
--- Declaration: branchGraph_root_forks
--- Extracted by StaticSplit

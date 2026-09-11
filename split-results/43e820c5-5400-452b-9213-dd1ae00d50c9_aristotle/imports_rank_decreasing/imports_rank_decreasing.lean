@@ -1,2 +1,0 @@
--- Declaration: imports_rank_decreasing
--- Extracted by StaticSplit

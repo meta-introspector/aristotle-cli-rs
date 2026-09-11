@@ -1,2 +1,0 @@
--- Declaration: restr_eq
--- Extracted by StaticSplit

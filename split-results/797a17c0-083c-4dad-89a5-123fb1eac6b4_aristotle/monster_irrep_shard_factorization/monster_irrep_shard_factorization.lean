@@ -1,2 +1,0 @@
--- Declaration: monster_irrep_shard_factorization
--- Extracted by StaticSplit

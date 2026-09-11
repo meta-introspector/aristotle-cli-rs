@@ -1,2 +1,0 @@
--- Declaration: towerTheoremAddress_crt
--- Extracted by StaticSplit

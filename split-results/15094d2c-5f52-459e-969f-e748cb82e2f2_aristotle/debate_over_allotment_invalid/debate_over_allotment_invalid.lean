@@ -1,2 +1,0 @@
--- Declaration: debate_over_allotment_invalid
--- Extracted by StaticSplit

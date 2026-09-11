@@ -1,2 +1,0 @@
--- Declaration: sPermCheckAnticommute
--- Extracted by StaticSplit

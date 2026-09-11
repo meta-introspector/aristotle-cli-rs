@@ -1,2 +1,0 @@
--- Declaration: USCCitation
--- Extracted by StaticSplit

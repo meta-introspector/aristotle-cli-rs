@@ -1,2 +1,0 @@
--- Declaration: die_plate_is_monster
--- Extracted by StaticSplit

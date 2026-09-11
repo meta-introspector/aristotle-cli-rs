@@ -1,2 +1,0 @@
--- Declaration: trivial_loop_monodromy
--- Extracted by StaticSplit

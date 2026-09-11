@@ -1,2 +1,0 @@
--- Declaration: tauto_comp_cast
--- Extracted by StaticSplit

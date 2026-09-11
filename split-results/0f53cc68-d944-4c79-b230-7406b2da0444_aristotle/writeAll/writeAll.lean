@@ -1,2 +1,0 @@
--- Declaration: writeAll
--- Extracted by StaticSplit

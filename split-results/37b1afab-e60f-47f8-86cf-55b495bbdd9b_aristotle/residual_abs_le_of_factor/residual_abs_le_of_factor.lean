@@ -1,2 +1,0 @@
--- Declaration: residual_abs_le_of_factor
--- Extracted by StaticSplit

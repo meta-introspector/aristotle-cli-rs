@@ -1,2 +1,0 @@
--- Declaration: objectRegistry
--- Extracted by StaticSplit

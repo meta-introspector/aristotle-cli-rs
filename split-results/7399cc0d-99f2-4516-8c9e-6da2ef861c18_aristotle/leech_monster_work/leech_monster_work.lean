@@ -1,2 +1,0 @@
--- Declaration: leech_monster_work
--- Extracted by StaticSplit

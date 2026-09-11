@@ -1,2 +1,0 @@
--- Declaration: fiberStable_implies_coherent
--- Extracted by StaticSplit

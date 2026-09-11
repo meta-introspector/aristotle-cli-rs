@@ -1,2 +1,0 @@
--- Declaration: constitution_addr
--- Extracted by StaticSplit

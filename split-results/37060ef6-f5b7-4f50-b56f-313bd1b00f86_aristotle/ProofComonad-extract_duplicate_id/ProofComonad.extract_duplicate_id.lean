@@ -1,2 +1,0 @@
--- Declaration: ProofComonad.extract_duplicate_id
--- Extracted by StaticSplit

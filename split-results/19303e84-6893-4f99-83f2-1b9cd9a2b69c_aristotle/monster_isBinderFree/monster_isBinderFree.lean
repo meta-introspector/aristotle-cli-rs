@@ -1,2 +1,0 @@
--- Declaration: monster_isBinderFree
--- Extracted by StaticSplit

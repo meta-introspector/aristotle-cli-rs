@@ -1,2 +1,0 @@
--- Declaration: Metameme.isViable
--- Extracted by StaticSplit

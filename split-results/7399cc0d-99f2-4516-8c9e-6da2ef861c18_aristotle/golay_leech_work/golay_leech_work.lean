@@ -1,2 +1,0 @@
--- Declaration: golay_leech_work
--- Extracted by StaticSplit

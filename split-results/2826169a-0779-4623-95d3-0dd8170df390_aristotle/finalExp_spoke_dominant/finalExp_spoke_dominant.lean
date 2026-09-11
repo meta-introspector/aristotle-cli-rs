@@ -1,2 +1,0 @@
--- Declaration: finalExp_spoke_dominant
--- Extracted by StaticSplit

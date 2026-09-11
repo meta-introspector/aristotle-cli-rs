@@ -1,2 +1,0 @@
--- Declaration: total_readings_value
--- Extracted by StaticSplit

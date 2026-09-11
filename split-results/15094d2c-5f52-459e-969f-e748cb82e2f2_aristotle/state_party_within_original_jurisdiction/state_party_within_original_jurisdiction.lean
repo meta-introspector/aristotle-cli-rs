@@ -1,2 +1,0 @@
--- Declaration: state_party_within_original_jurisdiction
--- Extracted by StaticSplit

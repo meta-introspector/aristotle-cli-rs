@@ -1,2 +1,0 @@
--- Declaration: exists_even_nat
--- Extracted by StaticSplit

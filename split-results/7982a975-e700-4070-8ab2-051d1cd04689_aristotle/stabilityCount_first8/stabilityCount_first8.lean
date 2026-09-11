@@ -1,2 +1,0 @@
--- Declaration: stabilityCount_first8
--- Extracted by StaticSplit

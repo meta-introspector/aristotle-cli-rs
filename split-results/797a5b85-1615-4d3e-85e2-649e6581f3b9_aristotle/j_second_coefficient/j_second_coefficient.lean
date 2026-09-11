@@ -1,2 +1,0 @@
--- Declaration: j_second_coefficient
--- Extracted by StaticSplit

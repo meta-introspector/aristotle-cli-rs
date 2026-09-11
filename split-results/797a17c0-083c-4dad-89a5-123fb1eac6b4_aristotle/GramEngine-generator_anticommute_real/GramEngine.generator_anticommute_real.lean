@@ -1,2 +1,0 @@
--- Declaration: GramEngine.generator_anticommute_real
--- Extracted by StaticSplit

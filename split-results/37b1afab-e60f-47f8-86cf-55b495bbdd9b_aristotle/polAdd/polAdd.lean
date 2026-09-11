@@ -1,2 +1,0 @@
--- Declaration: polAdd
--- Extracted by StaticSplit

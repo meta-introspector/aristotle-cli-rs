@@ -1,2 +1,0 @@
--- Declaration: tesla_sum_bott
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: pocket_veto
--- Extracted by StaticSplit

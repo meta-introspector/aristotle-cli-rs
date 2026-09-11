@@ -1,2 +1,0 @@
--- Declaration: ramanujanToCrank_steps
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: adjunction_hom_equiv
--- Extracted by StaticSplit

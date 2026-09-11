@@ -1,2 +1,0 @@
--- Declaration: monomyth_spore_germinates_starship
--- Extracted by StaticSplit

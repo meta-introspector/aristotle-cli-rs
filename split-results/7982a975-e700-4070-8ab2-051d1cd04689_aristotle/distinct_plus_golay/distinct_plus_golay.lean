@@ -1,2 +1,0 @@
--- Declaration: distinct_plus_golay
--- Extracted by StaticSplit

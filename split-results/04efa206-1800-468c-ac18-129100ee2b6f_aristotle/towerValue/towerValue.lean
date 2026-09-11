@@ -1,2 +1,0 @@
--- Declaration: towerValue
--- Extracted by StaticSplit

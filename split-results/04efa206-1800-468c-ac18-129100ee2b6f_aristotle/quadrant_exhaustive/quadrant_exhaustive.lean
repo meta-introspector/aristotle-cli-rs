@@ -1,2 +1,0 @@
--- Declaration: quadrant_exhaustive
--- Extracted by StaticSplit

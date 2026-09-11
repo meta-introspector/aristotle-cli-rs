@@ -1,2 +1,0 @@
--- Declaration: ResultValue
--- Extracted by StaticSplit

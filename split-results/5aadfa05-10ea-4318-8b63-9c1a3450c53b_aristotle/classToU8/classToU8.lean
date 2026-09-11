@@ -1,2 +1,0 @@
--- Declaration: classToU8
--- Extracted by StaticSplit

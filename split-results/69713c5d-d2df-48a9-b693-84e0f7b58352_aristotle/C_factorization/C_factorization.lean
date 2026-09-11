@@ -1,2 +1,0 @@
--- Declaration: C_factorization
--- Extracted by StaticSplit

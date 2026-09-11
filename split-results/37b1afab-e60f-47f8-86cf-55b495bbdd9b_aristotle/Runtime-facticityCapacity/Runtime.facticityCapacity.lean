@@ -1,2 +1,0 @@
--- Declaration: Runtime.facticityCapacity
--- Extracted by StaticSplit

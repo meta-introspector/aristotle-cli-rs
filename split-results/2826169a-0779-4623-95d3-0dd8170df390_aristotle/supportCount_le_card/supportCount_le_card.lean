@@ -1,2 +1,0 @@
--- Declaration: supportCount_le_card
--- Extracted by StaticSplit

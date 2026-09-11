@@ -1,2 +1,0 @@
--- Declaration: gate_prime_47
--- Extracted by StaticSplit

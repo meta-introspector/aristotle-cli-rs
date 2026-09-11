@@ -1,2 +1,0 @@
--- Declaration: triangle_196883
--- Extracted by StaticSplit

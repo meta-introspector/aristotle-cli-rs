@@ -1,2 +1,0 @@
--- Declaration: ExtrusionMachine
--- Extracted by StaticSplit

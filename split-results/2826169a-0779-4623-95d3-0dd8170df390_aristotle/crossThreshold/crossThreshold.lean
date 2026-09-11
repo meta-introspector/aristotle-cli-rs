@@ -1,2 +1,0 @@
--- Declaration: crossThreshold
--- Extracted by StaticSplit

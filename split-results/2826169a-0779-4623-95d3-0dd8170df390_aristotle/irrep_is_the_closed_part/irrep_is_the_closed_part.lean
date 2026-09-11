@@ -1,2 +1,0 @@
--- Declaration: irrep_is_the_closed_part
--- Extracted by StaticSplit

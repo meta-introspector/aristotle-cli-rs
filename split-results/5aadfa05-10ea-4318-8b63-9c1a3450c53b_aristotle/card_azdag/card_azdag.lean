@@ -1,2 +1,0 @@
--- Declaration: card_azdag
--- Extracted by StaticSplit

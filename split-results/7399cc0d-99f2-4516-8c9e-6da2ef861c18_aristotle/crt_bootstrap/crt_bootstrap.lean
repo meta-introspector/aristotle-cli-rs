@@ -1,2 +1,0 @@
--- Declaration: crt_bootstrap
--- Extracted by StaticSplit

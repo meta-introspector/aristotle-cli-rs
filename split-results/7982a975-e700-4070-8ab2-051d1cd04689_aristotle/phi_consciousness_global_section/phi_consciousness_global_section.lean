@@ -1,2 +1,0 @@
--- Declaration: phi_consciousness_global_section
--- Extracted by StaticSplit

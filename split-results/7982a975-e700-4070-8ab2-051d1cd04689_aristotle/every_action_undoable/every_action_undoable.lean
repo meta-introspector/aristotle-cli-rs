@@ -1,2 +1,0 @@
--- Declaration: every_action_undoable
--- Extracted by StaticSplit

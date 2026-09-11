@@ -1,2 +1,0 @@
--- Declaration: allSsPrimes
--- Extracted by StaticSplit

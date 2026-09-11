@@ -1,2 +1,0 @@
--- Declaration: GrothendieckSpace.embed_proj
--- Extracted by StaticSplit

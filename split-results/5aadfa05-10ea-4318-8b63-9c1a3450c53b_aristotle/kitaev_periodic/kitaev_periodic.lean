@@ -1,2 +1,0 @@
--- Declaration: kitaev_periodic
--- Extracted by StaticSplit

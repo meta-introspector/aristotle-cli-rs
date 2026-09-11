@@ -1,2 +1,0 @@
--- Declaration: LKGoverned.sound
--- Extracted by StaticSplit

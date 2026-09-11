@@ -1,2 +1,0 @@
--- Declaration: CRTCongruent
--- Extracted by StaticSplit

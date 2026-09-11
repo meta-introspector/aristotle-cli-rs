@@ -1,2 +1,0 @@
--- Declaration: NeuroConcept
--- Extracted by StaticSplit

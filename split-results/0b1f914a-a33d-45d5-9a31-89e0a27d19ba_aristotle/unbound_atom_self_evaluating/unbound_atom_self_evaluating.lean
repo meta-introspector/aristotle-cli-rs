@@ -1,2 +1,0 @@
--- Declaration: unbound_atom_self_evaluating
--- Extracted by StaticSplit

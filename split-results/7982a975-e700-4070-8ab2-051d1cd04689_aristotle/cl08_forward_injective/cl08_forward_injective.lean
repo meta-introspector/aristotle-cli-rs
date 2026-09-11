@@ -1,2 +1,0 @@
--- Declaration: cl08_forward_injective
--- Extracted by StaticSplit

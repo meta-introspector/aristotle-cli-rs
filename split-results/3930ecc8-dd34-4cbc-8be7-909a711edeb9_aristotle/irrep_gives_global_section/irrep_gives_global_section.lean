@@ -1,2 +1,0 @@
--- Declaration: irrep_gives_global_section
--- Extracted by StaticSplit

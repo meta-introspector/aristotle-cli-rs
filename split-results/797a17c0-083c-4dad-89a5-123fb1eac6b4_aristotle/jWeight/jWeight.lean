@@ -1,2 +1,0 @@
--- Declaration: jWeight
--- Extracted by StaticSplit

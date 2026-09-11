@@ -1,2 +1,0 @@
--- Declaration: self_in_mycelium
--- Extracted by StaticSplit

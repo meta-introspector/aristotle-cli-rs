@@ -1,2 +1,0 @@
--- Declaration: isCounty
--- Extracted by StaticSplit

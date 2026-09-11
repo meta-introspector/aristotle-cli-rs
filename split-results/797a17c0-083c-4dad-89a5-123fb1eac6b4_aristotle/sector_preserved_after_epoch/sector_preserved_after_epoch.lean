@@ -1,2 +1,0 @@
--- Declaration: sector_preserved_after_epoch
--- Extracted by StaticSplit

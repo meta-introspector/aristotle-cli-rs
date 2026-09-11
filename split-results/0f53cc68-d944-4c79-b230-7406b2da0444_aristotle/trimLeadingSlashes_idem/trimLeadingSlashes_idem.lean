@@ -1,2 +1,0 @@
--- Declaration: trimLeadingSlashes_idem
--- Extracted by StaticSplit

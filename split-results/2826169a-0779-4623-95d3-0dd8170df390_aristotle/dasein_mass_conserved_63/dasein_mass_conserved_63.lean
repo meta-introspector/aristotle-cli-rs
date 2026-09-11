@@ -1,2 +1,0 @@
--- Declaration: dasein_mass_conserved_63
--- Extracted by StaticSplit

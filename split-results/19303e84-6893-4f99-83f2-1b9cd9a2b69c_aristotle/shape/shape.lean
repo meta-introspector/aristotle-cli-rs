@@ -1,2 +1,0 @@
--- Declaration: shape
--- Extracted by StaticSplit

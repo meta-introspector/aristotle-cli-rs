@@ -1,2 +1,0 @@
--- Declaration: jInvariant_qNeg1
--- Extracted by StaticSplit

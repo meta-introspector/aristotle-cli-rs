@@ -1,2 +1,0 @@
--- Declaration: irrep_in_clifford_units
--- Extracted by StaticSplit

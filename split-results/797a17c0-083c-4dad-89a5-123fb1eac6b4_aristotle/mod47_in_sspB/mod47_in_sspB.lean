@@ -1,2 +1,0 @@
--- Declaration: mod47_in_sspB
--- Extracted by StaticSplit

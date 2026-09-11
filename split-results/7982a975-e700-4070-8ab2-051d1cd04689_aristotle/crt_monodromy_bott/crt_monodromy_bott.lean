@@ -1,2 +1,0 @@
--- Declaration: crt_monodromy_bott
--- Extracted by StaticSplit

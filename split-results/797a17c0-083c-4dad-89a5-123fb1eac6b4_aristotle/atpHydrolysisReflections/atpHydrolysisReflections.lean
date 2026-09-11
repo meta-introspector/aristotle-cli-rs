@@ -1,2 +1,0 @@
--- Declaration: atpHydrolysisReflections
--- Extracted by StaticSplit

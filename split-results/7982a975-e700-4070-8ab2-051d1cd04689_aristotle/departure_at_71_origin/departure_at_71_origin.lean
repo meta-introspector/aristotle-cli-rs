@@ -1,2 +1,0 @@
--- Declaration: departure_at_71_origin
--- Extracted by StaticSplit

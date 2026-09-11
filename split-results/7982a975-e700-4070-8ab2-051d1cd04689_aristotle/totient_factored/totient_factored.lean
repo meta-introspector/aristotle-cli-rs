@@ -1,2 +1,0 @@
--- Declaration: totient_factored
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: dR_dt
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: implModel
--- Extracted by StaticSplit

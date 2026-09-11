@@ -1,2 +1,0 @@
--- Declaration: NetworkConcept
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ColimitFiber.truncate
--- Extracted by StaticSplit

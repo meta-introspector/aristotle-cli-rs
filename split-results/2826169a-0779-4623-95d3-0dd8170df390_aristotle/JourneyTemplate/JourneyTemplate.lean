@@ -1,2 +1,0 @@
--- Declaration: JourneyTemplate
--- Extracted by StaticSplit

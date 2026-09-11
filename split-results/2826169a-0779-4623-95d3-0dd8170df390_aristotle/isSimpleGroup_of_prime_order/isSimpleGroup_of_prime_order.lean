@@ -1,2 +1,0 @@
--- Declaration: isSimpleGroup_of_prime_order
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: instInfiniteDLConcept
--- Extracted by StaticSplit

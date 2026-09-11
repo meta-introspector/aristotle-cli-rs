@@ -1,2 +1,0 @@
--- Declaration: SSPMask.union
--- Extracted by StaticSplit

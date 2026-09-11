@@ -1,2 +1,0 @@
--- Declaration: memetic_energy_reaches_consciousness
--- Extracted by StaticSplit

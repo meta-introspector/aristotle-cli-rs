@@ -1,2 +1,0 @@
--- Declaration: renderEdge
--- Extracted by StaticSplit

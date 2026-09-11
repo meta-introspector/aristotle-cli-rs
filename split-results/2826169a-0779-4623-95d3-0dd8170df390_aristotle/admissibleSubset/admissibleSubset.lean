@@ -1,2 +1,0 @@
--- Declaration: admissibleSubset
--- Extracted by StaticSplit

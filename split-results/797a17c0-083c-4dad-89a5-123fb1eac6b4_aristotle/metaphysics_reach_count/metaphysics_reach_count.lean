@@ -1,2 +1,0 @@
--- Declaration: metaphysics_reach_count
--- Extracted by StaticSplit

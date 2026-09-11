@@ -1,2 +1,0 @@
--- Declaration: HeckeAlgebra
--- Extracted by StaticSplit

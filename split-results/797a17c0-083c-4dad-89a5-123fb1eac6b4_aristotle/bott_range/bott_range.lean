@@ -1,2 +1,0 @@
--- Declaration: bott_range
--- Extracted by StaticSplit

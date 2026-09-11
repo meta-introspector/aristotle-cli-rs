@@ -1,2 +1,0 @@
--- Declaration: Principal
--- Extracted by StaticSplit

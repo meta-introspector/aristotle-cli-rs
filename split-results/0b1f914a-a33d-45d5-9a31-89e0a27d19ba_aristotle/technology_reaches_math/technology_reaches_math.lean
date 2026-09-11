@@ -1,2 +1,0 @@
--- Declaration: technology_reaches_math
--- Extracted by StaticSplit

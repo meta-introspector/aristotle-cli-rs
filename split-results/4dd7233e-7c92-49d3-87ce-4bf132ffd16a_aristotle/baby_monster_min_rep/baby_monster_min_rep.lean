@@ -1,2 +1,0 @@
--- Declaration: baby_monster_min_rep
--- Extracted by StaticSplit

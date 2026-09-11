@@ -1,2 +1,0 @@
--- Declaration: genusZero_eq_supersingular
--- Extracted by StaticSplit

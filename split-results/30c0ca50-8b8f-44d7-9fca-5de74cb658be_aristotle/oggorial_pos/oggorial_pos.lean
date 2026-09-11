@@ -1,2 +1,0 @@
--- Declaration: oggorial_pos
--- Extracted by StaticSplit

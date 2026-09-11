@@ -1,2 +1,0 @@
--- Declaration: taxicab_factors_are_ogg
--- Extracted by StaticSplit

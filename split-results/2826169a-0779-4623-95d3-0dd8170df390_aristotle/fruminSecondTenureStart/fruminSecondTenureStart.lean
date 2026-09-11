@@ -1,2 +1,0 @@
--- Declaration: fruminSecondTenureStart
--- Extracted by StaticSplit

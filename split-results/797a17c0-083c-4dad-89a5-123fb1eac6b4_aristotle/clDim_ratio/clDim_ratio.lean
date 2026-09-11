@@ -1,2 +1,0 @@
--- Declaration: clDim_ratio
--- Extracted by StaticSplit

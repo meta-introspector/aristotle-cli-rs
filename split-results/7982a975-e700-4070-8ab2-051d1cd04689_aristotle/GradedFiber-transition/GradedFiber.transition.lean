@@ -1,2 +1,0 @@
--- Declaration: GradedFiber.transition
--- Extracted by StaticSplit

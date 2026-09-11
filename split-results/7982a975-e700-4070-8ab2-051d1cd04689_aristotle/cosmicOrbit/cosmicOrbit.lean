@@ -1,2 +1,0 @@
--- Declaration: cosmicOrbit
--- Extracted by StaticSplit

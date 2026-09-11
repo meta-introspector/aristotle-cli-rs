@@ -1,2 +1,0 @@
--- Declaration: ramanujanPartition
--- Extracted by StaticSplit

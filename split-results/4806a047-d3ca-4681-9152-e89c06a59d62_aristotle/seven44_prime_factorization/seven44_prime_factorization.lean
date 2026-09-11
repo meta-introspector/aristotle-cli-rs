@@ -1,2 +1,0 @@
--- Declaration: seven44_prime_factorization
--- Extracted by StaticSplit

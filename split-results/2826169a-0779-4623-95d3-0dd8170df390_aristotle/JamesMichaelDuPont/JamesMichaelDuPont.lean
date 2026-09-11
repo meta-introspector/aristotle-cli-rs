@@ -1,2 +1,0 @@
--- Declaration: JamesMichaelDuPont
--- Extracted by StaticSplit

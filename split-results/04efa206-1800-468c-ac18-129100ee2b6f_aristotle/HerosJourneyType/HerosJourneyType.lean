@@ -1,2 +1,0 @@
--- Declaration: HerosJourneyType
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: universal_fungal_germination
--- Extracted by StaticSplit

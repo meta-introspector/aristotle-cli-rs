@@ -1,2 +1,0 @@
--- Declaration: GramEngine.generator_sq_neg
--- Extracted by StaticSplit

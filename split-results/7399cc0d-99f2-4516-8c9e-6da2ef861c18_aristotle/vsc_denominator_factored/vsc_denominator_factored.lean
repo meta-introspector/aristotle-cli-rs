@@ -1,2 +1,0 @@
--- Declaration: vsc_denominator_factored
--- Extracted by StaticSplit

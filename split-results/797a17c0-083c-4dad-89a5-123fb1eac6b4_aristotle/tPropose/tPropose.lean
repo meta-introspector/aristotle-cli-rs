@@ -1,2 +1,0 @@
--- Declaration: tPropose
--- Extracted by StaticSplit

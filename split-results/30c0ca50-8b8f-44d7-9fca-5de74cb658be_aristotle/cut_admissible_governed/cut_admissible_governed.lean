@@ -1,2 +1,0 @@
--- Declaration: cut_admissible_governed
--- Extracted by StaticSplit

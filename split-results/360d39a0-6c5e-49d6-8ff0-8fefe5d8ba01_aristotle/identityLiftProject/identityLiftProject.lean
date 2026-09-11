@@ -1,2 +1,0 @@
--- Declaration: identityLiftProject
--- Extracted by StaticSplit

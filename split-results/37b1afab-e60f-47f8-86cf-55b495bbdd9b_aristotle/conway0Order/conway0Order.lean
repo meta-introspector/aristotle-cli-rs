@@ -1,2 +1,0 @@
--- Declaration: conway0Order
--- Extracted by StaticSplit

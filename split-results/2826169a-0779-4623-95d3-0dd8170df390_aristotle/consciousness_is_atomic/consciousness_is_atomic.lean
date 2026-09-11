@@ -1,2 +1,0 @@
--- Declaration: consciousness_is_atomic
--- Extracted by StaticSplit

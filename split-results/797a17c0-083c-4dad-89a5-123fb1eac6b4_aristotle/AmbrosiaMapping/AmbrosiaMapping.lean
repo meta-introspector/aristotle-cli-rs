@@ -1,2 +1,0 @@
--- Declaration: AmbrosiaMapping
--- Extracted by StaticSplit

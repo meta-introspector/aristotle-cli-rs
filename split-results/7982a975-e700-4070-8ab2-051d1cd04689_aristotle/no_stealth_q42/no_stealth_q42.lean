@@ -1,2 +1,0 @@
--- Declaration: no_stealth_q42
--- Extracted by StaticSplit

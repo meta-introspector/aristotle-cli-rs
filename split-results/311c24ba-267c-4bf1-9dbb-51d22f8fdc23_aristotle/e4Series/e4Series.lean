@@ -1,2 +1,0 @@
--- Declaration: e4Series
--- Extracted by StaticSplit

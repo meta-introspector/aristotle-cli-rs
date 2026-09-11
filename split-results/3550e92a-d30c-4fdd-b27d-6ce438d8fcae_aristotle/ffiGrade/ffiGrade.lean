@@ -1,2 +1,0 @@
--- Declaration: ffiGrade
--- Extracted by StaticSplit

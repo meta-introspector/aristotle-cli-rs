@@ -1,2 +1,0 @@
--- Declaration: hashConst
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: oddFraction_eq_half
--- Extracted by StaticSplit

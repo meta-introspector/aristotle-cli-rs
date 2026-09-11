@@ -1,2 +1,0 @@
--- Declaration: zipWith_add_sub
--- Extracted by StaticSplit

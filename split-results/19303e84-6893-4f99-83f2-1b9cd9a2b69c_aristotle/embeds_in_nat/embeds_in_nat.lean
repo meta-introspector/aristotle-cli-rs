@@ -1,2 +1,0 @@
--- Declaration: embeds_in_nat
--- Extracted by StaticSplit

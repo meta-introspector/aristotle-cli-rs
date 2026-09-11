@@ -1,2 +1,0 @@
--- Declaration: bottClassOf_periodic
--- Extracted by StaticSplit

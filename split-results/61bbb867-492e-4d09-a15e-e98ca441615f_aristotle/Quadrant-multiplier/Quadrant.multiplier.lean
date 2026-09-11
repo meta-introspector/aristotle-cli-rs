@@ -1,2 +1,0 @@
--- Declaration: Quadrant.multiplier
--- Extracted by StaticSplit

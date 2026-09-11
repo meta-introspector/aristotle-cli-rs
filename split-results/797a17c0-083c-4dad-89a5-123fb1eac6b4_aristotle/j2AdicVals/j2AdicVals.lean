@@ -1,2 +1,0 @@
--- Declaration: j2AdicVals
--- Extracted by StaticSplit

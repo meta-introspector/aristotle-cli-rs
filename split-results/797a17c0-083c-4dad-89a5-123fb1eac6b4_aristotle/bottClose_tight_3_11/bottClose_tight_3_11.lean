@@ -1,2 +1,0 @@
--- Declaration: bottClose_tight_3_11
--- Extracted by StaticSplit

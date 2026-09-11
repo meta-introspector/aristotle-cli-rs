@@ -1,2 +1,0 @@
--- Declaration: emitRustGroup
--- Extracted by StaticSplit

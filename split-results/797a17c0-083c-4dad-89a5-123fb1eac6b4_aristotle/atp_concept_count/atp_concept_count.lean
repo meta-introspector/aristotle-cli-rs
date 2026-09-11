@@ -1,2 +1,0 @@
--- Declaration: atp_concept_count
--- Extracted by StaticSplit

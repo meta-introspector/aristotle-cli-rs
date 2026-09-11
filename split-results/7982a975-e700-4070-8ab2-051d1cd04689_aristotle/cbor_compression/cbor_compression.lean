@@ -1,2 +1,0 @@
--- Declaration: cbor_compression
--- Extracted by StaticSplit

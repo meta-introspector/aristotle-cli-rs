@@ -1,2 +1,0 @@
--- Declaration: ouroboros_period
--- Extracted by StaticSplit

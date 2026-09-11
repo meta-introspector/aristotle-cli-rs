@@ -1,2 +1,0 @@
--- Declaration: mockProve_simple
--- Extracted by StaticSplit

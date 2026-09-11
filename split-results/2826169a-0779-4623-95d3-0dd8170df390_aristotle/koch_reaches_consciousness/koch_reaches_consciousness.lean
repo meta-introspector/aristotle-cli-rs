@@ -1,2 +1,0 @@
--- Declaration: koch_reaches_consciousness
--- Extracted by StaticSplit

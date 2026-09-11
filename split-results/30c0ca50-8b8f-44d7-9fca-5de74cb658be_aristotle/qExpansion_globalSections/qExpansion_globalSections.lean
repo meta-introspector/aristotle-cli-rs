@@ -1,2 +1,0 @@
--- Declaration: qExpansion_globalSections
--- Extracted by StaticSplit

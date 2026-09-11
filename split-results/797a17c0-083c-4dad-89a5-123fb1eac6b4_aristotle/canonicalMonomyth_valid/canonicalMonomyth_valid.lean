@@ -1,2 +1,0 @@
--- Declaration: canonicalMonomyth_valid
--- Extracted by StaticSplit

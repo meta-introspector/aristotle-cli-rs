@@ -1,2 +1,0 @@
--- Declaration: userSheafSection
--- Extracted by StaticSplit

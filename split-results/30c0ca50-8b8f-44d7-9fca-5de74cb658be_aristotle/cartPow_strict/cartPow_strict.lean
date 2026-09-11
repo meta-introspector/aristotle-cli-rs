@@ -1,2 +1,0 @@
--- Declaration: cartPow_strict
--- Extracted by StaticSplit

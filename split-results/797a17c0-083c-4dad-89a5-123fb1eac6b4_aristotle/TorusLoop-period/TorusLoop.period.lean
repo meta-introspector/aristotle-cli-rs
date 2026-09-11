@@ -1,2 +1,0 @@
--- Declaration: TorusLoop.period
--- Extracted by StaticSplit

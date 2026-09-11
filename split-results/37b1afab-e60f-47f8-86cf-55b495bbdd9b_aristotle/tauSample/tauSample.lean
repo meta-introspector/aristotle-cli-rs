@@ -1,2 +1,0 @@
--- Declaration: tauSample
--- Extracted by StaticSplit

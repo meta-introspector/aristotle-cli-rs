@@ -1,2 +1,0 @@
--- Declaration: totalGrade
--- Extracted by StaticSplit

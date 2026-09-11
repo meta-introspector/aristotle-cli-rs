@@ -1,2 +1,0 @@
--- Declaration: atpAdjacent
--- Extracted by StaticSplit

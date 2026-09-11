@@ -1,2 +1,0 @@
--- Declaration: ontologyPrimes_divide_monster
--- Extracted by StaticSplit

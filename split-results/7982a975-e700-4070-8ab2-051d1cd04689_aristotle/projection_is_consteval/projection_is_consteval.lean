@@ -1,2 +1,0 @@
--- Declaration: projection_is_consteval
--- Extracted by StaticSplit

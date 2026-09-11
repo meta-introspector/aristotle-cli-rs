@@ -1,2 +1,0 @@
--- Declaration: glueing_uniqueness
--- Extracted by StaticSplit

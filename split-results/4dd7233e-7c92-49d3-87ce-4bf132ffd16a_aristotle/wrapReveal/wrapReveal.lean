@@ -1,2 +1,0 @@
--- Declaration: wrapReveal
--- Extracted by StaticSplit

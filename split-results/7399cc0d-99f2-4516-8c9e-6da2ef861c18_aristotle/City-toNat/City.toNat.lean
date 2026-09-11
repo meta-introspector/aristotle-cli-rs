@@ -1,2 +1,0 @@
--- Declaration: City.toNat
--- Extracted by StaticSplit

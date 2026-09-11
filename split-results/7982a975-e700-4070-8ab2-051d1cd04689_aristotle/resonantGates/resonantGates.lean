@@ -1,2 +1,0 @@
--- Declaration: resonantGates
--- Extracted by StaticSplit

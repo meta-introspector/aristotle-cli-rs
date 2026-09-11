@@ -1,2 +1,0 @@
--- Declaration: monsterResid
--- Extracted by StaticSplit

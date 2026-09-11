@@ -1,2 +1,0 @@
--- Declaration: supersingularPrimes_divide_monster
--- Extracted by StaticSplit

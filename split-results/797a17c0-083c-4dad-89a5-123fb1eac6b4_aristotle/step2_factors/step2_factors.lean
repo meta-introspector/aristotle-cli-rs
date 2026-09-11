@@ -1,2 +1,0 @@
--- Declaration: step2_factors
--- Extracted by StaticSplit

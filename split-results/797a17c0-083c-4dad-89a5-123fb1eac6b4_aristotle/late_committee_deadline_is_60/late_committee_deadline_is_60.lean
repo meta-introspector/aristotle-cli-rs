@@ -1,2 +1,0 @@
--- Declaration: late_committee_deadline_is_60
--- Extracted by StaticSplit

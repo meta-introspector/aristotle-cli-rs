@@ -1,2 +1,0 @@
--- Declaration: EmojiStep
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: isQ42Resonant
--- Extracted by StaticSplit

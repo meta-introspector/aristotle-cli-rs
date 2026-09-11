@@ -1,2 +1,0 @@
--- Declaration: cl0_gen_sq_neg
--- Extracted by StaticSplit

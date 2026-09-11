@@ -1,2 +1,0 @@
--- Declaration: ssp_genus_zero
--- Extracted by StaticSplit

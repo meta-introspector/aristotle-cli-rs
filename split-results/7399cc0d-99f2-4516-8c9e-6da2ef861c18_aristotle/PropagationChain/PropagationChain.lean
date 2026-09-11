@@ -1,2 +1,0 @@
--- Declaration: PropagationChain
--- Extracted by StaticSplit

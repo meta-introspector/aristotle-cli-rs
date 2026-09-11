@@ -1,2 +1,0 @@
--- Declaration: cechH1
--- Extracted by StaticSplit

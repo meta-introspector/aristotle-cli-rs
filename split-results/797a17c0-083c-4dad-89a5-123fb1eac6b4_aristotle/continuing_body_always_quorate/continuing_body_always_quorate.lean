@@ -1,2 +1,0 @@
--- Declaration: continuing_body_always_quorate
--- Extracted by StaticSplit

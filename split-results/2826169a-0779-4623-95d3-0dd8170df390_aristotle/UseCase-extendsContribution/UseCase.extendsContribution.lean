@@ -1,2 +1,0 @@
--- Declaration: UseCase.extendsContribution
--- Extracted by StaticSplit

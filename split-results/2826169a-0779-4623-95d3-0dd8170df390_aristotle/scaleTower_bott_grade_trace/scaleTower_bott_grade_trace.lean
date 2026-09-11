@@ -1,2 +1,0 @@
--- Declaration: scaleTower_bott_grade_trace
--- Extracted by StaticSplit

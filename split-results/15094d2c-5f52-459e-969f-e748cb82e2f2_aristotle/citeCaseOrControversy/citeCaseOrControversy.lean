@@ -1,2 +1,0 @@
--- Declaration: citeCaseOrControversy
--- Extracted by StaticSplit

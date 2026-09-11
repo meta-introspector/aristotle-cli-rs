@@ -1,2 +1,0 @@
--- Declaration: anomaly_to_VA
--- Extracted by StaticSplit

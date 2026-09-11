@@ -1,2 +1,0 @@
--- Declaration: exampleSuspension_passes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: directSum_comm
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: sigma_multiplicative
--- Extracted by StaticSplit

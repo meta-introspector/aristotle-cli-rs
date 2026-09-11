@@ -1,2 +1,0 @@
--- Declaration: paxos_safety
--- Extracted by StaticSplit

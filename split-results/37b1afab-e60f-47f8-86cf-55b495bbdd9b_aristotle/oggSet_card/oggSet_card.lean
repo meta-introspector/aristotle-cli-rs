@@ -1,2 +1,0 @@
--- Declaration: oggSet_card
--- Extracted by StaticSplit

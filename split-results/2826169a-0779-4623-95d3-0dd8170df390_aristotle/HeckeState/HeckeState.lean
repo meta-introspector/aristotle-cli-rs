@@ -1,2 +1,0 @@
--- Declaration: HeckeState
--- Extracted by StaticSplit

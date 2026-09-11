@@ -1,2 +1,0 @@
--- Declaration: monodromy_bott_coherence
--- Extracted by StaticSplit

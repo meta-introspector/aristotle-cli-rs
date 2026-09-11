@@ -1,2 +1,0 @@
--- Declaration: shared_series
--- Extracted by StaticSplit

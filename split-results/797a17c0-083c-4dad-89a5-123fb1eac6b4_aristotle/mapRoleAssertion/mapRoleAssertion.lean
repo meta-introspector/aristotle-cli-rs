@@ -1,2 +1,0 @@
--- Declaration: mapRoleAssertion
--- Extracted by StaticSplit

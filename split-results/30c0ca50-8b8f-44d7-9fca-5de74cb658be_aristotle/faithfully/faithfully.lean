@@ -1,2 +1,0 @@
--- Declaration: faithfully
--- Extracted by StaticSplit

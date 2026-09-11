@@ -1,2 +1,0 @@
--- Declaration: fin1_complex_isometry
--- Extracted by StaticSplit

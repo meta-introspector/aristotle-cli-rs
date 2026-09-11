@@ -1,2 +1,0 @@
--- Declaration: bridge_232_323
--- Extracted by StaticSplit

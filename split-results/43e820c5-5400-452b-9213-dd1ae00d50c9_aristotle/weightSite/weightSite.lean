@@ -1,2 +1,0 @@
--- Declaration: weightSite
--- Extracted by StaticSplit

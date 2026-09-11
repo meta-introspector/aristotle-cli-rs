@@ -1,2 +1,0 @@
--- Declaration: gateByBott
--- Extracted by StaticSplit

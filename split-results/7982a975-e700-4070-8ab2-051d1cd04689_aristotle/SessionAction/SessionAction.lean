@@ -1,2 +1,0 @@
--- Declaration: SessionAction
--- Extracted by StaticSplit

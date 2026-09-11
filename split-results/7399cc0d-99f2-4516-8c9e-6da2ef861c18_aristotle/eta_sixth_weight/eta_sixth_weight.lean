@@ -1,2 +1,0 @@
--- Declaration: eta_sixth_weight
--- Extracted by StaticSplit

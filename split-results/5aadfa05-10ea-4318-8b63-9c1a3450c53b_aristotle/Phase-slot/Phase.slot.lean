@@ -1,2 +1,0 @@
--- Declaration: Phase.slot
--- Extracted by StaticSplit

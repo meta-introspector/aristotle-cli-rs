@@ -1,2 +1,0 @@
--- Declaration: taxicab_decomposition_2
--- Extracted by StaticSplit

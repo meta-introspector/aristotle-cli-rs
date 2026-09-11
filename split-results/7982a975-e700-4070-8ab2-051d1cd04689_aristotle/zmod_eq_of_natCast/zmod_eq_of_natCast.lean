@@ -1,2 +1,0 @@
--- Declaration: zmod_eq_of_natCast
--- Extracted by StaticSplit

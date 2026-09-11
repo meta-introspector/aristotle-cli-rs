@@ -1,2 +1,0 @@
--- Declaration: metaTick
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: isArcade
--- Extracted by StaticSplit

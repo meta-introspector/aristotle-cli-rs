@@ -1,2 +1,0 @@
--- Declaration: left_unit
--- Extracted by StaticSplit

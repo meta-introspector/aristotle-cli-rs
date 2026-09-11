@@ -1,2 +1,0 @@
--- Declaration: ArcadeSession.toTotality
--- Extracted by StaticSplit

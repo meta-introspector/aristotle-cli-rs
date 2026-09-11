@@ -1,2 +1,0 @@
--- Declaration: void_sieve_eq_one
--- Extracted by StaticSplit

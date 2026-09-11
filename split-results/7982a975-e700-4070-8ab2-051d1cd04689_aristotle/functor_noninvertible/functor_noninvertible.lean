@@ -1,2 +1,0 @@
--- Declaration: functor_noninvertible
--- Extracted by StaticSplit

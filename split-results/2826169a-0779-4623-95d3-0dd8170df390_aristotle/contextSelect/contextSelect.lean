@@ -1,2 +1,0 @@
--- Declaration: contextSelect
--- Extracted by StaticSplit

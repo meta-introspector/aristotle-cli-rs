@@ -1,2 +1,0 @@
--- Declaration: padic_norm_eq_pow_neg_val
--- Extracted by StaticSplit

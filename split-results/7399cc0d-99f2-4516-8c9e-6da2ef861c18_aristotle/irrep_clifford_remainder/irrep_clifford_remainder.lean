@@ -1,2 +1,0 @@
--- Declaration: irrep_clifford_remainder
--- Extracted by StaticSplit

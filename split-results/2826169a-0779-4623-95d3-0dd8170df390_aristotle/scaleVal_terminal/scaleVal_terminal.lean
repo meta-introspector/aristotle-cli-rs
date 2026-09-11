@@ -1,2 +1,0 @@
--- Declaration: scaleVal_terminal
--- Extracted by StaticSplit

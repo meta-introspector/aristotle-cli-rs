@@ -1,2 +1,0 @@
--- Declaration: MetaTowerMorphism
--- Extracted by StaticSplit

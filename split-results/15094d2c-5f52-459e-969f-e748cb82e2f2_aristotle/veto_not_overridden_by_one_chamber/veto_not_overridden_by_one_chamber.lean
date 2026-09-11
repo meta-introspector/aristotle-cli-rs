@@ -1,2 +1,0 @@
--- Declaration: veto_not_overridden_by_one_chamber
--- Extracted by StaticSplit

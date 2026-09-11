@@ -1,2 +1,0 @@
--- Declaration: mock_theta_sum
--- Extracted by StaticSplit

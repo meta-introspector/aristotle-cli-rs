@@ -1,2 +1,0 @@
--- Declaration: TaggedBlock.basePoint_eq
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: tau_zero_mod24_primes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cdist8
--- Extracted by StaticSplit

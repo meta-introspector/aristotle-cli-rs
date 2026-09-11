@@ -1,2 +1,0 @@
--- Declaration: Crank.restore
--- Extracted by StaticSplit

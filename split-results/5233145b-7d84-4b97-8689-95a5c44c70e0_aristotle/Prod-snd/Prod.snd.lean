@@ -1,2 +1,0 @@
--- Declaration: Prod.snd
--- Extracted by StaticSplit

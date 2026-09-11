@@ -1,2 +1,0 @@
--- Declaration: SpeculativeClaim
--- Extracted by StaticSplit

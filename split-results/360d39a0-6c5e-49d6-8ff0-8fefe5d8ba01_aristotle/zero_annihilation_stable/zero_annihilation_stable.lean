@@ -1,2 +1,0 @@
--- Declaration: zero_annihilation_stable
--- Extracted by StaticSplit

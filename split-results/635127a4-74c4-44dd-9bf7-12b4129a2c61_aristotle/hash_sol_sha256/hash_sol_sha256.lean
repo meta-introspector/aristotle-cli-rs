@@ -1,2 +1,0 @@
--- Declaration: hash_sol_sha256
--- Extracted by StaticSplit

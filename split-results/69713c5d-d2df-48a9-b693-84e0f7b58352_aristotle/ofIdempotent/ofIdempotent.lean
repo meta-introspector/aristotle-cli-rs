@@ -1,2 +1,0 @@
--- Declaration: ofIdempotent
--- Extracted by StaticSplit

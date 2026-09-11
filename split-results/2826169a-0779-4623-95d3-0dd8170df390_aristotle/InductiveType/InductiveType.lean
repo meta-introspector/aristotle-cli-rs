@@ -1,2 +1,0 @@
--- Declaration: InductiveType
--- Extracted by StaticSplit

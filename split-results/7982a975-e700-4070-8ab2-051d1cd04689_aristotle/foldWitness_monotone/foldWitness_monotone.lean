@@ -1,2 +1,0 @@
--- Declaration: foldWitness_monotone
--- Extracted by StaticSplit

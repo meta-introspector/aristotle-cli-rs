@@ -1,2 +1,0 @@
--- Declaration: StatementConcept
--- Extracted by StaticSplit

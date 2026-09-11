@@ -1,2 +1,0 @@
--- Declaration: chevron_no_deference_if_clear
--- Extracted by StaticSplit

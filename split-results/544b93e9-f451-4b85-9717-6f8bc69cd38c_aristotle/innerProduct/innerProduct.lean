@@ -1,2 +1,0 @@
--- Declaration: innerProduct
--- Extracted by StaticSplit

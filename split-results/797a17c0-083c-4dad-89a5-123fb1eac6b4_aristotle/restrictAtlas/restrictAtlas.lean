@@ -1,2 +1,0 @@
--- Declaration: restrictAtlas
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: gamSP64
--- Extracted by StaticSplit

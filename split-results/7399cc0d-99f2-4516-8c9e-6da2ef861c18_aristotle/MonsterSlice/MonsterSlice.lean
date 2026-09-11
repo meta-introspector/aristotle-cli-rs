@@ -1,2 +1,0 @@
--- Declaration: MonsterSlice
--- Extracted by StaticSplit

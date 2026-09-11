@@ -1,2 +1,0 @@
--- Declaration: address
--- Extracted by StaticSplit

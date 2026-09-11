@@ -1,2 +1,0 @@
--- Declaration: monodromy71_shifts_263
--- Extracted by StaticSplit

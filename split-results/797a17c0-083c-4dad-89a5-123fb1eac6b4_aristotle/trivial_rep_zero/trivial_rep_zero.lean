@@ -1,2 +1,0 @@
--- Declaration: trivial_rep_zero
--- Extracted by StaticSplit

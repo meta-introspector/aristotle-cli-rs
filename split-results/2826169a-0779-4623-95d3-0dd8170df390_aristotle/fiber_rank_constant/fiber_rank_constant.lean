@@ -1,2 +1,0 @@
--- Declaration: fiber_rank_constant
--- Extracted by StaticSplit

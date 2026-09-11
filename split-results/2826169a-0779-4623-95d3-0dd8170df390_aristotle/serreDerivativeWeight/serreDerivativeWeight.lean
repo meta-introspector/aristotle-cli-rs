@@ -1,2 +1,0 @@
--- Declaration: serreDerivativeWeight
--- Extracted by StaticSplit

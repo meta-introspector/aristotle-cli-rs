@@ -1,2 +1,0 @@
--- Declaration: Predicate
--- Extracted by StaticSplit

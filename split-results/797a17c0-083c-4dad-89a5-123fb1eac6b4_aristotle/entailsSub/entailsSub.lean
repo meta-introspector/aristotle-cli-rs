@@ -1,2 +1,0 @@
--- Declaration: entailsSub
--- Extracted by StaticSplit

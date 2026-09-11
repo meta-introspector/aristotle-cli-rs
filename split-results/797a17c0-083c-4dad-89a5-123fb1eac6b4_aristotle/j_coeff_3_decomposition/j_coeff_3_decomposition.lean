@@ -1,2 +1,0 @@
--- Declaration: j_coeff_3_decomposition
--- Extracted by StaticSplit

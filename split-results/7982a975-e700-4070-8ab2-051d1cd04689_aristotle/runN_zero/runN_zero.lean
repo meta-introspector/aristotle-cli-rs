@@ -1,2 +1,0 @@
--- Declaration: runN_zero
--- Extracted by StaticSplit

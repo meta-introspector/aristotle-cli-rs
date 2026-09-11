@@ -1,2 +1,0 @@
--- Declaration: expSum_bott_symmetry_2_8
--- Extracted by StaticSplit

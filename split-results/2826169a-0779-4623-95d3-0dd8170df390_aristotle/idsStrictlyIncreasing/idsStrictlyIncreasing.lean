@@ -1,2 +1,0 @@
--- Declaration: idsStrictlyIncreasing
--- Extracted by StaticSplit

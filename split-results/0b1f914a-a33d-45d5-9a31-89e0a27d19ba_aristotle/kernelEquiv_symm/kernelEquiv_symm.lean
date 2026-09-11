@@ -1,2 +1,0 @@
--- Declaration: kernelEquiv_symm
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: clampKernel_idempotent
--- Extracted by StaticSplit

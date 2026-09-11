@@ -1,2 +1,0 @@
--- Declaration: GroupFuzz.empty_sessions_empty_coverage
--- Extracted by StaticSplit

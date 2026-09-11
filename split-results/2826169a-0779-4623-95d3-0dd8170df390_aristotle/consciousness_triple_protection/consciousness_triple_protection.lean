@@ -1,2 +1,0 @@
--- Declaration: consciousness_triple_protection
--- Extracted by StaticSplit

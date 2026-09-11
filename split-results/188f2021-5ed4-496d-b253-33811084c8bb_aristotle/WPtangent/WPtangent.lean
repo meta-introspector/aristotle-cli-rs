@@ -1,2 +1,0 @@
--- Declaration: WPtangent
--- Extracted by StaticSplit

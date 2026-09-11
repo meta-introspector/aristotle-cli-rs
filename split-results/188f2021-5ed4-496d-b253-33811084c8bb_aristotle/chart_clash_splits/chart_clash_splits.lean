@@ -1,2 +1,0 @@
--- Declaration: chart_clash_splits
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SheafSection.orbifold
--- Extracted by StaticSplit

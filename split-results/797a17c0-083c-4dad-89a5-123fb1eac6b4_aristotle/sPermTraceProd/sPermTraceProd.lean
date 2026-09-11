@@ -1,2 +1,0 @@
--- Declaration: sPermTraceProd
--- Extracted by StaticSplit

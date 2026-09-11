@@ -1,2 +1,0 @@
--- Declaration: phi_mind_pos
--- Extracted by StaticSplit

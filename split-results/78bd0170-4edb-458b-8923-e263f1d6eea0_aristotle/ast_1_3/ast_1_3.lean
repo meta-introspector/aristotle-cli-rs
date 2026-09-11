@@ -1,2 +1,0 @@
--- Declaration: ast_1_3
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Emoji.category
--- Extracted by StaticSplit

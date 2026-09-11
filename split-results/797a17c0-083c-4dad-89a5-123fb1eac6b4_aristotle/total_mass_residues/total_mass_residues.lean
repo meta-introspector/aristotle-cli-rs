@@ -1,2 +1,0 @@
--- Declaration: total_mass_residues
--- Extracted by StaticSplit

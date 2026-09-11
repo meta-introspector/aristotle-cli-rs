@@ -1,2 +1,0 @@
--- Declaration: extended_product_squarefree
--- Extracted by StaticSplit

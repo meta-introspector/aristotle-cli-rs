@@ -1,2 +1,0 @@
--- Declaration: MonsterDivs
--- Extracted by StaticSplit

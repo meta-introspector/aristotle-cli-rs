@@ -1,2 +1,0 @@
--- Declaration: ClassFunction.degree'
--- Extracted by StaticSplit

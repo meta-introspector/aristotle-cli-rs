@@ -1,2 +1,0 @@
--- Declaration: metaMeme_evolution_fixedPoint
--- Extracted by StaticSplit

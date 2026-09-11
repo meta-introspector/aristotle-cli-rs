@@ -1,2 +1,0 @@
--- Declaration: branch_forks_disjoint
--- Extracted by StaticSplit

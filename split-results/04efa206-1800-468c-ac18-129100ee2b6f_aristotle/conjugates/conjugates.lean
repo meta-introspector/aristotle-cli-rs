@@ -1,2 +1,0 @@
--- Declaration: conjugates
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: obj_TrustArch
--- Extracted by StaticSplit

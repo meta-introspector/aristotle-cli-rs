@@ -1,2 +1,0 @@
--- Declaration: TraitSet.toVector
--- Extracted by StaticSplit

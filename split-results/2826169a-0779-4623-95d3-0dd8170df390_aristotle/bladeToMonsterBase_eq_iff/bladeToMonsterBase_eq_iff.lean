@@ -1,2 +1,0 @@
--- Declaration: bladeToMonsterBase_eq_iff
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: navigate_preserves_shape
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ZOSPath.length
--- Extracted by StaticSplit

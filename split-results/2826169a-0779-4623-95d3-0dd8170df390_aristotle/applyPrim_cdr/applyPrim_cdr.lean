@@ -1,2 +1,0 @@
--- Declaration: applyPrim_cdr
--- Extracted by StaticSplit

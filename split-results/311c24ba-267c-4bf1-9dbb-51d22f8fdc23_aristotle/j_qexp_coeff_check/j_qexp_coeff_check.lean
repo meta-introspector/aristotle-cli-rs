@@ -1,2 +1,0 @@
--- Declaration: j_qexp_coeff_check
--- Extracted by StaticSplit

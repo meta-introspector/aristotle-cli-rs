@@ -1,2 +1,0 @@
--- Declaration: paygoFirstYear
--- Extracted by StaticSplit

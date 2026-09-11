@@ -1,2 +1,0 @@
--- Declaration: stageResiduePoint
--- Extracted by StaticSplit

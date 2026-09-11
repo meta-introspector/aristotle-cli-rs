@@ -1,2 +1,0 @@
--- Declaration: forgedAdoption_not_conformal
--- Extracted by StaticSplit

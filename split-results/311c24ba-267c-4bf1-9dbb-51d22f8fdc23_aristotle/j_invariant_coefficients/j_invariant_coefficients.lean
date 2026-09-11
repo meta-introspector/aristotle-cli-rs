@@ -1,2 +1,0 @@
--- Declaration: j_invariant_coefficients
--- Extracted by StaticSplit

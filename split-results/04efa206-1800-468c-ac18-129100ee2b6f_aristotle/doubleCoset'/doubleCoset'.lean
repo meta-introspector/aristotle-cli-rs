@@ -1,2 +1,0 @@
--- Declaration: doubleCoset'
--- Extracted by StaticSplit

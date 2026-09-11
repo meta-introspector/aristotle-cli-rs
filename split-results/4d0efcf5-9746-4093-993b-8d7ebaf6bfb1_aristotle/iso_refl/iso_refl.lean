@@ -1,2 +1,0 @@
--- Declaration: iso_refl
--- Extracted by StaticSplit

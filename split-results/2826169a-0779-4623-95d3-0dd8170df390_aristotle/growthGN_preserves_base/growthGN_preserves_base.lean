@@ -1,2 +1,0 @@
--- Declaration: growthGN_preserves_base
--- Extracted by StaticSplit

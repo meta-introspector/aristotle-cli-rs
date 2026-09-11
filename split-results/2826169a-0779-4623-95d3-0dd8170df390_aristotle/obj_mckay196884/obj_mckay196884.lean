@@ -1,2 +1,0 @@
--- Declaration: obj_mckay196884
--- Extracted by StaticSplit

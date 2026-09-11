@@ -1,2 +1,0 @@
--- Declaration: haldane
--- Extracted by StaticSplit

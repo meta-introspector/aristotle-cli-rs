@@ -1,2 +1,0 @@
--- Declaration: iit_is_majorana
--- Extracted by StaticSplit

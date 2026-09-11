@@ -1,2 +1,0 @@
--- Declaration: F2_is_encodeString
--- Extracted by StaticSplit

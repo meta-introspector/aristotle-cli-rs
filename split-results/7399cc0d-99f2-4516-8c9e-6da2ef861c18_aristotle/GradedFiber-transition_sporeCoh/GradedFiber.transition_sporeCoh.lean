@@ -1,2 +1,0 @@
--- Declaration: GradedFiber.transition_sporeCoh
--- Extracted by StaticSplit

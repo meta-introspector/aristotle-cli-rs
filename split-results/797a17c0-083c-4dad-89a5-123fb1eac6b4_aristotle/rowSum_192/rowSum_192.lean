@@ -1,2 +1,0 @@
--- Declaration: rowSum_192
--- Extracted by StaticSplit

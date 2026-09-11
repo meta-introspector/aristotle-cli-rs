@@ -1,2 +1,0 @@
--- Declaration: blade_kGroupN_eq_kInvariant
--- Extracted by StaticSplit

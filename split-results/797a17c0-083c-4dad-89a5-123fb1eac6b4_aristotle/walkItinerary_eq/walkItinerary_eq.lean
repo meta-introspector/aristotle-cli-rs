@@ -1,2 +1,0 @@
--- Declaration: walkItinerary_eq
--- Extracted by StaticSplit

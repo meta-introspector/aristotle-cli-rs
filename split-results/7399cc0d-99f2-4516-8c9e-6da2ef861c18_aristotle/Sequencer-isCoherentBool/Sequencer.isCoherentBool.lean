@@ -1,2 +1,0 @@
--- Declaration: Sequencer.isCoherentBool
--- Extracted by StaticSplit

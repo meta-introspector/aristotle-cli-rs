@@ -1,2 +1,0 @@
--- Declaration: degeneratesAt
--- Extracted by StaticSplit

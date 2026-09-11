@@ -1,2 +1,0 @@
--- Declaration: fungalVine_landings
--- Extracted by StaticSplit

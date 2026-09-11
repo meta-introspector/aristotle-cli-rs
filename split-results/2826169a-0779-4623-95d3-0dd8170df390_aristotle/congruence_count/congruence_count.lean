@@ -1,2 +1,0 @@
--- Declaration: congruence_count
--- Extracted by StaticSplit

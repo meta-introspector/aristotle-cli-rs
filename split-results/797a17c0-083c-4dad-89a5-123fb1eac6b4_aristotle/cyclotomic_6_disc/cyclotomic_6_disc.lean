@@ -1,2 +1,0 @@
--- Declaration: cyclotomic_6_disc
--- Extracted by StaticSplit

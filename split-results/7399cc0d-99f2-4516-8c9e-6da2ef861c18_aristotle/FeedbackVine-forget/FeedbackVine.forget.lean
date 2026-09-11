@@ -1,2 +1,0 @@
--- Declaration: FeedbackVine.forget
--- Extracted by StaticSplit

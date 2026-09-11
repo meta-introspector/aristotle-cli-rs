@@ -1,2 +1,0 @@
--- Declaration: v3_sum_bott
--- Extracted by StaticSplit

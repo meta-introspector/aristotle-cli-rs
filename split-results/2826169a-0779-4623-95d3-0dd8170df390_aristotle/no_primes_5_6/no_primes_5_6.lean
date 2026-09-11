@@ -1,2 +1,0 @@
--- Declaration: no_primes_5_6
--- Extracted by StaticSplit

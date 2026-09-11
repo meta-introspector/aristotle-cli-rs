@@ -1,2 +1,0 @@
--- Declaration: GramEngine.generatorMatrix
--- Extracted by StaticSplit

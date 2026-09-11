@@ -1,2 +1,0 @@
--- Declaration: collapseApp
--- Extracted by StaticSplit

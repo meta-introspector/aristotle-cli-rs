@@ -1,2 +1,0 @@
--- Declaration: ContentRecord
--- Extracted by StaticSplit

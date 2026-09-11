@@ -1,2 +1,0 @@
--- Declaration: dataHeterogeneity
--- Extracted by StaticSplit

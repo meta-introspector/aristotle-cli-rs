@@ -1,2 +1,0 @@
--- Declaration: NiemeierRootSystem
--- Extracted by StaticSplit

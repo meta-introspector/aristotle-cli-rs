@@ -1,2 +1,0 @@
--- Declaration: three_cycle_from_double_transposition_fixed
--- Extracted by StaticSplit

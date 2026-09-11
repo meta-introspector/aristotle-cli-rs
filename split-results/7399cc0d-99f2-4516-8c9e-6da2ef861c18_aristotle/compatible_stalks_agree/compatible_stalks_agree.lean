@@ -1,2 +1,0 @@
--- Declaration: compatible_stalks_agree
--- Extracted by StaticSplit

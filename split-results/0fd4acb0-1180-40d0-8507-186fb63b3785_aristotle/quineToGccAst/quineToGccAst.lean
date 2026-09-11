@@ -1,2 +1,0 @@
--- Declaration: quineToGccAst
--- Extracted by StaticSplit

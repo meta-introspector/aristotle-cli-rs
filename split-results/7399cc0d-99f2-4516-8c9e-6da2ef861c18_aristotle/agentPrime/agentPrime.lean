@@ -1,2 +1,0 @@
--- Declaration: agentPrime
--- Extracted by StaticSplit

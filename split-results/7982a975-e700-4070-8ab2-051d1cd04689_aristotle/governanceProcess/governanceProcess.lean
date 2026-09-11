@@ -1,2 +1,0 @@
--- Declaration: governanceProcess
--- Extracted by StaticSplit

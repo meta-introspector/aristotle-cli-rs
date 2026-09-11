@@ -1,2 +1,0 @@
--- Declaration: hypermorphism_summary
--- Extracted by StaticSplit

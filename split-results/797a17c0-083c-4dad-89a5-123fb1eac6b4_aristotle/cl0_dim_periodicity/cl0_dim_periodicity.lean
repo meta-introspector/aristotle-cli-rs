@@ -1,2 +1,0 @@
--- Declaration: cl0_dim_periodicity
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: geomProd_anticomm
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: jInvariantQExp
--- Extracted by StaticSplit

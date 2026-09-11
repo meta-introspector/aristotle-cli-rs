@@ -1,2 +1,0 @@
--- Declaration: GoedelConcept
--- Extracted by StaticSplit

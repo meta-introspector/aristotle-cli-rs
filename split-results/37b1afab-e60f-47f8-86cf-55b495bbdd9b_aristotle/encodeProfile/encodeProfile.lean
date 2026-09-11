@@ -1,2 +1,0 @@
--- Declaration: encodeProfile
--- Extracted by StaticSplit

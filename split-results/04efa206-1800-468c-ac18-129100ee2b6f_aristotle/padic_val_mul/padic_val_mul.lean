@@ -1,2 +1,0 @@
--- Declaration: padic_val_mul
--- Extracted by StaticSplit

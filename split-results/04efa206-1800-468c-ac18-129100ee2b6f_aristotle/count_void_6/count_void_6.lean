@@ -1,2 +1,0 @@
--- Declaration: count_void_6
--- Extracted by StaticSplit

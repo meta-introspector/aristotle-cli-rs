@@ -1,2 +1,0 @@
--- Declaration: scalarToRust
--- Extracted by StaticSplit

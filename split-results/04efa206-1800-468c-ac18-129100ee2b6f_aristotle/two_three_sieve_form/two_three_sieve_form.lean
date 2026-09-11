@@ -1,2 +1,0 @@
--- Declaration: two_three_sieve_form
--- Extracted by StaticSplit

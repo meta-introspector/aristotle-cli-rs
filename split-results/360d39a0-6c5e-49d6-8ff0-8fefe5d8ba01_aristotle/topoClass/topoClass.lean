@@ -1,2 +1,0 @@
--- Declaration: topoClass
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: restriction_count
--- Extracted by StaticSplit

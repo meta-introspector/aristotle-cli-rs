@@ -1,2 +1,0 @@
--- Declaration: fullRevolution
--- Extracted by StaticSplit

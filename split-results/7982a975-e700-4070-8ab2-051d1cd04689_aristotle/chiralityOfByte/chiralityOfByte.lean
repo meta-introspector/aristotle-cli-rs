@@ -1,2 +1,0 @@
--- Declaration: chiralityOfByte
--- Extracted by StaticSplit

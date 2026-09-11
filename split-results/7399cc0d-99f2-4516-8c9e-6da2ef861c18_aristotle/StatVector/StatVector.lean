@@ -1,2 +1,0 @@
--- Declaration: StatVector
--- Extracted by StaticSplit

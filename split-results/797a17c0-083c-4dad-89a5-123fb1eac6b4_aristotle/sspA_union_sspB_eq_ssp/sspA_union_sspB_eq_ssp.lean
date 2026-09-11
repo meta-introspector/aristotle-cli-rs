@@ -1,2 +1,0 @@
--- Declaration: sspA_union_sspB_eq_ssp
--- Extracted by StaticSplit

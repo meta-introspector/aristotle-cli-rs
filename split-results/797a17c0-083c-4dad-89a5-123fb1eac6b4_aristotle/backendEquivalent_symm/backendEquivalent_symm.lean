@@ -1,2 +1,0 @@
--- Declaration: backendEquivalent_symm
--- Extracted by StaticSplit

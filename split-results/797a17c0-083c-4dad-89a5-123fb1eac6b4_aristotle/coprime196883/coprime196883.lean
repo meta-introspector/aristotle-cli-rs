@@ -1,2 +1,0 @@
--- Declaration: coprime196883
--- Extracted by StaticSplit

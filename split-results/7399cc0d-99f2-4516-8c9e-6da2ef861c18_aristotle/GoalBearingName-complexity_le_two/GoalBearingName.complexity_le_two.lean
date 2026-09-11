@@ -1,2 +1,0 @@
--- Declaration: GoalBearingName.complexity_le_two
--- Extracted by StaticSplit

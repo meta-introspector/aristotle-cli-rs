@@ -1,2 +1,0 @@
--- Declaration: stepHecke47
--- Extracted by StaticSplit

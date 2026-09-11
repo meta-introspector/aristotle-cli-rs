@@ -1,2 +1,0 @@
--- Declaration: FractranFraction.apply
--- Extracted by StaticSplit

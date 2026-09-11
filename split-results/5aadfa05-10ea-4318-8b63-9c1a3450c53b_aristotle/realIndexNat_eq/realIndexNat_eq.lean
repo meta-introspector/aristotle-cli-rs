@@ -1,2 +1,0 @@
--- Declaration: realIndexNat_eq
--- Extracted by StaticSplit

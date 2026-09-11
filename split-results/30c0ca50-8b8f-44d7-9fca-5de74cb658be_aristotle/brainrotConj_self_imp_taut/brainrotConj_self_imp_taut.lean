@@ -1,2 +1,0 @@
--- Declaration: brainrotConj_self_imp_taut
--- Extracted by StaticSplit

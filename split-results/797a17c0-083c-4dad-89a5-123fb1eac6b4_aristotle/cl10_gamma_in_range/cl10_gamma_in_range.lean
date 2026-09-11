@@ -1,2 +1,0 @@
--- Declaration: cl10_gamma_in_range
--- Extracted by StaticSplit

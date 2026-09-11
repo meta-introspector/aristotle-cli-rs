@@ -1,2 +1,0 @@
--- Declaration: blade_preserves_base
--- Extracted by StaticSplit

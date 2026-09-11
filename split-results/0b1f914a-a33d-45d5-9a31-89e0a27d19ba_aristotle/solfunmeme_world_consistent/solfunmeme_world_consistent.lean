@@ -1,2 +1,0 @@
--- Declaration: solfunmeme_world_consistent
--- Extracted by StaticSplit

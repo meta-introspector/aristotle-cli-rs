@@ -1,2 +1,0 @@
--- Declaration: embed_recovers
--- Extracted by StaticSplit

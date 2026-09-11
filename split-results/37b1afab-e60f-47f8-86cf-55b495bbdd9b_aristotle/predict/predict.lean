@@ -1,2 +1,0 @@
--- Declaration: predict
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: umbralLabels
--- Extracted by StaticSplit

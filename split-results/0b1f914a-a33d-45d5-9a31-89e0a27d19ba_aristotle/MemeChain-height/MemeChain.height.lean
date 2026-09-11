@@ -1,2 +1,0 @@
--- Declaration: MemeChain.height
--- Extracted by StaticSplit

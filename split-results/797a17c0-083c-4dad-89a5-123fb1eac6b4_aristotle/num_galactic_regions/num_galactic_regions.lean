@@ -1,2 +1,0 @@
--- Declaration: num_galactic_regions
--- Extracted by StaticSplit

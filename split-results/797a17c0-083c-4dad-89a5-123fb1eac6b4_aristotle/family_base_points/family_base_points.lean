@@ -1,2 +1,0 @@
--- Declaration: family_base_points
--- Extracted by StaticSplit

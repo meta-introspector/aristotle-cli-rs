@@ -1,2 +1,0 @@
--- Declaration: project_self_describes
--- Extracted by StaticSplit

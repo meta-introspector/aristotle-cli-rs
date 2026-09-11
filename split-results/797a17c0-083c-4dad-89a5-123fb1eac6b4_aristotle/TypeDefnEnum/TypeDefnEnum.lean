@@ -1,2 +1,0 @@
--- Declaration: TypeDefnEnum
--- Extracted by StaticSplit

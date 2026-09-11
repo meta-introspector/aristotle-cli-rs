@@ -1,2 +1,0 @@
--- Declaration: non_supersingular_primes_dont_divide
--- Extracted by StaticSplit

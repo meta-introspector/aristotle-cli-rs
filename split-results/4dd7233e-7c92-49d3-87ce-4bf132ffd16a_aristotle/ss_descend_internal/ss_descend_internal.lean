@@ -1,2 +1,0 @@
--- Declaration: ss_descend_internal
--- Extracted by StaticSplit

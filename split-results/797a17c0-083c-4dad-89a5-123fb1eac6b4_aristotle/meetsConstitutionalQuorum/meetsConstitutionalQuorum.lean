@@ -1,2 +1,0 @@
--- Declaration: meetsConstitutionalQuorum
--- Extracted by StaticSplit

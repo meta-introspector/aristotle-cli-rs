@@ -1,2 +1,0 @@
--- Declaration: hasRoots
--- Extracted by StaticSplit

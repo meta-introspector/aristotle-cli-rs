@@ -1,2 +1,0 @@
--- Declaration: classifyCrystalline_periodic8_shift
--- Extracted by StaticSplit

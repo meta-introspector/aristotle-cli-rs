@@ -1,2 +1,0 @@
--- Declaration: atp
--- Extracted by StaticSplit

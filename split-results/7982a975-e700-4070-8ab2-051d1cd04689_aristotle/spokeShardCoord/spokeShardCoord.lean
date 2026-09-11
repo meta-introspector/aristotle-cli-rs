@@ -1,2 +1,0 @@
--- Declaration: spokeShardCoord
--- Extracted by StaticSplit

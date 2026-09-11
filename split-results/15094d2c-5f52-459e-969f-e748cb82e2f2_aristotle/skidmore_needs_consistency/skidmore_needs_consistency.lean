@@ -1,2 +1,0 @@
--- Declaration: skidmore_needs_consistency
--- Extracted by StaticSplit

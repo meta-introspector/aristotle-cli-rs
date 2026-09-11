@@ -1,2 +1,0 @@
--- Declaration: B_char0_dim_factored
--- Extracted by StaticSplit

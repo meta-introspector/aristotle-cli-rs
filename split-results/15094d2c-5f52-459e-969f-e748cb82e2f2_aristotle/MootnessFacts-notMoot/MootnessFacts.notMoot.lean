@@ -1,2 +1,0 @@
--- Declaration: MootnessFacts.notMoot
--- Extracted by StaticSplit

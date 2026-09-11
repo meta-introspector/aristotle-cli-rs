@@ -1,2 +1,0 @@
--- Declaration: FuzzWitness
--- Extracted by StaticSplit

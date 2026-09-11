@@ -1,2 +1,0 @@
--- Declaration: coilPairDist
--- Extracted by StaticSplit

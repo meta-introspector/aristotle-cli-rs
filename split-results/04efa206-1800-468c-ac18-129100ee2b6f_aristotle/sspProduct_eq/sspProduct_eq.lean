@@ -1,2 +1,0 @@
--- Declaration: sspProduct_eq
--- Extracted by StaticSplit

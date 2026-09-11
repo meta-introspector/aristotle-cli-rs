@@ -1,2 +1,0 @@
--- Declaration: GradedGrothendieckSpace
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Committee
--- Extracted by StaticSplit

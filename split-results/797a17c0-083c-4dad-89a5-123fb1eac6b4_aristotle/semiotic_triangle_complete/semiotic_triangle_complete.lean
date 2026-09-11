@@ -1,2 +1,0 @@
--- Declaration: semiotic_triangle_complete
--- Extracted by StaticSplit

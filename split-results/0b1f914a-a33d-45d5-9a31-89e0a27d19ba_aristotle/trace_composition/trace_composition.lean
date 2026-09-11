@@ -1,2 +1,0 @@
--- Declaration: trace_composition
--- Extracted by StaticSplit

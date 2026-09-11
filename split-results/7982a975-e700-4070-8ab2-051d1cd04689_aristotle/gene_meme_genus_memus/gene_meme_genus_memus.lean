@@ -1,2 +1,0 @@
--- Declaration: gene_meme_genus_memus
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: trainAdvanceEndo
--- Extracted by StaticSplit

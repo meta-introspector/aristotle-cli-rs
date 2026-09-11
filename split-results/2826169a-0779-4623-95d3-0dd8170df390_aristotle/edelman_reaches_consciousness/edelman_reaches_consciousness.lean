@@ -1,2 +1,0 @@
--- Declaration: edelman_reaches_consciousness
--- Extracted by StaticSplit

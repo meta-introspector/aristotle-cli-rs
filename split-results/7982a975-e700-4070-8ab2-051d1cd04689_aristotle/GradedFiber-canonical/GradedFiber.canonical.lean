@@ -1,2 +1,0 @@
--- Declaration: GradedFiber.canonical
--- Extracted by StaticSplit

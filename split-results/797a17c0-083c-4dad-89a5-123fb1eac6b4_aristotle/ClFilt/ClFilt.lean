@@ -1,2 +1,0 @@
--- Declaration: ClFilt
--- Extracted by StaticSplit

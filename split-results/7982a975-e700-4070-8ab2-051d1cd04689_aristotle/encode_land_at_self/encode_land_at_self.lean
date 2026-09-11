@@ -1,2 +1,0 @@
--- Declaration: encode_land_at_self
--- Extracted by StaticSplit

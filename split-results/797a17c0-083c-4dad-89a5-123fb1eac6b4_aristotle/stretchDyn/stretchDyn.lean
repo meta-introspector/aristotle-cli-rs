@@ -1,2 +1,0 @@
--- Declaration: stretchDyn
--- Extracted by StaticSplit

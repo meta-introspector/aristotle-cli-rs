@@ -1,2 +1,0 @@
--- Declaration: ClEarth
--- Extracted by StaticSplit

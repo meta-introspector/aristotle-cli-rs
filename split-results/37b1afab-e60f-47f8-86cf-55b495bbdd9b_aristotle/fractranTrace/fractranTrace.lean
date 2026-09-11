@@ -1,2 +1,0 @@
--- Declaration: fractranTrace
--- Extracted by StaticSplit

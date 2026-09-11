@@ -1,2 +1,0 @@
--- Declaration: totalCode
--- Extracted by StaticSplit

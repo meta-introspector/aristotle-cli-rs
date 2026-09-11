@@ -1,2 +1,0 @@
--- Declaration: oodaM_fullCycle_eq
--- Extracted by StaticSplit

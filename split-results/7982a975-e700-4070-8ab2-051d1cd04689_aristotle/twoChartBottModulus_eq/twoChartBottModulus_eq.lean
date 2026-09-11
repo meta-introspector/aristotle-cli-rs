@@ -1,2 +1,0 @@
--- Declaration: twoChartBottModulus_eq
--- Extracted by StaticSplit

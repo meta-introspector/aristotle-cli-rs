@@ -1,2 +1,0 @@
--- Declaration: justiciable
--- Extracted by StaticSplit

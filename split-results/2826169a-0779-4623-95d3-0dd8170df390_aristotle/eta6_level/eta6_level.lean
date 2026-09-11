@@ -1,2 +1,0 @@
--- Declaration: eta6_level
--- Extracted by StaticSplit

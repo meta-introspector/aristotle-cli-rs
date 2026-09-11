@@ -1,2 +1,0 @@
--- Declaration: theory_reaches_self
--- Extracted by StaticSplit

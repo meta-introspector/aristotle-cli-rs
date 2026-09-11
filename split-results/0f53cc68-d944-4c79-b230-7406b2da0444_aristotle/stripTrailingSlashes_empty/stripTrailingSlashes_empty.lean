@@ -1,2 +1,0 @@
--- Declaration: stripTrailingSlashes_empty
--- Extracted by StaticSplit

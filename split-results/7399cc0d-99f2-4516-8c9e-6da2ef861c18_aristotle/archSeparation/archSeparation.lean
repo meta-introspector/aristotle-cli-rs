@@ -1,2 +1,0 @@
--- Declaration: archSeparation
--- Extracted by StaticSplit

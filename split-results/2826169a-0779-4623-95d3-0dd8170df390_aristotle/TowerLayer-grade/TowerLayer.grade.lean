@@ -1,2 +1,0 @@
--- Declaration: TowerLayer.grade
--- Extracted by StaticSplit

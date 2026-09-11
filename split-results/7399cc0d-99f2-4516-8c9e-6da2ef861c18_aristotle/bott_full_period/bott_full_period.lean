@@ -1,2 +1,0 @@
--- Declaration: bott_full_period
--- Extracted by StaticSplit

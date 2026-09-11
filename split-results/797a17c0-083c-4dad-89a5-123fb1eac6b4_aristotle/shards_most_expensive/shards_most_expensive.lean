@@ -1,2 +1,0 @@
--- Declaration: shards_most_expensive
--- Extracted by StaticSplit

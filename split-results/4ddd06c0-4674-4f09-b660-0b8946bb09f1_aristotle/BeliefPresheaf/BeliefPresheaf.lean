@@ -1,2 +1,0 @@
--- Declaration: BeliefPresheaf
--- Extracted by StaticSplit

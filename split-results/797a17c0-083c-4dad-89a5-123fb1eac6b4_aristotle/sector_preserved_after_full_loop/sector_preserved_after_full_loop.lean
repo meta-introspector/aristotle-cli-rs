@@ -1,2 +1,0 @@
--- Declaration: sector_preserved_after_full_loop
--- Extracted by StaticSplit

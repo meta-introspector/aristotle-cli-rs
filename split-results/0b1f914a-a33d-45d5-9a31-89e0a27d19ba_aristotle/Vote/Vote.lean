@@ -1,2 +1,0 @@
--- Declaration: Vote
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: bootstrap_invisible_to_71_monitors
--- Extracted by StaticSplit

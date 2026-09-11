@@ -1,2 +1,0 @@
--- Declaration: bootstrap_monster_share_71
--- Extracted by StaticSplit

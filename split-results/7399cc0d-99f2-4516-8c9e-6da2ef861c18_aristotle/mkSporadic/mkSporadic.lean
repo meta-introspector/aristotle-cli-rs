@@ -1,2 +1,0 @@
--- Declaration: mkSporadic
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: C4_sumsq
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: shahDyn
--- Extracted by StaticSplit

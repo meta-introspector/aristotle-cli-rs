@@ -1,2 +1,0 @@
--- Declaration: bladeProduct_left_id
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MonsterIrrep
--- Extracted by StaticSplit

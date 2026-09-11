@@ -1,2 +1,0 @@
--- Declaration: cl06g_swap
--- Extracted by StaticSplit

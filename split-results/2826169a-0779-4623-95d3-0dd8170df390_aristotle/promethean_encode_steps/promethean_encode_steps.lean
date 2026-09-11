@@ -1,2 +1,0 @@
--- Declaration: promethean_encode_steps
--- Extracted by StaticSplit

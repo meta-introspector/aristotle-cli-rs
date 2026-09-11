@@ -1,2 +1,0 @@
--- Declaration: GlobalDecl.getInductive?
--- Extracted by StaticSplit

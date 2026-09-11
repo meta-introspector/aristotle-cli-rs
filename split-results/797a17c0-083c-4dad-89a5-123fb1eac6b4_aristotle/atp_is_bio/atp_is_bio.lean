@@ -1,2 +1,0 @@
--- Declaration: atp_is_bio
--- Extracted by StaticSplit

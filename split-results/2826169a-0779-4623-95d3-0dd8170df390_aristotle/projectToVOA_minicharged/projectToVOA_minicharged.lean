@@ -1,2 +1,0 @@
--- Declaration: projectToVOA_minicharged
--- Extracted by StaticSplit

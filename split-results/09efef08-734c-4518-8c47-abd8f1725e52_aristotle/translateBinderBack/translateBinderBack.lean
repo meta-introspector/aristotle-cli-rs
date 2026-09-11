@@ -1,2 +1,0 @@
--- Declaration: translateBinderBack
--- Extracted by StaticSplit

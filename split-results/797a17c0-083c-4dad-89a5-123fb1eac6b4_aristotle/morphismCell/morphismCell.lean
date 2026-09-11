@@ -1,2 +1,0 @@
--- Declaration: morphismCell
--- Extracted by StaticSplit

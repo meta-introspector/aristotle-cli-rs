@@ -1,2 +1,0 @@
--- Declaration: bridge_simulation
--- Extracted by StaticSplit

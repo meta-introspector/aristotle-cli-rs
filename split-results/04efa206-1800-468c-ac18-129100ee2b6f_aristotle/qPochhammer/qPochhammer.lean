@@ -1,2 +1,0 @@
--- Declaration: qPochhammer
--- Extracted by StaticSplit

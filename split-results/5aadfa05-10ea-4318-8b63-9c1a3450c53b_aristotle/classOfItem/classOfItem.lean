@@ -1,2 +1,0 @@
--- Declaration: classOfItem
--- Extracted by StaticSplit

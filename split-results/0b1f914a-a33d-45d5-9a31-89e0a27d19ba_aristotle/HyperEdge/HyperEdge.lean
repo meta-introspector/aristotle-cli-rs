@@ -1,2 +1,0 @@
--- Declaration: HyperEdge
--- Extracted by StaticSplit

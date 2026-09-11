@@ -1,2 +1,0 @@
--- Declaration: monsterTowerMatrix
--- Extracted by StaticSplit

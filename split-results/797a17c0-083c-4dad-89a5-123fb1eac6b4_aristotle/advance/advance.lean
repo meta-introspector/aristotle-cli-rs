@@ -1,2 +1,0 @@
--- Declaration: advance
--- Extracted by StaticSplit

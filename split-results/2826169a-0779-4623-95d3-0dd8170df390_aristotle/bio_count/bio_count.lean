@@ -1,2 +1,0 @@
--- Declaration: bio_count
--- Extracted by StaticSplit

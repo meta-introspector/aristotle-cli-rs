@@ -1,2 +1,0 @@
--- Declaration: one_monster_aligned
--- Extracted by StaticSplit

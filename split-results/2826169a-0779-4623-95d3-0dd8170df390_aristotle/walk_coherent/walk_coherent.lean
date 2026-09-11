@@ -1,2 +1,0 @@
--- Declaration: walk_coherent
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Analogy.isRankPreserving
--- Extracted by StaticSplit

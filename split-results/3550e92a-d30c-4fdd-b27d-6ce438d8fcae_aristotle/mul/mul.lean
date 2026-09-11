@@ -1,2 +1,0 @@
--- Declaration: mul
--- Extracted by StaticSplit

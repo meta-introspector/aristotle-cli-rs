@@ -1,2 +1,0 @@
--- Declaration: prime_1823
--- Extracted by StaticSplit

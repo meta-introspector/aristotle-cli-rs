@@ -1,2 +1,0 @@
--- Declaration: fibration_exact
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ATLASGroupDesc.order
--- Extracted by StaticSplit

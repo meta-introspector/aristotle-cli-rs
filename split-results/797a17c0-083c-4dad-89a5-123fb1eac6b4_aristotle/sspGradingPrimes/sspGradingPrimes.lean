@@ -1,2 +1,0 @@
--- Declaration: sspGradingPrimes
--- Extracted by StaticSplit

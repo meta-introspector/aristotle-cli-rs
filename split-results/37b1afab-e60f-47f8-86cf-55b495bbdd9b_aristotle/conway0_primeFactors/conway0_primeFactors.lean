@@ -1,2 +1,0 @@
--- Declaration: conway0_primeFactors
--- Extracted by StaticSplit

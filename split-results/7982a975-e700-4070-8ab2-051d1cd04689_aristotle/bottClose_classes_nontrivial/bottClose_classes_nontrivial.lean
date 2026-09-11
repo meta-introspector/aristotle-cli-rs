@@ -1,2 +1,0 @@
--- Declaration: bottClose_classes_nontrivial
--- Extracted by StaticSplit

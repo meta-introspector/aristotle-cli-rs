@@ -1,2 +1,0 @@
--- Declaration: lambencies
--- Extracted by StaticSplit

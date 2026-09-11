@@ -1,2 +1,0 @@
--- Declaration: cosmicFunctor_residue_invariant
--- Extracted by StaticSplit

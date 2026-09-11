@@ -1,2 +1,0 @@
--- Declaration: compression
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: TimeConcept
--- Extracted by StaticSplit

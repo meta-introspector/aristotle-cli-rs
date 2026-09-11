@@ -1,2 +1,0 @@
--- Declaration: fullPhi
--- Extracted by StaticSplit

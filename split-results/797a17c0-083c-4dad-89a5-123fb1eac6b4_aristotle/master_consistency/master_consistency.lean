@@ -1,2 +1,0 @@
--- Declaration: master_consistency
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: weightSite_injective
--- Extracted by StaticSplit

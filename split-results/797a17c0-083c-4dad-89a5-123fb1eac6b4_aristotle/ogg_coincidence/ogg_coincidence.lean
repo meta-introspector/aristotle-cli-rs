@@ -1,2 +1,0 @@
--- Declaration: ogg_coincidence
--- Extracted by StaticSplit

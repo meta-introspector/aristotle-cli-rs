@@ -1,2 +1,0 @@
--- Declaration: firstMission
--- Extracted by StaticSplit

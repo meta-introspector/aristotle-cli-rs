@@ -1,2 +1,0 @@
--- Declaration: BasidiomycotaClass
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: pianoMan
--- Extracted by StaticSplit

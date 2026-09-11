@@ -1,2 +1,0 @@
--- Declaration: xor
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: kernelOffset
--- Extracted by StaticSplit

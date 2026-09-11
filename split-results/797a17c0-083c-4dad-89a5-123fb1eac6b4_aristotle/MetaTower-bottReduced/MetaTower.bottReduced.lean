@@ -1,2 +1,0 @@
--- Declaration: MetaTower.bottReduced
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: family_blade_cards
--- Extracted by StaticSplit

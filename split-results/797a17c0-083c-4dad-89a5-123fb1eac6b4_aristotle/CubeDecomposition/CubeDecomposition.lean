@@ -1,2 +1,0 @@
--- Declaration: CubeDecomposition
--- Extracted by StaticSplit

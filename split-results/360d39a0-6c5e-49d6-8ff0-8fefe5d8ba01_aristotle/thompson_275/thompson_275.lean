@@ -1,2 +1,0 @@
--- Declaration: thompson_275
--- Extracted by StaticSplit

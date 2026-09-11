@@ -1,2 +1,0 @@
--- Declaration: OntologyNode
--- Extracted by StaticSplit

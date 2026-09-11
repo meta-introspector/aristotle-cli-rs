@@ -1,2 +1,0 @@
--- Declaration: trivialProgram_governed
--- Extracted by StaticSplit

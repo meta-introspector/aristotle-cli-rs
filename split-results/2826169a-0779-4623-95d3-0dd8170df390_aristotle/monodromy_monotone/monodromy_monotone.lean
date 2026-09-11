@@ -1,2 +1,0 @@
--- Declaration: monodromy_monotone
--- Extracted by StaticSplit

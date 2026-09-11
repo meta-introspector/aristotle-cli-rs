@@ -1,2 +1,0 @@
--- Declaration: ValidatedPipeline
--- Extracted by StaticSplit

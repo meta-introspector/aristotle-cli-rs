@@ -1,2 +1,0 @@
--- Declaration: toLowerFirst
--- Extracted by StaticSplit

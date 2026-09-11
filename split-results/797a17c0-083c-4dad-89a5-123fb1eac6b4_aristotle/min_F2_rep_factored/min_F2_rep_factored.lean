@@ -1,2 +1,0 @@
--- Declaration: min_F2_rep_factored
--- Extracted by StaticSplit

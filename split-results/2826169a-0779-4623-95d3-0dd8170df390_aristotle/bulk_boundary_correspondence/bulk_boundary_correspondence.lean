@@ -1,2 +1,0 @@
--- Declaration: bulk_boundary_correspondence
--- Extracted by StaticSplit

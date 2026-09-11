@@ -1,2 +1,0 @@
--- Declaration: metamemeCompatible
--- Extracted by StaticSplit

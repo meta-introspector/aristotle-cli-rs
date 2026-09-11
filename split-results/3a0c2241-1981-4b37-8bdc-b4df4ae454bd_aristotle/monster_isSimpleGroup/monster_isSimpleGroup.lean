@@ -1,2 +1,0 @@
--- Declaration: monster_isSimpleGroup
--- Extracted by StaticSplit

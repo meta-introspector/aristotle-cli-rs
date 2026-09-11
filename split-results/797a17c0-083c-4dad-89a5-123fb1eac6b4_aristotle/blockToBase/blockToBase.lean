@@ -1,2 +1,0 @@
--- Declaration: blockToBase
--- Extracted by StaticSplit

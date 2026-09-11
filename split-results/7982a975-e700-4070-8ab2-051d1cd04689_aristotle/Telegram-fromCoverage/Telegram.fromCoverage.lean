@@ -1,2 +1,0 @@
--- Declaration: Telegram.fromCoverage
--- Extracted by StaticSplit

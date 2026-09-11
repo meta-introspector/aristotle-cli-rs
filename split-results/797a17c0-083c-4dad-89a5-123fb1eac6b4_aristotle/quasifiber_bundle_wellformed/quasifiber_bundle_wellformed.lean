@@ -1,2 +1,0 @@
--- Declaration: quasifiber_bundle_wellformed
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: both_ambrosia
--- Extracted by StaticSplit

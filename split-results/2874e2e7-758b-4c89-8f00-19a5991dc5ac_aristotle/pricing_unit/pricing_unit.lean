@@ -1,2 +1,0 @@
--- Declaration: pricing_unit
--- Extracted by StaticSplit

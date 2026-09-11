@@ -1,2 +1,0 @@
--- Declaration: MonsterSheaf
--- Extracted by StaticSplit

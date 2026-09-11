@@ -1,2 +1,0 @@
--- Declaration: fixed_point_mod_71
--- Extracted by StaticSplit

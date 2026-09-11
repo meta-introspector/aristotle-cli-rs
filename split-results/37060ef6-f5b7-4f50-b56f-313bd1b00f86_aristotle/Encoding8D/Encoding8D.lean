@@ -1,2 +1,0 @@
--- Declaration: Encoding8D
--- Extracted by StaticSplit

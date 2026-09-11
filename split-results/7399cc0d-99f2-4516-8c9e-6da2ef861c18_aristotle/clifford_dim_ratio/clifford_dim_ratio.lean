@@ -1,2 +1,0 @@
--- Declaration: clifford_dim_ratio
--- Extracted by StaticSplit

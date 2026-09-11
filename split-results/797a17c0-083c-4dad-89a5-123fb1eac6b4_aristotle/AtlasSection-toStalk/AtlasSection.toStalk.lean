@@ -1,2 +1,0 @@
--- Declaration: AtlasSection.toStalk
--- Extracted by StaticSplit

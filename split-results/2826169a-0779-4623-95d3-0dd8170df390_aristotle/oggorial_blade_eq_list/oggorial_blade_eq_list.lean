@@ -1,2 +1,0 @@
--- Declaration: oggorial_blade_eq_list
--- Extracted by StaticSplit

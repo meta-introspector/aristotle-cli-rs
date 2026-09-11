@@ -1,2 +1,0 @@
--- Declaration: return_preserves_crossroads
--- Extracted by StaticSplit

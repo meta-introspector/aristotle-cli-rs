@@ -1,2 +1,0 @@
--- Declaration: throw_card
--- Extracted by StaticSplit

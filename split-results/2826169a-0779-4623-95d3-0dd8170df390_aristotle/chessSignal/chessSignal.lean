@@ -1,2 +1,0 @@
--- Declaration: chessSignal
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: example_all_green
--- Extracted by StaticSplit

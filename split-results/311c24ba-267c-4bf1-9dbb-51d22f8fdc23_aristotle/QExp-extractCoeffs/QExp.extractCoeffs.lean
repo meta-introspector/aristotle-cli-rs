@@ -1,2 +1,0 @@
--- Declaration: QExp.extractCoeffs
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: shadow_restriction_invariant
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SpecialRule.debateWithinAllotment
--- Extracted by StaticSplit

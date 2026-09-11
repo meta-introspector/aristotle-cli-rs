@@ -1,2 +1,0 @@
--- Declaration: monsterRadical_value
--- Extracted by StaticSplit

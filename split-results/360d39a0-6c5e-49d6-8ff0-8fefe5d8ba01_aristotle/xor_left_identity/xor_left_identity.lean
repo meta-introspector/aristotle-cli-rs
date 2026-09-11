@@ -1,2 +1,0 @@
--- Declaration: xor_left_identity
--- Extracted by StaticSplit

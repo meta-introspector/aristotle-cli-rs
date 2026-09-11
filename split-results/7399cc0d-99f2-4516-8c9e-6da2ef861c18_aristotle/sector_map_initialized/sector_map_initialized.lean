@@ -1,2 +1,0 @@
--- Declaration: sector_map_initialized
--- Extracted by StaticSplit

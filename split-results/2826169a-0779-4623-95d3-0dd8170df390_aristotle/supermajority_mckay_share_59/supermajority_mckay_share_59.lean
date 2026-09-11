@@ -1,2 +1,0 @@
--- Declaration: supermajority_mckay_share_59
--- Extracted by StaticSplit

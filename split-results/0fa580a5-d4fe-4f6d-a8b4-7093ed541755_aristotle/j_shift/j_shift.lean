@@ -1,2 +1,0 @@
--- Declaration: j_shift
--- Extracted by StaticSplit

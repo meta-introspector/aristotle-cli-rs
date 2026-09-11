@@ -1,2 +1,0 @@
--- Declaration: valid_permL
--- Extracted by StaticSplit

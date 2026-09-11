@@ -1,2 +1,0 @@
--- Declaration: sum_product_bott_differ
--- Extracted by StaticSplit

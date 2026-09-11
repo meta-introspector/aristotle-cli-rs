@@ -1,2 +1,0 @@
--- Declaration: elixir_matches_departure
--- Extracted by StaticSplit

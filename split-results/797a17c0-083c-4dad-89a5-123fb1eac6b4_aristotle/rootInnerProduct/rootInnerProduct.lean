@@ -1,2 +1,0 @@
--- Declaration: rootInnerProduct
--- Extracted by StaticSplit

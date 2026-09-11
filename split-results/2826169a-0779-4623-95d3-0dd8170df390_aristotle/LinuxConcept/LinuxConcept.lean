@@ -1,2 +1,0 @@
--- Declaration: LinuxConcept
--- Extracted by StaticSplit

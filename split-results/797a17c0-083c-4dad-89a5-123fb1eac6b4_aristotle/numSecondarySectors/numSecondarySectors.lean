@@ -1,2 +1,0 @@
--- Declaration: numSecondarySectors
--- Extracted by StaticSplit

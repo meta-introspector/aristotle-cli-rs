@@ -1,2 +1,0 @@
--- Declaration: classify_periodic2_complex
--- Extracted by StaticSplit

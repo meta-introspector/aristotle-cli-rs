@@ -1,2 +1,0 @@
--- Declaration: runUntil_halts
--- Extracted by StaticSplit

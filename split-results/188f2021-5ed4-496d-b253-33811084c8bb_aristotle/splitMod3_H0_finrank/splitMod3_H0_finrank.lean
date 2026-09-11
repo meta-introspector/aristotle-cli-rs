@@ -1,2 +1,0 @@
--- Declaration: splitMod3_H0_finrank
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: m24Primes_all_prime
--- Extracted by StaticSplit

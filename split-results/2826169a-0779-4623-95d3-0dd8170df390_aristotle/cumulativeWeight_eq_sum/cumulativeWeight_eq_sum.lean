@@ -1,2 +1,0 @@
--- Declaration: cumulativeWeight_eq_sum
--- Extracted by StaticSplit

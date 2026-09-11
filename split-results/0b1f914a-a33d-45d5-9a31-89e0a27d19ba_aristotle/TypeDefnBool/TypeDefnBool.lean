@@ -1,2 +1,0 @@
--- Declaration: TypeDefnBool
--- Extracted by StaticSplit

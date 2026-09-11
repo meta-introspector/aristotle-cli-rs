@@ -1,2 +1,0 @@
--- Declaration: no_referral_without_speaker
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Constraint
--- Extracted by StaticSplit

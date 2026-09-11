@@ -1,2 +1,0 @@
--- Declaration: torusAdd_comm
--- Extracted by StaticSplit

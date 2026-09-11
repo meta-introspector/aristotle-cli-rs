@@ -1,2 +1,0 @@
--- Declaration: GenusZeroProperty
--- Extracted by StaticSplit

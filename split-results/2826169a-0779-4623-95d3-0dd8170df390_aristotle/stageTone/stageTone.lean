@@ -1,2 +1,0 @@
--- Declaration: stageTone
--- Extracted by StaticSplit

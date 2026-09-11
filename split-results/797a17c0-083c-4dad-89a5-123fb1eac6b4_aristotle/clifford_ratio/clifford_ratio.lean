@@ -1,2 +1,0 @@
--- Declaration: clifford_ratio
--- Extracted by StaticSplit

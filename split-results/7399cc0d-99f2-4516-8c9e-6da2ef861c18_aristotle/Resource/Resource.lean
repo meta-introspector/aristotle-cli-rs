@@ -1,2 +1,0 @@
--- Declaration: Resource
--- Extracted by StaticSplit

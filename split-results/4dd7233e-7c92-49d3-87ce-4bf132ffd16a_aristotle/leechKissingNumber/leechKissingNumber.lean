@@ -1,2 +1,0 @@
--- Declaration: leechKissingNumber
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: semEquiv_equivalence
--- Extracted by StaticSplit

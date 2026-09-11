@@ -1,2 +1,0 @@
--- Declaration: negDefQuadForm_polar_single
--- Extracted by StaticSplit

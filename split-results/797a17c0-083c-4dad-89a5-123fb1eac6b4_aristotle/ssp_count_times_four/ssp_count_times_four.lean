@@ -1,2 +1,0 @@
--- Declaration: ssp_count_times_four
--- Extracted by StaticSplit

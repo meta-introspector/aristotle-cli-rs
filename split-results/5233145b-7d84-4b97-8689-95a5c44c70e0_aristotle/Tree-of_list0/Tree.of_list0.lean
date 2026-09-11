@@ -1,2 +1,0 @@
--- Declaration: Tree.of_list0
--- Extracted by StaticSplit

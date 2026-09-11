@@ -1,2 +1,0 @@
--- Declaration: morita_class_periodic
--- Extracted by StaticSplit

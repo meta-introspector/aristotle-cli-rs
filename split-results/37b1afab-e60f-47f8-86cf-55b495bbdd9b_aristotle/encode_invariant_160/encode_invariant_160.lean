@@ -1,2 +1,0 @@
--- Declaration: encode_invariant_160
--- Extracted by StaticSplit

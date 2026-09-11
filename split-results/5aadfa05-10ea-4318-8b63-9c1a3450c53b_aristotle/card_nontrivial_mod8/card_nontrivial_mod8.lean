@@ -1,2 +1,0 @@
--- Declaration: card_nontrivial_mod8
--- Extracted by StaticSplit

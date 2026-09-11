@@ -1,2 +1,0 @@
--- Declaration: eligible_example
--- Extracted by StaticSplit

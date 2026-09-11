@@ -1,2 +1,0 @@
--- Declaration: MetaMeme
--- Extracted by StaticSplit

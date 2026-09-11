@@ -1,2 +1,0 @@
--- Declaration: comonad_halts_on_goedel
--- Extracted by StaticSplit

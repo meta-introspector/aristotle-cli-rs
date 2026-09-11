@@ -1,2 +1,0 @@
--- Declaration: godelSlap
--- Extracted by StaticSplit

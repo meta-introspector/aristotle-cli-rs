@@ -1,2 +1,0 @@
--- Declaration: tailPart_ne_zero
--- Extracted by StaticSplit

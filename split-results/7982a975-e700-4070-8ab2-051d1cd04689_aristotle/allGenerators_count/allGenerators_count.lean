@@ -1,2 +1,0 @@
--- Declaration: allGenerators_count
--- Extracted by StaticSplit

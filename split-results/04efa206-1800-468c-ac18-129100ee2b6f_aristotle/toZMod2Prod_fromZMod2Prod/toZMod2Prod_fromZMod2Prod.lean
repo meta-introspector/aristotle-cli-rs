@@ -1,2 +1,0 @@
--- Declaration: toZMod2Prod_fromZMod2Prod
--- Extracted by StaticSplit

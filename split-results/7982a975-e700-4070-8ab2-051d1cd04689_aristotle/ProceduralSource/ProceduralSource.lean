@@ -1,2 +1,0 @@
--- Declaration: ProceduralSource
--- Extracted by StaticSplit

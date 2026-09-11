@@ -1,2 +1,0 @@
--- Declaration: toBool_ofBool
--- Extracted by StaticSplit

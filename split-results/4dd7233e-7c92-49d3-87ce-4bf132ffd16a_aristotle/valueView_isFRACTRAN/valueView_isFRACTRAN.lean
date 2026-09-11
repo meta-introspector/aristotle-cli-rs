@@ -1,2 +1,0 @@
--- Declaration: valueView_isFRACTRAN
--- Extracted by StaticSplit

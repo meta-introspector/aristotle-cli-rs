@@ -1,2 +1,0 @@
--- Declaration: born_alive_is_person
--- Extracted by StaticSplit

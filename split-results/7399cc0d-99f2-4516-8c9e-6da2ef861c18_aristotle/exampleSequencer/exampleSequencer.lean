@@ -1,2 +1,0 @@
--- Declaration: exampleSequencer
--- Extracted by StaticSplit

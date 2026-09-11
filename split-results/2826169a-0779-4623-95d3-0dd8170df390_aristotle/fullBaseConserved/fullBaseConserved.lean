@@ -1,2 +1,0 @@
--- Declaration: fullBaseConserved
--- Extracted by StaticSplit

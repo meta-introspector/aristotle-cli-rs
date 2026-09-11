@@ -1,2 +1,0 @@
--- Declaration: moonshineOntology
--- Extracted by StaticSplit

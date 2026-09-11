@@ -1,2 +1,0 @@
--- Declaration: strangeLoop
--- Extracted by StaticSplit

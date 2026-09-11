@@ -1,2 +1,0 @@
--- Declaration: familySupersingularProduct
--- Extracted by StaticSplit

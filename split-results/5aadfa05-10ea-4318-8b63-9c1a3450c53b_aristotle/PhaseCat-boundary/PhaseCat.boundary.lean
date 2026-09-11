@@ -1,2 +1,0 @@
--- Declaration: PhaseCat.boundary
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: respond
--- Extracted by StaticSplit

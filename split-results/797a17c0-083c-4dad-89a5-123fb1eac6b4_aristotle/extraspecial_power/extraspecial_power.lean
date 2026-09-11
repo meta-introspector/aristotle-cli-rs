@@ -1,2 +1,0 @@
--- Declaration: extraspecial_power
--- Extracted by StaticSplit

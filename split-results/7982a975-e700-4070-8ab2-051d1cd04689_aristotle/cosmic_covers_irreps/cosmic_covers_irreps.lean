@@ -1,2 +1,0 @@
--- Declaration: cosmic_covers_irreps
--- Extracted by StaticSplit

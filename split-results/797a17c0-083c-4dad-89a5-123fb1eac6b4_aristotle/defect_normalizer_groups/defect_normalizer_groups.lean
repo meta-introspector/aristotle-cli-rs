@@ -1,2 +1,0 @@
--- Declaration: defect_normalizer_groups
--- Extracted by StaticSplit

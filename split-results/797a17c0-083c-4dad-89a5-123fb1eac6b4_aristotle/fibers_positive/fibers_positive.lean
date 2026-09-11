@@ -1,2 +1,0 @@
--- Declaration: fibers_positive
--- Extracted by StaticSplit

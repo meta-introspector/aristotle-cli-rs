@@ -1,2 +1,0 @@
--- Declaration: fungalLinkedChain_preserves_viability
--- Extracted by StaticSplit

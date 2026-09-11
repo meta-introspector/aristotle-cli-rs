@@ -1,2 +1,0 @@
--- Declaration: stretch_preserves_base
--- Extracted by StaticSplit

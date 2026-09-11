@@ -1,2 +1,0 @@
--- Declaration: FormalSystem.HasRosserSentence
--- Extracted by StaticSplit

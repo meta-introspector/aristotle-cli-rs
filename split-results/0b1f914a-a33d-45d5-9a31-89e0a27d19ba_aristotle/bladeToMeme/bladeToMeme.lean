@@ -1,2 +1,0 @@
--- Declaration: bladeToMeme
--- Extracted by StaticSplit

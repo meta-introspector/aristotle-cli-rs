@@ -1,2 +1,0 @@
--- Declaration: orbit_2A_size
--- Extracted by StaticSplit

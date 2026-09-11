@@ -1,2 +1,0 @@
--- Declaration: cart_id
--- Extracted by StaticSplit

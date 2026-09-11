@@ -1,2 +1,0 @@
--- Declaration: BoundaryGlyph
--- Extracted by StaticSplit

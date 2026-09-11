@@ -1,2 +1,0 @@
--- Declaration: CellConcept
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: phi_8_10
--- Extracted by StaticSplit

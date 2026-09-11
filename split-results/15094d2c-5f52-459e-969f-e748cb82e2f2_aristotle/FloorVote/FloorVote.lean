@@ -1,2 +1,0 @@
--- Declaration: FloorVote
--- Extracted by StaticSplit

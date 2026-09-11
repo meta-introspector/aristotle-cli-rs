@@ -1,2 +1,0 @@
--- Declaration: solved_justified_by_formal
--- Extracted by StaticSplit

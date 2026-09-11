@@ -1,2 +1,0 @@
--- Declaration: instCancel
--- Extracted by StaticSplit

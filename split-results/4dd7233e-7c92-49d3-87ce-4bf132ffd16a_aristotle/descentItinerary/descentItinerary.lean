@@ -1,2 +1,0 @@
--- Declaration: descentItinerary
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SubgroupConj.refl
--- Extracted by StaticSplit

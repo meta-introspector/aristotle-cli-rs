@@ -1,2 +1,0 @@
--- Declaration: walk_charges_A
--- Extracted by StaticSplit

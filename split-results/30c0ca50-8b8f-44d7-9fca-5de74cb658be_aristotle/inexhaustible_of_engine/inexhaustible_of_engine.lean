@@ -1,2 +1,0 @@
--- Declaration: inexhaustible_of_engine
--- Extracted by StaticSplit

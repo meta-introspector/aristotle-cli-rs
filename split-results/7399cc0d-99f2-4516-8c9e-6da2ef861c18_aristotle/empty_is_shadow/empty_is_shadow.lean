@@ -1,2 +1,0 @@
--- Declaration: empty_is_shadow
--- Extracted by StaticSplit

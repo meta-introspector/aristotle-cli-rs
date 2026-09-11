@@ -1,2 +1,0 @@
--- Declaration: OpenContext
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: isFundamental
--- Extracted by StaticSplit

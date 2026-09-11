@@ -1,2 +1,0 @@
--- Declaration: emitGroup
--- Extracted by StaticSplit

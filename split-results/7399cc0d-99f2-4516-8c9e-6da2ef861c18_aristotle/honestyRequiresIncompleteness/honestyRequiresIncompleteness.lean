@@ -1,2 +1,0 @@
--- Declaration: honestyRequiresIncompleteness
--- Extracted by StaticSplit

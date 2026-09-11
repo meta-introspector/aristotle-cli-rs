@@ -1,2 +1,0 @@
--- Declaration: MONSTER_DIM
--- Extracted by StaticSplit

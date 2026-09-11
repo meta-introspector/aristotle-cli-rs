@@ -1,2 +1,0 @@
--- Declaration: support_eq_supersingular
--- Extracted by StaticSplit

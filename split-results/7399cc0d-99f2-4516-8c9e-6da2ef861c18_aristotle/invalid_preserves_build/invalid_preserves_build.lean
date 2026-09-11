@@ -1,2 +1,0 @@
--- Declaration: invalid_preserves_build
--- Extracted by StaticSplit

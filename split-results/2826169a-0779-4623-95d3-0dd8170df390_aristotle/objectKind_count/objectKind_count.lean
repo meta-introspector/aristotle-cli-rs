@@ -1,2 +1,0 @@
--- Declaration: objectKind_count
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: modPow
--- Extracted by StaticSplit

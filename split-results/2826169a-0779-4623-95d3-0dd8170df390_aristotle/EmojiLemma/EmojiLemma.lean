@@ -1,2 +1,0 @@
--- Declaration: EmojiLemma
--- Extracted by StaticSplit

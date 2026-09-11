@@ -1,2 +1,0 @@
--- Declaration: mes_bott_periodicity
--- Extracted by StaticSplit

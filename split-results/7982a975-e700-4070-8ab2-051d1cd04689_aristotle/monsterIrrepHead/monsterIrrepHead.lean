@@ -1,2 +1,0 @@
--- Declaration: monsterIrrepHead
--- Extracted by StaticSplit

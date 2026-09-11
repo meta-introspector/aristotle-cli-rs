@@ -1,2 +1,0 @@
--- Declaration: crossroads_is_fixed
--- Extracted by StaticSplit

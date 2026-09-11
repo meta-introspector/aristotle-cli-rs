@@ -1,2 +1,0 @@
--- Declaration: denote_tower
--- Extracted by StaticSplit

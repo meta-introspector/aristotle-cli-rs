@@ -1,2 +1,0 @@
--- Declaration: comparisonScale
--- Extracted by StaticSplit

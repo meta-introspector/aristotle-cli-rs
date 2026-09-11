@@ -1,2 +1,0 @@
--- Declaration: weyl_order_2
--- Extracted by StaticSplit

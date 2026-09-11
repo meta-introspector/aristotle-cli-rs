@@ -1,2 +1,0 @@
--- Declaration: fileName_rust
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Cast_kind
--- Extracted by StaticSplit

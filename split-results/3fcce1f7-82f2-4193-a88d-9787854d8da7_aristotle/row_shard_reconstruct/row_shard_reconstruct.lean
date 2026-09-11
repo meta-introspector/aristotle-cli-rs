@@ -1,2 +1,0 @@
--- Declaration: row_shard_reconstruct
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: level3
--- Extracted by StaticSplit

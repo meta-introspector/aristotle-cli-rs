@@ -1,2 +1,0 @@
--- Declaration: transport_requires_bott_or_proof
--- Extracted by StaticSplit

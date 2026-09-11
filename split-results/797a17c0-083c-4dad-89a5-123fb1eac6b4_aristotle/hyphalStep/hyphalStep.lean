@@ -1,2 +1,0 @@
--- Declaration: hyphalStep
--- Extracted by StaticSplit

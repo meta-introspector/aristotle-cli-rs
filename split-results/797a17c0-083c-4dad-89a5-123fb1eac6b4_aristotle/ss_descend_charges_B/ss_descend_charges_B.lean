@@ -1,2 +1,0 @@
--- Declaration: ss_descend_charges_B
--- Extracted by StaticSplit

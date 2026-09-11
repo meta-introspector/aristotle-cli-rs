@@ -1,2 +1,0 @@
--- Declaration: hilbert_formalizes_brainrot
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: boundaryClass
--- Extracted by StaticSplit

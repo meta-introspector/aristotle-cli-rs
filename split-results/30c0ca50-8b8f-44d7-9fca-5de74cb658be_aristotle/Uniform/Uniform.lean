@@ -1,2 +1,0 @@
--- Declaration: Uniform
--- Extracted by StaticSplit

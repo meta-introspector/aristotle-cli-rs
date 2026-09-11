@@ -1,2 +1,0 @@
--- Declaration: chain_length
--- Extracted by StaticSplit

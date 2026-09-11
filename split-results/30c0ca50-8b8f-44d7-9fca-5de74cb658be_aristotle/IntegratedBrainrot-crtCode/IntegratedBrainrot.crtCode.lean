@@ -1,2 +1,0 @@
--- Declaration: IntegratedBrainrot.crtCode
--- Extracted by StaticSplit

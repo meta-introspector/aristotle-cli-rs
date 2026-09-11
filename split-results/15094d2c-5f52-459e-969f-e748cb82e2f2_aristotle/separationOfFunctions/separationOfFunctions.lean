@@ -1,2 +1,0 @@
--- Declaration: separationOfFunctions
--- Extracted by StaticSplit

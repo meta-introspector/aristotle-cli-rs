@@ -1,2 +1,0 @@
--- Declaration: turing_reaches_theory
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: zeroExtend_preserves_assoc
--- Extracted by StaticSplit

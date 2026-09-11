@@ -1,2 +1,0 @@
--- Declaration: Compiler
--- Extracted by StaticSplit

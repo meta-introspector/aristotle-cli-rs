@@ -1,2 +1,0 @@
--- Declaration: ModularWeight
--- Extracted by StaticSplit

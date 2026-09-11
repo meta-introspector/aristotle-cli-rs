@@ -1,2 +1,0 @@
--- Declaration: not_natural_born_ineligible
--- Extracted by StaticSplit

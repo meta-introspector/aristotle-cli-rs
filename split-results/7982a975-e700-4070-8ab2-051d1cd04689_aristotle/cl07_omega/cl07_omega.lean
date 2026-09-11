@@ -1,2 +1,0 @@
--- Declaration: cl07_omega
--- Extracted by StaticSplit

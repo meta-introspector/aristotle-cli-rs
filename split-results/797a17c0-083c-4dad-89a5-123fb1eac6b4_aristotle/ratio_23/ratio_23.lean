@@ -1,2 +1,0 @@
--- Declaration: ratio_23
--- Extracted by StaticSplit

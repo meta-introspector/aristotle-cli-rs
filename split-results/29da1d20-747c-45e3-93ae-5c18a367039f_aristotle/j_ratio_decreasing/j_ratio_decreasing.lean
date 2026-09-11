@@ -1,2 +1,0 @@
--- Declaration: j_ratio_decreasing
--- Extracted by StaticSplit

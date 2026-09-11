@@ -1,2 +1,0 @@
--- Declaration: lamport_is_monster_dim
--- Extracted by StaticSplit

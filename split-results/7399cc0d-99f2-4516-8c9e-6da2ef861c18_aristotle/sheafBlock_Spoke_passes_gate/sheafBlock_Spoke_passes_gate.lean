@@ -1,2 +1,0 @@
--- Declaration: sheafBlock_Spoke_passes_gate
--- Extracted by StaticSplit

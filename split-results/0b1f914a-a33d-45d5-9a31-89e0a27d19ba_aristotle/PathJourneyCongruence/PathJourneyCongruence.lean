@@ -1,2 +1,0 @@
--- Declaration: PathJourneyCongruence
--- Extracted by StaticSplit

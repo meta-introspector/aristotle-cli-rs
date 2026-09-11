@@ -1,2 +1,0 @@
--- Declaration: SPerm8
--- Extracted by StaticSplit

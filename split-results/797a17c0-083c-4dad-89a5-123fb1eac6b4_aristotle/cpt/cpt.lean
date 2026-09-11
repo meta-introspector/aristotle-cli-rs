@@ -1,2 +1,0 @@
--- Declaration: cpt
--- Extracted by StaticSplit

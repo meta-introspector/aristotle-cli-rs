@@ -1,2 +1,0 @@
--- Declaration: Slot.isNontrivial
--- Extracted by StaticSplit

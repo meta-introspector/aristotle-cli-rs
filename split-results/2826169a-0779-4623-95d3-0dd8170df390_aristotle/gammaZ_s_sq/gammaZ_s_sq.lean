@@ -1,2 +1,0 @@
--- Declaration: gammaZ_s_sq
--- Extracted by StaticSplit

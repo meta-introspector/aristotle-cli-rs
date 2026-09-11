@@ -1,2 +1,0 @@
--- Declaration: gradedMono
--- Extracted by StaticSplit

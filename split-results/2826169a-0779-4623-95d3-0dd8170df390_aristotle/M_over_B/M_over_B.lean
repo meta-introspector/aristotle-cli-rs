@@ -1,2 +1,0 @@
--- Declaration: M_over_B
--- Extracted by StaticSplit

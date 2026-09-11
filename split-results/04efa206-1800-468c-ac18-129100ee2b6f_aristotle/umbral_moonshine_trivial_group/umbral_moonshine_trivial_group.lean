@@ -1,2 +1,0 @@
--- Declaration: umbral_moonshine_trivial_group
--- Extracted by StaticSplit

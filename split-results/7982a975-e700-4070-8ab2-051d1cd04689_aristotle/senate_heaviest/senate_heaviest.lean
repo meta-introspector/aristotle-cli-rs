@@ -1,2 +1,0 @@
--- Declaration: senate_heaviest
--- Extracted by StaticSplit

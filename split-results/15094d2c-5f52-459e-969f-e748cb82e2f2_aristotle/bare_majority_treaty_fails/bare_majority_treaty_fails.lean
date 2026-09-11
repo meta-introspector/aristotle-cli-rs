@@ -1,2 +1,0 @@
--- Declaration: bare_majority_treaty_fails
--- Extracted by StaticSplit

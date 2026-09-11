@@ -1,2 +1,0 @@
--- Declaration: Kernel.iterate_succ
--- Extracted by StaticSplit

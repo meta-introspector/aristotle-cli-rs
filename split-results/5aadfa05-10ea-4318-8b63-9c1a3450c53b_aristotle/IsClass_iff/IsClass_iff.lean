@@ -1,2 +1,0 @@
--- Declaration: IsClass_iff
--- Extracted by StaticSplit

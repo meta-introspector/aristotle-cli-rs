@@ -1,2 +1,0 @@
--- Declaration: cidToQID
--- Extracted by StaticSplit

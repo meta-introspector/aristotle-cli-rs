@@ -1,2 +1,0 @@
--- Declaration: TargetLang
--- Extracted by StaticSplit

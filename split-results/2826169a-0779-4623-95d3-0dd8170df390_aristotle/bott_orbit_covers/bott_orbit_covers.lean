@@ -1,2 +1,0 @@
--- Declaration: bott_orbit_covers
--- Extracted by StaticSplit

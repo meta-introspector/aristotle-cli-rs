@@ -1,2 +1,0 @@
--- Declaration: product_formula_six
--- Extracted by StaticSplit

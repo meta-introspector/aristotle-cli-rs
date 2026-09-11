@@ -1,2 +1,0 @@
--- Declaration: mckayThompson_trivial
--- Extracted by StaticSplit

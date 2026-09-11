@@ -1,2 +1,0 @@
--- Declaration: BinInt.ltb
--- Extracted by StaticSplit

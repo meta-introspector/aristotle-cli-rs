@@ -1,2 +1,0 @@
--- Declaration: DimBase
--- Extracted by StaticSplit

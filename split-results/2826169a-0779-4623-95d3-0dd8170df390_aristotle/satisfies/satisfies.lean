@@ -1,2 +1,0 @@
--- Declaration: satisfies
--- Extracted by StaticSplit

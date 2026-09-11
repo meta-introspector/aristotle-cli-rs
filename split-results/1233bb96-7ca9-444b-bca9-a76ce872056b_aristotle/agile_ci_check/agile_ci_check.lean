@@ -1,2 +1,0 @@
--- Declaration: agile_ci_check
--- Extracted by StaticSplit

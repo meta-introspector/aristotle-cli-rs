@@ -1,2 +1,0 @@
--- Declaration: tenseReaches
--- Extracted by StaticSplit

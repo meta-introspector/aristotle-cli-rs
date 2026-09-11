@@ -1,2 +1,0 @@
--- Declaration: type_theory_extends_type
--- Extracted by StaticSplit

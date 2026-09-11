@@ -1,2 +1,0 @@
--- Declaration: fieldDefault
--- Extracted by StaticSplit

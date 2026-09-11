@@ -1,2 +1,0 @@
--- Declaration: reentry_neuronalGroup_scc
--- Extracted by StaticSplit

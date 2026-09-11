@@ -1,2 +1,0 @@
--- Declaration: ssCountK
--- Extracted by StaticSplit

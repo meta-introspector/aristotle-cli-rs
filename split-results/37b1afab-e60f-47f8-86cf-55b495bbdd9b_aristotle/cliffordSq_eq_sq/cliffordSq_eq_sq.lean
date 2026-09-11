@@ -1,2 +1,0 @@
--- Declaration: cliffordSq_eq_sq
--- Extracted by StaticSplit

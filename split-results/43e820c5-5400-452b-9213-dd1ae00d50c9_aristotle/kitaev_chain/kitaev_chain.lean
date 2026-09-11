@@ -1,2 +1,0 @@
--- Declaration: kitaev_chain
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: metameme_43_stuck
--- Extracted by StaticSplit

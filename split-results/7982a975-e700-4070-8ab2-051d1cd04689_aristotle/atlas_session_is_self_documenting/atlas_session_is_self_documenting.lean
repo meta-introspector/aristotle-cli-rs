@@ -1,2 +1,0 @@
--- Declaration: atlas_session_is_self_documenting
--- Extracted by StaticSplit

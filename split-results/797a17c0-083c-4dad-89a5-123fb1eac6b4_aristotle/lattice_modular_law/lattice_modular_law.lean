@@ -1,2 +1,0 @@
--- Declaration: lattice_modular_law
--- Extracted by StaticSplit

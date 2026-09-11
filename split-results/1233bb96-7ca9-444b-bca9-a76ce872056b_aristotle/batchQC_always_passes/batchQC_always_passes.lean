@@ -1,2 +1,0 @@
--- Declaration: batchQC_always_passes
--- Extracted by StaticSplit

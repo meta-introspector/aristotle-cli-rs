@@ -1,2 +1,0 @@
--- Declaration: eigenspace_partition
--- Extracted by StaticSplit

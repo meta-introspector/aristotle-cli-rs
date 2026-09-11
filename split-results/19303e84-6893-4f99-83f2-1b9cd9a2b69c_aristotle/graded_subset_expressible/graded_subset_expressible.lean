@@ -1,2 +1,0 @@
--- Declaration: graded_subset_expressible
--- Extracted by StaticSplit

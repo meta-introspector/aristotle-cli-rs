@@ -1,2 +1,0 @@
--- Declaration: id_comp_cast
--- Extracted by StaticSplit

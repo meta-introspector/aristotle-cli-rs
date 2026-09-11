@@ -1,2 +1,0 @@
--- Declaration: PartitionKey
--- Extracted by StaticSplit

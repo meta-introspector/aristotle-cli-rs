@@ -1,2 +1,0 @@
--- Declaration: zero_mem_allowedShifts
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: CrankSignature
--- Extracted by StaticSplit

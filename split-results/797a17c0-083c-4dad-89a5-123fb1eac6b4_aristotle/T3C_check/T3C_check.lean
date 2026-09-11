@@ -1,2 +1,0 @@
--- Declaration: T3C_check
--- Extracted by StaticSplit

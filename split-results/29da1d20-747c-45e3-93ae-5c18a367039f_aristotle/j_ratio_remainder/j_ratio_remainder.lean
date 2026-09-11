@@ -1,2 +1,0 @@
--- Declaration: j_ratio_remainder
--- Extracted by StaticSplit

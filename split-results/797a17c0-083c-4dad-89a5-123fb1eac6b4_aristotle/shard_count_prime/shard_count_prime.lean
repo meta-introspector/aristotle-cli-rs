@@ -1,2 +1,0 @@
--- Declaration: shard_count_prime
--- Extracted by StaticSplit

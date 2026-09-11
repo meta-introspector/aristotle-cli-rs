@@ -1,2 +1,0 @@
--- Declaration: threshold_gap_equals_sspB_card
--- Extracted by StaticSplit

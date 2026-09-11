@@ -1,2 +1,0 @@
--- Declaration: BottFunctor.embedVec
--- Extracted by StaticSplit

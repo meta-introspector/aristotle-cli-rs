@@ -1,2 +1,0 @@
--- Declaration: M12_degree_sum
--- Extracted by StaticSplit

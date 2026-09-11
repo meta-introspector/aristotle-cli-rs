@@ -1,2 +1,0 @@
--- Declaration: TRegionGreece
--- Extracted by StaticSplit

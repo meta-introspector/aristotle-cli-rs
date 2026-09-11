@@ -1,2 +1,0 @@
--- Declaration: nativeUrl_eq_of_trim_eq
--- Extracted by StaticSplit

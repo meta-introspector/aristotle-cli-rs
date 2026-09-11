@@ -1,2 +1,0 @@
--- Declaration: geom_sum_division
--- Extracted by StaticSplit

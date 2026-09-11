@@ -1,2 +1,0 @@
--- Declaration: cl07_gamma_sq
--- Extracted by StaticSplit

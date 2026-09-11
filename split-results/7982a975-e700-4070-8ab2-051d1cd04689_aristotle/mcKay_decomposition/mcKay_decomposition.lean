@@ -1,2 +1,0 @@
--- Declaration: mcKay_decomposition
--- Extracted by StaticSplit

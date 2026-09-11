@@ -1,2 +1,0 @@
--- Declaration: cid_injective
--- Extracted by StaticSplit

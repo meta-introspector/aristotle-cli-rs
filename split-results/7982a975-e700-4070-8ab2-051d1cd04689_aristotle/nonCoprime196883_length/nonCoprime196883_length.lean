@@ -1,2 +1,0 @@
--- Declaration: nonCoprime196883_length
--- Extracted by StaticSplit

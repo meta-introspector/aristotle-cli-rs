@@ -1,2 +1,0 @@
--- Declaration: hash_sol_create_program_address
--- Extracted by StaticSplit

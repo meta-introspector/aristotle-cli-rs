@@ -1,2 +1,0 @@
--- Declaration: A6_degree_sum
--- Extracted by StaticSplit

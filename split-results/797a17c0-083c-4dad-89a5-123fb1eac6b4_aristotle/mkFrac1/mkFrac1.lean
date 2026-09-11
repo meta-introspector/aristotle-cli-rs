@@ -1,2 +1,0 @@
--- Declaration: mkFrac1
--- Extracted by StaticSplit

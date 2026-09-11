@@ -1,2 +1,0 @@
--- Declaration: Positive.compare_cont
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: max_depth
--- Extracted by StaticSplit

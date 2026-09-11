@@ -1,2 +1,0 @@
--- Declaration: advanceBottLimo
--- Extracted by StaticSplit

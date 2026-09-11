@@ -1,2 +1,0 @@
--- Declaration: cl07_finiteDimensional
--- Extracted by StaticSplit

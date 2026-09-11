@@ -1,2 +1,0 @@
--- Declaration: M24_nirreps
--- Extracted by StaticSplit

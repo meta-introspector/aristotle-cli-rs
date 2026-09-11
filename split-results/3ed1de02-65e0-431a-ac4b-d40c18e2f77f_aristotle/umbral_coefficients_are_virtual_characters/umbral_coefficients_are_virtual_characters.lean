@@ -1,2 +1,0 @@
--- Declaration: umbral_coefficients_are_virtual_characters
--- Extracted by StaticSplit

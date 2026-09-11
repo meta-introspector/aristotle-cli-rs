@@ -1,2 +1,0 @@
--- Declaration: ssPrimes_nodup
--- Extracted by StaticSplit

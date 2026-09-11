@@ -1,2 +1,0 @@
--- Declaration: initialJQuine_coeffs_size
--- Extracted by StaticSplit

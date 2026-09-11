@@ -1,2 +1,0 @@
--- Declaration: proj
--- Extracted by StaticSplit

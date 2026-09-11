@@ -1,2 +1,0 @@
--- Declaration: πGate
--- Extracted by StaticSplit

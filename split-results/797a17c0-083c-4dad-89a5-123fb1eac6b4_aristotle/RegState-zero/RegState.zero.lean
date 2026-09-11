@@ -1,2 +1,0 @@
--- Declaration: RegState.zero
--- Extracted by StaticSplit

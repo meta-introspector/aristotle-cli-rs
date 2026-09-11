@@ -1,2 +1,0 @@
--- Declaration: diePlate_crank_invariant
--- Extracted by StaticSplit

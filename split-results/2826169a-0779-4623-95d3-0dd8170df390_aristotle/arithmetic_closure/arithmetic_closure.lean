@@ -1,2 +1,0 @@
--- Declaration: arithmetic_closure
--- Extracted by StaticSplit

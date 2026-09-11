@@ -1,2 +1,0 @@
--- Declaration: veto_override_passes_on_two_thirds
--- Extracted by StaticSplit

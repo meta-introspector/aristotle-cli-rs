@@ -1,2 +1,0 @@
--- Declaration: prime37_divides_j4
--- Extracted by StaticSplit

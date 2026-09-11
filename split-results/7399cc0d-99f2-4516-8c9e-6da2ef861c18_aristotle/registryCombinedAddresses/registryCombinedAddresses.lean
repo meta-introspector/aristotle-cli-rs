@@ -1,2 +1,0 @@
--- Declaration: registryCombinedAddresses
--- Extracted by StaticSplit

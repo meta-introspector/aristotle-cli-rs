@@ -1,2 +1,0 @@
--- Declaration: umbralGroup_S3_card_E8_3
--- Extracted by StaticSplit

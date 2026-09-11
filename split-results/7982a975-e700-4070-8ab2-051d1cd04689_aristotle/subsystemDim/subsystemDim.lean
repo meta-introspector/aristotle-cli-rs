@@ -1,2 +1,0 @@
--- Declaration: subsystemDim
--- Extracted by StaticSplit

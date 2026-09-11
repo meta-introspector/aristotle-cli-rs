@@ -1,2 +1,0 @@
--- Declaration: QFMorphism
--- Extracted by StaticSplit

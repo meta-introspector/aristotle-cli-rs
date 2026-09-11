@@ -1,2 +1,0 @@
--- Declaration: hecke71_crossroads
--- Extracted by StaticSplit

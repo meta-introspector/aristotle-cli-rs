@@ -1,2 +1,0 @@
--- Declaration: idealBootstrap_trivial
--- Extracted by StaticSplit

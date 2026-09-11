@@ -1,2 +1,0 @@
--- Declaration: FiberedDynSys.totalStepN_preserves_proj
--- Extracted by StaticSplit

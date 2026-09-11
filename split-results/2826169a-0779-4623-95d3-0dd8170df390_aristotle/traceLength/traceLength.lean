@@ -1,2 +1,0 @@
--- Declaration: traceLength
--- Extracted by StaticSplit

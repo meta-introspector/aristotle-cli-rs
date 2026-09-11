@@ -1,2 +1,0 @@
--- Declaration: e8_rank_is_bott_period
--- Extracted by StaticSplit

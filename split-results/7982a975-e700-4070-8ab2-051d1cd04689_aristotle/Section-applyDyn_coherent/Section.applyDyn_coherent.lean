@@ -1,2 +1,0 @@
--- Declaration: Section.applyDyn_coherent
--- Extracted by StaticSplit

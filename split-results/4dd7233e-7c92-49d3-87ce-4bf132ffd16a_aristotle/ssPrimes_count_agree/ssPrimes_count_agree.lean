@@ -1,2 +1,0 @@
--- Declaration: ssPrimes_count_agree
--- Extracted by StaticSplit

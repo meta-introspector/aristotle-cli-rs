@@ -1,2 +1,0 @@
--- Declaration: sspFractranStep
--- Extracted by StaticSplit

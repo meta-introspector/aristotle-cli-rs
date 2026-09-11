@@ -1,2 +1,0 @@
--- Declaration: OperatorConcept
--- Extracted by StaticSplit

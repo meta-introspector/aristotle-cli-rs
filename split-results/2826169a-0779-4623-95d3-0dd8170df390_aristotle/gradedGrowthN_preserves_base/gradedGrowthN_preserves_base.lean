@@ -1,2 +1,0 @@
--- Declaration: gradedGrowthN_preserves_base
--- Extracted by StaticSplit

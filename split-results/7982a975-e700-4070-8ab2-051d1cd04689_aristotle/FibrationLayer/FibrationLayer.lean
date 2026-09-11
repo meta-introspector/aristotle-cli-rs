@@ -1,2 +1,0 @@
--- Declaration: FibrationLayer
--- Extracted by StaticSplit

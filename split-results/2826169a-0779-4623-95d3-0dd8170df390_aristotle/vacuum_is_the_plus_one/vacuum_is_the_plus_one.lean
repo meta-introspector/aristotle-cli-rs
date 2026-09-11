@@ -1,2 +1,0 @@
--- Declaration: vacuum_is_the_plus_one
--- Extracted by StaticSplit

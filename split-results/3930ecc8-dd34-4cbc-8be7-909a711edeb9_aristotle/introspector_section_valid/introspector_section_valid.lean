@@ -1,2 +1,0 @@
--- Declaration: introspector_section_valid
--- Extracted by StaticSplit

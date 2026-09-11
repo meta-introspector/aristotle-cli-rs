@@ -1,2 +1,0 @@
--- Declaration: qK
--- Extracted by StaticSplit

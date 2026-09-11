@@ -1,2 +1,0 @@
--- Declaration: level1_offset
--- Extracted by StaticSplit

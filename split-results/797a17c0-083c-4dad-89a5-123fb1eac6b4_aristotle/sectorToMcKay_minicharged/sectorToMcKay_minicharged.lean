@@ -1,2 +1,0 @@
--- Declaration: sectorToMcKay_minicharged
--- Extracted by StaticSplit

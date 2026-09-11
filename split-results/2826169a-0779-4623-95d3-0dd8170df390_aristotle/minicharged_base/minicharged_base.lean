@@ -1,2 +1,0 @@
--- Declaration: minicharged_base
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: conceptToArticle
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: eigenspace_decomposition
--- Extracted by StaticSplit

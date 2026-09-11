@@ -1,2 +1,0 @@
--- Declaration: mockFile_partial_priority
--- Extracted by StaticSplit

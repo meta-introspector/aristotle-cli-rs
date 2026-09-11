@@ -1,2 +1,0 @@
--- Declaration: resolveRustType
--- Extracted by StaticSplit

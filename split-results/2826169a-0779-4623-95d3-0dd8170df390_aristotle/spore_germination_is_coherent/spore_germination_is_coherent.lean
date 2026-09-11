@@ -1,2 +1,0 @@
--- Declaration: spore_germination_is_coherent
--- Extracted by StaticSplit

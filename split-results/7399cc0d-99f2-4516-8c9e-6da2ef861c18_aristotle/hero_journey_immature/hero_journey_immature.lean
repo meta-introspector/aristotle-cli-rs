@@ -1,2 +1,0 @@
--- Declaration: hero_journey_immature
--- Extracted by StaticSplit

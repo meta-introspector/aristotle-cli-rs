@@ -1,2 +1,0 @@
--- Declaration: bmc_mckay
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: mycorrhizal_is_nonlinear
--- Extracted by StaticSplit

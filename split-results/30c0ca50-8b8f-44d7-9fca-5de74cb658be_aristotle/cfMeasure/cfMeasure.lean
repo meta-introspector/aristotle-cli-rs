@@ -1,2 +1,0 @@
--- Declaration: cfMeasure
--- Extracted by StaticSplit

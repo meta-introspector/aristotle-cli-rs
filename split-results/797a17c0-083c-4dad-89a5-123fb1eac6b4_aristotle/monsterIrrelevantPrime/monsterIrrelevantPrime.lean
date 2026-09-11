@@ -1,2 +1,0 @@
--- Declaration: monsterIrrelevantPrime
--- Extracted by StaticSplit

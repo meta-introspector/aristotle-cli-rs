@@ -1,2 +1,0 @@
--- Declaration: hom_comp_cast
--- Extracted by StaticSplit

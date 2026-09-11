@@ -1,2 +1,0 @@
--- Declaration: loopExample_valid
--- Extracted by StaticSplit

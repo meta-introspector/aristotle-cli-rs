@@ -1,2 +1,0 @@
--- Declaration: primegame_plus_monodromy
--- Extracted by StaticSplit

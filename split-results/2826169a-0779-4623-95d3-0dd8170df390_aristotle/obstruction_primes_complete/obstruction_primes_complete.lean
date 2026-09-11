@@ -1,2 +1,0 @@
--- Declaration: obstruction_primes_complete
--- Extracted by StaticSplit

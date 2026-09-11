@@ -1,2 +1,0 @@
--- Declaration: superstringTransverseDim
--- Extracted by StaticSplit

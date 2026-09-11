@@ -1,2 +1,0 @@
--- Declaration: throwInto
--- Extracted by StaticSplit

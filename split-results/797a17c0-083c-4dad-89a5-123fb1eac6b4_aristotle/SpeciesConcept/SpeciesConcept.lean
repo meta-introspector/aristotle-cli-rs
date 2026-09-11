@@ -1,2 +1,0 @@
--- Declaration: SpeciesConcept
--- Extracted by StaticSplit

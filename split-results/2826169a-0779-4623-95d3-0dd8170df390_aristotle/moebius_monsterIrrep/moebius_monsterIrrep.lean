@@ -1,2 +1,0 @@
--- Declaration: moebius_monsterIrrep
--- Extracted by StaticSplit

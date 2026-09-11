@@ -1,2 +1,0 @@
--- Declaration: restrict
--- Extracted by StaticSplit

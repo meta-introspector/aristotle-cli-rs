@@ -1,2 +1,0 @@
--- Declaration: originSpore
--- Extracted by StaticSplit

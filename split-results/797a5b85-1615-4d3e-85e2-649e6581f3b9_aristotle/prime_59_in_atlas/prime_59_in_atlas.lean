@@ -1,2 +1,0 @@
--- Declaration: prime_59_in_atlas
--- Extracted by StaticSplit

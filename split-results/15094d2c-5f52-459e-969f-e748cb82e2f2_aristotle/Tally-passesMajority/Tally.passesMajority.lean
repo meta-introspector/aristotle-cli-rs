@@ -1,2 +1,0 @@
--- Declaration: Tally.passesMajority
--- Extracted by StaticSplit

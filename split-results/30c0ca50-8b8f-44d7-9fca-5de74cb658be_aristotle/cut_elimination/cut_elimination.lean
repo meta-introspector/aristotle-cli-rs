@@ -1,2 +1,0 @@
--- Declaration: cut_elimination
--- Extracted by StaticSplit

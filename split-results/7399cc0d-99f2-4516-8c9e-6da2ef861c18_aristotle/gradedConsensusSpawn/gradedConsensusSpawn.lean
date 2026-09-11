@@ -1,2 +1,0 @@
--- Declaration: gradedConsensusSpawn
--- Extracted by StaticSplit

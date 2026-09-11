@@ -1,2 +1,0 @@
--- Declaration: fanum
--- Extracted by StaticSplit

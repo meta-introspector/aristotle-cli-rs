@@ -1,2 +1,0 @@
--- Declaration: bott_coprime_two_charts
--- Extracted by StaticSplit

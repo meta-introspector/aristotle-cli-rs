@@ -1,2 +1,0 @@
--- Declaration: pi_convergent_7_smooth
--- Extracted by StaticSplit

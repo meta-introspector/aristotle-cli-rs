@@ -1,2 +1,0 @@
--- Declaration: ImpProof.compose
--- Extracted by StaticSplit

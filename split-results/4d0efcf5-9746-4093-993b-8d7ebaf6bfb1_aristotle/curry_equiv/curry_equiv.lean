@@ -1,2 +1,0 @@
--- Declaration: curry_equiv
--- Extracted by StaticSplit

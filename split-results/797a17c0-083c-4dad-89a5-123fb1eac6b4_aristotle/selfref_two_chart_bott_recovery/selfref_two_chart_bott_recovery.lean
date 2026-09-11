@@ -1,2 +1,0 @@
--- Declaration: selfref_two_chart_bott_recovery
--- Extracted by StaticSplit

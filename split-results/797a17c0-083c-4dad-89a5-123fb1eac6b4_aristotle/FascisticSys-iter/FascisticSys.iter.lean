@@ -1,2 +1,0 @@
--- Declaration: FascisticSys.iter
--- Extracted by StaticSplit

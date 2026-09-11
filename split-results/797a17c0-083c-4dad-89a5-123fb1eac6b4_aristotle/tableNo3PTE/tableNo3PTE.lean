@@ -1,2 +1,0 @@
--- Declaration: tableNo3PTE
--- Extracted by StaticSplit

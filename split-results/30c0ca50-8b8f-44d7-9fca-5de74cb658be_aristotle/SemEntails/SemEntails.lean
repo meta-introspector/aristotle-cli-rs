@@ -1,2 +1,0 @@
--- Declaration: SemEntails
--- Extracted by StaticSplit

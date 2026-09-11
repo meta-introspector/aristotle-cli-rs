@@ -1,2 +1,0 @@
--- Declaration: gate263_not_resonant
--- Extracted by StaticSplit

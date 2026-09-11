@@ -1,2 +1,0 @@
--- Declaration: transport_preserves_exponents
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Ledger.Conformal
--- Extracted by StaticSplit

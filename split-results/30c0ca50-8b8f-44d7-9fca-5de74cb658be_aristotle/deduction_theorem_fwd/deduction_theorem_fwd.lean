@@ -1,2 +1,0 @@
--- Declaration: deduction_theorem_fwd
--- Extracted by StaticSplit

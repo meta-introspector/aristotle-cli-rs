@@ -1,2 +1,0 @@
--- Declaration: inSameSCC
--- Extracted by StaticSplit

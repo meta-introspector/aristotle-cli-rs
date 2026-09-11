@@ -1,2 +1,0 @@
--- Declaration: elixirTheoremCount
--- Extracted by StaticSplit

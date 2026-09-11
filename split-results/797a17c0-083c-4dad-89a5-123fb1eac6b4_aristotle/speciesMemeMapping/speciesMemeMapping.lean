@@ -1,2 +1,0 @@
--- Declaration: speciesMemeMapping
--- Extracted by StaticSplit

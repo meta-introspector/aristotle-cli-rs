@@ -1,2 +1,0 @@
--- Declaration: post_processing_invariance
--- Extracted by StaticSplit

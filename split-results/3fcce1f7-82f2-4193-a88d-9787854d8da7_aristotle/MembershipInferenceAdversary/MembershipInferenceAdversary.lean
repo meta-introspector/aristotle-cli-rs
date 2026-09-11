@@ -1,2 +1,0 @@
--- Declaration: MembershipInferenceAdversary
--- Extracted by StaticSplit

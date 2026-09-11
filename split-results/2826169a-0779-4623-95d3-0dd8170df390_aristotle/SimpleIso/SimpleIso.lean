@@ -1,2 +1,0 @@
--- Declaration: SimpleIso
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: stageTone_next_counter
--- Extracted by StaticSplit

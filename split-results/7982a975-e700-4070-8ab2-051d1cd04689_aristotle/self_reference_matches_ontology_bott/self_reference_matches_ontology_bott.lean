@@ -1,2 +1,0 @@
--- Declaration: self_reference_matches_ontology_bott
--- Extracted by StaticSplit

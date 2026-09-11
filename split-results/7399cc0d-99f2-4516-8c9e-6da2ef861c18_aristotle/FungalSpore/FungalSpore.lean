@@ -1,2 +1,0 @@
--- Declaration: FungalSpore
--- Extracted by StaticSplit

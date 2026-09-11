@@ -1,2 +1,0 @@
--- Declaration: toMap
--- Extracted by StaticSplit

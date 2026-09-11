@@ -1,2 +1,0 @@
--- Declaration: RuntimeModel.update
--- Extracted by StaticSplit

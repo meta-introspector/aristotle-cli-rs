@@ -1,2 +1,0 @@
--- Declaration: smallest_irreps_sum
--- Extracted by StaticSplit

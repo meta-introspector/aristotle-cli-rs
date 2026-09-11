@@ -1,2 +1,0 @@
--- Declaration: bmc_bott
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: T2A_check
--- Extracted by StaticSplit

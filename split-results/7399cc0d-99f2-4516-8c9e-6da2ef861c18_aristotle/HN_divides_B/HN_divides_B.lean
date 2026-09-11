@@ -1,2 +1,0 @@
--- Declaration: HN_divides_B
--- Extracted by StaticSplit

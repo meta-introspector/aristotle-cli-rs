@@ -1,2 +1,0 @@
--- Declaration: qPochhammer_succ_eq_mul_shift
--- Extracted by StaticSplit

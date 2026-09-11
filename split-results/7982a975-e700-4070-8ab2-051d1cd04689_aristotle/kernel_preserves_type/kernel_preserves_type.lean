@@ -1,2 +1,0 @@
--- Declaration: kernel_preserves_type
--- Extracted by StaticSplit

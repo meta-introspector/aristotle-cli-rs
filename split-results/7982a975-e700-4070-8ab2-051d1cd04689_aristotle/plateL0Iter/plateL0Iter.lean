@@ -1,2 +1,0 @@
--- Declaration: plateL0Iter
--- Extracted by StaticSplit

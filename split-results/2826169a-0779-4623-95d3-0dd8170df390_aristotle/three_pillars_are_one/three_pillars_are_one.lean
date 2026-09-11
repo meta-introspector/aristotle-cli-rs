@@ -1,2 +1,0 @@
--- Declaration: three_pillars_are_one
--- Extracted by StaticSplit

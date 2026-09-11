@@ -1,2 +1,0 @@
--- Declaration: fractranPrime
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: governanceExtruder
--- Extracted by StaticSplit

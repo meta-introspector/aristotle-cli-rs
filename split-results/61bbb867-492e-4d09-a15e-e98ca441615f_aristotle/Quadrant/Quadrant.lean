@@ -1,2 +1,0 @@
--- Declaration: Quadrant
--- Extracted by StaticSplit

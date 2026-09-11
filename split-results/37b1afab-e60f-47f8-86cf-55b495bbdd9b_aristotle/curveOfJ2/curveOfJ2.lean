@@ -1,2 +1,0 @@
--- Declaration: curveOfJ2
--- Extracted by StaticSplit

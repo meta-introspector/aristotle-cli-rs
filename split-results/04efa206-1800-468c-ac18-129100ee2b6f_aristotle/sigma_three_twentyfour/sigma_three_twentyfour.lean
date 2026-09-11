@@ -1,2 +1,0 @@
--- Declaration: sigma_three_twentyfour
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: geometric_monomyth
--- Extracted by StaticSplit

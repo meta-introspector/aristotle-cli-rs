@@ -1,2 +1,0 @@
--- Declaration: cosmicLift_coherent
--- Extracted by StaticSplit

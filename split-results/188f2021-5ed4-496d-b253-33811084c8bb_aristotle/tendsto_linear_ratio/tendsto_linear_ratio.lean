@@ -1,2 +1,0 @@
--- Declaration: tendsto_linear_ratio
--- Extracted by StaticSplit

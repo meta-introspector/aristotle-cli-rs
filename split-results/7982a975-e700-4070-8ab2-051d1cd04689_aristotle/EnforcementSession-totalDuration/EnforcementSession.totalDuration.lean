@@ -1,2 +1,0 @@
--- Declaration: EnforcementSession.totalDuration
--- Extracted by StaticSplit

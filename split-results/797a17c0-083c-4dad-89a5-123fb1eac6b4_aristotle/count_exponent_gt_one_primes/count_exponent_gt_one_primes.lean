@@ -1,2 +1,0 @@
--- Declaration: count_exponent_gt_one_primes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: apart_symm
--- Extracted by StaticSplit

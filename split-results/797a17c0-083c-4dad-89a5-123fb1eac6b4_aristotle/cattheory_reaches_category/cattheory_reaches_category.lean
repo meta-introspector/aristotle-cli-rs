@@ -1,2 +1,0 @@
--- Declaration: cattheory_reaches_category
--- Extracted by StaticSplit

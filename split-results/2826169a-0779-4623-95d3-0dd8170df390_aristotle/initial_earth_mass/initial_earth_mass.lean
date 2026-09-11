@@ -1,2 +1,0 @@
--- Declaration: initial_earth_mass
--- Extracted by StaticSplit

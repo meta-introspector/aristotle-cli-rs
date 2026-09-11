@@ -1,2 +1,0 @@
--- Declaration: mockPollPercent_mono
--- Extracted by StaticSplit

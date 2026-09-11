@@ -1,2 +1,0 @@
--- Declaration: uniformLog
--- Extracted by StaticSplit

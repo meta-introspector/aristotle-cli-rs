@@ -1,2 +1,0 @@
--- Declaration: monster_no_holes
--- Extracted by StaticSplit

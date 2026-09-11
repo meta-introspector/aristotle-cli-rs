@@ -1,2 +1,0 @@
--- Declaration: IsContr.toIsProp
--- Extracted by StaticSplit

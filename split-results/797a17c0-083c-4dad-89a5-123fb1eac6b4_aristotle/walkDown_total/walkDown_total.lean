@@ -1,2 +1,0 @@
--- Declaration: walkDown_total
--- Extracted by StaticSplit

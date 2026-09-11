@@ -1,2 +1,0 @@
--- Declaration: moonshine_conjecture
--- Extracted by StaticSplit

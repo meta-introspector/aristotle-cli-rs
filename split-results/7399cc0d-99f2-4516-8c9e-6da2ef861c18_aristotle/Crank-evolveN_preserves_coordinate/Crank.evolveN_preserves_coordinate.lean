@@ -1,2 +1,0 @@
--- Declaration: Crank.evolveN_preserves_coordinate
--- Extracted by StaticSplit

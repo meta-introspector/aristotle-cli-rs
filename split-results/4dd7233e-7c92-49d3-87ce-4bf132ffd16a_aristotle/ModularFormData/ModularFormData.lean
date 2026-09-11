@@ -1,2 +1,0 @@
--- Declaration: ModularFormData
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: vessel_vehicle_disjoint
--- Extracted by StaticSplit

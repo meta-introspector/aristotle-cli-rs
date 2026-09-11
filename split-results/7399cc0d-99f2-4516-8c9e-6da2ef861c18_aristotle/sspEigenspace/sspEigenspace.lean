@@ -1,2 +1,0 @@
--- Declaration: sspEigenspace
--- Extracted by StaticSplit

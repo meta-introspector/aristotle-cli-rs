@@ -1,2 +1,0 @@
--- Declaration: Spore
--- Extracted by StaticSplit

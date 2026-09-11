@@ -1,2 +1,0 @@
--- Declaration: CliffordClass
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: nonRes
--- Extracted by StaticSplit

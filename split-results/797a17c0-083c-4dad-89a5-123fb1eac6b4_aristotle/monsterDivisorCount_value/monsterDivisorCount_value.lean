@@ -1,2 +1,0 @@
--- Declaration: monsterDivisorCount_value
--- Extracted by StaticSplit

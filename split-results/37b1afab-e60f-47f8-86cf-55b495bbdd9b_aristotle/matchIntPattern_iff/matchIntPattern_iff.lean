@@ -1,2 +1,0 @@
--- Declaration: matchIntPattern_iff
--- Extracted by StaticSplit

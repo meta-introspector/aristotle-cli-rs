@@ -1,2 +1,0 @@
--- Declaration: phi_bar_sq
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ChangeRequest.fromGovernance
--- Extracted by StaticSplit

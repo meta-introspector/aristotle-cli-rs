@@ -1,2 +1,0 @@
--- Declaration: ModResult
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MetaTower.ofBase
--- Extracted by StaticSplit

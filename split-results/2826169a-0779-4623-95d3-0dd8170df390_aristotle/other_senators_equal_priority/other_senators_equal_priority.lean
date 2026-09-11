@@ -1,2 +1,0 @@
--- Declaration: other_senators_equal_priority
--- Extracted by StaticSplit

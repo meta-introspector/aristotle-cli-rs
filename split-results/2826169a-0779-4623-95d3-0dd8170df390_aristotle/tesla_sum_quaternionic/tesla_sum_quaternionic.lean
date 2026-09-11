@@ -1,2 +1,0 @@
--- Declaration: tesla_sum_quaternionic
--- Extracted by StaticSplit

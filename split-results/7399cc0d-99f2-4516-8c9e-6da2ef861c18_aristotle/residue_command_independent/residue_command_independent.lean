@@ -1,2 +1,0 @@
--- Declaration: residue_command_independent
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: bottMatrixDim
--- Extracted by StaticSplit

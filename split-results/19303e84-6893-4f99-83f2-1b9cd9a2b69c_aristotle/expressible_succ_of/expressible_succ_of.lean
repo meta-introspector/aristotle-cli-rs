@@ -1,2 +1,0 @@
--- Declaration: expressible_succ_of
--- Extracted by StaticSplit

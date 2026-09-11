@@ -1,2 +1,0 @@
--- Declaration: not_ssp_73
--- Extracted by StaticSplit

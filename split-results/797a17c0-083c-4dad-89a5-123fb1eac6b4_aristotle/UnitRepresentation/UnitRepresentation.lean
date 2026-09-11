@@ -1,2 +1,0 @@
--- Declaration: UnitRepresentation
--- Extracted by StaticSplit

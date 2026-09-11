@@ -1,2 +1,0 @@
--- Declaration: terminal_grade_matches_bott
--- Extracted by StaticSplit

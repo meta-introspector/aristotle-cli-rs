@@ -1,2 +1,0 @@
--- Declaration: Source
--- Extracted by StaticSplit

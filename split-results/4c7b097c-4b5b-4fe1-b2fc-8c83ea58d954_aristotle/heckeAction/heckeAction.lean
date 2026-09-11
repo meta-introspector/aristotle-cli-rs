@@ -1,2 +1,0 @@
--- Declaration: heckeAction
--- Extracted by StaticSplit

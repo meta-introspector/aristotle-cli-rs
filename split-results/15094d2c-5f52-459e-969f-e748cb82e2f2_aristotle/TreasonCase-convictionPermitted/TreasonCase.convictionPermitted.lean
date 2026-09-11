@@ -1,2 +1,0 @@
--- Declaration: TreasonCase.convictionPermitted
--- Extracted by StaticSplit

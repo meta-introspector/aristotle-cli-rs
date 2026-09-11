@@ -1,2 +1,0 @@
--- Declaration: PhysSector
--- Extracted by StaticSplit

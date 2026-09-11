@@ -1,2 +1,0 @@
--- Declaration: maxComplexityVibe
--- Extracted by StaticSplit

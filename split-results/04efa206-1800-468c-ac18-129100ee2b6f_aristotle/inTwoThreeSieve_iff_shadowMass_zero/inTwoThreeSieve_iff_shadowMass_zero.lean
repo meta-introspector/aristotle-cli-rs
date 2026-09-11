@@ -1,2 +1,0 @@
--- Declaration: inTwoThreeSieve_iff_shadowMass_zero
--- Extracted by StaticSplit

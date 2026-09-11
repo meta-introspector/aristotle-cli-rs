@@ -1,2 +1,0 @@
--- Declaration: cosmicBlock_residue_eq
--- Extracted by StaticSplit

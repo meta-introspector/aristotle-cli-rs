@@ -1,2 +1,0 @@
--- Declaration: IsTautology
--- Extracted by StaticSplit

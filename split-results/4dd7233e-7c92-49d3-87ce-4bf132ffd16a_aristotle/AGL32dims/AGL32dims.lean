@@ -1,2 +1,0 @@
--- Declaration: AGL32dims
--- Extracted by StaticSplit

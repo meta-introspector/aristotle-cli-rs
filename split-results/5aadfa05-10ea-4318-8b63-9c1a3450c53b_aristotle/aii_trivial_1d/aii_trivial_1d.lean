@@ -1,2 +1,0 @@
--- Declaration: aii_trivial_1d
--- Extracted by StaticSplit

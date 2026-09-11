@@ -1,2 +1,0 @@
--- Declaration: full_perf_earn
--- Extracted by StaticSplit

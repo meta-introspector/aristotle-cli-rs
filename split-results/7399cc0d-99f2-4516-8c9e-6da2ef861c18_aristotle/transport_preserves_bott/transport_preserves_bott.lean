@@ -1,2 +1,0 @@
--- Declaration: transport_preserves_bott
--- Extracted by StaticSplit

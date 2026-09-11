@@ -1,2 +1,0 @@
--- Declaration: flip_length
--- Extracted by StaticSplit

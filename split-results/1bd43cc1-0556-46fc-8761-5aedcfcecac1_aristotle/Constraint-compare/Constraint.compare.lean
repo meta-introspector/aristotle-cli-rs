@@ -1,2 +1,0 @@
--- Declaration: Constraint.compare
--- Extracted by StaticSplit

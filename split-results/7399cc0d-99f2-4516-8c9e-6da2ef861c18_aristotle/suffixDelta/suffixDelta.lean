@@ -1,2 +1,0 @@
--- Declaration: suffixDelta
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: auto_consistent
--- Extracted by StaticSplit

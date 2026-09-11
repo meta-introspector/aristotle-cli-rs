@@ -1,2 +1,0 @@
--- Declaration: Multivector
--- Extracted by StaticSplit

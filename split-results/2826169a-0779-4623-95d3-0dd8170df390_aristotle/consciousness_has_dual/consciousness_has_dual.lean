@@ -1,2 +1,0 @@
--- Declaration: consciousness_has_dual
--- Extracted by StaticSplit

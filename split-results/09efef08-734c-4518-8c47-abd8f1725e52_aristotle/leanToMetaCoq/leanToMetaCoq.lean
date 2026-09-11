@@ -1,2 +1,0 @@
--- Declaration: leanToMetaCoq
--- Extracted by StaticSplit

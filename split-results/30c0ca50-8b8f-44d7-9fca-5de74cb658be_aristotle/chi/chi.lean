@@ -1,2 +1,0 @@
--- Declaration: chi
--- Extracted by StaticSplit

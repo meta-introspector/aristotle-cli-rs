@@ -1,2 +1,0 @@
--- Declaration: dagMul_unit_right
--- Extracted by StaticSplit

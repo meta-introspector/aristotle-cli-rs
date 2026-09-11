@@ -1,2 +1,0 @@
--- Declaration: SPerm16
--- Extracted by StaticSplit

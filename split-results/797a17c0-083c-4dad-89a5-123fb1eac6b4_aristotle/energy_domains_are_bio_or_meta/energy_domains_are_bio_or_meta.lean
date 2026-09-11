@@ -1,2 +1,0 @@
--- Declaration: energy_domains_are_bio_or_meta
--- Extracted by StaticSplit

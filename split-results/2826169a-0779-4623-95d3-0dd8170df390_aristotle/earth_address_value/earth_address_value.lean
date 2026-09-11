@@ -1,2 +1,0 @@
--- Declaration: earth_address_value
--- Extracted by StaticSplit

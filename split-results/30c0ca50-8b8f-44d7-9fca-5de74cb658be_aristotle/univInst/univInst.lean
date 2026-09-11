@@ -1,2 +1,0 @@
--- Declaration: univInst
--- Extracted by StaticSplit

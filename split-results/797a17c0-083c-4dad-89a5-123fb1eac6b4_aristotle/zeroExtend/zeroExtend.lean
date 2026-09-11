@@ -1,2 +1,0 @@
--- Declaration: zeroExtend
--- Extracted by StaticSplit

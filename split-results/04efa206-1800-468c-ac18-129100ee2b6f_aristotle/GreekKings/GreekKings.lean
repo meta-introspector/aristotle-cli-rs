@@ -1,2 +1,0 @@
--- Declaration: GreekKings
--- Extracted by StaticSplit

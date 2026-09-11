@@ -1,2 +1,0 @@
--- Declaration: emitRustProgram
--- Extracted by StaticSplit

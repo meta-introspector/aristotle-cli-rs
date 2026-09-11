@@ -1,2 +1,0 @@
--- Declaration: exampleMonsterWalk
--- Extracted by StaticSplit

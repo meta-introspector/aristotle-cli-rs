@@ -1,2 +1,0 @@
--- Declaration: SessionStartState
--- Extracted by StaticSplit

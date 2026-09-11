@@ -1,2 +1,0 @@
--- Declaration: cordycepsJourney
--- Extracted by StaticSplit

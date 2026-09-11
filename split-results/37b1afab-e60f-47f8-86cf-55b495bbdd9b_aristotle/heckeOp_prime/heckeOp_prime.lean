@@ -1,2 +1,0 @@
--- Declaration: heckeOp_prime
--- Extracted by StaticSplit

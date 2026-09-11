@@ -1,2 +1,0 @@
--- Declaration: cliffordMap_ι
--- Extracted by StaticSplit

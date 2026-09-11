@@ -1,2 +1,0 @@
--- Declaration: T4
--- Extracted by StaticSplit

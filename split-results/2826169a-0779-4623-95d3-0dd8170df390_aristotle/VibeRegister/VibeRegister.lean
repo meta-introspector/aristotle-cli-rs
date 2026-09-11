@@ -1,2 +1,0 @@
--- Declaration: VibeRegister
--- Extracted by StaticSplit

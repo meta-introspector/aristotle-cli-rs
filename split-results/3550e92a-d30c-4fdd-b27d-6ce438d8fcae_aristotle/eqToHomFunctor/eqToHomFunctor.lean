@@ -1,2 +1,0 @@
--- Declaration: eqToHomFunctor
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: support_commutator_subset
--- Extracted by StaticSplit

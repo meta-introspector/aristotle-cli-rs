@@ -1,2 +1,0 @@
--- Declaration: cliffordDim
--- Extracted by StaticSplit

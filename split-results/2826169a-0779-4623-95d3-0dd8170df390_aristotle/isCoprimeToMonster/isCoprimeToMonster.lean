@@ -1,2 +1,0 @@
--- Declaration: isCoprimeToMonster
--- Extracted by StaticSplit

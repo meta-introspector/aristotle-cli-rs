@@ -1,2 +1,0 @@
--- Declaration: allComponentLog10Scales
--- Extracted by StaticSplit

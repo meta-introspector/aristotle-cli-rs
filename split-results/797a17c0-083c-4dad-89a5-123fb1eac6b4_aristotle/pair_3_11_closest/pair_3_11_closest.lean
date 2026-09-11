@@ -1,2 +1,0 @@
--- Declaration: pair_3_11_closest
--- Extracted by StaticSplit

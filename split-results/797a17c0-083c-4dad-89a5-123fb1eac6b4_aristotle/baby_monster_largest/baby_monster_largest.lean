@@ -1,2 +1,0 @@
--- Declaration: baby_monster_largest
--- Extracted by StaticSplit

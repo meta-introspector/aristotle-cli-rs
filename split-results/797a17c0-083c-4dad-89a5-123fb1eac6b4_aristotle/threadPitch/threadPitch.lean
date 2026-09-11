@@ -1,2 +1,0 @@
--- Declaration: threadPitch
--- Extracted by StaticSplit

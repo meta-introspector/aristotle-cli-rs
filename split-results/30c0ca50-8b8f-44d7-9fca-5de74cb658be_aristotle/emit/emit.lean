@@ -1,2 +1,0 @@
--- Declaration: emit
--- Extracted by StaticSplit

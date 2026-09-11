@@ -1,2 +1,0 @@
--- Declaration: cppTemplate
--- Extracted by StaticSplit

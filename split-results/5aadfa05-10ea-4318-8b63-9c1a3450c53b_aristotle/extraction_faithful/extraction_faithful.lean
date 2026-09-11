@@ -1,2 +1,0 @@
--- Declaration: extraction_faithful
--- Extracted by StaticSplit

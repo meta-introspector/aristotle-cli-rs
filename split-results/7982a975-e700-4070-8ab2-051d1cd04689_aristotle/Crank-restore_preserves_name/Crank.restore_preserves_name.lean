@@ -1,2 +1,0 @@
--- Declaration: Crank.restore_preserves_name
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: oggNumber_eq
--- Extracted by StaticSplit

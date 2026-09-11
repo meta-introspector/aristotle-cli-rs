@@ -1,2 +1,0 @@
--- Declaration: semanticMap
--- Extracted by StaticSplit

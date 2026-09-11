@@ -1,2 +1,0 @@
--- Declaration: Kernel.IsContractive
--- Extracted by StaticSplit

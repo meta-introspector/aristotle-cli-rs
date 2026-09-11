@@ -1,2 +1,0 @@
--- Declaration: FormalSystem.Complete
--- Extracted by StaticSplit

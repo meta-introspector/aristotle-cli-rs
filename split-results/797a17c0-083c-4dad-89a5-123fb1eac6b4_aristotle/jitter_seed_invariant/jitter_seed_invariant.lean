@@ -1,2 +1,0 @@
--- Declaration: jitter_seed_invariant
--- Extracted by StaticSplit

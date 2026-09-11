@@ -1,2 +1,0 @@
--- Declaration: natBytes
--- Extracted by StaticSplit

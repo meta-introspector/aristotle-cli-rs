@@ -1,2 +1,0 @@
--- Declaration: trainAdvanceDyn_preserves_wf
--- Extracted by StaticSplit

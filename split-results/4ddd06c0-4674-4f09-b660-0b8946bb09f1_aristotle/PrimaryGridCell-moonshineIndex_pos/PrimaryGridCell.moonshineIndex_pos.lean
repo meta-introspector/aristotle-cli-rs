@@ -1,2 +1,0 @@
--- Declaration: PrimaryGridCell.moonshineIndex_pos
--- Extracted by StaticSplit

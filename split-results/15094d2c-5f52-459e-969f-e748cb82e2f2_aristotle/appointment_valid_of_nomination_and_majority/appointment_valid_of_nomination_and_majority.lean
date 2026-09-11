@@ -1,2 +1,0 @@
--- Declaration: appointment_valid_of_nomination_and_majority
--- Extracted by StaticSplit

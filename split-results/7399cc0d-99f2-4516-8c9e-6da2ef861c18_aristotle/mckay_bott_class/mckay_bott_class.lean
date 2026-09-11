@@ -1,2 +1,0 @@
--- Declaration: mckay_bott_class
--- Extracted by StaticSplit

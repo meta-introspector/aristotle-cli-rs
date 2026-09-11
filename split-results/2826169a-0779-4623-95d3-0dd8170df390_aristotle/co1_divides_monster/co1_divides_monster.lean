@@ -1,2 +1,0 @@
--- Declaration: co1_divides_monster
--- Extracted by StaticSplit

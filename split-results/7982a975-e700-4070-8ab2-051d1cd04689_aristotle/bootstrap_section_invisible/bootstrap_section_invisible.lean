@@ -1,2 +1,0 @@
--- Declaration: bootstrap_section_invisible
--- Extracted by StaticSplit

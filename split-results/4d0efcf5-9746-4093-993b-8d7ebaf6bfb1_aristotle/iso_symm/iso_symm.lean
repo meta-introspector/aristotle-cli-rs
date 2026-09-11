@@ -1,2 +1,0 @@
--- Declaration: iso_symm
--- Extracted by StaticSplit

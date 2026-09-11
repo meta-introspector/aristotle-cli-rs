@@ -1,2 +1,0 @@
--- Declaration: BinInt.succDouble
--- Extracted by StaticSplit

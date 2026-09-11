@@ -1,2 +1,0 @@
--- Declaration: sonnenlicht_total_weight
--- Extracted by StaticSplit

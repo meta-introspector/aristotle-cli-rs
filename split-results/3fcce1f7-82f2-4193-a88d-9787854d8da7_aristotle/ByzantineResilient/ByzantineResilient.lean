@@ -1,2 +1,0 @@
--- Declaration: ByzantineResilient
--- Extracted by StaticSplit

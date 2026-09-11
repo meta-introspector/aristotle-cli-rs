@@ -1,2 +1,0 @@
--- Declaration: splitSquarefree
--- Extracted by StaticSplit

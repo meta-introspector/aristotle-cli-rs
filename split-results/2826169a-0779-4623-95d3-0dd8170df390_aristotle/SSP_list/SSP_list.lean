@@ -1,2 +1,0 @@
--- Declaration: SSP_list
--- Extracted by StaticSplit

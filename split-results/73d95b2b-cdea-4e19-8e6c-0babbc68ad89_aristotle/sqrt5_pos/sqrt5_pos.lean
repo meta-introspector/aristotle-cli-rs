@@ -1,2 +1,0 @@
--- Declaration: sqrt5_pos
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: e4_hecke_relation
--- Extracted by StaticSplit

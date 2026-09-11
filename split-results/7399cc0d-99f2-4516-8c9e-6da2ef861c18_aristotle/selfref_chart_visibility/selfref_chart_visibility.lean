@@ -1,2 +1,0 @@
--- Declaration: selfref_chart_visibility
--- Extracted by StaticSplit

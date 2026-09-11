@@ -1,2 +1,0 @@
--- Declaration: Siterate
--- Extracted by StaticSplit

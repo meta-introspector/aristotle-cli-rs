@@ -1,2 +1,0 @@
--- Declaration: Ternary.roundtrip
--- Extracted by StaticSplit

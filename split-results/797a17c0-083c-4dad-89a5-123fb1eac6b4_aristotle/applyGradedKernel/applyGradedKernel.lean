@@ -1,2 +1,0 @@
--- Declaration: applyGradedKernel
--- Extracted by StaticSplit

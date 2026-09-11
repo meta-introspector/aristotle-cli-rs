@@ -1,2 +1,0 @@
--- Declaration: basedLiftOfVertHomAux_over
--- Extracted by StaticSplit

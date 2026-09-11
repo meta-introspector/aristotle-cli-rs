@@ -1,2 +1,0 @@
--- Declaration: n242
--- Extracted by StaticSplit

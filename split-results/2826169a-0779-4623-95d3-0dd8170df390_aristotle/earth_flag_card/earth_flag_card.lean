@@ -1,2 +1,0 @@
--- Declaration: earth_flag_card
--- Extracted by StaticSplit

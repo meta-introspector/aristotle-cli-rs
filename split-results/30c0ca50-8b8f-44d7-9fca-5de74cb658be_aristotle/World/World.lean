@@ -1,2 +1,0 @@
--- Declaration: World
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: idempotent_is_contractive
--- Extracted by StaticSplit

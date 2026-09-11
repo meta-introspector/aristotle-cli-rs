@@ -1,2 +1,0 @@
--- Declaration: demo_log_shape
--- Extracted by StaticSplit

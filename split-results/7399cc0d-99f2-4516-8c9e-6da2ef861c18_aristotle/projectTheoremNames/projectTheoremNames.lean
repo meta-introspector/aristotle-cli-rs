@@ -1,2 +1,0 @@
--- Declaration: projectTheoremNames
--- Extracted by StaticSplit

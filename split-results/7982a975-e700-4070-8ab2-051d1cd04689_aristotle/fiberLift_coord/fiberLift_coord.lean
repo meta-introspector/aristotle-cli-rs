@@ -1,2 +1,0 @@
--- Declaration: fiberLift_coord
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: pseudoscalar_wraps
--- Extracted by StaticSplit

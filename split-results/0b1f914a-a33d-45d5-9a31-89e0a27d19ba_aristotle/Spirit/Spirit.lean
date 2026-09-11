@@ -1,2 +1,0 @@
--- Declaration: Spirit
--- Extracted by StaticSplit

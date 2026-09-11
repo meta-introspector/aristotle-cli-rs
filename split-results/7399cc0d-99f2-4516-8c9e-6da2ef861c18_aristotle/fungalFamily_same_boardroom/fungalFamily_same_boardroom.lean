@@ -1,2 +1,0 @@
--- Declaration: fungalFamily_same_boardroom
--- Extracted by StaticSplit

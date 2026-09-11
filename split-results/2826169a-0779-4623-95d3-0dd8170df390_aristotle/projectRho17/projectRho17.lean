@@ -1,2 +1,0 @@
--- Declaration: projectRho17
--- Extracted by StaticSplit

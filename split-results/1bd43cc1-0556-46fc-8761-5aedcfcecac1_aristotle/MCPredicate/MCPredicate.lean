@@ -1,2 +1,0 @@
--- Declaration: MCPredicate
--- Extracted by StaticSplit

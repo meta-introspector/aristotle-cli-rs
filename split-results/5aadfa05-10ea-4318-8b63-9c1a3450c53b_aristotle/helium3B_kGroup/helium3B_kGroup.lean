@@ -1,2 +1,0 @@
--- Declaration: helium3B_kGroup
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: agentEmojiTable
--- Extracted by StaticSplit

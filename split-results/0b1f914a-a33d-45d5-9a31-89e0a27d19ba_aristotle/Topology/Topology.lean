@@ -1,2 +1,0 @@
--- Declaration: Topology
--- Extracted by StaticSplit

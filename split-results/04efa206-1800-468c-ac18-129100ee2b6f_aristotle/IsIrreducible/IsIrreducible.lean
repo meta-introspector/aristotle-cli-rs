@@ -1,2 +1,0 @@
--- Declaration: IsIrreducible
--- Extracted by StaticSplit

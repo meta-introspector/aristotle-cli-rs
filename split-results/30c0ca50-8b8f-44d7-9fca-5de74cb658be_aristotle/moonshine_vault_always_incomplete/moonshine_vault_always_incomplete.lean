@@ -1,2 +1,0 @@
--- Declaration: moonshine_vault_always_incomplete
--- Extracted by StaticSplit

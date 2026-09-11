@@ -1,2 +1,0 @@
--- Declaration: constantBeliefSystem_gluing
--- Extracted by StaticSplit

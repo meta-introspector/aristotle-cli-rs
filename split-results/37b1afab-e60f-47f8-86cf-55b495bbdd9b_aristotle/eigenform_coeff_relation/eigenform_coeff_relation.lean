@@ -1,2 +1,0 @@
--- Declaration: eigenform_coeff_relation
--- Extracted by StaticSplit

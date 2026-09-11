@@ -1,2 +1,0 @@
--- Declaration: MoonshineClifford
--- Extracted by StaticSplit

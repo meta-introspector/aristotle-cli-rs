@@ -1,2 +1,0 @@
--- Declaration: theta_constant_720
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: hashTradeWars
--- Extracted by StaticSplit

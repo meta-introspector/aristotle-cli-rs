@@ -1,2 +1,0 @@
--- Declaration: senatorsNeededForRecordedVote
--- Extracted by StaticSplit

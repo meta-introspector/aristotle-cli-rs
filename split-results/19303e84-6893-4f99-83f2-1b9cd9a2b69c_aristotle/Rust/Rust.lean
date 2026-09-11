@@ -1,2 +1,0 @@
--- Declaration: Rust
--- Extracted by StaticSplit

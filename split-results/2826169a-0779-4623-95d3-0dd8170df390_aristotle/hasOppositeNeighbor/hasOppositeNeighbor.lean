@@ -1,2 +1,0 @@
--- Declaration: hasOppositeNeighbor
--- Extracted by StaticSplit

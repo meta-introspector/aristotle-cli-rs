@@ -1,2 +1,0 @@
--- Declaration: rustTemplate
--- Extracted by StaticSplit

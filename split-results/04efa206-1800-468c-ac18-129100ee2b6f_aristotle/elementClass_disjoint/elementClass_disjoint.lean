@@ -1,2 +1,0 @@
--- Declaration: elementClass_disjoint
--- Extracted by StaticSplit

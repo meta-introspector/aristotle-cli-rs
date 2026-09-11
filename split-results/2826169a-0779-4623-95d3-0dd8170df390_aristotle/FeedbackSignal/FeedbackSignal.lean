@@ -1,2 +1,0 @@
--- Declaration: FeedbackSignal
--- Extracted by StaticSplit

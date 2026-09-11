@@ -1,2 +1,0 @@
--- Declaration: countSessionActions
--- Extracted by StaticSplit

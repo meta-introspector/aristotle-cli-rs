@@ -1,2 +1,0 @@
--- Declaration: entailsCon_of_sub
--- Extracted by StaticSplit

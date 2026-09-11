@@ -1,2 +1,0 @@
--- Declaration: earth_in_range
--- Extracted by StaticSplit

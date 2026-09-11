@@ -1,2 +1,0 @@
--- Declaration: math_has_closure
--- Extracted by StaticSplit

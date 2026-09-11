@@ -1,2 +1,0 @@
--- Declaration: isGhostOn
--- Extracted by StaticSplit

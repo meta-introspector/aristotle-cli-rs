@@ -1,2 +1,0 @@
--- Declaration: pteEq_symm
--- Extracted by StaticSplit

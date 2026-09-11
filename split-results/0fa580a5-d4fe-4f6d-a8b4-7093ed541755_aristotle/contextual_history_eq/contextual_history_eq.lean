@@ -1,2 +1,0 @@
--- Declaration: contextual_history_eq
--- Extracted by StaticSplit

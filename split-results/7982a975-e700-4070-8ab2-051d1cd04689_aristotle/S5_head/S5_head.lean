@@ -1,2 +1,0 @@
--- Declaration: S5_head
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: tech_reaches_computation
--- Extracted by StaticSplit

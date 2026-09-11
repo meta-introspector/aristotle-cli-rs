@@ -1,2 +1,0 @@
--- Declaration: fixed
--- Extracted by StaticSplit

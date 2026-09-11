@@ -1,2 +1,0 @@
--- Declaration: PaxosConsensus
--- Extracted by StaticSplit

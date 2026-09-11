@@ -1,2 +1,0 @@
--- Declaration: invalid_without_authority
--- Extracted by StaticSplit

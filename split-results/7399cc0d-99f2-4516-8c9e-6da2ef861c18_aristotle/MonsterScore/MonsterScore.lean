@@ -1,2 +1,0 @@
--- Declaration: MonsterScore
--- Extracted by StaticSplit

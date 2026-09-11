@@ -1,2 +1,0 @@
--- Declaration: cl0Monomial_ne_zero
--- Extracted by StaticSplit

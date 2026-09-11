@@ -1,2 +1,0 @@
--- Declaration: card_supersingularPrimes
--- Extracted by StaticSplit

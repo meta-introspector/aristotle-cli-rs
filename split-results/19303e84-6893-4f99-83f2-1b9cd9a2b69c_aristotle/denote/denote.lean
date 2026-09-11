@@ -1,2 +1,0 @@
--- Declaration: denote
--- Extracted by StaticSplit

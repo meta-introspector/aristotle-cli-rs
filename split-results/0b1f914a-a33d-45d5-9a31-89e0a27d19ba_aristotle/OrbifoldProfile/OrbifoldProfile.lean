@@ -1,2 +1,0 @@
--- Declaration: OrbifoldProfile
--- Extracted by StaticSplit

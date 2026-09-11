@@ -1,2 +1,0 @@
--- Declaration: obj_CosmicPipeline
--- Extracted by StaticSplit

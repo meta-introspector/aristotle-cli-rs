@@ -1,2 +1,0 @@
--- Declaration: LevelTree.height
--- Extracted by StaticSplit

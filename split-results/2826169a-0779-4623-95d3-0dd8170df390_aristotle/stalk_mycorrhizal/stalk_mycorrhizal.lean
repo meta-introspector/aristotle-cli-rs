@@ -1,2 +1,0 @@
--- Declaration: stalk_mycorrhizal
--- Extracted by StaticSplit

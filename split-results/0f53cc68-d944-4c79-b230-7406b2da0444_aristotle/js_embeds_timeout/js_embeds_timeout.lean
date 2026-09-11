@@ -1,2 +1,0 @@
--- Declaration: js_embeds_timeout
--- Extracted by StaticSplit

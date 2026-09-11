@@ -1,2 +1,0 @@
--- Declaration: RiddickTopicEntry
--- Extracted by StaticSplit

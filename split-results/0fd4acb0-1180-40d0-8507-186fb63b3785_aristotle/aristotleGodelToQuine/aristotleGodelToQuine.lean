@@ -1,2 +1,0 @@
--- Declaration: aristotleGodelToQuine
--- Extracted by StaticSplit

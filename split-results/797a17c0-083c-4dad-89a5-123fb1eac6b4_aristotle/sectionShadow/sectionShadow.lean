@@ -1,2 +1,0 @@
--- Declaration: sectionShadow
--- Extracted by StaticSplit

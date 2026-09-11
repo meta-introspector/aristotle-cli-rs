@@ -1,2 +1,0 @@
--- Declaration: SenateGov
--- Extracted by StaticSplit

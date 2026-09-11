@@ -1,2 +1,0 @@
--- Declaration: isolation_reduction
--- Extracted by StaticSplit

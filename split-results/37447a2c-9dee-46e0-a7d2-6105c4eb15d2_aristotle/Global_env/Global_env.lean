@@ -1,2 +1,0 @@
--- Declaration: Global_env
--- Extracted by StaticSplit

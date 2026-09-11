@@ -1,2 +1,0 @@
--- Declaration: comm_generators_comm_closure
--- Extracted by StaticSplit

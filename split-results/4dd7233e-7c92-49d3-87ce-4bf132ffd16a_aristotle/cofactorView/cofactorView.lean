@@ -1,2 +1,0 @@
--- Declaration: cofactorView
--- Extracted by StaticSplit

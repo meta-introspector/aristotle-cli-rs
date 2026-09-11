@@ -1,2 +1,0 @@
--- Declaration: gaugeGroupHomU
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: root_inner
--- Extracted by StaticSplit

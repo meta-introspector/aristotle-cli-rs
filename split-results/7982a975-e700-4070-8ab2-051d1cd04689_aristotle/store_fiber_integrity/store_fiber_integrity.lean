@@ -1,2 +1,0 @@
--- Declaration: store_fiber_integrity
--- Extracted by StaticSplit

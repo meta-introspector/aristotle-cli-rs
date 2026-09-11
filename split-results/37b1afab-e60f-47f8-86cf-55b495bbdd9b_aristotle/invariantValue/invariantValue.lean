@@ -1,2 +1,0 @@
--- Declaration: invariantValue
--- Extracted by StaticSplit

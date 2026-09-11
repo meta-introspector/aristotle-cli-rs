@@ -1,2 +1,0 @@
--- Declaration: edge_Hecke_p3
--- Extracted by StaticSplit

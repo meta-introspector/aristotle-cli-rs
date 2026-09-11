@@ -1,2 +1,0 @@
--- Declaration: Person
--- Extracted by StaticSplit

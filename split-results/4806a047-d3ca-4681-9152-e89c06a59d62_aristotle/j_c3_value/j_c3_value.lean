@@ -1,2 +1,0 @@
--- Declaration: j_c3_value
--- Extracted by StaticSplit

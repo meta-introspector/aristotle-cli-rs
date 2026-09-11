@@ -1,2 +1,0 @@
--- Declaration: descent_coherent
--- Extracted by StaticSplit

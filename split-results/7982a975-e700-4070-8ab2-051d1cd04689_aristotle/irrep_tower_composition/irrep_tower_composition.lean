@@ -1,2 +1,0 @@
--- Declaration: irrep_tower_composition
--- Extracted by StaticSplit

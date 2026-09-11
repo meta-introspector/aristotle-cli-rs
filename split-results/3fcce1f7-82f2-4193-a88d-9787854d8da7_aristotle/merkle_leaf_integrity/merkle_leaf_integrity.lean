@@ -1,2 +1,0 @@
--- Declaration: merkle_leaf_integrity
--- Extracted by StaticSplit

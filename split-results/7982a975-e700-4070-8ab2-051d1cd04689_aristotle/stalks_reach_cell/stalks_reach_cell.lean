@@ -1,2 +1,0 @@
--- Declaration: stalks_reach_cell
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monsterIrrep_moonshine
--- Extracted by StaticSplit

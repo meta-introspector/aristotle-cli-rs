@@ -1,2 +1,0 @@
--- Declaration: telescope_level_6
--- Extracted by StaticSplit

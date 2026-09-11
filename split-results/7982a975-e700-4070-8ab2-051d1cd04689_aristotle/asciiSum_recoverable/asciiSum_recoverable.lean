@@ -1,2 +1,0 @@
--- Declaration: asciiSum_recoverable
--- Extracted by StaticSplit

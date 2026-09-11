@@ -1,2 +1,0 @@
--- Declaration: AddressRegistry.register_mono
--- Extracted by StaticSplit

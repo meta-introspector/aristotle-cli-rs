@@ -1,2 +1,0 @@
--- Declaration: padic_val_p_sq
--- Extracted by StaticSplit

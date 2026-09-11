@@ -1,2 +1,0 @@
--- Declaration: c1_mod_8
--- Extracted by StaticSplit

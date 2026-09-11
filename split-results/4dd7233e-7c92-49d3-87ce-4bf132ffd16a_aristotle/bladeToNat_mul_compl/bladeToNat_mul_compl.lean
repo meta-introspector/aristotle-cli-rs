@@ -1,2 +1,0 @@
--- Declaration: bladeToNat_mul_compl
--- Extracted by StaticSplit

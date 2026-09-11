@@ -1,2 +1,0 @@
--- Declaration: monodromy_is_nontrivial
--- Extracted by StaticSplit

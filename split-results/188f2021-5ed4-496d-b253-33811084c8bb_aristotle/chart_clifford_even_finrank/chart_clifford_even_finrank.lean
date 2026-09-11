@@ -1,2 +1,0 @@
--- Declaration: chart_clifford_even_finrank
--- Extracted by StaticSplit

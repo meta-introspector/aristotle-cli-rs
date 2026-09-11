@@ -1,2 +1,0 @@
--- Declaration: WitnessLayer.fromIPLDNode
--- Extracted by StaticSplit

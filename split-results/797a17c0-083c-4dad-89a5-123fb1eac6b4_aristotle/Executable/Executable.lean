@@ -1,2 +1,0 @@
--- Declaration: Executable
--- Extracted by StaticSplit

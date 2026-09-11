@@ -1,2 +1,0 @@
--- Declaration: StructRepresentation_Tuple
--- Extracted by StaticSplit

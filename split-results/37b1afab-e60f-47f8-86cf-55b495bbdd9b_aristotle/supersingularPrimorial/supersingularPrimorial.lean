@@ -1,2 +1,0 @@
--- Declaration: supersingularPrimorial
--- Extracted by StaticSplit

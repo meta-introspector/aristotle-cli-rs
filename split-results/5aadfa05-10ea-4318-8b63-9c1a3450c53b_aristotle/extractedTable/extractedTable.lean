@@ -1,2 +1,0 @@
--- Declaration: extractedTable
--- Extracted by StaticSplit

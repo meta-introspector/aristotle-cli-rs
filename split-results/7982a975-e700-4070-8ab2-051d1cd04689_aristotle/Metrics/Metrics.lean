@@ -1,2 +1,0 @@
--- Declaration: Metrics
--- Extracted by StaticSplit

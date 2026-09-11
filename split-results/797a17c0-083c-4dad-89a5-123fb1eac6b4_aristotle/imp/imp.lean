@@ -1,2 +1,0 @@
--- Declaration: imp
--- Extracted by StaticSplit

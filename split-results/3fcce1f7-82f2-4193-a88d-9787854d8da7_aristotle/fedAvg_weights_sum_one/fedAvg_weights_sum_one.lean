@@ -1,2 +1,0 @@
--- Declaration: fedAvg_weights_sum_one
--- Extracted by StaticSplit

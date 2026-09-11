@@ -1,2 +1,0 @@
--- Declaration: UmbralIndex
--- Extracted by StaticSplit

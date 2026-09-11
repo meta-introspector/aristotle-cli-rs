@@ -1,2 +1,0 @@
--- Declaration: promethean_coordinates
--- Extracted by StaticSplit

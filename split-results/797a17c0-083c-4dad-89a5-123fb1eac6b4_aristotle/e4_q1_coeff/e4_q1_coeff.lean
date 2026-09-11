@@ -1,2 +1,0 @@
--- Declaration: e4_q1_coeff
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: gram_diag_s
--- Extracted by StaticSplit

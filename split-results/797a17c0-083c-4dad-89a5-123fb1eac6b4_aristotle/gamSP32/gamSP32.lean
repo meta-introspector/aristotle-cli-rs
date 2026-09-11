@@ -1,2 +1,0 @@
--- Declaration: gamSP32
--- Extracted by StaticSplit

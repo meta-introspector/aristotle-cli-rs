@@ -1,2 +1,0 @@
--- Declaration: suaSponte
--- Extracted by StaticSplit

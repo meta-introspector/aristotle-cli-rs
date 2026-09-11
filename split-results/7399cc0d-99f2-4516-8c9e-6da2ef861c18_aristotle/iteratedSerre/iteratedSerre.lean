@@ -1,2 +1,0 @@
--- Declaration: iteratedSerre
--- Extracted by StaticSplit

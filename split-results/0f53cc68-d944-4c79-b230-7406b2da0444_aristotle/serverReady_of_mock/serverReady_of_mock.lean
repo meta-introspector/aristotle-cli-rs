@@ -1,2 +1,0 @@
--- Declaration: serverReady_of_mock
--- Extracted by StaticSplit

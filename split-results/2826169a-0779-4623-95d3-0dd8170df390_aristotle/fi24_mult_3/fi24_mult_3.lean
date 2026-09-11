@@ -1,2 +1,0 @@
--- Declaration: fi24_mult_3
--- Extracted by StaticSplit

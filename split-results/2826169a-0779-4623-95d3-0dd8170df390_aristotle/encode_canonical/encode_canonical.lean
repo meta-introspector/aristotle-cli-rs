@@ -1,2 +1,0 @@
--- Declaration: encode_canonical
--- Extracted by StaticSplit

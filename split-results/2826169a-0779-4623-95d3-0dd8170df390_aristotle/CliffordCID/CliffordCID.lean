@@ -1,2 +1,0 @@
--- Declaration: CliffordCID
--- Extracted by StaticSplit

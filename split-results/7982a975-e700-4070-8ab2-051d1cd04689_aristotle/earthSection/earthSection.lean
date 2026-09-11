@@ -1,2 +1,0 @@
--- Declaration: earthSection
--- Extracted by StaticSplit

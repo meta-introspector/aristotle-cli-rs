@@ -1,2 +1,0 @@
--- Declaration: toMap_ofMap
--- Extracted by StaticSplit

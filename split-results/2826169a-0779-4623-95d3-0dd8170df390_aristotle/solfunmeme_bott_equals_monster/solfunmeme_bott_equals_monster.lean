@@ -1,2 +1,0 @@
--- Declaration: solfunmeme_bott_equals_monster
--- Extracted by StaticSplit

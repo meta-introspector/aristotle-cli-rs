@@ -1,2 +1,0 @@
--- Declaration: superstringStartWalker
--- Extracted by StaticSplit

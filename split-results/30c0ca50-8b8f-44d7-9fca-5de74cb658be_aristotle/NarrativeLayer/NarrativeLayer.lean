@@ -1,2 +1,0 @@
--- Declaration: NarrativeLayer
--- Extracted by StaticSplit

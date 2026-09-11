@@ -1,2 +1,0 @@
--- Declaration: departure_contains_q42
--- Extracted by StaticSplit

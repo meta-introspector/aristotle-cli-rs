@@ -1,2 +1,0 @@
--- Declaration: ratio_pow_42_lt_one
--- Extracted by StaticSplit

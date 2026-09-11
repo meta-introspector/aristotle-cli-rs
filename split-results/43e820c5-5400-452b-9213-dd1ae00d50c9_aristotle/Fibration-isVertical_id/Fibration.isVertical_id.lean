@@ -1,2 +1,0 @@
--- Declaration: Fibration.isVertical_id
--- Extracted by StaticSplit

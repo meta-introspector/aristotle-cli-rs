@@ -1,2 +1,0 @@
--- Declaration: exampleCharge
--- Extracted by StaticSplit

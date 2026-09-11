@@ -1,2 +1,0 @@
--- Declaration: modulus_factorization
--- Extracted by StaticSplit

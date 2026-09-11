@@ -1,2 +1,0 @@
--- Declaration: advance_preserves_wf
--- Extracted by StaticSplit

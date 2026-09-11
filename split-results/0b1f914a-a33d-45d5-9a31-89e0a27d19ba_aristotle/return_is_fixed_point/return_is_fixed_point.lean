@@ -1,2 +1,0 @@
--- Declaration: return_is_fixed_point
--- Extracted by StaticSplit

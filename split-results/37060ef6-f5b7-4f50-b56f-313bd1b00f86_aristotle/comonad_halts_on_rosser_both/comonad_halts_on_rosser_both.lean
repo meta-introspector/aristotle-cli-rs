@@ -1,2 +1,0 @@
--- Declaration: comonad_halts_on_rosser_both
--- Extracted by StaticSplit

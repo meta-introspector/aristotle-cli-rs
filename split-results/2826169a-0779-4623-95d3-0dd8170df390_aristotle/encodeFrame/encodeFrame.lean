@@ -1,2 +1,0 @@
--- Declaration: encodeFrame
--- Extracted by StaticSplit

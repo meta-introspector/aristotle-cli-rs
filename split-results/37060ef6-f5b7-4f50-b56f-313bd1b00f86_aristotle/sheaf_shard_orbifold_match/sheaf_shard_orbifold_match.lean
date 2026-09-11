@@ -1,2 +1,0 @@
--- Declaration: sheaf_shard_orbifold_match
--- Extracted by StaticSplit

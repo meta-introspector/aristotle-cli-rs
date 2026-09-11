@@ -1,2 +1,0 @@
--- Declaration: ConstraintType.le0
--- Extracted by StaticSplit

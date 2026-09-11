@@ -1,2 +1,0 @@
--- Declaration: HasCoCartLift
--- Extracted by StaticSplit

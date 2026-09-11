@@ -1,2 +1,0 @@
--- Declaration: siegel_weight
--- Extracted by StaticSplit

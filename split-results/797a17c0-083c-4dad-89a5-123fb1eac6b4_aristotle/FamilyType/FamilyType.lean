@@ -1,2 +1,0 @@
--- Declaration: FamilyType
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: realIndex
--- Extracted by StaticSplit

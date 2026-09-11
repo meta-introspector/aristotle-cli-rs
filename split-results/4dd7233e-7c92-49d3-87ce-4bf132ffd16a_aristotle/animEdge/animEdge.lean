@@ -1,2 +1,0 @@
--- Declaration: animEdge
--- Extracted by StaticSplit

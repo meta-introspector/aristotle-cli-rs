@@ -1,2 +1,0 @@
--- Declaration: orbifoldProject
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ramanujan_tau_hecke_4
--- Extracted by StaticSplit

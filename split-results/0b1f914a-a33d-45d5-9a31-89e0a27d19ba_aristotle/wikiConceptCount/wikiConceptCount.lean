@@ -1,2 +1,0 @@
--- Declaration: wikiConceptCount
--- Extracted by StaticSplit

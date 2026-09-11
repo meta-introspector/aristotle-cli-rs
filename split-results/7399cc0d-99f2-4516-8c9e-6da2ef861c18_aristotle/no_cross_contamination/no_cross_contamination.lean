@@ -1,2 +1,0 @@
--- Declaration: no_cross_contamination
--- Extracted by StaticSplit

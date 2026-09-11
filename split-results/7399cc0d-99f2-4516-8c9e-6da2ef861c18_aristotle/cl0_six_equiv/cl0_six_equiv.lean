@@ -1,2 +1,0 @@
--- Declaration: cl0_six_equiv
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: prime_transitions
--- Extracted by StaticSplit

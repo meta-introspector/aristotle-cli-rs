@@ -1,2 +1,0 @@
--- Declaration: starship_ready
--- Extracted by StaticSplit

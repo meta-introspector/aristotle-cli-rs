@@ -1,2 +1,0 @@
--- Declaration: bott_generator_order_8
--- Extracted by StaticSplit

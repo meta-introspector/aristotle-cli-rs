@@ -1,2 +1,0 @@
--- Declaration: realK
--- Extracted by StaticSplit

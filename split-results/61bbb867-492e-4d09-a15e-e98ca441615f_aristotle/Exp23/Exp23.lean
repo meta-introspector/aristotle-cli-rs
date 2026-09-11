@@ -1,2 +1,0 @@
--- Declaration: Exp23
--- Extracted by StaticSplit

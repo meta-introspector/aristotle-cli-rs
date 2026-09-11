@@ -1,2 +1,0 @@
--- Declaration: canonical_generator_free_count
--- Extracted by StaticSplit

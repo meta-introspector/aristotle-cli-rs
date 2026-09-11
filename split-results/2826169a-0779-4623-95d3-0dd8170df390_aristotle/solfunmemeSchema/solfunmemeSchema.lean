@@ -1,2 +1,0 @@
--- Declaration: solfunmemeSchema
--- Extracted by StaticSplit

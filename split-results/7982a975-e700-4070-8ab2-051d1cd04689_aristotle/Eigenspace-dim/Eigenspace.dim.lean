@@ -1,2 +1,0 @@
--- Declaration: Eigenspace.dim
--- Extracted by StaticSplit

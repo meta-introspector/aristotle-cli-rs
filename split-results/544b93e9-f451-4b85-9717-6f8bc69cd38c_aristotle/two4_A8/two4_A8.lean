@@ -1,2 +1,0 @@
--- Declaration: two4_A8
--- Extracted by StaticSplit

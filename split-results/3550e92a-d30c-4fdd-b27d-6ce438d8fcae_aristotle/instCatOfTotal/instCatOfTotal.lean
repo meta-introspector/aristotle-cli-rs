@@ -1,2 +1,0 @@
--- Declaration: instCatOfTotal
--- Extracted by StaticSplit

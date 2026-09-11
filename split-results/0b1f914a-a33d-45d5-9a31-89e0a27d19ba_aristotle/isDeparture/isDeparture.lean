@@ -1,2 +1,0 @@
--- Declaration: isDeparture
--- Extracted by StaticSplit

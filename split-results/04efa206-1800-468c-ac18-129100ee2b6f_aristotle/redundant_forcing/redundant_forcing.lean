@@ -1,2 +1,0 @@
--- Declaration: redundant_forcing
--- Extracted by StaticSplit

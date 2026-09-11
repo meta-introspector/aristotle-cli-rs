@@ -1,2 +1,0 @@
--- Declaration: jitterStep
--- Extracted by StaticSplit

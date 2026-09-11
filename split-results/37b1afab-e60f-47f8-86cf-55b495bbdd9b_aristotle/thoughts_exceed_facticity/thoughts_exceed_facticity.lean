@@ -1,2 +1,0 @@
--- Declaration: thoughts_exceed_facticity
--- Extracted by StaticSplit

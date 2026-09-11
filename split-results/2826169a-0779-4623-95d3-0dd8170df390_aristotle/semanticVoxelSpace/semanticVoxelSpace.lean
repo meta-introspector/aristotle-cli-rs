@@ -1,2 +1,0 @@
--- Declaration: semanticVoxelSpace
--- Extracted by StaticSplit

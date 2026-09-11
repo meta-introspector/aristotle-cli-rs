@@ -1,2 +1,0 @@
--- Declaration: oggorial_threads_agree
--- Extracted by StaticSplit

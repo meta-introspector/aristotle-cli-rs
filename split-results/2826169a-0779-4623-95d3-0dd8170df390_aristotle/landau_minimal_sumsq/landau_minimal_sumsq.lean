@@ -1,2 +1,0 @@
--- Declaration: landau_minimal_sumsq
--- Extracted by StaticSplit

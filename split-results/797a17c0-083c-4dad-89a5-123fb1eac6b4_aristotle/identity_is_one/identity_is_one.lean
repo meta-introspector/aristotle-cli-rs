@@ -1,2 +1,0 @@
--- Declaration: identity_is_one
--- Extracted by StaticSplit

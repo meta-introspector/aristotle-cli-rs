@@ -1,2 +1,0 @@
--- Declaration: GlobalEnv.lookup
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: hasseK
--- Extracted by StaticSplit

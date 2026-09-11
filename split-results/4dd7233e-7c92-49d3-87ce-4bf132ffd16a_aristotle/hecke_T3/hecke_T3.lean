@@ -1,2 +1,0 @@
--- Declaration: hecke_T3
--- Extracted by StaticSplit

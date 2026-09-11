@@ -1,2 +1,0 @@
--- Declaration: numerical_spine
--- Extracted by StaticSplit

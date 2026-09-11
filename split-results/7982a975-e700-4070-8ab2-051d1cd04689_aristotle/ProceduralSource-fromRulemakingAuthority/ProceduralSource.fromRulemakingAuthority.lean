@@ -1,2 +1,0 @@
--- Declaration: ProceduralSource.fromRulemakingAuthority
--- Extracted by StaticSplit

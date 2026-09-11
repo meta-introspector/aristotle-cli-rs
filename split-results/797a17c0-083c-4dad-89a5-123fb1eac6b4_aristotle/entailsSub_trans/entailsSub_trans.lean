@@ -1,2 +1,0 @@
--- Declaration: entailsSub_trans
--- Extracted by StaticSplit

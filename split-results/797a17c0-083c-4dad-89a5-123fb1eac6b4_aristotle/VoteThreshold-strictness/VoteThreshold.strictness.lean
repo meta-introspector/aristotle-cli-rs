@@ -1,2 +1,0 @@
--- Declaration: VoteThreshold.strictness
--- Extracted by StaticSplit

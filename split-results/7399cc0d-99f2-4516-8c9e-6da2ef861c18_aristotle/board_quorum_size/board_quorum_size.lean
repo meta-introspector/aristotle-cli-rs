@@ -1,2 +1,0 @@
--- Declaration: board_quorum_size
--- Extracted by StaticSplit

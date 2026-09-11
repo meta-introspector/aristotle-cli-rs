@@ -1,2 +1,0 @@
--- Declaration: S7_complete
--- Extracted by StaticSplit

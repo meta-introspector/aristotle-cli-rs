@@ -1,2 +1,0 @@
--- Declaration: entailsSub_combine_left
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: elixir_19_hecke_stable
--- Extracted by StaticSplit

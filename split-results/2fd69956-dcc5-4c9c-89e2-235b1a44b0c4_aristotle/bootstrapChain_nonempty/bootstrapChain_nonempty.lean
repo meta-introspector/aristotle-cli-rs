@@ -1,2 +1,0 @@
--- Declaration: bootstrapChain_nonempty
--- Extracted by StaticSplit

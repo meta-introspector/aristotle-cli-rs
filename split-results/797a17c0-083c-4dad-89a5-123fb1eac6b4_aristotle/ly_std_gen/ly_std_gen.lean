@@ -1,2 +1,0 @@
--- Declaration: ly_std_gen
--- Extracted by StaticSplit

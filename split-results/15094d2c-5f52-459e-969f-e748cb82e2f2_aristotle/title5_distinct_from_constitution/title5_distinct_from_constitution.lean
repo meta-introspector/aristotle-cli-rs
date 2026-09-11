@@ -1,2 +1,0 @@
--- Declaration: title5_distinct_from_constitution
--- Extracted by StaticSplit

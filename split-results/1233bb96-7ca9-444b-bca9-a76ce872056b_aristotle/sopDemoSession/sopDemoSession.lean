@@ -1,2 +1,0 @@
--- Declaration: sopDemoSession
--- Extracted by StaticSplit

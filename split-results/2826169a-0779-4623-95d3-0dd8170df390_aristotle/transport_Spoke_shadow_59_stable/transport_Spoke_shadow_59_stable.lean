@@ -1,2 +1,0 @@
--- Declaration: transport_Spoke_shadow_59_stable
--- Extracted by StaticSplit

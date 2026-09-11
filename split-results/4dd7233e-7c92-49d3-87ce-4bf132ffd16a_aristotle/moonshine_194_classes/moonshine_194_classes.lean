@@ -1,2 +1,0 @@
--- Declaration: moonshine_194_classes
--- Extracted by StaticSplit

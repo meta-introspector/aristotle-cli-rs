@@ -1,2 +1,0 @@
--- Declaration: Vault.deposit
--- Extracted by StaticSplit

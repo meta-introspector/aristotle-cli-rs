@@ -1,2 +1,0 @@
--- Declaration: generalizedMoonshinePairs
--- Extracted by StaticSplit

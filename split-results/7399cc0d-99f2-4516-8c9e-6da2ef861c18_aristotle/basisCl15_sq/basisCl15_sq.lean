@@ -1,2 +1,0 @@
--- Declaration: basisCl15_sq
--- Extracted by StaticSplit

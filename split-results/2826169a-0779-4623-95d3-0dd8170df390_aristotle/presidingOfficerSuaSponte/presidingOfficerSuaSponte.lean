@@ -1,2 +1,0 @@
--- Declaration: presidingOfficerSuaSponte
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ffiZero
--- Extracted by StaticSplit

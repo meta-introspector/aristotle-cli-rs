@@ -1,2 +1,0 @@
--- Declaration: ucStandingOrders118th
--- Extracted by StaticSplit

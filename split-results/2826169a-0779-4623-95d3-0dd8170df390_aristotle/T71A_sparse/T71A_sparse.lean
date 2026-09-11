@@ -1,2 +1,0 @@
--- Declaration: T71A_sparse
--- Extracted by StaticSplit

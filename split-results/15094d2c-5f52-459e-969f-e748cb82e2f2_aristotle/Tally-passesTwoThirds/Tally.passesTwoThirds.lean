@@ -1,2 +1,0 @@
--- Declaration: Tally.passesTwoThirds
--- Extracted by StaticSplit

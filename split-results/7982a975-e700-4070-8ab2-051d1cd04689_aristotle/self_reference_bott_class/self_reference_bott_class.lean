@@ -1,2 +1,0 @@
--- Declaration: self_reference_bott_class
--- Extracted by StaticSplit

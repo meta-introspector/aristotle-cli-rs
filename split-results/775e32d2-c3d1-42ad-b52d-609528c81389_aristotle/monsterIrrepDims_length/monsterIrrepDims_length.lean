@@ -1,2 +1,0 @@
--- Declaration: monsterIrrepDims_length
--- Extracted by StaticSplit

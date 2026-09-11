@@ -1,2 +1,0 @@
--- Declaration: mathieu_bott_classes
--- Extracted by StaticSplit

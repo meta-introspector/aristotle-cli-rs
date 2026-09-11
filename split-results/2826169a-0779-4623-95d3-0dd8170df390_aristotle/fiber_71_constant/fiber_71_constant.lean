@@ -1,2 +1,0 @@
--- Declaration: fiber_71_constant
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: data_slots_per_type
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: entailsSub_mapKB
--- Extracted by StaticSplit

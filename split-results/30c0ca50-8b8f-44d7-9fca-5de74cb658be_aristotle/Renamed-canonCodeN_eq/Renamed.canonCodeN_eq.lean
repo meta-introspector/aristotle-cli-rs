@@ -1,2 +1,0 @@
--- Declaration: Renamed.canonCodeN_eq
--- Extracted by StaticSplit

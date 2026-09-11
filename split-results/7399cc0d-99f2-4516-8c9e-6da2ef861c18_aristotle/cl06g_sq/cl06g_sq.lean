@@ -1,2 +1,0 @@
--- Declaration: cl06g_sq
--- Extracted by StaticSplit

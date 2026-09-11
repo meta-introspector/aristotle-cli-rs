@@ -1,2 +1,0 @@
--- Declaration: SheafSection.crtCompatible
--- Extracted by StaticSplit

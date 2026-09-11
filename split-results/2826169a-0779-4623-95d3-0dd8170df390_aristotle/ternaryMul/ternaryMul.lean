@@ -1,2 +1,0 @@
--- Declaration: ternaryMul
--- Extracted by StaticSplit

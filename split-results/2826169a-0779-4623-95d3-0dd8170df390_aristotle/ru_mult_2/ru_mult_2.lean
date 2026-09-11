@@ -1,2 +1,0 @@
--- Declaration: ru_mult_2
--- Extracted by StaticSplit

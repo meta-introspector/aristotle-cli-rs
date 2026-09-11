@@ -1,2 +1,0 @@
--- Declaration: cordycepsProcess
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: GrothendieckEndo.id
--- Extracted by StaticSplit

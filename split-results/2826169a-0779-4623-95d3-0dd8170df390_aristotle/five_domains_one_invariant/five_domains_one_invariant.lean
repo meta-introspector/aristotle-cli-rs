@@ -1,2 +1,0 @@
--- Declaration: five_domains_one_invariant
--- Extracted by StaticSplit

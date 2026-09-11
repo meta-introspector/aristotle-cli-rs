@@ -1,2 +1,0 @@
--- Declaration: monsterOrder_eq
--- Extracted by StaticSplit

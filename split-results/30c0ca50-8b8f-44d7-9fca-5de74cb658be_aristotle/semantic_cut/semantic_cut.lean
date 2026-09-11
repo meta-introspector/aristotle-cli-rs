@@ -1,2 +1,0 @@
--- Declaration: semantic_cut
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MarketOptimal
--- Extracted by StaticSplit

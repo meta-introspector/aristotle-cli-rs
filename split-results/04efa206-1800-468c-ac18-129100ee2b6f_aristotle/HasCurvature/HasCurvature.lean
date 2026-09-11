@@ -1,2 +1,0 @@
--- Declaration: HasCurvature
--- Extracted by StaticSplit

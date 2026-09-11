@@ -1,2 +1,0 @@
--- Declaration: moonshineGraph_valid
--- Extracted by StaticSplit

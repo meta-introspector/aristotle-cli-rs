@@ -1,2 +1,0 @@
--- Declaration: sspPrimeAt_prime
--- Extracted by StaticSplit

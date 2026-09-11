@@ -1,2 +1,0 @@
--- Declaration: TentacleSearch.numAttempts
--- Extracted by StaticSplit

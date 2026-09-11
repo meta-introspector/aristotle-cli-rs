@@ -1,2 +1,0 @@
--- Declaration: exists_fifth_point
--- Extracted by StaticSplit

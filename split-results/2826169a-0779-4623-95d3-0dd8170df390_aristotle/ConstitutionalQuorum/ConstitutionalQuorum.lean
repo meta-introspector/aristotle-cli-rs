@@ -1,2 +1,0 @@
--- Declaration: ConstitutionalQuorum
--- Extracted by StaticSplit

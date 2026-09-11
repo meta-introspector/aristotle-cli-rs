@@ -1,2 +1,0 @@
--- Declaration: grade_8_is_0
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: selfRefAddr_val
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: aristotle_expressivity
--- Extracted by StaticSplit

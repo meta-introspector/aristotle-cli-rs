@@ -1,2 +1,0 @@
--- Declaration: EnforcementSession.totalViolations
--- Extracted by StaticSplit

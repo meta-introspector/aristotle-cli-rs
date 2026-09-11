@@ -1,2 +1,0 @@
--- Declaration: BottAddr
--- Extracted by StaticSplit

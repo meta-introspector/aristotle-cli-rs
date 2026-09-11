@@ -1,2 +1,0 @@
--- Declaration: nil_self_evaluating
--- Extracted by StaticSplit

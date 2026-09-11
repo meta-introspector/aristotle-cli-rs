@@ -1,2 +1,0 @@
--- Declaration: auto_norm
--- Extracted by StaticSplit

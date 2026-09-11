@@ -1,2 +1,0 @@
--- Declaration: heckeOp
--- Extracted by StaticSplit

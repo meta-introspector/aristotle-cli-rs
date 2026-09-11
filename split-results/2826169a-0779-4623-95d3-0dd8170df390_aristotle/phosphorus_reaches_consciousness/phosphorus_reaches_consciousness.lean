@@ -1,2 +1,0 @@
--- Declaration: phosphorus_reaches_consciousness
--- Extracted by StaticSplit

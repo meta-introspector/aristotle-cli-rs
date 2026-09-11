@@ -1,2 +1,0 @@
--- Declaration: conway0_two_conway1
--- Extracted by StaticSplit

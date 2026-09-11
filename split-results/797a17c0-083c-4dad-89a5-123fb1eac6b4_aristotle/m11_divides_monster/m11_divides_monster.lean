@@ -1,2 +1,0 @@
--- Declaration: m11_divides_monster
--- Extracted by StaticSplit

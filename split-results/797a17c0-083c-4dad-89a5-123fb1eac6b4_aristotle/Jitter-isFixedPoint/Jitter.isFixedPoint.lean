@@ -1,2 +1,0 @@
--- Declaration: Jitter.isFixedPoint
--- Extracted by StaticSplit

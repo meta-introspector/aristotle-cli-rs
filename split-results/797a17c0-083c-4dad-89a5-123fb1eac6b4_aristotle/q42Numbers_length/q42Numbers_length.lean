@@ -1,2 +1,0 @@
--- Declaration: q42Numbers_length
--- Extracted by StaticSplit

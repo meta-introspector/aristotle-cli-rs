@@ -1,2 +1,0 @@
--- Declaration: traceProd
--- Extracted by StaticSplit

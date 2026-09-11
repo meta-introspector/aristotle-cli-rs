@@ -1,2 +1,0 @@
--- Declaration: kether_spectral_residue
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: chartTriple
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: FederalQuestionCase
--- Extracted by StaticSplit

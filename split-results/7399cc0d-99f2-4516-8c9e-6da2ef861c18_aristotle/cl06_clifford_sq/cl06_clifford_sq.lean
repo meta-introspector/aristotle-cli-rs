@@ -1,2 +1,0 @@
--- Declaration: cl06_clifford_sq
--- Extracted by StaticSplit

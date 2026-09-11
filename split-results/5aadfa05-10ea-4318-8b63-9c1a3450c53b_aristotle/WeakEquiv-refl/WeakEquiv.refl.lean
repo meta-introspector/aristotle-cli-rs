@@ -1,2 +1,0 @@
--- Declaration: WeakEquiv.refl
--- Extracted by StaticSplit

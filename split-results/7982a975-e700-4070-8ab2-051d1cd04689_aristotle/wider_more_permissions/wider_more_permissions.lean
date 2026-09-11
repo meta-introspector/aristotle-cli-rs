@@ -1,2 +1,0 @@
--- Declaration: wider_more_permissions
--- Extracted by StaticSplit

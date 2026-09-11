@@ -1,2 +1,0 @@
--- Declaration: j_ratio_32_near_integer
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: emojiEncode
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: j_constant_744
--- Extracted by StaticSplit

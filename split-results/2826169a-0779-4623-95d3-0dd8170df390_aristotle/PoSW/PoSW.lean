@@ -1,2 +1,0 @@
--- Declaration: PoSW
--- Extracted by StaticSplit

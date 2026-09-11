@@ -1,2 +1,0 @@
--- Declaration: chytridProcess
--- Extracted by StaticSplit

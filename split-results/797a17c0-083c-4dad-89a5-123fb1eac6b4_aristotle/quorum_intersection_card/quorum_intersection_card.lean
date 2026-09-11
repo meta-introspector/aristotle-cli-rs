@@ -1,2 +1,0 @@
--- Declaration: quorum_intersection_card
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: repl_enacts_monomyth
--- Extracted by StaticSplit

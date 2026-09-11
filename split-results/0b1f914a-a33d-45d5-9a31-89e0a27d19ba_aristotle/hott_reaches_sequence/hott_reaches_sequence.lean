@@ -1,2 +1,0 @@
--- Declaration: hott_reaches_sequence
--- Extracted by StaticSplit

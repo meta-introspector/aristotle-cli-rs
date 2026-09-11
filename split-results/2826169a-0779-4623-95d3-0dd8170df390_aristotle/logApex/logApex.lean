@@ -1,2 +1,0 @@
--- Declaration: logApex
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: tFullTransport
--- Extracted by StaticSplit

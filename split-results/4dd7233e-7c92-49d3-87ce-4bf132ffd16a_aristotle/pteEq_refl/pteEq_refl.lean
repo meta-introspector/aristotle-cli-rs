@@ -1,2 +1,0 @@
--- Declaration: pteEq_refl
--- Extracted by StaticSplit

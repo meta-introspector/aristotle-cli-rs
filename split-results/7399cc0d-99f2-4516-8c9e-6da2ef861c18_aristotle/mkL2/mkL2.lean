@@ -1,2 +1,0 @@
--- Declaration: mkL2
--- Extracted by StaticSplit

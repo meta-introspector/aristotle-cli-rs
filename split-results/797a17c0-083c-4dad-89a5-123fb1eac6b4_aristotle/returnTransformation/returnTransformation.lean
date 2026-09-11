@@ -1,2 +1,0 @@
--- Declaration: returnTransformation
--- Extracted by StaticSplit

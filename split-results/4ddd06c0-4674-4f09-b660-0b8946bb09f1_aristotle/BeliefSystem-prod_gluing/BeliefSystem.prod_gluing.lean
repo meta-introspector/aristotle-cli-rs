@@ -1,2 +1,0 @@
--- Declaration: BeliefSystem.prod_gluing
--- Extracted by StaticSplit

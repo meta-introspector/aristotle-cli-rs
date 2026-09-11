@@ -1,2 +1,0 @@
--- Declaration: total_primary_cells
--- Extracted by StaticSplit

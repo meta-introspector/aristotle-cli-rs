@@ -1,2 +1,0 @@
--- Declaration: apotheosis
--- Extracted by StaticSplit

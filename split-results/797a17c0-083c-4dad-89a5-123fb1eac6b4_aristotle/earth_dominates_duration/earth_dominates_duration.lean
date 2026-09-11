@@ -1,2 +1,0 @@
--- Declaration: earth_dominates_duration
--- Extracted by StaticSplit

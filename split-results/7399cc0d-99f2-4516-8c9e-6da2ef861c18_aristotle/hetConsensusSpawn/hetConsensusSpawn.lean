@@ -1,2 +1,0 @@
--- Declaration: hetConsensusSpawn
--- Extracted by StaticSplit

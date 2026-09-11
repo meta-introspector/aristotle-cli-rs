@@ -1,2 +1,0 @@
--- Declaration: FilterSpan
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monsterRelevant_below_512
--- Extracted by StaticSplit

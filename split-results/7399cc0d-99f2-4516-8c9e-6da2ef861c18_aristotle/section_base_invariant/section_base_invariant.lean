@@ -1,2 +1,0 @@
--- Declaration: section_base_invariant
--- Extracted by StaticSplit

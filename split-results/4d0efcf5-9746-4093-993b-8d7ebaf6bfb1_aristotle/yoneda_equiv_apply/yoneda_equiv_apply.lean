@@ -1,2 +1,0 @@
--- Declaration: yoneda_equiv_apply
--- Extracted by StaticSplit

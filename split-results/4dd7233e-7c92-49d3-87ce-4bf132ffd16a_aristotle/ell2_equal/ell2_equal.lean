@@ -1,2 +1,0 @@
--- Declaration: ell2_equal
--- Extracted by StaticSplit

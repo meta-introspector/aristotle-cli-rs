@@ -1,2 +1,0 @@
--- Declaration: allGenerators
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MonsterGroup
--- Extracted by StaticSplit

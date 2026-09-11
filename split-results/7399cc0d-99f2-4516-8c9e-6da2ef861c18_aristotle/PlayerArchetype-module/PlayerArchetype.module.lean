@@ -1,2 +1,0 @@
--- Declaration: PlayerArchetype.module
--- Extracted by StaticSplit

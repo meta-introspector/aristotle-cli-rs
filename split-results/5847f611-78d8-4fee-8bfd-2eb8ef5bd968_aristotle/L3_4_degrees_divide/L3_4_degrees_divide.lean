@@ -1,2 +1,0 @@
--- Declaration: L3_4_degrees_divide
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: coreEmojis
--- Extracted by StaticSplit

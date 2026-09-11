@@ -1,2 +1,0 @@
--- Declaration: mapping_coverage
--- Extracted by StaticSplit

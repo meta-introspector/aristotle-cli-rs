@@ -1,2 +1,0 @@
--- Declaration: beq
--- Extracted by StaticSplit

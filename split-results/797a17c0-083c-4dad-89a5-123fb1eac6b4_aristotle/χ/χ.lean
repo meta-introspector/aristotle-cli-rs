@@ -1,2 +1,0 @@
--- Declaration: χ
--- Extracted by StaticSplit

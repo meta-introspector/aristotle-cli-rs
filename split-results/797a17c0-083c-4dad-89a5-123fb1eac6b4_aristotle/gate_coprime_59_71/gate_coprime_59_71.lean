@@ -1,2 +1,0 @@
--- Declaration: gate_coprime_59_71
--- Extracted by StaticSplit

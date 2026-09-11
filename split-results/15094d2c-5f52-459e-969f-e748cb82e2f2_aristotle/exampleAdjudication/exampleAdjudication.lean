@@ -1,2 +1,0 @@
--- Declaration: exampleAdjudication
--- Extracted by StaticSplit

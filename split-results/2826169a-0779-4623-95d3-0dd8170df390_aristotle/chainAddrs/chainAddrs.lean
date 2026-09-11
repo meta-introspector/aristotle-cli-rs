@@ -1,2 +1,0 @@
--- Declaration: chainAddrs
--- Extracted by StaticSplit

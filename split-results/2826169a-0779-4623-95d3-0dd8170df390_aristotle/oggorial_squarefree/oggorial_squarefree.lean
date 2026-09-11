@@ -1,2 +1,0 @@
--- Declaration: oggorial_squarefree
--- Extracted by StaticSplit

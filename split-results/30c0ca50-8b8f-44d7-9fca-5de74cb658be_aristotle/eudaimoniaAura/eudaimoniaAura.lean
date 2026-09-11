@@ -1,2 +1,0 @@
--- Declaration: eudaimoniaAura
--- Extracted by StaticSplit

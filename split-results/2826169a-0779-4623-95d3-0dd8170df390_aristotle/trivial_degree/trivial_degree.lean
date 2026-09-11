@@ -1,2 +1,0 @@
--- Declaration: trivial_degree
--- Extracted by StaticSplit

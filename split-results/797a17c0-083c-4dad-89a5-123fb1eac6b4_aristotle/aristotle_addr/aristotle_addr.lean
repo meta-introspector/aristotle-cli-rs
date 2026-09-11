@@ -1,2 +1,0 @@
--- Declaration: aristotle_addr
--- Extracted by StaticSplit

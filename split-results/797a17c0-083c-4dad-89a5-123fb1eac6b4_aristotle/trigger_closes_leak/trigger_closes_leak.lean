@@ -1,2 +1,0 @@
--- Declaration: trigger_closes_leak
--- Extracted by StaticSplit

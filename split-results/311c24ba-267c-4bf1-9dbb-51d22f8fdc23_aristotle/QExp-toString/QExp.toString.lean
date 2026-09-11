@@ -1,2 +1,0 @@
--- Declaration: QExp.toString
--- Extracted by StaticSplit

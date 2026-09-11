@@ -1,2 +1,0 @@
--- Declaration: cartan_real
--- Extracted by StaticSplit

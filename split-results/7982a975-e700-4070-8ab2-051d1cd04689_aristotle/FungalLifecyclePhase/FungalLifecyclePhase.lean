@@ -1,2 +1,0 @@
--- Declaration: FungalLifecyclePhase
--- Extracted by StaticSplit

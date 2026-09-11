@@ -1,2 +1,0 @@
--- Declaration: light_prime_contribution
--- Extracted by StaticSplit

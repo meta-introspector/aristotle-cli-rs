@@ -1,2 +1,0 @@
--- Declaration: supersingular_max
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: azClassSpectrum
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monodromy71_invisible
--- Extracted by StaticSplit

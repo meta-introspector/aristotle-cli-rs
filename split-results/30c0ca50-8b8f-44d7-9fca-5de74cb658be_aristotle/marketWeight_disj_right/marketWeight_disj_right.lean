@@ -1,2 +1,0 @@
--- Declaration: marketWeight_disj_right
--- Extracted by StaticSplit

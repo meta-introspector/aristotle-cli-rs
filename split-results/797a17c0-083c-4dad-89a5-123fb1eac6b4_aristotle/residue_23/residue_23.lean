@@ -1,2 +1,0 @@
--- Declaration: residue_23
--- Extracted by StaticSplit

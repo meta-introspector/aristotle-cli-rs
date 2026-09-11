@@ -1,2 +1,0 @@
--- Declaration: every_boardroom_has_hidden_alternative
--- Extracted by StaticSplit

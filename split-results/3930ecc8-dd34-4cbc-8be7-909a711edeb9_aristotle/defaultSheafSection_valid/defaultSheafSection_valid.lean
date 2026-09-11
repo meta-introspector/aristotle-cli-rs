@@ -1,2 +1,0 @@
--- Declaration: defaultSheafSection_valid
--- Extracted by StaticSplit

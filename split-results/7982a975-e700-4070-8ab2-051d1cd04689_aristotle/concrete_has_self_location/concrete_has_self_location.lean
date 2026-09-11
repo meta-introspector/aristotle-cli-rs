@@ -1,2 +1,0 @@
--- Declaration: concrete_has_self_location
--- Extracted by StaticSplit

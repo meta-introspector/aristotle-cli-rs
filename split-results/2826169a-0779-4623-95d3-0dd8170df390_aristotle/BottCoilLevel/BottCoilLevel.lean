@@ -1,2 +1,0 @@
--- Declaration: BottCoilLevel
--- Extracted by StaticSplit

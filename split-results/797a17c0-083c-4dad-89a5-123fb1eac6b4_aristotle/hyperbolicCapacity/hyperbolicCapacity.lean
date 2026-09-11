@@ -1,2 +1,0 @@
--- Declaration: hyperbolicCapacity
--- Extracted by StaticSplit

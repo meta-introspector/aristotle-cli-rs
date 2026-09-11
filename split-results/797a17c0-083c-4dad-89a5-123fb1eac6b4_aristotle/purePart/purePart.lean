@@ -1,2 +1,0 @@
--- Declaration: purePart
--- Extracted by StaticSplit

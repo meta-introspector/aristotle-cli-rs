@@ -1,2 +1,0 @@
--- Declaration: master_bridge
--- Extracted by StaticSplit

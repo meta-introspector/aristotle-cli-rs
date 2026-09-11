@@ -1,2 +1,0 @@
--- Declaration: Omega_numHoles
--- Extracted by StaticSplit

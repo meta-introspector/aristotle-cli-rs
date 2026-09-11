@@ -1,2 +1,0 @@
--- Declaration: toSnakeCase
--- Extracted by StaticSplit

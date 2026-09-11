@@ -1,2 +1,0 @@
--- Declaration: bott_index_mod
--- Extracted by StaticSplit

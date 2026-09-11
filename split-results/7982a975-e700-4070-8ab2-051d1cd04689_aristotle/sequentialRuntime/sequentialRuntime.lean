@@ -1,2 +1,0 @@
--- Declaration: sequentialRuntime
--- Extracted by StaticSplit

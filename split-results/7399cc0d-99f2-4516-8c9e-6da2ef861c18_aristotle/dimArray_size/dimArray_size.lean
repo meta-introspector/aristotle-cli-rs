@@ -1,2 +1,0 @@
--- Declaration: dimArray_size
--- Extracted by StaticSplit

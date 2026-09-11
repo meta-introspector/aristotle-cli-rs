@@ -1,2 +1,0 @@
--- Declaration: ringHomV
--- Extracted by StaticSplit

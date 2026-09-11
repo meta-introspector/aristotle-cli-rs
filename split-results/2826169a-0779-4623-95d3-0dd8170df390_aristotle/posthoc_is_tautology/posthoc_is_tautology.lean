@@ -1,2 +1,0 @@
--- Declaration: posthoc_is_tautology
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: syntaxMap
--- Extracted by StaticSplit

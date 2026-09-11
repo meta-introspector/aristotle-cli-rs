@@ -1,2 +1,0 @@
--- Declaration: compress_wellFormed
--- Extracted by StaticSplit

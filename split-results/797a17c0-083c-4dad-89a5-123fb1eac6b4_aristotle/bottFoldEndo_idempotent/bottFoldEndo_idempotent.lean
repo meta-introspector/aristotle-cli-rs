@@ -1,2 +1,0 @@
--- Declaration: bottFoldEndo_idempotent
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: kernel_admits_only_checked
--- Extracted by StaticSplit

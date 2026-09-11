@@ -1,2 +1,0 @@
--- Declaration: worldtree_factorization
--- Extracted by StaticSplit

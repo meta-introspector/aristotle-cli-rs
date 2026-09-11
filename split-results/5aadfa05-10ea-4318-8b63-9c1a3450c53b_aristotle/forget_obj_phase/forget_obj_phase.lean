@@ -1,2 +1,0 @@
--- Declaration: forget_obj_phase
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cl08_gen
--- Extracted by StaticSplit

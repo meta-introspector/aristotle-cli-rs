@@ -1,2 +1,0 @@
--- Declaration: bott_class_match
--- Extracted by StaticSplit

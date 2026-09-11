@@ -1,2 +1,0 @@
--- Declaration: FiniteModel
--- Extracted by StaticSplit

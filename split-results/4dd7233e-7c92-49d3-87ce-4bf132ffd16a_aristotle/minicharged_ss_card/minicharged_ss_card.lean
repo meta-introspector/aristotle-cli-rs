@@ -1,2 +1,0 @@
--- Declaration: minicharged_ss_card
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: UnifiedMetaTower.constant_base
--- Extracted by StaticSplit

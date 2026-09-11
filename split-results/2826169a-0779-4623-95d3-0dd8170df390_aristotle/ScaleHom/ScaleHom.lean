@@ -1,2 +1,0 @@
--- Declaration: ScaleHom
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: AZClass.cliffordSig
--- Extracted by StaticSplit

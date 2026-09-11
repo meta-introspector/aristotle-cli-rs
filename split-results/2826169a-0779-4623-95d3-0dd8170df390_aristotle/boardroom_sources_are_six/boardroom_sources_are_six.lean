@@ -1,2 +1,0 @@
--- Declaration: boardroom_sources_are_six
--- Extracted by StaticSplit

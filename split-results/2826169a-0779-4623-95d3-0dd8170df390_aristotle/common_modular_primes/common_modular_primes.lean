@@ -1,2 +1,0 @@
--- Declaration: common_modular_primes
--- Extracted by StaticSplit

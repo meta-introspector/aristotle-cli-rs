@@ -1,2 +1,0 @@
--- Declaration: precedent_monotone_across_sessions
--- Extracted by StaticSplit

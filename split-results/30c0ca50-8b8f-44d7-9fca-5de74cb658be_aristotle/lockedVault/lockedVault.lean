@@ -1,2 +1,0 @@
--- Declaration: lockedVault
--- Extracted by StaticSplit

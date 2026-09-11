@@ -1,2 +1,0 @@
--- Declaration: Codec
--- Extracted by StaticSplit

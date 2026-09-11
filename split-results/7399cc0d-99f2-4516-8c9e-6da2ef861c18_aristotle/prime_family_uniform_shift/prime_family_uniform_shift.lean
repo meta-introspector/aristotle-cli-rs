@@ -1,2 +1,0 @@
--- Declaration: prime_family_uniform_shift
--- Extracted by StaticSplit

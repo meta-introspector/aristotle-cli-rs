@@ -1,2 +1,0 @@
--- Declaration: TNetworkType
--- Extracted by StaticSplit

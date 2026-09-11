@@ -1,2 +1,0 @@
--- Declaration: Fibration.Fiber
--- Extracted by StaticSplit

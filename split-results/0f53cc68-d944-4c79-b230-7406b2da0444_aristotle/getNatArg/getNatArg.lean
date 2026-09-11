@@ -1,2 +1,0 @@
--- Declaration: getNatArg
--- Extracted by StaticSplit

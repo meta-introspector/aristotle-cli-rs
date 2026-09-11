@@ -1,2 +1,0 @@
--- Declaration: invertedIndexByPrime
--- Extracted by StaticSplit

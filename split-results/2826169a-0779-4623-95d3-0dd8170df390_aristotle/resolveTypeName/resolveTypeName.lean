@@ -1,2 +1,0 @@
--- Declaration: resolveTypeName
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: GovDecision
--- Extracted by StaticSplit

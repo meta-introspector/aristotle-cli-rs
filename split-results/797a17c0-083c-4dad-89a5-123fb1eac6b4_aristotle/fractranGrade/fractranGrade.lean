@@ -1,2 +1,0 @@
--- Declaration: fractranGrade
--- Extracted by StaticSplit

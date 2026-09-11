@@ -1,2 +1,0 @@
--- Declaration: activateNeg_selfBlade_boundaryClass
--- Extracted by StaticSplit

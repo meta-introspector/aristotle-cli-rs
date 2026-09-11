@@ -1,2 +1,0 @@
--- Declaration: baby_monster_irrep_dim
--- Extracted by StaticSplit

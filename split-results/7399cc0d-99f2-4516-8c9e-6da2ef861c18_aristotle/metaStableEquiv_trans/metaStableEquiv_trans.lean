@@ -1,2 +1,0 @@
--- Declaration: metaStableEquiv_trans
--- Extracted by StaticSplit

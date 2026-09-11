@@ -1,2 +1,0 @@
--- Declaration: regression_retraction_stable
--- Extracted by StaticSplit

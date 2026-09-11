@@ -1,2 +1,0 @@
--- Declaration: exampleSliceTile
--- Extracted by StaticSplit

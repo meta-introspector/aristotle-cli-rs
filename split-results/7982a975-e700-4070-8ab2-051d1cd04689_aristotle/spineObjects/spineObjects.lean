@@ -1,2 +1,0 @@
--- Declaration: spineObjects
--- Extracted by StaticSplit

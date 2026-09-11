@@ -1,2 +1,0 @@
--- Declaration: SemanticEntry
--- Extracted by StaticSplit

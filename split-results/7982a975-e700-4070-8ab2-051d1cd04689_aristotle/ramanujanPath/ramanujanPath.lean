@@ -1,2 +1,0 @@
--- Declaration: ramanujanPath
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: encode_namagiri
--- Extracted by StaticSplit

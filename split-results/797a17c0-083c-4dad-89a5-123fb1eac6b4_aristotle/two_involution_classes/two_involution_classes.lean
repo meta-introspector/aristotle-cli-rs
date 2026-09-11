@@ -1,2 +1,0 @@
--- Declaration: two_involution_classes
--- Extracted by StaticSplit

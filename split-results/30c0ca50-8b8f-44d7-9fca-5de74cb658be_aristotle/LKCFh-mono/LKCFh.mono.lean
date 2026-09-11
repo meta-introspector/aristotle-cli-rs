@@ -1,2 +1,0 @@
--- Declaration: LKCFh.mono
--- Extracted by StaticSplit

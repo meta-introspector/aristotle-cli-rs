@@ -1,2 +1,0 @@
--- Declaration: Runtime.act
--- Extracted by StaticSplit

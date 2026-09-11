@@ -1,2 +1,0 @@
--- Declaration: canonicalKernels
--- Extracted by StaticSplit

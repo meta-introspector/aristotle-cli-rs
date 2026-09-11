@@ -1,2 +1,0 @@
--- Declaration: SporadicType
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: github_reaches_language
--- Extracted by StaticSplit

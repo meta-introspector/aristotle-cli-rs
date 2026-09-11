@@ -1,2 +1,0 @@
--- Declaration: StructRepresentation_StringJoin
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: weight_space_is_monster_rep
--- Extracted by StaticSplit

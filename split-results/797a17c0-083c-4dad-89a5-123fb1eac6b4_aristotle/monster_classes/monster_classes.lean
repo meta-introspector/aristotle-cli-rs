@@ -1,2 +1,0 @@
--- Declaration: monster_classes
--- Extracted by StaticSplit

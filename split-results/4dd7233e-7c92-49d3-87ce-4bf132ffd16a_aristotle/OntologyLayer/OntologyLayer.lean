@@ -1,2 +1,0 @@
--- Declaration: OntologyLayer
--- Extracted by StaticSplit

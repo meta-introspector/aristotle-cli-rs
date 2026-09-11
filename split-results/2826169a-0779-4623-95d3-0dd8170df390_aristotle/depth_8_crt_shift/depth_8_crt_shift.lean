@@ -1,2 +1,0 @@
--- Declaration: depth_8_crt_shift
--- Extracted by StaticSplit

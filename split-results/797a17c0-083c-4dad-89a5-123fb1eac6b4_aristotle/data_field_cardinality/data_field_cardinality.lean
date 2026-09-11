@@ -1,2 +1,0 @@
--- Declaration: data_field_cardinality
--- Extracted by StaticSplit

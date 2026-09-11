@@ -1,2 +1,0 @@
--- Declaration: ReflectedNode.size
--- Extracted by StaticSplit

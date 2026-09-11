@@ -1,2 +1,0 @@
--- Declaration: WorldRegistry
--- Extracted by StaticSplit

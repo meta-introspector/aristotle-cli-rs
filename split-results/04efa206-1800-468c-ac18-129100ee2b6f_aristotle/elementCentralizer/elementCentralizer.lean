@@ -1,2 +1,0 @@
--- Declaration: elementCentralizer
--- Extracted by StaticSplit

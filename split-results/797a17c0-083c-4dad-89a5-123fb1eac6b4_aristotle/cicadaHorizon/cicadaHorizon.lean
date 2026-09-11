@@ -1,2 +1,0 @@
--- Declaration: cicadaHorizon
--- Extracted by StaticSplit

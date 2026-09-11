@@ -1,2 +1,0 @@
--- Declaration: fiberChain_length
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: no_cross_fiber_spawn
--- Extracted by StaticSplit

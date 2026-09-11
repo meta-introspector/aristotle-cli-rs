@@ -1,2 +1,0 @@
--- Declaration: not_final_if_no_legal_consequences
--- Extracted by StaticSplit

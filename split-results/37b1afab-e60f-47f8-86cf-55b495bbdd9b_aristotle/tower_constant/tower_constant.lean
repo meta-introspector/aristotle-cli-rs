@@ -1,2 +1,0 @@
--- Declaration: tower_constant
--- Extracted by StaticSplit

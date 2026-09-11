@@ -1,2 +1,0 @@
--- Declaration: corporation_is_person
--- Extracted by StaticSplit

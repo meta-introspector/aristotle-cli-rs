@@ -1,2 +1,0 @@
--- Declaration: ssp_sector_count
--- Extracted by StaticSplit

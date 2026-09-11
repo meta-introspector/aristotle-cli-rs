@@ -1,2 +1,0 @@
--- Declaration: walkTriangle
--- Extracted by StaticSplit

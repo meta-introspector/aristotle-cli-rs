@@ -1,2 +1,0 @@
--- Declaration: phi_consciousness_grows
--- Extracted by StaticSplit

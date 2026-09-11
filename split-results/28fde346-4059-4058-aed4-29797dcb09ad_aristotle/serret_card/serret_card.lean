@@ -1,2 +1,0 @@
--- Declaration: serret_card
--- Extracted by StaticSplit

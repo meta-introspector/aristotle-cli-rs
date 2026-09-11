@@ -1,2 +1,0 @@
--- Declaration: meta_iterated_zero_drift
--- Extracted by StaticSplit

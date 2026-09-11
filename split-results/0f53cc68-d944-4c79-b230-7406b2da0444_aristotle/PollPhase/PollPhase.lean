@@ -1,2 +1,0 @@
--- Declaration: PollPhase
--- Extracted by StaticSplit

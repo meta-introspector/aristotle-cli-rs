@@ -1,2 +1,0 @@
--- Declaration: agentPrime_injective
--- Extracted by StaticSplit

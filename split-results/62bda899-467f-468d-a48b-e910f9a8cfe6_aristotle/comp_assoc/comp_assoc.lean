@@ -1,2 +1,0 @@
--- Declaration: comp_assoc
--- Extracted by StaticSplit

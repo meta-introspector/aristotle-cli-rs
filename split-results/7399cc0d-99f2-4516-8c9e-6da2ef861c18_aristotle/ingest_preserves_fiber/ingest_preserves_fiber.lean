@@ -1,2 +1,0 @@
--- Declaration: ingest_preserves_fiber
--- Extracted by StaticSplit

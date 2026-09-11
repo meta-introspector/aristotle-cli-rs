@@ -1,2 +1,0 @@
--- Declaration: bott_fold_at_7_8_boundary
--- Extracted by StaticSplit

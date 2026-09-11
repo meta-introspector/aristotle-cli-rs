@@ -1,2 +1,0 @@
--- Declaration: majorityOfList_nil
--- Extracted by StaticSplit

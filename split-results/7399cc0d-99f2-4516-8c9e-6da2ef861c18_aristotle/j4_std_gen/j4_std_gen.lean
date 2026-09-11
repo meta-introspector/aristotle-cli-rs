@@ -1,2 +1,0 @@
--- Declaration: j4_std_gen
--- Extracted by StaticSplit

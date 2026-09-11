@@ -1,2 +1,0 @@
--- Declaration: ssVal
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: isGatePrime
--- Extracted by StaticSplit

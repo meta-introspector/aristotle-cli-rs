@@ -1,2 +1,0 @@
--- Declaration: rootAtZero
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: WitnessedSection
--- Extracted by StaticSplit

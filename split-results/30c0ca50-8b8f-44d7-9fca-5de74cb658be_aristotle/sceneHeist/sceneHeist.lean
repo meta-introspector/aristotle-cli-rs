@@ -1,2 +1,0 @@
--- Declaration: sceneHeist
--- Extracted by StaticSplit

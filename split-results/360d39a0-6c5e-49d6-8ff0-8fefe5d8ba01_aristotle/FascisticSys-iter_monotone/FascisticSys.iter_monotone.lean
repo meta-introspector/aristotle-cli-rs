@@ -1,2 +1,0 @@
--- Declaration: FascisticSys.iter_monotone
--- Extracted by StaticSplit

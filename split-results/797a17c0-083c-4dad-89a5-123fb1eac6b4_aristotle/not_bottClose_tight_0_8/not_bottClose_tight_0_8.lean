@@ -1,2 +1,0 @@
--- Declaration: not_bottClose_tight_0_8
--- Extracted by StaticSplit

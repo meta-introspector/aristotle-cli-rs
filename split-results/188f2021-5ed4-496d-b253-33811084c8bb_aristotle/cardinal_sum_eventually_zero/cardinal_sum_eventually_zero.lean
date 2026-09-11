@@ -1,2 +1,0 @@
--- Declaration: cardinal_sum_eventually_zero
--- Extracted by StaticSplit

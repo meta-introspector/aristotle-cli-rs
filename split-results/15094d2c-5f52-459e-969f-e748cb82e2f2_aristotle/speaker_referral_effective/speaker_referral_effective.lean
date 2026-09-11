@@ -1,2 +1,0 @@
--- Declaration: speaker_referral_effective
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: morita_class_6
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MetaTower.directSum
--- Extracted by StaticSplit

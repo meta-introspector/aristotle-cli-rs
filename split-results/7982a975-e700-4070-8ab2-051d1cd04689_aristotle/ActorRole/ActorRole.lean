@@ -1,2 +1,0 @@
--- Declaration: ActorRole
--- Extracted by StaticSplit

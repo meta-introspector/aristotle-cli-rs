@@ -1,2 +1,0 @@
--- Declaration: j1_dvd_monster
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: LKCutFree.disjR_mult
--- Extracted by StaticSplit

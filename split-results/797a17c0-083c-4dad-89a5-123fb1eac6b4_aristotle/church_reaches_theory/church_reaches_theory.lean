@@ -1,2 +1,0 @@
--- Declaration: church_reaches_theory
--- Extracted by StaticSplit

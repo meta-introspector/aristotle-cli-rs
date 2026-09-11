@@ -1,2 +1,0 @@
--- Declaration: musePrime
--- Extracted by StaticSplit

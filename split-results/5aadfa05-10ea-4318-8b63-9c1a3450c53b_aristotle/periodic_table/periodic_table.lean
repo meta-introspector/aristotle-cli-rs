@@ -1,2 +1,0 @@
--- Declaration: periodic_table
--- Extracted by StaticSplit

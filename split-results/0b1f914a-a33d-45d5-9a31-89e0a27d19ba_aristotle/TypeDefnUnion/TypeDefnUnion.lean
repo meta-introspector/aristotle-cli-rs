@@ -1,2 +1,0 @@
--- Declaration: TypeDefnUnion
--- Extracted by StaticSplit

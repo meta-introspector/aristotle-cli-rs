@@ -1,2 +1,0 @@
--- Declaration: growthG_section_coherent
--- Extracted by StaticSplit

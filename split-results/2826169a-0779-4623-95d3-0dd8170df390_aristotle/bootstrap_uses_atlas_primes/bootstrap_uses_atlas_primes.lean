@@ -1,2 +1,0 @@
--- Declaration: bootstrap_uses_atlas_primes
--- Extracted by StaticSplit

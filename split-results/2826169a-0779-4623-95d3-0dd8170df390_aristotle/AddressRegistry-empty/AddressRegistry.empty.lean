@@ -1,2 +1,0 @@
--- Declaration: AddressRegistry.empty
--- Extracted by StaticSplit

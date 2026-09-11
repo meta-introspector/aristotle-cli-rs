@@ -1,2 +1,0 @@
--- Declaration: pteFace_value
--- Extracted by StaticSplit

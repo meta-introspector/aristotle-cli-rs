@@ -1,2 +1,0 @@
--- Declaration: torusLoop_prime_period
--- Extracted by StaticSplit

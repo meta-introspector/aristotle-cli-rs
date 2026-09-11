@@ -1,2 +1,0 @@
--- Declaration: invPerm8
--- Extracted by StaticSplit

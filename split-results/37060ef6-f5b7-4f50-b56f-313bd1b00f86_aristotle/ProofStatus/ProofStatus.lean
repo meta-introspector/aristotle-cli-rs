@@ -1,2 +1,0 @@
--- Declaration: ProofStatus
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: list_ext_coord
--- Extracted by StaticSplit

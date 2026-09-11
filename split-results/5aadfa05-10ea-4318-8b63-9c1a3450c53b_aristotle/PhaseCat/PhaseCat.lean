@@ -1,2 +1,0 @@
--- Declaration: PhaseCat
--- Extracted by StaticSplit

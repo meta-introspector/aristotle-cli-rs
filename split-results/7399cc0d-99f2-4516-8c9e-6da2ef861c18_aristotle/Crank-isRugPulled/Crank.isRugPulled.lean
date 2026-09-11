@@ -1,2 +1,0 @@
--- Declaration: Crank.isRugPulled
--- Extracted by StaticSplit

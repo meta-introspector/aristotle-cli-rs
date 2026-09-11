@@ -1,2 +1,0 @@
--- Declaration: step3_result
--- Extracted by StaticSplit

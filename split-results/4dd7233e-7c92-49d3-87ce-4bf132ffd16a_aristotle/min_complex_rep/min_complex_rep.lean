@@ -1,2 +1,0 @@
--- Declaration: min_complex_rep
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: fixedPointPrime_is_prime
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: j_coefficients_cross_check
--- Extracted by StaticSplit

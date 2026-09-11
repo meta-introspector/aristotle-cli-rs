@@ -1,2 +1,0 @@
--- Declaration: monsterToVOA
--- Extracted by StaticSplit

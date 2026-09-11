@@ -1,2 +1,0 @@
--- Declaration: Jitter.toReflection
--- Extracted by StaticSplit

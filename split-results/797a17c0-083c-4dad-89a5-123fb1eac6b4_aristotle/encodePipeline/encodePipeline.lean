@@ -1,2 +1,0 @@
--- Declaration: encodePipeline
--- Extracted by StaticSplit

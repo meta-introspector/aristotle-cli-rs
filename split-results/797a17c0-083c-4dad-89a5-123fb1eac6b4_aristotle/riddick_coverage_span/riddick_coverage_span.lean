@@ -1,2 +1,0 @@
--- Declaration: riddick_coverage_span
--- Extracted by StaticSplit

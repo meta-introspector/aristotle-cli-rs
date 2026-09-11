@@ -1,2 +1,0 @@
--- Declaration: isSmooth23_gcd
--- Extracted by StaticSplit

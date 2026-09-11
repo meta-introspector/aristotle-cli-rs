@@ -1,2 +1,0 @@
--- Declaration: mem_1823
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: T_3.le0
--- Extracted by StaticSplit

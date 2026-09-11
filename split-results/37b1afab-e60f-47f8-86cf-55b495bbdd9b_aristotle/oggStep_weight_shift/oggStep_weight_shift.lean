@@ -1,2 +1,0 @@
--- Declaration: oggStep_weight_shift
--- Extracted by StaticSplit

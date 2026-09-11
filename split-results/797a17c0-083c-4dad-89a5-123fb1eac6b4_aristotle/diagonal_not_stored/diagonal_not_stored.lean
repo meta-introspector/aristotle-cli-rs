@@ -1,2 +1,0 @@
--- Declaration: diagonal_not_stored
--- Extracted by StaticSplit

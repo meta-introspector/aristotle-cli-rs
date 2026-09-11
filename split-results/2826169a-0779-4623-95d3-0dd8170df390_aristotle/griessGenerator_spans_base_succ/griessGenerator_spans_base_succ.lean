@@ -1,2 +1,0 @@
--- Declaration: griessGenerator_spans_base_succ
--- Extracted by StaticSplit

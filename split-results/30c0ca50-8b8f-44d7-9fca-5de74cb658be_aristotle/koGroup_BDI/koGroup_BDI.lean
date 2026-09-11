@@ -1,2 +1,0 @@
--- Declaration: koGroup_BDI
--- Extracted by StaticSplit

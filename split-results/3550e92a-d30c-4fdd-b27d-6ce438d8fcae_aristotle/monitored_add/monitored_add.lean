@@ -1,2 +1,0 @@
--- Declaration: monitored_add
--- Extracted by StaticSplit

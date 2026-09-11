@@ -1,2 +1,0 @@
--- Declaration: OntologyRelation.signature
--- Extracted by StaticSplit

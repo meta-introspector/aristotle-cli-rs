@@ -1,2 +1,0 @@
--- Declaration: completeJourney
--- Extracted by StaticSplit

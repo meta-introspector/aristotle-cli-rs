@@ -1,2 +1,0 @@
--- Declaration: Vault.withdraw
--- Extracted by StaticSplit

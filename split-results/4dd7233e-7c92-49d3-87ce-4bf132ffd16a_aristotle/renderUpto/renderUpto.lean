@@ -1,2 +1,0 @@
--- Declaration: renderUpto
--- Extracted by StaticSplit

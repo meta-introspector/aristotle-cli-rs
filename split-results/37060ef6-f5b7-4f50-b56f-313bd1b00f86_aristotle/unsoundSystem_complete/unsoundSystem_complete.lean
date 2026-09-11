@@ -1,2 +1,0 @@
--- Declaration: unsoundSystem_complete
--- Extracted by StaticSplit

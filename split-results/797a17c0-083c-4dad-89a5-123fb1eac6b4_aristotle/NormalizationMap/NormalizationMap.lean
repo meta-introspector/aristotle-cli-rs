@@ -1,2 +1,0 @@
--- Declaration: NormalizationMap
--- Extracted by StaticSplit

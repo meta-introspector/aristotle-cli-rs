@@ -1,2 +1,0 @@
--- Declaration: CosmicAddress.toAnchoredNode
--- Extracted by StaticSplit

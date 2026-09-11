@@ -1,2 +1,0 @@
--- Declaration: computeSignature
--- Extracted by StaticSplit

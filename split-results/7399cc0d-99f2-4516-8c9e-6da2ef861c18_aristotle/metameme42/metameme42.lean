@@ -1,2 +1,0 @@
--- Declaration: metameme42
--- Extracted by StaticSplit

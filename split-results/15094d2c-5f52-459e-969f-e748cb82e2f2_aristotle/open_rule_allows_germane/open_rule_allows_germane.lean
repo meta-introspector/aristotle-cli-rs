@@ -1,2 +1,0 @@
--- Declaration: open_rule_allows_germane
--- Extracted by StaticSplit

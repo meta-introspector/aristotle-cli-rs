@@ -1,2 +1,0 @@
--- Declaration: journeyPath
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: confluence_paths_unique
--- Extracted by StaticSplit

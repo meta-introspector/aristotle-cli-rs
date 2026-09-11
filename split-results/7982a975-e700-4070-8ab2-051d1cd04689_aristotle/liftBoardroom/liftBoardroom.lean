@@ -1,2 +1,0 @@
--- Declaration: liftBoardroom
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Consistent
--- Extracted by StaticSplit

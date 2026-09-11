@@ -1,2 +1,0 @@
--- Declaration: mapApiStatus
--- Extracted by StaticSplit

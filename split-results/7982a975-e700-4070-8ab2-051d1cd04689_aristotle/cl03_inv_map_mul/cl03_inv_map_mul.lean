@@ -1,2 +1,0 @@
--- Declaration: cl03_inv_map_mul
--- Extracted by StaticSplit

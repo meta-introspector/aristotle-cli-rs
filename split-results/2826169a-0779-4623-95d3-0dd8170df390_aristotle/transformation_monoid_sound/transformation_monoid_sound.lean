@@ -1,2 +1,0 @@
--- Declaration: transformation_monoid_sound
--- Extracted by StaticSplit

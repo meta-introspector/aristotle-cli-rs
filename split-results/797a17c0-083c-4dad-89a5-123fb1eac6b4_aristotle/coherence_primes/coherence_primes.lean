@@ -1,2 +1,0 @@
--- Declaration: coherence_primes
--- Extracted by StaticSplit

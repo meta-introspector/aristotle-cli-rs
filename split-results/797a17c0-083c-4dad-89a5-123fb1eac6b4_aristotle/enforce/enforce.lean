@@ -1,2 +1,0 @@
--- Declaration: enforce
--- Extracted by StaticSplit

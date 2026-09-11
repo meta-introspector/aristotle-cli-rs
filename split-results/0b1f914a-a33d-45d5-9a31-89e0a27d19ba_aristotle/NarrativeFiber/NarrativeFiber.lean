@@ -1,2 +1,0 @@
--- Declaration: NarrativeFiber
--- Extracted by StaticSplit

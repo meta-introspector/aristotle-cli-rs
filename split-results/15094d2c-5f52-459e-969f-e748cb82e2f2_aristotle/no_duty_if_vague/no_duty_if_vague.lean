@@ -1,2 +1,0 @@
--- Declaration: no_duty_if_vague
--- Extracted by StaticSplit

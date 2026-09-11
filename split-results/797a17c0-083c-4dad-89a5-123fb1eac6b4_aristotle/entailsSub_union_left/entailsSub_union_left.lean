@@ -1,2 +1,0 @@
--- Declaration: entailsSub_union_left
--- Extracted by StaticSplit

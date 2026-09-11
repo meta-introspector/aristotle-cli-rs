@@ -1,2 +1,0 @@
--- Declaration: bootstrap_vanishes_mod71
--- Extracted by StaticSplit

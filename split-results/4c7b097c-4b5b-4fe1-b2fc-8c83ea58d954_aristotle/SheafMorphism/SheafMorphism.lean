@@ -1,2 +1,0 @@
--- Declaration: SheafMorphism
--- Extracted by StaticSplit

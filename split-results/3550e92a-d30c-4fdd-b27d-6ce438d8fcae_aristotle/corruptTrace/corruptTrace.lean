@@ -1,2 +1,0 @@
--- Declaration: corruptTrace
--- Extracted by StaticSplit

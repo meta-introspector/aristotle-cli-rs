@@ -1,2 +1,0 @@
--- Declaration: IsPTE
--- Extracted by StaticSplit

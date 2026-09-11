@@ -1,2 +1,0 @@
--- Declaration: Truth
--- Extracted by StaticSplit

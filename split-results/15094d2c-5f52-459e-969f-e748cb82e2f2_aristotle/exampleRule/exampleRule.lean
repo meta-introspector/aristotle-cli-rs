@@ -1,2 +1,0 @@
--- Declaration: exampleRule
--- Extracted by StaticSplit

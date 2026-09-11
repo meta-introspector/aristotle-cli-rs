@@ -1,2 +1,0 @@
--- Declaration: resonance_distribution
--- Extracted by StaticSplit

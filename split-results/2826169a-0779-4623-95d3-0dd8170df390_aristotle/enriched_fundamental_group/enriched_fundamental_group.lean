@@ -1,2 +1,0 @@
--- Declaration: enriched_fundamental_group
--- Extracted by StaticSplit

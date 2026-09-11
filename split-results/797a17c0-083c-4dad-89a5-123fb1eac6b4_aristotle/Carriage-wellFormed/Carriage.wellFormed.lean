@@ -1,2 +1,0 @@
--- Declaration: Carriage.wellFormed
--- Extracted by StaticSplit

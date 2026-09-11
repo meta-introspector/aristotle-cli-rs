@@ -1,2 +1,0 @@
--- Declaration: m24Primes
--- Extracted by StaticSplit

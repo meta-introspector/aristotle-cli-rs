@@ -1,2 +1,0 @@
--- Declaration: Message
--- Extracted by StaticSplit

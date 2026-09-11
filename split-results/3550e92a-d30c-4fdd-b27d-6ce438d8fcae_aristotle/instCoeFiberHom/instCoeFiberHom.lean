@@ -1,2 +1,0 @@
--- Declaration: instCoeFiberHom
--- Extracted by StaticSplit

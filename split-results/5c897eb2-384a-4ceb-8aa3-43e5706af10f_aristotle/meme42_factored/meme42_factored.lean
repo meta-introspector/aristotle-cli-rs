@@ -1,2 +1,0 @@
--- Declaration: meme42_factored
--- Extracted by StaticSplit

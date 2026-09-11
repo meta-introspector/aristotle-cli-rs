@@ -1,2 +1,0 @@
--- Declaration: obj_bool
--- Extracted by StaticSplit

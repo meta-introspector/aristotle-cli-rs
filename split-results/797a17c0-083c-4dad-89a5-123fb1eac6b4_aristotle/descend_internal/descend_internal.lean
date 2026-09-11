@@ -1,2 +1,0 @@
--- Declaration: descend_internal
--- Extracted by StaticSplit

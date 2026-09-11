@@ -1,2 +1,0 @@
--- Declaration: NiemeierRootSystem.rank_eq
--- Extracted by StaticSplit

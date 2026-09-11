@@ -1,2 +1,0 @@
--- Declaration: repr_kind_count
--- Extracted by StaticSplit

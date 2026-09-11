@@ -1,2 +1,0 @@
--- Declaration: ext_concept_count
--- Extracted by StaticSplit

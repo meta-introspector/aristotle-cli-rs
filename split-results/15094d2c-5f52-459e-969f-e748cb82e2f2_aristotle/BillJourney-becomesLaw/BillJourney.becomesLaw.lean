@@ -1,2 +1,0 @@
--- Declaration: BillJourney.becomesLaw
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: evenBlades
--- Extracted by StaticSplit

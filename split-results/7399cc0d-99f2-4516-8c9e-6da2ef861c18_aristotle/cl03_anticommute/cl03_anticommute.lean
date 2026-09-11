@@ -1,2 +1,0 @@
--- Declaration: cl03_anticommute
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: StateMachine
--- Extracted by StaticSplit

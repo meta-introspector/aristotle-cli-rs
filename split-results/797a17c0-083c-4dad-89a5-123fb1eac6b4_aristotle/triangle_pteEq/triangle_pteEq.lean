@@ -1,2 +1,0 @@
--- Declaration: triangle_pteEq
--- Extracted by StaticSplit

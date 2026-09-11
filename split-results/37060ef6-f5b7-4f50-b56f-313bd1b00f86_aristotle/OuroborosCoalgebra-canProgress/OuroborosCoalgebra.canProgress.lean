@@ -1,2 +1,0 @@
--- Declaration: OuroborosCoalgebra.canProgress
--- Extracted by StaticSplit

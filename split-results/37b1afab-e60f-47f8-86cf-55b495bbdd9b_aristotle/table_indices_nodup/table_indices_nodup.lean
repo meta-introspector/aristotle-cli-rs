@@ -1,2 +1,0 @@
--- Declaration: table_indices_nodup
--- Extracted by StaticSplit

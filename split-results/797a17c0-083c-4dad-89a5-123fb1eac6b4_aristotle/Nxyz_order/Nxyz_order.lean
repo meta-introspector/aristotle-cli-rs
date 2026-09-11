@@ -1,2 +1,0 @@
--- Declaration: Nxyz_order
--- Extracted by StaticSplit

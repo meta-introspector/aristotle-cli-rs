@@ -1,2 +1,0 @@
--- Declaration: totalSeats
--- Extracted by StaticSplit

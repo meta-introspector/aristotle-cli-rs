@@ -1,2 +1,0 @@
--- Declaration: virtualDim
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: loper_no_deference_outside_bounds
--- Extracted by StaticSplit

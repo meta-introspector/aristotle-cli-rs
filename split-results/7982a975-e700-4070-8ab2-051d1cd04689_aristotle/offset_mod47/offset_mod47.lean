@@ -1,2 +1,0 @@
--- Declaration: offset_mod47
--- Extracted by StaticSplit

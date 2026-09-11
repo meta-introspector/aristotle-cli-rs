@@ -1,2 +1,0 @@
--- Declaration: monster_order_divisibility
--- Extracted by StaticSplit

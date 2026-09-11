@@ -1,2 +1,0 @@
--- Declaration: oggorial_value
--- Extracted by StaticSplit

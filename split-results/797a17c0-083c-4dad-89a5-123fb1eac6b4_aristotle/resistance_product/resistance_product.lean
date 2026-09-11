@@ -1,2 +1,0 @@
--- Declaration: resistance_product
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: scaleTowerGradeFunctor_eq
--- Extracted by StaticSplit

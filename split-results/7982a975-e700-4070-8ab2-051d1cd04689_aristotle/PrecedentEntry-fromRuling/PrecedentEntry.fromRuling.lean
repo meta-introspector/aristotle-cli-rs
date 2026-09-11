@@ -1,2 +1,0 @@
--- Declaration: PrecedentEntry.fromRuling
--- Extracted by StaticSplit

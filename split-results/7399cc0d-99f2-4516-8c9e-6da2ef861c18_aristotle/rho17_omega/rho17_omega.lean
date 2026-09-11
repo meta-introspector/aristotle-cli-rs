@@ -1,2 +1,0 @@
--- Declaration: rho17_omega
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: lattice_mckay_bott_shift
--- Extracted by StaticSplit

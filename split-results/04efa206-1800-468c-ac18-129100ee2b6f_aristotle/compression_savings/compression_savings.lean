@@ -1,2 +1,0 @@
--- Declaration: compression_savings
--- Extracted by StaticSplit

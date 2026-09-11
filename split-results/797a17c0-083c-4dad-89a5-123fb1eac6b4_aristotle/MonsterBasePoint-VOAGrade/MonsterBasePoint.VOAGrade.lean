@@ -1,2 +1,0 @@
--- Declaration: MonsterBasePoint.VOAGrade
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: umwelt_binding_classes
--- Extracted by StaticSplit

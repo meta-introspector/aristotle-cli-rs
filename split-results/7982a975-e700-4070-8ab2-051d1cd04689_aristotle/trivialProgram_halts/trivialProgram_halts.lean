@@ -1,2 +1,0 @@
--- Declaration: trivialProgram_halts
--- Extracted by StaticSplit

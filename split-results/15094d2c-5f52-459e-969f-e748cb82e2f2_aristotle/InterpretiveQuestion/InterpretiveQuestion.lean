@@ -1,2 +1,0 @@
--- Declaration: InterpretiveQuestion
--- Extracted by StaticSplit

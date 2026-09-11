@@ -1,2 +1,0 @@
--- Declaration: hermes_reaches_aristotle
--- Extracted by StaticSplit

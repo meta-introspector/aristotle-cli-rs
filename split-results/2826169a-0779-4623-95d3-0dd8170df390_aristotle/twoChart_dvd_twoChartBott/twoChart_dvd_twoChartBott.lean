@@ -1,2 +1,0 @@
--- Declaration: twoChart_dvd_twoChartBott
--- Extracted by StaticSplit

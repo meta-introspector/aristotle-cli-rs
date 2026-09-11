@@ -1,2 +1,0 @@
--- Declaration: tower_step_1
--- Extracted by StaticSplit

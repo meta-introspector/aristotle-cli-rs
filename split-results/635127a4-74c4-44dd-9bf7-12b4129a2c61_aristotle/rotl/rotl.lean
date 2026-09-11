@@ -1,2 +1,0 @@
--- Declaration: rotl
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: NiemeierLabel
--- Extracted by StaticSplit

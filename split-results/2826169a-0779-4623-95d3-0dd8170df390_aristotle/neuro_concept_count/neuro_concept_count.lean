@@ -1,2 +1,0 @@
--- Declaration: neuro_concept_count
--- Extracted by StaticSplit

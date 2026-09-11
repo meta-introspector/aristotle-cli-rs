@@ -1,2 +1,0 @@
--- Declaration: GramEngine.gram_orthogonality_real
--- Extracted by StaticSplit

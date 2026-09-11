@@ -1,2 +1,0 @@
--- Declaration: LinkTraversal
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: and_or_distrib
--- Extracted by StaticSplit

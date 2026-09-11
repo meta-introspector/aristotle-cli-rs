@@ -1,2 +1,0 @@
--- Declaration: three_five_structure
--- Extracted by StaticSplit

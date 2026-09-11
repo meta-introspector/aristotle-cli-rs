@@ -1,2 +1,0 @@
--- Declaration: answer_question_gap
--- Extracted by StaticSplit

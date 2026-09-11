@@ -1,2 +1,0 @@
--- Declaration: Activation.witness
--- Extracted by StaticSplit

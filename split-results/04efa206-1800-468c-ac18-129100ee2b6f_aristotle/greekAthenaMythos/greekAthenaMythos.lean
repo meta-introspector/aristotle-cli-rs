@@ -1,2 +1,0 @@
--- Declaration: greekAthenaMythos
--- Extracted by StaticSplit

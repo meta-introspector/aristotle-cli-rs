@@ -1,2 +1,0 @@
--- Declaration: fiber_group_dim
--- Extracted by StaticSplit

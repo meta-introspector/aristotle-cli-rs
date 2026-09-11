@@ -1,2 +1,0 @@
--- Declaration: rho1_squared_dim
--- Extracted by StaticSplit

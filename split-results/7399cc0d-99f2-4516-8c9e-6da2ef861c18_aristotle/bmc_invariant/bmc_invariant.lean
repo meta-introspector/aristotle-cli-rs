@@ -1,2 +1,0 @@
--- Declaration: bmc_invariant
--- Extracted by StaticSplit

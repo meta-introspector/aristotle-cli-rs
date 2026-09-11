@@ -1,2 +1,0 @@
--- Declaration: monster_reconstruct
--- Extracted by StaticSplit

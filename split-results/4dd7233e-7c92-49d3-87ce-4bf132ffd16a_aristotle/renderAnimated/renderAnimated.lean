@@ -1,2 +1,0 @@
--- Declaration: renderAnimated
--- Extracted by StaticSplit

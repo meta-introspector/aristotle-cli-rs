@@ -1,2 +1,0 @@
--- Declaration: middle_chain_grade_stable
--- Extracted by StaticSplit

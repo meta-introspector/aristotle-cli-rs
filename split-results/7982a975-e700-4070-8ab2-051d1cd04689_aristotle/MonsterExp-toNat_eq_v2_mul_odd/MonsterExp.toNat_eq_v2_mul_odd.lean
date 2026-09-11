@@ -1,2 +1,0 @@
--- Declaration: MonsterExp.toNat_eq_v2_mul_odd
--- Extracted by StaticSplit

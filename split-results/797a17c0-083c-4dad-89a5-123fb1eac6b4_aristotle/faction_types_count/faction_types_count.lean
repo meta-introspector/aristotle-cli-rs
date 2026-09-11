@@ -1,2 +1,0 @@
--- Declaration: faction_types_count
--- Extracted by StaticSplit

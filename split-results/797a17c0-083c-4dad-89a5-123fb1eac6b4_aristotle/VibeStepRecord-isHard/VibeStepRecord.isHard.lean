@@ -1,2 +1,0 @@
--- Declaration: VibeStepRecord.isHard
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: distanceToJObj
--- Extracted by StaticSplit

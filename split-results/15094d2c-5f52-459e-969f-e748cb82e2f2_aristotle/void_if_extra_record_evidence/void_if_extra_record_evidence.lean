@@ -1,2 +1,0 @@
--- Declaration: void_if_extra_record_evidence
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: shadow_of_large_prime
--- Extracted by StaticSplit

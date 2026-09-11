@@ -1,2 +1,0 @@
--- Declaration: oggPrimes_coprime
--- Extracted by StaticSplit

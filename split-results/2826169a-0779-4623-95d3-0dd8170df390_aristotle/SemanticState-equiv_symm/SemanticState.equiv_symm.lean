@@ -1,2 +1,0 @@
--- Declaration: SemanticState.equiv_symm
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: genus_X0_37
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: IsValidItem
--- Extracted by StaticSplit

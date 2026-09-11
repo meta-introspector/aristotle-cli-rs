@@ -1,2 +1,0 @@
--- Declaration: bott_orbit_is_permutation
--- Extracted by StaticSplit

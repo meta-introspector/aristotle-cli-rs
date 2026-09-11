@@ -1,2 +1,0 @@
--- Declaration: schema_self_hosting
--- Extracted by StaticSplit

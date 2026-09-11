@@ -1,2 +1,0 @@
--- Declaration: atom_cardinality_sum
--- Extracted by StaticSplit

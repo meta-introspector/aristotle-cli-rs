@@ -1,2 +1,0 @@
--- Declaration: kitaevWire_kGroup
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: pure_actions_invisible
--- Extracted by StaticSplit

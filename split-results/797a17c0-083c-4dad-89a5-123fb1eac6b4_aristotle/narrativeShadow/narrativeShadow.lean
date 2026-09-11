@@ -1,2 +1,0 @@
--- Declaration: narrativeShadow
--- Extracted by StaticSplit

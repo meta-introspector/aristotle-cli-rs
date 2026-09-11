@@ -1,2 +1,0 @@
--- Declaration: ConstantBody
--- Extracted by StaticSplit

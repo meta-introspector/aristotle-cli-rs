@@ -1,2 +1,0 @@
--- Declaration: models_reindex_of_mapKB
--- Extracted by StaticSplit

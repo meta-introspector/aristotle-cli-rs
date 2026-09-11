@@ -1,2 +1,0 @@
--- Declaration: clotureSection
--- Extracted by StaticSplit

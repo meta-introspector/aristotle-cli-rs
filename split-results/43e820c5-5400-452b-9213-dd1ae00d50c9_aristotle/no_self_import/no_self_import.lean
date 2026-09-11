@@ -1,2 +1,0 @@
--- Declaration: no_self_import
--- Extracted by StaticSplit

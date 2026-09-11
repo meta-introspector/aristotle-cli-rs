@@ -1,2 +1,0 @@
--- Declaration: encode_id
--- Extracted by StaticSplit

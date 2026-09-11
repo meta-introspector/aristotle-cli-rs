@@ -1,2 +1,0 @@
--- Declaration: mkCrank_coordinate
--- Extracted by StaticSplit

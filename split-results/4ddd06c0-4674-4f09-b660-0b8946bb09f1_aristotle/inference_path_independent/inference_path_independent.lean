@@ -1,2 +1,0 @@
--- Declaration: inference_path_independent
--- Extracted by StaticSplit

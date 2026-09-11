@@ -1,2 +1,0 @@
--- Declaration: SymData
--- Extracted by StaticSplit

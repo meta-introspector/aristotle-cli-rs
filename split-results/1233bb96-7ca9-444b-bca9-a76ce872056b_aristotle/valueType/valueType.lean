@@ -1,2 +1,0 @@
--- Declaration: valueType
--- Extracted by StaticSplit

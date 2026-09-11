@@ -1,2 +1,0 @@
--- Declaration: pariah_non_ogg_all_prime
--- Extracted by StaticSplit

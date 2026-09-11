@@ -1,2 +1,0 @@
--- Declaration: GradedProcess
--- Extracted by StaticSplit

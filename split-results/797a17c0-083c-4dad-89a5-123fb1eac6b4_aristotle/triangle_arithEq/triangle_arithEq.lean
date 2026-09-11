@@ -1,2 +1,0 @@
--- Declaration: triangle_arithEq
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cl05_inv
--- Extracted by StaticSplit

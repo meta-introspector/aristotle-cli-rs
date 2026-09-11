@@ -1,2 +1,0 @@
--- Declaration: eigenspaceOfSSPIndex
--- Extracted by StaticSplit

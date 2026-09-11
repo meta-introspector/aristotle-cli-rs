@@ -1,2 +1,0 @@
--- Declaration: King
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: imaginary_root_norm
--- Extracted by StaticSplit

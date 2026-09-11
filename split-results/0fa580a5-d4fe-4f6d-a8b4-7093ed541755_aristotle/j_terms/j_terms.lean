@@ -1,2 +1,0 @@
--- Declaration: j_terms
--- Extracted by StaticSplit

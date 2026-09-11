@@ -1,2 +1,0 @@
--- Declaration: embedBlockDiag32
--- Extracted by StaticSplit

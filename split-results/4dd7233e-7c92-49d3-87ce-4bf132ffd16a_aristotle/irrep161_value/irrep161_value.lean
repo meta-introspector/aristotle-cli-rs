@@ -1,2 +1,0 @@
--- Declaration: irrep161_value
--- Extracted by StaticSplit

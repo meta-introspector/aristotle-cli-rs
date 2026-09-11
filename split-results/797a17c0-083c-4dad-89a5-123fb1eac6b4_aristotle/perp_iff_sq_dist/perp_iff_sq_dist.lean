@@ -1,2 +1,0 @@
--- Declaration: perp_iff_sq_dist
--- Extracted by StaticSplit

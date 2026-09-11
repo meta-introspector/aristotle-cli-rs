@@ -1,2 +1,0 @@
--- Declaration: mckay_overlap_unit
--- Extracted by StaticSplit

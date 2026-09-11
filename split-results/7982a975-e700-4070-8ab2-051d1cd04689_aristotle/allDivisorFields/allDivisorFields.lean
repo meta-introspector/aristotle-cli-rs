@@ -1,2 +1,0 @@
--- Declaration: allDivisorFields
--- Extracted by StaticSplit

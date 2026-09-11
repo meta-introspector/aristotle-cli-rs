@@ -1,2 +1,0 @@
--- Declaration: MonsterCarriageTrain.monotoneGrades
--- Extracted by StaticSplit

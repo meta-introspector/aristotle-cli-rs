@@ -1,2 +1,0 @@
--- Declaration: matchFloat_47_capture
--- Extracted by StaticSplit

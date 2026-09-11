@@ -1,2 +1,0 @@
--- Declaration: ssp_fractran_closed
--- Extracted by StaticSplit

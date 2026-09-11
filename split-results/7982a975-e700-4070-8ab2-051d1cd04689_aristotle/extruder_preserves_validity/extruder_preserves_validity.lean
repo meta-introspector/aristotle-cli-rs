@@ -1,2 +1,0 @@
--- Declaration: extruder_preserves_validity
--- Extracted by StaticSplit

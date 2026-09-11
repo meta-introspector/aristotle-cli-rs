@@ -1,2 +1,0 @@
--- Declaration: atp_cluster_bio
--- Extracted by StaticSplit

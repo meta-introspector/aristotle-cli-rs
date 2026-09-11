@@ -1,2 +1,0 @@
--- Declaration: shapeFromResources
--- Extracted by StaticSplit

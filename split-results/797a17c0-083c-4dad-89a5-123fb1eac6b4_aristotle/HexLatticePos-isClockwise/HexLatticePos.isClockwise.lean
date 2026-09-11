@@ -1,2 +1,0 @@
--- Declaration: HexLatticePos.isClockwise
--- Extracted by StaticSplit

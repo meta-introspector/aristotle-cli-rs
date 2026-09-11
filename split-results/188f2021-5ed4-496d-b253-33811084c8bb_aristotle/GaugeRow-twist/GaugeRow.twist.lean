@@ -1,2 +1,0 @@
--- Declaration: GaugeRow.twist
--- Extracted by StaticSplit

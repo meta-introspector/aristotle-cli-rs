@@ -1,2 +1,0 @@
--- Declaration: combined_decomposition
--- Extracted by StaticSplit

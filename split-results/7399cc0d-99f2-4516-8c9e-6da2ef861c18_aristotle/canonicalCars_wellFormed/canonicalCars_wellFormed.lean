@@ -1,2 +1,0 @@
--- Declaration: canonicalCars_wellFormed
--- Extracted by StaticSplit

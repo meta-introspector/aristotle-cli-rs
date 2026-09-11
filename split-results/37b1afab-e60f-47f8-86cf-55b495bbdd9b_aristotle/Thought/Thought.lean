@@ -1,2 +1,0 @@
--- Declaration: Thought
--- Extracted by StaticSplit

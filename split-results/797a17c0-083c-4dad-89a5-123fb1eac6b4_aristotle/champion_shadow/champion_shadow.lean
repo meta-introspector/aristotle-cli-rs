@@ -1,2 +1,0 @@
--- Declaration: champion_shadow
--- Extracted by StaticSplit

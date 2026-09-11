@@ -1,2 +1,0 @@
--- Declaration: fuse
--- Extracted by StaticSplit

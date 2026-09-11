@@ -1,2 +1,0 @@
--- Declaration: enumerate
--- Extracted by StaticSplit

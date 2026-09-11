@@ -1,2 +1,0 @@
--- Declaration: monodromy_grade_increase
--- Extracted by StaticSplit

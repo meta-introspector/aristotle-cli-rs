@@ -1,2 +1,0 @@
--- Declaration: nativeUrl_trailingBase
--- Extracted by StaticSplit

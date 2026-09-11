@@ -1,2 +1,0 @@
--- Declaration: hecke_prime_divides_monster_dim
--- Extracted by StaticSplit

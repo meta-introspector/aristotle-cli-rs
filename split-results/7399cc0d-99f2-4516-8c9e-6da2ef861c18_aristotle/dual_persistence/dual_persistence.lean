@@ -1,2 +1,0 @@
--- Declaration: dual_persistence
--- Extracted by StaticSplit

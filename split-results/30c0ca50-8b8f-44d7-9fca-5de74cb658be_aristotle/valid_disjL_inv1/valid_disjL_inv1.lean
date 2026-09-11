@@ -1,2 +1,0 @@
--- Declaration: valid_disjL_inv1
--- Extracted by StaticSplit

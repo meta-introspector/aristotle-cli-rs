@@ -1,2 +1,0 @@
--- Declaration: monster_valuation_sum
--- Extracted by StaticSplit

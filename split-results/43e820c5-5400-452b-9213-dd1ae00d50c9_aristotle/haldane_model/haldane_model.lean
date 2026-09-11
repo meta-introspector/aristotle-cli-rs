@@ -1,2 +1,0 @@
--- Declaration: haldane_model
--- Extracted by StaticSplit

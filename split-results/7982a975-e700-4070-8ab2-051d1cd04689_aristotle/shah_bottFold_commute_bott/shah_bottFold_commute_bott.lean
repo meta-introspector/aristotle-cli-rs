@@ -1,2 +1,0 @@
--- Declaration: shah_bottFold_commute_bott
--- Extracted by StaticSplit

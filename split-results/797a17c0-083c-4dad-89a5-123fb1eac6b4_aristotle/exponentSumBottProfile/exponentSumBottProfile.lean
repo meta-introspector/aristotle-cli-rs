@@ -1,2 +1,0 @@
--- Declaration: exponentSumBottProfile
--- Extracted by StaticSplit

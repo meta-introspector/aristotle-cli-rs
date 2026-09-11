@@ -1,2 +1,0 @@
--- Declaration: TowerLayer
--- Extracted by StaticSplit

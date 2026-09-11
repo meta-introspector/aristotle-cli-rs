@@ -1,2 +1,0 @@
--- Declaration: totalPossibleWeight
--- Extracted by StaticSplit

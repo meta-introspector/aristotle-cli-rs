@@ -1,2 +1,0 @@
--- Declaration: M22_divides_Fi22
--- Extracted by StaticSplit

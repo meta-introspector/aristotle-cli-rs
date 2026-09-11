@@ -1,2 +1,0 @@
--- Declaration: continuing_fraction_is_two_thirds
--- Extracted by StaticSplit

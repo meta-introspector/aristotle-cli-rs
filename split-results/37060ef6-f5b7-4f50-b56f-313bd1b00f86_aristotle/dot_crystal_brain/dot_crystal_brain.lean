@@ -1,2 +1,0 @@
--- Declaration: dot_crystal_brain
--- Extracted by StaticSplit

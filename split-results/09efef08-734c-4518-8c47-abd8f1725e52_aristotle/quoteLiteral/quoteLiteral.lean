@@ -1,2 +1,0 @@
--- Declaration: quoteLiteral
--- Extracted by StaticSplit

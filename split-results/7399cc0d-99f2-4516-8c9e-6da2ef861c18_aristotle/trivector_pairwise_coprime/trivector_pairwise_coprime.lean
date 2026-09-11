@@ -1,2 +1,0 @@
--- Declaration: trivector_pairwise_coprime
--- Extracted by StaticSplit

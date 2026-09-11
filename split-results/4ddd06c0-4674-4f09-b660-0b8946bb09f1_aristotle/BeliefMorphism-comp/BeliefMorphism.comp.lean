@@ -1,2 +1,0 @@
--- Declaration: BeliefMorphism.comp
--- Extracted by StaticSplit

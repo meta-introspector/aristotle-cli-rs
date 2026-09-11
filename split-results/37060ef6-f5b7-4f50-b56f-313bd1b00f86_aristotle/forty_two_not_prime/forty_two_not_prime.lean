@@ -1,2 +1,0 @@
--- Declaration: forty_two_not_prime
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Elt1
--- Extracted by StaticSplit

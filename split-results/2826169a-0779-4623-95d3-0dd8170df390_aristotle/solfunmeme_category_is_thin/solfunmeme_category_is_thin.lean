@@ -1,2 +1,0 @@
--- Declaration: solfunmeme_category_is_thin
--- Extracted by StaticSplit

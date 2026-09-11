@@ -1,2 +1,0 @@
--- Declaration: affine_bijective
--- Extracted by StaticSplit

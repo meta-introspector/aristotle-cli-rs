@@ -1,2 +1,0 @@
--- Declaration: ouroboros_comonad_law
--- Extracted by StaticSplit

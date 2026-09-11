@@ -1,2 +1,0 @@
--- Declaration: riemann_zeta_at_two
--- Extracted by StaticSplit

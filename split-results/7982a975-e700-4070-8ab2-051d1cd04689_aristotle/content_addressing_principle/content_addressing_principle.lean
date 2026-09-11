@@ -1,2 +1,0 @@
--- Declaration: content_addressing_principle
--- Extracted by StaticSplit

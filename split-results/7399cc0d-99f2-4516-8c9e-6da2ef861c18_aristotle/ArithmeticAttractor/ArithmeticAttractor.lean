@@ -1,2 +1,0 @@
--- Declaration: ArithmeticAttractor
--- Extracted by StaticSplit

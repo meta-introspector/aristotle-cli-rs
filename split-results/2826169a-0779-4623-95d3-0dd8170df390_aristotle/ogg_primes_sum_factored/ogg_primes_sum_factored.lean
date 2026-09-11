@@ -1,2 +1,0 @@
--- Declaration: ogg_primes_sum_factored
--- Extracted by StaticSplit

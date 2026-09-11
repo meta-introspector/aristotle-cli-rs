@@ -1,2 +1,0 @@
--- Declaration: spine_is_bott_periodic
--- Extracted by StaticSplit

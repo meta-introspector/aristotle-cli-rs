@@ -1,2 +1,0 @@
--- Declaration: cidOfBytes
--- Extracted by StaticSplit

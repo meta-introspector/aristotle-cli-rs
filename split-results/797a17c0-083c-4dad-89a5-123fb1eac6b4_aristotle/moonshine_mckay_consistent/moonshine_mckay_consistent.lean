@@ -1,2 +1,0 @@
--- Declaration: moonshine_mckay_consistent
--- Extracted by StaticSplit

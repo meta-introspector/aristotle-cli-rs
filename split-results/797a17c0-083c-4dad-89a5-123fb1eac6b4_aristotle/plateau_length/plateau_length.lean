@@ -1,2 +1,0 @@
--- Declaration: plateau_length
--- Extracted by StaticSplit

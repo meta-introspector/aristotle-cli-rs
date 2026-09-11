@@ -1,2 +1,0 @@
--- Declaration: size_mapConcept
--- Extracted by StaticSplit

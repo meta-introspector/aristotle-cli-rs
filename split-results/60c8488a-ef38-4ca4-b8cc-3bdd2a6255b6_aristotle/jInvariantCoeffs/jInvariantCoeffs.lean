@@ -1,2 +1,0 @@
--- Declaration: jInvariantCoeffs
--- Extracted by StaticSplit

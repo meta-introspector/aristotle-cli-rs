@@ -1,2 +1,0 @@
--- Declaration: pullback_count
--- Extracted by StaticSplit

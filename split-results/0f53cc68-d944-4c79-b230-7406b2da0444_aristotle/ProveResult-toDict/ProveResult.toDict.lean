@@ -1,2 +1,0 @@
--- Declaration: ProveResult.toDict
--- Extracted by StaticSplit

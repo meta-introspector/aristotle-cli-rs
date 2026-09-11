@@ -1,2 +1,0 @@
--- Declaration: embedSessionInGroup
--- Extracted by StaticSplit

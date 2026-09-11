@@ -1,2 +1,0 @@
--- Declaration: brainrotToSexpr
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: chart_alt_total
--- Extracted by StaticSplit

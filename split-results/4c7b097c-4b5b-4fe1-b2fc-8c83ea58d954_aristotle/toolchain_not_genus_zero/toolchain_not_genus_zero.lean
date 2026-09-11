@@ -1,2 +1,0 @@
--- Declaration: toolchain_not_genus_zero
--- Extracted by StaticSplit

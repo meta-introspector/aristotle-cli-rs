@@ -1,2 +1,0 @@
--- Declaration: the_fifteen_witness
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MassGrading
--- Extracted by StaticSplit

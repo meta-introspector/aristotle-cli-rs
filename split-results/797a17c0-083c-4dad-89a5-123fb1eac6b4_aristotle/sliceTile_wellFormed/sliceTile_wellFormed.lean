@@ -1,2 +1,0 @@
--- Declaration: sliceTile_wellFormed
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: encode_empty
--- Extracted by StaticSplit

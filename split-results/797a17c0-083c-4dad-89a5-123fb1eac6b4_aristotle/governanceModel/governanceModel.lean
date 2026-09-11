@@ -1,2 +1,0 @@
--- Declaration: governanceModel
--- Extracted by StaticSplit

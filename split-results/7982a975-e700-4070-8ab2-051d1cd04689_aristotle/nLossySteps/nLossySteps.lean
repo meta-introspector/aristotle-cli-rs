@@ -1,2 +1,0 @@
--- Declaration: nLossySteps
--- Extracted by StaticSplit

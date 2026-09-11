@@ -1,2 +1,0 @@
--- Declaration: classA_one_nibble
--- Extracted by StaticSplit

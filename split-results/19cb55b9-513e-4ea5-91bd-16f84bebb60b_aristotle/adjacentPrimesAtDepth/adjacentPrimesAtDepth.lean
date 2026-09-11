@@ -1,2 +1,0 @@
--- Declaration: adjacentPrimesAtDepth
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: seven_exponent_is_seed
--- Extracted by StaticSplit

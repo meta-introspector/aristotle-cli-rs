@@ -1,2 +1,0 @@
--- Declaration: majorityLeader_always_recognized
--- Extracted by StaticSplit

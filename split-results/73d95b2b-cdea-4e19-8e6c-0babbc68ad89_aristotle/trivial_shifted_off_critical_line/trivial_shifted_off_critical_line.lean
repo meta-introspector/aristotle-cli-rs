@@ -1,2 +1,0 @@
--- Declaration: trivial_shifted_off_critical_line
--- Extracted by StaticSplit

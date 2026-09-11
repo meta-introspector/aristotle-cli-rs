@@ -1,2 +1,0 @@
--- Declaration: M3
--- Extracted by StaticSplit

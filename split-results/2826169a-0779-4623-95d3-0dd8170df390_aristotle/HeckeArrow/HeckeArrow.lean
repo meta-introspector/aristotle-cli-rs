@@ -1,2 +1,0 @@
--- Declaration: HeckeArrow
--- Extracted by StaticSplit

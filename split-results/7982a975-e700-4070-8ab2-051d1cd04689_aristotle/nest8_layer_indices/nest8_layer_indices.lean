@@ -1,2 +1,0 @@
--- Declaration: nest8_layer_indices
--- Extracted by StaticSplit

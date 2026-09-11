@@ -1,2 +1,0 @@
--- Declaration: SpecialRule
--- Extracted by StaticSplit

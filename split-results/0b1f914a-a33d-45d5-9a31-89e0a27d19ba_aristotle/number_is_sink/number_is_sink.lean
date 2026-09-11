@@ -1,2 +1,0 @@
--- Declaration: number_is_sink
--- Extracted by StaticSplit

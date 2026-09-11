@@ -1,2 +1,0 @@
--- Declaration: cordycepsMetameme
--- Extracted by StaticSplit

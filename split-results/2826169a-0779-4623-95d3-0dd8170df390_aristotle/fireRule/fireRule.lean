@@ -1,2 +1,0 @@
--- Declaration: fireRule
--- Extracted by StaticSplit

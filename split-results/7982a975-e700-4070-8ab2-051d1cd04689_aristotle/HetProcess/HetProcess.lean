@@ -1,2 +1,0 @@
--- Declaration: HetProcess
--- Extracted by StaticSplit

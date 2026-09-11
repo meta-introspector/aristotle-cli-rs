@@ -1,2 +1,0 @@
--- Declaration: tesla_sum_product_agree
--- Extracted by StaticSplit

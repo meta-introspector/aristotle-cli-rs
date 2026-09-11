@@ -1,2 +1,0 @@
--- Declaration: HeapCell
--- Extracted by StaticSplit

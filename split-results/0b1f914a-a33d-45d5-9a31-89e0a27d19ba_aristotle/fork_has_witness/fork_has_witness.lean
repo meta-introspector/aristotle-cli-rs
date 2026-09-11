@@ -1,2 +1,0 @@
--- Declaration: fork_has_witness
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: S13_complete
--- Extracted by StaticSplit

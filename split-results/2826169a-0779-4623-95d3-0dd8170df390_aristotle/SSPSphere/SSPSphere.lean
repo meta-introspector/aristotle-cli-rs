@@ -1,2 +1,0 @@
--- Declaration: SSPSphere
--- Extracted by StaticSplit

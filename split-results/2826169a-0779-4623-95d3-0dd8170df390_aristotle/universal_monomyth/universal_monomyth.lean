@@ -1,2 +1,0 @@
--- Declaration: universal_monomyth
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: gammaR32_n
--- Extracted by StaticSplit

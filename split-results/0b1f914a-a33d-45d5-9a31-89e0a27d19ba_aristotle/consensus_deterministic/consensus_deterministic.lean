@@ -1,2 +1,0 @@
--- Declaration: consensus_deterministic
--- Extracted by StaticSplit

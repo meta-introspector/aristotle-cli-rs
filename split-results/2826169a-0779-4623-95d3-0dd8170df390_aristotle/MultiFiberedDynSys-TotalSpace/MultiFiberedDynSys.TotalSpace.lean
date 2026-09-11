@@ -1,2 +1,0 @@
--- Declaration: MultiFiberedDynSys.TotalSpace
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: smooth23
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monsterMod'
--- Extracted by StaticSplit

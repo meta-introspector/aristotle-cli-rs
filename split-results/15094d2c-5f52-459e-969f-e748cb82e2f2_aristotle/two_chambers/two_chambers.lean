@@ -1,2 +1,0 @@
--- Declaration: two_chambers
--- Extracted by StaticSplit

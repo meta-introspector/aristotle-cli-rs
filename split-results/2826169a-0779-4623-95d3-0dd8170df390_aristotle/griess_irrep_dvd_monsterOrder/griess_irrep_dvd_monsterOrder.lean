@@ -1,2 +1,0 @@
--- Declaration: griess_irrep_dvd_monsterOrder
--- Extracted by StaticSplit

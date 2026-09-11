@@ -1,2 +1,0 @@
--- Declaration: annihilation
--- Extracted by StaticSplit

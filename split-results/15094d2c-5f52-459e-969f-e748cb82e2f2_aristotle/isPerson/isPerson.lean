@@ -1,2 +1,0 @@
--- Declaration: isPerson
--- Extracted by StaticSplit

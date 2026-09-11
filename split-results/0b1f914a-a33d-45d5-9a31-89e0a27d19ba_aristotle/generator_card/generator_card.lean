@@ -1,2 +1,0 @@
--- Declaration: generator_card
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: encode_offset_mod8
--- Extracted by StaticSplit

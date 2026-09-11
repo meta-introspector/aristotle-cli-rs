@@ -1,2 +1,0 @@
--- Declaration: cliffordTrace_leaf
--- Extracted by StaticSplit

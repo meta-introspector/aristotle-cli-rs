@@ -1,2 +1,0 @@
--- Declaration: showCoded
--- Extracted by StaticSplit

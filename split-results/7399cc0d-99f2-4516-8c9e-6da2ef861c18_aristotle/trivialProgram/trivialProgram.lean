@@ -1,2 +1,0 @@
--- Declaration: trivialProgram
--- Extracted by StaticSplit

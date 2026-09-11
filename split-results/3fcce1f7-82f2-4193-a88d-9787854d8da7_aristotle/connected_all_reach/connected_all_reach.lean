@@ -1,2 +1,0 @@
--- Declaration: connected_all_reach
--- Extracted by StaticSplit

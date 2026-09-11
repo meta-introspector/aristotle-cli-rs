@@ -1,2 +1,0 @@
--- Declaration: ATLASGroupDesc
--- Extracted by StaticSplit

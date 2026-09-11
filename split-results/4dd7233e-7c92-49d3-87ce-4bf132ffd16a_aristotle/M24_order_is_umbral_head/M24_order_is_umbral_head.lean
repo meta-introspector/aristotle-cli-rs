@@ -1,2 +1,0 @@
--- Declaration: M24_order_is_umbral_head
--- Extracted by StaticSplit

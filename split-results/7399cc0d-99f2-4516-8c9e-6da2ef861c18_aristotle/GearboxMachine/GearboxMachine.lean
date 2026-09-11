@@ -1,2 +1,0 @@
--- Declaration: GearboxMachine
--- Extracted by StaticSplit

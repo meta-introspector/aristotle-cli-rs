@@ -1,2 +1,0 @@
--- Declaration: selfLifting_invariance
--- Extracted by StaticSplit

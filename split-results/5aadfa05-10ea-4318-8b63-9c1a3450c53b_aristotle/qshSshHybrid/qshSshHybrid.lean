@@ -1,2 +1,0 @@
--- Declaration: qshSshHybrid
--- Extracted by StaticSplit

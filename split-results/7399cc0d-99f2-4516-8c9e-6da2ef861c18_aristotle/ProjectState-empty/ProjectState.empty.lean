@@ -1,2 +1,0 @@
--- Declaration: ProjectState.empty
--- Extracted by StaticSplit

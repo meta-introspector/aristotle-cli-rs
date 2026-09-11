@@ -1,2 +1,0 @@
--- Declaration: PartialCoalgebra
--- Extracted by StaticSplit

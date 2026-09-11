@@ -1,2 +1,0 @@
--- Declaration: mulCID
--- Extracted by StaticSplit

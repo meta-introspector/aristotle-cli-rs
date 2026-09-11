@@ -1,2 +1,0 @@
--- Declaration: fullChain
--- Extracted by StaticSplit

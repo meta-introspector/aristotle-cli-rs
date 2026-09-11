@@ -1,2 +1,0 @@
--- Declaration: WildToken
--- Extracted by StaticSplit

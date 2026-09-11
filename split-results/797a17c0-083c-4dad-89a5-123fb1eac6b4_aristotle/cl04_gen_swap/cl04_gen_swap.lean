@@ -1,2 +1,0 @@
--- Declaration: cl04_gen_swap
--- Extracted by StaticSplit

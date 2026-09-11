@@ -1,2 +1,0 @@
--- Declaration: ListTerm
--- Extracted by StaticSplit

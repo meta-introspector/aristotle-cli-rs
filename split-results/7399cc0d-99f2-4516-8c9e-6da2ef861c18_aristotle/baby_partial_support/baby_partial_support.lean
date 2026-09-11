@@ -1,2 +1,0 @@
--- Declaration: baby_partial_support
--- Extracted by StaticSplit

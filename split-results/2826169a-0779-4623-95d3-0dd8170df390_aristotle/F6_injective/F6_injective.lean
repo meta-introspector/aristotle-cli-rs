@@ -1,2 +1,0 @@
--- Declaration: F6_injective
--- Extracted by StaticSplit

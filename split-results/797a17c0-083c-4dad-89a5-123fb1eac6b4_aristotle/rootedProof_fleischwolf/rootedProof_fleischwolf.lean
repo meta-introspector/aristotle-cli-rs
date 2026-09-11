@@ -1,2 +1,0 @@
--- Declaration: rootedProof_fleischwolf
--- Extracted by StaticSplit

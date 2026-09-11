@@ -1,2 +1,0 @@
--- Declaration: minichargedDiagram_numEdges
--- Extracted by StaticSplit

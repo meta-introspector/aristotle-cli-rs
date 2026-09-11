@@ -1,2 +1,0 @@
--- Declaration: standingRule_floor_enforceable
--- Extracted by StaticSplit

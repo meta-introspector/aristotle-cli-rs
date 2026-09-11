@@ -1,2 +1,0 @@
--- Declaration: cl05_forward_surjective
--- Extracted by StaticSplit

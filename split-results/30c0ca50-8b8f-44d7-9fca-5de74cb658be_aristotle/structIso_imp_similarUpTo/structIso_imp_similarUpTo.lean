@@ -1,2 +1,0 @@
--- Declaration: structIso_imp_similarUpTo
--- Extracted by StaticSplit

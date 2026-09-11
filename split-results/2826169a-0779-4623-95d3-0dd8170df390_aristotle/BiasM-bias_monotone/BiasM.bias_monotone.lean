@@ -1,2 +1,0 @@
--- Declaration: BiasM.bias_monotone
--- Extracted by StaticSplit

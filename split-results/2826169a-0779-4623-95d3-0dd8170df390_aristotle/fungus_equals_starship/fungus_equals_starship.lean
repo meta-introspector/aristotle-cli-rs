@@ -1,2 +1,0 @@
--- Declaration: fungus_equals_starship
--- Extracted by StaticSplit

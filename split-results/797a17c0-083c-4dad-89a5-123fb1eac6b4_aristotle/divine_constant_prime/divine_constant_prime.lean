@@ -1,2 +1,0 @@
--- Declaration: divine_constant_prime
--- Extracted by StaticSplit

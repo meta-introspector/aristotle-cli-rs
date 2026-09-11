@@ -1,2 +1,0 @@
--- Declaration: worldBeforeHeidegger
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ssGrade
--- Extracted by StaticSplit

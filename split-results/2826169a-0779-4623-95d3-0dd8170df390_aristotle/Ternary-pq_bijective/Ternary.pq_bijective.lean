@@ -1,2 +1,0 @@
--- Declaration: Ternary.pq_bijective
--- Extracted by StaticSplit

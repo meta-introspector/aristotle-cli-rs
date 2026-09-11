@@ -1,2 +1,0 @@
--- Declaration: taxicab_factored
--- Extracted by StaticSplit

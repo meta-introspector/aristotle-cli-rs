@@ -1,2 +1,0 @@
--- Declaration: doubleFrac_always_applies
--- Extracted by StaticSplit

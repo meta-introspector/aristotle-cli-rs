@@ -1,2 +1,0 @@
--- Declaration: oddDivisorCount_value
--- Extracted by StaticSplit

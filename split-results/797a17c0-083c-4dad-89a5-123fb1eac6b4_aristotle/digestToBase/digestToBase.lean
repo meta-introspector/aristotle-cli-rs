@@ -1,2 +1,0 @@
--- Declaration: digestToBase
--- Extracted by StaticSplit

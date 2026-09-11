@@ -1,2 +1,0 @@
--- Declaration: one_mul'
--- Extracted by StaticSplit

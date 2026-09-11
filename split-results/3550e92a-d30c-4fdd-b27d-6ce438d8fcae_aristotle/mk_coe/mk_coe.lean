@@ -1,2 +1,0 @@
--- Declaration: mk_coe
--- Extracted by StaticSplit

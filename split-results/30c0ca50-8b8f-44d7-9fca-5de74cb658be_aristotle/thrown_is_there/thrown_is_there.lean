@@ -1,2 +1,0 @@
--- Declaration: thrown_is_there
--- Extracted by StaticSplit

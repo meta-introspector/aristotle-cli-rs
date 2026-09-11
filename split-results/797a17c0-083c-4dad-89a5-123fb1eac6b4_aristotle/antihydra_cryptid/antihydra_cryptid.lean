@@ -1,2 +1,0 @@
--- Declaration: antihydra_cryptid
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: crt_two_charts
--- Extracted by StaticSplit

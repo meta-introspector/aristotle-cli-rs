@@ -1,2 +1,0 @@
--- Declaration: ArrowKind
--- Extracted by StaticSplit

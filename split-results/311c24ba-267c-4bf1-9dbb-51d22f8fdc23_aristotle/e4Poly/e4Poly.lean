@@ -1,2 +1,0 @@
--- Declaration: e4Poly
--- Extracted by StaticSplit

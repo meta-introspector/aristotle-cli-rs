@@ -1,2 +1,0 @@
--- Declaration: resClassProfile_mod4
--- Extracted by StaticSplit

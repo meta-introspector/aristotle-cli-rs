@@ -1,2 +1,0 @@
--- Declaration: monster_digitCount_eq_log_all
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: roundtrip_bvar
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: massRestore_idempotent
--- Extracted by StaticSplit

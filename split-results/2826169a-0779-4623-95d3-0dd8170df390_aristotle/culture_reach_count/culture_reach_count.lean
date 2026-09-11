@@ -1,2 +1,0 @@
--- Declaration: culture_reach_count
--- Extracted by StaticSplit

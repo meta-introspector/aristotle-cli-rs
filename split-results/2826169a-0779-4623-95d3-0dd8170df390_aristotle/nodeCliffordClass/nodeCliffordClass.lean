@@ -1,2 +1,0 @@
--- Declaration: nodeCliffordClass
--- Extracted by StaticSplit

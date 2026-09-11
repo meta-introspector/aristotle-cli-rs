@@ -1,2 +1,0 @@
--- Declaration: GameTrace
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: bott_weight_periodicity
--- Extracted by StaticSplit

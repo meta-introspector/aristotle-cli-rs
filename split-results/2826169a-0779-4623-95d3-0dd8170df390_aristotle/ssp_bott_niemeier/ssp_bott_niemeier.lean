@@ -1,2 +1,0 @@
--- Declaration: ssp_bott_niemeier
--- Extracted by StaticSplit

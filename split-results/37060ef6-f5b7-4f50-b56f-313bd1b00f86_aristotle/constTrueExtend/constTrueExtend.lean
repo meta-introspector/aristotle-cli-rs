@@ -1,2 +1,0 @@
--- Declaration: constTrueExtend
--- Extracted by StaticSplit

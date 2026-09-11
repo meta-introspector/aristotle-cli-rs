@@ -1,2 +1,0 @@
--- Declaration: fortyTwo_pronic
--- Extracted by StaticSplit

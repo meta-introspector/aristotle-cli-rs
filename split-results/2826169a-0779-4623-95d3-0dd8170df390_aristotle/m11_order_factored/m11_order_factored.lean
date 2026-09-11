@@ -1,2 +1,0 @@
--- Declaration: m11_order_factored
--- Extracted by StaticSplit

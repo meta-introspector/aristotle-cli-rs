@@ -1,2 +1,0 @@
--- Declaration: cite1251
--- Extracted by StaticSplit

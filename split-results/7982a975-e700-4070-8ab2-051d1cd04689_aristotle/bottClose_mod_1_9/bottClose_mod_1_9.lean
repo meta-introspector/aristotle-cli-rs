@@ -1,2 +1,0 @@
--- Declaration: bottClose_mod_1_9
--- Extracted by StaticSplit

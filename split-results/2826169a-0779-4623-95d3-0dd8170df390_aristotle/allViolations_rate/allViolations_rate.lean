@@ -1,2 +1,0 @@
--- Declaration: allViolations_rate
--- Extracted by StaticSplit

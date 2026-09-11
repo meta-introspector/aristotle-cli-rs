@@ -1,2 +1,0 @@
--- Declaration: EnumRepresentation_String
--- Extracted by StaticSplit

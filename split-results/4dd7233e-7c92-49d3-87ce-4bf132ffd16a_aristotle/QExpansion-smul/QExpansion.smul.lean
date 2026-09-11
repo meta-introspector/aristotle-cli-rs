@@ -1,2 +1,0 @@
--- Declaration: QExpansion.smul
--- Extracted by StaticSplit

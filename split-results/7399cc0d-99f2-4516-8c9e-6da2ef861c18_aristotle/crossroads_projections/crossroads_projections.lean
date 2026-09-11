@@ -1,2 +1,0 @@
--- Declaration: crossroads_projections
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: senate_satisfies_bridge
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: rankin_cohen_twice
--- Extracted by StaticSplit

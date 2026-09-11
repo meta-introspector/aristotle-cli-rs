@@ -1,2 +1,0 @@
--- Declaration: CoherenceCertificate
--- Extracted by StaticSplit

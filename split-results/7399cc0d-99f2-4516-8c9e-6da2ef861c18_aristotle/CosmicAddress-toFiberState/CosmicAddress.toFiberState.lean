@@ -1,2 +1,0 @@
--- Declaration: CosmicAddress.toFiberState
--- Extracted by StaticSplit

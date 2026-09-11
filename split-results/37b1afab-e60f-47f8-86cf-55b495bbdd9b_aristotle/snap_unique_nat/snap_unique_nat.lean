@@ -1,2 +1,0 @@
--- Declaration: snap_unique_nat
--- Extracted by StaticSplit

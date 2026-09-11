@@ -1,2 +1,0 @@
--- Declaration: genusZeroPrimes_product
--- Extracted by StaticSplit

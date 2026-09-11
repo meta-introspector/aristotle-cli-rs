@@ -1,2 +1,0 @@
--- Declaration: rho17_godel_clifford
--- Extracted by StaticSplit

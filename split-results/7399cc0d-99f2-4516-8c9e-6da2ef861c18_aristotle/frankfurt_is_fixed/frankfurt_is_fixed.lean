@@ -1,2 +1,0 @@
--- Declaration: frankfurt_is_fixed
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: isPromotable
--- Extracted by StaticSplit

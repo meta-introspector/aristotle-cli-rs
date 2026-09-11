@@ -1,2 +1,0 @@
--- Declaration: cl0_seven_equiv_mat8RealProd
--- Extracted by StaticSplit

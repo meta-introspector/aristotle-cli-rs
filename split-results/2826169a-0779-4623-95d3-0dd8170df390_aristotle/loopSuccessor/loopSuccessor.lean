@@ -1,2 +1,0 @@
--- Declaration: loopSuccessor
--- Extracted by StaticSplit

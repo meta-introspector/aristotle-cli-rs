@@ -1,2 +1,0 @@
--- Declaration: gradeStabilizes
--- Extracted by StaticSplit

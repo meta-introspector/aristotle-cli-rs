@@ -1,2 +1,0 @@
--- Declaration: sector_shard_faction_agree
--- Extracted by StaticSplit

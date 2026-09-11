@@ -1,2 +1,0 @@
--- Declaration: chart59
--- Extracted by StaticSplit

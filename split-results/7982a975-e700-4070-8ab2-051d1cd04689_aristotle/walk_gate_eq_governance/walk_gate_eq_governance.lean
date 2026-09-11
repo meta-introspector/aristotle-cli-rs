@@ -1,2 +1,0 @@
--- Declaration: walk_gate_eq_governance
--- Extracted by StaticSplit

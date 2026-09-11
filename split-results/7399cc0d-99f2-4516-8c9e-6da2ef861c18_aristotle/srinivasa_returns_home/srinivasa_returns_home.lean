@@ -1,2 +1,0 @@
--- Declaration: srinivasa_returns_home
--- Extracted by StaticSplit

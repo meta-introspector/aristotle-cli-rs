@@ -1,2 +1,0 @@
--- Declaration: chapter1_addresses_distinct
--- Extracted by StaticSplit

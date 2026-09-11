@@ -1,2 +1,0 @@
--- Declaration: main_theorem
--- Extracted by StaticSplit

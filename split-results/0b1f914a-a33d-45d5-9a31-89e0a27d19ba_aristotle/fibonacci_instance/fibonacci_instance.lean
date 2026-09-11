@@ -1,2 +1,0 @@
--- Declaration: fibonacci_instance
--- Extracted by StaticSplit

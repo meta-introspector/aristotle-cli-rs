@@ -1,2 +1,0 @@
--- Declaration: peircean_sign
--- Extracted by StaticSplit

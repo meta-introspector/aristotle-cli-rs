@@ -1,2 +1,0 @@
--- Declaration: scc_stable
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: earth_shard_reconstruction
--- Extracted by StaticSplit

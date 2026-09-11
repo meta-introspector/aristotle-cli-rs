@@ -1,2 +1,0 @@
--- Declaration: leechCoveringRadiusSq
--- Extracted by StaticSplit

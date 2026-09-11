@@ -1,2 +1,0 @@
--- Declaration: superstringWalkDown
--- Extracted by StaticSplit

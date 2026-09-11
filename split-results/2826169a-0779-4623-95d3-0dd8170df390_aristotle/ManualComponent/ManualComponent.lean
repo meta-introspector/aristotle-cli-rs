@@ -1,2 +1,0 @@
--- Declaration: ManualComponent
--- Extracted by StaticSplit

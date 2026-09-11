@@ -1,2 +1,0 @@
--- Declaration: syntaxSize
--- Extracted by StaticSplit

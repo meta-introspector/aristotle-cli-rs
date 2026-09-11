@@ -1,2 +1,0 @@
--- Declaration: handleResponse_success
--- Extracted by StaticSplit

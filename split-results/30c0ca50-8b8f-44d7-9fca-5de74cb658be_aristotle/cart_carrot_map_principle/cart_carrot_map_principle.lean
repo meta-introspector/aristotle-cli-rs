@@ -1,2 +1,0 @@
--- Declaration: cart_carrot_map_principle
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monitored_graded_mul_ne
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: mycorrhiza_decomposer_step
--- Extracted by StaticSplit

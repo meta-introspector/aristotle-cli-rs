@@ -1,2 +1,0 @@
--- Declaration: descendingWalk_end
--- Extracted by StaticSplit

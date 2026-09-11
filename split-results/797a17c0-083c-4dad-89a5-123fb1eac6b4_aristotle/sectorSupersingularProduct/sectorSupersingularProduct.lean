@@ -1,2 +1,0 @@
--- Declaration: sectorSupersingularProduct
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Trace.check
--- Extracted by StaticSplit

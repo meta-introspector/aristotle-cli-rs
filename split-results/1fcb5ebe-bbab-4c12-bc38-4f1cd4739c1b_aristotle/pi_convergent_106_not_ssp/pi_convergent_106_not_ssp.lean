@@ -1,2 +1,0 @@
--- Declaration: pi_convergent_106_not_ssp
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SecurityScalar
--- Extracted by StaticSplit

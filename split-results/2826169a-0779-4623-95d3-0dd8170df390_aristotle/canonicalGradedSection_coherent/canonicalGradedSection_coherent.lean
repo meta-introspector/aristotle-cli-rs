@@ -1,2 +1,0 @@
--- Declaration: canonicalGradedSection_coherent
--- Extracted by StaticSplit

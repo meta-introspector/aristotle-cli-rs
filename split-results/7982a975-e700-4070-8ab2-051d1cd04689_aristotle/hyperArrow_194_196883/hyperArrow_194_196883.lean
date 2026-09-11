@@ -1,2 +1,0 @@
--- Declaration: hyperArrow_194_196883
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: CRole
--- Extracted by StaticSplit

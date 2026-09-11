@@ -1,2 +1,0 @@
--- Declaration: SpaceConcept
--- Extracted by StaticSplit

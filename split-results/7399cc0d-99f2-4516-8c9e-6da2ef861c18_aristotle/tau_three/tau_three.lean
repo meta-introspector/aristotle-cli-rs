@@ -1,2 +1,0 @@
--- Declaration: tau_three
--- Extracted by StaticSplit

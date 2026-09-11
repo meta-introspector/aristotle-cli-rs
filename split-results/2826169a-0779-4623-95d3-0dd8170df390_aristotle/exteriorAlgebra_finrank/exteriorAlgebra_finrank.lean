@@ -1,2 +1,0 @@
--- Declaration: exteriorAlgebra_finrank
--- Extracted by StaticSplit

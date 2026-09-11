@@ -1,2 +1,0 @@
--- Declaration: scene
--- Extracted by StaticSplit

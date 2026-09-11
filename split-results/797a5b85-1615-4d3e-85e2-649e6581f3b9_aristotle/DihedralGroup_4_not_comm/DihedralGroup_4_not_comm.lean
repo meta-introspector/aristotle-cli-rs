@@ -1,2 +1,0 @@
--- Declaration: DihedralGroup_4_not_comm
--- Extracted by StaticSplit

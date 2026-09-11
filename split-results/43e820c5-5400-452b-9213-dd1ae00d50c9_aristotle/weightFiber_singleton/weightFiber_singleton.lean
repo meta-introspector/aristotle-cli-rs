@@ -1,2 +1,0 @@
--- Declaration: weightFiber_singleton
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: no_agent_ghost_71
--- Extracted by StaticSplit

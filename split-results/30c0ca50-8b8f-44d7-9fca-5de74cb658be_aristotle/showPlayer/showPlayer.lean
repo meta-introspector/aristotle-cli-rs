@@ -1,2 +1,0 @@
--- Declaration: showPlayer
--- Extracted by StaticSplit

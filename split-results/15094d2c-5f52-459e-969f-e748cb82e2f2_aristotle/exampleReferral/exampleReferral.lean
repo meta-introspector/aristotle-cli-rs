@@ -1,2 +1,0 @@
--- Declaration: exampleReferral
--- Extracted by StaticSplit

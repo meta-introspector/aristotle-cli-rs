@@ -1,2 +1,0 @@
--- Declaration: LinkedPropagationChain
--- Extracted by StaticSplit

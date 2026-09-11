@@ -1,2 +1,0 @@
--- Declaration: sspEncode_smooth
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Analogy
--- Extracted by StaticSplit

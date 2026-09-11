@@ -1,2 +1,0 @@
--- Declaration: hash_sol_get_return_data
--- Extracted by StaticSplit

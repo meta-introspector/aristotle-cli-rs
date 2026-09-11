@@ -1,2 +1,0 @@
--- Declaration: GrothendieckEndo.comp_preserves
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: metameme42_token_count
--- Extracted by StaticSplit

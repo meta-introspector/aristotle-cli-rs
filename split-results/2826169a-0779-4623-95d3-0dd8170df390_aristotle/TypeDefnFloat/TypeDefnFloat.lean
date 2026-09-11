@@ -1,2 +1,0 @@
--- Declaration: TypeDefnFloat
--- Extracted by StaticSplit

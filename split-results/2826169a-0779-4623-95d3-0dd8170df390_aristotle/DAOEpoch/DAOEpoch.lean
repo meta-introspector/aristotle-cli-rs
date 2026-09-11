@@ -1,2 +1,0 @@
--- Declaration: DAOEpoch
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: germaneness_no_debate
--- Extracted by StaticSplit

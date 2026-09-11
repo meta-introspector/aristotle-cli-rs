@@ -1,2 +1,0 @@
--- Declaration: resonance_combine
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: walk_returns_home
--- Extracted by StaticSplit

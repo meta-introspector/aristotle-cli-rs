@@ -1,2 +1,0 @@
--- Declaration: SoftStep
--- Extracted by StaticSplit

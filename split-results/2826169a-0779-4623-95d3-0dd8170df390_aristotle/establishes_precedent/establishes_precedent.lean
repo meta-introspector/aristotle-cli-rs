@@ -1,2 +1,0 @@
--- Declaration: establishes_precedent
--- Extracted by StaticSplit

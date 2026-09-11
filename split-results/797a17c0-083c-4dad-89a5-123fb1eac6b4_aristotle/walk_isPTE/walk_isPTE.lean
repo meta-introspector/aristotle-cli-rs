@@ -1,2 +1,0 @@
--- Declaration: walk_isPTE
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ProofObject
--- Extracted by StaticSplit

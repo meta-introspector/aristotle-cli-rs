@@ -1,2 +1,0 @@
--- Declaration: apart_cotrans
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: aggregateExponents
--- Extracted by StaticSplit

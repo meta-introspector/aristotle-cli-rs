@@ -1,2 +1,0 @@
--- Declaration: sspA_length
--- Extracted by StaticSplit

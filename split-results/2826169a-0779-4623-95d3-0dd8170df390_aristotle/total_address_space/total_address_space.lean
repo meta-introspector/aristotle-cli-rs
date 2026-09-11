@@ -1,2 +1,0 @@
--- Declaration: total_address_space
--- Extracted by StaticSplit

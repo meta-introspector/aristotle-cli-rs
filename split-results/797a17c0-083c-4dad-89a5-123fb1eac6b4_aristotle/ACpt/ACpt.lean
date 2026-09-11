@@ -1,2 +1,0 @@
--- Declaration: ACpt
--- Extracted by StaticSplit

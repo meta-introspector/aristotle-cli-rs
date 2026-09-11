@@ -1,2 +1,0 @@
--- Declaration: RestoredCrank
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: liouville_bosonic_balance
--- Extracted by StaticSplit

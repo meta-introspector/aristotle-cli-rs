@@ -1,2 +1,0 @@
--- Declaration: state_space_size
--- Extracted by StaticSplit

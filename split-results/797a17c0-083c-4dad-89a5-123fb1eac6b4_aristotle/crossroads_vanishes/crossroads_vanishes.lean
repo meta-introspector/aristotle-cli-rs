@@ -1,2 +1,0 @@
--- Declaration: crossroads_vanishes
--- Extracted by StaticSplit

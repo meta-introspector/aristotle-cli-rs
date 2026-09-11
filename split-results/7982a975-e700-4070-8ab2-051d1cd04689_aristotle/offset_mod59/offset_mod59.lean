@@ -1,2 +1,0 @@
--- Declaration: offset_mod59
--- Extracted by StaticSplit

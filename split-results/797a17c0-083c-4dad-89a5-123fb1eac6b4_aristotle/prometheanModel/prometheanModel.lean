@@ -1,2 +1,0 @@
--- Declaration: prometheanModel
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: total_Nx0_orbits
--- Extracted by StaticSplit

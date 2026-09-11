@@ -1,2 +1,0 @@
--- Declaration: atp_reaches_organism
--- Extracted by StaticSplit

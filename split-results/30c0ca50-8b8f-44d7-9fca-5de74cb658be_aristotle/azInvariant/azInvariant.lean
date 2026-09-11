@@ -1,2 +1,0 @@
--- Declaration: azInvariant
--- Extracted by StaticSplit

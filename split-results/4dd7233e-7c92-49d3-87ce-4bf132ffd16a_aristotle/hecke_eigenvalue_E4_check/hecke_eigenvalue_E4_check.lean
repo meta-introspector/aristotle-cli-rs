@@ -1,2 +1,0 @@
--- Declaration: hecke_eigenvalue_E4_check
--- Extracted by StaticSplit

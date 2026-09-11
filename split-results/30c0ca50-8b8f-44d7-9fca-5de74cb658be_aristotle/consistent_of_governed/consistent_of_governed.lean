@@ -1,2 +1,0 @@
--- Declaration: consistent_of_governed
--- Extracted by StaticSplit

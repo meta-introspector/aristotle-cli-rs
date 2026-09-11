@@ -1,2 +1,0 @@
--- Declaration: internet_meme_reaches_biology
--- Extracted by StaticSplit

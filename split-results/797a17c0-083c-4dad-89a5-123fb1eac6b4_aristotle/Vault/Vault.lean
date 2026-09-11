@@ -1,2 +1,0 @@
--- Declaration: Vault
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: typetheory_reaches_metaphysics
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Recursivity_kind
--- Extracted by StaticSplit

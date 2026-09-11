@@ -1,2 +1,0 @@
--- Declaration: ss_partition_sizes
--- Extracted by StaticSplit

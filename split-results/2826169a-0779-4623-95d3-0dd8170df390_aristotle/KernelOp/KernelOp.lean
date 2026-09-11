@@ -1,2 +1,0 @@
--- Declaration: KernelOp
--- Extracted by StaticSplit

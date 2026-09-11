@@ -1,2 +1,0 @@
--- Declaration: atp_rotor_reflections
--- Extracted by StaticSplit

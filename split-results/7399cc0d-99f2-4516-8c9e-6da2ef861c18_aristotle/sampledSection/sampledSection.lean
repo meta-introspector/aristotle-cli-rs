@@ -1,2 +1,0 @@
--- Declaration: sampledSection
--- Extracted by StaticSplit

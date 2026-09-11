@@ -1,2 +1,0 @@
--- Declaration: generate_cpp
--- Extracted by StaticSplit

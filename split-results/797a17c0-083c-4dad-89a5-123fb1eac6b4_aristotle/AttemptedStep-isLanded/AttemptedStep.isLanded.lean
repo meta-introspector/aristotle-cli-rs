@@ -1,2 +1,0 @@
--- Declaration: AttemptedStep.isLanded
--- Extracted by StaticSplit

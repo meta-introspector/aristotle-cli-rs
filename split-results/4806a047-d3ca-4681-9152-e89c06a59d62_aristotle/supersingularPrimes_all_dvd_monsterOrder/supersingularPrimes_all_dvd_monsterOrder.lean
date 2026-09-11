@@ -1,2 +1,0 @@
--- Declaration: supersingularPrimes_all_dvd_monsterOrder
--- Extracted by StaticSplit

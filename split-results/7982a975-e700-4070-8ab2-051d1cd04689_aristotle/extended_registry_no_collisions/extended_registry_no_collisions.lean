@@ -1,2 +1,0 @@
--- Declaration: extended_registry_no_collisions
--- Extracted by StaticSplit

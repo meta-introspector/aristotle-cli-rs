@@ -1,2 +1,0 @@
--- Declaration: firstCellSize
--- Extracted by StaticSplit

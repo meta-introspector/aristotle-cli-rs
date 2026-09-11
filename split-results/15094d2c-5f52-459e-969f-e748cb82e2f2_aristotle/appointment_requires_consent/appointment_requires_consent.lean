@@ -1,2 +1,0 @@
--- Declaration: appointment_requires_consent
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: cid_semiotics_roundtrip
--- Extracted by StaticSplit

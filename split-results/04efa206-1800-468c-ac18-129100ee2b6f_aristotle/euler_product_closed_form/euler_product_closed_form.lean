@@ -1,2 +1,0 @@
--- Declaration: euler_product_closed_form
--- Extracted by StaticSplit

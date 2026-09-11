@@ -1,2 +1,0 @@
--- Declaration: e8Roots_supersingular
--- Extracted by StaticSplit

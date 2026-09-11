@@ -1,2 +1,0 @@
--- Declaration: tower_level3_distinct
--- Extracted by StaticSplit

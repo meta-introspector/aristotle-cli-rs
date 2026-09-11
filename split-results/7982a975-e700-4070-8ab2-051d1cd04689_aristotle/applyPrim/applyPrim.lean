@@ -1,2 +1,0 @@
--- Declaration: applyPrim
--- Extracted by StaticSplit

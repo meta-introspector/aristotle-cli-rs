@@ -1,2 +1,0 @@
--- Declaration: moduli_product_griess
--- Extracted by StaticSplit

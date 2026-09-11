@@ -1,2 +1,0 @@
--- Declaration: gram_orthogonality
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: monsterPrimes_disjoint
--- Extracted by StaticSplit

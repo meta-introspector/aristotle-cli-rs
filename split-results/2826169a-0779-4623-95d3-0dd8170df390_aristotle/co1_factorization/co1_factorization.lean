@@ -1,2 +1,0 @@
--- Declaration: co1_factorization
--- Extracted by StaticSplit

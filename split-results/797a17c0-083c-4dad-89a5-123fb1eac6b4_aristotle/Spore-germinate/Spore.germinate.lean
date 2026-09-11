@@ -1,2 +1,0 @@
--- Declaration: Spore.germinate
--- Extracted by StaticSplit

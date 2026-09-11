@@ -1,2 +1,0 @@
--- Declaration: architecture
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: idempotent_one_step
--- Extracted by StaticSplit

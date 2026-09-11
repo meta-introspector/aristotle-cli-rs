@@ -1,2 +1,0 @@
--- Declaration: no_duty_if_rules_ignored
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: rho17_clifford_class
--- Extracted by StaticSplit

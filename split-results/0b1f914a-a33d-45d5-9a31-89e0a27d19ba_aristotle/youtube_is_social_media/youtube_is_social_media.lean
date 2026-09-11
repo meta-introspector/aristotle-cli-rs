@@ -1,2 +1,0 @@
--- Declaration: youtube_is_social_media
--- Extracted by StaticSplit

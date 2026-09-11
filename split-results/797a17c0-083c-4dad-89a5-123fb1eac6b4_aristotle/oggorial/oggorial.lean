@@ -1,2 +1,0 @@
--- Declaration: oggorial
--- Extracted by StaticSplit

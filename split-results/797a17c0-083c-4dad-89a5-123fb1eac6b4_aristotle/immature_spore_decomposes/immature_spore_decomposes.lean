@@ -1,2 +1,0 @@
--- Declaration: immature_spore_decomposes
--- Extracted by StaticSplit

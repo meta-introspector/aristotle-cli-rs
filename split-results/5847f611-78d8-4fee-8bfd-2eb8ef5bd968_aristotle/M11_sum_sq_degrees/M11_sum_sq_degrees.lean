@@ -1,2 +1,0 @@
--- Declaration: M11_sum_sq_degrees
--- Extracted by StaticSplit

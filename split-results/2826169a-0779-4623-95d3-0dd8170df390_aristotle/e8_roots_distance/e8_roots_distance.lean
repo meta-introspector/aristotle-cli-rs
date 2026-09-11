@@ -1,2 +1,0 @@
--- Declaration: e8_roots_distance
--- Extracted by StaticSplit

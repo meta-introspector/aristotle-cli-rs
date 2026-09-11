@@ -1,2 +1,0 @@
--- Declaration: reachableSetSize
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: MonomythSignature
--- Extracted by StaticSplit

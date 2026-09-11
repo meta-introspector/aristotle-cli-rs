@@ -1,2 +1,0 @@
--- Declaration: functor_preserves_iso
--- Extracted by StaticSplit

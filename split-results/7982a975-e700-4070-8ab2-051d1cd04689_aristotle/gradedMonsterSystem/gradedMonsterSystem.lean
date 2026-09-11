@@ -1,2 +1,0 @@
--- Declaration: gradedMonsterSystem
--- Extracted by StaticSplit

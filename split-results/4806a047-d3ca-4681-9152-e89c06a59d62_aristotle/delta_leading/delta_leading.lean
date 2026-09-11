@@ -1,2 +1,0 @@
--- Declaration: delta_leading
--- Extracted by StaticSplit

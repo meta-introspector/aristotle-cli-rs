@@ -1,2 +1,0 @@
--- Declaration: kclass_determines_residue
--- Extracted by StaticSplit

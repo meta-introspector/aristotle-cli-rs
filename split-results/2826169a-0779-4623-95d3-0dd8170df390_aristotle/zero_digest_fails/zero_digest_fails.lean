@@ -1,2 +1,0 @@
--- Declaration: zero_digest_fails
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: spectral_period
--- Extracted by StaticSplit

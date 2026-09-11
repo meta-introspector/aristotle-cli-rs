@@ -1,2 +1,0 @@
--- Declaration: oggTrace_onOggLattice
--- Extracted by StaticSplit

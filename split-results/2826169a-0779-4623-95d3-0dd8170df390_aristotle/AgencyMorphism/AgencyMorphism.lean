@@ -1,2 +1,0 @@
--- Declaration: AgencyMorphism
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: H1odd
--- Extracted by StaticSplit

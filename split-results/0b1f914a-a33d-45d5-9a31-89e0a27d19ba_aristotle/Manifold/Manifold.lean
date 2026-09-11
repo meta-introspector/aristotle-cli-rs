@@ -1,2 +1,0 @@
--- Declaration: Manifold
--- Extracted by StaticSplit

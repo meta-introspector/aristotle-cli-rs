@@ -1,2 +1,0 @@
--- Declaration: coeffs_grow
--- Extracted by StaticSplit

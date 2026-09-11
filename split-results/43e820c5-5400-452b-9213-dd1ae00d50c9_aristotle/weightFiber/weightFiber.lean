@@ -1,2 +1,0 @@
--- Declaration: weightFiber
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ssp3_product
--- Extracted by StaticSplit

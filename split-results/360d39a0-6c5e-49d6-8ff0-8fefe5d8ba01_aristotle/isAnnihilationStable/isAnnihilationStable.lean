@@ -1,2 +1,0 @@
--- Declaration: isAnnihilationStable
--- Extracted by StaticSplit

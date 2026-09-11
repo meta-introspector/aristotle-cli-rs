@@ -1,2 +1,0 @@
--- Declaration: rho17_axes_moduli_correct
--- Extracted by StaticSplit

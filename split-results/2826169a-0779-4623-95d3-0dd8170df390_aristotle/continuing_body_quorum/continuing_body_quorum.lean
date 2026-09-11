@@ -1,2 +1,0 @@
--- Declaration: continuing_body_quorum
--- Extracted by StaticSplit

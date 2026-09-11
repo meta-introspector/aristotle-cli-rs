@@ -1,2 +1,0 @@
--- Declaration: bott_744
--- Extracted by StaticSplit

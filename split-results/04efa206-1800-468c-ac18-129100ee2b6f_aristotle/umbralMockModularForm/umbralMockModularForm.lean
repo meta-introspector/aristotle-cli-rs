@@ -1,2 +1,0 @@
--- Declaration: umbralMockModularForm
--- Extracted by StaticSplit

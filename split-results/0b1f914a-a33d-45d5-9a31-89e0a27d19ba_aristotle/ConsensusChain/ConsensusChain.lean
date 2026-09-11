@@ -1,2 +1,0 @@
--- Declaration: ConsensusChain
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: all_clusters_share_torus
--- Extracted by StaticSplit

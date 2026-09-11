@@ -1,2 +1,0 @@
--- Declaration: matchRat_47_capture
--- Extracted by StaticSplit

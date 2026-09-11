@@ -1,2 +1,0 @@
--- Declaration: Z.pred_double
--- Extracted by StaticSplit

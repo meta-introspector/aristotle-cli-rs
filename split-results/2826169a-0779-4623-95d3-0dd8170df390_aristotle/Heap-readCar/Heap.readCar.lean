@@ -1,2 +1,0 @@
--- Declaration: Heap.readCar
--- Extracted by StaticSplit

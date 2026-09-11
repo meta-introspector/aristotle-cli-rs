@@ -1,2 +1,0 @@
--- Declaration: consensus_safety
--- Extracted by StaticSplit

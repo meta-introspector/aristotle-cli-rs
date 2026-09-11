@@ -1,2 +1,0 @@
--- Declaration: edge_increase
--- Extracted by StaticSplit

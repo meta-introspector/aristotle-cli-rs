@@ -1,2 +1,0 @@
--- Declaration: cambridge_coeff_factored
--- Extracted by StaticSplit

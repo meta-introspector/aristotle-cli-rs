@@ -1,2 +1,0 @@
--- Declaration: ANameList
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: VecProgram
--- Extracted by StaticSplit

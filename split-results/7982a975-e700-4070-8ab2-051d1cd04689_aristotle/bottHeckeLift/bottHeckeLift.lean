@@ -1,2 +1,0 @@
--- Declaration: bottHeckeLift
--- Extracted by StaticSplit

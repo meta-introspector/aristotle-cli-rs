@@ -1,2 +1,0 @@
--- Declaration: generator_sparsity
--- Extracted by StaticSplit

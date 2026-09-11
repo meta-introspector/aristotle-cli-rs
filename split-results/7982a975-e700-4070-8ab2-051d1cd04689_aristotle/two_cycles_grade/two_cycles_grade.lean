@@ -1,2 +1,0 @@
--- Declaration: two_cycles_grade
--- Extracted by StaticSplit

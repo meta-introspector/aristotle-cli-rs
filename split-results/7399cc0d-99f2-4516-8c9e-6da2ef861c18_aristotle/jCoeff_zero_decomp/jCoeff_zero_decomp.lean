@@ -1,2 +1,0 @@
--- Declaration: jCoeff_zero_decomp
--- Extracted by StaticSplit

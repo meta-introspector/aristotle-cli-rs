@@ -1,2 +1,0 @@
--- Declaration: afterWorld
--- Extracted by StaticSplit

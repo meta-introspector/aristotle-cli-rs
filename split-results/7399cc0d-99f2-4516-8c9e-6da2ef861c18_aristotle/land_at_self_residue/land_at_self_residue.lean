@@ -1,2 +1,0 @@
--- Declaration: land_at_self_residue
--- Extracted by StaticSplit

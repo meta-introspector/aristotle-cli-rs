@@ -1,2 +1,0 @@
--- Declaration: no_graded_self_spawn_unverified
--- Extracted by StaticSplit

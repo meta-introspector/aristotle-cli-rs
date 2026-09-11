@@ -1,2 +1,0 @@
--- Declaration: hyphaToTentacle
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: to_signed_ternary
--- Extracted by StaticSplit

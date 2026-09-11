@@ -1,2 +1,0 @@
--- Declaration: GlobalDecl.getConstant?
--- Extracted by StaticSplit

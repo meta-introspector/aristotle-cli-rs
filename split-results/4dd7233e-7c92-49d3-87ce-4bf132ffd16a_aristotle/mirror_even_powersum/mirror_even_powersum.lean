@@ -1,2 +1,0 @@
--- Declaration: mirror_even_powersum
--- Extracted by StaticSplit

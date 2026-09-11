@@ -1,2 +1,0 @@
--- Declaration: ipldGet
--- Extracted by StaticSplit

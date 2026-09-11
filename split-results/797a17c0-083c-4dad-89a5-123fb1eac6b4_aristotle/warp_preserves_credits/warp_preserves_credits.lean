@@ -1,2 +1,0 @@
--- Declaration: warp_preserves_credits
--- Extracted by StaticSplit

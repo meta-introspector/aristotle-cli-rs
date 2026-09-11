@@ -1,2 +1,0 @@
--- Declaration: pullback_condition
--- Extracted by StaticSplit

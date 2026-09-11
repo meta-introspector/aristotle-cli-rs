@@ -1,2 +1,0 @@
--- Declaration: isSubformula_refl
--- Extracted by StaticSplit

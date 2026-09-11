@@ -1,2 +1,0 @@
--- Declaration: DA51Address.getPrefix
--- Extracted by StaticSplit

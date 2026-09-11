@@ -1,2 +1,0 @@
--- Declaration: loper_governs_iff_defers
--- Extracted by StaticSplit

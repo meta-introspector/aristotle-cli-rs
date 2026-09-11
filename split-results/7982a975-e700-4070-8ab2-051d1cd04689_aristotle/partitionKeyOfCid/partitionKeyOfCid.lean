@@ -1,2 +1,0 @@
--- Declaration: partitionKeyOfCid
--- Extracted by StaticSplit

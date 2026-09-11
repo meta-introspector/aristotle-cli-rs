@@ -1,2 +1,0 @@
--- Declaration: firstCell_factorization
--- Extracted by StaticSplit

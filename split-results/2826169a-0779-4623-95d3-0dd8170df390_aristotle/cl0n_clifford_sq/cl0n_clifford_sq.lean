@@ -1,2 +1,0 @@
--- Declaration: cl0n_clifford_sq
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Appointment
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: umbralGroup_trivial_card_A15_D9
--- Extracted by StaticSplit

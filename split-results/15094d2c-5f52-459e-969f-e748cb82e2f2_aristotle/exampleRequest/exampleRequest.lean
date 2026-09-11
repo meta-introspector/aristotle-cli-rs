@@ -1,2 +1,0 @@
--- Declaration: exampleRequest
--- Extracted by StaticSplit

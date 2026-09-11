@@ -1,2 +1,0 @@
--- Declaration: constantBeliefSystem
--- Extracted by StaticSplit

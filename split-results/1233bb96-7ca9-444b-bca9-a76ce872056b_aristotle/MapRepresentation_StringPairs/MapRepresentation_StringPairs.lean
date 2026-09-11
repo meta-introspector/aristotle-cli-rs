@@ -1,2 +1,0 @@
--- Declaration: MapRepresentation_StringPairs
--- Extracted by StaticSplit

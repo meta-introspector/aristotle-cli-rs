@@ -1,2 +1,0 @@
--- Declaration: coeff_monomial_ne
--- Extracted by StaticSplit

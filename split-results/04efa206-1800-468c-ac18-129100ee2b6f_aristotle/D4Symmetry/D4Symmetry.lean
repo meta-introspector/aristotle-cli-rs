@@ -1,2 +1,0 @@
--- Declaration: D4Symmetry
--- Extracted by StaticSplit

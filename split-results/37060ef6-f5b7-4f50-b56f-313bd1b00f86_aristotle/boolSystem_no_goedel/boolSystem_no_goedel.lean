@@ -1,2 +1,0 @@
--- Declaration: boolSystem_no_goedel
--- Extracted by StaticSplit

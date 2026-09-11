@@ -1,2 +1,0 @@
--- Declaration: jExpansionAt
--- Extracted by StaticSplit

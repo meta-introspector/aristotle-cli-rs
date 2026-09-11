@@ -1,2 +1,0 @@
--- Declaration: SingleAcceptance
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: native_decide
--- Extracted by StaticSplit

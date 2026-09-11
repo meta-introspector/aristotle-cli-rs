@@ -1,2 +1,0 @@
--- Declaration: CliffordFiber
--- Extracted by StaticSplit

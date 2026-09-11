@@ -1,2 +1,0 @@
--- Declaration: gamma0_subset_ssp
--- Extracted by StaticSplit

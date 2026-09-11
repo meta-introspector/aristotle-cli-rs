@@ -1,2 +1,0 @@
--- Declaration: cfLSize_append
--- Extracted by StaticSplit

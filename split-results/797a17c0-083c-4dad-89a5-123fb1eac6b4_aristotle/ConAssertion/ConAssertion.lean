@@ -1,2 +1,0 @@
--- Declaration: ConAssertion
--- Extracted by StaticSplit

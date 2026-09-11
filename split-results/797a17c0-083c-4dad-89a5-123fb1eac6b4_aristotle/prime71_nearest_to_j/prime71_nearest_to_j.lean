@@ -1,2 +1,0 @@
--- Declaration: prime71_nearest_to_j
--- Extracted by StaticSplit

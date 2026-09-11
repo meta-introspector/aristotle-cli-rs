@@ -1,2 +1,0 @@
--- Declaration: basedLiftOfFiberHom
--- Extracted by StaticSplit

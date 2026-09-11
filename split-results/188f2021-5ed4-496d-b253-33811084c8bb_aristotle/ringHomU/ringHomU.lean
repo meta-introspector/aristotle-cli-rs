@@ -1,2 +1,0 @@
--- Declaration: ringHomU
--- Extracted by StaticSplit

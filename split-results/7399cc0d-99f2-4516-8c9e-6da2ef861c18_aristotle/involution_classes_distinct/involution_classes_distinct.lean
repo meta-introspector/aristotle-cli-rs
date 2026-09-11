@@ -1,2 +1,0 @@
--- Declaration: involution_classes_distinct
--- Extracted by StaticSplit

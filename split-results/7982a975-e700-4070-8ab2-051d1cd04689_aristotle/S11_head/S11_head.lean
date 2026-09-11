@@ -1,2 +1,0 @@
--- Declaration: S11_head
--- Extracted by StaticSplit

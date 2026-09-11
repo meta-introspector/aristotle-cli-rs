@@ -1,2 +1,0 @@
--- Declaration: finrank_WP_oddH1
--- Extracted by StaticSplit

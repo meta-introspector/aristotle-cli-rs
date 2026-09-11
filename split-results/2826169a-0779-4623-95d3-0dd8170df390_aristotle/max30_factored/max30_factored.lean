@@ -1,2 +1,0 @@
--- Declaration: max30_factored
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: FloorVote.tally
--- Extracted by StaticSplit

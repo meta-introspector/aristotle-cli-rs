@@ -1,2 +1,0 @@
--- Declaration: five_nontrivial_slots
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: truth_is_reduction
--- Extracted by StaticSplit

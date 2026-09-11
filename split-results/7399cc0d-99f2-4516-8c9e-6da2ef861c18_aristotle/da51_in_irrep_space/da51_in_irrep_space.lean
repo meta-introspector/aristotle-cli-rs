@@ -1,2 +1,0 @@
--- Declaration: da51_in_irrep_space
--- Extracted by StaticSplit

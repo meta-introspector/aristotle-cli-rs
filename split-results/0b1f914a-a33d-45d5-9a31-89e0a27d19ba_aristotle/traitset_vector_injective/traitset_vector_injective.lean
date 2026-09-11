@@ -1,2 +1,0 @@
--- Declaration: traitset_vector_injective
--- Extracted by StaticSplit

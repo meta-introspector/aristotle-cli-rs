@@ -1,2 +1,0 @@
--- Declaration: house_required
--- Extracted by StaticSplit

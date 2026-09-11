@@ -1,2 +1,0 @@
--- Declaration: moonshineMetameme
--- Extracted by StaticSplit

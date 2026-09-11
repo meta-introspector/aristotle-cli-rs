@@ -1,2 +1,0 @@
--- Declaration: prime47_not_self_locating
--- Extracted by StaticSplit

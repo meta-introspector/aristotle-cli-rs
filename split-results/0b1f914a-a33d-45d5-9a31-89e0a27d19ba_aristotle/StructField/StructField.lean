@@ -1,2 +1,0 @@
--- Declaration: StructField
--- Extracted by StaticSplit

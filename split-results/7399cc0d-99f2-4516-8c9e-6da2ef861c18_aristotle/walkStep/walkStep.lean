@@ -1,2 +1,0 @@
--- Declaration: walkStep
--- Extracted by StaticSplit

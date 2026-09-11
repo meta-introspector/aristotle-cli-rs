@@ -1,2 +1,0 @@
--- Declaration: applyAction
--- Extracted by StaticSplit

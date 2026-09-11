@@ -1,2 +1,0 @@
--- Declaration: ContextWindow.wellFormed
--- Extracted by StaticSplit

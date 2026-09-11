@@ -1,2 +1,0 @@
--- Declaration: self_folding_iff
--- Extracted by StaticSplit

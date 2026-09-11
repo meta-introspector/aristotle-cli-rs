@@ -1,2 +1,0 @@
--- Declaration: borcherds_proof_summary
--- Extracted by StaticSplit

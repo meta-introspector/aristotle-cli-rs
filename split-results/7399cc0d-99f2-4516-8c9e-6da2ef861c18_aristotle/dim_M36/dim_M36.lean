@@ -1,2 +1,0 @@
--- Declaration: dim_M36
--- Extracted by StaticSplit

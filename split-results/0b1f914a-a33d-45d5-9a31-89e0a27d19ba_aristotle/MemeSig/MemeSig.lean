@@ -1,2 +1,0 @@
--- Declaration: MemeSig
--- Extracted by StaticSplit

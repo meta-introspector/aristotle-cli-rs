@@ -1,2 +1,0 @@
--- Declaration: extAdjacent
--- Extracted by StaticSplit

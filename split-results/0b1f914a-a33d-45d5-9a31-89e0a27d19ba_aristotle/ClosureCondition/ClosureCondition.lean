@@ -1,2 +1,0 @@
--- Declaration: ClosureCondition
--- Extracted by StaticSplit

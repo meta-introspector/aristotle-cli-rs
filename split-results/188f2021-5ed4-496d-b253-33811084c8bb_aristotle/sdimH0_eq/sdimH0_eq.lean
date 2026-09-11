@@ -1,2 +1,0 @@
--- Declaration: sdimH0_eq
--- Extracted by StaticSplit

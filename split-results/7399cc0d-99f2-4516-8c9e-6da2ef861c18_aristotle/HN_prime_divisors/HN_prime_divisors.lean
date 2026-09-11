@@ -1,2 +1,0 @@
--- Declaration: HN_prime_divisors
--- Extracted by StaticSplit

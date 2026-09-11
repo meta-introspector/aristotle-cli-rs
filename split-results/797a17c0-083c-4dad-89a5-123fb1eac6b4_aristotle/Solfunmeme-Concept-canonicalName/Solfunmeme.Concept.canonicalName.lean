@@ -1,2 +1,0 @@
--- Declaration: Solfunmeme.Concept.canonicalName
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: localDefect_zero_iff
--- Extracted by StaticSplit

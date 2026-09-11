@@ -1,2 +1,0 @@
--- Declaration: inferType_app_mismatch
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: governance_base_is_monster
--- Extracted by StaticSplit

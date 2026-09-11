@@ -1,2 +1,0 @@
--- Declaration: delta_weight
--- Extracted by StaticSplit

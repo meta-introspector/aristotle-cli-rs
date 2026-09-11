@@ -1,2 +1,0 @@
--- Declaration: VibeRegister.address
--- Extracted by StaticSplit

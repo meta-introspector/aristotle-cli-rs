@@ -1,2 +1,0 @@
--- Declaration: suffixComplexity
--- Extracted by StaticSplit

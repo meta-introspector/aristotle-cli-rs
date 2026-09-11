@@ -1,2 +1,0 @@
--- Declaration: L34_extensions
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: chart_alt_superdims
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: kernel_deterministic
--- Extracted by StaticSplit

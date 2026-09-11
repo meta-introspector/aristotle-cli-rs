@@ -1,2 +1,0 @@
--- Declaration: obj_morphism
--- Extracted by StaticSplit

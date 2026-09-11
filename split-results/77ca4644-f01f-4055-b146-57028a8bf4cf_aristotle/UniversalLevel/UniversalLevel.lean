@@ -1,2 +1,0 @@
--- Declaration: UniversalLevel
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ssp_B_length_equals_senate_gap
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: runInvariantSurvey
--- Extracted by StaticSplit

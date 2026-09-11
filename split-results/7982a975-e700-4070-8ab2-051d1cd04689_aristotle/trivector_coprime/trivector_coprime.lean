@@ -1,2 +1,0 @@
--- Declaration: trivector_coprime
--- Extracted by StaticSplit

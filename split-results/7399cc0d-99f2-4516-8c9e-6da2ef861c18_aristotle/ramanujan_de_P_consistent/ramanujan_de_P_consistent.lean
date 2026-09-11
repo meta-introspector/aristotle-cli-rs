@@ -1,2 +1,0 @@
--- Declaration: ramanujan_de_P_consistent
--- Extracted by StaticSplit

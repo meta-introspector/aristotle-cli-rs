@@ -1,2 +1,0 @@
--- Declaration: shadowSystem
--- Extracted by StaticSplit

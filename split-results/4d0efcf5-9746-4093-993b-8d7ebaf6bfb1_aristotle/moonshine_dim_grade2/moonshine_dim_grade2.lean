@@ -1,2 +1,0 @@
--- Declaration: moonshine_dim_grade2
--- Extracted by StaticSplit

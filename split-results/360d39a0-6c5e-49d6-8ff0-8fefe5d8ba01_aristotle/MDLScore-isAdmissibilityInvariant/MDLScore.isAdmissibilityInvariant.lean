@@ -1,2 +1,0 @@
--- Declaration: MDLScore.isAdmissibilityInvariant
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: warp_preserves_cargo
--- Extracted by StaticSplit

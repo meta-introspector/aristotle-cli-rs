@@ -1,2 +1,0 @@
--- Declaration: runPrimegame
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: agency_levels_equal_bott
--- Extracted by StaticSplit

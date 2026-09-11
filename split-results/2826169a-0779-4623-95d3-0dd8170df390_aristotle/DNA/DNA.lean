@@ -1,2 +1,0 @@
--- Declaration: DNA
--- Extracted by StaticSplit

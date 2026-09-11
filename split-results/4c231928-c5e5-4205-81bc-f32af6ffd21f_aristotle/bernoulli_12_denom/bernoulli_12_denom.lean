@@ -1,2 +1,0 @@
--- Declaration: bernoulli_12_denom
--- Extracted by StaticSplit

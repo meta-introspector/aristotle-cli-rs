@@ -1,2 +1,0 @@
--- Declaration: GalacticRegion
--- Extracted by StaticSplit

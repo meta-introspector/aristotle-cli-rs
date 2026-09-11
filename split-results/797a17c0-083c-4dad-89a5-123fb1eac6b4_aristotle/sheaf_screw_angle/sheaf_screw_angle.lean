@@ -1,2 +1,0 @@
--- Declaration: sheaf_screw_angle
--- Extracted by StaticSplit

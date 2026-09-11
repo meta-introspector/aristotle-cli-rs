@@ -1,2 +1,0 @@
--- Declaration: double_neg_intro
--- Extracted by StaticSplit

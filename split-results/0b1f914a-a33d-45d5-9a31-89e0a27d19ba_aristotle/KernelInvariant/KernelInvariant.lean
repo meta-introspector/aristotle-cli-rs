@@ -1,2 +1,0 @@
--- Declaration: KernelInvariant
--- Extracted by StaticSplit

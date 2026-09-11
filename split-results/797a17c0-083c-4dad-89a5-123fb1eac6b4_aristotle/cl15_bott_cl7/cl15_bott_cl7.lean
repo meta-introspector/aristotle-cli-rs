@@ -1,2 +1,0 @@
--- Declaration: cl15_bott_cl7
--- Extracted by StaticSplit

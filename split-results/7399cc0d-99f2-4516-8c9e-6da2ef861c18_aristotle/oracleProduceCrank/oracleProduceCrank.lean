@@ -1,2 +1,0 @@
--- Declaration: oracleProduceCrank
--- Extracted by StaticSplit

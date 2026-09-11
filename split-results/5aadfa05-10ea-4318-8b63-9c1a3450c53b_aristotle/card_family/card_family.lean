@@ -1,2 +1,0 @@
--- Declaration: card_family
--- Extracted by StaticSplit

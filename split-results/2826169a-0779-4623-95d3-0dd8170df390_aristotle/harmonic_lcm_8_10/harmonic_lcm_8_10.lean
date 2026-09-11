@@ -1,2 +1,0 @@
--- Declaration: harmonic_lcm_8_10
--- Extracted by StaticSplit

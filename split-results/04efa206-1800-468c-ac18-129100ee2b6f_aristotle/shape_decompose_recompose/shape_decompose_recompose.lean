@@ -1,2 +1,0 @@
--- Declaration: shape_decompose_recompose
--- Extracted by StaticSplit

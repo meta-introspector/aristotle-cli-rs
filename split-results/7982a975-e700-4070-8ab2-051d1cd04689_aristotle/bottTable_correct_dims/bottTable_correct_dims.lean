@@ -1,2 +1,0 @@
--- Declaration: bottTable_correct_dims
--- Extracted by StaticSplit

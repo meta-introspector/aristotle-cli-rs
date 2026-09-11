@@ -1,2 +1,0 @@
--- Declaration: monster_irrep_count
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: classes_factored
--- Extracted by StaticSplit

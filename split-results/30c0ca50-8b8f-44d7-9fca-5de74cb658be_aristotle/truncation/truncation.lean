@@ -1,2 +1,0 @@
--- Declaration: truncation
--- Extracted by StaticSplit

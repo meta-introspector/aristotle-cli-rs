@@ -1,2 +1,0 @@
--- Declaration: exampleJusticiable
--- Extracted by StaticSplit

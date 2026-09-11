@@ -1,2 +1,0 @@
--- Declaration: rules_change_asymmetry
--- Extracted by StaticSplit

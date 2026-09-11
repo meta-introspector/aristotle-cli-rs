@@ -1,2 +1,0 @@
--- Declaration: toCRTTorus
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: index_max2
--- Extracted by StaticSplit

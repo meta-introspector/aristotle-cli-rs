@@ -1,2 +1,0 @@
--- Declaration: sheaf_monster_complement
--- Extracted by StaticSplit

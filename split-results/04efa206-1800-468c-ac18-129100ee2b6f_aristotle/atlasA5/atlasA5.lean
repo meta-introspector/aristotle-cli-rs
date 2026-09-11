@@ -1,2 +1,0 @@
--- Declaration: atlasA5
--- Extracted by StaticSplit

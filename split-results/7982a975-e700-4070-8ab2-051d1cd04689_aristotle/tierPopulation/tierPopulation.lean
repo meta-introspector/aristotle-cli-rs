@@ -1,2 +1,0 @@
--- Declaration: tierPopulation
--- Extracted by StaticSplit

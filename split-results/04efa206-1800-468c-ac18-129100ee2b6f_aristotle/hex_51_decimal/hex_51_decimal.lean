@@ -1,2 +1,0 @@
--- Declaration: hex_51_decimal
--- Extracted by StaticSplit

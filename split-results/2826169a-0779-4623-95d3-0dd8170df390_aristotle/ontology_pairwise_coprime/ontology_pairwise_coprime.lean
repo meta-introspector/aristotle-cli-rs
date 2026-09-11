@@ -1,2 +1,0 @@
--- Declaration: ontology_pairwise_coprime
--- Extracted by StaticSplit

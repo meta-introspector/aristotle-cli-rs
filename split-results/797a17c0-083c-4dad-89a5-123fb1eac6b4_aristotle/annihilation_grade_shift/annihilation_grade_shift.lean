@@ -1,2 +1,0 @@
--- Declaration: annihilation_grade_shift
--- Extracted by StaticSplit

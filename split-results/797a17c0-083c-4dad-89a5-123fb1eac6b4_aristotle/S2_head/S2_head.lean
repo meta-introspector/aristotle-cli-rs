@@ -1,2 +1,0 @@
--- Declaration: S2_head
--- Extracted by StaticSplit

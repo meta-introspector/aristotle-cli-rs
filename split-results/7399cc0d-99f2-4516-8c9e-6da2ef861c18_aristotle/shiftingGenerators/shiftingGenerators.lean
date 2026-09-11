@@ -1,2 +1,0 @@
--- Declaration: shiftingGenerators
--- Extracted by StaticSplit

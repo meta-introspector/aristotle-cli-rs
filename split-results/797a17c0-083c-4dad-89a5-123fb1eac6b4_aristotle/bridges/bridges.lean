@@ -1,2 +1,0 @@
--- Declaration: bridges
--- Extracted by StaticSplit

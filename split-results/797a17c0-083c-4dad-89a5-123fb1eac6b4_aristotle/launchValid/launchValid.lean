@@ -1,2 +1,0 @@
--- Declaration: launchValid
--- Extracted by StaticSplit

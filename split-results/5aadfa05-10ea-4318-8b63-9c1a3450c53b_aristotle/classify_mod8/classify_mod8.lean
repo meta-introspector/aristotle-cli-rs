@@ -1,2 +1,0 @@
--- Declaration: classify_mod8
--- Extracted by StaticSplit

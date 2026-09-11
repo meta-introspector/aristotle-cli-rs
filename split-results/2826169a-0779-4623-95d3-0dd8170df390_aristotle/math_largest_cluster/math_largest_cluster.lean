@@ -1,2 +1,0 @@
--- Declaration: math_largest_cluster
--- Extracted by StaticSplit

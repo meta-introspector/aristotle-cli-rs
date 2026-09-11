@@ -1,2 +1,0 @@
--- Declaration: moonshine_walk_panorama
--- Extracted by StaticSplit

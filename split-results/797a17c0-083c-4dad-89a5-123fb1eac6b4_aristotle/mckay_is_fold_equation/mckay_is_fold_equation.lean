@@ -1,2 +1,0 @@
--- Declaration: mckay_is_fold_equation
--- Extracted by StaticSplit

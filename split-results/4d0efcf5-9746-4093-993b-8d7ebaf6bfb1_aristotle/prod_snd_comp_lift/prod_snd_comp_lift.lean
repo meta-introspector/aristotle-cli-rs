@@ -1,2 +1,0 @@
--- Declaration: prod_snd_comp_lift
--- Extracted by StaticSplit

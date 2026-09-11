@@ -1,2 +1,0 @@
--- Declaration: cluster_edge_count
--- Extracted by StaticSplit

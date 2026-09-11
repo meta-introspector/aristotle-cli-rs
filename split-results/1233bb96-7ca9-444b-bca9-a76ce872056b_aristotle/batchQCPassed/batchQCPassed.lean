@@ -1,2 +1,0 @@
--- Declaration: batchQCPassed
--- Extracted by StaticSplit

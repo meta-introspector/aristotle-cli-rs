@@ -1,2 +1,0 @@
--- Declaration: kleisli_assoc
--- Extracted by StaticSplit

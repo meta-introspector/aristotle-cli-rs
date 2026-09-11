@@ -1,2 +1,0 @@
--- Declaration: SizeClass
--- Extracted by StaticSplit

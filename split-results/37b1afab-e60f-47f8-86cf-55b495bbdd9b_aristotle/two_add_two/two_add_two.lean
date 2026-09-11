@@ -1,2 +1,0 @@
--- Declaration: two_add_two
--- Extracted by StaticSplit

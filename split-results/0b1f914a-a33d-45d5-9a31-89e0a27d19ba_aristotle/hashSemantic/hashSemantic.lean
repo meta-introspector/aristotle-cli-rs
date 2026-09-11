@@ -1,2 +1,0 @@
--- Declaration: hashSemantic
--- Extracted by StaticSplit

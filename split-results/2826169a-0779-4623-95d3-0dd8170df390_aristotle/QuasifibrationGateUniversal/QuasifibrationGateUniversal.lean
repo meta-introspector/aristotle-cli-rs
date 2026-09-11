@@ -1,2 +1,0 @@
--- Declaration: QuasifibrationGateUniversal
--- Extracted by StaticSplit

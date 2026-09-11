@@ -1,2 +1,0 @@
--- Declaration: azReal_activateNeg
--- Extracted by StaticSplit

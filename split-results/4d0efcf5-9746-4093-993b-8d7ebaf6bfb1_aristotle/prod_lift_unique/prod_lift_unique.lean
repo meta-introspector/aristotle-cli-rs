@@ -1,2 +1,0 @@
--- Declaration: prod_lift_unique
--- Extracted by StaticSplit

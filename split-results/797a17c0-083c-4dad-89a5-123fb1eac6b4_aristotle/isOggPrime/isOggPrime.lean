@@ -1,2 +1,0 @@
--- Declaration: isOggPrime
--- Extracted by StaticSplit

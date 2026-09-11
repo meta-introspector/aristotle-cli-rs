@@ -1,2 +1,0 @@
--- Declaration: bott_classes_distinct
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ReconstructionAdversary
--- Extracted by StaticSplit

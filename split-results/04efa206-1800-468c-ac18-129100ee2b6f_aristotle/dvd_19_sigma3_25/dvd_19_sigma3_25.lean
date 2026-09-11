@@ -1,2 +1,0 @@
--- Declaration: dvd_19_sigma3_25
--- Extracted by StaticSplit

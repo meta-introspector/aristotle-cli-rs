@@ -1,2 +1,0 @@
--- Declaration: Gender
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: castOfeqToHom
--- Extracted by StaticSplit

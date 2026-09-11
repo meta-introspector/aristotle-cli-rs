@@ -1,2 +1,0 @@
--- Declaration: coreRegistry
--- Extracted by StaticSplit

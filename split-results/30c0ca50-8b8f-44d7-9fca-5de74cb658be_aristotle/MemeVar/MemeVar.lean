@@ -1,2 +1,0 @@
--- Declaration: MemeVar
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: regression_congruence_valid
--- Extracted by StaticSplit

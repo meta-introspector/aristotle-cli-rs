@@ -1,2 +1,0 @@
--- Declaration: kernelIter
--- Extracted by StaticSplit

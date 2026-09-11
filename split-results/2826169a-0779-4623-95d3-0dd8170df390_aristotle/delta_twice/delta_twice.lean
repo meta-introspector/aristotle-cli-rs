@@ -1,2 +1,0 @@
--- Declaration: delta_twice
--- Extracted by StaticSplit

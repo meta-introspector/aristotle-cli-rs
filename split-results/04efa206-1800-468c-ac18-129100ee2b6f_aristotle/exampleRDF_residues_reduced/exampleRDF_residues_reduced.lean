@@ -1,2 +1,0 @@
--- Declaration: exampleRDF_residues_reduced
--- Extracted by StaticSplit

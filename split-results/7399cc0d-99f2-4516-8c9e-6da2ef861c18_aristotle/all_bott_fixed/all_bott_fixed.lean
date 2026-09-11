@@ -1,2 +1,0 @@
--- Declaration: all_bott_fixed
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SHIFT_PREFIX
--- Extracted by StaticSplit

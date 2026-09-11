@@ -1,2 +1,0 @@
--- Declaration: voa_central_charge
--- Extracted by StaticSplit

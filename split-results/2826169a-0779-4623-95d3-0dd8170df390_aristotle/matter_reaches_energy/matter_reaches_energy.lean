@@ -1,2 +1,0 @@
--- Declaration: matter_reaches_energy
--- Extracted by StaticSplit

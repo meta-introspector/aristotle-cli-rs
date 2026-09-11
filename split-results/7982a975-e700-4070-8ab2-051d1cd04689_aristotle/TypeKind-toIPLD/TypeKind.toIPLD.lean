@@ -1,2 +1,0 @@
--- Declaration: TypeKind.toIPLD
--- Extracted by StaticSplit

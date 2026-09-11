@@ -1,2 +1,0 @@
--- Declaration: sections_same_blade_card
--- Extracted by StaticSplit

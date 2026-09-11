@@ -1,2 +1,0 @@
--- Declaration: Blade.distToReal_eq_zero_iff
--- Extracted by StaticSplit

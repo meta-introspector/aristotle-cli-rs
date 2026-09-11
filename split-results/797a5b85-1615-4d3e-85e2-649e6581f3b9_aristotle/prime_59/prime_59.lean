@@ -1,2 +1,0 @@
--- Declaration: prime_59
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: rotation_planes_count
--- Extracted by StaticSplit

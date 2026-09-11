@@ -1,2 +1,0 @@
--- Declaration: Amendment
--- Extracted by StaticSplit

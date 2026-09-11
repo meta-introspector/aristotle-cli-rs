@@ -1,2 +1,0 @@
--- Declaration: boundary_shadow_stable
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: void_if_unsubstantial_evidence
--- Extracted by StaticSplit

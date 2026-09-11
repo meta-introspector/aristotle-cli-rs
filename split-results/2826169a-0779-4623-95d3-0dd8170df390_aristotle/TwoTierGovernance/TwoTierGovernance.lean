@@ -1,2 +1,0 @@
--- Declaration: TwoTierGovernance
--- Extracted by StaticSplit

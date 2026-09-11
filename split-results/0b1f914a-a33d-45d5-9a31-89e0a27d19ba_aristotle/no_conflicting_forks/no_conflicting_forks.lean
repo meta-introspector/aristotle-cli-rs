@@ -1,2 +1,0 @@
--- Declaration: no_conflicting_forks
--- Extracted by StaticSplit

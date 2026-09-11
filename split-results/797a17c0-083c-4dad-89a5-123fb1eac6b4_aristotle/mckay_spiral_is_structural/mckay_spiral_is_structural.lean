@@ -1,2 +1,0 @@
--- Declaration: mckay_spiral_is_structural
--- Extracted by StaticSplit

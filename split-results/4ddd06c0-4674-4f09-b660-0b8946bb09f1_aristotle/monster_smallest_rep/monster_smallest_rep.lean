@@ -1,2 +1,0 @@
--- Declaration: monster_smallest_rep
--- Extracted by StaticSplit

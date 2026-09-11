@@ -1,2 +1,0 @@
--- Declaration: GovTier.majorityThreshold
--- Extracted by StaticSplit

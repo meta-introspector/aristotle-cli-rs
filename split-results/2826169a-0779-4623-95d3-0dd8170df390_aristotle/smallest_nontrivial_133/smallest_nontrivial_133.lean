@@ -1,2 +1,0 @@
--- Declaration: smallest_nontrivial_133
--- Extracted by StaticSplit

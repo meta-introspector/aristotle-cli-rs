@@ -1,2 +1,0 @@
--- Declaration: abs_norm_level
--- Extracted by StaticSplit

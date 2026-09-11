@@ -1,2 +1,0 @@
--- Declaration: McKayBridge
--- Extracted by StaticSplit

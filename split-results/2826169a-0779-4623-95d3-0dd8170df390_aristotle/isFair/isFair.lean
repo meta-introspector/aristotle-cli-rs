@@ -1,2 +1,0 @@
--- Declaration: isFair
--- Extracted by StaticSplit

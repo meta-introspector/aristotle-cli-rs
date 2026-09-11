@@ -1,2 +1,0 @@
--- Declaration: hypSyllogism
--- Extracted by StaticSplit

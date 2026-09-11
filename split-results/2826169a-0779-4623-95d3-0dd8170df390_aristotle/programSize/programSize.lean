@@ -1,2 +1,0 @@
--- Declaration: programSize
--- Extracted by StaticSplit

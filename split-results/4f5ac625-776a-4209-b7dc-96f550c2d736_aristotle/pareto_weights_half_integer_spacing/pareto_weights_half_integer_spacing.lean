@@ -1,2 +1,0 @@
--- Declaration: pareto_weights_half_integer_spacing
--- Extracted by StaticSplit

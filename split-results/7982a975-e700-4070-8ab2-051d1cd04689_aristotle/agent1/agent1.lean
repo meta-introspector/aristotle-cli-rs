@@ -1,2 +1,0 @@
--- Declaration: agent1
--- Extracted by StaticSplit

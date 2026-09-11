@@ -1,2 +1,0 @@
--- Declaration: exampleDelegated
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: mckay_eq_flm
--- Extracted by StaticSplit

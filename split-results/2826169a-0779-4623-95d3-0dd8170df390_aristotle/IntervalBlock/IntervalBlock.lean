@@ -1,2 +1,0 @@
--- Declaration: IntervalBlock
--- Extracted by StaticSplit

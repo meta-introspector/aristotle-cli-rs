@@ -1,2 +1,0 @@
--- Declaration: historical_projection_noninvertible
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: leech_kissing_number_factored
--- Extracted by StaticSplit

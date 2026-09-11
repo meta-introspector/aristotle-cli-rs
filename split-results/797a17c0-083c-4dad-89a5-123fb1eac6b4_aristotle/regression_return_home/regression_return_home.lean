@@ -1,2 +1,0 @@
--- Declaration: regression_return_home
--- Extracted by StaticSplit

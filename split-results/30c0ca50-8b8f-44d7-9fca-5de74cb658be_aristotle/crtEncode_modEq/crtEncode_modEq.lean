@@ -1,2 +1,0 @@
--- Declaration: crtEncode_modEq
--- Extracted by StaticSplit

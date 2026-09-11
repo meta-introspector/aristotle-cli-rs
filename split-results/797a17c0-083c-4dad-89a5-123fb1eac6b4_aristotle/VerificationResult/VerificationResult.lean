@@ -1,2 +1,0 @@
--- Declaration: VerificationResult
--- Extracted by StaticSplit

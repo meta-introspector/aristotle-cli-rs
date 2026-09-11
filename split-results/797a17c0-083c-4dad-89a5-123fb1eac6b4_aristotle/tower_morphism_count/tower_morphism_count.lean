@@ -1,2 +1,0 @@
--- Declaration: tower_morphism_count
--- Extracted by StaticSplit

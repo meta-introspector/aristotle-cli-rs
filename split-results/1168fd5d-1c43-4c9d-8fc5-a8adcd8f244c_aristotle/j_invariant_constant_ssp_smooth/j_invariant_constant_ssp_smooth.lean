@@ -1,2 +1,0 @@
--- Declaration: j_invariant_constant_ssp_smooth
--- Extracted by StaticSplit

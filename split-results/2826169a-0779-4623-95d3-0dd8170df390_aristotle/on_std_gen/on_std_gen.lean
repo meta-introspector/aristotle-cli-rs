@@ -1,2 +1,0 @@
--- Declaration: on_std_gen
--- Extracted by StaticSplit

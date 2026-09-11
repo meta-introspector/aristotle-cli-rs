@@ -1,2 +1,0 @@
--- Declaration: earthPrimes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: bootstrapSelfEncodesEmoji
--- Extracted by StaticSplit

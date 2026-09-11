@@ -1,2 +1,0 @@
--- Declaration: bott_periodicity_dim
--- Extracted by StaticSplit

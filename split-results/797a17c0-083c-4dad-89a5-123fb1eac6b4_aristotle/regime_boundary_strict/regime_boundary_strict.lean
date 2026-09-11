@@ -1,2 +1,0 @@
--- Declaration: regime_boundary_strict
--- Extracted by StaticSplit

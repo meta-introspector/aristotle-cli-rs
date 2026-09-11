@@ -1,2 +1,0 @@
--- Declaration: brainrot_logic_consistent
--- Extracted by StaticSplit

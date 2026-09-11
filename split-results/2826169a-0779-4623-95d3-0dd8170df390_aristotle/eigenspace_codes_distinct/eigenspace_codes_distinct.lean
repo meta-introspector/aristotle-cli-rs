@@ -1,2 +1,0 @@
--- Declaration: eigenspace_codes_distinct
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: getStringFromName
--- Extracted by StaticSplit

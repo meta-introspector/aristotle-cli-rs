@@ -1,2 +1,0 @@
--- Declaration: hecke_indices_ss
--- Extracted by StaticSplit

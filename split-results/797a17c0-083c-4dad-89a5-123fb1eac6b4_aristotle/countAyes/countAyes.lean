@@ -1,2 +1,0 @@
--- Declaration: countAyes
--- Extracted by StaticSplit

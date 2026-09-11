@@ -1,2 +1,0 @@
--- Declaration: foldChain_witnessCount
--- Extracted by StaticSplit

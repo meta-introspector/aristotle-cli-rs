@@ -1,2 +1,0 @@
--- Declaration: hash_sol_invoke_signed_c
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: selfLocating_witness
--- Extracted by StaticSplit

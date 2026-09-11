@@ -1,2 +1,0 @@
--- Declaration: doubleCoverA5
--- Extracted by StaticSplit

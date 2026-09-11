@@ -1,2 +1,0 @@
--- Declaration: mockPoll_first
--- Extracted by StaticSplit

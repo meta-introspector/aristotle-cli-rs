@@ -1,2 +1,0 @@
--- Declaration: moon_or_rug_or_boundary
--- Extracted by StaticSplit

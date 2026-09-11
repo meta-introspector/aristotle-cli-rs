@@ -1,2 +1,0 @@
--- Declaration: StructRepresentation
--- Extracted by StaticSplit

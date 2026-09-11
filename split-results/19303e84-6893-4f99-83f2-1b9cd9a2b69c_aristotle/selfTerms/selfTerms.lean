@@ -1,2 +1,0 @@
--- Declaration: selfTerms
--- Extracted by StaticSplit

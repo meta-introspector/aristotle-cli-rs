@@ -1,2 +1,0 @@
--- Declaration: rho17_axes_product
--- Extracted by StaticSplit

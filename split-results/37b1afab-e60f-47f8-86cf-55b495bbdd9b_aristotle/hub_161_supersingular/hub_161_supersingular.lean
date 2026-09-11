@@ -1,2 +1,0 @@
--- Declaration: hub_161_supersingular
--- Extracted by StaticSplit

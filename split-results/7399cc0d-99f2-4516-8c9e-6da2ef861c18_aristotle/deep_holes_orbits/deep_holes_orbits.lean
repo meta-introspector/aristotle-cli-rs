@@ -1,2 +1,0 @@
--- Declaration: deep_holes_orbits
--- Extracted by StaticSplit

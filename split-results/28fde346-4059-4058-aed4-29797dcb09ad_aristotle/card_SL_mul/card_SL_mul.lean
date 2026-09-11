@@ -1,2 +1,0 @@
--- Declaration: card_SL_mul
--- Extracted by StaticSplit

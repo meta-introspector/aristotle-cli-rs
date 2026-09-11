@@ -1,2 +1,0 @@
--- Declaration: monsterIrrepExponents_widths
--- Extracted by StaticSplit

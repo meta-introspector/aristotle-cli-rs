@@ -1,2 +1,0 @@
--- Declaration: NDProof.identity
--- Extracted by StaticSplit

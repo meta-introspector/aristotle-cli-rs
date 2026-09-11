@@ -1,2 +1,0 @@
--- Declaration: more_resources_bigger_window
--- Extracted by StaticSplit

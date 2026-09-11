@@ -1,2 +1,0 @@
--- Declaration: obstructionSpectrum
--- Extracted by StaticSplit

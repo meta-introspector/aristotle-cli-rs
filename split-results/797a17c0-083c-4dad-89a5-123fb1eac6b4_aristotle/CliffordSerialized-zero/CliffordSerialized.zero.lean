@@ -1,2 +1,0 @@
--- Declaration: CliffordSerialized.zero
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: schellekens_with_currents
--- Extracted by StaticSplit

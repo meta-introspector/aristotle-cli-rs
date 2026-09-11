@@ -1,2 +1,0 @@
--- Declaration: diamond
--- Extracted by StaticSplit

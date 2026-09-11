@@ -1,2 +1,0 @@
--- Declaration: biology_reaches_metaphysics
--- Extracted by StaticSplit

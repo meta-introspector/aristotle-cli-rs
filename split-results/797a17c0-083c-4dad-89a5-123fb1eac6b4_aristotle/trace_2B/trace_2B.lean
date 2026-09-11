@@ -1,2 +1,0 @@
--- Declaration: trace_2B
--- Extracted by StaticSplit

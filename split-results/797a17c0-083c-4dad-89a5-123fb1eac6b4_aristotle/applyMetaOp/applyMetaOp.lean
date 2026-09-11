@@ -1,2 +1,0 @@
--- Declaration: applyMetaOp
--- Extracted by StaticSplit

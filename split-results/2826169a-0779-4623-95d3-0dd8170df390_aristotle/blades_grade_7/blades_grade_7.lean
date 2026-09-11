@@ -1,2 +1,0 @@
--- Declaration: blades_grade_7
--- Extracted by StaticSplit

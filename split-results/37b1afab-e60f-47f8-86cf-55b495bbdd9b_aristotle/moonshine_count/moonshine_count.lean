@@ -1,2 +1,0 @@
--- Declaration: moonshine_count
--- Extracted by StaticSplit

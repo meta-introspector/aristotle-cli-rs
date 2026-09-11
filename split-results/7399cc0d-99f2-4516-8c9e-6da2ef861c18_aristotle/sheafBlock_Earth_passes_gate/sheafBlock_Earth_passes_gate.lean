@@ -1,2 +1,0 @@
--- Declaration: sheafBlock_Earth_passes_gate
--- Extracted by StaticSplit

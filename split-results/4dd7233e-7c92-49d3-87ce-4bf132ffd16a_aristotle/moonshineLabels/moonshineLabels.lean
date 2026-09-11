@@ -1,2 +1,0 @@
--- Declaration: moonshineLabels
--- Extracted by StaticSplit

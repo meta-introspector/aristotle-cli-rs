@@ -1,2 +1,0 @@
--- Declaration: taut_eval
--- Extracted by StaticSplit

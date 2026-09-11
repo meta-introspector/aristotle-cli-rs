@@ -1,2 +1,0 @@
--- Declaration: j_coeff_sum_3
--- Extracted by StaticSplit

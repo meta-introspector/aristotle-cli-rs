@@ -1,2 +1,0 @@
--- Declaration: gödelMap_is_encodeString
--- Extracted by StaticSplit

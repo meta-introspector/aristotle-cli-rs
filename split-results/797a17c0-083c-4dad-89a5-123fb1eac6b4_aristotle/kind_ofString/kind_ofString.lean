@@ -1,2 +1,0 @@
--- Declaration: kind_ofString
--- Extracted by StaticSplit

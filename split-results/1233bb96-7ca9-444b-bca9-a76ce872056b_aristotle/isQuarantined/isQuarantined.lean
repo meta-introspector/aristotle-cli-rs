@@ -1,2 +1,0 @@
--- Declaration: isQuarantined
--- Extracted by StaticSplit

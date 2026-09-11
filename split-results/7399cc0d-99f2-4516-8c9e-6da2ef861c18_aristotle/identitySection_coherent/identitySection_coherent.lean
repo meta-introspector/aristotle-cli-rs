@@ -1,2 +1,0 @@
--- Declaration: identitySection_coherent
--- Extracted by StaticSplit

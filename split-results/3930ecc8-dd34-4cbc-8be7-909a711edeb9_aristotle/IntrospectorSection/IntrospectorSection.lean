@@ -1,2 +1,0 @@
--- Declaration: IntrospectorSection
--- Extracted by StaticSplit

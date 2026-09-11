@@ -1,2 +1,0 @@
--- Declaration: monster_irrep_matches_base
--- Extracted by StaticSplit

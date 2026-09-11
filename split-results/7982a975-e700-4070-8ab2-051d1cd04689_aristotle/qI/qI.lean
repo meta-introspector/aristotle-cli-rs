@@ -1,2 +1,0 @@
--- Declaration: qI
--- Extracted by StaticSplit

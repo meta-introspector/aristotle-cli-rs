@@ -1,2 +1,0 @@
--- Declaration: sectionDistance
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: alice
--- Extracted by StaticSplit

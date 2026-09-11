@@ -1,2 +1,0 @@
--- Declaration: appJs
--- Extracted by StaticSplit

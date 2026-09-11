@@ -1,2 +1,0 @@
--- Declaration: Graded
--- Extracted by StaticSplit

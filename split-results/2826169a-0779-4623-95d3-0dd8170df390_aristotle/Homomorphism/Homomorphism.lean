@@ -1,2 +1,0 @@
--- Declaration: Homomorphism
--- Extracted by StaticSplit

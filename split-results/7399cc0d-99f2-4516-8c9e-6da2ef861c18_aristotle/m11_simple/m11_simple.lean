@@ -1,2 +1,0 @@
--- Declaration: m11_simple
--- Extracted by StaticSplit

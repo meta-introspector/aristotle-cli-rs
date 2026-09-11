@@ -1,2 +1,0 @@
--- Declaration: monomythMetameme
--- Extracted by StaticSplit

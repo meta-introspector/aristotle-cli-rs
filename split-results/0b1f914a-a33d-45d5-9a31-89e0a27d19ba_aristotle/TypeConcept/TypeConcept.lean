@@ -1,2 +1,0 @@
--- Declaration: TypeConcept
--- Extracted by StaticSplit

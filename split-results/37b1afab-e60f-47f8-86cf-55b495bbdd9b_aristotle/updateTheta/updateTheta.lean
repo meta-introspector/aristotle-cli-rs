@@ -1,2 +1,0 @@
--- Declaration: updateTheta
--- Extracted by StaticSplit

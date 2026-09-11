@@ -1,2 +1,0 @@
--- Declaration: instIsoOfIsoBasedLift
--- Extracted by StaticSplit

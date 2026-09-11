@@ -1,2 +1,0 @@
--- Declaration: quoteBinderInfo
--- Extracted by StaticSplit

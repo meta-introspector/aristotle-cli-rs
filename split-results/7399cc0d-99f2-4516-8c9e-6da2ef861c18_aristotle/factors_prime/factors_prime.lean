@@ -1,2 +1,0 @@
--- Declaration: factors_prime
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: matchRat_47_reject_46
--- Extracted by StaticSplit

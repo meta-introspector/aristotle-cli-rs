@@ -1,2 +1,0 @@
--- Declaration: A8_L3_4_different_classes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: milestone_10
--- Extracted by StaticSplit

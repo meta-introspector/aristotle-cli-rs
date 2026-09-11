@@ -1,2 +1,0 @@
--- Declaration: irrep_ratio
--- Extracted by StaticSplit

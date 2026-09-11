@@ -1,2 +1,0 @@
--- Declaration: piPhi_eq_sum
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: encode_encode_prefix
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: mesEq
--- Extracted by StaticSplit

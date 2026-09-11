@@ -1,2 +1,0 @@
--- Declaration: num_minimal_shadows
--- Extracted by StaticSplit

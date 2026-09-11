@@ -1,2 +1,0 @@
--- Declaration: trivialLoop
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: emoji_card
--- Extracted by StaticSplit

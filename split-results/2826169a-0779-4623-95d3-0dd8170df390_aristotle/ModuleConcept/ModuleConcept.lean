@@ -1,2 +1,0 @@
--- Declaration: ModuleConcept
--- Extracted by StaticSplit

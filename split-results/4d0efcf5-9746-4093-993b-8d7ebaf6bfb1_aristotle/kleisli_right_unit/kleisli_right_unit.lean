@@ -1,2 +1,0 @@
--- Declaration: kleisli_right_unit
--- Extracted by StaticSplit

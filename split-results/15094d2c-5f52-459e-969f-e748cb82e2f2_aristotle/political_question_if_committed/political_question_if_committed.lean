@@ -1,2 +1,0 @@
--- Declaration: political_question_if_committed
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: signatureToEmoji
--- Extracted by StaticSplit

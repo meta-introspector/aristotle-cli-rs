@@ -1,2 +1,0 @@
--- Declaration: unconditional
--- Extracted by StaticSplit

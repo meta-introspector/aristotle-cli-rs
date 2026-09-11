@@ -1,2 +1,0 @@
--- Declaration: vanishing71
--- Extracted by StaticSplit

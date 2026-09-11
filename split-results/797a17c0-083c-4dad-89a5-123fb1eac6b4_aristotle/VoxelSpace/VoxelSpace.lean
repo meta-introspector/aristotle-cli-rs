@@ -1,2 +1,0 @@
--- Declaration: VoxelSpace
--- Extracted by StaticSplit

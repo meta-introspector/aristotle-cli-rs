@@ -1,2 +1,0 @@
--- Declaration: longer_vesting_more_weight
--- Extracted by StaticSplit

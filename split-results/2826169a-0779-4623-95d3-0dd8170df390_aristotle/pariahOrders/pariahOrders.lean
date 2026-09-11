@@ -1,2 +1,0 @@
--- Declaration: pariahOrders
--- Extracted by StaticSplit

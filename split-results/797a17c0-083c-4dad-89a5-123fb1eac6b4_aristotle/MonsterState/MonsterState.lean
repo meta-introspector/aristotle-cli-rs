@@ -1,2 +1,0 @@
--- Declaration: MonsterState
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: globalSections
--- Extracted by StaticSplit

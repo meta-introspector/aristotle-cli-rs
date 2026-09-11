@@ -1,2 +1,0 @@
--- Declaration: collatzBBf21
--- Extracted by StaticSplit

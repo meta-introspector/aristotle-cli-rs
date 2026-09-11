@@ -1,2 +1,0 @@
--- Declaration: atlas_glueing
--- Extracted by StaticSplit

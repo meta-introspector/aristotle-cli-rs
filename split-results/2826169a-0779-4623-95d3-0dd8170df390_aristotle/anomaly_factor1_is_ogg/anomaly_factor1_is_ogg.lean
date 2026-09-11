@@ -1,2 +1,0 @@
--- Declaration: anomaly_factor1_is_ogg
--- Extracted by StaticSplit

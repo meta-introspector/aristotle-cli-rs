@@ -1,2 +1,0 @@
--- Declaration: babyMonsterOrder
--- Extracted by StaticSplit

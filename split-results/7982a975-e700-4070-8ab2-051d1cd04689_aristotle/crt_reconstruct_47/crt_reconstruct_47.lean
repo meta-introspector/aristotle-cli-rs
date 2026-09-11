@@ -1,2 +1,0 @@
--- Declaration: crt_reconstruct_47
--- Extracted by StaticSplit

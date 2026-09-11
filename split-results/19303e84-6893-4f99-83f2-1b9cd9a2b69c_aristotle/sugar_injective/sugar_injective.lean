@@ -1,2 +1,0 @@
--- Declaration: sugar_injective
--- Extracted by StaticSplit

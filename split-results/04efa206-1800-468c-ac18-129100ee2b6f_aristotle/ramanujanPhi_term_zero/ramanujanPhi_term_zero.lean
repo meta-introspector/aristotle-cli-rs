@@ -1,2 +1,0 @@
--- Declaration: ramanujanPhi_term_zero
--- Extracted by StaticSplit

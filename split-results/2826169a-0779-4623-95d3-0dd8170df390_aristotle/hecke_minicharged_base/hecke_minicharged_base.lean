@@ -1,2 +1,0 @@
--- Declaration: hecke_minicharged_base
--- Extracted by StaticSplit

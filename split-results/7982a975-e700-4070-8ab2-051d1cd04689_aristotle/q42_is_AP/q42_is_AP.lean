@@ -1,2 +1,0 @@
--- Declaration: q42_is_AP
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: padic_val_prime
--- Extracted by StaticSplit

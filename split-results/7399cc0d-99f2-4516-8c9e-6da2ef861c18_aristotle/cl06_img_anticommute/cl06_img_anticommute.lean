@@ -1,2 +1,0 @@
--- Declaration: cl06_img_anticommute
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Generator.all_complete
--- Extracted by StaticSplit

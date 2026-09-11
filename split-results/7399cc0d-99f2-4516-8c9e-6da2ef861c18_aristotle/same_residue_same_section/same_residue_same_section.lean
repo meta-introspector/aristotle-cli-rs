@@ -1,2 +1,0 @@
--- Declaration: same_residue_same_section
--- Extracted by StaticSplit

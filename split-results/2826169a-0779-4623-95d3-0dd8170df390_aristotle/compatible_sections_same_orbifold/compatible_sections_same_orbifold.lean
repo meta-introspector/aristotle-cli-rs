@@ -1,2 +1,0 @@
--- Declaration: compatible_sections_same_orbifold
--- Extracted by StaticSplit

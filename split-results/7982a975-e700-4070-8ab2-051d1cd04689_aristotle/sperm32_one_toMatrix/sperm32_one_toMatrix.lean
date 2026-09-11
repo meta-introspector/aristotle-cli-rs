@@ -1,2 +1,0 @@
--- Declaration: sperm32_one_toMatrix
--- Extracted by StaticSplit

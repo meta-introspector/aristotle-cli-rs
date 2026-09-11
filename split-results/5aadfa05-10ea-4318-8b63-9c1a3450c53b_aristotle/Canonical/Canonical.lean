@@ -1,2 +1,0 @@
--- Declaration: Canonical
--- Extracted by StaticSplit

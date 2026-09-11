@@ -1,2 +1,0 @@
--- Declaration: self_reference_return
--- Extracted by StaticSplit

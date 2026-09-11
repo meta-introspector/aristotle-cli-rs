@@ -1,2 +1,0 @@
--- Declaration: tesla_product_sum_same_bott
--- Extracted by StaticSplit

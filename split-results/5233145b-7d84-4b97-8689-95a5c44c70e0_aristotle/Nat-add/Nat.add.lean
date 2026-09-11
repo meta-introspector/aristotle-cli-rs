@@ -1,2 +1,0 @@
--- Declaration: Nat.add
--- Extracted by StaticSplit

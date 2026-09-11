@@ -1,2 +1,0 @@
--- Declaration: expectedRowSums
--- Extracted by StaticSplit

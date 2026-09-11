@@ -1,2 +1,0 @@
--- Declaration: self_replication_invariant
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: irrep_head_ogg_factorization
--- Extracted by StaticSplit

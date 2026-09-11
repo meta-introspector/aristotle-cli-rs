@@ -1,2 +1,0 @@
--- Declaration: no_standing_without_redressability
--- Extracted by StaticSplit

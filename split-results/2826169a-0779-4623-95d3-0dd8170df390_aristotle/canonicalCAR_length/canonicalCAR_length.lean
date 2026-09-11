@@ -1,2 +1,0 @@
--- Declaration: canonicalCAR_length
--- Extracted by StaticSplit

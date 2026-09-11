@@ -1,2 +1,0 @@
--- Declaration: evalOp
--- Extracted by StaticSplit

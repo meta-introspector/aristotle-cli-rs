@@ -1,2 +1,0 @@
--- Declaration: torusAdd
--- Extracted by StaticSplit

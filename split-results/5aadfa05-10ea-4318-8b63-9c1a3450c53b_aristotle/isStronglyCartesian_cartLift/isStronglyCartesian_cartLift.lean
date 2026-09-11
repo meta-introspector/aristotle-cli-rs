@@ -1,2 +1,0 @@
--- Declaration: isStronglyCartesian_cartLift
--- Extracted by StaticSplit

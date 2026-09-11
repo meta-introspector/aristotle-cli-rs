@@ -1,2 +1,0 @@
--- Declaration: hasTimeReversal
--- Extracted by StaticSplit

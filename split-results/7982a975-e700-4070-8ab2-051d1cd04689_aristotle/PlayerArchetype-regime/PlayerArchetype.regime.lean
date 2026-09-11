@@ -1,2 +1,0 @@
--- Declaration: PlayerArchetype.regime
--- Extracted by StaticSplit

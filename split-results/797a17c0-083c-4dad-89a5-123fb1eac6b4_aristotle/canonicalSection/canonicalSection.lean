@@ -1,2 +1,0 @@
--- Declaration: canonicalSection
--- Extracted by StaticSplit

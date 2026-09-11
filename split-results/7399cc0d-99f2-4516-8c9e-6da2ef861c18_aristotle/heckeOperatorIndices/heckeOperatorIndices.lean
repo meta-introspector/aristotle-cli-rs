@@ -1,2 +1,0 @@
--- Declaration: heckeOperatorIndices
--- Extracted by StaticSplit

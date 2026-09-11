@@ -1,2 +1,0 @@
--- Declaration: ext53L35_bridge
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: paAxioms
--- Extracted by StaticSplit

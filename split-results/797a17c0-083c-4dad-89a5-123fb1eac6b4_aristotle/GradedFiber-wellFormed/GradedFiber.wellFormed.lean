@@ -1,2 +1,0 @@
--- Declaration: GradedFiber.wellFormed
--- Extracted by StaticSplit

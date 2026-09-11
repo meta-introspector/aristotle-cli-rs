@@ -1,2 +1,0 @@
--- Declaration: canonicalDistributed
--- Extracted by StaticSplit

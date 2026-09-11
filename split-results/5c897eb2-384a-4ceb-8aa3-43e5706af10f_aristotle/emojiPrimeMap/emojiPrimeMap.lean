@@ -1,2 +1,0 @@
--- Declaration: emojiPrimeMap
--- Extracted by StaticSplit

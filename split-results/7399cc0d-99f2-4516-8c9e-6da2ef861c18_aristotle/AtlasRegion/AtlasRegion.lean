@@ -1,2 +1,0 @@
--- Declaration: AtlasRegion
--- Extracted by StaticSplit

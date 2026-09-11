@@ -1,2 +1,0 @@
--- Declaration: address_space_eq_global_period
--- Extracted by StaticSplit

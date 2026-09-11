@@ -1,2 +1,0 @@
--- Declaration: heckeTransported_Earth
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: next_period_4
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: clifford_remainder_bott
--- Extracted by StaticSplit

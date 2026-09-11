@@ -1,2 +1,0 @@
--- Declaration: walkDown
--- Extracted by StaticSplit

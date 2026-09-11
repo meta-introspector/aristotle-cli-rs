@@ -1,2 +1,0 @@
--- Declaration: consistent_of_cut_free
--- Extracted by StaticSplit

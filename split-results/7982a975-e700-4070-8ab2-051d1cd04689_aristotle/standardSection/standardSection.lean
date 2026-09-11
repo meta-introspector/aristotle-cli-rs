@@ -1,2 +1,0 @@
--- Declaration: standardSection
--- Extracted by StaticSplit

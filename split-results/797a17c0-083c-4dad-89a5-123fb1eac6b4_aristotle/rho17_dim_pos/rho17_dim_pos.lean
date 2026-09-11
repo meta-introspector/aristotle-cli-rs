@@ -1,2 +1,0 @@
--- Declaration: rho17_dim_pos
--- Extracted by StaticSplit

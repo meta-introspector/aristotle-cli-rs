@@ -1,2 +1,0 @@
--- Declaration: JourneyProcess.isValid
--- Extracted by StaticSplit

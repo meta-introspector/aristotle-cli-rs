@@ -1,2 +1,0 @@
--- Declaration: instance_count_at_least_20
--- Extracted by StaticSplit

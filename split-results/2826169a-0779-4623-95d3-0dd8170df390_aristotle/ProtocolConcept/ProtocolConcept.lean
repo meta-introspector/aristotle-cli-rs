@@ -1,2 +1,0 @@
--- Declaration: ProtocolConcept
--- Extracted by StaticSplit

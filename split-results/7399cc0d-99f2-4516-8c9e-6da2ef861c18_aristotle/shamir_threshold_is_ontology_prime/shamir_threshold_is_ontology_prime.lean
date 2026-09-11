@@ -1,2 +1,0 @@
--- Declaration: shamir_threshold_is_ontology_prime
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: StructRepresentation_StringPairs
--- Extracted by StaticSplit

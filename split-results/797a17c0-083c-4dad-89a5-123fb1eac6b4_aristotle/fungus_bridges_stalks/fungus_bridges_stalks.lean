@@ -1,2 +1,0 @@
--- Declaration: fungus_bridges_stalks
--- Extracted by StaticSplit

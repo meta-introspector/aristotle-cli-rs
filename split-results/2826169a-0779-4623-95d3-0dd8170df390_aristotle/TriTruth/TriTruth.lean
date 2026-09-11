@@ -1,2 +1,0 @@
--- Declaration: TriTruth
--- Extracted by StaticSplit

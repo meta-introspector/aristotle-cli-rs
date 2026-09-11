@@ -1,2 +1,0 @@
--- Declaration: mckay_is_structural_overlap
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Symbol
--- Extracted by StaticSplit

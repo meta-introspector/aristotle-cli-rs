@@ -1,2 +1,0 @@
--- Declaration: HauptmodulData
--- Extracted by StaticSplit

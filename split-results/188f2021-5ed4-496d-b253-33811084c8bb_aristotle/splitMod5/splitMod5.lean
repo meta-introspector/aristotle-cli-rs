@@ -1,2 +1,0 @@
--- Declaration: splitMod5
--- Extracted by StaticSplit

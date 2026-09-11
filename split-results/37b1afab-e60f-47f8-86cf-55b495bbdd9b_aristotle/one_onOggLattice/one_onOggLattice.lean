@@ -1,2 +1,0 @@
--- Declaration: one_onOggLattice
--- Extracted by StaticSplit

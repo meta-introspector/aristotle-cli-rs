@@ -1,2 +1,0 @@
--- Declaration: TeslaResonance.windingNumber
--- Extracted by StaticSplit

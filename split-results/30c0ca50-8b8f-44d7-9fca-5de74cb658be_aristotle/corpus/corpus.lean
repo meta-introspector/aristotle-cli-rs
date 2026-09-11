@@ -1,2 +1,0 @@
--- Declaration: corpus
--- Extracted by StaticSplit

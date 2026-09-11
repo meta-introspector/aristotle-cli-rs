@@ -1,2 +1,0 @@
--- Declaration: liftToArithmetic_minicharged
--- Extracted by StaticSplit

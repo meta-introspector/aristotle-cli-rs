@@ -1,2 +1,0 @@
--- Declaration: equivExterior_comp_inclusion
--- Extracted by StaticSplit

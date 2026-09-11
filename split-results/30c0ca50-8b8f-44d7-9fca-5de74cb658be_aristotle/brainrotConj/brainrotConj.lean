@@ -1,2 +1,0 @@
--- Declaration: brainrotConj
--- Extracted by StaticSplit

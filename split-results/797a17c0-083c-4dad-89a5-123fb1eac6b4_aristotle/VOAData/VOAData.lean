@@ -1,2 +1,0 @@
--- Declaration: VOAData
--- Extracted by StaticSplit

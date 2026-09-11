@@ -1,2 +1,0 @@
--- Declaration: Sustainer
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Chamber.receiveBatch
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: supersingular_no_spillover
--- Extracted by StaticSplit

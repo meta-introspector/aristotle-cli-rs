@@ -1,2 +1,0 @@
--- Declaration: Entity
--- Extracted by StaticSplit

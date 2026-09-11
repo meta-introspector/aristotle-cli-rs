@@ -1,2 +1,0 @@
--- Declaration: ramanujan_de_Q_consistent
--- Extracted by StaticSplit

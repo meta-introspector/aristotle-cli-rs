@@ -1,2 +1,0 @@
--- Declaration: neuroPhi
--- Extracted by StaticSplit

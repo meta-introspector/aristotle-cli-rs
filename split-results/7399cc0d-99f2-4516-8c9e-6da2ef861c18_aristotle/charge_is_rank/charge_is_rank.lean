@@ -1,2 +1,0 @@
--- Declaration: charge_is_rank
--- Extracted by StaticSplit

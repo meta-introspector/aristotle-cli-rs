@@ -1,2 +1,0 @@
--- Declaration: monomyth_monotone
--- Extracted by StaticSplit

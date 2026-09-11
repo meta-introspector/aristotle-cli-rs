@@ -1,2 +1,0 @@
--- Declaration: j_constant_factored
--- Extracted by StaticSplit

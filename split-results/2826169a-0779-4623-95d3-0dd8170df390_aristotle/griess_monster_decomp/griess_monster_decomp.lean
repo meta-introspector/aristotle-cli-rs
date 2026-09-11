@@ -1,2 +1,0 @@
--- Declaration: griess_monster_decomp
--- Extracted by StaticSplit

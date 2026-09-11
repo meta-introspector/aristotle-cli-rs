@@ -1,2 +1,0 @@
--- Declaration: T23A
--- Extracted by StaticSplit

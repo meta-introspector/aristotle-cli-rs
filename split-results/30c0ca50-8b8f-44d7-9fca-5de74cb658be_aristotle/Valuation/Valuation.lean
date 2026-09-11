@@ -1,2 +1,0 @@
--- Declaration: Valuation
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: atom_sum_is_first_bott
--- Extracted by StaticSplit

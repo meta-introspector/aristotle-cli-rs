@@ -1,2 +1,0 @@
--- Declaration: tModifySelf
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: gammaZ32_anticommute
--- Extracted by StaticSplit

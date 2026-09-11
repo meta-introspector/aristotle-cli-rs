@@ -1,2 +1,0 @@
--- Declaration: cechH0_dim_linear_growth
--- Extracted by StaticSplit

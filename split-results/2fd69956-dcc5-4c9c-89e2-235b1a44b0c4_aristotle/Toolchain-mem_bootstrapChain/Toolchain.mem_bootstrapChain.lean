@@ -1,2 +1,0 @@
--- Declaration: Toolchain.mem_bootstrapChain
--- Extracted by StaticSplit

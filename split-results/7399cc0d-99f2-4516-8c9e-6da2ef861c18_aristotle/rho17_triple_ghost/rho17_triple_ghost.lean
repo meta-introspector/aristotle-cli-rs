@@ -1,2 +1,0 @@
--- Declaration: rho17_triple_ghost
--- Extracted by StaticSplit

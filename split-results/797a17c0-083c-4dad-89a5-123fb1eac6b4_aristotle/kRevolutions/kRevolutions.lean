@@ -1,2 +1,0 @@
--- Declaration: kRevolutions
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: fibration_collapse
--- Extracted by StaticSplit

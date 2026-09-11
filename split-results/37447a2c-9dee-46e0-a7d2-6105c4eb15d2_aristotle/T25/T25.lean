@@ -1,2 +1,0 @@
--- Declaration: T25
--- Extracted by StaticSplit

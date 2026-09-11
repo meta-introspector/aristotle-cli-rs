@@ -1,2 +1,0 @@
--- Declaration: symmetry
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: toVoxel
--- Extracted by StaticSplit

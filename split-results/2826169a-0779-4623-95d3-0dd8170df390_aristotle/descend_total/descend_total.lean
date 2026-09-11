@@ -1,2 +1,0 @@
--- Declaration: descend_total
--- Extracted by StaticSplit

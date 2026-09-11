@@ -1,2 +1,0 @@
--- Declaration: num_primes
--- Extracted by StaticSplit

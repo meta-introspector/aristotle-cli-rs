@@ -1,2 +1,0 @@
--- Declaration: exampleSession
--- Extracted by StaticSplit

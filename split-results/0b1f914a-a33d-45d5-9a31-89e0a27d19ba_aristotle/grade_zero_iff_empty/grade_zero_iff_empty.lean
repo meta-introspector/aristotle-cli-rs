@@ -1,2 +1,0 @@
--- Declaration: grade_zero_iff_empty
--- Extracted by StaticSplit

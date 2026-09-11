@@ -1,2 +1,0 @@
--- Declaration: bdiChain
--- Extracted by StaticSplit

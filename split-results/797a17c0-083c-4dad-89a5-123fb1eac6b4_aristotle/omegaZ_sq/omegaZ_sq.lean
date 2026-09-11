@@ -1,2 +1,0 @@
--- Declaration: omegaZ_sq
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: infiniteThoughtGenerator
--- Extracted by StaticSplit

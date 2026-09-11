@@ -1,2 +1,0 @@
--- Declaration: spoke_residues
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: valid_implies_exclusive_record
--- Extracted by StaticSplit

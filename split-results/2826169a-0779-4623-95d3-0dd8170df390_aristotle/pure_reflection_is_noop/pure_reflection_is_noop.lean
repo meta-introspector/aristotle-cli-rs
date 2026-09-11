@@ -1,2 +1,0 @@
--- Declaration: pure_reflection_is_noop
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: bladeToNat
--- Extracted by StaticSplit

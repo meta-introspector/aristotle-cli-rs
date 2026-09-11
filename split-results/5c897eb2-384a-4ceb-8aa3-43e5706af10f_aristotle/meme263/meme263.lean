@@ -1,2 +1,0 @@
--- Declaration: meme263
--- Extracted by StaticSplit

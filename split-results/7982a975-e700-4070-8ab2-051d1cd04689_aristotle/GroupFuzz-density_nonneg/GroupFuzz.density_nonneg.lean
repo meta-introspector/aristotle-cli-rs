@@ -1,2 +1,0 @@
--- Declaration: GroupFuzz.density_nonneg
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: prefix_in_monster
--- Extracted by StaticSplit

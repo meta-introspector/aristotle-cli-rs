@@ -1,2 +1,0 @@
--- Declaration: fungal_revelations_in_mycelium
--- Extracted by StaticSplit

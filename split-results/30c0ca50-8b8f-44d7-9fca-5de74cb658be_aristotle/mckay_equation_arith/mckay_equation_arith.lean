@@ -1,2 +1,0 @@
--- Declaration: mckay_equation_arith
--- Extracted by StaticSplit

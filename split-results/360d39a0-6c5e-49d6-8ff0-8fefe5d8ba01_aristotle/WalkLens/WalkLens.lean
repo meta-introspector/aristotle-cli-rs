@@ -1,2 +1,0 @@
--- Declaration: WalkLens
--- Extracted by StaticSplit

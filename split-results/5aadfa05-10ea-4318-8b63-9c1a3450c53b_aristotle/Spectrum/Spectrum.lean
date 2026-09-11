@@ -1,2 +1,0 @@
--- Declaration: Spectrum
--- Extracted by StaticSplit

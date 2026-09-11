@@ -1,2 +1,0 @@
--- Declaration: FiberedDynSys.totalStep
--- Extracted by StaticSplit

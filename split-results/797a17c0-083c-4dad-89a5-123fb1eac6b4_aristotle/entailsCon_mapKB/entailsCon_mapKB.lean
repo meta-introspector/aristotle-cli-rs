@@ -1,2 +1,0 @@
--- Declaration: entailsCon_mapKB
--- Extracted by StaticSplit

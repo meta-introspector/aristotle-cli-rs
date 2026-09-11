@@ -1,2 +1,0 @@
--- Declaration: void_iff
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ZombieAntJourney
--- Extracted by StaticSplit

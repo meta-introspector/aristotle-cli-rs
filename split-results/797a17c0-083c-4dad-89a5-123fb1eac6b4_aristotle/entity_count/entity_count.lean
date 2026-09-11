@@ -1,2 +1,0 @@
--- Declaration: entity_count
--- Extracted by StaticSplit

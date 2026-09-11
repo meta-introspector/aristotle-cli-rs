@@ -1,2 +1,0 @@
--- Declaration: three_narratives_converge
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: quasifibrationGate
--- Extracted by StaticSplit

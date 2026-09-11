@@ -1,2 +1,0 @@
--- Declaration: initial_bott
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: sign_reaches_both
--- Extracted by StaticSplit

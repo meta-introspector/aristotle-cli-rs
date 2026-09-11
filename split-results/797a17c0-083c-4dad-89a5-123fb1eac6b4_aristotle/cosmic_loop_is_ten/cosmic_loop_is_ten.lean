@@ -1,2 +1,0 @@
--- Declaration: cosmic_loop_is_ten
--- Extracted by StaticSplit

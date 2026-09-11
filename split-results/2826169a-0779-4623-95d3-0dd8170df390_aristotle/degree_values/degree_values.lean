@@ -1,2 +1,0 @@
--- Declaration: degree_values
--- Extracted by StaticSplit

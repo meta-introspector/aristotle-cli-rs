@@ -1,2 +1,0 @@
--- Declaration: GlossaryEntry
--- Extracted by StaticSplit

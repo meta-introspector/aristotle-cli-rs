@@ -1,2 +1,0 @@
--- Declaration: Selection
--- Extracted by StaticSplit

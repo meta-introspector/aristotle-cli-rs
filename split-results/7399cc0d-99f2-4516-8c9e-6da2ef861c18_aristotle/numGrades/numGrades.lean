@@ -1,2 +1,0 @@
--- Declaration: numGrades
--- Extracted by StaticSplit

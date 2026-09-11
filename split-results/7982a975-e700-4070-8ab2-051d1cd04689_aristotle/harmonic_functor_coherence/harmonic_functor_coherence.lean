@@ -1,2 +1,0 @@
--- Declaration: harmonic_functor_coherence
--- Extracted by StaticSplit

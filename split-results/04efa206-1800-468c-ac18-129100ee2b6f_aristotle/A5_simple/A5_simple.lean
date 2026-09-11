@@ -1,2 +1,0 @@
--- Declaration: A5_simple
--- Extracted by StaticSplit

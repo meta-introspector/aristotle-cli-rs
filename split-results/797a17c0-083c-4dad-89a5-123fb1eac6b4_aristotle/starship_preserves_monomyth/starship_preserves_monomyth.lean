@@ -1,2 +1,0 @@
--- Declaration: starship_preserves_monomyth
--- Extracted by StaticSplit

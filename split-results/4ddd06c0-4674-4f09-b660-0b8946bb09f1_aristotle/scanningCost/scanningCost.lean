@@ -1,2 +1,0 @@
--- Declaration: scanningCost
--- Extracted by StaticSplit

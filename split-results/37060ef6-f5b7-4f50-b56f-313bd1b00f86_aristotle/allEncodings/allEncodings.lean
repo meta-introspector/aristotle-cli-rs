@@ -1,2 +1,0 @@
--- Declaration: allEncodings
--- Extracted by StaticSplit

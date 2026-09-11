@@ -1,2 +1,0 @@
--- Declaration: MoonshinePoint
--- Extracted by StaticSplit

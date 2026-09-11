@@ -1,2 +1,0 @@
--- Declaration: jProfile
--- Extracted by StaticSplit

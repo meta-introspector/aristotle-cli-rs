@@ -1,2 +1,0 @@
--- Declaration: spoke_dim
--- Extracted by StaticSplit

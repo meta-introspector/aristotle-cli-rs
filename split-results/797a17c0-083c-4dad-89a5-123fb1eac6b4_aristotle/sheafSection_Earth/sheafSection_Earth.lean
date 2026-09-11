@@ -1,2 +1,0 @@
--- Declaration: sheafSection_Earth
--- Extracted by StaticSplit

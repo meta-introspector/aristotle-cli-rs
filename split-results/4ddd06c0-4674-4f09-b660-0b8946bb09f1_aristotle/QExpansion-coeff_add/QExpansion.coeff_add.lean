@@ -1,2 +1,0 @@
--- Declaration: QExpansion.coeff_add
--- Extracted by StaticSplit

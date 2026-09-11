@@ -1,2 +1,0 @@
--- Declaration: SubgroupConj.equivalence
--- Extracted by StaticSplit

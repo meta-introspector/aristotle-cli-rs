@@ -1,2 +1,0 @@
--- Declaration: first_primary_weight
--- Extracted by StaticSplit

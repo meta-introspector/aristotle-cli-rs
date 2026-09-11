@@ -1,2 +1,0 @@
--- Declaration: Concept.cluster
--- Extracted by StaticSplit

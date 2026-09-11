@@ -1,2 +1,0 @@
--- Declaration: schellekens_count
--- Extracted by StaticSplit

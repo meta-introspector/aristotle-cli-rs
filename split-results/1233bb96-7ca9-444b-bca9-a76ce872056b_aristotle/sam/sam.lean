@@ -1,2 +1,0 @@
--- Declaration: sam
--- Extracted by StaticSplit

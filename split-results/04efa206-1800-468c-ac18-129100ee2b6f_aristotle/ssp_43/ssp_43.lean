@@ -1,2 +1,0 @@
--- Declaration: ssp_43
--- Extracted by StaticSplit

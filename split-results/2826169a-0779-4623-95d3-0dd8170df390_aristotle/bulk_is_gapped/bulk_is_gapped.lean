@@ -1,2 +1,0 @@
--- Declaration: bulk_is_gapped
--- Extracted by StaticSplit

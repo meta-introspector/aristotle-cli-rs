@@ -1,2 +1,0 @@
--- Declaration: shadowBinding
--- Extracted by StaticSplit

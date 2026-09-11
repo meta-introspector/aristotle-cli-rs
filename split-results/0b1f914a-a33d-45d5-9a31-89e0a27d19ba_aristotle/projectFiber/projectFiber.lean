@@ -1,2 +1,0 @@
--- Declaration: projectFiber
--- Extracted by StaticSplit

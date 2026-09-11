@@ -1,2 +1,0 @@
--- Declaration: landauAnomaly
--- Extracted by StaticSplit

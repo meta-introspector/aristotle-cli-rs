@@ -1,2 +1,0 @@
--- Declaration: codecEquivalent_symm
--- Extracted by StaticSplit

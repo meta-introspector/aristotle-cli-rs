@@ -1,2 +1,0 @@
--- Declaration: localDefect
--- Extracted by StaticSplit

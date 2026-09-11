@@ -1,2 +1,0 @@
--- Declaration: render
--- Extracted by StaticSplit

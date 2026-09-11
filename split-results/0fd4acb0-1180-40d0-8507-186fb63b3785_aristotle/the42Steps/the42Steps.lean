@@ -1,2 +1,0 @@
--- Declaration: the42Steps
--- Extracted by StaticSplit

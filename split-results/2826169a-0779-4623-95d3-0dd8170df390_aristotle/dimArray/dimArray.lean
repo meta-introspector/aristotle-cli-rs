@@ -1,2 +1,0 @@
--- Declaration: dimArray
--- Extracted by StaticSplit

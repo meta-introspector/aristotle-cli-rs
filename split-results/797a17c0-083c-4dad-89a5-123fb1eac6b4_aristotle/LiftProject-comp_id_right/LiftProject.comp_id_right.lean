@@ -1,2 +1,0 @@
--- Declaration: LiftProject.comp_id_right
--- Extracted by StaticSplit

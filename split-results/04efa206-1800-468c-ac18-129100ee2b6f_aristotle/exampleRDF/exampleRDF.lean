@@ -1,2 +1,0 @@
--- Declaration: exampleRDF
--- Extracted by StaticSplit

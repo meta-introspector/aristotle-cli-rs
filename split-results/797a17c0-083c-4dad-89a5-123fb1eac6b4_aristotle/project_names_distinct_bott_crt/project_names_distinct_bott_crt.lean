@@ -1,2 +1,0 @@
--- Declaration: project_names_distinct_bott_crt
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: KubernetesConcept
--- Extracted by StaticSplit

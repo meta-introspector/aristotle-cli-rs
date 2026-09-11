@@ -1,2 +1,0 @@
--- Declaration: conformalWeight_injective
--- Extracted by StaticSplit

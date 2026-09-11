@@ -1,2 +1,0 @@
--- Declaration: SPerm.blockDiag
--- Extracted by StaticSplit

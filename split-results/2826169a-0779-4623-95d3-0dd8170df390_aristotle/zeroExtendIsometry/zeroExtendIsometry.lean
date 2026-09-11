@@ -1,2 +1,0 @@
--- Declaration: zeroExtendIsometry
--- Extracted by StaticSplit

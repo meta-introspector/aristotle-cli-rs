@@ -1,2 +1,0 @@
--- Declaration: StructIso.refl
--- Extracted by StaticSplit

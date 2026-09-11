@@ -1,2 +1,0 @@
--- Declaration: stdBasis
--- Extracted by StaticSplit

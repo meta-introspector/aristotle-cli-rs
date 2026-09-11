@@ -1,2 +1,0 @@
--- Declaration: insert_cid_in_fiber
--- Extracted by StaticSplit

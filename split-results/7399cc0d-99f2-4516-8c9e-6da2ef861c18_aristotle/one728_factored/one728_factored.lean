@@ -1,2 +1,0 @@
--- Declaration: one728_factored
--- Extracted by StaticSplit

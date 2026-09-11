@@ -1,2 +1,0 @@
--- Declaration: complementary_necessity
--- Extracted by StaticSplit

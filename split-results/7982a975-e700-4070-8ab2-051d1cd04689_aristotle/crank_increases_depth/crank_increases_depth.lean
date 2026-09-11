@@ -1,2 +1,0 @@
--- Declaration: crank_increases_depth
--- Extracted by StaticSplit

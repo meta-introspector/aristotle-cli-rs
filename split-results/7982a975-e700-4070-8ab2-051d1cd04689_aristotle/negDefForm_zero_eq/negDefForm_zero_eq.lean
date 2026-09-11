@@ -1,2 +1,0 @@
--- Declaration: negDefForm_zero_eq
--- Extracted by StaticSplit

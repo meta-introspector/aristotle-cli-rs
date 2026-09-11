@@ -1,2 +1,0 @@
--- Declaration: MoonshineAxiom
--- Extracted by StaticSplit

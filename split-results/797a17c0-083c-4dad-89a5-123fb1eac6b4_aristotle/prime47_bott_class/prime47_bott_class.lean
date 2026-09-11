@@ -1,2 +1,0 @@
--- Declaration: prime47_bott_class
--- Extracted by StaticSplit

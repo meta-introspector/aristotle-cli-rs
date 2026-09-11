@@ -1,2 +1,0 @@
--- Declaration: MonsterDivisor
--- Extracted by StaticSplit

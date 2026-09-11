@@ -1,2 +1,0 @@
--- Declaration: tesla_total_winding_mod3
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: distributed_can_differ
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ssCountInFp_eq_monster
--- Extracted by StaticSplit

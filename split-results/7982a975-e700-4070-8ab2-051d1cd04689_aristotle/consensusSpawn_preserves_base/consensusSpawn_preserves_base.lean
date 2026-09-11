@@ -1,2 +1,0 @@
--- Declaration: consensusSpawn_preserves_base
--- Extracted by StaticSplit

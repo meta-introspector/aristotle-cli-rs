@@ -1,2 +1,0 @@
--- Declaration: merkle_leaf_tamper_detection
--- Extracted by StaticSplit

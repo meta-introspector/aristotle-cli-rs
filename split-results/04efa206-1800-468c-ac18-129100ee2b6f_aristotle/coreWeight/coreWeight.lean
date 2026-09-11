@@ -1,2 +1,0 @@
--- Declaration: coreWeight
--- Extracted by StaticSplit

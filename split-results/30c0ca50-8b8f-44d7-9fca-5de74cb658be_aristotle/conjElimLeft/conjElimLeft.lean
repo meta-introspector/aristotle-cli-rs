@@ -1,2 +1,0 @@
--- Declaration: conjElimLeft
--- Extracted by StaticSplit

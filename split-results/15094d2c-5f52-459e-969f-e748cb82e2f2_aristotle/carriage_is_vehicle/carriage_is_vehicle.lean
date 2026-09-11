@@ -1,2 +1,0 @@
--- Declaration: carriage_is_vehicle
--- Extracted by StaticSplit

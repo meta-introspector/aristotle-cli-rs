@@ -1,2 +1,0 @@
--- Declaration: gaugeEquiv_trans
--- Extracted by StaticSplit

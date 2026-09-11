@@ -1,2 +1,0 @@
--- Declaration: k0_indexed_by_base
--- Extracted by StaticSplit

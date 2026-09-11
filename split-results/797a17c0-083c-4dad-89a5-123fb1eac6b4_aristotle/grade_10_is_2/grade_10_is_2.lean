@@ -1,2 +1,0 @@
--- Declaration: grade_10_is_2
--- Extracted by StaticSplit

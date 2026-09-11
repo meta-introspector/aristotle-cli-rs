@@ -1,2 +1,0 @@
--- Declaration: resClassDim_block
--- Extracted by StaticSplit

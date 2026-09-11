@@ -1,2 +1,0 @@
--- Declaration: sym2_dim
--- Extracted by StaticSplit

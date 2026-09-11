@@ -1,2 +1,0 @@
--- Declaration: agentEncoding
--- Extracted by StaticSplit

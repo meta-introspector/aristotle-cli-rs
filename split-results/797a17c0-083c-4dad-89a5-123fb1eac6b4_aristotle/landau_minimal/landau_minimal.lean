@@ -1,2 +1,0 @@
--- Declaration: landau_minimal
--- Extracted by StaticSplit

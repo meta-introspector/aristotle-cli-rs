@@ -1,2 +1,0 @@
--- Declaration: applyAll
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Duality
--- Extracted by StaticSplit

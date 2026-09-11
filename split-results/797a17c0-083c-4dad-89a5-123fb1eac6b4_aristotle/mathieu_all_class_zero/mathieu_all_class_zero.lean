@@ -1,2 +1,0 @@
--- Declaration: mathieu_all_class_zero
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: extent_gt_representation
--- Extracted by StaticSplit

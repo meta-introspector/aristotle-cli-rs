@@ -1,2 +1,0 @@
--- Declaration: ResidueCoord
--- Extracted by StaticSplit

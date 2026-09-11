@@ -1,2 +1,0 @@
--- Declaration: fixed_point_preserved
--- Extracted by StaticSplit

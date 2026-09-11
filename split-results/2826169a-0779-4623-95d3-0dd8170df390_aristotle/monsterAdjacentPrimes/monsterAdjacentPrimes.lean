@@ -1,2 +1,0 @@
--- Declaration: monsterAdjacentPrimes
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: EntityBridge
--- Extracted by StaticSplit

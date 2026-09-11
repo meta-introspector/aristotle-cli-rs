@@ -1,2 +1,0 @@
--- Declaration: senate_passive_leaks
--- Extracted by StaticSplit

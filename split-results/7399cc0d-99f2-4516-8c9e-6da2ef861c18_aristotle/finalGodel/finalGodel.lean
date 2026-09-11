@@ -1,2 +1,0 @@
--- Declaration: finalGodel
--- Extracted by StaticSplit

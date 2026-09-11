@@ -1,2 +1,0 @@
--- Declaration: piSeriesCrank
--- Extracted by StaticSplit

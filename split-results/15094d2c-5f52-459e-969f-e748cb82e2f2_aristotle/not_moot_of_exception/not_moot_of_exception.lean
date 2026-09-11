@@ -1,2 +1,0 @@
--- Declaration: not_moot_of_exception
--- Extracted by StaticSplit

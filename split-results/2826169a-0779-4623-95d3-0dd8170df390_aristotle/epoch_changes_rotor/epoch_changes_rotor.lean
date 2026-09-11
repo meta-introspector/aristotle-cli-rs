@@ -1,2 +1,0 @@
--- Declaration: epoch_changes_rotor
--- Extracted by StaticSplit

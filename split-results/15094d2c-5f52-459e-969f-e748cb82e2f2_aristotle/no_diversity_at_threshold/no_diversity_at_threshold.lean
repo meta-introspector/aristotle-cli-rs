@@ -1,2 +1,0 @@
--- Declaration: no_diversity_at_threshold
--- Extracted by StaticSplit

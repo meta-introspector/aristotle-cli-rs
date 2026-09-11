@@ -1,2 +1,0 @@
--- Declaration: restrictSection
--- Extracted by StaticSplit

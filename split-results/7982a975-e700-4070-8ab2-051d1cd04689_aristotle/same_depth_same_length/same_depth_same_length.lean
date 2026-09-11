@@ -1,2 +1,0 @@
--- Declaration: same_depth_same_length
--- Extracted by StaticSplit

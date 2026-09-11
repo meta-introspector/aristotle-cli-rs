@@ -1,2 +1,0 @@
--- Declaration: worldBeforeAristotle
--- Extracted by StaticSplit

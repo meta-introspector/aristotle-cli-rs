@@ -1,2 +1,0 @@
--- Declaration: ProofLayer.dependencies
--- Extracted by StaticSplit

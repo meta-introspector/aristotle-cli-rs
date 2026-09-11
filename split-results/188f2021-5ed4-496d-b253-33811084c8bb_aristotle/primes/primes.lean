@@ -1,2 +1,0 @@
--- Declaration: primes
--- Extracted by StaticSplit

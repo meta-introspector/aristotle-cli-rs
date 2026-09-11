@@ -1,2 +1,0 @@
--- Declaration: fullScan
--- Extracted by StaticSplit

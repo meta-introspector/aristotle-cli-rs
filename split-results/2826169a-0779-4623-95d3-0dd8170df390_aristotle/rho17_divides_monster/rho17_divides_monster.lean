@@ -1,2 +1,0 @@
--- Declaration: rho17_divides_monster
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: type_kind_count
--- Extracted by StaticSplit

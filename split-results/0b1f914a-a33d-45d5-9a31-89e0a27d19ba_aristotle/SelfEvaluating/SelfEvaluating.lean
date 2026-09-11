@@ -1,2 +1,0 @@
--- Declaration: SelfEvaluating
--- Extracted by StaticSplit

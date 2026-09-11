@@ -1,2 +1,0 @@
--- Declaration: IsCharacter.identity_eq_dim
--- Extracted by StaticSplit

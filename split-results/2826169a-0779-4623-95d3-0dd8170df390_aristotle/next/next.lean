@@ -1,2 +1,0 @@
--- Declaration: next
--- Extracted by StaticSplit

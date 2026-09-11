@@ -1,2 +1,0 @@
--- Declaration: TopInvariant.isNontrivial
--- Extracted by StaticSplit

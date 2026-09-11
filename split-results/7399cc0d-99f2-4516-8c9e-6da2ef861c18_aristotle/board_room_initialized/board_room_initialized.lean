@@ -1,2 +1,0 @@
--- Declaration: board_room_initialized
--- Extracted by StaticSplit

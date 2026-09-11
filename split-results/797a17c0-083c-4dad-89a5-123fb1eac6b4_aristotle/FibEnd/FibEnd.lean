@@ -1,2 +1,0 @@
--- Declaration: FibEnd
--- Extracted by StaticSplit

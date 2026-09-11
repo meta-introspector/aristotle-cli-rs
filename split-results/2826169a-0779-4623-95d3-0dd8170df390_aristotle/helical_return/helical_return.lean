@@ -1,2 +1,0 @@
--- Declaration: helical_return
--- Extracted by StaticSplit

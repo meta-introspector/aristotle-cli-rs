@@ -1,2 +1,0 @@
--- Declaration: smooth_shadow_decomposition
--- Extracted by StaticSplit

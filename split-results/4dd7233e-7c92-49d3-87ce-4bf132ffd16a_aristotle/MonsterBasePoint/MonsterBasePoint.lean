@@ -1,2 +1,0 @@
--- Declaration: MonsterBasePoint
--- Extracted by StaticSplit

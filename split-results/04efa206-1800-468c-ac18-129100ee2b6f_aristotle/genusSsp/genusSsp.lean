@@ -1,2 +1,0 @@
--- Declaration: genusSsp
--- Extracted by StaticSplit

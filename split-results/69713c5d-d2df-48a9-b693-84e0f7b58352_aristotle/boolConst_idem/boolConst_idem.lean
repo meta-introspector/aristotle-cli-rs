@@ -1,2 +1,0 @@
--- Declaration: boolConst_idem
--- Extracted by StaticSplit

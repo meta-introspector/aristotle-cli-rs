@@ -1,2 +1,0 @@
--- Declaration: boundary_blade_activateNeg
--- Extracted by StaticSplit

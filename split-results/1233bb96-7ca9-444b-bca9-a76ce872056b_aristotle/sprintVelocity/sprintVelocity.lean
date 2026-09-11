@@ -1,2 +1,0 @@
--- Declaration: sprintVelocity
--- Extracted by StaticSplit

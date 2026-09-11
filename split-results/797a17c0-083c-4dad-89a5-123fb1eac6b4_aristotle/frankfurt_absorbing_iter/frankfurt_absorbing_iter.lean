@@ -1,2 +1,0 @@
--- Declaration: frankfurt_absorbing_iter
--- Extracted by StaticSplit

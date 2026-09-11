@@ -1,2 +1,0 @@
--- Declaration: QExpansion.compatible
--- Extracted by StaticSplit

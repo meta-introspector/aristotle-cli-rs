@@ -1,2 +1,0 @@
--- Declaration: CommitteeRuleTopic
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: CosmicLayer
--- Extracted by StaticSplit

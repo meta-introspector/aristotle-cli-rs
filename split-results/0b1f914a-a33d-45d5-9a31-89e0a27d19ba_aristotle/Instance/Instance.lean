@@ -1,2 +1,0 @@
--- Declaration: Instance
--- Extracted by StaticSplit

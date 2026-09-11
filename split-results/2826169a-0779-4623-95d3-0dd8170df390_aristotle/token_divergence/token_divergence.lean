@@ -1,2 +1,0 @@
--- Declaration: token_divergence
--- Extracted by StaticSplit

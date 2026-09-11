@@ -1,2 +1,0 @@
--- Declaration: valid_impL_inv1
--- Extracted by StaticSplit

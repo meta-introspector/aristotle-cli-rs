@@ -1,2 +1,0 @@
--- Declaration: selfBlade_degree
--- Extracted by StaticSplit

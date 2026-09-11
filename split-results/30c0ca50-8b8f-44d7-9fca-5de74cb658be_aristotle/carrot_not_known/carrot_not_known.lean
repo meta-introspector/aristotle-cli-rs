@@ -1,2 +1,0 @@
--- Declaration: carrot_not_known
--- Extracted by StaticSplit

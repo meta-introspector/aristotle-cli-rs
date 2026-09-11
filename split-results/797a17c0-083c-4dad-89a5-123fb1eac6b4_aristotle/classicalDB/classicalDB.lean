@@ -1,2 +1,0 @@
--- Declaration: classicalDB
--- Extracted by StaticSplit

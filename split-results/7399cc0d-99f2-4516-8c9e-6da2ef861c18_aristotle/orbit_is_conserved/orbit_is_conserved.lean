@@ -1,2 +1,0 @@
--- Declaration: orbit_is_conserved
--- Extracted by StaticSplit

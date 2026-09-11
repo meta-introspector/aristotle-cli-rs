@@ -1,2 +1,0 @@
--- Declaration: AddressRegistry
--- Extracted by StaticSplit

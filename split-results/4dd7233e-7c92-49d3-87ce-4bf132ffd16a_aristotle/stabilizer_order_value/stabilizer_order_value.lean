@@ -1,2 +1,0 @@
--- Declaration: stabilizer_order_value
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: flm_mckay_bridge
--- Extracted by StaticSplit

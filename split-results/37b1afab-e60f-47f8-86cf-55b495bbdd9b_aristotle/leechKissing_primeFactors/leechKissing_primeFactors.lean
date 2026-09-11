@@ -1,2 +1,0 @@
--- Declaration: leechKissing_primeFactors
--- Extracted by StaticSplit

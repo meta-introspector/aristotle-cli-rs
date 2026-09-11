@@ -1,2 +1,0 @@
--- Declaration: omega_prime_largest
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: runTrace_strict
--- Extracted by StaticSplit

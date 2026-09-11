@@ -1,2 +1,0 @@
--- Declaration: phosphorus_Z
--- Extracted by StaticSplit

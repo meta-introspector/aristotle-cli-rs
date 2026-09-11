@@ -1,2 +1,0 @@
--- Declaration: encode_prime_prefix
--- Extracted by StaticSplit

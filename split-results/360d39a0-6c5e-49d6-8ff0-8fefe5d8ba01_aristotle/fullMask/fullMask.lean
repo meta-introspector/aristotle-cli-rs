@@ -1,2 +1,0 @@
--- Declaration: fullMask
--- Extracted by StaticSplit

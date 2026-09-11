@@ -1,2 +1,0 @@
--- Declaration: padDegen
--- Extracted by StaticSplit

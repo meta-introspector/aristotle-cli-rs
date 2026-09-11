@@ -1,2 +1,0 @@
--- Declaration: harmonic_sequence_preserves_adjacency
--- Extracted by StaticSplit

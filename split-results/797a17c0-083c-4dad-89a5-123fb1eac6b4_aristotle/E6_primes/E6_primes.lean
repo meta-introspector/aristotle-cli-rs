@@ -1,2 +1,0 @@
--- Declaration: E6_primes
--- Extracted by StaticSplit

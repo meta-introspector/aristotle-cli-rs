@@ -1,2 +1,0 @@
--- Declaration: bridgedEntityCount
--- Extracted by StaticSplit

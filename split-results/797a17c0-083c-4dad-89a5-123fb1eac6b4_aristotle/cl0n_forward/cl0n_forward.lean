@@ -1,2 +1,0 @@
--- Declaration: cl0n_forward
--- Extracted by StaticSplit

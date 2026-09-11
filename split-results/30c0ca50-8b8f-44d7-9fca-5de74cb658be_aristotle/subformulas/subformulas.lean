@@ -1,2 +1,0 @@
--- Declaration: subformulas
--- Extracted by StaticSplit

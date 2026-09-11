@@ -1,2 +1,0 @@
--- Declaration: moonshineMult_widths
--- Extracted by StaticSplit

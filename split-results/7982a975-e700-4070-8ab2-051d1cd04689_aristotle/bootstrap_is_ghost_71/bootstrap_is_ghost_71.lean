@@ -1,2 +1,0 @@
--- Declaration: bootstrap_is_ghost_71
--- Extracted by StaticSplit

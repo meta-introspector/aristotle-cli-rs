@@ -1,2 +1,0 @@
--- Declaration: Symbol.toLatex
--- Extracted by StaticSplit

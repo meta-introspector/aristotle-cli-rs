@@ -1,2 +1,0 @@
--- Declaration: Chamber
--- Extracted by StaticSplit

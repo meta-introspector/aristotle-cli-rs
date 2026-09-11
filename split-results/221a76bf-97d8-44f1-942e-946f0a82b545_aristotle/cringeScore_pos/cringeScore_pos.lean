@@ -1,2 +1,0 @@
--- Declaration: cringeScore_pos
--- Extracted by StaticSplit

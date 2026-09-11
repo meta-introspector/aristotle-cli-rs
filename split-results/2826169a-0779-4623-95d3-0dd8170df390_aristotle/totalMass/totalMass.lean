@@ -1,2 +1,0 @@
--- Declaration: totalMass
--- Extracted by StaticSplit

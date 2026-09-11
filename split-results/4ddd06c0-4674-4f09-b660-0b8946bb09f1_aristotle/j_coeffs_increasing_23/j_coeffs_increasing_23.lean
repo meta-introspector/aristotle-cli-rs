@@ -1,2 +1,0 @@
--- Declaration: j_coeffs_increasing_23
--- Extracted by StaticSplit

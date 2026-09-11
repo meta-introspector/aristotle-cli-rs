@@ -1,2 +1,0 @@
--- Declaration: walk_ssp_agree
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: classify_periodic
--- Extracted by StaticSplit

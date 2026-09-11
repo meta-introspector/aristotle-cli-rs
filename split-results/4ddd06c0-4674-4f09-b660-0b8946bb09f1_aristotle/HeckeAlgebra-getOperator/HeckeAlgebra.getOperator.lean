@@ -1,2 +1,0 @@
--- Declaration: HeckeAlgebra.getOperator
--- Extracted by StaticSplit

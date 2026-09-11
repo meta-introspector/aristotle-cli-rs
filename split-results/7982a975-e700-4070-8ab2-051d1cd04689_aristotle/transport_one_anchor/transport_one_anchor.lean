@@ -1,2 +1,0 @@
--- Declaration: transport_one_anchor
--- Extracted by StaticSplit

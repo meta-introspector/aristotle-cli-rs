@@ -1,2 +1,0 @@
--- Declaration: A6_card
--- Extracted by StaticSplit

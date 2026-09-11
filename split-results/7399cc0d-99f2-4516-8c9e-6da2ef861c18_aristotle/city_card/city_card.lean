@@ -1,2 +1,0 @@
--- Declaration: city_card
--- Extracted by StaticSplit

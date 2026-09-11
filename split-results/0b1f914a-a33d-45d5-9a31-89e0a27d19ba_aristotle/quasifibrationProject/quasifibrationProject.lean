@@ -1,2 +1,0 @@
--- Declaration: quasifibrationProject
--- Extracted by StaticSplit

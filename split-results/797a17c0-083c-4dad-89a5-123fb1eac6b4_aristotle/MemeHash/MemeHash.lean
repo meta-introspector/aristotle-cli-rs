@@ -1,2 +1,0 @@
--- Declaration: MemeHash
--- Extracted by StaticSplit

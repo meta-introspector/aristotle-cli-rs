@@ -1,2 +1,0 @@
--- Declaration: oodaCycleN_preserves_base
--- Extracted by StaticSplit

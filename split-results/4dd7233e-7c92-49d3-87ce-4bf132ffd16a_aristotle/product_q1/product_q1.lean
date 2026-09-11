@@ -1,2 +1,0 @@
--- Declaration: product_q1
--- Extracted by StaticSplit

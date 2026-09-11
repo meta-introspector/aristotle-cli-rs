@@ -1,2 +1,0 @@
--- Declaration: gene_is_not_fundamental
--- Extracted by StaticSplit

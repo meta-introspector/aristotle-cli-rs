@@ -1,2 +1,0 @@
--- Declaration: returnElixir
--- Extracted by StaticSplit

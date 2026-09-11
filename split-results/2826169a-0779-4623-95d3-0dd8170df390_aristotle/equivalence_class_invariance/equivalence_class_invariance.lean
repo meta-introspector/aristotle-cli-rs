@@ -1,2 +1,0 @@
--- Declaration: equivalence_class_invariance
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: skeleton_sum_prime
--- Extracted by StaticSplit

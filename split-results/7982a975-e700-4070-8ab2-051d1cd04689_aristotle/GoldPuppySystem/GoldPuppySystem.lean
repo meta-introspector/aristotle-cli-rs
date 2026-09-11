@@ -1,2 +1,0 @@
--- Declaration: GoldPuppySystem
--- Extracted by StaticSplit

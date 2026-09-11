@@ -1,2 +1,0 @@
--- Declaration: BinInt.predDouble
--- Extracted by StaticSplit

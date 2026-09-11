@@ -1,2 +1,0 @@
--- Declaration: bmc_monster
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: isoVertBasedLiftEquiv
--- Extracted by StaticSplit

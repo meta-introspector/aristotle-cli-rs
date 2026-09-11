@@ -1,2 +1,0 @@
--- Declaration: residueTriple
--- Extracted by StaticSplit

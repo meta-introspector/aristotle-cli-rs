@@ -1,2 +1,0 @@
--- Declaration: SessionAction.isPure
--- Extracted by StaticSplit

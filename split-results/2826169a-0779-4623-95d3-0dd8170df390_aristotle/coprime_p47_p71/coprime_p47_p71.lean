@@ -1,2 +1,0 @@
--- Declaration: coprime_p47_p71
--- Extracted by StaticSplit

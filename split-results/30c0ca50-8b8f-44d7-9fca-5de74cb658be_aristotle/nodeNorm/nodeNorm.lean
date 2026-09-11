@@ -1,2 +1,0 @@
--- Declaration: nodeNorm
--- Extracted by StaticSplit

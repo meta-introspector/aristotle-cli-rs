@@ -1,2 +1,0 @@
--- Declaration: rewrite_step
--- Extracted by StaticSplit

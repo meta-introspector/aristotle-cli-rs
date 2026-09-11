@@ -1,2 +1,0 @@
--- Declaration: not_smooth23_of_curvature
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: gyatt
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: shapeBase
--- Extracted by StaticSplit

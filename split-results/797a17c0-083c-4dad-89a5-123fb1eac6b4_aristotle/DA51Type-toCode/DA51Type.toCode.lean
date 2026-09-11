@@ -1,2 +1,0 @@
--- Declaration: DA51Type.toCode
--- Extracted by StaticSplit

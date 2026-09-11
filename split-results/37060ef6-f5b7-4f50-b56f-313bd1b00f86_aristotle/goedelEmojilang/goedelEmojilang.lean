@@ -1,2 +1,0 @@
--- Declaration: goedelEmojilang
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: CInd
--- Extracted by StaticSplit

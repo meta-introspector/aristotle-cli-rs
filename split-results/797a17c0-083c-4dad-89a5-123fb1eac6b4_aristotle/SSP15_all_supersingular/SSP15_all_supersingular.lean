@@ -1,2 +1,0 @@
--- Declaration: SSP15_all_supersingular
--- Extracted by StaticSplit

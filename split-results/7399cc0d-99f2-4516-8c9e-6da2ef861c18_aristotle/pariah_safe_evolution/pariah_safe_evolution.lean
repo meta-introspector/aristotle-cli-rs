@@ -1,2 +1,0 @@
--- Declaration: pariah_safe_evolution
--- Extracted by StaticSplit

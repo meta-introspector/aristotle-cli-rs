@@ -1,2 +1,0 @@
--- Declaration: hylomorphism_invariant
--- Extracted by StaticSplit

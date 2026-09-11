@@ -1,2 +1,0 @@
--- Declaration: exampleShifted_loper
--- Extracted by StaticSplit

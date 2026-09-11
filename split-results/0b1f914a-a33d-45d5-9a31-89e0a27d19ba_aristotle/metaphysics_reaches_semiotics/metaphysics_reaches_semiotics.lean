@@ -1,2 +1,0 @@
--- Declaration: metaphysics_reaches_semiotics
--- Extracted by StaticSplit

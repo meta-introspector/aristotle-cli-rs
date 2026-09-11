@@ -1,2 +1,0 @@
--- Declaration: solfunmeme_bott
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: lra_years_20th_century
--- Extracted by StaticSplit

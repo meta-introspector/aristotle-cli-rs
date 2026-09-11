@@ -1,2 +1,0 @@
--- Declaration: singular_reaches_plural
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: reshapeSlot
--- Extracted by StaticSplit

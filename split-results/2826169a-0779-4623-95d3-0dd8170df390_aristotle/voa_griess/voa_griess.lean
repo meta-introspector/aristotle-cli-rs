@@ -1,2 +1,0 @@
--- Declaration: voa_griess
--- Extracted by StaticSplit

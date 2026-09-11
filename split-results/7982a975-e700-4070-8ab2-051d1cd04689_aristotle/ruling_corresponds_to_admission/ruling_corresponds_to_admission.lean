@@ -1,2 +1,0 @@
--- Declaration: ruling_corresponds_to_admission
--- Extracted by StaticSplit

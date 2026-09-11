@@ -1,2 +1,0 @@
--- Declaration: AddressRegistry.isNew
--- Extracted by StaticSplit

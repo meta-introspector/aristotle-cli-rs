@@ -1,2 +1,0 @@
--- Declaration: bott_periodicity_8
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: fullMetaLanguage_has_link
--- Extracted by StaticSplit

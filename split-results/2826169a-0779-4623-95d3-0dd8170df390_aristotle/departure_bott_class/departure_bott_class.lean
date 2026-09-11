@@ -1,2 +1,0 @@
--- Declaration: departure_bott_class
--- Extracted by StaticSplit

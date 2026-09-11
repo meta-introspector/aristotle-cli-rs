@@ -1,2 +1,0 @@
--- Declaration: fileToModularObj
--- Extracted by StaticSplit

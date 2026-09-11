@@ -1,2 +1,0 @@
--- Declaration: ramanujan_de_R_consistent
--- Extracted by StaticSplit

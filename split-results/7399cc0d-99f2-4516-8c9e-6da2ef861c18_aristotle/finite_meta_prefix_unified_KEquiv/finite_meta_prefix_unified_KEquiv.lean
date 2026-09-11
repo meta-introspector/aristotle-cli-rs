@@ -1,2 +1,0 @@
--- Declaration: finite_meta_prefix_unified_KEquiv
--- Extracted by StaticSplit

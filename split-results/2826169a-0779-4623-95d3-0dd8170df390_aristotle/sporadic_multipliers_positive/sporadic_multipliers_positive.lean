@@ -1,2 +1,0 @@
--- Declaration: sporadic_multipliers_positive
--- Extracted by StaticSplit

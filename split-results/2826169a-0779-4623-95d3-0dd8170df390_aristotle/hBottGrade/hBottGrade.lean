@@ -1,2 +1,0 @@
--- Declaration: hBottGrade
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: relations_well_typed
--- Extracted by StaticSplit

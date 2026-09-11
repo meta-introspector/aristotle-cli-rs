@@ -1,2 +1,0 @@
--- Declaration: TotalCatHom
--- Extracted by StaticSplit

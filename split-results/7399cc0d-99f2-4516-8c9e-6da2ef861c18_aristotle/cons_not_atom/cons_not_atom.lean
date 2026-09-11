@@ -1,2 +1,0 @@
--- Declaration: cons_not_atom
--- Extracted by StaticSplit

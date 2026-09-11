@@ -1,2 +1,0 @@
--- Declaration: TowerRole
--- Extracted by StaticSplit

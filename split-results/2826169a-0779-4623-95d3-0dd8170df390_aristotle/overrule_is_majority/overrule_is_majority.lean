@@ -1,2 +1,0 @@
--- Declaration: overrule_is_majority
--- Extracted by StaticSplit

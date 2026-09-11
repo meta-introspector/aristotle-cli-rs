@@ -1,2 +1,0 @@
--- Declaration: F3
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: hub_coords
--- Extracted by StaticSplit

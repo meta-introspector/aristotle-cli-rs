@@ -1,2 +1,0 @@
--- Declaration: fibonacci_reaches_oeis
--- Extracted by StaticSplit

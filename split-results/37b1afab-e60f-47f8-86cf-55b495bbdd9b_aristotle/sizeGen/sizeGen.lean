@@ -1,2 +1,0 @@
--- Declaration: sizeGen
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: tesla_bott_class_is_quaternionic
--- Extracted by StaticSplit

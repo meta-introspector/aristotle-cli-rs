@@ -1,2 +1,0 @@
--- Declaration: moonshine_connection
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: WebServerConcept
--- Extracted by StaticSplit

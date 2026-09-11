@@ -1,2 +1,0 @@
--- Declaration: admissible_equiv
--- Extracted by StaticSplit

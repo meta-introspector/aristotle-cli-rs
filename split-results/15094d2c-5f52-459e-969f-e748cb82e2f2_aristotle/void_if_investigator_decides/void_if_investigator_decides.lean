@@ -1,2 +1,0 @@
--- Declaration: void_if_investigator_decides
--- Extracted by StaticSplit

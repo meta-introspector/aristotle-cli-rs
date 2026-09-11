@@ -1,2 +1,0 @@
--- Declaration: ext_2E6_order
--- Extracted by StaticSplit

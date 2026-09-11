@@ -1,2 +1,0 @@
--- Declaration: mckay_equation
--- Extracted by StaticSplit

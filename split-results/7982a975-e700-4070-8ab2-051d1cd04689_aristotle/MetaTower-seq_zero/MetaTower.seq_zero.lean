@@ -1,2 +1,0 @@
--- Declaration: MetaTower.seq_zero
--- Extracted by StaticSplit

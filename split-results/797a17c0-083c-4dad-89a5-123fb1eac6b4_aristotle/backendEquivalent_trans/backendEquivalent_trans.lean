@@ -1,2 +1,0 @@
--- Declaration: backendEquivalent_trans
--- Extracted by StaticSplit

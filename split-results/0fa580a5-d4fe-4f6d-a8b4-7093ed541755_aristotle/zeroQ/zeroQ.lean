@@ -1,2 +1,0 @@
--- Declaration: zeroQ
--- Extracted by StaticSplit

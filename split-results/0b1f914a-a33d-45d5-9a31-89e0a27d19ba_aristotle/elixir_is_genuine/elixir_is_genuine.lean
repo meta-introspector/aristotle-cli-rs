@@ -1,2 +1,0 @@
--- Declaration: elixir_is_genuine
--- Extracted by StaticSplit

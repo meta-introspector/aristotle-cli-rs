@@ -1,2 +1,0 @@
--- Declaration: crankmine_preserves_coordinate
--- Extracted by StaticSplit

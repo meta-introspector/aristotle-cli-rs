@@ -1,2 +1,0 @@
--- Declaration: solfunmemeBlade
--- Extracted by StaticSplit

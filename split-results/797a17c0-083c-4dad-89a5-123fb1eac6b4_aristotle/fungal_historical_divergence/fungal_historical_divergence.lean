@@ -1,2 +1,0 @@
--- Declaration: fungal_historical_divergence
--- Extracted by StaticSplit

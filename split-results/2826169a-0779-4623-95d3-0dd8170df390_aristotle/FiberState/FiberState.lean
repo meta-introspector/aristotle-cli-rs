@@ -1,2 +1,0 @@
--- Declaration: FiberState
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: url
--- Extracted by StaticSplit

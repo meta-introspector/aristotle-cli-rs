@@ -1,2 +1,0 @@
--- Declaration: edge_count_72
--- Extracted by StaticSplit

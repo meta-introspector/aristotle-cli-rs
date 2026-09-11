@@ -1,2 +1,0 @@
--- Declaration: goedel
--- Extracted by StaticSplit

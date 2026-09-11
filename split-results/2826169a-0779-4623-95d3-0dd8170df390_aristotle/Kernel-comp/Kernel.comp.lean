@@ -1,2 +1,0 @@
--- Declaration: Kernel.comp
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: margin
--- Extracted by StaticSplit

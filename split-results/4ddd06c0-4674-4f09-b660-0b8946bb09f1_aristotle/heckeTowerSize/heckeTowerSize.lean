@@ -1,2 +1,0 @@
--- Declaration: heckeTowerSize
--- Extracted by StaticSplit

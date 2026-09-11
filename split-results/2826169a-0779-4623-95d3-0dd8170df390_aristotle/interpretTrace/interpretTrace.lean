@@ -1,2 +1,0 @@
--- Declaration: interpretTrace
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: QbertMove
--- Extracted by StaticSplit

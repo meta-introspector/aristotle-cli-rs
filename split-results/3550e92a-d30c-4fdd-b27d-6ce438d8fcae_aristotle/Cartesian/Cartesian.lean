@@ -1,2 +1,0 @@
--- Declaration: Cartesian
--- Extracted by StaticSplit

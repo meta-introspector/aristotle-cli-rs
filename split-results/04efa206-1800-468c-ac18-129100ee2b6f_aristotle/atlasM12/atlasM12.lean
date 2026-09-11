@@ -1,2 +1,0 @@
--- Declaration: atlasM12
--- Extracted by StaticSplit

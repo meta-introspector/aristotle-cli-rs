@@ -1,2 +1,0 @@
--- Declaration: three_rulemaking_categories
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: constitutional_questions_debatable
--- Extracted by StaticSplit

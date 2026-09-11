@@ -1,2 +1,0 @@
--- Declaration: Config
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: infinity_reaches_species
--- Extracted by StaticSplit

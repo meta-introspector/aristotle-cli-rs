@@ -1,2 +1,0 @@
--- Declaration: fedAvg
--- Extracted by StaticSplit

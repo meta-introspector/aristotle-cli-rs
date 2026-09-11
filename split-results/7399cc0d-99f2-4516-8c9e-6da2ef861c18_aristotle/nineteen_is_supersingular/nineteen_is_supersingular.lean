@@ -1,2 +1,0 @@
--- Declaration: nineteen_is_supersingular
--- Extracted by StaticSplit

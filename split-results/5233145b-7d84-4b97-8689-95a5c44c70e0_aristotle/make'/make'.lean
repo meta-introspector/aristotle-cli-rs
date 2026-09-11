@@ -1,2 +1,0 @@
--- Declaration: make'
--- Extracted by StaticSplit

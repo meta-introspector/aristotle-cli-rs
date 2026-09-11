@@ -1,2 +1,0 @@
--- Declaration: ramanujanF_term
--- Extracted by StaticSplit

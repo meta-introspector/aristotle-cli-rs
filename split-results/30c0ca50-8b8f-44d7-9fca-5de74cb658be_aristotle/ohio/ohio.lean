@@ -1,2 +1,0 @@
--- Declaration: ohio
--- Extracted by StaticSplit

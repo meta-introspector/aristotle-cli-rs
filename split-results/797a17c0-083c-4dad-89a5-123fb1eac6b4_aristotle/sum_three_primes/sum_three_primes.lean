@@ -1,2 +1,0 @@
--- Declaration: sum_three_primes
--- Extracted by StaticSplit

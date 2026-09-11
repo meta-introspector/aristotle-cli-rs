@@ -1,2 +1,0 @@
--- Declaration: branch_confluence
--- Extracted by StaticSplit

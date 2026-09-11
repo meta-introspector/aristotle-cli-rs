@@ -1,2 +1,0 @@
--- Declaration: MonsterExp.toNat_dvd
--- Extracted by StaticSplit

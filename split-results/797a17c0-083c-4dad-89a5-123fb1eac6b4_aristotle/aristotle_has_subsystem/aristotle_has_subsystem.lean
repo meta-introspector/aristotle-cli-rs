@@ -1,2 +1,0 @@
--- Declaration: aristotle_has_subsystem
--- Extracted by StaticSplit

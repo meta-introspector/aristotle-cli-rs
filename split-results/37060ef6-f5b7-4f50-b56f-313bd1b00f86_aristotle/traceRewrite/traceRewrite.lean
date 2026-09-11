@@ -1,2 +1,0 @@
--- Declaration: traceRewrite
--- Extracted by StaticSplit

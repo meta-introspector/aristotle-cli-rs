@@ -1,2 +1,0 @@
--- Declaration: associationCount
--- Extracted by StaticSplit

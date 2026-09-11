@@ -1,2 +1,0 @@
--- Declaration: BranchTerm
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: bootstrapLemmaNames
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: runGame
--- Extracted by StaticSplit

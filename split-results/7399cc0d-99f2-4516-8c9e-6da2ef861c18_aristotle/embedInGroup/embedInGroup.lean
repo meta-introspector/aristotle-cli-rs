@@ -1,2 +1,0 @@
--- Declaration: embedInGroup
--- Extracted by StaticSplit

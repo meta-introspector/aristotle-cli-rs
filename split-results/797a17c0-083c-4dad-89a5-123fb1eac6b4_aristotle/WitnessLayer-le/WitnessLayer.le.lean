@@ -1,2 +1,0 @@
--- Declaration: WitnessLayer.le
--- Extracted by StaticSplit

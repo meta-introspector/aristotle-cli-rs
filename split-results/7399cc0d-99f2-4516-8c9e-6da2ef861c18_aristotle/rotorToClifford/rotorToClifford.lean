@@ -1,2 +1,0 @@
--- Declaration: rotorToClifford
--- Extracted by StaticSplit

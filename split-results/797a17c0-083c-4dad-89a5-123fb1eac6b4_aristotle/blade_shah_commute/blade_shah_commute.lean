@@ -1,2 +1,0 @@
--- Declaration: blade_shah_commute
--- Extracted by StaticSplit

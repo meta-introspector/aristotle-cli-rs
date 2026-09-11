@@ -1,2 +1,0 @@
--- Declaration: agency_ladder_levels
--- Extracted by StaticSplit

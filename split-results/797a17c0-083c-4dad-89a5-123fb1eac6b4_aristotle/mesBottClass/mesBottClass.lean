@@ -1,2 +1,0 @@
--- Declaration: mesBottClass
--- Extracted by StaticSplit

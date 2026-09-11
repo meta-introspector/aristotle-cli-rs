@@ -1,2 +1,0 @@
--- Declaration: atp_reaches_consciousness_with_ap
--- Extracted by StaticSplit

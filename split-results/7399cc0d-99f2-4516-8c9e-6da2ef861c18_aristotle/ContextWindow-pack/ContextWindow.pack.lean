@@ -1,2 +1,0 @@
--- Declaration: ContextWindow.pack
--- Extracted by StaticSplit

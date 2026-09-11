@@ -1,2 +1,0 @@
--- Declaration: Blade.nearestClass
--- Extracted by StaticSplit

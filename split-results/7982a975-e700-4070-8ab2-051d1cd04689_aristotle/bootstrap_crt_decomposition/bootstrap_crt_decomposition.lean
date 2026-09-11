@@ -1,2 +1,0 @@
--- Declaration: bootstrap_crt_decomposition
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: anomaly_47_in_classB
--- Extracted by StaticSplit

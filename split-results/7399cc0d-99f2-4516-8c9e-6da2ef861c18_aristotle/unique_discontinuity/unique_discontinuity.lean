@@ -1,2 +1,0 @@
--- Declaration: unique_discontinuity
--- Extracted by StaticSplit

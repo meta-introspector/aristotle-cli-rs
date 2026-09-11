@@ -1,2 +1,0 @@
--- Declaration: cicada_horizon_safe
--- Extracted by StaticSplit

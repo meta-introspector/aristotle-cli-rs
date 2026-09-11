@@ -1,2 +1,0 @@
--- Declaration: iterNeg_injective
--- Extracted by StaticSplit

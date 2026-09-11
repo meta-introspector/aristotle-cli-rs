@@ -1,2 +1,0 @@
--- Declaration: both_systems_require_consensus
--- Extracted by StaticSplit

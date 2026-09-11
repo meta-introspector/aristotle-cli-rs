@@ -1,2 +1,0 @@
--- Declaration: car_nil
--- Extracted by StaticSplit

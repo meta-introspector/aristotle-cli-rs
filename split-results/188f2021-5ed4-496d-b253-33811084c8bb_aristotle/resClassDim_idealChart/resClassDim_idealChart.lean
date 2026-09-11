@@ -1,2 +1,0 @@
--- Declaration: resClassDim_idealChart
--- Extracted by StaticSplit

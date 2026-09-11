@@ -1,2 +1,0 @@
--- Declaration: stable_quorum_reconstruction
--- Extracted by StaticSplit

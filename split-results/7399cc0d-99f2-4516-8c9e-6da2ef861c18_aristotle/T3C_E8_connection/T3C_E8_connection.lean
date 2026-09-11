@@ -1,2 +1,0 @@
--- Declaration: T3C_E8_connection
--- Extracted by StaticSplit

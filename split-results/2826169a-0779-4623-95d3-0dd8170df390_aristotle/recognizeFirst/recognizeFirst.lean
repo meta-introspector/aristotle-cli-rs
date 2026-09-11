@@ -1,2 +1,0 @@
--- Declaration: recognizeFirst
--- Extracted by StaticSplit

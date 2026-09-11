@@ -1,2 +1,0 @@
--- Declaration: disjComm
--- Extracted by StaticSplit

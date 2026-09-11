@@ -1,2 +1,0 @@
--- Declaration: classifyShape_void
--- Extracted by StaticSplit

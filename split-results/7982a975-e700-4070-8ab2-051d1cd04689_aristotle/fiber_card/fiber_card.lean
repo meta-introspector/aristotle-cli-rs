@@ -1,2 +1,0 @@
--- Declaration: fiber_card
--- Extracted by StaticSplit

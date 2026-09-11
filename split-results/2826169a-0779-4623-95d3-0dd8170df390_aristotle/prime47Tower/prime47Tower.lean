@@ -1,2 +1,0 @@
--- Declaration: prime47Tower
--- Extracted by StaticSplit

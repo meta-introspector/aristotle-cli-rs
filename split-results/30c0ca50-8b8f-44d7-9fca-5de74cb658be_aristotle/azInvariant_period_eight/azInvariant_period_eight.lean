@@ -1,2 +1,0 @@
--- Declaration: azInvariant_period_eight
--- Extracted by StaticSplit

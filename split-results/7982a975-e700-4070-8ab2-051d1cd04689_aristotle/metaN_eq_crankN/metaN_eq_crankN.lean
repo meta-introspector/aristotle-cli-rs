@@ -1,2 +1,0 @@
--- Declaration: metaN_eq_crankN
--- Extracted by StaticSplit

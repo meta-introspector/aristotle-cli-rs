@@ -1,2 +1,0 @@
--- Declaration: heckeShift
--- Extracted by StaticSplit

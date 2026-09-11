@@ -1,2 +1,0 @@
--- Declaration: cosmic_coherence
--- Extracted by StaticSplit

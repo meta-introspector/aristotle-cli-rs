@@ -1,2 +1,0 @@
--- Declaration: statusMessage_ready
--- Extracted by StaticSplit

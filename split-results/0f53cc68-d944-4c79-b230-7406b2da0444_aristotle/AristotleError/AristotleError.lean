@@ -1,2 +1,0 @@
--- Declaration: AristotleError
--- Extracted by StaticSplit

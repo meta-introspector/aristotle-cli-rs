@@ -1,2 +1,0 @@
--- Declaration: worldtree_charts
--- Extracted by StaticSplit

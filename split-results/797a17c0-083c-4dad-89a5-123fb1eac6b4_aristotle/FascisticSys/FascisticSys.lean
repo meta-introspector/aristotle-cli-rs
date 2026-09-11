@@ -1,2 +1,0 @@
--- Declaration: FascisticSys
--- Extracted by StaticSplit

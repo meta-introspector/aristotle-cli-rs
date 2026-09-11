@@ -1,2 +1,0 @@
--- Declaration: sspPrimes_mem_sspSet
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Comparison.compOpp
--- Extracted by StaticSplit

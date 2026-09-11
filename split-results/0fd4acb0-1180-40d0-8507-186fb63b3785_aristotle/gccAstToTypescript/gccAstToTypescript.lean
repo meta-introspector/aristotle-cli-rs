@@ -1,2 +1,0 @@
--- Declaration: gccAstToTypescript
--- Extracted by StaticSplit

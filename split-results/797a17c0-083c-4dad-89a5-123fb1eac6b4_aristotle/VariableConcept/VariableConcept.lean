@@ -1,2 +1,0 @@
--- Declaration: VariableConcept
--- Extracted by StaticSplit

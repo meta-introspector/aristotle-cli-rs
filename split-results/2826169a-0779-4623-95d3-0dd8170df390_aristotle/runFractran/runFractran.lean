@@ -1,2 +1,0 @@
--- Declaration: runFractran
--- Extracted by StaticSplit

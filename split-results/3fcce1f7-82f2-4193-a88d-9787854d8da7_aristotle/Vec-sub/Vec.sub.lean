@@ -1,2 +1,0 @@
--- Declaration: Vec.sub
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: M24_divides_Co1
--- Extracted by StaticSplit

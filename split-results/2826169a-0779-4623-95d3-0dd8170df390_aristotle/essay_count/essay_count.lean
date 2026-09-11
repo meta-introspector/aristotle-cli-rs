@@ -1,2 +1,0 @@
--- Declaration: essay_count
--- Extracted by StaticSplit

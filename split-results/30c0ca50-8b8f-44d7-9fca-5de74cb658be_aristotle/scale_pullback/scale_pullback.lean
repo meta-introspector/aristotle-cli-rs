@@ -1,2 +1,0 @@
--- Declaration: scale_pullback
--- Extracted by StaticSplit

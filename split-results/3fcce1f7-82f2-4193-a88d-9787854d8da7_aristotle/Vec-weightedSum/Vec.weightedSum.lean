@@ -1,2 +1,0 @@
--- Declaration: Vec.weightedSum
--- Extracted by StaticSplit

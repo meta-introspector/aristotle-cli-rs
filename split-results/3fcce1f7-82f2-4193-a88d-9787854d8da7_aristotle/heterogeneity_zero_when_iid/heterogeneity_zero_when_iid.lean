@@ -1,2 +1,0 @@
--- Declaration: heterogeneity_zero_when_iid
--- Extracted by StaticSplit

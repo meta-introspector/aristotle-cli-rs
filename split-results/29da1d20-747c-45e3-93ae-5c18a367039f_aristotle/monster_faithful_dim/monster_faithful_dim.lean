@@ -1,2 +1,0 @@
--- Declaration: monster_faithful_dim
--- Extracted by StaticSplit

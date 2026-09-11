@@ -1,2 +1,0 @@
--- Declaration: gammaMonoZ_s_mul_scalar
--- Extracted by StaticSplit

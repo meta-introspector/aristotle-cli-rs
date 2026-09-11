@@ -1,2 +1,0 @@
--- Declaration: ontologyPrimesSeq_length
--- Extracted by StaticSplit

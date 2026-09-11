@@ -1,2 +1,0 @@
--- Declaration: crt_type1_exists
--- Extracted by StaticSplit

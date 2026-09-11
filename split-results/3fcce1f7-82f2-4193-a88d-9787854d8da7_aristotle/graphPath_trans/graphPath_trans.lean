@@ -1,2 +1,0 @@
--- Declaration: graphPath_trans
--- Extracted by StaticSplit

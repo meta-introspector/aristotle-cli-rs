@@ -1,2 +1,0 @@
--- Declaration: monster_trivial_dim
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: rotate
--- Extracted by StaticSplit

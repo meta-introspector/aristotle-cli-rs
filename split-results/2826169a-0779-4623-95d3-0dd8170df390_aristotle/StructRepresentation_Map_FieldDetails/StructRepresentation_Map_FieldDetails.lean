@@ -1,2 +1,0 @@
--- Declaration: StructRepresentation_Map_FieldDetails
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: tail_squarefree
--- Extracted by StaticSplit

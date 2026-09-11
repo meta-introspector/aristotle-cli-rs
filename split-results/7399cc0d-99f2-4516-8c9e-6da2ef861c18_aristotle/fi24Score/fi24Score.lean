@@ -1,2 +1,0 @@
--- Declaration: fi24Score
--- Extracted by StaticSplit

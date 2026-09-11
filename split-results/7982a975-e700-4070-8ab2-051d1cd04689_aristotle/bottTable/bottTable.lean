@@ -1,2 +1,0 @@
--- Declaration: bottTable
--- Extracted by StaticSplit

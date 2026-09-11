@@ -1,2 +1,0 @@
--- Declaration: solfunmeme_consensus_grounded
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: ChartVisibility
--- Extracted by StaticSplit

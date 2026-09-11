@@ -1,2 +1,0 @@
--- Declaration: scale_transitive
--- Extracted by StaticSplit

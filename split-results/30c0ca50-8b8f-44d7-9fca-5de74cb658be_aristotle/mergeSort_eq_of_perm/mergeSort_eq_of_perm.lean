@@ -1,2 +1,0 @@
--- Declaration: mergeSort_eq_of_perm
--- Extracted by StaticSplit

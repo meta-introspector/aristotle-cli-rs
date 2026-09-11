@@ -1,2 +1,0 @@
--- Declaration: factorial_37_not_ssp_smooth
--- Extracted by StaticSplit

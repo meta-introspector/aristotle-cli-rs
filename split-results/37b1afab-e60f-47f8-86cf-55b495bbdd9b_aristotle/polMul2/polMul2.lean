@@ -1,2 +1,0 @@
--- Declaration: polMul2
--- Extracted by StaticSplit

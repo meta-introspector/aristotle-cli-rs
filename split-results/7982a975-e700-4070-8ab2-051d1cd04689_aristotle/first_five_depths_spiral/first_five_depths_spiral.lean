@@ -1,2 +1,0 @@
--- Declaration: first_five_depths_spiral
--- Extracted by StaticSplit

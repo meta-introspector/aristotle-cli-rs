@@ -1,2 +1,0 @@
--- Declaration: RotorState
--- Extracted by StaticSplit

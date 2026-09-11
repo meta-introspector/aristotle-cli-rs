@@ -1,2 +1,0 @@
--- Declaration: rank
--- Extracted by StaticSplit

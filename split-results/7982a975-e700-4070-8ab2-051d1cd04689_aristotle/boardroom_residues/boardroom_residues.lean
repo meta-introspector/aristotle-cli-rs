@@ -1,2 +1,0 @@
--- Declaration: boardroom_residues
--- Extracted by StaticSplit

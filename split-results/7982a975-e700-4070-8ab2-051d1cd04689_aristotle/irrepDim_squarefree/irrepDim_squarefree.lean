@@ -1,2 +1,0 @@
--- Declaration: irrepDim_squarefree
--- Extracted by StaticSplit

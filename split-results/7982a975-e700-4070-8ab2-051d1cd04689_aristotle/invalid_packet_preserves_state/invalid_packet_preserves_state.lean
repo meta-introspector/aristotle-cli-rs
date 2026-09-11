@@ -1,2 +1,0 @@
--- Declaration: invalid_packet_preserves_state
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: concreteSystem
--- Extracted by StaticSplit

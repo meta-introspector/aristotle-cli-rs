@@ -1,2 +1,0 @@
--- Declaration: marketWeight
--- Extracted by StaticSplit

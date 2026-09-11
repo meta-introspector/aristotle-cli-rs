@@ -1,2 +1,0 @@
--- Declaration: ProofLayer
--- Extracted by StaticSplit

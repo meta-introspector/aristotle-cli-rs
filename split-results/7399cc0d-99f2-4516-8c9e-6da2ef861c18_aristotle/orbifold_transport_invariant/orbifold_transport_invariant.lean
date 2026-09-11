@@ -1,2 +1,0 @@
--- Declaration: orbifold_transport_invariant
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: compatible_same_shadow
--- Extracted by StaticSplit

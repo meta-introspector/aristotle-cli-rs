@@ -1,2 +1,0 @@
--- Declaration: supersingular_top_three
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: selfDescribingSource
--- Extracted by StaticSplit

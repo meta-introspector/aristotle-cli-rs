@@ -1,2 +1,0 @@
--- Declaration: heckeT
--- Extracted by StaticSplit

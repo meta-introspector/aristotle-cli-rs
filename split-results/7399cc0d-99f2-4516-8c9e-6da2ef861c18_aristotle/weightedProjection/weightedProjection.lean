@@ -1,2 +1,0 @@
--- Declaration: weightedProjection
--- Extracted by StaticSplit

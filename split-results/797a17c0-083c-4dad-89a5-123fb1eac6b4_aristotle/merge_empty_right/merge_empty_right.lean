@@ -1,2 +1,0 @@
--- Declaration: merge_empty_right
--- Extracted by StaticSplit

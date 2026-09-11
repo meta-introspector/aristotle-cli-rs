@@ -1,2 +1,0 @@
--- Declaration: section_ex6
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: consensusSpawn
--- Extracted by StaticSplit

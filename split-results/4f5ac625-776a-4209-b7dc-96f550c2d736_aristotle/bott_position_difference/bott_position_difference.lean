@@ -1,2 +1,0 @@
--- Declaration: bott_position_difference
--- Extracted by StaticSplit

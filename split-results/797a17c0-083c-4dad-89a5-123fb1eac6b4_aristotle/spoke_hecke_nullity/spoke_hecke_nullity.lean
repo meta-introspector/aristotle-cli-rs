@@ -1,2 +1,0 @@
--- Declaration: spoke_hecke_nullity
--- Extracted by StaticSplit

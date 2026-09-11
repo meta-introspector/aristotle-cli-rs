@@ -1,2 +1,0 @@
--- Declaration: UndoableSession
--- Extracted by StaticSplit

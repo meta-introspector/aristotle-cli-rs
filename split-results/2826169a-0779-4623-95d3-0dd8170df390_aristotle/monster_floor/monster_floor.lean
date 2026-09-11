@@ -1,2 +1,0 @@
--- Declaration: monster_floor
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: min_depth
--- Extracted by StaticSplit

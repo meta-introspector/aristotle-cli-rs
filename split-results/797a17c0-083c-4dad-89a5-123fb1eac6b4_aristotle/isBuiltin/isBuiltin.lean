@@ -1,2 +1,0 @@
--- Declaration: isBuiltin
--- Extracted by StaticSplit

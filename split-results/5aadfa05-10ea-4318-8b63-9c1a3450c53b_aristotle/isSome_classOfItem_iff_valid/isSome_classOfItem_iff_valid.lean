@@ -1,2 +1,0 @@
--- Declaration: isSome_classOfItem_iff_valid
--- Extracted by StaticSplit

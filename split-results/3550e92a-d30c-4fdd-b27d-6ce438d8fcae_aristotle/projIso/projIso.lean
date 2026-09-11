@@ -1,2 +1,0 @@
--- Declaration: projIso
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: unanimity_implies_supermajority
--- Extracted by StaticSplit

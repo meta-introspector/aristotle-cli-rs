@@ -1,2 +1,0 @@
--- Declaration: canPropose
--- Extracted by StaticSplit

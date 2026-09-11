@@ -1,2 +1,0 @@
--- Declaration: newstate
--- Extracted by StaticSplit

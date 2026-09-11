@@ -1,2 +1,0 @@
--- Declaration: ArchetypeType
--- Extracted by StaticSplit

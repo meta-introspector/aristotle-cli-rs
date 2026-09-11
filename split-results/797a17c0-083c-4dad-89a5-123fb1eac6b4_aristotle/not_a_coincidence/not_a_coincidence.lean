@@ -1,2 +1,0 @@
--- Declaration: not_a_coincidence
--- Extracted by StaticSplit

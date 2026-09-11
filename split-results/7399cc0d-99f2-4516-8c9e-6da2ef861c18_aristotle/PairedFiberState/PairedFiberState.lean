@@ -1,2 +1,0 @@
--- Declaration: PairedFiberState
--- Extracted by StaticSplit

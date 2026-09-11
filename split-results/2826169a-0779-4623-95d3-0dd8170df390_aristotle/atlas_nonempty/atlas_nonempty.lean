@@ -1,2 +1,0 @@
--- Declaration: atlas_nonempty
--- Extracted by StaticSplit

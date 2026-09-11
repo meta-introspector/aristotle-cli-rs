@@ -1,2 +1,0 @@
--- Declaration: encoding_preserves_identity
--- Extracted by StaticSplit

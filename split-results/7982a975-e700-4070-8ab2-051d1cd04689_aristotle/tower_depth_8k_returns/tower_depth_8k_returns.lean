@@ -1,2 +1,0 @@
--- Declaration: tower_depth_8k_returns
--- Extracted by StaticSplit

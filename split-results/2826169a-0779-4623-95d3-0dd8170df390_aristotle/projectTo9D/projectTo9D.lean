@@ -1,2 +1,0 @@
--- Declaration: projectTo9D
--- Extracted by StaticSplit

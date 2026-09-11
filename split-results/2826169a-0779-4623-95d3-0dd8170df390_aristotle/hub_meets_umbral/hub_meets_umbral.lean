@@ -1,2 +1,0 @@
--- Declaration: hub_meets_umbral
--- Extracted by StaticSplit

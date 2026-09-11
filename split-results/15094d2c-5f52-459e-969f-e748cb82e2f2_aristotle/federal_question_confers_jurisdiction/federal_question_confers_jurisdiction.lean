@@ -1,2 +1,0 @@
--- Declaration: federal_question_confers_jurisdiction
--- Extracted by StaticSplit

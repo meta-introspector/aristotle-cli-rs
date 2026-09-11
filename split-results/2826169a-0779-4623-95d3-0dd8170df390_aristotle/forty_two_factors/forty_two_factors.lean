@@ -1,2 +1,0 @@
--- Declaration: forty_two_factors
--- Extracted by StaticSplit

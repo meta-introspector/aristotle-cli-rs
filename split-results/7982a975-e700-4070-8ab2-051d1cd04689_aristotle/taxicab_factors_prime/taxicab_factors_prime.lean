@@ -1,2 +1,0 @@
--- Declaration: taxicab_factors_prime
--- Extracted by StaticSplit

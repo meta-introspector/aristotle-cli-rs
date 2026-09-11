@@ -1,2 +1,0 @@
--- Declaration: prime47_complexity_one
--- Extracted by StaticSplit

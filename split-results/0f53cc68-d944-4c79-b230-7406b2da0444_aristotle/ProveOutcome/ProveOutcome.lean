@@ -1,2 +1,0 @@
--- Declaration: ProveOutcome
--- Extracted by StaticSplit

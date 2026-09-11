@@ -1,2 +1,0 @@
--- Declaration: tensorWithTrivial
--- Extracted by StaticSplit

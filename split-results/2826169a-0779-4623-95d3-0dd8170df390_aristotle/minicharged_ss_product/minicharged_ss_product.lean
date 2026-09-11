@@ -1,2 +1,0 @@
--- Declaration: minicharged_ss_product
--- Extracted by StaticSplit

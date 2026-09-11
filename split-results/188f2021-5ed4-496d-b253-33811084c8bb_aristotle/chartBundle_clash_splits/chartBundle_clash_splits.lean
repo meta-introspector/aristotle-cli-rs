@@ -1,2 +1,0 @@
--- Declaration: chartBundle_clash_splits
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: tCompress
--- Extracted by StaticSplit

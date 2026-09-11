@@ -1,2 +1,0 @@
--- Declaration: Sector
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: crt_modulus
--- Extracted by StaticSplit

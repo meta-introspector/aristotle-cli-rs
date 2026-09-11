@@ -1,2 +1,0 @@
--- Declaration: eigenform_coprime_mul
--- Extracted by StaticSplit

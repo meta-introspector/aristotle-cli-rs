@@ -1,2 +1,0 @@
--- Declaration: obj_ternary
--- Extracted by StaticSplit

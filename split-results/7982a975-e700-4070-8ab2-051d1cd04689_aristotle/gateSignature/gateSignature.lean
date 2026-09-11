@@ -1,2 +1,0 @@
--- Declaration: gateSignature
--- Extracted by StaticSplit

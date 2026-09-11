@@ -1,2 +1,0 @@
--- Declaration: evolveOnce
--- Extracted by StaticSplit

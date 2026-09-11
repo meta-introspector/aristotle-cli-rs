@@ -1,2 +1,0 @@
--- Declaration: Medium
--- Extracted by StaticSplit

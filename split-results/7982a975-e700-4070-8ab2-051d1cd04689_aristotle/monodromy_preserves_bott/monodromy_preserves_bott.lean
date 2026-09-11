@@ -1,2 +1,0 @@
--- Declaration: monodromy_preserves_bott
--- Extracted by StaticSplit

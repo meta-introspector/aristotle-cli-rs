@@ -1,2 +1,0 @@
--- Declaration: Omega
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: toolContent
--- Extracted by StaticSplit

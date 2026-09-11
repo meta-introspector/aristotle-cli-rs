@@ -1,2 +1,0 @@
--- Declaration: section_ex5
--- Extracted by StaticSplit

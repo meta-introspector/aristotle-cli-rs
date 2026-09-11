@@ -1,2 +1,0 @@
--- Declaration: SymbolicObject
--- Extracted by StaticSplit

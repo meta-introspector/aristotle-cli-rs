@@ -1,2 +1,0 @@
--- Declaration: beta_reduction
--- Extracted by StaticSplit

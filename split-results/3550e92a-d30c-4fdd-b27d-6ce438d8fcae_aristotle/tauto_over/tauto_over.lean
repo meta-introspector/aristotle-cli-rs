@@ -1,2 +1,0 @@
--- Declaration: tauto_over
--- Extracted by StaticSplit

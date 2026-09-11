@@ -1,2 +1,0 @@
--- Declaration: tesla_winding_div3
--- Extracted by StaticSplit

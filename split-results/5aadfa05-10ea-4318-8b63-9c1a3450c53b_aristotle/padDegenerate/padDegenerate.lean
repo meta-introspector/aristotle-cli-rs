@@ -1,2 +1,0 @@
--- Declaration: padDegenerate
--- Extracted by StaticSplit

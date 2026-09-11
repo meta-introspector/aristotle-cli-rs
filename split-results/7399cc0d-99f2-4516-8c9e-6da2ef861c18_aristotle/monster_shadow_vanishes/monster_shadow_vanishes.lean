@@ -1,2 +1,0 @@
--- Declaration: monster_shadow_vanishes
--- Extracted by StaticSplit

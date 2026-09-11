@@ -1,2 +1,0 @@
--- Declaration: KGroupOf_KO
--- Extracted by StaticSplit

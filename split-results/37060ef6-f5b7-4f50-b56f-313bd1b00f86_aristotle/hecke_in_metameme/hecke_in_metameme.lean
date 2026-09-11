@@ -1,2 +1,0 @@
--- Declaration: hecke_in_metameme
--- Extracted by StaticSplit

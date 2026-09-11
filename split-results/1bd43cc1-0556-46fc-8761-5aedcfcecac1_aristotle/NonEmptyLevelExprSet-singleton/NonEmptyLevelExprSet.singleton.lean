@@ -1,2 +1,0 @@
--- Declaration: NonEmptyLevelExprSet.singleton
--- Extracted by StaticSplit

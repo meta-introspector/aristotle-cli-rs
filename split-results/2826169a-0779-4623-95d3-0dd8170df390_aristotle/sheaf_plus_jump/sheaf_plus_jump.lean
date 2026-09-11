@@ -1,2 +1,0 @@
--- Declaration: sheaf_plus_jump
--- Extracted by StaticSplit

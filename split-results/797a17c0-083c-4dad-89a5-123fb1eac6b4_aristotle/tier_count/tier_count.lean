@@ -1,2 +1,0 @@
--- Declaration: tier_count
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: Variance
--- Extracted by StaticSplit

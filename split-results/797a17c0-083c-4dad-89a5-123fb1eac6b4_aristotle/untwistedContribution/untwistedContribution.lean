@@ -1,2 +1,0 @@
--- Declaration: untwistedContribution
--- Extracted by StaticSplit

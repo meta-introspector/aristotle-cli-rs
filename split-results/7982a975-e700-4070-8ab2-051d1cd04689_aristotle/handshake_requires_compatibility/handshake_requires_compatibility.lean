@@ -1,2 +1,0 @@
--- Declaration: handshake_requires_compatibility
--- Extracted by StaticSplit

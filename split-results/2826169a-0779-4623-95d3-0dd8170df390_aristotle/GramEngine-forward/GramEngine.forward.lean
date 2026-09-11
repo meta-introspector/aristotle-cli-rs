@@ -1,2 +1,0 @@
--- Declaration: GramEngine.forward
--- Extracted by StaticSplit

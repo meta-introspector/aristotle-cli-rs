@@ -1,2 +1,0 @@
--- Declaration: foldWitness_bottPhase_cycle
--- Extracted by StaticSplit

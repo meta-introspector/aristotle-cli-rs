@@ -1,2 +1,0 @@
--- Declaration: gate_bott_5
--- Extracted by StaticSplit

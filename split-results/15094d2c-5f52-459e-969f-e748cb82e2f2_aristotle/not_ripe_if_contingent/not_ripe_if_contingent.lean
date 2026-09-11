@@ -1,2 +1,0 @@
--- Declaration: not_ripe_if_contingent
--- Extracted by StaticSplit

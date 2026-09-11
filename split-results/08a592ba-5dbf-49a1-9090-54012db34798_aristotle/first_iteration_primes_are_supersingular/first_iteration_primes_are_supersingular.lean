@@ -1,2 +1,0 @@
--- Declaration: first_iteration_primes_are_supersingular
--- Extracted by StaticSplit

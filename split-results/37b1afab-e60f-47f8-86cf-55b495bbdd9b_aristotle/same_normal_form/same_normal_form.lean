@@ -1,2 +1,0 @@
--- Declaration: same_normal_form
--- Extracted by StaticSplit

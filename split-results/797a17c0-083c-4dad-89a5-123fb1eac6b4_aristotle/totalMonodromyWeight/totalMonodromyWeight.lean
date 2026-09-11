@@ -1,2 +1,0 @@
--- Declaration: totalMonodromyWeight
--- Extracted by StaticSplit

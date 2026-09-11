@@ -1,2 +1,0 @@
--- Declaration: expressible_mono
--- Extracted by StaticSplit

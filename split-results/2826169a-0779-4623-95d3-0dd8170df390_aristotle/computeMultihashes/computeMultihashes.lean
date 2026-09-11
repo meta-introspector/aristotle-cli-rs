@@ -1,2 +1,0 @@
--- Declaration: computeMultihashes
--- Extracted by StaticSplit

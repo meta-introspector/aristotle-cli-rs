@@ -1,2 +1,0 @@
--- Declaration: Proposal
--- Extracted by StaticSplit

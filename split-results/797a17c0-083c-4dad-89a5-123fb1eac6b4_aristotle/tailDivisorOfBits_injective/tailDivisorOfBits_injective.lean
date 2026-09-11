@@ -1,2 +1,0 @@
--- Declaration: tailDivisorOfBits_injective
--- Extracted by StaticSplit

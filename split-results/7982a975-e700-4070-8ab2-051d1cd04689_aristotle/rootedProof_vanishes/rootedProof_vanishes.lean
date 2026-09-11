@@ -1,2 +1,0 @@
--- Declaration: rootedProof_vanishes
--- Extracted by StaticSplit

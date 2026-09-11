@@ -1,2 +1,0 @@
--- Declaration: cl07_forward_gen
--- Extracted by StaticSplit

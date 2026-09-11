@@ -1,2 +1,0 @@
--- Declaration: sampleTrace_faithful
--- Extracted by StaticSplit

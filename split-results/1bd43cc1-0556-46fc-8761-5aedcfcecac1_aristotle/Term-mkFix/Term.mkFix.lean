@@ -1,2 +1,0 @@
--- Declaration: Term.mkFix
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: nonCoprime_union
--- Extracted by StaticSplit

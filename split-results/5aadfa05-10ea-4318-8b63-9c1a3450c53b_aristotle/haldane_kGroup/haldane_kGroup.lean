@@ -1,2 +1,0 @@
--- Declaration: haldane_kGroup
--- Extracted by StaticSplit

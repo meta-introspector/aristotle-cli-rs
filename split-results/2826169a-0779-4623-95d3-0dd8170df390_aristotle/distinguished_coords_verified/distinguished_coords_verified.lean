@@ -1,2 +1,0 @@
--- Declaration: distinguished_coords_verified
--- Extracted by StaticSplit

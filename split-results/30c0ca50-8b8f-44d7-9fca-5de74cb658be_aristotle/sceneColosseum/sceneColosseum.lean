@@ -1,2 +1,0 @@
--- Declaration: sceneColosseum
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: X_minus
--- Extracted by StaticSplit

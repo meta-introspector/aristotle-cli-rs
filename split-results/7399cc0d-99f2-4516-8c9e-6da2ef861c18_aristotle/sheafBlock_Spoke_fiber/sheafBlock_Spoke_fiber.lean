@@ -1,2 +1,0 @@
--- Declaration: sheafBlock_Spoke_fiber
--- Extracted by StaticSplit

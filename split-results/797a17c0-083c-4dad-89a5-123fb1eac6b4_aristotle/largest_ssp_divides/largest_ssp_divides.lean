@@ -1,2 +1,0 @@
--- Declaration: largest_ssp_divides
--- Extracted by StaticSplit

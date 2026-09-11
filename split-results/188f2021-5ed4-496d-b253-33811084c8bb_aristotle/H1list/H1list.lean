@@ -1,2 +1,0 @@
--- Declaration: H1list
--- Extracted by StaticSplit

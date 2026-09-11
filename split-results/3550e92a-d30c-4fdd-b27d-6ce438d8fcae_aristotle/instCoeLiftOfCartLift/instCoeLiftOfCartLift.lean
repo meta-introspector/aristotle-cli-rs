@@ -1,2 +1,0 @@
--- Declaration: instCoeLiftOfCartLift
--- Extracted by StaticSplit

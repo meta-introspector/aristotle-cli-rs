@@ -1,2 +1,0 @@
--- Declaration: roundtrip_delta
--- Extracted by StaticSplit

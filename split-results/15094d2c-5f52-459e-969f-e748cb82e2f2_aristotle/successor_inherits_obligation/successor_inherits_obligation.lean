@@ -1,2 +1,0 @@
--- Declaration: successor_inherits_obligation
--- Extracted by StaticSplit

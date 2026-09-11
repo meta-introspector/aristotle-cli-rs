@@ -1,2 +1,0 @@
--- Declaration: AtlasStalk
--- Extracted by StaticSplit

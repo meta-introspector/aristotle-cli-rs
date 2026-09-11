@@ -1,2 +1,0 @@
--- Declaration: ChessMove
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: emitRustTypeDefn
--- Extracted by StaticSplit

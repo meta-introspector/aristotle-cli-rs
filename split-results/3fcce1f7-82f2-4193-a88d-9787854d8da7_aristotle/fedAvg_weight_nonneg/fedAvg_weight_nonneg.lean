@@ -1,2 +1,0 @@
--- Declaration: fedAvg_weight_nonneg
--- Extracted by StaticSplit

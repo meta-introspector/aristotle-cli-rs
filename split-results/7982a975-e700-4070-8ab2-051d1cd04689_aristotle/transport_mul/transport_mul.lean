@@ -1,2 +1,0 @@
--- Declaration: transport_mul
--- Extracted by StaticSplit

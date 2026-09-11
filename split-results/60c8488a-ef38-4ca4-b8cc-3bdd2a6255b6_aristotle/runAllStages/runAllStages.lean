@@ -1,2 +1,0 @@
--- Declaration: runAllStages
--- Extracted by StaticSplit

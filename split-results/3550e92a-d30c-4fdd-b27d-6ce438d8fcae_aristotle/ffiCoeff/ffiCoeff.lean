@@ -1,2 +1,0 @@
--- Declaration: ffiCoeff
--- Extracted by StaticSplit

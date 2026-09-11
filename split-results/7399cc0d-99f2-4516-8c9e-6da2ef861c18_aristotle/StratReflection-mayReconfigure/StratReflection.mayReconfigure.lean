@@ -1,2 +1,0 @@
--- Declaration: StratReflection.mayReconfigure
--- Extracted by StaticSplit

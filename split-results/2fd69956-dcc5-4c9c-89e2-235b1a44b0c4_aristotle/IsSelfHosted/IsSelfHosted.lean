@@ -1,2 +1,0 @@
--- Declaration: IsSelfHosted
--- Extracted by StaticSplit

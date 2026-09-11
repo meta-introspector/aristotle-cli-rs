@@ -1,2 +1,0 @@
--- Declaration: tNavigate
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: registry_sub196883_injective
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: SymSign
--- Extracted by StaticSplit

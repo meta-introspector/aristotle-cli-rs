@@ -1,2 +1,0 @@
--- Declaration: evenFraction_eq_half
--- Extracted by StaticSplit

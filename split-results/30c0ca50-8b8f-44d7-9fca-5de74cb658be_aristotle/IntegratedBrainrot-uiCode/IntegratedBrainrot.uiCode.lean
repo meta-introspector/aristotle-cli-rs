@@ -1,2 +1,0 @@
--- Declaration: IntegratedBrainrot.uiCode
--- Extracted by StaticSplit

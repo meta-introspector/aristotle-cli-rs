@@ -1,2 +1,0 @@
--- Declaration: six_shadowMass
--- Extracted by StaticSplit

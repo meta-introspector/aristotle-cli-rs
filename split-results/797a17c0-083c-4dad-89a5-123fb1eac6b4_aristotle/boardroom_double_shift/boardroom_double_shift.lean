@@ -1,2 +1,0 @@
--- Declaration: boardroom_double_shift
--- Extracted by StaticSplit

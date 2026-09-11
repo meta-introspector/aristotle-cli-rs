@@ -1,2 +1,0 @@
--- Declaration: crankEquiv
--- Extracted by StaticSplit

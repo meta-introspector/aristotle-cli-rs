@@ -1,2 +1,0 @@
--- Declaration: extruder_screw_theorem
--- Extracted by StaticSplit

@@ -1,2 +1,0 @@
--- Declaration: V1_is_griess
--- Extracted by StaticSplit
