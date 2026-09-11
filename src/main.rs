@@ -2934,14 +2934,19 @@ fn cmd_submit(prompt: &str, project_dir: Option<PathBuf>, _wait: bool) -> Result
     let mut form = reqwest::blocking::multipart::Form::new()
         .text("body", serde_json::json!({"prompt": prompt}).to_string());
 
-    // If project directory provided, tar.gz it and attach as file
+    // If project directory provided, tar.gz it and attach as file.
+    // Excludes build artifacts (.lake, target, node_modules, dist, caches) —
+    // a local `lake build` inside the project dir otherwise balloons the
+    // tarball from ~5MB to gigabytes.
     if let Some(ref dir) = project_dir {
         if dir.exists() {
             let tar_path = dir.with_extension("tar.gz");
-            // Create tarball
             let tar_status = std::process::Command::new("tar")
                 .args(["-czf", &tar_path.to_string_lossy(), "-C",
                        &dir.parent().unwrap_or(dir).to_string_lossy(),
+                       // --exclude must precede the directory argument
+                       "--exclude=.lake", "--exclude=target", "--exclude=node_modules",
+                       "--exclude=dist", "--exclude=__pycache__", "--exclude=.git",
                        &dir.file_name().unwrap_or_default().to_string_lossy()])
                 .output()
                 .context("Failed to create project tarball")?;
