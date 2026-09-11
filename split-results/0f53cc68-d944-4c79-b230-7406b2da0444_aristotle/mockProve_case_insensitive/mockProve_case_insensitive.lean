@@ -1,0 +1,2 @@
+-- Declaration: mockProve_case_insensitive
+-- Extracted by StaticSplit

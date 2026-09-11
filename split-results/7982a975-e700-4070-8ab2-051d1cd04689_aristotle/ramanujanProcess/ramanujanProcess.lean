@@ -1,0 +1,2 @@
+-- Declaration: ramanujanProcess
+-- Extracted by StaticSplit

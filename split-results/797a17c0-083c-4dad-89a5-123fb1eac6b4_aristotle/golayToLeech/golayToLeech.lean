@@ -1,0 +1,2 @@
+-- Declaration: golayToLeech
+-- Extracted by StaticSplit

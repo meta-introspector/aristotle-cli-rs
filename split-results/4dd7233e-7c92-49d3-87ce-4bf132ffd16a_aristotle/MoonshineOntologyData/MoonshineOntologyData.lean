@@ -1,0 +1,2 @@
+-- Declaration: MoonshineOntologyData
+-- Extracted by StaticSplit

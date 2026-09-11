@@ -1,0 +1,2 @@
+-- Declaration: exampleBill
+-- Extracted by StaticSplit

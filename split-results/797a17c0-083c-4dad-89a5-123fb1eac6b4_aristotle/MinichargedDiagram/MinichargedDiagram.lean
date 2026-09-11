@@ -1,0 +1,2 @@
+-- Declaration: MinichargedDiagram
+-- Extracted by StaticSplit

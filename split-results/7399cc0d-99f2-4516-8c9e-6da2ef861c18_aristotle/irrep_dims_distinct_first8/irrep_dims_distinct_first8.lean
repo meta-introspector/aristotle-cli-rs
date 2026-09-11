@@ -1,0 +1,2 @@
+-- Declaration: irrep_dims_distinct_first8
+-- Extracted by StaticSplit

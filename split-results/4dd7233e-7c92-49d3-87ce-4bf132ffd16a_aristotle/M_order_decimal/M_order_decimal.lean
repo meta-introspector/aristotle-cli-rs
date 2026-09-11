@@ -1,0 +1,2 @@
+-- Declaration: M_order_decimal
+-- Extracted by StaticSplit

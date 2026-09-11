@@ -1,0 +1,2 @@
+-- Declaration: multiway_branches
+-- Extracted by StaticSplit

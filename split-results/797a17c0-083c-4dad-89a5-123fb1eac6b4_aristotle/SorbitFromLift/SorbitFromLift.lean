@@ -1,0 +1,2 @@
+-- Declaration: SorbitFromLift
+-- Extracted by StaticSplit

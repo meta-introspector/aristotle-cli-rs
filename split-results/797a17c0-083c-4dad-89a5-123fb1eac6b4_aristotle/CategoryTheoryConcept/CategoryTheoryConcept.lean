@@ -1,0 +1,2 @@
+-- Declaration: CategoryTheoryConcept
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ProofComonad.cobindProof
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: total_grid_dim_eq
+-- Extracted by StaticSplit

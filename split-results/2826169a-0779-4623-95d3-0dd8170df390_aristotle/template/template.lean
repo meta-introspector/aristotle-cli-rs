@@ -1,0 +1,2 @@
+-- Declaration: template
+-- Extracted by StaticSplit

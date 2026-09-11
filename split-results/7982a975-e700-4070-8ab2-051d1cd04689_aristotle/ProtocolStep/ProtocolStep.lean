@@ -1,0 +1,2 @@
+-- Declaration: ProtocolStep
+-- Extracted by StaticSplit

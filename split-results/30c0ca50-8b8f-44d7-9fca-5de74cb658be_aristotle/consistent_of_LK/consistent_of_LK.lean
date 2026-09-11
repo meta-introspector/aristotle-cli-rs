@@ -1,0 +1,2 @@
+-- Declaration: consistent_of_LK
+-- Extracted by StaticSplit

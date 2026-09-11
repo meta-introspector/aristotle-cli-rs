@@ -1,0 +1,2 @@
+-- Declaration: cylinder_loop
+-- Extracted by StaticSplit

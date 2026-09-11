@@ -1,0 +1,2 @@
+-- Declaration: EmojilangProof
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: BasedLift
+-- Extracted by StaticSplit

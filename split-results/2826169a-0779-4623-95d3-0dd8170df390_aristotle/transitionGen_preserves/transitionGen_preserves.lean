@@ -1,0 +1,2 @@
+-- Declaration: transitionGen_preserves
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: transl
+-- Extracted by StaticSplit

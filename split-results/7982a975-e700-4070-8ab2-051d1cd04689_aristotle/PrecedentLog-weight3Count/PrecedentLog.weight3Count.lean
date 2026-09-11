@@ -1,0 +1,2 @@
+-- Declaration: PrecedentLog.weight3Count
+-- Extracted by StaticSplit

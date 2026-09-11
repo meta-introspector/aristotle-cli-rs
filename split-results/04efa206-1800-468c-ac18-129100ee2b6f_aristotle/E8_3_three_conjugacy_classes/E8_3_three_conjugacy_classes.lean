@@ -1,0 +1,2 @@
+-- Declaration: E8_3_three_conjugacy_classes
+-- Extracted by StaticSplit

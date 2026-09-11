@@ -1,0 +1,2 @@
+-- Declaration: GradedRepresentation
+-- Extracted by StaticSplit

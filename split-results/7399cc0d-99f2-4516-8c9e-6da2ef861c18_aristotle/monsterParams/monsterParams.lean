@@ -1,0 +1,2 @@
+-- Declaration: monsterParams
+-- Extracted by StaticSplit

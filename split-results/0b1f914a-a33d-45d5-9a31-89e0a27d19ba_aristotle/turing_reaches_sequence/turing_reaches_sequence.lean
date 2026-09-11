@@ -1,0 +1,2 @@
+-- Declaration: turing_reaches_sequence
+-- Extracted by StaticSplit

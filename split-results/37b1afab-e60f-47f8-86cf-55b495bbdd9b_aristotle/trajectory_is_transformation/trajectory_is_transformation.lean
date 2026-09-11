@@ -1,0 +1,2 @@
+-- Declaration: trajectory_is_transformation
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: invertedIndexByElement
+-- Extracted by StaticSplit

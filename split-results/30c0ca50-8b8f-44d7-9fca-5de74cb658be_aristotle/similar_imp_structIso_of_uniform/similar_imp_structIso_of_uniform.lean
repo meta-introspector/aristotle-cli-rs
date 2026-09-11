@@ -1,0 +1,2 @@
+-- Declaration: similar_imp_structIso_of_uniform
+-- Extracted by StaticSplit

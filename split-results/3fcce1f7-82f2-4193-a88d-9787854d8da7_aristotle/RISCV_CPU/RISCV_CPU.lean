@@ -1,0 +1,2 @@
+-- Declaration: RISCV_CPU
+-- Extracted by StaticSplit

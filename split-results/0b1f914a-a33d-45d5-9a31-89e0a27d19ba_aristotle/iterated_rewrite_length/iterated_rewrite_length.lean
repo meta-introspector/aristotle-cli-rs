@@ -1,0 +1,2 @@
+-- Declaration: iterated_rewrite_length
+-- Extracted by StaticSplit

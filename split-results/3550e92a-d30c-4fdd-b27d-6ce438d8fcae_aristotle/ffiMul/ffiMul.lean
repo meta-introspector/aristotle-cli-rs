@@ -1,0 +1,2 @@
+-- Declaration: ffiMul
+-- Extracted by StaticSplit

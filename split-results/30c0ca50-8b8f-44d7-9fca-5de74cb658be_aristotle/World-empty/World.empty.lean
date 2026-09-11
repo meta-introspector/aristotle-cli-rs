@@ -1,0 +1,2 @@
+-- Declaration: World.empty
+-- Extracted by StaticSplit

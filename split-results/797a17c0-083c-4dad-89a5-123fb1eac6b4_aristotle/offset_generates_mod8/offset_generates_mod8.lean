@@ -1,0 +1,2 @@
+-- Declaration: offset_generates_mod8
+-- Extracted by StaticSplit

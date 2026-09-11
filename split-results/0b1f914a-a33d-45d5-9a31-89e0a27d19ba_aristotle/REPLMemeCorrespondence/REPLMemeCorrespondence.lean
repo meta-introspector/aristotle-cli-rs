@@ -1,0 +1,2 @@
+-- Declaration: REPLMemeCorrespondence
+-- Extracted by StaticSplit

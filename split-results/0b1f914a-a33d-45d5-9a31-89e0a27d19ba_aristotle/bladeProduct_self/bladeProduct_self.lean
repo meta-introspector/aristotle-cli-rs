@@ -1,0 +1,2 @@
+-- Declaration: bladeProduct_self
+-- Extracted by StaticSplit

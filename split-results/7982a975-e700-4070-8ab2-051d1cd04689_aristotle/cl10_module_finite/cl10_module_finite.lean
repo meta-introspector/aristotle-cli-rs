@@ -1,0 +1,2 @@
+-- Declaration: cl10_module_finite
+-- Extracted by StaticSplit

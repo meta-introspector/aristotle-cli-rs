@@ -1,0 +1,2 @@
+-- Declaration: ordinary_passes_on_majority
+-- Extracted by StaticSplit

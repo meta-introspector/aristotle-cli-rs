@@ -1,0 +1,2 @@
+-- Declaration: ssCountTower
+-- Extracted by StaticSplit

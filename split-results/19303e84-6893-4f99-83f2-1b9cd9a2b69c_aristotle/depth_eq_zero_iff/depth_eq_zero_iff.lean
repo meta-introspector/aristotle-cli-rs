@@ -1,0 +1,2 @@
+-- Declaration: depth_eq_zero_iff
+-- Extracted by StaticSplit

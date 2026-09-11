@@ -1,0 +1,2 @@
+-- Declaration: lamportsPerNovelUnit
+-- Extracted by StaticSplit

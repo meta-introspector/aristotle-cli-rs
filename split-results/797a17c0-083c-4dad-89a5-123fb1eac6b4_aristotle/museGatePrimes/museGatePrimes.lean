@@ -1,0 +1,2 @@
+-- Declaration: museGatePrimes
+-- Extracted by StaticSplit

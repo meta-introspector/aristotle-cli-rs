@@ -1,0 +1,2 @@
+-- Declaration: T_3.lt
+-- Extracted by StaticSplit

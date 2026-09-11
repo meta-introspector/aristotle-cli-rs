@@ -1,0 +1,2 @@
+-- Declaration: sigma_three_mult_check
+-- Extracted by StaticSplit

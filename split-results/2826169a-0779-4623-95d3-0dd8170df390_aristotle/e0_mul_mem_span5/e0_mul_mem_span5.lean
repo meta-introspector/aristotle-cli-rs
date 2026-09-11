@@ -1,0 +1,2 @@
+-- Declaration: e0_mul_mem_span5
+-- Extracted by StaticSplit

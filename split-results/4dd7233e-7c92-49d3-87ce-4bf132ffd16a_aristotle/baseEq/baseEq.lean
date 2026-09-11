@@ -1,0 +1,2 @@
+-- Declaration: baseEq
+-- Extracted by StaticSplit

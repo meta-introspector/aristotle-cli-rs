@@ -1,0 +1,2 @@
+-- Declaration: narrative_glueing_property
+-- Extracted by StaticSplit

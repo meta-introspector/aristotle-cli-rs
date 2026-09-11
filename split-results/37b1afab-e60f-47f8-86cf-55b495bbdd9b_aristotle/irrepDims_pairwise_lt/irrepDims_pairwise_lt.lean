@@ -1,0 +1,2 @@
+-- Declaration: irrepDims_pairwise_lt
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: stretchEndo
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ObjectConcept
+-- Extracted by StaticSplit

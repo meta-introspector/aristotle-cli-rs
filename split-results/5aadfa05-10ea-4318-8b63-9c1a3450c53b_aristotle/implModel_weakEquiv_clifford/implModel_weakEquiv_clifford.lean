@@ -1,0 +1,2 @@
+-- Declaration: implModel_weakEquiv_clifford
+-- Extracted by StaticSplit

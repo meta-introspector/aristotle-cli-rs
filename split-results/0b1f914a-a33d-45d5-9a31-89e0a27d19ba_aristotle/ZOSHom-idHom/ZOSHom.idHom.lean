@@ -1,0 +1,2 @@
+-- Declaration: ZOSHom.idHom
+-- Extracted by StaticSplit

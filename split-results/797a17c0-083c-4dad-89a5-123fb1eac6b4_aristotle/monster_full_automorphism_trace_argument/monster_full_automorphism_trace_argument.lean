@@ -1,0 +1,2 @@
+-- Declaration: monster_full_automorphism_trace_argument
+-- Extracted by StaticSplit

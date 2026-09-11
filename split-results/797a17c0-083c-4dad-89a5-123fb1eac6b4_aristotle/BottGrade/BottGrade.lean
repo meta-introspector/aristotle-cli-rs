@@ -1,0 +1,2 @@
+-- Declaration: BottGrade
+-- Extracted by StaticSplit

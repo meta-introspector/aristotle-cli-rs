@@ -1,0 +1,2 @@
+-- Declaration: sum_divisors_coprime_mul
+-- Extracted by StaticSplit

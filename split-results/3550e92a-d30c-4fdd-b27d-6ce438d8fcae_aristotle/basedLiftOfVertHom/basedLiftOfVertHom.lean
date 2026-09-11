@@ -1,0 +1,2 @@
+-- Declaration: basedLiftOfVertHom
+-- Extracted by StaticSplit

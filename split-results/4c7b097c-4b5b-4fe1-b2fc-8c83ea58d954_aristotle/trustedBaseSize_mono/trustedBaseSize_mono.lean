@@ -1,0 +1,2 @@
+-- Declaration: trustedBaseSize_mono
+-- Extracted by StaticSplit

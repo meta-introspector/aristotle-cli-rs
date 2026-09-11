@@ -1,0 +1,2 @@
+-- Declaration: ten_times_HN_divides_M
+-- Extracted by StaticSplit

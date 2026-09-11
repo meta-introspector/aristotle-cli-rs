@@ -1,0 +1,2 @@
+-- Declaration: PrimaryGridCell.heckeIndex_origin
+-- Extracted by StaticSplit

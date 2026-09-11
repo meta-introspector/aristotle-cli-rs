@@ -1,0 +1,2 @@
+-- Declaration: extEdgeCount
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: aristotleMaxim
+-- Extracted by StaticSplit

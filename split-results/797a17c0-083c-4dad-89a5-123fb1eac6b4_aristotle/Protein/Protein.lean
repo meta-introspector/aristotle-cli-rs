@@ -1,0 +1,2 @@
+-- Declaration: Protein
+-- Extracted by StaticSplit

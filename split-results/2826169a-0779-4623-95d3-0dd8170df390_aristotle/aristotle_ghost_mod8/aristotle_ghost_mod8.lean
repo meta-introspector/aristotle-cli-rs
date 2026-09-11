@@ -1,0 +1,2 @@
+-- Declaration: aristotle_ghost_mod8
+-- Extracted by StaticSplit

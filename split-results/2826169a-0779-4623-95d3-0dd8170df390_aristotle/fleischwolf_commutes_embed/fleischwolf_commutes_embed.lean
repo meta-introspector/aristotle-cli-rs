@@ -1,0 +1,2 @@
+-- Declaration: fleischwolf_commutes_embed
+-- Extracted by StaticSplit

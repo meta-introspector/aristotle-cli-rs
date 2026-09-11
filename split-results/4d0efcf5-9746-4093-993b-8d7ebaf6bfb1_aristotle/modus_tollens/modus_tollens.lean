@@ -1,0 +1,2 @@
+-- Declaration: modus_tollens
+-- Extracted by StaticSplit

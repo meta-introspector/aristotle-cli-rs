@@ -1,0 +1,2 @@
+-- Declaration: allOnline
+-- Extracted by StaticSplit

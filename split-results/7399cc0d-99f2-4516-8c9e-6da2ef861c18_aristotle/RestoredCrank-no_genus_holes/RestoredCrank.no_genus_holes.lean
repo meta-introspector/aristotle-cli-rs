@@ -1,0 +1,2 @@
+-- Declaration: RestoredCrank.no_genus_holes
+-- Extracted by StaticSplit

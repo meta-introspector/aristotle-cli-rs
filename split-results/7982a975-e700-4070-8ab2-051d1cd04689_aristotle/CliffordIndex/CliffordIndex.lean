@@ -1,0 +1,2 @@
+-- Declaration: CliffordIndex
+-- Extracted by StaticSplit

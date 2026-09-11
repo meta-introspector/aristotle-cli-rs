@@ -1,0 +1,2 @@
+-- Declaration: DistrictCase
+-- Extracted by StaticSplit

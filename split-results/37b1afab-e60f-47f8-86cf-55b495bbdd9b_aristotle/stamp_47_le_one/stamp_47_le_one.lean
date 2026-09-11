@@ -1,0 +1,2 @@
+-- Declaration: stamp_47_le_one
+-- Extracted by StaticSplit

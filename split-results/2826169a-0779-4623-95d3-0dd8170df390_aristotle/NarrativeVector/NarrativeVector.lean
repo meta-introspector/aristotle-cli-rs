@@ -1,0 +1,2 @@
+-- Declaration: NarrativeVector
+-- Extracted by StaticSplit

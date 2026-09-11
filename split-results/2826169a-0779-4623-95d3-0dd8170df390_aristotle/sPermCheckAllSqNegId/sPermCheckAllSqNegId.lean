@@ -1,0 +1,2 @@
+-- Declaration: sPermCheckAllSqNegId
+-- Extracted by StaticSplit

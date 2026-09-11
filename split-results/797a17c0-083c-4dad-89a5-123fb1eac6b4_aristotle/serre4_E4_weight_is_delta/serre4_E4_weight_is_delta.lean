@@ -1,0 +1,2 @@
+-- Declaration: serre4_E4_weight_is_delta
+-- Extracted by StaticSplit

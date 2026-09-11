@@ -1,0 +1,2 @@
+-- Declaration: phi_is_topological_charge
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: gammaZ_s_antisymm
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: isIsolated
+-- Extracted by StaticSplit

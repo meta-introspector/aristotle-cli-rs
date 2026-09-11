@@ -1,0 +1,2 @@
+-- Declaration: sspWeightedSum
+-- Extracted by StaticSplit

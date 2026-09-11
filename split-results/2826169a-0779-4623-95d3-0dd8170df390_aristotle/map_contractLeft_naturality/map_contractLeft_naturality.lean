@@ -1,0 +1,2 @@
+-- Declaration: map_contractLeft_naturality
+-- Extracted by StaticSplit

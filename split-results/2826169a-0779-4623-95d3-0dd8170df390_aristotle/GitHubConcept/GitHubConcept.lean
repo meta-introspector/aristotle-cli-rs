@@ -1,0 +1,2 @@
+-- Declaration: GitHubConcept
+-- Extracted by StaticSplit

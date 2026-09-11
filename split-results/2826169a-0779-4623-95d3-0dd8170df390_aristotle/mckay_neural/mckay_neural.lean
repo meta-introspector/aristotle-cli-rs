@@ -1,0 +1,2 @@
+-- Declaration: mckay_neural
+-- Extracted by StaticSplit

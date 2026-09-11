@@ -1,0 +1,2 @@
+-- Declaration: table_mod59_entries
+-- Extracted by StaticSplit

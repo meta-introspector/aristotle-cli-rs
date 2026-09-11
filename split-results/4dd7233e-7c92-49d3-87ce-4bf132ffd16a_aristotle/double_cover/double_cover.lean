@@ -1,0 +1,2 @@
+-- Declaration: double_cover
+-- Extracted by StaticSplit

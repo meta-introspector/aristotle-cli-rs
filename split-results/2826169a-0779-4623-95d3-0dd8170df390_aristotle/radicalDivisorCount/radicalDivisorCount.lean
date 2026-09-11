@@ -1,0 +1,2 @@
+-- Declaration: radicalDivisorCount
+-- Extracted by StaticSplit

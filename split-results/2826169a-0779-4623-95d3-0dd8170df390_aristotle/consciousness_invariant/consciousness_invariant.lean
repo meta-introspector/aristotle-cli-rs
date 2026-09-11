@@ -1,0 +1,2 @@
+-- Declaration: consciousness_invariant
+-- Extracted by StaticSplit

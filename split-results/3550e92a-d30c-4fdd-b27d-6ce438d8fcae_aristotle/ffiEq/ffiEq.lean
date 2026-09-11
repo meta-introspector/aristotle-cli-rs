@@ -1,0 +1,2 @@
+-- Declaration: ffiEq
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Shape.numHoles
+-- Extracted by StaticSplit

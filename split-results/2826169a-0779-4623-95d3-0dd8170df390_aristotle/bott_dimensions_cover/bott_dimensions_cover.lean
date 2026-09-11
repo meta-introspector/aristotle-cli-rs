@@ -1,0 +1,2 @@
+-- Declaration: bott_dimensions_cover
+-- Extracted by StaticSplit

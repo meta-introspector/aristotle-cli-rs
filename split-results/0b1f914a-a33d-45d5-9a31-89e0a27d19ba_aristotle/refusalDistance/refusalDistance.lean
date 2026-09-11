@@ -1,0 +1,2 @@
+-- Declaration: refusalDistance
+-- Extracted by StaticSplit

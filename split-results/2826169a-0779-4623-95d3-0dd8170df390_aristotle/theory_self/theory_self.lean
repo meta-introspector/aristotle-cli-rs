@@ -1,0 +1,2 @@
+-- Declaration: theory_self
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: simLog
+-- Extracted by StaticSplit

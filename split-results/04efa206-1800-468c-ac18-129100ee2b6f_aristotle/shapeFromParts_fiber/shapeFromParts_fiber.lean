@@ -1,0 +1,2 @@
+-- Declaration: shapeFromParts_fiber
+-- Extracted by StaticSplit

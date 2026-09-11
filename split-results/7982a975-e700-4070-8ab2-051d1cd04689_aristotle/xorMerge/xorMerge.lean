@@ -1,0 +1,2 @@
+-- Declaration: xorMerge
+-- Extracted by StaticSplit

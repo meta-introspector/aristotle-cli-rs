@@ -1,0 +1,2 @@
+-- Declaration: example_consensus
+-- Extracted by StaticSplit

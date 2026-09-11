@@ -1,0 +1,2 @@
+-- Declaration: alternating_order_formula
+-- Extracted by StaticSplit

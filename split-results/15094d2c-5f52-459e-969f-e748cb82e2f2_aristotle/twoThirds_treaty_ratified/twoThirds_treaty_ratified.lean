@@ -1,0 +1,2 @@
+-- Declaration: twoThirds_treaty_ratified
+-- Extracted by StaticSplit

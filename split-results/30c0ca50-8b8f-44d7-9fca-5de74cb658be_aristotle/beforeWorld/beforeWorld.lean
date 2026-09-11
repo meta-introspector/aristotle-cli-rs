@@ -1,0 +1,2 @@
+-- Declaration: beforeWorld
+-- Extracted by StaticSplit

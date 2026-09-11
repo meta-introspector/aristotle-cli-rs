@@ -1,0 +1,2 @@
+-- Declaration: exists_unique_class_of_valid
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MappedStatus
+-- Extracted by StaticSplit

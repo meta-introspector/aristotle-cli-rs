@@ -1,0 +1,2 @@
+-- Declaration: crt_primes_are_ss
+-- Extracted by StaticSplit

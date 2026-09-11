@@ -1,0 +1,2 @@
+-- Declaration: weylVector
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: KGroupOf
+-- Extracted by StaticSplit

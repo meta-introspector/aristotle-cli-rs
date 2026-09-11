@@ -1,0 +1,2 @@
+-- Declaration: evenBlades_card
+-- Extracted by StaticSplit

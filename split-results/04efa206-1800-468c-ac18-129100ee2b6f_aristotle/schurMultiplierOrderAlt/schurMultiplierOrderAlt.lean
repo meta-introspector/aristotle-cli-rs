@@ -1,0 +1,2 @@
+-- Declaration: schurMultiplierOrderAlt
+-- Extracted by StaticSplit

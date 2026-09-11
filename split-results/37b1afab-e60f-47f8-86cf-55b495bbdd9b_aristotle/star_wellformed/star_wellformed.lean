@@ -1,0 +1,2 @@
+-- Declaration: star_wellformed
+-- Extracted by StaticSplit

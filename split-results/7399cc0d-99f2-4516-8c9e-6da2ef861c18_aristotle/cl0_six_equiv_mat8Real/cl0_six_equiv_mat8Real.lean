@@ -1,0 +1,2 @@
+-- Declaration: cl0_six_equiv_mat8Real
+-- Extracted by StaticSplit

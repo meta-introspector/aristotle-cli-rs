@@ -1,0 +1,2 @@
+-- Declaration: monster
+-- Extracted by StaticSplit

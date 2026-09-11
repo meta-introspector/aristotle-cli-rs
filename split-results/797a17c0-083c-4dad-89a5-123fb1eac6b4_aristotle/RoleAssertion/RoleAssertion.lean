@@ -1,0 +1,2 @@
+-- Declaration: RoleAssertion
+-- Extracted by StaticSplit

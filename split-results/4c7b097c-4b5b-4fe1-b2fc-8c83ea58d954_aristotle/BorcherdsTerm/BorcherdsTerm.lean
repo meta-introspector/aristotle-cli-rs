@@ -1,0 +1,2 @@
+-- Declaration: BorcherdsTerm
+-- Extracted by StaticSplit

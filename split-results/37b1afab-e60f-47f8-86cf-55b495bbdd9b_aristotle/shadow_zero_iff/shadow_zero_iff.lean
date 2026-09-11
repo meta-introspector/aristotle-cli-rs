@@ -1,0 +1,2 @@
+-- Declaration: shadow_zero_iff
+-- Extracted by StaticSplit

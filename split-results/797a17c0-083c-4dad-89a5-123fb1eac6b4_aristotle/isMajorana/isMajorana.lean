@@ -1,0 +1,2 @@
+-- Declaration: isMajorana
+-- Extracted by StaticSplit

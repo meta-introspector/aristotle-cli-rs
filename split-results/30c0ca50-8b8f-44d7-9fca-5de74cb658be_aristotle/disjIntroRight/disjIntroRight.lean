@@ -1,0 +1,2 @@
+-- Declaration: disjIntroRight
+-- Extracted by StaticSplit

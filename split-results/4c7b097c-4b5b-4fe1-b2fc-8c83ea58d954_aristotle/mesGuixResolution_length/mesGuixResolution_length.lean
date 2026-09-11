@@ -1,0 +1,2 @@
+-- Declaration: mesGuixResolution_length
+-- Extracted by StaticSplit

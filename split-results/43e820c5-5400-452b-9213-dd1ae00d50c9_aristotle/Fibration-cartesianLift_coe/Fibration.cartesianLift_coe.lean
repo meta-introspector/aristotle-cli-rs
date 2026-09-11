@@ -1,0 +1,2 @@
+-- Declaration: Fibration.cartesianLift_coe
+-- Extracted by StaticSplit

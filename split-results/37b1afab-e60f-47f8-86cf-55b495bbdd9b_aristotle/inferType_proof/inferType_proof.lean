@@ -1,0 +1,2 @@
+-- Declaration: inferType_proof
+-- Extracted by StaticSplit

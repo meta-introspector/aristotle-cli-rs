@@ -1,0 +1,2 @@
+-- Declaration: gate_even_bott_sparse
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: heckeOp_comm_coprime
+-- Extracted by StaticSplit

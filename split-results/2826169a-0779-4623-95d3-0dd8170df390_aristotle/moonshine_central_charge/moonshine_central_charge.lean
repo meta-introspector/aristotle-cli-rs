@@ -1,0 +1,2 @@
+-- Declaration: moonshine_central_charge
+-- Extracted by StaticSplit

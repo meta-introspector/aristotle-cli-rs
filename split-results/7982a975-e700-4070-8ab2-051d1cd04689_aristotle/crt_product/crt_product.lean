@@ -1,0 +1,2 @@
+-- Declaration: crt_product
+-- Extracted by StaticSplit

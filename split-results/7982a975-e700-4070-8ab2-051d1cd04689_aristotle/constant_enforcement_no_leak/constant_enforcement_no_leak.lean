@@ -1,0 +1,2 @@
+-- Declaration: constant_enforcement_no_leak
+-- Extracted by StaticSplit

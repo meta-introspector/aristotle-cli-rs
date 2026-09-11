@@ -1,0 +1,2 @@
+-- Declaration: GlobalEnv.getDeclarations
+-- Extracted by StaticSplit

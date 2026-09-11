@@ -1,0 +1,2 @@
+-- Declaration: exampleFailed_fails
+-- Extracted by StaticSplit

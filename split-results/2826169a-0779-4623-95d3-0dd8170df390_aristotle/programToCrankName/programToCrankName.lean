@@ -1,0 +1,2 @@
+-- Declaration: programToCrankName
+-- Extracted by StaticSplit

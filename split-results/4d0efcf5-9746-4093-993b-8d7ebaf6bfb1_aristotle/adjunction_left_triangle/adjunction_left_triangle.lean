@@ -1,0 +1,2 @@
+-- Declaration: adjunction_left_triangle
+-- Extracted by StaticSplit

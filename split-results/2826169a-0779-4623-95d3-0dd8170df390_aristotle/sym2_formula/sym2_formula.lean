@@ -1,0 +1,2 @@
+-- Declaration: sym2_formula
+-- Extracted by StaticSplit

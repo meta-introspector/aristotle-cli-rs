@@ -1,0 +1,2 @@
+-- Declaration: coordinate_collapse
+-- Extracted by StaticSplit

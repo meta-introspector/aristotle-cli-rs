@@ -1,0 +1,2 @@
+-- Declaration: massRestore
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: SheafDiagram.numNodes
+-- Extracted by StaticSplit

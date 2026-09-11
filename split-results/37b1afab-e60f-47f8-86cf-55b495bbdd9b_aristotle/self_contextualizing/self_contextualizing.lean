@@ -1,0 +1,2 @@
+-- Declaration: self_contextualizing
+-- Extracted by StaticSplit

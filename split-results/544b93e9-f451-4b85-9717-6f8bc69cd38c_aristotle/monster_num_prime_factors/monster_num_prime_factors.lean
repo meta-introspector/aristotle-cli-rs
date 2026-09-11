@@ -1,0 +1,2 @@
+-- Declaration: monster_num_prime_factors
+-- Extracted by StaticSplit

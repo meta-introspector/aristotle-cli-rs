@@ -1,0 +1,2 @@
+-- Declaration: tower_hits_zero_mod71
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: eigenform_prime_pow_rec
+-- Extracted by StaticSplit

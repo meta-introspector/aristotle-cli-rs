@@ -1,0 +1,2 @@
+-- Declaration: step_total
+-- Extracted by StaticSplit

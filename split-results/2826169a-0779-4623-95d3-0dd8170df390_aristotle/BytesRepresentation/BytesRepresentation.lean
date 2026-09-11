@@ -1,0 +1,2 @@
+-- Declaration: BytesRepresentation
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: PrecedentEntry.weight_in_range
+-- Extracted by StaticSplit

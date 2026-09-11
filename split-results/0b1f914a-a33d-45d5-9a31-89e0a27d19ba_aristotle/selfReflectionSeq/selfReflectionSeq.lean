@@ -1,0 +1,2 @@
+-- Declaration: selfReflectionSeq
+-- Extracted by StaticSplit

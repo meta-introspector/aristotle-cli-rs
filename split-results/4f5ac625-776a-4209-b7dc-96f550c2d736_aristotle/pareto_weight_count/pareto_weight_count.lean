@@ -1,0 +1,2 @@
+-- Declaration: pareto_weight_count
+-- Extracted by StaticSplit

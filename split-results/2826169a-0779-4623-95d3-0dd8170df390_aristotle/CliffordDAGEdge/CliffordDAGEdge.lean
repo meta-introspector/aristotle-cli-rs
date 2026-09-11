@@ -1,0 +1,2 @@
+-- Declaration: CliffordDAGEdge
+-- Extracted by StaticSplit

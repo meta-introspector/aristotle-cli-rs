@@ -1,0 +1,2 @@
+-- Declaration: six_is_fusion
+-- Extracted by StaticSplit

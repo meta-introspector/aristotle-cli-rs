@@ -1,0 +1,2 @@
+-- Declaration: clotureAmendmentSubtopics
+-- Extracted by StaticSplit

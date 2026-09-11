@@ -1,0 +1,2 @@
+-- Declaration: appointment_requires_nomination
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: GramEngine.clifford_sq
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: kind_ofBytes
+-- Extracted by StaticSplit

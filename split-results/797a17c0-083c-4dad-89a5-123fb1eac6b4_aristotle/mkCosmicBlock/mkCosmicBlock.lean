@@ -1,0 +1,2 @@
+-- Declaration: mkCosmicBlock
+-- Extracted by StaticSplit

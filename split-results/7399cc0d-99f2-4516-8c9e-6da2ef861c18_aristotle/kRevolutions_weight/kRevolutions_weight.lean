@@ -1,0 +1,2 @@
+-- Declaration: kRevolutions_weight
+-- Extracted by StaticSplit

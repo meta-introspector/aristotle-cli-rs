@@ -1,0 +1,2 @@
+-- Declaration: geomProd
+-- Extracted by StaticSplit

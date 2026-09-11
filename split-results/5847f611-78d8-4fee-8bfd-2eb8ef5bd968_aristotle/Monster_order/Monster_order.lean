@@ -1,0 +1,2 @@
+-- Declaration: Monster_order
+-- Extracted by StaticSplit

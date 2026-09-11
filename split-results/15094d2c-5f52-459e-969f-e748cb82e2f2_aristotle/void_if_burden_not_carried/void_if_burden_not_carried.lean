@@ -1,0 +1,2 @@
+-- Declaration: void_if_burden_not_carried
+-- Extracted by StaticSplit

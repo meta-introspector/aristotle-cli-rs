@@ -1,0 +1,2 @@
+-- Declaration: initConfig
+-- Extracted by StaticSplit

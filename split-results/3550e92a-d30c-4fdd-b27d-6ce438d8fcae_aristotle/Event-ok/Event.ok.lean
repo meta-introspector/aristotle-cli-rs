@@ -1,0 +1,2 @@
+-- Declaration: Event.ok
+-- Extracted by StaticSplit

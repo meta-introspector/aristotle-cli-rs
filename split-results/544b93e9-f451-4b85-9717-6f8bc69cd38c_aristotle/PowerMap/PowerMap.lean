@@ -1,0 +1,2 @@
+-- Declaration: PowerMap
+-- Extracted by StaticSplit

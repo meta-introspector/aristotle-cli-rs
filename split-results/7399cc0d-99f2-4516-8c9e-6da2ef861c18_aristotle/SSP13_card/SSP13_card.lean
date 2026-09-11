@@ -1,0 +1,2 @@
+-- Declaration: SSP13_card
+-- Extracted by StaticSplit

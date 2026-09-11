@@ -1,0 +1,2 @@
+-- Declaration: verifyTelemetrySnark
+-- Extracted by StaticSplit

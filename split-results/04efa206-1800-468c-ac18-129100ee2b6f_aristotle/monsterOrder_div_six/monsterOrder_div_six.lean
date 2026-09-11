@@ -1,0 +1,2 @@
+-- Declaration: monsterOrder_div_six
+-- Extracted by StaticSplit

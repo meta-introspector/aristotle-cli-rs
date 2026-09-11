@@ -1,0 +1,2 @@
+-- Declaration: Global_decl
+-- Extracted by StaticSplit

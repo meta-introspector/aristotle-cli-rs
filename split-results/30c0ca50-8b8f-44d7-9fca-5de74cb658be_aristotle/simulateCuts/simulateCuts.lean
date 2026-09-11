@@ -1,0 +1,2 @@
+-- Declaration: simulateCuts
+-- Extracted by StaticSplit

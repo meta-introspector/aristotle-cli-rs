@@ -1,0 +1,2 @@
+-- Declaration: M12_nirreps
+-- Extracted by StaticSplit

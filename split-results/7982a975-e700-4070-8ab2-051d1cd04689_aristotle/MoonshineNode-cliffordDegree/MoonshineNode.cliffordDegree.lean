@@ -1,0 +1,2 @@
+-- Declaration: MoonshineNode.cliffordDegree
+-- Extracted by StaticSplit

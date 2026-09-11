@@ -1,0 +1,2 @@
+-- Declaration: cutWeakest_is_minimal
+-- Extracted by StaticSplit

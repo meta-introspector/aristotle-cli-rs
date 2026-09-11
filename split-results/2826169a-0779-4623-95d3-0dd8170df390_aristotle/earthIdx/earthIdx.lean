@@ -1,0 +1,2 @@
+-- Declaration: earthIdx
+-- Extracted by StaticSplit

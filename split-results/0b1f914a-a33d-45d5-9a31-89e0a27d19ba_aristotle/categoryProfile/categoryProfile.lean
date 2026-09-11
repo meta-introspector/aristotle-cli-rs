@@ -1,0 +1,2 @@
+-- Declaration: categoryProfile
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: mdl_tie_on_equivalent
+-- Extracted by StaticSplit

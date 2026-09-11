@@ -1,0 +1,2 @@
+-- Declaration: sspResonant_departure_length
+-- Extracted by StaticSplit

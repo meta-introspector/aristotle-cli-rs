@@ -1,0 +1,2 @@
+-- Declaration: selfEncoding_kether
+-- Extracted by StaticSplit

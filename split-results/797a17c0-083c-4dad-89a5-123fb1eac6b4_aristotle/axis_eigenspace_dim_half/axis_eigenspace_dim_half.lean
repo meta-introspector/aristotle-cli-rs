@@ -1,0 +1,2 @@
+-- Declaration: axis_eigenspace_dim_half
+-- Extracted by StaticSplit

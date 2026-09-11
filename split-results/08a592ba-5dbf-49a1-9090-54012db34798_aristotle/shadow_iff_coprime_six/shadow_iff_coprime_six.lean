@@ -1,0 +1,2 @@
+-- Declaration: shadow_iff_coprime_six
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: VoxelSpace.cellCount
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: voaToSubnet
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: totient_monsterIrrep
+-- Extracted by StaticSplit

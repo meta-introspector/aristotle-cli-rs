@@ -1,0 +1,2 @@
+-- Declaration: total_kether_value
+-- Extracted by StaticSplit

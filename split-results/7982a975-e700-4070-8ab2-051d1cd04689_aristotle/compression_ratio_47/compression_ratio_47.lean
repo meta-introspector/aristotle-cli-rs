@@ -1,0 +1,2 @@
+-- Declaration: compression_ratio_47
+-- Extracted by StaticSplit

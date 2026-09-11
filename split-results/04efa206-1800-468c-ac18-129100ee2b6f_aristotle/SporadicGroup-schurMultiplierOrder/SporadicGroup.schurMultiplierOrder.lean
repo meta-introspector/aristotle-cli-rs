@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup.schurMultiplierOrder
+-- Extracted by StaticSplit

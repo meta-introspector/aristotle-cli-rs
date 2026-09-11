@@ -1,0 +1,2 @@
+-- Declaration: finrank_cliffordAlgebra_Qn
+-- Extracted by StaticSplit

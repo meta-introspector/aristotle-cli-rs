@@ -1,0 +1,2 @@
+-- Declaration: cross_file_monster_baby
+-- Extracted by StaticSplit

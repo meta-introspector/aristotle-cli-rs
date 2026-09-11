@@ -1,0 +1,2 @@
+-- Declaration: house_quorum_overlap
+-- Extracted by StaticSplit

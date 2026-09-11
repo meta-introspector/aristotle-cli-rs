@@ -1,0 +1,2 @@
+-- Declaration: ofFloat
+-- Extracted by StaticSplit

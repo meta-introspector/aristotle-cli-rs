@@ -1,0 +1,2 @@
+-- Declaration: mckay_decoration
+-- Extracted by StaticSplit

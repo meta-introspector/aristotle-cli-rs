@@ -1,0 +1,2 @@
+-- Declaration: extractionPercent
+-- Extracted by StaticSplit

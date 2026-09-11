@@ -1,0 +1,2 @@
+-- Declaration: power_faithful
+-- Extracted by StaticSplit

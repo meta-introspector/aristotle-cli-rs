@@ -1,0 +1,2 @@
+-- Declaration: ConformalArrow
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: gammaZ32'
+-- Extracted by StaticSplit

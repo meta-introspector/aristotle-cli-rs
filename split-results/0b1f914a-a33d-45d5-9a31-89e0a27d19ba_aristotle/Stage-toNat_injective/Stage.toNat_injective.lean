@@ -1,0 +1,2 @@
+-- Declaration: Stage.toNat_injective
+-- Extracted by StaticSplit

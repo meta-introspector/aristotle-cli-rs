@@ -1,0 +1,2 @@
+-- Declaration: gaplift_cast
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: precedent_strength_unbounded
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: shapeFromParts_base
+-- Extracted by StaticSplit

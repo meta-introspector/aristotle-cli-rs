@@ -1,0 +1,2 @@
+-- Declaration: association_is_person
+-- Extracted by StaticSplit

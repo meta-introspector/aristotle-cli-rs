@@ -1,0 +1,2 @@
+-- Declaration: Referral.effective
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ColonizationResult.isSuccess
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: applyFraction
+-- Extracted by StaticSplit

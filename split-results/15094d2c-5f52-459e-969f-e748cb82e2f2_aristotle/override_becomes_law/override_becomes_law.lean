@@ -1,0 +1,2 @@
+-- Declaration: override_becomes_law
+-- Extracted by StaticSplit

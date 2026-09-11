@@ -1,0 +1,2 @@
+-- Declaration: stepN_immutable
+-- Extracted by StaticSplit

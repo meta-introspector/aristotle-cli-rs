@@ -1,0 +1,2 @@
+-- Declaration: bottHecke_comp
+-- Extracted by StaticSplit

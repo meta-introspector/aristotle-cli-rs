@@ -1,0 +1,2 @@
+-- Declaration: crankN
+-- Extracted by StaticSplit

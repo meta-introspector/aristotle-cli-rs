@@ -1,0 +1,2 @@
+-- Declaration: Ternary.pq_injective
+-- Extracted by StaticSplit

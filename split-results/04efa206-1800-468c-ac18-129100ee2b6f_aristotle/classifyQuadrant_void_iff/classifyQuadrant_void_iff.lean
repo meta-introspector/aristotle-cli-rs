@@ -1,0 +1,2 @@
+-- Declaration: classifyQuadrant_void_iff
+-- Extracted by StaticSplit

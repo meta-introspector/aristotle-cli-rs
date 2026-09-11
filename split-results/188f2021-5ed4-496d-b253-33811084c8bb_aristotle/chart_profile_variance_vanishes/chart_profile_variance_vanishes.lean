@@ -1,0 +1,2 @@
+-- Declaration: chart_profile_variance_vanishes
+-- Extracted by StaticSplit

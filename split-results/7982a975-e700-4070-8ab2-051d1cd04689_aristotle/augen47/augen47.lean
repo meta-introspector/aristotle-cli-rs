@@ -1,0 +1,2 @@
+-- Declaration: augen47
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monster_power_mod8
+-- Extracted by StaticSplit

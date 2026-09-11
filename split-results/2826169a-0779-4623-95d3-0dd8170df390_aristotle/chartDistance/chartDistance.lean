@@ -1,0 +1,2 @@
+-- Declaration: chartDistance
+-- Extracted by StaticSplit

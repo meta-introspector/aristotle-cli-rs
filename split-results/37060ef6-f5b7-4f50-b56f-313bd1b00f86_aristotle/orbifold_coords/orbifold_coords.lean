@@ -1,0 +1,2 @@
+-- Declaration: orbifold_coords
+-- Extracted by StaticSplit

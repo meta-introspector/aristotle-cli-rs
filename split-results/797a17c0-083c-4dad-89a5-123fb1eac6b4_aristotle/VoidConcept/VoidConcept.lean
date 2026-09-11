@@ -1,0 +1,2 @@
+-- Declaration: VoidConcept
+-- Extracted by StaticSplit

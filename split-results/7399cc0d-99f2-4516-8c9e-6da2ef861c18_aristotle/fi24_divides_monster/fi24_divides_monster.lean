@@ -1,0 +1,2 @@
+-- Declaration: fi24_divides_monster
+-- Extracted by StaticSplit

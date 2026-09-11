@@ -1,0 +1,2 @@
+-- Declaration: addPosEmojilang
+-- Extracted by StaticSplit

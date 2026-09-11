@@ -1,0 +1,2 @@
+-- Declaration: cl10_dim
+-- Extracted by StaticSplit

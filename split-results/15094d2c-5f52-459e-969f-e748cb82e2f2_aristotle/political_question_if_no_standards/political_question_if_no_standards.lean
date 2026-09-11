@@ -1,0 +1,2 @@
+-- Declaration: political_question_if_no_standards
+-- Extracted by StaticSplit

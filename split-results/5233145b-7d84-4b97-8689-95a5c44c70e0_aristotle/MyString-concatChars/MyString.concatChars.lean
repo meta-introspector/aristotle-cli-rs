@@ -1,0 +1,2 @@
+-- Declaration: MyString.concatChars
+-- Extracted by StaticSplit

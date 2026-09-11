@@ -1,0 +1,2 @@
+-- Declaration: equivVertHomBasedLift
+-- Extracted by StaticSplit

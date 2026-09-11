@@ -1,0 +1,2 @@
+-- Declaration: no_self_loop
+-- Extracted by StaticSplit

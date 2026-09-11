@@ -1,0 +1,2 @@
+-- Declaration: NiemeierRootSystem.coxeterNumber_pos
+-- Extracted by StaticSplit

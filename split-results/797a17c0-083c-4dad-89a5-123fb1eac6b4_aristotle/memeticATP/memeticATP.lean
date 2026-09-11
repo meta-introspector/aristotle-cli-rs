@@ -1,0 +1,2 @@
+-- Declaration: memeticATP
+-- Extracted by StaticSplit

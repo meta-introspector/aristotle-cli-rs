@@ -1,0 +1,2 @@
+-- Declaration: middle_stable
+-- Extracted by StaticSplit

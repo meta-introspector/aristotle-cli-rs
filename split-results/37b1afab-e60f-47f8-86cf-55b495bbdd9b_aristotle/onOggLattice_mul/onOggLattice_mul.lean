@@ -1,0 +1,2 @@
+-- Declaration: onOggLattice_mul
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: diiiWire_kGroup
+-- Extracted by StaticSplit

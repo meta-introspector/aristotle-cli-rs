@@ -1,0 +1,2 @@
+-- Declaration: SOLFUNMEME_Namespace
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MandatorySubmission
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CrankMonoid
+-- Extracted by StaticSplit

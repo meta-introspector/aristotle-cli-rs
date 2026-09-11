@@ -1,0 +1,2 @@
+-- Declaration: PoliticalQuestionFacts
+-- Extracted by StaticSplit

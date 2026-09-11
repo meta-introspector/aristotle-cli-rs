@@ -1,0 +1,2 @@
+-- Declaration: cech_euler_char
+-- Extracted by StaticSplit

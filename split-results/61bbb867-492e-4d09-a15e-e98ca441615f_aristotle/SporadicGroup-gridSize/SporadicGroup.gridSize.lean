@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup.gridSize
+-- Extracted by StaticSplit

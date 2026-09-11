@@ -1,0 +1,2 @@
+-- Declaration: maneuver_always_prime
+-- Extracted by StaticSplit

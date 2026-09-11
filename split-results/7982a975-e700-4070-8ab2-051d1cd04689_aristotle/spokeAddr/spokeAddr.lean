@@ -1,0 +1,2 @@
+-- Declaration: spokeAddr
+-- Extracted by StaticSplit

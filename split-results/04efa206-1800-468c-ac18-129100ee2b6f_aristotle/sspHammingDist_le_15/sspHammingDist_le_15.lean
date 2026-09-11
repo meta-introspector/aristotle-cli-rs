@@ -1,0 +1,2 @@
+-- Declaration: sspHammingDist_le_15
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monster_max_valuation
+-- Extracted by StaticSplit

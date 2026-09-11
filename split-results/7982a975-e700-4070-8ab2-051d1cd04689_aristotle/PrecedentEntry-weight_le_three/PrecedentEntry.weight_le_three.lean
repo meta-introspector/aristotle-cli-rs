@@ -1,0 +1,2 @@
+-- Declaration: PrecedentEntry.weight_le_three
+-- Extracted by StaticSplit

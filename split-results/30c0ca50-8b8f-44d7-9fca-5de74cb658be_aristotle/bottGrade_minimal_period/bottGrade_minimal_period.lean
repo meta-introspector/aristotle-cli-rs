@@ -1,0 +1,2 @@
+-- Declaration: bottGrade_minimal_period
+-- Extracted by StaticSplit

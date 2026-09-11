@@ -1,0 +1,2 @@
+-- Declaration: toVariantName
+-- Extracted by StaticSplit

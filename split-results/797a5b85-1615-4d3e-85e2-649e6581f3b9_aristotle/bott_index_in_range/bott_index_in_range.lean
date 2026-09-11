@@ -1,0 +1,2 @@
+-- Declaration: bott_index_in_range
+-- Extracted by StaticSplit

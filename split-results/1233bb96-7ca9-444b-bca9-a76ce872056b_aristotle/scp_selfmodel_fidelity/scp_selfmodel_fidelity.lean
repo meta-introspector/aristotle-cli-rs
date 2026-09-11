@@ -1,0 +1,2 @@
+-- Declaration: scp_selfmodel_fidelity
+-- Extracted by StaticSplit

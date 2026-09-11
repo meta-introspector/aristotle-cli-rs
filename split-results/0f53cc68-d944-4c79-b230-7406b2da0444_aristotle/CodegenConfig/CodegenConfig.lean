@@ -1,0 +1,2 @@
+-- Declaration: CodegenConfig
+-- Extracted by StaticSplit

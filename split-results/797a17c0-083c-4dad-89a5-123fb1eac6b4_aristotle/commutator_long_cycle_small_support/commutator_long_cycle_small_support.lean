@@ -1,0 +1,2 @@
+-- Declaration: commutator_long_cycle_small_support
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: every_session_undoable
+-- Extracted by StaticSplit

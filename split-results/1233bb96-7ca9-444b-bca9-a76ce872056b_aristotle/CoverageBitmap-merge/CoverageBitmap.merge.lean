@@ -1,0 +1,2 @@
+-- Declaration: CoverageBitmap.merge
+-- Extracted by StaticSplit

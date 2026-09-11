@@ -1,0 +1,2 @@
+-- Declaration: BeliefSystem
+-- Extracted by StaticSplit

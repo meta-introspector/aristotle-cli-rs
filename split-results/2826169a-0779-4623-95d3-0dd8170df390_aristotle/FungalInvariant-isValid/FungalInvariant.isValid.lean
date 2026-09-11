@@ -1,0 +1,2 @@
+-- Declaration: FungalInvariant.isValid
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Spore.coords
+-- Extracted by StaticSplit

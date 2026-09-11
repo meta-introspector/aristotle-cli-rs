@@ -1,0 +1,2 @@
+-- Declaration: rust_embeds_baseUrl
+-- Extracted by StaticSplit

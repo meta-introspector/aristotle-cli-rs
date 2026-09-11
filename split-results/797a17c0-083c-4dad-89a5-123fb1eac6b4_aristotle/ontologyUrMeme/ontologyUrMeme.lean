@@ -1,0 +1,2 @@
+-- Declaration: ontologyUrMeme
+-- Extracted by StaticSplit

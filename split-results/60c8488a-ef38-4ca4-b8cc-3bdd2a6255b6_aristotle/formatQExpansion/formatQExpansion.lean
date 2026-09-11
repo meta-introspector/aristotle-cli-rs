@@ -1,0 +1,2 @@
+-- Declaration: formatQExpansion
+-- Extracted by StaticSplit

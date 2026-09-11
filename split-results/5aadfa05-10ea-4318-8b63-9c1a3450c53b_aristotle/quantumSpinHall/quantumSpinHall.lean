@@ -1,0 +1,2 @@
+-- Declaration: quantumSpinHall
+-- Extracted by StaticSplit

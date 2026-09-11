@@ -1,0 +1,2 @@
+-- Declaration: ofInt
+-- Extracted by StaticSplit

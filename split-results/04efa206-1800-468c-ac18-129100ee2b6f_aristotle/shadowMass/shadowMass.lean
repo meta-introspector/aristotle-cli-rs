@@ -1,0 +1,2 @@
+-- Declaration: shadowMass
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: isDiscarded
+-- Extracted by StaticSplit

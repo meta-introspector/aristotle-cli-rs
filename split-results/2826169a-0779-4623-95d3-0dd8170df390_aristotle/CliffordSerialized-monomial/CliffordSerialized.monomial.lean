@@ -1,0 +1,2 @@
+-- Declaration: CliffordSerialized.monomial
+-- Extracted by StaticSplit

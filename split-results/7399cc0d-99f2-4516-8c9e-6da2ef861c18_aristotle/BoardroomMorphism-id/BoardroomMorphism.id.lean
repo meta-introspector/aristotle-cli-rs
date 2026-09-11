@@ -1,0 +1,2 @@
+-- Declaration: BoardroomMorphism.id
+-- Extracted by StaticSplit

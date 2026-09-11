@@ -1,0 +1,2 @@
+-- Declaration: self_ref_chart
+-- Extracted by StaticSplit

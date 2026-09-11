@@ -1,0 +1,2 @@
+-- Declaration: ssp_divides_monster_13
+-- Extracted by StaticSplit

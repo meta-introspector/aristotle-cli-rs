@@ -1,0 +1,2 @@
+-- Declaration: mirror
+-- Extracted by StaticSplit

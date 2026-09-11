@@ -1,0 +1,2 @@
+-- Declaration: projectToSector
+-- Extracted by StaticSplit

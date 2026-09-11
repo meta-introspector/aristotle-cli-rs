@@ -1,0 +1,2 @@
+-- Declaration: EmojilangProof.isComplete
+-- Extracted by StaticSplit

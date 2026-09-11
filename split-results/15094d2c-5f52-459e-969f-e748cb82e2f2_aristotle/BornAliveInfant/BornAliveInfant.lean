@@ -1,0 +1,2 @@
+-- Declaration: BornAliveInfant
+-- Extracted by StaticSplit

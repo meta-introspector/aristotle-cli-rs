@@ -1,0 +1,2 @@
+-- Declaration: aristotleEmoji
+-- Extracted by StaticSplit

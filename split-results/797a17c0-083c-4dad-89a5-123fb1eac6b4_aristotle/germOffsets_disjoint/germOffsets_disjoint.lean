@@ -1,0 +1,2 @@
+-- Declaration: germOffsets_disjoint
+-- Extracted by StaticSplit

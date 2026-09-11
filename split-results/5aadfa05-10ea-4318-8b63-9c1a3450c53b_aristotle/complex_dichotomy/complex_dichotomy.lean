@@ -1,0 +1,2 @@
+-- Declaration: complex_dichotomy
+-- Extracted by StaticSplit

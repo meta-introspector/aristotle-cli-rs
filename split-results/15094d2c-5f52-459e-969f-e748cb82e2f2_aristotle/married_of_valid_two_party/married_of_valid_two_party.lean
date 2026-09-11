@@ -1,0 +1,2 @@
+-- Declaration: married_of_valid_two_party
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: finrank_cliffordAlgebra_even
+-- Extracted by StaticSplit

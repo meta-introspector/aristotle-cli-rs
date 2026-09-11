@@ -1,0 +1,2 @@
+-- Declaration: heideggerBrainrot
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: inferType_app_id_proof
+-- Extracted by StaticSplit

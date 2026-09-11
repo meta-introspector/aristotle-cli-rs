@@ -1,0 +1,2 @@
+-- Declaration: mycorrhiza_to_decomposer
+-- Extracted by StaticSplit

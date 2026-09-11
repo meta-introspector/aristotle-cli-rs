@@ -1,0 +1,2 @@
+-- Declaration: moonshine_kernel
+-- Extracted by StaticSplit

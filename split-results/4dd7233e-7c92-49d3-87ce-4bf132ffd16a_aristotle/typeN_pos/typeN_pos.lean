@@ -1,0 +1,2 @@
+-- Declaration: typeN_pos
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monster_shard_decomposition
+-- Extracted by StaticSplit

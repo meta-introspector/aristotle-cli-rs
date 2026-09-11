@@ -1,0 +1,2 @@
+-- Declaration: bernoulli_four_value
+-- Extracted by StaticSplit

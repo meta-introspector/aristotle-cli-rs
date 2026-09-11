@@ -1,0 +1,2 @@
+-- Declaration: bottFoldEndo
+-- Extracted by StaticSplit

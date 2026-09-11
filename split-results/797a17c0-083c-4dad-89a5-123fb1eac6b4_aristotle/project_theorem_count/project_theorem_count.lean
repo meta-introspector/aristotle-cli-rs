@@ -1,0 +1,2 @@
+-- Declaration: project_theorem_count
+-- Extracted by StaticSplit

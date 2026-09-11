@@ -1,0 +1,2 @@
+-- Declaration: nameToKername
+-- Extracted by StaticSplit

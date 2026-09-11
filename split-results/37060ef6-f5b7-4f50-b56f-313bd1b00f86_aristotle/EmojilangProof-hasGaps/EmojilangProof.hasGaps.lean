@@ -1,0 +1,2 @@
+-- Declaration: EmojilangProof.hasGaps
+-- Extracted by StaticSplit

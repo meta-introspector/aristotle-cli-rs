@@ -1,0 +1,2 @@
+-- Declaration: Corp
+-- Extracted by StaticSplit

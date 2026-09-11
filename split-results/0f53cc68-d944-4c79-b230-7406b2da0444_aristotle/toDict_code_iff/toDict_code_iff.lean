@@ -1,0 +1,2 @@
+-- Declaration: toDict_code_iff
+-- Extracted by StaticSplit

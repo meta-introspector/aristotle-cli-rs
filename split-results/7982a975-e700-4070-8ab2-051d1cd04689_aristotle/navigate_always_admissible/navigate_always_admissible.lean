@@ -1,0 +1,2 @@
+-- Declaration: navigate_always_admissible
+-- Extracted by StaticSplit

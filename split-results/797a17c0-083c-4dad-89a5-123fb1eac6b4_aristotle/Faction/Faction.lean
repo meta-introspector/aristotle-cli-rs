@@ -1,0 +1,2 @@
+-- Declaration: Faction
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: igusa_cusp_weight
+-- Extracted by StaticSplit

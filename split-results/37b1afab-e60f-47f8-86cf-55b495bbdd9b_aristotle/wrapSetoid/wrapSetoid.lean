@@ -1,0 +1,2 @@
+-- Declaration: wrapSetoid
+-- Extracted by StaticSplit

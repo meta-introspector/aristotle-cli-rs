@@ -1,0 +1,2 @@
+-- Declaration: fungalVine
+-- Extracted by StaticSplit

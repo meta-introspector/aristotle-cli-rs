@@ -1,0 +1,2 @@
+-- Declaration: zoosemiotics_reaches_consciousness
+-- Extracted by StaticSplit

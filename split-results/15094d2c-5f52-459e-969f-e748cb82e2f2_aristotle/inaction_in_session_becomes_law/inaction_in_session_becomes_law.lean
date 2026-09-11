@@ -1,0 +1,2 @@
+-- Declaration: inaction_in_session_becomes_law
+-- Extracted by StaticSplit

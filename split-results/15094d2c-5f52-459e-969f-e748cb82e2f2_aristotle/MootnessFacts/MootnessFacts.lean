@@ -1,0 +1,2 @@
+-- Declaration: MootnessFacts
+-- Extracted by StaticSplit

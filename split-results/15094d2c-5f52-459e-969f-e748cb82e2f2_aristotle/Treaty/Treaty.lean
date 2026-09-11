@@ -1,0 +1,2 @@
+-- Declaration: Treaty
+-- Extracted by StaticSplit

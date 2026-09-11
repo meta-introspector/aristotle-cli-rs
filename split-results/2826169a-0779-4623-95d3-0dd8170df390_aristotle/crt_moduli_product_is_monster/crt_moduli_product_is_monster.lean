@@ -1,0 +1,2 @@
+-- Declaration: crt_moduli_product_is_monster
+-- Extracted by StaticSplit

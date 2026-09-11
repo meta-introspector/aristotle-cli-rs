@@ -1,0 +1,2 @@
+-- Declaration: spectralDegeneration_refl
+-- Extracted by StaticSplit

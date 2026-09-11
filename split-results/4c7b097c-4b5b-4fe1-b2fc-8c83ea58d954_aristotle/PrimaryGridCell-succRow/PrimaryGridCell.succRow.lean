@@ -1,0 +1,2 @@
+-- Declaration: PrimaryGridCell.succRow
+-- Extracted by StaticSplit

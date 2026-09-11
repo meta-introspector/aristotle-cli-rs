@@ -1,0 +1,2 @@
+-- Declaration: exampleShifted
+-- Extracted by StaticSplit

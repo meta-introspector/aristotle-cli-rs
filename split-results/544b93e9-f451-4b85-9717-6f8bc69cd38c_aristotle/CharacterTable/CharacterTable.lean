@@ -1,0 +1,2 @@
+-- Declaration: CharacterTable
+-- Extracted by StaticSplit

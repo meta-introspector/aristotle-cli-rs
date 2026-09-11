@@ -1,0 +1,2 @@
+-- Declaration: Fibration.verticalToFiber
+-- Extracted by StaticSplit

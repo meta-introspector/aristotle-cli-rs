@@ -1,0 +1,2 @@
+-- Declaration: ExtTorus
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: crtProduct_eq_base_card
+-- Extracted by StaticSplit

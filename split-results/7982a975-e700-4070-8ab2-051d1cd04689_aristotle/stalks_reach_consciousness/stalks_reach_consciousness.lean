@@ -1,0 +1,2 @@
+-- Declaration: stalks_reach_consciousness
+-- Extracted by StaticSplit

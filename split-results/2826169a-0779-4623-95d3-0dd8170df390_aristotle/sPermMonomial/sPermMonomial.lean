@@ -1,0 +1,2 @@
+-- Declaration: sPermMonomial
+-- Extracted by StaticSplit

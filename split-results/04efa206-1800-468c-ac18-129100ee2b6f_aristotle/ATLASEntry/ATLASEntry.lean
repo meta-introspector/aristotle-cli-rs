@@ -1,0 +1,2 @@
+-- Declaration: ATLASEntry
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: proteome_reaches_dna
+-- Extracted by StaticSplit

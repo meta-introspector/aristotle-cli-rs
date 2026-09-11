@@ -1,0 +1,2 @@
+-- Declaration: actualization_is_perfect
+-- Extracted by StaticSplit

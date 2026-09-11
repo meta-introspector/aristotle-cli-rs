@@ -1,0 +1,2 @@
+-- Declaration: dominant_odd_power
+-- Extracted by StaticSplit

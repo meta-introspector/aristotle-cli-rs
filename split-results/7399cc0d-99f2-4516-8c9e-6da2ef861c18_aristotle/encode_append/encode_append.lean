@@ -1,0 +1,2 @@
+-- Declaration: encode_append
+-- Extracted by StaticSplit

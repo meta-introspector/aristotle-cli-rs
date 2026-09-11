@@ -1,0 +1,2 @@
+-- Declaration: SpectralPage
+-- Extracted by StaticSplit

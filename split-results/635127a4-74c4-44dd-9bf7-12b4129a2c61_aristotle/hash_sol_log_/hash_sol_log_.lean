@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_log_
+-- Extracted by StaticSplit

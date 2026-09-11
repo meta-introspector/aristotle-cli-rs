@@ -1,0 +1,2 @@
+-- Declaration: sdimH0_idealChart_liouville
+-- Extracted by StaticSplit

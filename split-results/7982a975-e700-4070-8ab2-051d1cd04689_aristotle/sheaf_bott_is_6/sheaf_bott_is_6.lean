@@ -1,0 +1,2 @@
+-- Declaration: sheaf_bott_is_6
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Ternary.fromPQ
+-- Extracted by StaticSplit

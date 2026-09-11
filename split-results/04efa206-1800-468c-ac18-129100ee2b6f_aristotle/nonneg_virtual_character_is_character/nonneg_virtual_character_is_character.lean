@@ -1,0 +1,2 @@
+-- Declaration: nonneg_virtual_character_is_character
+-- Extracted by StaticSplit

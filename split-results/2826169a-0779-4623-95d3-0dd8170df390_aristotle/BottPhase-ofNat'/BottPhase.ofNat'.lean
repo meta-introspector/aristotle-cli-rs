@@ -1,0 +1,2 @@
+-- Declaration: BottPhase.ofNat'
+-- Extracted by StaticSplit

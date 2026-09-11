@@ -1,0 +1,2 @@
+-- Declaration: largest_monster_prime
+-- Extracted by StaticSplit

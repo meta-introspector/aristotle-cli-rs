@@ -1,0 +1,2 @@
+-- Declaration: mckayThompson_trivial_rep_coeff_zero
+-- Extracted by StaticSplit

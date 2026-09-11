@@ -1,0 +1,2 @@
+-- Declaration: ss_partition_values
+-- Extracted by StaticSplit

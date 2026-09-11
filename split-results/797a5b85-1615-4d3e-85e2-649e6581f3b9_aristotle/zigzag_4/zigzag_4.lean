@@ -1,0 +1,2 @@
+-- Declaration: zigzag_4
+-- Extracted by StaticSplit

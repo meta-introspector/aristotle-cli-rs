@@ -1,0 +1,2 @@
+-- Declaration: transport_preserves_encoding
+-- Extracted by StaticSplit

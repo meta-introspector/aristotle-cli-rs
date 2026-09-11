@@ -1,0 +1,2 @@
+-- Declaration: TentacleSearch.successful_le_total
+-- Extracted by StaticSplit

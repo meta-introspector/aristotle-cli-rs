@@ -1,0 +1,2 @@
+-- Declaration: RevenueBill.originationValid
+-- Extracted by StaticSplit

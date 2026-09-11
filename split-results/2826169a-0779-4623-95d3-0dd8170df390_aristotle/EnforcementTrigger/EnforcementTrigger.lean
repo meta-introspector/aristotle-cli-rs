@@ -1,0 +1,2 @@
+-- Declaration: EnforcementTrigger
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: brainrotCode
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: dropWhile_idem
+-- Extracted by StaticSplit

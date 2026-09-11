@@ -1,0 +1,2 @@
+-- Declaration: morph_Monster_acts_S_ss
+-- Extracted by StaticSplit

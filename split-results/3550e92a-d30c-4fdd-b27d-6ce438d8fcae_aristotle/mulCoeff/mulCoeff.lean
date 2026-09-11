@@ -1,0 +1,2 @@
+-- Declaration: mulCoeff
+-- Extracted by StaticSplit

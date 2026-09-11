@@ -1,0 +1,2 @@
+-- Declaration: chart_clifford_blade_asymptotics
+-- Extracted by StaticSplit

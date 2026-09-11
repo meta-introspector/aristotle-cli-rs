@@ -1,0 +1,2 @@
+-- Declaration: FederalQuestionCase.hasJurisdiction
+-- Extracted by StaticSplit

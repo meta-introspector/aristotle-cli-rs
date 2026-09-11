@@ -1,0 +1,2 @@
+-- Declaration: RDFRecord
+-- Extracted by StaticSplit

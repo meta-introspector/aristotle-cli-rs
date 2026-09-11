@@ -1,0 +1,2 @@
+-- Declaration: isMonsterPrime
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: hub_card
+-- Extracted by StaticSplit

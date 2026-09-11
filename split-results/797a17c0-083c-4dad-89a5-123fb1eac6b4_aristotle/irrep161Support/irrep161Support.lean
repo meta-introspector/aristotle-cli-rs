@@ -1,0 +1,2 @@
+-- Declaration: irrep161Support
+-- Extracted by StaticSplit

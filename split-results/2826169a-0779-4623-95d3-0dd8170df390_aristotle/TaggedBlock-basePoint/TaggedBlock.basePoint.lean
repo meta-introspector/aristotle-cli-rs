@@ -1,0 +1,2 @@
+-- Declaration: TaggedBlock.basePoint
+-- Extracted by StaticSplit

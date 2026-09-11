@@ -1,0 +1,2 @@
+-- Declaration: benchmark
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: alternatingGroup_5_order
+-- Extracted by StaticSplit

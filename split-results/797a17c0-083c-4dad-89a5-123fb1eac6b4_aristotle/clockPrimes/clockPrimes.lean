@@ -1,0 +1,2 @@
+-- Declaration: clockPrimes
+-- Extracted by StaticSplit

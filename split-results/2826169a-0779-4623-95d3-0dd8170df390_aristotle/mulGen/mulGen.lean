@@ -1,0 +1,2 @@
+-- Declaration: mulGen
+-- Extracted by StaticSplit

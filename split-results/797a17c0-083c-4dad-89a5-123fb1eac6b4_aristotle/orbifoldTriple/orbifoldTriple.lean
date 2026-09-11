@@ -1,0 +1,2 @@
+-- Declaration: orbifoldTriple
+-- Extracted by StaticSplit

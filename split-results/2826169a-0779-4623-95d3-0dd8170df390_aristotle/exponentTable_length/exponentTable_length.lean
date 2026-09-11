@@ -1,0 +1,2 @@
+-- Declaration: exponentTable_length
+-- Extracted by StaticSplit

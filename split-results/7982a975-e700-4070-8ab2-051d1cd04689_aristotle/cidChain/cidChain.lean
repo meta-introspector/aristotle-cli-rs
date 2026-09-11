@@ -1,0 +1,2 @@
+-- Declaration: cidChain
+-- Extracted by StaticSplit

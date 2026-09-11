@@ -1,0 +1,2 @@
+-- Declaration: consciousness_is_fundamental
+-- Extracted by StaticSplit

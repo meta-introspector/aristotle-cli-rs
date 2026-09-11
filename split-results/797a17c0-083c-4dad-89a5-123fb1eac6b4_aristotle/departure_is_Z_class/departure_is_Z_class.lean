@@ -1,0 +1,2 @@
+-- Declaration: departure_is_Z_class
+-- Extracted by StaticSplit

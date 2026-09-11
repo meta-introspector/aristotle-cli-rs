@@ -1,0 +1,2 @@
+-- Declaration: monster_quasi_symmetry
+-- Extracted by StaticSplit

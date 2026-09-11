@@ -1,0 +1,2 @@
+-- Declaration: no_cross_fiber_ingest
+-- Extracted by StaticSplit

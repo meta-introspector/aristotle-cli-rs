@@ -1,0 +1,2 @@
+-- Declaration: protein_is_sink
+-- Extracted by StaticSplit

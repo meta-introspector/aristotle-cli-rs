@@ -1,0 +1,2 @@
+-- Declaration: qms_traceability
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: resonantGates_length
+-- Extracted by StaticSplit

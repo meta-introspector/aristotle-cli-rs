@@ -1,0 +1,2 @@
+-- Declaration: extension_is_contribution
+-- Extracted by StaticSplit

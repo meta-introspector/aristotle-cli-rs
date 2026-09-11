@@ -1,0 +1,2 @@
+-- Declaration: BiasComp.pure
+-- Extracted by StaticSplit

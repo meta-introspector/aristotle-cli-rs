@@ -1,0 +1,2 @@
+-- Declaration: numNodes
+-- Extracted by StaticSplit

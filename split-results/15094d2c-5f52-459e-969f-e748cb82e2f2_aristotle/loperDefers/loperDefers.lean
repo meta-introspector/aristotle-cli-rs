@@ -1,0 +1,2 @@
+-- Declaration: loperDefers
+-- Extracted by StaticSplit

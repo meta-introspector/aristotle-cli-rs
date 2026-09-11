@@ -1,0 +1,2 @@
+-- Declaration: hammingDistance_comm
+-- Extracted by StaticSplit

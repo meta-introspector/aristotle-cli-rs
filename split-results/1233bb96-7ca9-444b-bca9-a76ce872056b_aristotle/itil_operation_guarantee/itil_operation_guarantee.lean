@@ -1,0 +1,2 @@
+-- Declaration: itil_operation_guarantee
+-- Extracted by StaticSplit

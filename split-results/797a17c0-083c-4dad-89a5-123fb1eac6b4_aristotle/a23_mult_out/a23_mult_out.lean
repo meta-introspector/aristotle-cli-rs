@@ -1,0 +1,2 @@
+-- Declaration: a23_mult_out
+-- Extracted by StaticSplit

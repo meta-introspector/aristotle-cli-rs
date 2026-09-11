@@ -1,0 +1,2 @@
+-- Declaration: PrecedentLog.maxId
+-- Extracted by StaticSplit

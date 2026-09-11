@@ -1,0 +1,2 @@
+-- Declaration: extConceptCount
+-- Extracted by StaticSplit

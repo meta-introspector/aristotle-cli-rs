@@ -1,0 +1,2 @@
+-- Declaration: six_times_Th_divides_M
+-- Extracted by StaticSplit

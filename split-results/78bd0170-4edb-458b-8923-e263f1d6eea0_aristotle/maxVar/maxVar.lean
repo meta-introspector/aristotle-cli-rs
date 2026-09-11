@@ -1,0 +1,2 @@
+-- Declaration: maxVar
+-- Extracted by StaticSplit

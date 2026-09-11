@@ -1,0 +1,2 @@
+-- Declaration: AnyScalar
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CollisionClass
+-- Extracted by StaticSplit

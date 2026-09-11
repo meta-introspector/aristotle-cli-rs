@@ -1,0 +1,2 @@
+-- Declaration: place
+-- Extracted by StaticSplit

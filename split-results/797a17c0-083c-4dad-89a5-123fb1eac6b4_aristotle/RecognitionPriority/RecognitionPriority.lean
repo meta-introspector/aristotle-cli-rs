@@ -1,0 +1,2 @@
+-- Declaration: RecognitionPriority
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: APIConcept
+-- Extracted by StaticSplit

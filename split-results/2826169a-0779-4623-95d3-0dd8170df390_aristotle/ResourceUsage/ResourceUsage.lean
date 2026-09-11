@@ -1,0 +1,2 @@
+-- Declaration: ResourceUsage
+-- Extracted by StaticSplit

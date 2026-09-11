@@ -1,0 +1,2 @@
+-- Declaration: selfEncoding_mod47
+-- Extracted by StaticSplit

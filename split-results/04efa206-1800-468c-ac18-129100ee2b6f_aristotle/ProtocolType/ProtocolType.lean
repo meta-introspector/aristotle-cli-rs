@@ -1,0 +1,2 @@
+-- Declaration: ProtocolType
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: spoke_count
+-- Extracted by StaticSplit

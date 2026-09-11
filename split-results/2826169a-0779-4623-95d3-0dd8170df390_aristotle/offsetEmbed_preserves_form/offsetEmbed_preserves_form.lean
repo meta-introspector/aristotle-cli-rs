@@ -1,0 +1,2 @@
+-- Declaration: offsetEmbed_preserves_form
+-- Extracted by StaticSplit

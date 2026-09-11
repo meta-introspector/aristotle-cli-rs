@@ -1,0 +1,2 @@
+-- Declaration: mint_deterministic
+-- Extracted by StaticSplit

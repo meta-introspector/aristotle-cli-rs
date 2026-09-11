@@ -1,0 +1,2 @@
+-- Declaration: gammaZ_s_swap
+-- Extracted by StaticSplit

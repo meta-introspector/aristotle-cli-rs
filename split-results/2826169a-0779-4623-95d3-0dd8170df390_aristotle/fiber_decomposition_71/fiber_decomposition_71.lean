@@ -1,0 +1,2 @@
+-- Declaration: fiber_decomposition_71
+-- Extracted by StaticSplit

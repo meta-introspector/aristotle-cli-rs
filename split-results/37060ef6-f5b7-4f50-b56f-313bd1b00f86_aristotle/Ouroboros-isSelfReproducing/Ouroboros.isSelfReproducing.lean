@@ -1,0 +1,2 @@
+-- Declaration: Ouroboros.isSelfReproducing
+-- Extracted by StaticSplit

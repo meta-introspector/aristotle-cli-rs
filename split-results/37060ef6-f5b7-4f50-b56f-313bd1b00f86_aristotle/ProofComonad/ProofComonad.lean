@@ -1,0 +1,2 @@
+-- Declaration: ProofComonad
+-- Extracted by StaticSplit

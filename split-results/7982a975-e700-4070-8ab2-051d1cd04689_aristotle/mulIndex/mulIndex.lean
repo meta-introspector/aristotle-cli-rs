@@ -1,0 +1,2 @@
+-- Declaration: mulIndex
+-- Extracted by StaticSplit

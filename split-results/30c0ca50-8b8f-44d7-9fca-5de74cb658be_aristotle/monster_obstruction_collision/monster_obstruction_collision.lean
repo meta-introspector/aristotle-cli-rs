@@ -1,0 +1,2 @@
+-- Declaration: monster_obstruction_collision
+-- Extracted by StaticSplit

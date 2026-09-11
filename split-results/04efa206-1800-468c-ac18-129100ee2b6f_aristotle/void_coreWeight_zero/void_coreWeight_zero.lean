@@ -1,0 +1,2 @@
+-- Declaration: void_coreWeight_zero
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: brainrotToSexpr_length
+-- Extracted by StaticSplit

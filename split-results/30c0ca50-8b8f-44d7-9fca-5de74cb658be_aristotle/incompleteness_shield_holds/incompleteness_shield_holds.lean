@@ -1,0 +1,2 @@
+-- Declaration: incompleteness_shield_holds
+-- Extracted by StaticSplit

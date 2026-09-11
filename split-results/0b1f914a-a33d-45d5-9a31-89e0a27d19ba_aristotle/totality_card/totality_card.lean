@@ -1,0 +1,2 @@
+-- Declaration: totality_card
+-- Extracted by StaticSplit

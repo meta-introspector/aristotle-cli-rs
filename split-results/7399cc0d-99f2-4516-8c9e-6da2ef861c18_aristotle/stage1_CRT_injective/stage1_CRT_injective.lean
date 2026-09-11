@@ -1,0 +1,2 @@
+-- Declaration: stage1_CRT_injective
+-- Extracted by StaticSplit

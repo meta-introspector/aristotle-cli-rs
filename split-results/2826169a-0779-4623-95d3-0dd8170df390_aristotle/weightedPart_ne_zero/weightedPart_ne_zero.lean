@@ -1,0 +1,2 @@
+-- Declaration: weightedPart_ne_zero
+-- Extracted by StaticSplit

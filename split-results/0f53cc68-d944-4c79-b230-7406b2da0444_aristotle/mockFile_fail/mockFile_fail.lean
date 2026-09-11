@@ -1,0 +1,2 @@
+-- Declaration: mockFile_fail
+-- Extracted by StaticSplit

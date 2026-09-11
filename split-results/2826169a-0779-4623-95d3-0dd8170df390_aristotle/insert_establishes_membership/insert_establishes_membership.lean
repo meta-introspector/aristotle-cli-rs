@@ -1,0 +1,2 @@
+-- Declaration: insert_establishes_membership
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: intWeight
+-- Extracted by StaticSplit

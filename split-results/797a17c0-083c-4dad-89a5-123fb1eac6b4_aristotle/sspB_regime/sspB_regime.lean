@@ -1,0 +1,2 @@
+-- Declaration: sspB_regime
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: classOf_eq_some_iff
+-- Extracted by StaticSplit

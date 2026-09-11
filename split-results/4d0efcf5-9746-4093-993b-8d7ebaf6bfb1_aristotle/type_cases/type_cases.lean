@@ -1,0 +1,2 @@
+-- Declaration: type_cases
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: card_baseElement
+-- Extracted by StaticSplit

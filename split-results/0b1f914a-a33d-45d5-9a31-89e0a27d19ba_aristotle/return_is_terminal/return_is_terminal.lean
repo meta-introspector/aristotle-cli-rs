@@ -1,0 +1,2 @@
+-- Declaration: return_is_terminal
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: stealth_hole_factored
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: semantic_hole_is_transit
+-- Extracted by StaticSplit

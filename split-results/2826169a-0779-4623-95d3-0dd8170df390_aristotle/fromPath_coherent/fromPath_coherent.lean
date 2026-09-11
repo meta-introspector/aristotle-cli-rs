@@ -1,0 +1,2 @@
+-- Declaration: fromPath_coherent
+-- Extracted by StaticSplit

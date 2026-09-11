@@ -1,0 +1,2 @@
+-- Declaration: confluence_face_isContr
+-- Extracted by StaticSplit

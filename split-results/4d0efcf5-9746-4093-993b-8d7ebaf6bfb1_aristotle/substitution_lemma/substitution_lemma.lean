@@ -1,0 +1,2 @@
+-- Declaration: substitution_lemma
+-- Extracted by StaticSplit

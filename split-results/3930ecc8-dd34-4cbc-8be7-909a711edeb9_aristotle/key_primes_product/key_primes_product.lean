@@ -1,0 +1,2 @@
+-- Declaration: key_primes_product
+-- Extracted by StaticSplit

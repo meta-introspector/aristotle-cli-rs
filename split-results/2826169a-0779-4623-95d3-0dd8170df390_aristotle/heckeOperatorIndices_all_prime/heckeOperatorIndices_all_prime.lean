@@ -1,0 +1,2 @@
+-- Declaration: heckeOperatorIndices_all_prime
+-- Extracted by StaticSplit

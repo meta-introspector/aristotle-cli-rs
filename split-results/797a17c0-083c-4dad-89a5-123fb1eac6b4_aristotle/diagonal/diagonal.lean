@@ -1,0 +1,2 @@
+-- Declaration: diagonal
+-- Extracted by StaticSplit

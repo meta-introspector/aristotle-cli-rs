@@ -1,0 +1,2 @@
+-- Declaration: PhosphorusForm
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ss_descend_total
+-- Extracted by StaticSplit

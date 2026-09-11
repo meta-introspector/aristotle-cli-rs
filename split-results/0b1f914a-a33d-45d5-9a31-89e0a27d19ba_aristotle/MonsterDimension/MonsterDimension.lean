@@ -1,0 +1,2 @@
+-- Declaration: MonsterDimension
+-- Extracted by StaticSplit

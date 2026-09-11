@@ -1,0 +1,2 @@
+-- Declaration: deMorgan_conj_constructive
+-- Extracted by StaticSplit

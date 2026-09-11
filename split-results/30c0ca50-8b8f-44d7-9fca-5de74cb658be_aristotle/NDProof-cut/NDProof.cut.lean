@@ -1,0 +1,2 @@
+-- Declaration: NDProof.cut
+-- Extracted by StaticSplit

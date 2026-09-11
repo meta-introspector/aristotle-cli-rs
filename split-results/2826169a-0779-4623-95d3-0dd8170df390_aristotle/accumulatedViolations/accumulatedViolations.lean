@@ -1,0 +1,2 @@
+-- Declaration: accumulatedViolations
+-- Extracted by StaticSplit

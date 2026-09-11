@@ -1,0 +1,2 @@
+-- Declaration: mathFiber
+-- Extracted by StaticSplit

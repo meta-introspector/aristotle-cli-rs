@@ -1,0 +1,2 @@
+-- Declaration: quorum_is_51
+-- Extracted by StaticSplit

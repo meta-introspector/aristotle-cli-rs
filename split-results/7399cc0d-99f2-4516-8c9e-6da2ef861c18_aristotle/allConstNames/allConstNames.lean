@@ -1,0 +1,2 @@
+-- Declaration: allConstNames
+-- Extracted by StaticSplit

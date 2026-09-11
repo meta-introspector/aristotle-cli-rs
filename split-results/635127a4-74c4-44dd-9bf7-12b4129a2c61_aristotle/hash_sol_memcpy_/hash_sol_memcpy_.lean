@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_memcpy_
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: encodePrefix
+-- Extracted by StaticSplit

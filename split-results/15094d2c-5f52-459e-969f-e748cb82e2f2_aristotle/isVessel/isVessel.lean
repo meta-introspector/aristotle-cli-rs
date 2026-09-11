@@ -1,0 +1,2 @@
+-- Declaration: isVessel
+-- Extracted by StaticSplit

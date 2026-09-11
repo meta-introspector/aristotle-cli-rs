@@ -1,0 +1,2 @@
+-- Declaration: isReset
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: adjunction_unit
+-- Extracted by StaticSplit

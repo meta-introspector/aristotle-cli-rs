@@ -1,0 +1,2 @@
+-- Declaration: mckay_second_coefficient
+-- Extracted by StaticSplit

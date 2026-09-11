@@ -1,0 +1,2 @@
+-- Declaration: grade_receive
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: uncurry_curry
+-- Extracted by StaticSplit

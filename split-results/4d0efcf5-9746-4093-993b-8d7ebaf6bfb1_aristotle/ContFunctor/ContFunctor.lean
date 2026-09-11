@@ -1,0 +1,2 @@
+-- Declaration: ContFunctor
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: canonicalGenerator
+-- Extracted by StaticSplit

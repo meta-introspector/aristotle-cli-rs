@@ -1,0 +1,2 @@
+-- Declaration: tierWeight
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cl09_faithful_rep
+-- Extracted by StaticSplit

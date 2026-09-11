@@ -1,0 +1,2 @@
+-- Declaration: classification_of_finite_simple_groups
+-- Extracted by StaticSplit

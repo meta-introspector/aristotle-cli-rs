@@ -1,0 +1,2 @@
+-- Declaration: sampleTrace
+-- Extracted by StaticSplit

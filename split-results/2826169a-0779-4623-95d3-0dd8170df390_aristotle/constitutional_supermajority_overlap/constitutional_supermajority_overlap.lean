@@ -1,0 +1,2 @@
+-- Declaration: constitutional_supermajority_overlap
+-- Extracted by StaticSplit

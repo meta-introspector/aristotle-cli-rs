@@ -1,0 +1,2 @@
+-- Declaration: initial_morphism_unique
+-- Extracted by StaticSplit

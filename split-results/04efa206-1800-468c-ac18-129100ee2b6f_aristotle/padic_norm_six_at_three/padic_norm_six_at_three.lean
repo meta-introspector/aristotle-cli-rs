@@ -1,0 +1,2 @@
+-- Declaration: padic_norm_six_at_three
+-- Extracted by StaticSplit

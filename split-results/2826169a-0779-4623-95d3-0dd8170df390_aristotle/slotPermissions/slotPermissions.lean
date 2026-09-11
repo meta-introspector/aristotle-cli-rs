@@ -1,0 +1,2 @@
+-- Declaration: slotPermissions
+-- Extracted by StaticSplit

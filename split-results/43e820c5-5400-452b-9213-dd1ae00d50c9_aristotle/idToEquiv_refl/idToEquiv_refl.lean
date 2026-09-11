@@ -1,0 +1,2 @@
+-- Declaration: idToEquiv_refl
+-- Extracted by StaticSplit

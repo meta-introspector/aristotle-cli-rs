@@ -1,0 +1,2 @@
+-- Declaration: the42StepsAristotle
+-- Extracted by StaticSplit

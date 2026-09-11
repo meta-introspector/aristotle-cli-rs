@@ -1,0 +1,2 @@
+-- Declaration: isShadow_decidable_in_principle
+-- Extracted by StaticSplit

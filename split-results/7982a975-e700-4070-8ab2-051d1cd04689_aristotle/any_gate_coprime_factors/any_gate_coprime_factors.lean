@@ -1,0 +1,2 @@
+-- Declaration: any_gate_coprime_factors
+-- Extracted by StaticSplit

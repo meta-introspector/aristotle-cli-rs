@@ -1,0 +1,2 @@
+-- Declaration: EdgeType
+-- Extracted by StaticSplit

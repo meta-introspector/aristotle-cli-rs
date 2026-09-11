@@ -1,0 +1,2 @@
+-- Declaration: e8WeylOrder_value
+-- Extracted by StaticSplit

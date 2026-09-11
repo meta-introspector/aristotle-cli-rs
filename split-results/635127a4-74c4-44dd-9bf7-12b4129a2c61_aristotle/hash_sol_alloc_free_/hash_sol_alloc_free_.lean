@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_alloc_free_
+-- Extracted by StaticSplit

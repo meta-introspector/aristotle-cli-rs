@@ -1,0 +1,2 @@
+-- Declaration: fin0_unit_isometry
+-- Extracted by StaticSplit

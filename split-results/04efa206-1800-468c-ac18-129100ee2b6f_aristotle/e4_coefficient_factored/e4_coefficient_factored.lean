@@ -1,0 +1,2 @@
+-- Declaration: e4_coefficient_factored
+-- Extracted by StaticSplit

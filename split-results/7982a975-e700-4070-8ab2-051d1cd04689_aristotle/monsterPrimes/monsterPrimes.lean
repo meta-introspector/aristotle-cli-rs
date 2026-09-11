@@ -1,0 +1,2 @@
+-- Declaration: monsterPrimes
+-- Extracted by StaticSplit

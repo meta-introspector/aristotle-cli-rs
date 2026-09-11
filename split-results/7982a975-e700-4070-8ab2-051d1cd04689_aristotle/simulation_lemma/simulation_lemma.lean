@@ -1,0 +1,2 @@
+-- Declaration: simulation_lemma
+-- Extracted by StaticSplit

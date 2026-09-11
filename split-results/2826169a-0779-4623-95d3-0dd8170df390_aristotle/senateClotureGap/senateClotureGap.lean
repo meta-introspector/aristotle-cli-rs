@@ -1,0 +1,2 @@
+-- Declaration: senateClotureGap
+-- Extracted by StaticSplit

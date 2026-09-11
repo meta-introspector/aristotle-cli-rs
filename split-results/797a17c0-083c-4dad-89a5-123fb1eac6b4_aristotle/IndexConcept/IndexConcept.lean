@@ -1,0 +1,2 @@
+-- Declaration: IndexConcept
+-- Extracted by StaticSplit

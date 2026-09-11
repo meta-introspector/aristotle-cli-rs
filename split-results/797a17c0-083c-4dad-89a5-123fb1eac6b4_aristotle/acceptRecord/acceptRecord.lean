@@ -1,0 +1,2 @@
+-- Declaration: acceptRecord
+-- Extracted by StaticSplit

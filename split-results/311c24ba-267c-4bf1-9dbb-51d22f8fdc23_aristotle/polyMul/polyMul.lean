@@ -1,0 +1,2 @@
+-- Declaration: polyMul
+-- Extracted by StaticSplit

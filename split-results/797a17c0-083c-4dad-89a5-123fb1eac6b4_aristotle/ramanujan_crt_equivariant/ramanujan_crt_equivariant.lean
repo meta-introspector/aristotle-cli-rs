@@ -1,0 +1,2 @@
+-- Declaration: ramanujan_crt_equivariant
+-- Extracted by StaticSplit

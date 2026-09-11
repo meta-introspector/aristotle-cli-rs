@@ -1,0 +1,2 @@
+-- Declaration: trace_2A_split
+-- Extracted by StaticSplit

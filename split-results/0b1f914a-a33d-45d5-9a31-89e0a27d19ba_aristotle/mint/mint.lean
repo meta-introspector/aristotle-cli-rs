@@ -1,0 +1,2 @@
+-- Declaration: mint
+-- Extracted by StaticSplit

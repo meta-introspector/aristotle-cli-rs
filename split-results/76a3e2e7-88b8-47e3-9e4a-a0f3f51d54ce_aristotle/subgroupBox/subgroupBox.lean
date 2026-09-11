@@ -1,0 +1,2 @@
+-- Declaration: subgroupBox
+-- Extracted by StaticSplit

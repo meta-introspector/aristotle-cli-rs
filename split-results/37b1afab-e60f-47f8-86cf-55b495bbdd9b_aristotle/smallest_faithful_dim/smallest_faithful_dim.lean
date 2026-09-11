@@ -1,0 +1,2 @@
+-- Declaration: smallest_faithful_dim
+-- Extracted by StaticSplit

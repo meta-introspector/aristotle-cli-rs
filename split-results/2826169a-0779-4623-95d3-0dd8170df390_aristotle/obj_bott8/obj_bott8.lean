@@ -1,0 +1,2 @@
+-- Declaration: obj_bott8
+-- Extracted by StaticSplit

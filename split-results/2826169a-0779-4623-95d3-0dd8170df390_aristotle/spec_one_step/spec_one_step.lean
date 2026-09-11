@@ -1,0 +1,2 @@
+-- Declaration: spec_one_step
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: moonshineBox
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Crank.isMooning
+-- Extracted by StaticSplit

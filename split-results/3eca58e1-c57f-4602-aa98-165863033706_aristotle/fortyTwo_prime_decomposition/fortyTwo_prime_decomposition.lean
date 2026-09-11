@@ -1,0 +1,2 @@
+-- Declaration: fortyTwo_prime_decomposition
+-- Extracted by StaticSplit

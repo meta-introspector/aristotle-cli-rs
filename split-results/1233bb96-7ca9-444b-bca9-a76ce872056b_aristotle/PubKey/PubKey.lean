@@ -1,0 +1,2 @@
+-- Declaration: PubKey
+-- Extracted by StaticSplit

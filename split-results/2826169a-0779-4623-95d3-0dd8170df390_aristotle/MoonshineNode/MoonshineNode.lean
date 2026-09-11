@@ -1,0 +1,2 @@
+-- Declaration: MoonshineNode
+-- Extracted by StaticSplit

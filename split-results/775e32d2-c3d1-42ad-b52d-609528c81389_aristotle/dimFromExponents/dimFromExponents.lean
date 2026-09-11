@@ -1,0 +1,2 @@
+-- Declaration: dimFromExponents
+-- Extracted by StaticSplit

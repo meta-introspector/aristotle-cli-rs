@@ -1,0 +1,2 @@
+-- Declaration: degeneration_implies_stable
+-- Extracted by StaticSplit

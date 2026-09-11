@@ -1,0 +1,2 @@
+-- Declaration: c1_norm_squared
+-- Extracted by StaticSplit

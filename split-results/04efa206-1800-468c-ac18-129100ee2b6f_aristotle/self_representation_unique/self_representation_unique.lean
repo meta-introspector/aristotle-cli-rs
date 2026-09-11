@@ -1,0 +1,2 @@
+-- Declaration: self_representation_unique
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: type_apply
+-- Extracted by StaticSplit

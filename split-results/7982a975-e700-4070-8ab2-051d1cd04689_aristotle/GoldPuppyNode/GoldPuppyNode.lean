@@ -1,0 +1,2 @@
+-- Declaration: GoldPuppyNode
+-- Extracted by StaticSplit

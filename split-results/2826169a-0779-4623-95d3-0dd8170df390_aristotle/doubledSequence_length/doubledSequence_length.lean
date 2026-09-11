@@ -1,0 +1,2 @@
+-- Declaration: doubledSequence_length
+-- Extracted by StaticSplit

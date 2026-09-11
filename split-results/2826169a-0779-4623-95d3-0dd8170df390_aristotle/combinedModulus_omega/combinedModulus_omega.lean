@@ -1,0 +1,2 @@
+-- Declaration: combinedModulus_omega
+-- Extracted by StaticSplit

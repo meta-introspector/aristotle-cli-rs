@@ -1,0 +1,2 @@
+-- Declaration: CRTAutomorphism
+-- Extracted by StaticSplit

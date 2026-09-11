@@ -1,0 +1,2 @@
+-- Declaration: toInt_ofInt
+-- Extracted by StaticSplit

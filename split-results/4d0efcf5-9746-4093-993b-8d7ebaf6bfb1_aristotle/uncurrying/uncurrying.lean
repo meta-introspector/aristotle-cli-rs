@@ -1,0 +1,2 @@
+-- Declaration: uncurrying
+-- Extracted by StaticSplit

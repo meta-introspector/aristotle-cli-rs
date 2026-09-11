@@ -1,0 +1,2 @@
+-- Declaration: memetic_energy_reaches_memus
+-- Extracted by StaticSplit

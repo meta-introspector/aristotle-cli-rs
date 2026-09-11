@@ -1,0 +1,2 @@
+-- Declaration: encode_offset_residues
+-- Extracted by StaticSplit

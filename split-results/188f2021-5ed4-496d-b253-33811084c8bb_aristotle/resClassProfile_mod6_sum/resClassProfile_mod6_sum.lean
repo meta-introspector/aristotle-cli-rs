@@ -1,0 +1,2 @@
+-- Declaration: resClassProfile_mod6_sum
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: straighten
+-- Extracted by StaticSplit

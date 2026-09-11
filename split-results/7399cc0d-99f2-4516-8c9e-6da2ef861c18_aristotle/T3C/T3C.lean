@@ -1,0 +1,2 @@
+-- Declaration: T3C
+-- Extracted by StaticSplit

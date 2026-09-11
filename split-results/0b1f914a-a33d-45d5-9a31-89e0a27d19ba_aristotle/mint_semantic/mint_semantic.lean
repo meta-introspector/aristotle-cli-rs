@@ -1,0 +1,2 @@
+-- Declaration: mint_semantic
+-- Extracted by StaticSplit

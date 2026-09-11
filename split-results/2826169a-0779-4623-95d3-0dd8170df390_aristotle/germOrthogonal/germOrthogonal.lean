@@ -1,0 +1,2 @@
+-- Declaration: germOrthogonal
+-- Extracted by StaticSplit

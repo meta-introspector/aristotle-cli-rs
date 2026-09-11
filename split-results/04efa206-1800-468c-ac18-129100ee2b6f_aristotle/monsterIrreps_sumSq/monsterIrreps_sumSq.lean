@@ -1,0 +1,2 @@
+-- Declaration: monsterIrreps_sumSq
+-- Extracted by StaticSplit

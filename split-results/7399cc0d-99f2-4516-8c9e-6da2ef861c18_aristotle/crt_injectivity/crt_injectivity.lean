@@ -1,0 +1,2 @@
+-- Declaration: crt_injectivity
+-- Extracted by StaticSplit

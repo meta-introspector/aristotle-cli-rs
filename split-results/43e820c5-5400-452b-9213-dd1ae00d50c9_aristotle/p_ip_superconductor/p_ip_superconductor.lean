@@ -1,0 +1,2 @@
+-- Declaration: p_ip_superconductor
+-- Extracted by StaticSplit

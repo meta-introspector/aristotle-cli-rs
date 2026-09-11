@@ -1,0 +1,2 @@
+-- Declaration: EpochDim
+-- Extracted by StaticSplit

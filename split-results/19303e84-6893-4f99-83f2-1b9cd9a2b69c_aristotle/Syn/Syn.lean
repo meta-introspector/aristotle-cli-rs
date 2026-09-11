@@ -1,0 +1,2 @@
+-- Declaration: Syn
+-- Extracted by StaticSplit

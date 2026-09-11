@@ -1,0 +1,2 @@
+-- Declaration: EnvFrame
+-- Extracted by StaticSplit

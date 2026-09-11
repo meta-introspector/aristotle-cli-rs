@@ -1,0 +1,2 @@
+-- Declaration: goedelEmojilang_has_gaps
+-- Extracted by StaticSplit

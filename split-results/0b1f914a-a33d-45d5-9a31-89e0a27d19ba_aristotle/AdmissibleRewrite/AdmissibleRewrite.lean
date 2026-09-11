@@ -1,0 +1,2 @@
+-- Declaration: AdmissibleRewrite
+-- Extracted by StaticSplit

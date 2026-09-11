@@ -1,0 +1,2 @@
+-- Declaration: closure_escapes_ssp
+-- Extracted by StaticSplit

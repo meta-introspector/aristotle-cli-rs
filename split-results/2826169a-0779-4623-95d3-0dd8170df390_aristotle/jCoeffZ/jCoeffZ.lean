@@ -1,0 +1,2 @@
+-- Declaration: jCoeffZ
+-- Extracted by StaticSplit

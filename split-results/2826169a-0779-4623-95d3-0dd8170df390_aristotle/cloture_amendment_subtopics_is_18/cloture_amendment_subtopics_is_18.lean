@@ -1,0 +1,2 @@
+-- Declaration: cloture_amendment_subtopics_is_18
+-- Extracted by StaticSplit

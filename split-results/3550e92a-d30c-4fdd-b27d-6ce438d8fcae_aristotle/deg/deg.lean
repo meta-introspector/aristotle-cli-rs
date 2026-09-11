@@ -1,0 +1,2 @@
+-- Declaration: deg
+-- Extracted by StaticSplit

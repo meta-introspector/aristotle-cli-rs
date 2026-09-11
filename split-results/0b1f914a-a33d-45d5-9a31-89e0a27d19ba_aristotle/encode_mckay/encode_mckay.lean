@@ -1,0 +1,2 @@
+-- Declaration: encode_mckay
+-- Extracted by StaticSplit

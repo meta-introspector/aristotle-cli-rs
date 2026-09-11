@@ -1,0 +1,2 @@
+-- Declaration: chi_eq_degree
+-- Extracted by StaticSplit

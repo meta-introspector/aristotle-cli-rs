@@ -1,0 +1,2 @@
+-- Declaration: restriction_compose
+-- Extracted by StaticSplit

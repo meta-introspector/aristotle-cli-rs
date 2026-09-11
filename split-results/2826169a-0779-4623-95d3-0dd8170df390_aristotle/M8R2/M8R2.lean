@@ -1,0 +1,2 @@
+-- Declaration: M8R2
+-- Extracted by StaticSplit

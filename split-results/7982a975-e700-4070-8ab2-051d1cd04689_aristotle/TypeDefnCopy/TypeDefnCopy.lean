@@ -1,0 +1,2 @@
+-- Declaration: TypeDefnCopy
+-- Extracted by StaticSplit

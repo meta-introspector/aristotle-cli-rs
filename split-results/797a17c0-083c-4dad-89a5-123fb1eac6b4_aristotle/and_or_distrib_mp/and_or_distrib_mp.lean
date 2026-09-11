@@ -1,0 +1,2 @@
+-- Declaration: and_or_distrib_mp
+-- Extracted by StaticSplit

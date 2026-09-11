@@ -1,0 +1,2 @@
+-- Declaration: F5_period
+-- Extracted by StaticSplit

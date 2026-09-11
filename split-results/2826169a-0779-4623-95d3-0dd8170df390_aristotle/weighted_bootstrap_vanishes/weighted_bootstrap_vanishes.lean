@@ -1,0 +1,2 @@
+-- Declaration: weighted_bootstrap_vanishes
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: valid_conjR_inv2
+-- Extracted by StaticSplit

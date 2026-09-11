@@ -1,0 +1,2 @@
+-- Declaration: A001379bundle
+-- Extracted by StaticSplit

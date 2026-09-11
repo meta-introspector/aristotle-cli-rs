@@ -1,0 +1,2 @@
+-- Declaration: ObjectKind
+-- Extracted by StaticSplit

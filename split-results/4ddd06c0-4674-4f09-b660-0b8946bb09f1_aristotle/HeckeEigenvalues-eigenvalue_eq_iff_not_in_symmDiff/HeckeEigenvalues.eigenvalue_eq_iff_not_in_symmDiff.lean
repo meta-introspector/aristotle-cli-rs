@@ -1,0 +1,2 @@
+-- Declaration: HeckeEigenvalues.eigenvalue_eq_iff_not_in_symmDiff
+-- Extracted by StaticSplit

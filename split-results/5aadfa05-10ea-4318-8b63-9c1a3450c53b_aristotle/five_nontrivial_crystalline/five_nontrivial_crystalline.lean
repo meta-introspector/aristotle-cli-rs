@@ -1,0 +1,2 @@
+-- Declaration: five_nontrivial_crystalline
+-- Extracted by StaticSplit

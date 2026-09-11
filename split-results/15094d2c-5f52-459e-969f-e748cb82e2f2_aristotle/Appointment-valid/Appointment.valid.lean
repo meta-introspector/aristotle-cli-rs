@@ -1,0 +1,2 @@
+-- Declaration: Appointment.valid
+-- Extracted by StaticSplit

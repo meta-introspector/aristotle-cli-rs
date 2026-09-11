@@ -1,0 +1,2 @@
+-- Declaration: IsCharacter.add
+-- Extracted by StaticSplit

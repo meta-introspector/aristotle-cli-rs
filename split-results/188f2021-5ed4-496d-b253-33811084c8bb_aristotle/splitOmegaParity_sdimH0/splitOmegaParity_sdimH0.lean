@@ -1,0 +1,2 @@
+-- Declaration: splitOmegaParity_sdimH0
+-- Extracted by StaticSplit

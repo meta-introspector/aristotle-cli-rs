@@ -1,0 +1,2 @@
+-- Declaration: ontology_dictionary_size
+-- Extracted by StaticSplit

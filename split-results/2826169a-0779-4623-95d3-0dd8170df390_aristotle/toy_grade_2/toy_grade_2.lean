@@ -1,0 +1,2 @@
+-- Declaration: toy_grade_2
+-- Extracted by StaticSplit

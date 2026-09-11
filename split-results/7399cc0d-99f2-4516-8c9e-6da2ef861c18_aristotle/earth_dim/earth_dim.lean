@@ -1,0 +1,2 @@
+-- Declaration: earth_dim
+-- Extracted by StaticSplit

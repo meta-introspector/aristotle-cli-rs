@@ -1,0 +1,2 @@
+-- Declaration: BoundaryLoss.isNonTrivial
+-- Extracted by StaticSplit

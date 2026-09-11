@@ -1,0 +1,2 @@
+-- Declaration: monsterDim_mod_e8
+-- Extracted by StaticSplit

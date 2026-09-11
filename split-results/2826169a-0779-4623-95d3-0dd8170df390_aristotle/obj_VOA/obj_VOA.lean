@@ -1,0 +1,2 @@
+-- Declaration: obj_VOA
+-- Extracted by StaticSplit

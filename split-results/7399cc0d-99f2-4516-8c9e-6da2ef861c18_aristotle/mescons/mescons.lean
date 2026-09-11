@@ -1,0 +1,2 @@
+-- Declaration: mescons
+-- Extracted by StaticSplit

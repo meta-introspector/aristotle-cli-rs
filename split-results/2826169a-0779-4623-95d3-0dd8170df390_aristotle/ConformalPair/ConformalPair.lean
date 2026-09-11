@@ -1,0 +1,2 @@
+-- Declaration: ConformalPair
+-- Extracted by StaticSplit

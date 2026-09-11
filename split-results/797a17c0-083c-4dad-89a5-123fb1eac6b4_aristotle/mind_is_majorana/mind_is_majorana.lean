@@ -1,0 +1,2 @@
+-- Declaration: mind_is_majorana
+-- Extracted by StaticSplit

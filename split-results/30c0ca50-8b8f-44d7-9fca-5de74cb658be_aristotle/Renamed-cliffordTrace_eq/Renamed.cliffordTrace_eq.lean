@@ -1,0 +1,2 @@
+-- Declaration: Renamed.cliffordTrace_eq
+-- Extracted by StaticSplit

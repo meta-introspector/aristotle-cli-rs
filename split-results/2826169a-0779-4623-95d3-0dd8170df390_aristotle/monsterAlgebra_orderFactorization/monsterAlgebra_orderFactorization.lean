@@ -1,0 +1,2 @@
+-- Declaration: monsterAlgebra_orderFactorization
+-- Extracted by StaticSplit

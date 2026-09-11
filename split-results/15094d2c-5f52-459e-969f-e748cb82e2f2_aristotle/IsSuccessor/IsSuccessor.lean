@@ -1,0 +1,2 @@
+-- Declaration: IsSuccessor
+-- Extracted by StaticSplit

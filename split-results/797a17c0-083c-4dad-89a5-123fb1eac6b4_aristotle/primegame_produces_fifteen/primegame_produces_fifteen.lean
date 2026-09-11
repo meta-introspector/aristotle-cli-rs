@@ -1,0 +1,2 @@
+-- Declaration: primegame_produces_fifteen
+-- Extracted by StaticSplit

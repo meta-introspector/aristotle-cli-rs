@@ -1,0 +1,2 @@
+-- Declaration: registerPrime_prime
+-- Extracted by StaticSplit

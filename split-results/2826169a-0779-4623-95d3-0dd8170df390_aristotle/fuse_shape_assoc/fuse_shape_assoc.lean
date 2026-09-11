@@ -1,0 +1,2 @@
+-- Declaration: fuse_shape_assoc
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: qidToArticle
+-- Extracted by StaticSplit

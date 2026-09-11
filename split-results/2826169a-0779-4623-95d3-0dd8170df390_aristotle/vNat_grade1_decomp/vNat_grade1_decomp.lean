@@ -1,0 +1,2 @@
+-- Declaration: vNat_grade1_decomp
+-- Extracted by StaticSplit

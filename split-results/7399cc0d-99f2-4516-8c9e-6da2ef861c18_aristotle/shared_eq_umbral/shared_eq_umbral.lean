@@ -1,0 +1,2 @@
+-- Declaration: shared_eq_umbral
+-- Extracted by StaticSplit

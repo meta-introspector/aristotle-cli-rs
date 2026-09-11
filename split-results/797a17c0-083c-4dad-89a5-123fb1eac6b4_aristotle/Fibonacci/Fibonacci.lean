@@ -1,0 +1,2 @@
+-- Declaration: Fibonacci
+-- Extracted by StaticSplit

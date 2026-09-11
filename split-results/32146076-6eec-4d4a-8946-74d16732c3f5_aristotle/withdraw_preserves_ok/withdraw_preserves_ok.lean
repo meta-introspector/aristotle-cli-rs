@@ -1,0 +1,2 @@
+-- Declaration: withdraw_preserves_ok
+-- Extracted by StaticSplit

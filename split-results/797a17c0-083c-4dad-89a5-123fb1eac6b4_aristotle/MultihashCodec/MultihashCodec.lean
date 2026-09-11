@@ -1,0 +1,2 @@
+-- Declaration: MultihashCodec
+-- Extracted by StaticSplit

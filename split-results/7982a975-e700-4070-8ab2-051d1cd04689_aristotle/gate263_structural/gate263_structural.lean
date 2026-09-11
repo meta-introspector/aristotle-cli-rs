@@ -1,0 +1,2 @@
+-- Declaration: gate263_structural
+-- Extracted by StaticSplit

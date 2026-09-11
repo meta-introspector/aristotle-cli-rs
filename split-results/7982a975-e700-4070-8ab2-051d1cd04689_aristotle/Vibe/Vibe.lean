@@ -1,0 +1,2 @@
+-- Declaration: Vibe
+-- Extracted by StaticSplit

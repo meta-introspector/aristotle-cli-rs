@@ -1,0 +1,2 @@
+-- Declaration: factorial_ssp_smooth_le_36
+-- Extracted by StaticSplit

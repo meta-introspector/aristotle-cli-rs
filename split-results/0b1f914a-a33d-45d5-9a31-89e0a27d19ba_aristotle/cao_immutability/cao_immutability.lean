@@ -1,0 +1,2 @@
+-- Declaration: cao_immutability
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: UnivSort.fromKernelRepr
+-- Extracted by StaticSplit

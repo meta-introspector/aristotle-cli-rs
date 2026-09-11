@@ -1,0 +1,2 @@
+-- Declaration: Z.succ_double
+-- Extracted by StaticSplit

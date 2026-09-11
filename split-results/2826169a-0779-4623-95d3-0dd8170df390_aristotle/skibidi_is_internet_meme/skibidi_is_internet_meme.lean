@@ -1,0 +1,2 @@
+-- Declaration: skibidi_is_internet_meme
+-- Extracted by StaticSplit

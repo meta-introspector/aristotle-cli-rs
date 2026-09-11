@@ -1,0 +1,2 @@
+-- Declaration: PrecedentLog
+-- Extracted by StaticSplit

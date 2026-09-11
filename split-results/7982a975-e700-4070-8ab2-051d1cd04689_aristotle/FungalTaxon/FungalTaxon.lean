@@ -1,0 +1,2 @@
+-- Declaration: FungalTaxon
+-- Extracted by StaticSplit

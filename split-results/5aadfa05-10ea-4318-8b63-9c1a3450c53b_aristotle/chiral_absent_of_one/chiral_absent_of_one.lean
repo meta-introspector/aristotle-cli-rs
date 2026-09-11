@@ -1,0 +1,2 @@
+-- Declaration: chiral_absent_of_one
+-- Extracted by StaticSplit

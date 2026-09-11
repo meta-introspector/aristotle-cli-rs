@@ -1,0 +1,2 @@
+-- Declaration: rustOfData
+-- Extracted by StaticSplit

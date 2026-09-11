@@ -1,0 +1,2 @@
+-- Declaration: foldChain
+-- Extracted by StaticSplit

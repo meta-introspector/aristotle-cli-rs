@@ -1,0 +1,2 @@
+-- Declaration: MonomythStage
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: gmul_void
+-- Extracted by StaticSplit

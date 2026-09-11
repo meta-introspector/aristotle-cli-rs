@@ -1,0 +1,2 @@
+-- Declaration: eq_id_of_hom_eq_id
+-- Extracted by StaticSplit

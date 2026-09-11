@@ -1,0 +1,2 @@
+-- Declaration: monster_order_finite_skeleton
+-- Extracted by StaticSplit

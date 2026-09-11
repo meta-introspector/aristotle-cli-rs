@@ -1,0 +1,2 @@
+-- Declaration: WeakEquiv.trans
+-- Extracted by StaticSplit

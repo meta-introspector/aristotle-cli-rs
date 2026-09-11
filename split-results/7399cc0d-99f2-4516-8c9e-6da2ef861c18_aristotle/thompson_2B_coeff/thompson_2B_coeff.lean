@@ -1,0 +1,2 @@
+-- Declaration: thompson_2B_coeff
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: loop_covers_all
+-- Extracted by StaticSplit

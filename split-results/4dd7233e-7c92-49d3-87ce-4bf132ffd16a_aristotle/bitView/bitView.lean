@@ -1,0 +1,2 @@
+-- Declaration: bitView
+-- Extracted by StaticSplit

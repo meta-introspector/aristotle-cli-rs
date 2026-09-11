@@ -1,0 +1,2 @@
+-- Declaration: solfunmeme_hash_val
+-- Extracted by StaticSplit

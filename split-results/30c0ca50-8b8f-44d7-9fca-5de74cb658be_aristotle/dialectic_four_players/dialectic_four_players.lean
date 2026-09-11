@@ -1,0 +1,2 @@
+-- Declaration: dialectic_four_players
+-- Extracted by StaticSplit

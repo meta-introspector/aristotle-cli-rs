@@ -1,0 +1,2 @@
+-- Declaration: diversity_jurisdiction_of_elements
+-- Extracted by StaticSplit

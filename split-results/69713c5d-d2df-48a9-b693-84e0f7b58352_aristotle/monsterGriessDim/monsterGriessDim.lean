@@ -1,0 +1,2 @@
+-- Declaration: monsterGriessDim
+-- Extracted by StaticSplit

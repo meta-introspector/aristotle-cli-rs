@@ -1,0 +1,2 @@
+-- Declaration: earth_all_prime
+-- Extracted by StaticSplit

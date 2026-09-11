@@ -1,0 +1,2 @@
+-- Declaration: monomyth_spore_germinates_moonshine
+-- Extracted by StaticSplit

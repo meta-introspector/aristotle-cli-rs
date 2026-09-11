@@ -1,0 +1,2 @@
+-- Declaration: weakEquiv_of_eq
+-- Extracted by StaticSplit

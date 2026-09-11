@@ -1,0 +1,2 @@
+-- Declaration: stripTrailingSlashes_clientBaseUrl
+-- Extracted by StaticSplit

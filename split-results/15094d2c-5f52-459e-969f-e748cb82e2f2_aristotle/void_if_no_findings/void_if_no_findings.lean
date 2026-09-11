@@ -1,0 +1,2 @@
+-- Declaration: void_if_no_findings
+-- Extracted by StaticSplit

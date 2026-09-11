@@ -1,0 +1,2 @@
+-- Declaration: elaborateSchema
+-- Extracted by StaticSplit

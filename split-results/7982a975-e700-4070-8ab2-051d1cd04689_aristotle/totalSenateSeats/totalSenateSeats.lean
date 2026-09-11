@@ -1,0 +1,2 @@
+-- Declaration: totalSenateSeats
+-- Extracted by StaticSplit

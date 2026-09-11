@@ -1,0 +1,2 @@
+-- Declaration: applyPrim_sub
+-- Extracted by StaticSplit

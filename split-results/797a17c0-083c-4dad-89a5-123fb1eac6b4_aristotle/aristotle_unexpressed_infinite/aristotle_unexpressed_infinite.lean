@@ -1,0 +1,2 @@
+-- Declaration: aristotle_unexpressed_infinite
+-- Extracted by StaticSplit

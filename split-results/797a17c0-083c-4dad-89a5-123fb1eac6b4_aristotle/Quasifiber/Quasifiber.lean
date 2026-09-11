@@ -1,0 +1,2 @@
+-- Declaration: Quasifiber
+-- Extracted by StaticSplit

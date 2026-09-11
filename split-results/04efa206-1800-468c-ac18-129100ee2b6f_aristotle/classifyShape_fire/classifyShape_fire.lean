@@ -1,0 +1,2 @@
+-- Declaration: classifyShape_fire
+-- Extracted by StaticSplit

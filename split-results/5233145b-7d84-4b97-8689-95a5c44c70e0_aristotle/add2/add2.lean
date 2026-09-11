@@ -1,0 +1,2 @@
+-- Declaration: add2
+-- Extracted by StaticSplit

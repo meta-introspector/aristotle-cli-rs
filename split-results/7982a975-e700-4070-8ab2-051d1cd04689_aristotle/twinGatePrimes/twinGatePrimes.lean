@@ -1,0 +1,2 @@
+-- Declaration: twinGatePrimes
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: atp_is_biology
+-- Extracted by StaticSplit

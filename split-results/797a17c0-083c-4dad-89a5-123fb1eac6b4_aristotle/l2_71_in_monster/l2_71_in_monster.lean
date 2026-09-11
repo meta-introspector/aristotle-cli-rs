@@ -1,0 +1,2 @@
+-- Declaration: l2_71_in_monster
+-- Extracted by StaticSplit

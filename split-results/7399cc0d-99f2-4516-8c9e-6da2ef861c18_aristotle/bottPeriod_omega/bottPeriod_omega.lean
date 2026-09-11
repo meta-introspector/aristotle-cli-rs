@@ -1,0 +1,2 @@
+-- Declaration: bottPeriod_omega
+-- Extracted by StaticSplit

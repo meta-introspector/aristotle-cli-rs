@@ -1,0 +1,2 @@
+-- Declaration: peirce
+-- Extracted by StaticSplit

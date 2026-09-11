@@ -1,0 +1,2 @@
+-- Declaration: pariah_primes_excluded
+-- Extracted by StaticSplit

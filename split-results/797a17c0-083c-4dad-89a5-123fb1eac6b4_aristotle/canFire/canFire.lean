@@ -1,0 +1,2 @@
+-- Declaration: canFire
+-- Extracted by StaticSplit

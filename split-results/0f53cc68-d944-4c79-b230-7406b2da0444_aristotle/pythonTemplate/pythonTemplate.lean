@@ -1,0 +1,2 @@
+-- Declaration: pythonTemplate
+-- Extracted by StaticSplit

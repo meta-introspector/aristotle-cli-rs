@@ -1,0 +1,2 @@
+-- Declaration: valid_conjL_inv
+-- Extracted by StaticSplit

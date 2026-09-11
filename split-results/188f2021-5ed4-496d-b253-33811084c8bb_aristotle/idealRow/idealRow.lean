@@ -1,0 +1,2 @@
+-- Declaration: idealRow
+-- Extracted by StaticSplit

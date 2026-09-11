@@ -1,0 +1,2 @@
+-- Declaration: moonshineGradedDim
+-- Extracted by StaticSplit

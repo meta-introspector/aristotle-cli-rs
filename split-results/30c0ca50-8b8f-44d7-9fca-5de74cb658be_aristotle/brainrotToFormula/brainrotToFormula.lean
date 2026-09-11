@@ -1,0 +1,2 @@
+-- Declaration: brainrotToFormula
+-- Extracted by StaticSplit

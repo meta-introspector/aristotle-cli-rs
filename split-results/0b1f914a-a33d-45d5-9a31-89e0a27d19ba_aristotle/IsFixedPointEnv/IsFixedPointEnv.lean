@@ -1,0 +1,2 @@
+-- Declaration: IsFixedPointEnv
+-- Extracted by StaticSplit

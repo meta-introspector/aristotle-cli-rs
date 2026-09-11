@@ -1,0 +1,2 @@
+-- Declaration: schemaSchema
+-- Extracted by StaticSplit

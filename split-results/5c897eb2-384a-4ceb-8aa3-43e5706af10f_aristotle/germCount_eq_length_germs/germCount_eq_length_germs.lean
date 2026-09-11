@@ -1,0 +1,2 @@
+-- Declaration: germCount_eq_length_germs
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: LimoCarriage.wellFormed
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: totalIrreps
+-- Extracted by StaticSplit

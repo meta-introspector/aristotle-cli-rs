@@ -1,0 +1,2 @@
+-- Declaration: serre_derivative_weight
+-- Extracted by StaticSplit

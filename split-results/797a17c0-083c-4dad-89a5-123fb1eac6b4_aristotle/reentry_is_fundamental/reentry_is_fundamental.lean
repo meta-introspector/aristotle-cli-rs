@@ -1,0 +1,2 @@
+-- Declaration: reentry_is_fundamental
+-- Extracted by StaticSplit

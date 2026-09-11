@@ -1,0 +1,2 @@
+-- Declaration: jConstantTerm
+-- Extracted by StaticSplit

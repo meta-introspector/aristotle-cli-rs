@@ -1,0 +1,2 @@
+-- Declaration: ssBasis_all_prime
+-- Extracted by StaticSplit

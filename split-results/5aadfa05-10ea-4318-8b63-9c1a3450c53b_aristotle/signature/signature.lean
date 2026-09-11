@@ -1,0 +1,2 @@
+-- Declaration: signature
+-- Extracted by StaticSplit

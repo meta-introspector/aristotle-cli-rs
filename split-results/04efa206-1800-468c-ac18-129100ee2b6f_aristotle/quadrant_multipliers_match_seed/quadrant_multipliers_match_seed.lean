@@ -1,0 +1,2 @@
+-- Declaration: quadrant_multipliers_match_seed
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: T_.compare
+-- Extracted by StaticSplit

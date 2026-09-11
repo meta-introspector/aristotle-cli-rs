@@ -1,0 +1,2 @@
+-- Declaration: seventy_two_not_prime
+-- Extracted by StaticSplit

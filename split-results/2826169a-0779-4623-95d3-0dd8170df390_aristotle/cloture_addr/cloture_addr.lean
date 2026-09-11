@@ -1,0 +1,2 @@
+-- Declaration: cloture_addr
+-- Extracted by StaticSplit

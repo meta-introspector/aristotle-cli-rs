@@ -1,0 +1,2 @@
+-- Declaration: moonshineModuleDim
+-- Extracted by StaticSplit

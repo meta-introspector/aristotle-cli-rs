@@ -1,0 +1,2 @@
+-- Declaration: GL25_nirreps
+-- Extracted by StaticSplit

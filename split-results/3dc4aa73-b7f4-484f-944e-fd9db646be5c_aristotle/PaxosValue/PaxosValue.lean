@@ -1,0 +1,2 @@
+-- Declaration: PaxosValue
+-- Extracted by StaticSplit

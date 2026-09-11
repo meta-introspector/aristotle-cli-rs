@@ -1,0 +1,2 @@
+-- Declaration: replication_check_23
+-- Extracted by StaticSplit

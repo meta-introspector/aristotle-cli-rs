@@ -1,0 +1,2 @@
+-- Declaration: three_max_odd_exponent
+-- Extracted by StaticSplit

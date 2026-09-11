@@ -1,0 +1,2 @@
+-- Declaration: fixedPointPrime
+-- Extracted by StaticSplit

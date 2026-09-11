@@ -1,0 +1,2 @@
+-- Declaration: sheafBlock_Earth_digest_nonzero
+-- Extracted by StaticSplit

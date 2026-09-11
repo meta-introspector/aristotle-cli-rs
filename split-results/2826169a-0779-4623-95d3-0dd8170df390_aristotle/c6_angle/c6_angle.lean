@@ -1,0 +1,2 @@
+-- Declaration: c6_angle
+-- Extracted by StaticSplit

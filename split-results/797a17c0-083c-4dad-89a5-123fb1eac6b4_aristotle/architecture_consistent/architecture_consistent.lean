@@ -1,0 +1,2 @@
+-- Declaration: architecture_consistent
+-- Extracted by StaticSplit

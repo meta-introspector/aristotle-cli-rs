@@ -1,0 +1,2 @@
+-- Declaration: clotureEntry
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: e4_constant
+-- Extracted by StaticSplit

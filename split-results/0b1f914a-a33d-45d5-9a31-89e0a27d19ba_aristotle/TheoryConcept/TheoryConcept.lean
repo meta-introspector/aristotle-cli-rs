@@ -1,0 +1,2 @@
+-- Declaration: TheoryConcept
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: diamond_valid
+-- Extracted by StaticSplit

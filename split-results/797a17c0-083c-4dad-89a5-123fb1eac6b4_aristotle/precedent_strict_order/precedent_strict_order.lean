@@ -1,0 +1,2 @@
+-- Declaration: precedent_strict_order
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: lambencies_card
+-- Extracted by StaticSplit

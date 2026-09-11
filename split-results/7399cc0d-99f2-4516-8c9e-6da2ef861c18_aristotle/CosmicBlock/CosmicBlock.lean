@@ -1,0 +1,2 @@
+-- Declaration: CosmicBlock
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: taut
+-- Extracted by StaticSplit

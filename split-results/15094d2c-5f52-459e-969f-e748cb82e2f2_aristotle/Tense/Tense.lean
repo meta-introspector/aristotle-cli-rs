@@ -1,0 +1,2 @@
+-- Declaration: Tense
+-- Extracted by StaticSplit

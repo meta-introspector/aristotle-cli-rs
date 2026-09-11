@@ -1,0 +1,2 @@
+-- Declaration: trimLeadingSlashes_manySlashes
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ext53L35_monster_connection
+-- Extracted by StaticSplit

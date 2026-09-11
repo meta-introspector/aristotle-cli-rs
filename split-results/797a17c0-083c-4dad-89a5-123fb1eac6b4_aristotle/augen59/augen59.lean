@@ -1,0 +1,2 @@
+-- Declaration: augen59
+-- Extracted by StaticSplit

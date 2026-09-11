@@ -1,0 +1,2 @@
+-- Declaration: steal_removes
+-- Extracted by StaticSplit

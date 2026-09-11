@@ -1,0 +1,2 @@
+-- Declaration: extVibeShift
+-- Extracted by StaticSplit

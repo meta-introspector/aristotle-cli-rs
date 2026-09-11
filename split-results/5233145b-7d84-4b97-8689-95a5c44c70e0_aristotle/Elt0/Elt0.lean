@@ -1,0 +1,2 @@
+-- Declaration: Elt0
+-- Extracted by StaticSplit

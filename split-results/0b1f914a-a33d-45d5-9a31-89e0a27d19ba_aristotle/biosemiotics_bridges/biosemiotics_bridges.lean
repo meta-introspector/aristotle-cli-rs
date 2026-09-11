@@ -1,0 +1,2 @@
+-- Declaration: biosemiotics_bridges
+-- Extracted by StaticSplit

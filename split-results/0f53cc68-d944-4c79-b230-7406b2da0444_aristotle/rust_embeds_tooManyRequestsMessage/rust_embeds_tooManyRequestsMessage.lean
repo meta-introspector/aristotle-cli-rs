@@ -1,0 +1,2 @@
+-- Declaration: rust_embeds_tooManyRequestsMessage
+-- Extracted by StaticSplit

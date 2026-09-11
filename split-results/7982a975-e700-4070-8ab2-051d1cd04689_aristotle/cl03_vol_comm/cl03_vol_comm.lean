@@ -1,0 +1,2 @@
+-- Declaration: cl03_vol_comm
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: translateInstance
+-- Extracted by StaticSplit

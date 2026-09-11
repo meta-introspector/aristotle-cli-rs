@@ -1,0 +1,2 @@
+-- Declaration: M24_M23_index
+-- Extracted by StaticSplit

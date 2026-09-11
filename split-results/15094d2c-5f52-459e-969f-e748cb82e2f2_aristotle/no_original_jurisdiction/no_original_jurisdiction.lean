@@ -1,0 +1,2 @@
+-- Declaration: no_original_jurisdiction
+-- Extracted by StaticSplit

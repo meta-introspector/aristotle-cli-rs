@@ -1,0 +1,2 @@
+-- Declaration: TriangleWalker
+-- Extracted by StaticSplit

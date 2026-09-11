@@ -1,0 +1,2 @@
+-- Declaration: weighted_tail_coprime
+-- Extracted by StaticSplit

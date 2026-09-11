@@ -1,0 +1,2 @@
+-- Declaration: McKayThompsonSeries_coeff
+-- Extracted by StaticSplit

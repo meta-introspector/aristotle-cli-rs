@@ -1,0 +1,2 @@
+-- Declaration: ConsensusChain.trans_length
+-- Extracted by StaticSplit

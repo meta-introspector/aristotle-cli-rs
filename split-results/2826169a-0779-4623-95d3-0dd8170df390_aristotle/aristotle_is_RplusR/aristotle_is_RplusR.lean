@@ -1,0 +1,2 @@
+-- Declaration: aristotle_is_RplusR
+-- Extracted by StaticSplit

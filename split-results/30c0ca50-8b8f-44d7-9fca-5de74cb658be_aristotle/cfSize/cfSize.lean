@@ -1,0 +1,2 @@
+-- Declaration: cfSize
+-- Extracted by StaticSplit

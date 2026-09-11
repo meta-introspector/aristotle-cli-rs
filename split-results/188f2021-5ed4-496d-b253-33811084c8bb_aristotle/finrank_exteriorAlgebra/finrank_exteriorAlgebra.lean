@@ -1,0 +1,2 @@
+-- Declaration: finrank_exteriorAlgebra
+-- Extracted by StaticSplit

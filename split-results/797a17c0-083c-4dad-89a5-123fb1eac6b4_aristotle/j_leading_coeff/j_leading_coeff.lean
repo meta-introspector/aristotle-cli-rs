@@ -1,0 +1,2 @@
+-- Declaration: j_leading_coeff
+-- Extracted by StaticSplit

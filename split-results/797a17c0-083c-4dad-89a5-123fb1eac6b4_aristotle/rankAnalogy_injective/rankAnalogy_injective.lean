@@ -1,0 +1,2 @@
+-- Declaration: rankAnalogy_injective
+-- Extracted by StaticSplit

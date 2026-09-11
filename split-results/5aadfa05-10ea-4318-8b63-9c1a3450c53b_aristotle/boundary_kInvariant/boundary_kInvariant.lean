@@ -1,0 +1,2 @@
+-- Declaration: boundary_kInvariant
+-- Extracted by StaticSplit

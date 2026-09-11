@@ -1,0 +1,2 @@
+-- Declaration: preservesBase
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: IdentityConcept
+-- Extracted by StaticSplit

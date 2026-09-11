@@ -1,0 +1,2 @@
+-- Declaration: BinInt.max
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cl15_dim
+-- Extracted by StaticSplit

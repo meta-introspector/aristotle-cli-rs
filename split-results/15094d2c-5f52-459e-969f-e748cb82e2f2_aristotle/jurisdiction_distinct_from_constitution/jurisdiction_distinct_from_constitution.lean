@@ -1,0 +1,2 @@
+-- Declaration: jurisdiction_distinct_from_constitution
+-- Extracted by StaticSplit

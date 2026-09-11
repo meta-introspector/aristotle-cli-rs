@@ -1,0 +1,2 @@
+-- Declaration: chart_total_invariant
+-- Extracted by StaticSplit

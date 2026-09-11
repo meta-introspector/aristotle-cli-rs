@@ -1,0 +1,2 @@
+-- Declaration: RipenessFacts.ripe
+-- Extracted by StaticSplit

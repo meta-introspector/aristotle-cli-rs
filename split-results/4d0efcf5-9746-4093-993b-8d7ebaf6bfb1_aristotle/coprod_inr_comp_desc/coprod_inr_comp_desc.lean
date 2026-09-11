@@ -1,0 +1,2 @@
+-- Declaration: coprod_inr_comp_desc
+-- Extracted by StaticSplit

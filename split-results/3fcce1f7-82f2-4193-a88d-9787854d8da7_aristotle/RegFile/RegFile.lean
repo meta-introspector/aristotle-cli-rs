@@ -1,0 +1,2 @@
+-- Declaration: RegFile
+-- Extracted by StaticSplit

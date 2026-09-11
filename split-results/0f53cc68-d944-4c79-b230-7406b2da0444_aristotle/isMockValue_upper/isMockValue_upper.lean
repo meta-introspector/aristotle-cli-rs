@@ -1,0 +1,2 @@
+-- Declaration: isMockValue_upper
+-- Extracted by StaticSplit

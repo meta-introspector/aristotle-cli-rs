@@ -1,0 +1,2 @@
+-- Declaration: thirty_seven_smallest_non_ssp
+-- Extracted by StaticSplit

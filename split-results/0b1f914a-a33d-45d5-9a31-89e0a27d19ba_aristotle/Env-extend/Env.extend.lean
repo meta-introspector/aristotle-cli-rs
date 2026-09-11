@@ -1,0 +1,2 @@
+-- Declaration: Env.extend
+-- Extracted by StaticSplit

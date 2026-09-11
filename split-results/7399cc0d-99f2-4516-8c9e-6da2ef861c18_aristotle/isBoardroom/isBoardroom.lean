@@ -1,0 +1,2 @@
+-- Declaration: isBoardroom
+-- Extracted by StaticSplit

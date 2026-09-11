@@ -1,0 +1,2 @@
+-- Declaration: kGroupN_periodic2
+-- Extracted by StaticSplit

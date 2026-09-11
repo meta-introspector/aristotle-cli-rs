@@ -1,0 +1,2 @@
+-- Declaration: bott_loop_monodromy
+-- Extracted by StaticSplit

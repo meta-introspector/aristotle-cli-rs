@@ -1,0 +1,2 @@
+-- Declaration: de_morgan_conj
+-- Extracted by StaticSplit

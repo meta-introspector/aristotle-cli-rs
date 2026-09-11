@@ -1,0 +1,2 @@
+-- Declaration: EnumRepresentation
+-- Extracted by StaticSplit

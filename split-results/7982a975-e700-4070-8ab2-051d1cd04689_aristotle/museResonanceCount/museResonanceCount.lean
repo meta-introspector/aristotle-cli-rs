@@ -1,0 +1,2 @@
+-- Declaration: museResonanceCount
+-- Extracted by StaticSplit

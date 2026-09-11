@@ -1,0 +1,2 @@
+-- Declaration: oracleProduceCrank_hash
+-- Extracted by StaticSplit

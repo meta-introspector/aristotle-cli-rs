@@ -1,0 +1,2 @@
+-- Declaration: ReconstructionResistant
+-- Extracted by StaticSplit

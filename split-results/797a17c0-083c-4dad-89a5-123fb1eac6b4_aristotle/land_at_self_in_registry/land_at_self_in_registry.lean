@@ -1,0 +1,2 @@
+-- Declaration: land_at_self_in_registry
+-- Extracted by StaticSplit

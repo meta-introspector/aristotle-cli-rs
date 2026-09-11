@@ -1,0 +1,2 @@
+-- Declaration: q42Prime_bott_classes
+-- Extracted by StaticSplit

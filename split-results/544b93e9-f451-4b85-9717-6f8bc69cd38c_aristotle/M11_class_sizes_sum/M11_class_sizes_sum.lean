@@ -1,0 +1,2 @@
+-- Declaration: M11_class_sizes_sum
+-- Extracted by StaticSplit

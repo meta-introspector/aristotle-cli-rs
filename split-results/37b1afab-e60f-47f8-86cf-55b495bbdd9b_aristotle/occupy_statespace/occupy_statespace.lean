@@ -1,0 +1,2 @@
+-- Declaration: occupy_statespace
+-- Extracted by StaticSplit

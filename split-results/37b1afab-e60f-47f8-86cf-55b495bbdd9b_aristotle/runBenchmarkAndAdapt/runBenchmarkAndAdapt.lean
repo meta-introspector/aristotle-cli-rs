@@ -1,0 +1,2 @@
+-- Declaration: runBenchmarkAndAdapt
+-- Extracted by StaticSplit

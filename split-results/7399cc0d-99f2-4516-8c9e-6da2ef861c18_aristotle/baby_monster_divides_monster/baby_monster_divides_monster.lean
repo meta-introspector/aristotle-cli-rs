@@ -1,0 +1,2 @@
+-- Declaration: baby_monster_divides_monster
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: augen59_is_q42
+-- Extracted by StaticSplit

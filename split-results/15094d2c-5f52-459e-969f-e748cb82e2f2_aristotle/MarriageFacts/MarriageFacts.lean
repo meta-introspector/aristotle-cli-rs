@@ -1,0 +1,2 @@
+-- Declaration: MarriageFacts
+-- Extracted by StaticSplit

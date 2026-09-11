@@ -1,0 +1,2 @@
+-- Declaration: monsterTrivialDim
+-- Extracted by StaticSplit

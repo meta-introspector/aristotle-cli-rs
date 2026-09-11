@@ -1,0 +1,2 @@
+-- Declaration: bladePayload
+-- Extracted by StaticSplit

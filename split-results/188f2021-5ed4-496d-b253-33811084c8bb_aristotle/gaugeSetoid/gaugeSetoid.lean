@@ -1,0 +1,2 @@
+-- Declaration: gaugeSetoid
+-- Extracted by StaticSplit

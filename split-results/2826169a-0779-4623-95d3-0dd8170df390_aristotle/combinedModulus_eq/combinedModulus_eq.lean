@@ -1,0 +1,2 @@
+-- Declaration: combinedModulus_eq
+-- Extracted by StaticSplit

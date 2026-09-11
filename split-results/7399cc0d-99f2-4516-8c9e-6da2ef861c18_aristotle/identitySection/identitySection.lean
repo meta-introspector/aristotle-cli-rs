@@ -1,0 +1,2 @@
+-- Declaration: identitySection
+-- Extracted by StaticSplit

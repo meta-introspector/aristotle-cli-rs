@@ -1,0 +1,2 @@
+-- Declaration: mckayCoeff_eq
+-- Extracted by StaticSplit

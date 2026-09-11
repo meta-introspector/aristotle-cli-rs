@@ -1,0 +1,2 @@
+-- Declaration: monsterOddPart
+-- Extracted by StaticSplit

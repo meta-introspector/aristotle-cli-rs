@@ -1,0 +1,2 @@
+-- Declaration: RegisteredLemma
+-- Extracted by StaticSplit

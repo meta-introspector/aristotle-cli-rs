@@ -1,0 +1,2 @@
+-- Declaration: crt_inv47
+-- Extracted by StaticSplit

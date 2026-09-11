@@ -1,0 +1,2 @@
+-- Declaration: toStr_ofString
+-- Extracted by StaticSplit

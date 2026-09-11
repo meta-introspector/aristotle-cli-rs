@@ -1,0 +1,2 @@
+-- Declaration: hecke_41_position
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: canonicalName_injective
+-- Extracted by StaticSplit

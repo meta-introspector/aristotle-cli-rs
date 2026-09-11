@@ -1,0 +1,2 @@
+-- Declaration: walkTrace
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: eudaimonia
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: dp_implies_reconstruction_resistance
+-- Extracted by StaticSplit

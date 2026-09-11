@@ -1,0 +1,2 @@
+-- Declaration: obj_GovBase
+-- Extracted by StaticSplit

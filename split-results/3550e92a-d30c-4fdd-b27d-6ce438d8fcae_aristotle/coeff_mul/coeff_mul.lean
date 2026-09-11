@@ -1,0 +1,2 @@
+-- Declaration: coeff_mul
+-- Extracted by StaticSplit

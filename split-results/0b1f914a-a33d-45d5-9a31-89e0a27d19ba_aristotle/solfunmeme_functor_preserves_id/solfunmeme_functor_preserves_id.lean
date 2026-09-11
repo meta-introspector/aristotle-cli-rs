@@ -1,0 +1,2 @@
+-- Declaration: solfunmeme_functor_preserves_id
+-- Extracted by StaticSplit

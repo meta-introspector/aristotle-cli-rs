@@ -1,0 +1,2 @@
+-- Declaration: three_lt_pi
+-- Extracted by StaticSplit

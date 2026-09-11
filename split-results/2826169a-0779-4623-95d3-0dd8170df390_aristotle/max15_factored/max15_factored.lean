@@ -1,0 +1,2 @@
+-- Declaration: max15_factored
+-- Extracted by StaticSplit

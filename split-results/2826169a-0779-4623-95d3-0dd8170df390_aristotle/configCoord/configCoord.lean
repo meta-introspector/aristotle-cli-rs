@@ -1,0 +1,2 @@
+-- Declaration: configCoord
+-- Extracted by StaticSplit

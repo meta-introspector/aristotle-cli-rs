@@ -1,0 +1,2 @@
+-- Declaration: two_witnesses_suffice
+-- Extracted by StaticSplit

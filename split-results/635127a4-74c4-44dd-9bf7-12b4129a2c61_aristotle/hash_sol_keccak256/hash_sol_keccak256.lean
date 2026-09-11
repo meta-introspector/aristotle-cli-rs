@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_keccak256
+-- Extracted by StaticSplit

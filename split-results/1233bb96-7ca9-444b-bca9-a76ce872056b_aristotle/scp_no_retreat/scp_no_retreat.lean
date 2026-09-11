@@ -1,0 +1,2 @@
+-- Declaration: scp_no_retreat
+-- Extracted by StaticSplit

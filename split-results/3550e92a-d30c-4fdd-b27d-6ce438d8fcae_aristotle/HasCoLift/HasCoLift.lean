@@ -1,0 +1,2 @@
+-- Declaration: HasCoLift
+-- Extracted by StaticSplit

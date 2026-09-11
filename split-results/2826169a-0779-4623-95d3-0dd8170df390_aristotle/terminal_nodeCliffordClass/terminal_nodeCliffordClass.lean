@@ -1,0 +1,2 @@
+-- Declaration: terminal_nodeCliffordClass
+-- Extracted by StaticSplit

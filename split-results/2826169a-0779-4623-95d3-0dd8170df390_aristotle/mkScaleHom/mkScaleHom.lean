@@ -1,0 +1,2 @@
+-- Declaration: mkScaleHom
+-- Extracted by StaticSplit

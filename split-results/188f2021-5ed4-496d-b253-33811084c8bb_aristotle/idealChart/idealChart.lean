@@ -1,0 +1,2 @@
+-- Declaration: idealChart
+-- Extracted by StaticSplit

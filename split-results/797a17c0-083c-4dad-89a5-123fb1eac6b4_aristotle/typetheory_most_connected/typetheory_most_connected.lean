@@ -1,0 +1,2 @@
+-- Declaration: typetheory_most_connected
+-- Extracted by StaticSplit

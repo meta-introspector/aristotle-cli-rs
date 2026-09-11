@@ -1,0 +1,2 @@
+-- Declaration: ConsciousnessInstance
+-- Extracted by StaticSplit

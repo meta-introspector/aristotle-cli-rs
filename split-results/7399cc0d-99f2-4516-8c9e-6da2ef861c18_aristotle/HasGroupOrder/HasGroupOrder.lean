@@ -1,0 +1,2 @@
+-- Declaration: HasGroupOrder
+-- Extracted by StaticSplit

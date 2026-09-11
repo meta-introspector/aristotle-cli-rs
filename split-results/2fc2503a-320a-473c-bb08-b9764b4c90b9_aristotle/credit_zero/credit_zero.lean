@@ -1,0 +1,2 @@
+-- Declaration: credit_zero
+-- Extracted by StaticSplit

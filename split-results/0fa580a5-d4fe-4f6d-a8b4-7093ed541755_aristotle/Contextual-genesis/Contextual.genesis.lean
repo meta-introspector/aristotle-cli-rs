@@ -1,0 +1,2 @@
+-- Declaration: Contextual.genesis
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: convergence_half_ratio
+-- Extracted by StaticSplit

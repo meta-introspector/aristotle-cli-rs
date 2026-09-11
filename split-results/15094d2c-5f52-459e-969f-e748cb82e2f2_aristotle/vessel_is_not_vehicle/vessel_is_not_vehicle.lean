@@ -1,0 +1,2 @@
+-- Declaration: vessel_is_not_vehicle
+-- Extracted by StaticSplit

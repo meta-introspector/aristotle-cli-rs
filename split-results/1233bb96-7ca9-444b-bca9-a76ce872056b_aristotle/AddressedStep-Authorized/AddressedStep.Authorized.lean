@@ -1,0 +1,2 @@
+-- Declaration: AddressedStep.Authorized
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: idealBootstrapAmbiguity
+-- Extracted by StaticSplit

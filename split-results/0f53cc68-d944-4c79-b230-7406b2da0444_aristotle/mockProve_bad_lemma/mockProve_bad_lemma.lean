@@ -1,0 +1,2 @@
+-- Declaration: mockProve_bad_lemma
+-- Extracted by StaticSplit

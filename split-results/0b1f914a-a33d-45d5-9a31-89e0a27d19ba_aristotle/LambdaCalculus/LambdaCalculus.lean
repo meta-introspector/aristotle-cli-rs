@@ -1,0 +1,2 @@
+-- Declaration: LambdaCalculus
+-- Extracted by StaticSplit

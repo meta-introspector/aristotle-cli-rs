@@ -1,0 +1,2 @@
+-- Declaration: smooth23_iff_all_large_valuations_zero
+-- Extracted by StaticSplit

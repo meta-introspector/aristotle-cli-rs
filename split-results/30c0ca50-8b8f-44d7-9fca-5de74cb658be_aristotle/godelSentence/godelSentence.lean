@@ -1,0 +1,2 @@
+-- Declaration: godelSentence
+-- Extracted by StaticSplit

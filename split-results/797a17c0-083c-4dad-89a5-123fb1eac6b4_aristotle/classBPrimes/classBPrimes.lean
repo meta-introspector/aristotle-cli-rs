@@ -1,0 +1,2 @@
+-- Declaration: classBPrimes
+-- Extracted by StaticSplit

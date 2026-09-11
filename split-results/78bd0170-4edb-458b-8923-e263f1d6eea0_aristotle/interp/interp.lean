@@ -1,0 +1,2 @@
+-- Declaration: interp
+-- Extracted by StaticSplit

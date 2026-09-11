@@ -1,0 +1,2 @@
+-- Declaration: Ternary.support
+-- Extracted by StaticSplit

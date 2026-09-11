@@ -1,0 +1,2 @@
+-- Declaration: redundant_forcing_paths
+-- Extracted by StaticSplit

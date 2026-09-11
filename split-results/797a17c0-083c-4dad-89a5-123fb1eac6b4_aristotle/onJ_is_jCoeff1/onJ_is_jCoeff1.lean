@@ -1,0 +1,2 @@
+-- Declaration: onJ_is_jCoeff1
+-- Extracted by StaticSplit

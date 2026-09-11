@@ -1,0 +1,2 @@
+-- Declaration: QuorumAgreed
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: obj_MonsterWalk
+-- Extracted by StaticSplit

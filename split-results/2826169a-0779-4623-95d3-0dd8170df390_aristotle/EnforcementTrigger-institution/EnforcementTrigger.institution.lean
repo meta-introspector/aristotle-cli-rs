@@ -1,0 +1,2 @@
+-- Declaration: EnforcementTrigger.institution
+-- Extracted by StaticSplit

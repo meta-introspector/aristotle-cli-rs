@@ -1,0 +1,2 @@
+-- Declaration: auto_decide
+-- Extracted by StaticSplit

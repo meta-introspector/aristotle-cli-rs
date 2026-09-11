@@ -1,0 +1,2 @@
+-- Declaration: BinInt.compare
+-- Extracted by StaticSplit

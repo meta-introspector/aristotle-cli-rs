@@ -1,0 +1,2 @@
+-- Declaration: bott_orbit_2
+-- Extracted by StaticSplit

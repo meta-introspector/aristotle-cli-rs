@@ -1,0 +1,2 @@
+-- Declaration: getData
+-- Extracted by StaticSplit

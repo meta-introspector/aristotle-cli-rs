@@ -1,0 +1,2 @@
+-- Declaration: cidOfName
+-- Extracted by StaticSplit

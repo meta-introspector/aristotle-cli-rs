@@ -1,0 +1,2 @@
+-- Declaration: citationMinWeight
+-- Extracted by StaticSplit

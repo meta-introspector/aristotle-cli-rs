@@ -1,0 +1,2 @@
+-- Declaration: hecke_41_coprime_monster_dim
+-- Extracted by StaticSplit

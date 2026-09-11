@@ -1,0 +1,2 @@
+-- Declaration: j_coeff_2
+-- Extracted by StaticSplit

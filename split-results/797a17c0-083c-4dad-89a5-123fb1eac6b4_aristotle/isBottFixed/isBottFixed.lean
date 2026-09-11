@@ -1,0 +1,2 @@
+-- Declaration: isBottFixed
+-- Extracted by StaticSplit

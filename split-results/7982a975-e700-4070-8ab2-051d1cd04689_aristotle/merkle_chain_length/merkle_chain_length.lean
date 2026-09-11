@@ -1,0 +1,2 @@
+-- Declaration: merkle_chain_length
+-- Extracted by StaticSplit

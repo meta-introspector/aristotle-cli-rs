@@ -1,0 +1,2 @@
+-- Declaration: tailPrimeAt_prime
+-- Extracted by StaticSplit

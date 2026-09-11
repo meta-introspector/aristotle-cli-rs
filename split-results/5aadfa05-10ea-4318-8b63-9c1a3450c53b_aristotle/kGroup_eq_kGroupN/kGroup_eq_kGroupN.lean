@@ -1,0 +1,2 @@
+-- Declaration: kGroup_eq_kGroupN
+-- Extracted by StaticSplit

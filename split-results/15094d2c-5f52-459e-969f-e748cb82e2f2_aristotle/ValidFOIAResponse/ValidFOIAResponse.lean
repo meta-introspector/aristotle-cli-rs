@@ -1,0 +1,2 @@
+-- Declaration: ValidFOIAResponse
+-- Extracted by StaticSplit

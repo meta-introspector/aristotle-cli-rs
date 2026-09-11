@@ -1,0 +1,2 @@
+-- Declaration: writeConfig
+-- Extracted by StaticSplit

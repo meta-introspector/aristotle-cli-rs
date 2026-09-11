@@ -1,0 +1,2 @@
+-- Declaration: SOPAuditResult
+-- Extracted by StaticSplit

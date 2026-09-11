@@ -1,0 +1,2 @@
+-- Declaration: embeddedProofs
+-- Extracted by StaticSplit

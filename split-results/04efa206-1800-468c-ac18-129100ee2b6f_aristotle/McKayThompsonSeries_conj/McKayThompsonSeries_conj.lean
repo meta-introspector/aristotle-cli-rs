@@ -1,0 +1,2 @@
+-- Declaration: McKayThompsonSeries_conj
+-- Extracted by StaticSplit

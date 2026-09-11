@@ -1,0 +1,2 @@
+-- Declaration: toyVOA
+-- Extracted by StaticSplit

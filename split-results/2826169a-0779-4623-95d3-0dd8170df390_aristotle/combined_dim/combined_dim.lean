@@ -1,0 +1,2 @@
+-- Declaration: combined_dim
+-- Extracted by StaticSplit

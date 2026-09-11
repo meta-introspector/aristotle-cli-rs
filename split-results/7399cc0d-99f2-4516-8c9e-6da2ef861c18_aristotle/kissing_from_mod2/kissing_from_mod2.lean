@@ -1,0 +1,2 @@
+-- Declaration: kissing_from_mod2
+-- Extracted by StaticSplit

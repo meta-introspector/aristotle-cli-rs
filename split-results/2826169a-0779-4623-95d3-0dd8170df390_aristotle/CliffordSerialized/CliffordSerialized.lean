@@ -1,0 +1,2 @@
+-- Declaration: CliffordSerialized
+-- Extracted by StaticSplit

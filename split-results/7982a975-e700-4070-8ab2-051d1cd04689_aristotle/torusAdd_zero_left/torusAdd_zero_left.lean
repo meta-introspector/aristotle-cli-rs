@@ -1,0 +1,2 @@
+-- Declaration: torusAdd_zero_left
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MonsterExp.max
+-- Extracted by StaticSplit

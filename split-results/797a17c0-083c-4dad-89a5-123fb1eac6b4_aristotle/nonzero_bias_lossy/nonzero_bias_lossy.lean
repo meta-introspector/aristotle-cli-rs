@@ -1,0 +1,2 @@
+-- Declaration: nonzero_bias_lossy
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: bladeToMonsterBase_total
+-- Extracted by StaticSplit

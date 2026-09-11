@@ -1,0 +1,2 @@
+-- Declaration: MultiFiberedDynSys
+-- Extracted by StaticSplit

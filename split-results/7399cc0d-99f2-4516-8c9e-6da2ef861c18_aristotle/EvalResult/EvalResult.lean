@@ -1,0 +1,2 @@
+-- Declaration: EvalResult
+-- Extracted by StaticSplit

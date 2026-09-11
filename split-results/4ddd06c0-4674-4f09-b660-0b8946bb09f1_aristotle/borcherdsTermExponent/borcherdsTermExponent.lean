@@ -1,0 +1,2 @@
+-- Declaration: borcherdsTermExponent
+-- Extracted by StaticSplit

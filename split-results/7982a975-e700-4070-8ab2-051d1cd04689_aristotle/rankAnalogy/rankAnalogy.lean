@@ -1,0 +1,2 @@
+-- Declaration: rankAnalogy
+-- Extracted by StaticSplit

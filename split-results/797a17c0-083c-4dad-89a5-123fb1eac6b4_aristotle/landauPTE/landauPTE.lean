@@ -1,0 +1,2 @@
+-- Declaration: landauPTE
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: clifford_metric_sq
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Kernel.comp_self_eq
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: symbiotic_effectiveness
+-- Extracted by StaticSplit

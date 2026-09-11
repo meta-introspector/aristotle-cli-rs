@@ -1,0 +1,2 @@
+-- Declaration: fusion_coreWeight_ge_two
+-- Extracted by StaticSplit

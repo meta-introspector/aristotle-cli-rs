@@ -1,0 +1,2 @@
+-- Declaration: numStandingRules118th
+-- Extracted by StaticSplit

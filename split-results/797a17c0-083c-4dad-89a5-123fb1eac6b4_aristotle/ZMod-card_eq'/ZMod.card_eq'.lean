@@ -1,0 +1,2 @@
+-- Declaration: ZMod.card_eq'
+-- Extracted by StaticSplit

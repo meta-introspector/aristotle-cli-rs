@@ -1,0 +1,2 @@
+-- Declaration: GameM
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: DatabaseConcept
+-- Extracted by StaticSplit

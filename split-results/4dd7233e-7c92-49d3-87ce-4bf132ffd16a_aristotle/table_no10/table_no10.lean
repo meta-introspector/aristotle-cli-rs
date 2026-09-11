@@ -1,0 +1,2 @@
+-- Declaration: table_no10
+-- Extracted by StaticSplit

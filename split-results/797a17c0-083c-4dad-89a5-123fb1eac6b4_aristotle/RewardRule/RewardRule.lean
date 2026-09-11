@@ -1,0 +1,2 @@
+-- Declaration: RewardRule
+-- Extracted by StaticSplit

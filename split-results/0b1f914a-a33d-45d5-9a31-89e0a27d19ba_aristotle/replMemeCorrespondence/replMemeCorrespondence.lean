@@ -1,0 +1,2 @@
+-- Declaration: replMemeCorrespondence
+-- Extracted by StaticSplit

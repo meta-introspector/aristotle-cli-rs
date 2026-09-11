@@ -1,0 +1,2 @@
+-- Declaration: firstCellSize_from_exponents
+-- Extracted by StaticSplit

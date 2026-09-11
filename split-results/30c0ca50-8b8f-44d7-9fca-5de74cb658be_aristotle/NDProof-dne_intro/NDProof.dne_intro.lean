@@ -1,0 +1,2 @@
+-- Declaration: NDProof.dne_intro
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: tailPart_eq_prod
+-- Extracted by StaticSplit

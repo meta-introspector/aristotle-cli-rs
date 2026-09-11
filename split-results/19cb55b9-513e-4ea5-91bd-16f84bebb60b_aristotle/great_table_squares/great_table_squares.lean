@@ -1,0 +1,2 @@
+-- Declaration: great_table_squares
+-- Extracted by StaticSplit

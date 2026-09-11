@@ -1,0 +1,2 @@
+-- Declaration: card_real
+-- Extracted by StaticSplit

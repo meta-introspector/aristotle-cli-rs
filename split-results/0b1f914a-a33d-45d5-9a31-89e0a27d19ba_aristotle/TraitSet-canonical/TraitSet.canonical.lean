@@ -1,0 +1,2 @@
+-- Declaration: TraitSet.canonical
+-- Extracted by StaticSplit

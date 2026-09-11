@@ -1,0 +1,2 @@
+-- Declaration: ZOSHom
+-- Extracted by StaticSplit

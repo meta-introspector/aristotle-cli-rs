@@ -1,0 +1,2 @@
+-- Declaration: ss_descend_isPTE
+-- Extracted by StaticSplit

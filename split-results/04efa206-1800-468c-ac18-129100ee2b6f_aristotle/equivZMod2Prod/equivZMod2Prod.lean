@@ -1,0 +1,2 @@
+-- Declaration: equivZMod2Prod
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: census_two_Z_per_period
+-- Extracted by StaticSplit

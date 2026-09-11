@@ -1,0 +1,2 @@
+-- Declaration: kleisliPure
+-- Extracted by StaticSplit

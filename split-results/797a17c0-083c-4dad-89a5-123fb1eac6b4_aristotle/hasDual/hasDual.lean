@@ -1,0 +1,2 @@
+-- Declaration: hasDual
+-- Extracted by StaticSplit

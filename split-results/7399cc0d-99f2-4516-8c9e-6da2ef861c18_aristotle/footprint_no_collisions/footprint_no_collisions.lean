@@ -1,0 +1,2 @@
+-- Declaration: footprint_no_collisions
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: reaches_trans
+-- Extracted by StaticSplit

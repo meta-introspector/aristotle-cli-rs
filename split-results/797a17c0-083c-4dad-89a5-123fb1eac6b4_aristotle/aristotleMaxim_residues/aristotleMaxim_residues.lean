@@ -1,0 +1,2 @@
+-- Declaration: aristotleMaxim_residues
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: encode_offset_coprime
+-- Extracted by StaticSplit

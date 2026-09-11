@@ -1,0 +1,2 @@
+-- Declaration: padic_val_coprime
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: InjectiveName
+-- Extracted by StaticSplit

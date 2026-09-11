@@ -1,0 +1,2 @@
+-- Declaration: BoardroomState
+-- Extracted by StaticSplit

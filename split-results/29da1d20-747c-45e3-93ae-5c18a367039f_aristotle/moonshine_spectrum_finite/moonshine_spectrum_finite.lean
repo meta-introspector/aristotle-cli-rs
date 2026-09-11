@@ -1,0 +1,2 @@
+-- Declaration: moonshine_spectrum_finite
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: M24_factored
+-- Extracted by StaticSplit

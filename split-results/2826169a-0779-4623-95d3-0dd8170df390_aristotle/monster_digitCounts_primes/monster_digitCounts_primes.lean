@@ -1,0 +1,2 @@
+-- Declaration: monster_digitCounts_primes
+-- Extracted by StaticSplit

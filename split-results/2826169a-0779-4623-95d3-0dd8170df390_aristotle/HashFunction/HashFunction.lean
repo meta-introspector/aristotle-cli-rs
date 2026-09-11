@@ -1,0 +1,2 @@
+-- Declaration: HashFunction
+-- Extracted by StaticSplit

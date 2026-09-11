@@ -1,0 +1,2 @@
+-- Declaration: neuroSccOf
+-- Extracted by StaticSplit

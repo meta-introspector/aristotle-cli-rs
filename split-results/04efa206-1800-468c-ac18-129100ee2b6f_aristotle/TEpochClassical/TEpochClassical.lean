@@ -1,0 +1,2 @@
+-- Declaration: TEpochClassical
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: coronation_in_three_steps
+-- Extracted by StaticSplit

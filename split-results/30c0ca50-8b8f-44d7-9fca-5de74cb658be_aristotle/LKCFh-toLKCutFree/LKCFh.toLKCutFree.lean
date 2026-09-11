@@ -1,0 +1,2 @@
+-- Declaration: LKCFh.toLKCutFree
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: sheafSection_Earth_bott
+-- Extracted by StaticSplit

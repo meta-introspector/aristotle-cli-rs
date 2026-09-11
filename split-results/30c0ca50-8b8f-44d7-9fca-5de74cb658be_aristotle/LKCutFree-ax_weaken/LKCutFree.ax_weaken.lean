@@ -1,0 +1,2 @@
+-- Declaration: LKCutFree.ax_weaken
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Treaty.ratified
+-- Extracted by StaticSplit

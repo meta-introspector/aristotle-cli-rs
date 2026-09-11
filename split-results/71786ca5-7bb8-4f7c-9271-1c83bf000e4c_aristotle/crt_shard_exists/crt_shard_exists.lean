@@ -1,0 +1,2 @@
+-- Declaration: crt_shard_exists
+-- Extracted by StaticSplit

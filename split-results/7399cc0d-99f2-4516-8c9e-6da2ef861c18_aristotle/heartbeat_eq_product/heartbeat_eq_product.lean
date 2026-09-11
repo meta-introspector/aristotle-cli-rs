@@ -1,0 +1,2 @@
+-- Declaration: heartbeat_eq_product
+-- Extracted by StaticSplit

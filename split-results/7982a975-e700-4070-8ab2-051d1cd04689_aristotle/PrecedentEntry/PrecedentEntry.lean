@@ -1,0 +1,2 @@
+-- Declaration: PrecedentEntry
+-- Extracted by StaticSplit

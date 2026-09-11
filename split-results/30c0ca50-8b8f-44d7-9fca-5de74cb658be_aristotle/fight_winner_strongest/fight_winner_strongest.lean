@@ -1,0 +1,2 @@
+-- Declaration: fight_winner_strongest
+-- Extracted by StaticSplit

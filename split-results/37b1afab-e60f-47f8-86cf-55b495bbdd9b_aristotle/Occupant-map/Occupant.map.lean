@@ -1,0 +1,2 @@
+-- Declaration: Occupant.map
+-- Extracted by StaticSplit

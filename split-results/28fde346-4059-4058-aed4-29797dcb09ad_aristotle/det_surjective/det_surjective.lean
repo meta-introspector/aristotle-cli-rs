@@ -1,0 +1,2 @@
+-- Declaration: det_surjective
+-- Extracted by StaticSplit

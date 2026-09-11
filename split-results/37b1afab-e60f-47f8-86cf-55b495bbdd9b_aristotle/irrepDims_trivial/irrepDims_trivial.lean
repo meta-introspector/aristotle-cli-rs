@@ -1,0 +1,2 @@
+-- Declaration: irrepDims_trivial
+-- Extracted by StaticSplit

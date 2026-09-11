@@ -1,0 +1,2 @@
+-- Declaration: List.fold_right
+-- Extracted by StaticSplit

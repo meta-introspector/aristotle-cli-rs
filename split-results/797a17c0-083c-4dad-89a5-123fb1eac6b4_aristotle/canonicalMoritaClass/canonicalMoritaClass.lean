@@ -1,0 +1,2 @@
+-- Declaration: canonicalMoritaClass
+-- Extracted by StaticSplit

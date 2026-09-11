@@ -1,0 +1,2 @@
+-- Declaration: gradedCharacter
+-- Extracted by StaticSplit

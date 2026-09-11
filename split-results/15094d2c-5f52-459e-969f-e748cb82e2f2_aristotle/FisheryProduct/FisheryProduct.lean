@@ -1,0 +1,2 @@
+-- Declaration: FisheryProduct
+-- Extracted by StaticSplit

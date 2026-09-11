@@ -1,0 +1,2 @@
+-- Declaration: MonsterAligned
+-- Extracted by StaticSplit

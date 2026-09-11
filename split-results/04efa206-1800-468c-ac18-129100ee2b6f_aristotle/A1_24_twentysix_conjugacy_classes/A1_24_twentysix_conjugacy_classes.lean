@@ -1,0 +1,2 @@
+-- Declaration: A1_24_twentysix_conjugacy_classes
+-- Extracted by StaticSplit

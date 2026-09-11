@@ -1,0 +1,2 @@
+-- Declaration: FiberedMorphism
+-- Extracted by StaticSplit

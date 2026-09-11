@@ -1,0 +1,2 @@
+-- Declaration: exponent_sum_value
+-- Extracted by StaticSplit

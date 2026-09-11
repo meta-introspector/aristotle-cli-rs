@@ -1,0 +1,2 @@
+-- Declaration: UnionRepresentation_Envelope
+-- Extracted by StaticSplit

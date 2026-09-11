@@ -1,0 +1,2 @@
+-- Declaration: both_shards_in_lattice
+-- Extracted by StaticSplit

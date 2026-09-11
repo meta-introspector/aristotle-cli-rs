@@ -1,0 +1,2 @@
+-- Declaration: instCategoryCart
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: other_equivalent_is_county
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: total_governance_body
+-- Extracted by StaticSplit

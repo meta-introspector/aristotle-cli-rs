@@ -1,0 +1,2 @@
+-- Declaration: master_fold_theorem
+-- Extracted by StaticSplit

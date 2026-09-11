@@ -1,0 +1,2 @@
+-- Declaration: isEquivalence_toDom
+-- Extracted by StaticSplit

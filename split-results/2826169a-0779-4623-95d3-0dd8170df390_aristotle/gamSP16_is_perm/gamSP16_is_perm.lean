@@ -1,0 +1,2 @@
+-- Declaration: gamSP16_is_perm
+-- Extracted by StaticSplit

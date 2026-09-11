@@ -1,0 +1,2 @@
+-- Declaration: MandatorySubmission.debateAllowed
+-- Extracted by StaticSplit

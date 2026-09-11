@@ -1,0 +1,2 @@
+-- Declaration: GL25dims
+-- Extracted by StaticSplit

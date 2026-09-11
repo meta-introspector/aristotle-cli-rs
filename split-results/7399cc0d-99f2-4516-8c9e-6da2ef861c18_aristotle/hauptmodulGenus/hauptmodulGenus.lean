@@ -1,0 +1,2 @@
+-- Declaration: hauptmodulGenus
+-- Extracted by StaticSplit

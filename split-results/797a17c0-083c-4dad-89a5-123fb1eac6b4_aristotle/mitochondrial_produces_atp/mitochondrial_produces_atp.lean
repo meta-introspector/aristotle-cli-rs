@@ -1,0 +1,2 @@
+-- Declaration: mitochondrial_produces_atp
+-- Extracted by StaticSplit

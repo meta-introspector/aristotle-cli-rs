@@ -1,0 +1,2 @@
+-- Declaration: enochian_table_arithmetic
+-- Extracted by StaticSplit

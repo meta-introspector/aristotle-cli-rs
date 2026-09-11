@@ -1,0 +1,2 @@
+-- Declaration: Concept.all_complete
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: mkCrank
+-- Extracted by StaticSplit

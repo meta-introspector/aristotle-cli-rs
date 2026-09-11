@@ -1,0 +1,2 @@
+-- Declaration: kleisliComp
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: griess_decomp
+-- Extracted by StaticSplit

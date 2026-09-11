@@ -1,0 +1,2 @@
+-- Declaration: kitaevWire
+-- Extracted by StaticSplit

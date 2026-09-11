@@ -1,0 +1,2 @@
+-- Declaration: acceptCount
+-- Extracted by StaticSplit

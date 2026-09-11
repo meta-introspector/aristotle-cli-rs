@@ -1,0 +1,2 @@
+-- Declaration: carrot_commutes_crt
+-- Extracted by StaticSplit

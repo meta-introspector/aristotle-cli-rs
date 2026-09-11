@@ -1,0 +1,2 @@
+-- Declaration: selfLiftingAddress
+-- Extracted by StaticSplit

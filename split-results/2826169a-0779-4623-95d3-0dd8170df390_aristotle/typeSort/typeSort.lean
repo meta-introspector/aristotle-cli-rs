@@ -1,0 +1,2 @@
+-- Declaration: typeSort
+-- Extracted by StaticSplit

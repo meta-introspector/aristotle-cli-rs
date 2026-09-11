@@ -1,0 +1,2 @@
+-- Declaration: programCoord
+-- Extracted by StaticSplit

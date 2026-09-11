@@ -1,0 +1,2 @@
+-- Declaration: B_perm_degree
+-- Extracted by StaticSplit

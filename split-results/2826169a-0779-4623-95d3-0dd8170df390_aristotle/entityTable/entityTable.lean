@@ -1,0 +1,2 @@
+-- Declaration: entityTable
+-- Extracted by StaticSplit

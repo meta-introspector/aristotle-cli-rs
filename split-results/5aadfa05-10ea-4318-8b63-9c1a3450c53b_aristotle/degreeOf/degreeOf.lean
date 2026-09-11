@@ -1,0 +1,2 @@
+-- Declaration: degreeOf
+-- Extracted by StaticSplit

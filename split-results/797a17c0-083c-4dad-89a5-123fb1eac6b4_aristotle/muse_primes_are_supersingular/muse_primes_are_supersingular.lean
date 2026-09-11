@@ -1,0 +1,2 @@
+-- Declaration: muse_primes_are_supersingular
+-- Extracted by StaticSplit

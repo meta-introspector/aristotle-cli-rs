@@ -1,0 +1,2 @@
+-- Declaration: monster_num_classes
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: spoke_in_range
+-- Extracted by StaticSplit

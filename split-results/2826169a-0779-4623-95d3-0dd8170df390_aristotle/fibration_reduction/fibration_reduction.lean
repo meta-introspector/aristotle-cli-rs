@@ -1,0 +1,2 @@
+-- Declaration: fibration_reduction
+-- Extracted by StaticSplit

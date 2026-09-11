@@ -1,0 +1,2 @@
+-- Declaration: mckay_clifford
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ListContext_declTerm
+-- Extracted by StaticSplit

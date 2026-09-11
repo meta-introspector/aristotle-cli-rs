@@ -1,0 +1,2 @@
+-- Declaration: seven44_factorization
+-- Extracted by StaticSplit

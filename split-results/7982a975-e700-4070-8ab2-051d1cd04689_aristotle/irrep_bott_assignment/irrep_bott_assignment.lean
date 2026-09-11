@@ -1,0 +1,2 @@
+-- Declaration: irrep_bott_assignment
+-- Extracted by StaticSplit

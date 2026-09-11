@@ -1,0 +1,2 @@
+-- Declaration: WitnessLayer.bottPhase
+-- Extracted by StaticSplit

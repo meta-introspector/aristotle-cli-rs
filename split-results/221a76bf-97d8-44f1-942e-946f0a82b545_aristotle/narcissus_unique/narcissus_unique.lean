@@ -1,0 +1,2 @@
+-- Declaration: narcissus_unique
+-- Extracted by StaticSplit

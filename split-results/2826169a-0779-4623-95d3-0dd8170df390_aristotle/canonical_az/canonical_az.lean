@@ -1,0 +1,2 @@
+-- Declaration: canonical_az
+-- Extracted by StaticSplit

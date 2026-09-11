@@ -1,0 +1,2 @@
+-- Declaration: not_justiciable_if_advisory
+-- Extracted by StaticSplit

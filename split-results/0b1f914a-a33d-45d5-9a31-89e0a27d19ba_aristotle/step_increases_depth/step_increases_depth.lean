@@ -1,0 +1,2 @@
+-- Declaration: step_increases_depth
+-- Extracted by StaticSplit

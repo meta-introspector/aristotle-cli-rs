@@ -1,0 +1,2 @@
+-- Declaration: divisors_twelve
+-- Extracted by StaticSplit

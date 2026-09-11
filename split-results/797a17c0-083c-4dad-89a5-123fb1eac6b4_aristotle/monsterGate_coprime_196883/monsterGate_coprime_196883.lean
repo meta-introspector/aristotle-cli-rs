@@ -1,0 +1,2 @@
+-- Declaration: monsterGate_coprime_196883
+-- Extracted by StaticSplit

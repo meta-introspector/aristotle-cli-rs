@@ -1,0 +1,2 @@
+-- Declaration: hole_primes_are_prime_non_ssp
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: address_layout
+-- Extracted by StaticSplit

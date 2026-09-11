@@ -1,0 +1,2 @@
+-- Declaration: shadow_iff_centralizer_sporadic
+-- Extracted by StaticSplit

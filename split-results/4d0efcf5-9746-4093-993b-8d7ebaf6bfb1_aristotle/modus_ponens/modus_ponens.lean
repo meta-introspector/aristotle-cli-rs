@@ -1,0 +1,2 @@
+-- Declaration: modus_ponens
+-- Extracted by StaticSplit

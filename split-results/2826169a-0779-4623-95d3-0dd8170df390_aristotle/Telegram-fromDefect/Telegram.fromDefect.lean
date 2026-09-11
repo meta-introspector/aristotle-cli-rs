@@ -1,0 +1,2 @@
+-- Declaration: Telegram.fromDefect
+-- Extracted by StaticSplit

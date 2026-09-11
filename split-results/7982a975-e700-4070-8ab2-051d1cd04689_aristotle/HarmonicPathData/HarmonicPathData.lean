@@ -1,0 +1,2 @@
+-- Declaration: HarmonicPathData
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: parameterized_bridge
+-- Extracted by StaticSplit

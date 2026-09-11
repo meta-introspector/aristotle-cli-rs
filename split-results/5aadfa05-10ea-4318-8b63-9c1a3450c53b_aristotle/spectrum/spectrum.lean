@@ -1,0 +1,2 @@
+-- Declaration: spectrum
+-- Extracted by StaticSplit

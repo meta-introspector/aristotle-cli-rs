@@ -1,0 +1,2 @@
+-- Declaration: stageTone_next_seed
+-- Extracted by StaticSplit

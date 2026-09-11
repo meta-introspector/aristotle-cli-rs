@@ -1,0 +1,2 @@
+-- Declaration: contentEq_refl
+-- Extracted by StaticSplit

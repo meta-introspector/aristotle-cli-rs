@@ -1,0 +1,2 @@
+-- Declaration: typescriptStep
+-- Extracted by StaticSplit

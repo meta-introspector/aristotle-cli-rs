@@ -1,0 +1,2 @@
+-- Declaration: action_potential_is_metaphysics
+-- Extracted by StaticSplit

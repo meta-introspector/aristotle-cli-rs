@@ -1,0 +1,2 @@
+-- Declaration: Allowed_eliminations
+-- Extracted by StaticSplit

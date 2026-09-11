@@ -1,0 +1,2 @@
+-- Declaration: IsContr
+-- Extracted by StaticSplit

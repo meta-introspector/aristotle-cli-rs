@@ -1,0 +1,2 @@
+-- Declaration: IsClassFunction
+-- Extracted by StaticSplit

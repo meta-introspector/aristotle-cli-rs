@@ -1,0 +1,2 @@
+-- Declaration: monsterOrder_ssp_smooth
+-- Extracted by StaticSplit

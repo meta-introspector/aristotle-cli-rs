@@ -1,0 +1,2 @@
+-- Declaration: rotor_winding_preserved_ten
+-- Extracted by StaticSplit

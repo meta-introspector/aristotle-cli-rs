@@ -1,0 +1,2 @@
+-- Declaration: mock_duality_three_half
+-- Extracted by StaticSplit

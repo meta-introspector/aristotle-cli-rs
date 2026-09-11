@@ -1,0 +1,2 @@
+-- Declaration: tertiary_grid_dim_eq
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: num_axes
+-- Extracted by StaticSplit

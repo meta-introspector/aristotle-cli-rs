@@ -1,0 +1,2 @@
+-- Declaration: fortyTwo_sphenic
+-- Extracted by StaticSplit

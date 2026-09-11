@@ -1,0 +1,2 @@
+-- Declaration: OrbifoldPoint
+-- Extracted by StaticSplit

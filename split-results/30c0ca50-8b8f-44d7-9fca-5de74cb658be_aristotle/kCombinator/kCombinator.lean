@@ -1,0 +1,2 @@
+-- Declaration: kCombinator
+-- Extracted by StaticSplit

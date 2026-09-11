@@ -1,0 +1,2 @@
+-- Declaration: e4_coeff_prime_factored
+-- Extracted by StaticSplit

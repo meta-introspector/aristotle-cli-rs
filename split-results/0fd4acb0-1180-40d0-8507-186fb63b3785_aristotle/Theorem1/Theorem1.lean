@@ -1,0 +1,2 @@
+-- Declaration: Theorem1
+-- Extracted by StaticSplit

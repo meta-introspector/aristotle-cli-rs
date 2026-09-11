@@ -1,0 +1,2 @@
+-- Declaration: Secondness
+-- Extracted by StaticSplit

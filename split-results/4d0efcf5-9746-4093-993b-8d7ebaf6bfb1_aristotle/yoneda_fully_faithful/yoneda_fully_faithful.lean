@@ -1,0 +1,2 @@
+-- Declaration: yoneda_fully_faithful
+-- Extracted by StaticSplit

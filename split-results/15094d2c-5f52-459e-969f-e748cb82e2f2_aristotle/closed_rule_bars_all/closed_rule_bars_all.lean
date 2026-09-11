@@ -1,0 +1,2 @@
+-- Declaration: closed_rule_bars_all
+-- Extracted by StaticSplit

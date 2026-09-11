@@ -1,0 +1,2 @@
+-- Declaration: Freedom
+-- Extracted by StaticSplit

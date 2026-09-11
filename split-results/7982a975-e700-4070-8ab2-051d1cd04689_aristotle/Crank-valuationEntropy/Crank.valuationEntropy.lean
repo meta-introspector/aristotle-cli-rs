@@ -1,0 +1,2 @@
+-- Declaration: Crank.valuationEntropy
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: crtProduct_eq_griess_irrep
+-- Extracted by StaticSplit

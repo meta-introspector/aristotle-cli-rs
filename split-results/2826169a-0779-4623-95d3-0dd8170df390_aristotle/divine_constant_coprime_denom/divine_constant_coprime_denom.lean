@@ -1,0 +1,2 @@
+-- Declaration: divine_constant_coprime_denom
+-- Extracted by StaticSplit

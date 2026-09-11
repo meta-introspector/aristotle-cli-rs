@@ -1,0 +1,2 @@
+-- Declaration: SPerm.toMatrix_mul
+-- Extracted by StaticSplit

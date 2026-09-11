@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup.tower
+-- Extracted by StaticSplit

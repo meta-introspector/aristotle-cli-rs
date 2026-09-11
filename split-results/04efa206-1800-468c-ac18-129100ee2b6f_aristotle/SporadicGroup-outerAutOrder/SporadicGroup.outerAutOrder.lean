@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup.outerAutOrder
+-- Extracted by StaticSplit

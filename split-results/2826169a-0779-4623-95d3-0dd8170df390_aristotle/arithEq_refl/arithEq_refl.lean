@@ -1,0 +1,2 @@
+-- Declaration: arithEq_refl
+-- Extracted by StaticSplit

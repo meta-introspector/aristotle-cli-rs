@@ -1,0 +1,2 @@
+-- Declaration: merkleChain
+-- Extracted by StaticSplit

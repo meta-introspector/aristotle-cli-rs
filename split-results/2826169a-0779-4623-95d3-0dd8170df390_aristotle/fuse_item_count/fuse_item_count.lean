@@ -1,0 +1,2 @@
+-- Declaration: fuse_item_count
+-- Extracted by StaticSplit

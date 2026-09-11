@@ -1,0 +1,2 @@
+-- Declaration: mckay_expr_obstruction
+-- Extracted by StaticSplit

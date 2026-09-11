@@ -1,0 +1,2 @@
+-- Declaration: `BDI`,
+-- Extracted by StaticSplit

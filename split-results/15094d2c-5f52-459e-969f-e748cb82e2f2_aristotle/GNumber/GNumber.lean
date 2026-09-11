@@ -1,0 +1,2 @@
+-- Declaration: GNumber
+-- Extracted by StaticSplit

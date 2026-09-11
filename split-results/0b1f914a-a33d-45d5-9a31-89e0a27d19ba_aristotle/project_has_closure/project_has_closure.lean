@@ -1,0 +1,2 @@
+-- Declaration: project_has_closure
+-- Extracted by StaticSplit

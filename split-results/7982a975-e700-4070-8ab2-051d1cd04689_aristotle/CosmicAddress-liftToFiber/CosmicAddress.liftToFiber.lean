@@ -1,0 +1,2 @@
+-- Declaration: CosmicAddress.liftToFiber
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MonadicActivation
+-- Extracted by StaticSplit

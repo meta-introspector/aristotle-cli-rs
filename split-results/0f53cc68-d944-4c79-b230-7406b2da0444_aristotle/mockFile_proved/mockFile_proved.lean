@@ -1,0 +1,2 @@
+-- Declaration: mockFile_proved
+-- Extracted by StaticSplit

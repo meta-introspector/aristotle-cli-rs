@@ -1,0 +1,2 @@
+-- Declaration: solfunmemeCategory
+-- Extracted by StaticSplit

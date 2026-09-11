@@ -1,0 +1,2 @@
+-- Declaration: π₇₁
+-- Extracted by StaticSplit

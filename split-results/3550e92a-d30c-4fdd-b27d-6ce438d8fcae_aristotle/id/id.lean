@@ -1,0 +1,2 @@
+-- Declaration: id
+-- Extracted by StaticSplit

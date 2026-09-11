@@ -1,0 +1,2 @@
+-- Declaration: yoneda_obj_iso_iff
+-- Extracted by StaticSplit

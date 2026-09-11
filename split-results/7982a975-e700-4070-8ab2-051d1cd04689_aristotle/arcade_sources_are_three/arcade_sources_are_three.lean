@@ -1,0 +1,2 @@
+-- Declaration: arcade_sources_are_three
+-- Extracted by StaticSplit

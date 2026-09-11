@@ -1,0 +1,2 @@
+-- Declaration: monster_coordinate_finite
+-- Extracted by StaticSplit

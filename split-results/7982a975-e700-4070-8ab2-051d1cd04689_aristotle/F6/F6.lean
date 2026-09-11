@@ -1,0 +1,2 @@
+-- Declaration: F6
+-- Extracted by StaticSplit

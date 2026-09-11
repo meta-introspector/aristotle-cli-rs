@@ -1,0 +1,2 @@
+-- Declaration: prime_dvd_prime_pow_mul
+-- Extracted by StaticSplit

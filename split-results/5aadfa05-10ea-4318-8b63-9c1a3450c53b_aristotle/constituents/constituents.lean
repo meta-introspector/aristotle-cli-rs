@@ -1,0 +1,2 @@
+-- Declaration: constituents
+-- Extracted by StaticSplit

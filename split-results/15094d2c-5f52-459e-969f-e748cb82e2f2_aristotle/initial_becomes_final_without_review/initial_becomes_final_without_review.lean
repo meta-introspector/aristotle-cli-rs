@@ -1,0 +1,2 @@
+-- Declaration: initial_becomes_final_without_review
+-- Extracted by StaticSplit

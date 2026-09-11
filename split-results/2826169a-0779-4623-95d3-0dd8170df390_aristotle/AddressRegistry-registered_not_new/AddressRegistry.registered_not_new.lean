@@ -1,0 +1,2 @@
+-- Declaration: AddressRegistry.registered_not_new
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: invalid_if_new_topic
+-- Extracted by StaticSplit

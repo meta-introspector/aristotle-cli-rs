@@ -1,0 +1,2 @@
+-- Declaration: hamming_le
+-- Extracted by StaticSplit

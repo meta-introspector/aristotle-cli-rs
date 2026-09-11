@@ -1,0 +1,2 @@
+-- Declaration: supernova_conserves_phosphorus
+-- Extracted by StaticSplit

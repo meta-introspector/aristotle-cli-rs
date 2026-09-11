@@ -1,0 +1,2 @@
+-- Declaration: epoch_loop_monodromy
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: not_justiciable_if_political_question
+-- Extracted by StaticSplit

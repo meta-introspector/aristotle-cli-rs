@@ -1,0 +1,2 @@
+-- Declaration: getStrArg
+-- Extracted by StaticSplit

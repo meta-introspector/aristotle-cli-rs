@@ -1,0 +1,2 @@
+-- Declaration: LangAgentState
+-- Extracted by StaticSplit

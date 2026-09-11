@@ -1,0 +1,2 @@
+-- Declaration: monstrousMoonshineStatement
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Vec.add
+-- Extracted by StaticSplit

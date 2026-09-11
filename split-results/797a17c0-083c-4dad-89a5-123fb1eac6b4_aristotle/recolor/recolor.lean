@@ -1,0 +1,2 @@
+-- Declaration: recolor
+-- Extracted by StaticSplit

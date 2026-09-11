@@ -1,0 +1,2 @@
+-- Declaration: renderLine
+-- Extracted by StaticSplit

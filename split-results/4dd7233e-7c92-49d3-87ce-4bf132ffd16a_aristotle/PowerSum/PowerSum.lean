@@ -1,0 +1,2 @@
+-- Declaration: PowerSum
+-- Extracted by StaticSplit

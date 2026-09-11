@@ -1,0 +1,2 @@
+-- Declaration: j_distance_zero
+-- Extracted by StaticSplit

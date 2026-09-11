@@ -1,0 +1,2 @@
+-- Declaration: identityRotor
+-- Extracted by StaticSplit

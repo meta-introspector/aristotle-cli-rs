@@ -1,0 +1,2 @@
+-- Declaration: jFunctionCoeffs
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ssp_primes_are_supersingular
+-- Extracted by StaticSplit

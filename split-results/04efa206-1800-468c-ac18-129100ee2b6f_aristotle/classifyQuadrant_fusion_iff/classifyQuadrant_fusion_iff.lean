@@ -1,0 +1,2 @@
+-- Declaration: classifyQuadrant_fusion_iff
+-- Extracted by StaticSplit

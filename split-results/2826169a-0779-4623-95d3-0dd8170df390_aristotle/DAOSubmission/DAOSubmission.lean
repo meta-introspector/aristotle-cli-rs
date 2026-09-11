@@ -1,0 +1,2 @@
+-- Declaration: DAOSubmission
+-- Extracted by StaticSplit

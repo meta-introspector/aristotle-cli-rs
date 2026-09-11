@@ -1,0 +1,2 @@
+-- Declaration: descentItinerary_eq
+-- Extracted by StaticSplit

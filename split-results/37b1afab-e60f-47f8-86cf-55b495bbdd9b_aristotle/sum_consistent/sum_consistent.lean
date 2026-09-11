@@ -1,0 +1,2 @@
+-- Declaration: sum_consistent
+-- Extracted by StaticSplit

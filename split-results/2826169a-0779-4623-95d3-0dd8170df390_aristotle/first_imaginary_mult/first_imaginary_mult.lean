@@ -1,0 +1,2 @@
+-- Declaration: first_imaginary_mult
+-- Extracted by StaticSplit

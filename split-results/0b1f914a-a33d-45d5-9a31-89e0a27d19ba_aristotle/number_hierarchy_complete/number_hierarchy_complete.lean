@@ -1,0 +1,2 @@
+-- Declaration: number_hierarchy_complete
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: chi2_eq_monsterIrrepDim
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: spoke_address_value
+-- Extracted by StaticSplit

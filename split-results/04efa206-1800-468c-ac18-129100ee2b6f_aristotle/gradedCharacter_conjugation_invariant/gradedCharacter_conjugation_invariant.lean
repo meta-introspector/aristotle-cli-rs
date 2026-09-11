@@ -1,0 +1,2 @@
+-- Declaration: gradedCharacter_conjugation_invariant
+-- Extracted by StaticSplit

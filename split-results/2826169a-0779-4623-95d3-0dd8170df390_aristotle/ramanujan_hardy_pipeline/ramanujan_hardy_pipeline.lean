@@ -1,0 +1,2 @@
+-- Declaration: ramanujan_hardy_pipeline
+-- Extracted by StaticSplit

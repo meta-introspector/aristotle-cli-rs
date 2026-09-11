@@ -1,0 +1,2 @@
+-- Declaration: copyFractions
+-- Extracted by StaticSplit

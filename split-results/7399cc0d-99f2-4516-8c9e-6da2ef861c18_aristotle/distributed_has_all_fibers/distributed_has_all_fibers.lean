@@ -1,0 +1,2 @@
+-- Declaration: distributed_has_all_fibers
+-- Extracted by StaticSplit

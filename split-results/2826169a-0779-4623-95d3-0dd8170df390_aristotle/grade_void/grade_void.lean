@@ -1,0 +1,2 @@
+-- Declaration: grade_void
+-- Extracted by StaticSplit

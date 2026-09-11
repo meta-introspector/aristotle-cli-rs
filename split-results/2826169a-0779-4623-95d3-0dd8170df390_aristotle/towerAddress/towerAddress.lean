@@ -1,0 +1,2 @@
+-- Declaration: towerAddress
+-- Extracted by StaticSplit

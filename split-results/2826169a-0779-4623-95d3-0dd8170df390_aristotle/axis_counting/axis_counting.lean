@@ -1,0 +1,2 @@
+-- Declaration: axis_counting
+-- Extracted by StaticSplit

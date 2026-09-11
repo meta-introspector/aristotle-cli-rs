@@ -1,0 +1,2 @@
+-- Declaration: BillJourney.presidentialOutcome
+-- Extracted by StaticSplit

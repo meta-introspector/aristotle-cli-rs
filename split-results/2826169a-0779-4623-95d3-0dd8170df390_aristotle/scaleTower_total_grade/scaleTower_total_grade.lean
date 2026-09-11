@@ -1,0 +1,2 @@
+-- Declaration: scaleTower_total_grade
+-- Extracted by StaticSplit

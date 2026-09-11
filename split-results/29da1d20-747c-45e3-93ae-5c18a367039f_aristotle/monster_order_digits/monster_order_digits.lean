@@ -1,0 +1,2 @@
+-- Declaration: monster_order_digits
+-- Extracted by StaticSplit

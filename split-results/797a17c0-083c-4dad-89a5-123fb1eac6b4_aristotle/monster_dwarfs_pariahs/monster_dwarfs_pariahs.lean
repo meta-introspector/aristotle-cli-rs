@@ -1,0 +1,2 @@
+-- Declaration: monster_dwarfs_pariahs
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: earth_flag_cover
+-- Extracted by StaticSplit

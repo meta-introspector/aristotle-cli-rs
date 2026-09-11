@@ -1,0 +1,2 @@
+-- Declaration: GlobalEnv.WellFormed
+-- Extracted by StaticSplit

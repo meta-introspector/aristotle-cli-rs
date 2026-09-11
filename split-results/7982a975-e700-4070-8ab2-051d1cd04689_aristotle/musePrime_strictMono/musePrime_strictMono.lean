@@ -1,0 +1,2 @@
+-- Declaration: musePrime_strictMono
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: encode_le_totalCode
+-- Extracted by StaticSplit

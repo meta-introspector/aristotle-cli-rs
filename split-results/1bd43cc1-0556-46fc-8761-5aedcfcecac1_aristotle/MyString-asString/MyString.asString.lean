@@ -1,0 +1,2 @@
+-- Declaration: MyString.asString
+-- Extracted by StaticSplit

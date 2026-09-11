@@ -1,0 +1,2 @@
+-- Declaration: alignable
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Tree0.empty3
+-- Extracted by StaticSplit

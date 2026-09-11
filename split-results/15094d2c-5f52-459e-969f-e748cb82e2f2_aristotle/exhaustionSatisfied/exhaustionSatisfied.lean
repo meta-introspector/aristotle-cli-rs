@@ -1,0 +1,2 @@
+-- Declaration: exhaustionSatisfied
+-- Extracted by StaticSplit

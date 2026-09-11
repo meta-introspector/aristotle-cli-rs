@@ -1,0 +1,2 @@
+-- Declaration: norton_eigenspace_sum
+-- Extracted by StaticSplit

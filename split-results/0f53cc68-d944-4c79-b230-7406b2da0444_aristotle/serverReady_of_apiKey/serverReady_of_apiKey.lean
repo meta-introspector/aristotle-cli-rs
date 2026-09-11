@@ -1,0 +1,2 @@
+-- Declaration: serverReady_of_apiKey
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: defaultSheafSection
+-- Extracted by StaticSplit

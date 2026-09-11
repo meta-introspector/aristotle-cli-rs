@@ -1,0 +1,2 @@
+-- Declaration: admissible_equiv_refl
+-- Extracted by StaticSplit

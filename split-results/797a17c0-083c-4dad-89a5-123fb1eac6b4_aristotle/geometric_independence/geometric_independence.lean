@@ -1,0 +1,2 @@
+-- Declaration: geometric_independence
+-- Extracted by StaticSplit

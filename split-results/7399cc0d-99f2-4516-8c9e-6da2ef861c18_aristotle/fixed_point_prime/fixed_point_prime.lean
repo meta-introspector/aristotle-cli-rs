@@ -1,0 +1,2 @@
+-- Declaration: fixed_point_prime
+-- Extracted by StaticSplit

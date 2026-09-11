@@ -1,0 +1,2 @@
+-- Declaration: name_semiotics_roundtrip
+-- Extracted by StaticSplit

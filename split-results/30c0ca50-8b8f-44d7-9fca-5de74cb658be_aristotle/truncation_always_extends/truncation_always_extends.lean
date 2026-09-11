@@ -1,0 +1,2 @@
+-- Declaration: truncation_always_extends
+-- Extracted by StaticSplit

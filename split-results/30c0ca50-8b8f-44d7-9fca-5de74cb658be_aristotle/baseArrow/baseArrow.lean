@@ -1,0 +1,2 @@
+-- Declaration: baseArrow
+-- Extracted by StaticSplit

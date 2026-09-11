@@ -1,0 +1,2 @@
+-- Declaration: atp_ambrosia_bio
+-- Extracted by StaticSplit

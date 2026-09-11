@@ -1,0 +1,2 @@
+-- Declaration: profileOfIndex
+-- Extracted by StaticSplit

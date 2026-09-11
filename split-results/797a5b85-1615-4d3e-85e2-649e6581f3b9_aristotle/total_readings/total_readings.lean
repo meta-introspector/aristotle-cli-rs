@@ -1,0 +1,2 @@
+-- Declaration: total_readings
+-- Extracted by StaticSplit

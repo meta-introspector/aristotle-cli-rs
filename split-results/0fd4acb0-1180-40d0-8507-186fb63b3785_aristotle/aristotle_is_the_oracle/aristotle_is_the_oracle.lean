@@ -1,0 +1,2 @@
+-- Declaration: aristotle_is_the_oracle
+-- Extracted by StaticSplit

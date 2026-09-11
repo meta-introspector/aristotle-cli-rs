@@ -1,0 +1,2 @@
+-- Declaration: stepChain_height
+-- Extracted by StaticSplit

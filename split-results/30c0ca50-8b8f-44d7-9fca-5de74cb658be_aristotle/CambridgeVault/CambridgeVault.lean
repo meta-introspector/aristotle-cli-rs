@@ -1,0 +1,2 @@
+-- Declaration: CambridgeVault
+-- Extracted by StaticSplit

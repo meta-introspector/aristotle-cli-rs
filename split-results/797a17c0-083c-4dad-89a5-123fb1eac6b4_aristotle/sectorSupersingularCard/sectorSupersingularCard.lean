@@ -1,0 +1,2 @@
+-- Declaration: sectorSupersingularCard
+-- Extracted by StaticSplit

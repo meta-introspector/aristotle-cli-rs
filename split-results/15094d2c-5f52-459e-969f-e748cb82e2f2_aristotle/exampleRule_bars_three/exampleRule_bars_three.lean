@@ -1,0 +1,2 @@
+-- Declaration: exampleRule_bars_three
+-- Extracted by StaticSplit

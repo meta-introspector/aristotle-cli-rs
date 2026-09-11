@@ -1,0 +1,2 @@
+-- Declaration: monodromyAction
+-- Extracted by StaticSplit

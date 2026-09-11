@@ -1,0 +1,2 @@
+-- Declaration: atlas_primes
+-- Extracted by StaticSplit

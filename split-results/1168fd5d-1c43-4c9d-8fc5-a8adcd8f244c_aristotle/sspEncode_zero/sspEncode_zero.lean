@@ -1,0 +1,2 @@
+-- Declaration: sspEncode_zero
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: mycorrhizalExtruder
+-- Extracted by StaticSplit

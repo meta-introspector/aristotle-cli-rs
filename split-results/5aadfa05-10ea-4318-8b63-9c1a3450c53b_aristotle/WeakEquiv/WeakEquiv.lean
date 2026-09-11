@@ -1,0 +1,2 @@
+-- Declaration: WeakEquiv
+-- Extracted by StaticSplit

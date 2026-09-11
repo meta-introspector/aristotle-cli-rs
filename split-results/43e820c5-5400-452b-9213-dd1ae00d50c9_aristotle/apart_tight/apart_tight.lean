@@ -1,0 +1,2 @@
+-- Declaration: apart_tight
+-- Extracted by StaticSplit

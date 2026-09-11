@@ -1,0 +1,2 @@
+-- Declaration: cut_admissible'
+-- Extracted by StaticSplit

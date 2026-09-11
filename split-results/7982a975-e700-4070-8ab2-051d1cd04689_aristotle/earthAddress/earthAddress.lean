@@ -1,0 +1,2 @@
+-- Declaration: earthAddress
+-- Extracted by StaticSplit

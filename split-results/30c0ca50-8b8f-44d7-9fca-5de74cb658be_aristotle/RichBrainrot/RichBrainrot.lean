@@ -1,0 +1,2 @@
+-- Declaration: RichBrainrot
+-- Extracted by StaticSplit

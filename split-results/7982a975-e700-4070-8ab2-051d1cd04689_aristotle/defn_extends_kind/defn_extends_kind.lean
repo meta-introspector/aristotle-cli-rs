@@ -1,0 +1,2 @@
+-- Declaration: defn_extends_kind
+-- Extracted by StaticSplit

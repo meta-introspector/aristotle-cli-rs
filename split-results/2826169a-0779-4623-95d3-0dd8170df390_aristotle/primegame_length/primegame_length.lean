@@ -1,0 +1,2 @@
+-- Declaration: primegame_length
+-- Extracted by StaticSplit

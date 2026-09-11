@@ -1,0 +1,2 @@
+-- Declaration: FloorAction.requiresTwoThirds
+-- Extracted by StaticSplit

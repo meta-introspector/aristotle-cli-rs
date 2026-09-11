@@ -1,0 +1,2 @@
+-- Declaration: removed_primes_eq
+-- Extracted by StaticSplit

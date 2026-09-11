@@ -1,0 +1,2 @@
+-- Declaration: is_iso
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: quorum_bott
+-- Extracted by StaticSplit

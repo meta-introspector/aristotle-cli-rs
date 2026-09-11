@@ -1,0 +1,2 @@
+-- Declaration: no_self_spawn_unverified
+-- Extracted by StaticSplit

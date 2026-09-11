@@ -1,0 +1,2 @@
+-- Declaration: monsterPrime_of_mem
+-- Extracted by StaticSplit

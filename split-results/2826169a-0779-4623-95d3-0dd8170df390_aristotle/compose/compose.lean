@@ -1,0 +1,2 @@
+-- Declaration: compose
+-- Extracted by StaticSplit

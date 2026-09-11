@@ -1,0 +1,2 @@
+-- Declaration: numNiemeier
+-- Extracted by StaticSplit

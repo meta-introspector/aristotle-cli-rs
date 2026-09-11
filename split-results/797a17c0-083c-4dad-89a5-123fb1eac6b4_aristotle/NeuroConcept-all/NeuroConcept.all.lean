@@ -1,0 +1,2 @@
+-- Declaration: NeuroConcept.all
+-- Extracted by StaticSplit

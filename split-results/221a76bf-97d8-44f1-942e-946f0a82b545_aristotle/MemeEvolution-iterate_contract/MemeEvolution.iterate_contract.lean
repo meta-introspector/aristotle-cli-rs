@@ -1,0 +1,2 @@
+-- Declaration: MemeEvolution.iterate_contract
+-- Extracted by StaticSplit

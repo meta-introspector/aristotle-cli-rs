@@ -1,0 +1,2 @@
+-- Declaration: decode_encode_of_length
+-- Extracted by StaticSplit

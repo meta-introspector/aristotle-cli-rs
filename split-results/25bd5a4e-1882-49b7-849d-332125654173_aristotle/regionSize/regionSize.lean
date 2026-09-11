@@ -1,0 +1,2 @@
+-- Declaration: regionSize
+-- Extracted by StaticSplit

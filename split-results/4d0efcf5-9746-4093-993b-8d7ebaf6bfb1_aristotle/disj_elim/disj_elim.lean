@@ -1,0 +1,2 @@
+-- Declaration: disj_elim
+-- Extracted by StaticSplit

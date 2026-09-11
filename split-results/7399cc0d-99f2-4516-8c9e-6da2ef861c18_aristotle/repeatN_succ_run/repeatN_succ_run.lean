@@ -1,0 +1,2 @@
+-- Declaration: repeatN_succ_run
+-- Extracted by StaticSplit

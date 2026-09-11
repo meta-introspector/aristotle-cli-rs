@@ -1,0 +1,2 @@
+-- Declaration: trivector_eq_nestedCID
+-- Extracted by StaticSplit

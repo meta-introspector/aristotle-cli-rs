@@ -1,0 +1,2 @@
+-- Declaration: StatusMessage
+-- Extracted by StaticSplit

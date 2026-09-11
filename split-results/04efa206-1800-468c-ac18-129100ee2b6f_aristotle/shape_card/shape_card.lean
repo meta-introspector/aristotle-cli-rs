@@ -1,0 +1,2 @@
+-- Declaration: shape_card
+-- Extracted by StaticSplit

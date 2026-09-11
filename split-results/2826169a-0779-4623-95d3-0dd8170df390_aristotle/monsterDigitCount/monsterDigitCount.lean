@@ -1,0 +1,2 @@
+-- Declaration: monsterDigitCount
+-- Extracted by StaticSplit

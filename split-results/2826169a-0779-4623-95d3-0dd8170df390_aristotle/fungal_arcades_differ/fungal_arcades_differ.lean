@@ -1,0 +1,2 @@
+-- Declaration: fungal_arcades_differ
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: RiddickCitation
+-- Extracted by StaticSplit

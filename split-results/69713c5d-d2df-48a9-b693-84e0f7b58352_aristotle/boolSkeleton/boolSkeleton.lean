@@ -1,0 +1,2 @@
+-- Declaration: boolSkeleton
+-- Extracted by StaticSplit

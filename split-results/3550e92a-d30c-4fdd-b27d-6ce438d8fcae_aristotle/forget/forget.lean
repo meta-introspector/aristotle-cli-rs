@@ -1,0 +1,2 @@
+-- Declaration: forget
+-- Extracted by StaticSplit

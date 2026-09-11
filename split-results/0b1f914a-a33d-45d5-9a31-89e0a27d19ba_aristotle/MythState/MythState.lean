@@ -1,0 +1,2 @@
+-- Declaration: MythState
+-- Extracted by StaticSplit

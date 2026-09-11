@@ -1,0 +1,2 @@
+-- Declaration: isSmooth23_lcm
+-- Extracted by StaticSplit

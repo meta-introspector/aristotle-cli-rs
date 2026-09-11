@@ -1,0 +1,2 @@
+-- Declaration: mockProve_false_theorem
+-- Extracted by StaticSplit

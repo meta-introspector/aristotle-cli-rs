@@ -1,0 +1,2 @@
+-- Declaration: card_GL
+-- Extracted by StaticSplit

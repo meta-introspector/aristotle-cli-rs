@@ -1,0 +1,2 @@
+-- Declaration: comp_tauto_hom
+-- Extracted by StaticSplit

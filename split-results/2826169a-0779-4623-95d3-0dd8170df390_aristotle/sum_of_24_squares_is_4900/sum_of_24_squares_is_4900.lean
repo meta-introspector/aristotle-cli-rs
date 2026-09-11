@@ -1,0 +1,2 @@
+-- Declaration: sum_of_24_squares_is_4900
+-- Extracted by StaticSplit

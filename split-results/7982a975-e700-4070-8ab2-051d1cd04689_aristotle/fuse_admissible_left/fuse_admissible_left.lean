@@ -1,0 +1,2 @@
+-- Declaration: fuse_admissible_left
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: demo_attacker_owns
+-- Extracted by StaticSplit

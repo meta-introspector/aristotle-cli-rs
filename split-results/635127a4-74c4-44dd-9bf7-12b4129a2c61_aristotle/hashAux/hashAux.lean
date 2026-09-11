@@ -1,0 +1,2 @@
+-- Declaration: hashAux
+-- Extracted by StaticSplit

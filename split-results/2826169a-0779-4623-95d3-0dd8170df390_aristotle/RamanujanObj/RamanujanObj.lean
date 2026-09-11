@@ -1,0 +1,2 @@
+-- Declaration: RamanujanObj
+-- Extracted by StaticSplit

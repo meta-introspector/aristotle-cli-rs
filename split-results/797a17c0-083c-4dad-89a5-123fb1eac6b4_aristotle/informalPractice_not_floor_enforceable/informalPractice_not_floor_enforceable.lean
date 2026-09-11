@@ -1,0 +1,2 @@
+-- Declaration: informalPractice_not_floor_enforceable
+-- Extracted by StaticSplit

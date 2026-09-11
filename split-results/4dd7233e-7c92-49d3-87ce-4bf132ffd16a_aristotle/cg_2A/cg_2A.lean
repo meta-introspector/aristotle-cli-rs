@@ -1,0 +1,2 @@
+-- Declaration: cg_2A
+-- Extracted by StaticSplit

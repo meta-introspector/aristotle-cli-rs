@@ -1,0 +1,2 @@
+-- Declaration: Channel.fromIPLDNode
+-- Extracted by StaticSplit

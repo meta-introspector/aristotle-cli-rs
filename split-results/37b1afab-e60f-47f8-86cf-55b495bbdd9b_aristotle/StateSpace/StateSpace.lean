@@ -1,0 +1,2 @@
+-- Declaration: StateSpace
+-- Extracted by StaticSplit

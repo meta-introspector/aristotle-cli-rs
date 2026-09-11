@@ -1,0 +1,2 @@
+-- Declaration: FieldAlgebra
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: extra_dims_are_ssp
+-- Extracted by StaticSplit

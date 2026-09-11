@@ -1,0 +1,2 @@
+-- Declaration: splitSquarefree_sdimH1
+-- Extracted by StaticSplit

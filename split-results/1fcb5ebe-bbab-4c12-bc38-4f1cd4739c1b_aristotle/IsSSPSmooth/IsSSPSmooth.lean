@@ -1,0 +1,2 @@
+-- Declaration: IsSSPSmooth
+-- Extracted by StaticSplit

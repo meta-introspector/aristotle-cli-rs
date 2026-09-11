@@ -1,0 +1,2 @@
+-- Declaration: isDebatable
+-- Extracted by StaticSplit

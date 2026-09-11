@@ -1,0 +1,2 @@
+-- Declaration: isCrystallized
+-- Extracted by StaticSplit

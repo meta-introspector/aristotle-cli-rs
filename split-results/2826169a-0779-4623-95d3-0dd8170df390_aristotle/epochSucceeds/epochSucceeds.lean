@@ -1,0 +1,2 @@
+-- Declaration: epochSucceeds
+-- Extracted by StaticSplit

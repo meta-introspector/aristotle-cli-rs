@@ -1,0 +1,2 @@
+-- Declaration: immutable_stable
+-- Extracted by StaticSplit

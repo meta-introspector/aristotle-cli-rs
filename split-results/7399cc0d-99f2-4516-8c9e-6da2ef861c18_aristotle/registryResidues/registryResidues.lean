@@ -1,0 +1,2 @@
+-- Declaration: registryResidues
+-- Extracted by StaticSplit

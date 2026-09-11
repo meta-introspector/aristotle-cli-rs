@@ -1,0 +1,2 @@
+-- Declaration: museGatePrimes_eq_musePrimes
+-- Extracted by StaticSplit

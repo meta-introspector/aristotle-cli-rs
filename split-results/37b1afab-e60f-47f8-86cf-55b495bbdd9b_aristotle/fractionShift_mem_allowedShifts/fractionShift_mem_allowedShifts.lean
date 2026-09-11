@@ -1,0 +1,2 @@
+-- Declaration: fractionShift_mem_allowedShifts
+-- Extracted by StaticSplit

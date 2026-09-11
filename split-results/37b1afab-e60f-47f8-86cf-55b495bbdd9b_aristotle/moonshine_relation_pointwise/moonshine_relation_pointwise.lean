@@ -1,0 +1,2 @@
+-- Declaration: moonshine_relation_pointwise
+-- Extracted by StaticSplit

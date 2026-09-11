@@ -1,0 +1,2 @@
+-- Declaration: monster_digits_lt_base
+-- Extracted by StaticSplit

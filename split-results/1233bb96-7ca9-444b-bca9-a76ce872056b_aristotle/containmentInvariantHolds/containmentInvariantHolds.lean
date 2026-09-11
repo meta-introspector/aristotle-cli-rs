@@ -1,0 +1,2 @@
+-- Declaration: containmentInvariantHolds
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: address_book_finite_city_infinite
+-- Extracted by StaticSplit

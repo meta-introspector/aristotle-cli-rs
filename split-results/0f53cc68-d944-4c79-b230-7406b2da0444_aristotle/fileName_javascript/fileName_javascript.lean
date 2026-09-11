@@ -1,0 +1,2 @@
+-- Declaration: fileName_javascript
+-- Extracted by StaticSplit

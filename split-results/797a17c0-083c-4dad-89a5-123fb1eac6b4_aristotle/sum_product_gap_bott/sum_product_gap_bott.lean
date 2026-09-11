@@ -1,0 +1,2 @@
+-- Declaration: sum_product_gap_bott
+-- Extracted by StaticSplit

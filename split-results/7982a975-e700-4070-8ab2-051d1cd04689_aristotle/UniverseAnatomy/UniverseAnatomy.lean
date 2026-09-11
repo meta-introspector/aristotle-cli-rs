@@ -1,0 +1,2 @@
+-- Declaration: UniverseAnatomy
+-- Extracted by StaticSplit

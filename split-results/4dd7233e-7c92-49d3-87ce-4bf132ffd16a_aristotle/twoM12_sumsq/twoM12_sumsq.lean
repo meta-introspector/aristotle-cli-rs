@@ -1,0 +1,2 @@
+-- Declaration: twoM12_sumsq
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_blake3
+-- Extracted by StaticSplit

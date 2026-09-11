@@ -1,0 +1,2 @@
+-- Declaration: invertedIndexByTraversal
+-- Extracted by StaticSplit

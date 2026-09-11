@@ -1,0 +1,2 @@
+-- Declaration: SPermRep.kroneckerDouble
+-- Extracted by StaticSplit

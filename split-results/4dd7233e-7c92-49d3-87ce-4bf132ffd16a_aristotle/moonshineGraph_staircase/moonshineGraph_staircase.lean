@@ -1,0 +1,2 @@
+-- Declaration: moonshineGraph_staircase
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: plural_reaches_singular
+-- Extracted by StaticSplit

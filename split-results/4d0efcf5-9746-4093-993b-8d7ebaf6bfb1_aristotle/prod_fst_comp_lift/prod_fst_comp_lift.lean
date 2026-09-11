@@ -1,0 +1,2 @@
+-- Declaration: prod_fst_comp_lift
+-- Extracted by StaticSplit

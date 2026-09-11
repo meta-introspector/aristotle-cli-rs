@@ -1,0 +1,2 @@
+-- Declaration: steal
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cons_not_null
+-- Extracted by StaticSplit

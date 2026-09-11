@@ -1,0 +1,2 @@
+-- Declaration: observer_preserved
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Bridge.sym
+-- Extracted by StaticSplit

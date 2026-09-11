@@ -1,0 +1,2 @@
+-- Declaration: foldWitness
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: DistrictCase.hasOriginalJurisdiction
+-- Extracted by StaticSplit

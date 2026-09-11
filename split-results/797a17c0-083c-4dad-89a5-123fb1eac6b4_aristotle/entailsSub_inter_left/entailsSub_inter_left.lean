@@ -1,0 +1,2 @@
+-- Declaration: entailsSub_inter_left
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: zero_fiber
+-- Extracted by StaticSplit

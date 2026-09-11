@@ -1,0 +1,2 @@
+-- Declaration: IsNarrativeFixedPoint
+-- Extracted by StaticSplit

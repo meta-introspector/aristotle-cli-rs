@@ -1,0 +1,2 @@
+-- Declaration: s_combinator_rewrite
+-- Extracted by StaticSplit

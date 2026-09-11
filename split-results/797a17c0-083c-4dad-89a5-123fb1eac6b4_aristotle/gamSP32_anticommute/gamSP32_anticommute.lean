@@ -1,0 +1,2 @@
+-- Declaration: gamSP32_anticommute
+-- Extracted by StaticSplit

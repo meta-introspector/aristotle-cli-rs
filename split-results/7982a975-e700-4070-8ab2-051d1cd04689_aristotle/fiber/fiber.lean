@@ -1,0 +1,2 @@
+-- Declaration: fiber
+-- Extracted by StaticSplit

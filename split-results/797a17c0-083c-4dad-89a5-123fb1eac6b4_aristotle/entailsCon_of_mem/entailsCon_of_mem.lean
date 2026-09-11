@@ -1,0 +1,2 @@
+-- Declaration: entailsCon_of_mem
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: padic_complete
+-- Extracted by StaticSplit

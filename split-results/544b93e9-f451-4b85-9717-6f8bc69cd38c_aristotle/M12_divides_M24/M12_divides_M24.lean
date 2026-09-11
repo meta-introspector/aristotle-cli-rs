@@ -1,0 +1,2 @@
+-- Declaration: M12_divides_M24
+-- Extracted by StaticSplit

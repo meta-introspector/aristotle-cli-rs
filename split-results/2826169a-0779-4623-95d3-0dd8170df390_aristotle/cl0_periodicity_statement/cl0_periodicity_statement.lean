@@ -1,0 +1,2 @@
+-- Declaration: cl0_periodicity_statement
+-- Extracted by StaticSplit

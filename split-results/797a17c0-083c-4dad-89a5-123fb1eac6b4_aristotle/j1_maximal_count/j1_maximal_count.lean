@@ -1,0 +1,2 @@
+-- Declaration: j1_maximal_count
+-- Extracted by StaticSplit

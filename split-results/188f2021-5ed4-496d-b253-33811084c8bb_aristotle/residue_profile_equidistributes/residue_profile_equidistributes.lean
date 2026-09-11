@@ -1,0 +1,2 @@
+-- Declaration: residue_profile_equidistributes
+-- Extracted by StaticSplit

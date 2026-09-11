@@ -1,0 +1,2 @@
+-- Declaration: mapGCI
+-- Extracted by StaticSplit

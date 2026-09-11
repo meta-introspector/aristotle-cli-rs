@@ -1,0 +1,2 @@
+-- Declaration: FitnessConcept
+-- Extracted by StaticSplit

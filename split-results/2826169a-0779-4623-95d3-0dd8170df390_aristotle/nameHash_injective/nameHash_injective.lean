@@ -1,0 +1,2 @@
+-- Declaration: nameHash_injective
+-- Extracted by StaticSplit

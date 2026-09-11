@@ -1,0 +1,2 @@
+-- Declaration: ProposalStatus
+-- Extracted by StaticSplit

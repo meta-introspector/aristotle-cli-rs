@@ -1,0 +1,2 @@
+-- Declaration: skibidi_reaches_brainrot
+-- Extracted by StaticSplit

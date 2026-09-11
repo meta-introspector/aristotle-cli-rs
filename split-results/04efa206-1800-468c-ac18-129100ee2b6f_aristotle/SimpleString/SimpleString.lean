@@ -1,0 +1,2 @@
+-- Declaration: SimpleString
+-- Extracted by StaticSplit

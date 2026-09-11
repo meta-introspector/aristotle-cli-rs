@@ -1,0 +1,2 @@
+-- Declaration: max2_factored
+-- Extracted by StaticSplit

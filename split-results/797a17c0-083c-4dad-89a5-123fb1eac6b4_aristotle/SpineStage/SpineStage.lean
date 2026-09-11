@@ -1,0 +1,2 @@
+-- Declaration: SpineStage
+-- Extracted by StaticSplit

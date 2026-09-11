@@ -1,0 +1,2 @@
+-- Declaration: ThreeVertex
+-- Extracted by StaticSplit

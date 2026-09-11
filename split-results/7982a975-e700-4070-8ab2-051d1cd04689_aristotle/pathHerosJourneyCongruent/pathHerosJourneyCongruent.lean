@@ -1,0 +1,2 @@
+-- Declaration: pathHerosJourneyCongruent
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: HasSymData
+-- Extracted by StaticSplit

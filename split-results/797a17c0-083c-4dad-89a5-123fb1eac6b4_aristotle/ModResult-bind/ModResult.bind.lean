@@ -1,0 +1,2 @@
+-- Declaration: ModResult.bind
+-- Extracted by StaticSplit

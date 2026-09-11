@@ -1,0 +1,2 @@
+-- Declaration: blake3Codec
+-- Extracted by StaticSplit

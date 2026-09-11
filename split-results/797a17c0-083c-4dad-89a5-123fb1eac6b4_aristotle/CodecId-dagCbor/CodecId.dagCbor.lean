@@ -1,0 +1,2 @@
+-- Declaration: CodecId.dagCbor
+-- Extracted by StaticSplit

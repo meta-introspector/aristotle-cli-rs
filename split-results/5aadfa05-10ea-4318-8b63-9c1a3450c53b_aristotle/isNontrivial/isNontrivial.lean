@@ -1,0 +1,2 @@
+-- Declaration: isNontrivial
+-- Extracted by StaticSplit

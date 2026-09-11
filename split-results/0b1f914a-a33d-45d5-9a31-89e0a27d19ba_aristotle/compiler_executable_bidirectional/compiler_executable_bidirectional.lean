@@ -1,0 +1,2 @@
+-- Declaration: compiler_executable_bidirectional
+-- Extracted by StaticSplit

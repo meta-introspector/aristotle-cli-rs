@@ -1,0 +1,2 @@
+-- Declaration: comparisonScale_eq
+-- Extracted by StaticSplit

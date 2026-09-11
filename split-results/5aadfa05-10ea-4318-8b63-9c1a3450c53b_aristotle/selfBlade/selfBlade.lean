@@ -1,0 +1,2 @@
+-- Declaration: selfBlade
+-- Extracted by StaticSplit

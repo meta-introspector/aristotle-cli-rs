@@ -1,0 +1,2 @@
+-- Declaration: BorcherdsCartanMatrix.isImaginary
+-- Extracted by StaticSplit

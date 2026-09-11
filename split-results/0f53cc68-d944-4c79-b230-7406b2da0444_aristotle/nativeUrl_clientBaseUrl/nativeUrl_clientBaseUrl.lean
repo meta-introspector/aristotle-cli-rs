@@ -1,0 +1,2 @@
+-- Declaration: nativeUrl_clientBaseUrl
+-- Extracted by StaticSplit

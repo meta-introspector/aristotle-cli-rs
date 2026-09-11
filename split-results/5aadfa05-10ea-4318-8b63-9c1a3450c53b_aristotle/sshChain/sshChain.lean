@@ -1,0 +1,2 @@
+-- Declaration: sshChain
+-- Extracted by StaticSplit

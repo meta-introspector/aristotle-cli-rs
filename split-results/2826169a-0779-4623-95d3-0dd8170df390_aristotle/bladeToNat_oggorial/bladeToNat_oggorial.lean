@@ -1,0 +1,2 @@
+-- Declaration: bladeToNat_oggorial
+-- Extracted by StaticSplit

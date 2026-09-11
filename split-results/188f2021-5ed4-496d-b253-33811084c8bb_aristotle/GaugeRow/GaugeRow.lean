@@ -1,0 +1,2 @@
+-- Declaration: GaugeRow
+-- Extracted by StaticSplit

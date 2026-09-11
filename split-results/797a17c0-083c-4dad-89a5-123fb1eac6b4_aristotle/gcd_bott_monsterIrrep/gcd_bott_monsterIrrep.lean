@@ -1,0 +1,2 @@
+-- Declaration: gcd_bott_monsterIrrep
+-- Extracted by StaticSplit

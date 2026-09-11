@@ -1,0 +1,2 @@
+-- Declaration: merkle_node_integrity
+-- Extracted by StaticSplit

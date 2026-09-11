@@ -1,0 +1,2 @@
+-- Declaration: valid_iff_exists_class
+-- Extracted by StaticSplit

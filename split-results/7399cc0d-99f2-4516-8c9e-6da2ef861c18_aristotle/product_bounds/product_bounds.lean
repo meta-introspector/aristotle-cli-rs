@@ -1,0 +1,2 @@
+-- Declaration: product_bounds
+-- Extracted by StaticSplit

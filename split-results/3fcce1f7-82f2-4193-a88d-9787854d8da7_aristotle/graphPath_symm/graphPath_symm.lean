@@ -1,0 +1,2 @@
+-- Declaration: graphPath_symm
+-- Extracted by StaticSplit

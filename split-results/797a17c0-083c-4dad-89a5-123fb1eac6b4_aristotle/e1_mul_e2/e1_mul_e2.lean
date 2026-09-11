@@ -1,0 +1,2 @@
+-- Declaration: e1_mul_e2
+-- Extracted by StaticSplit

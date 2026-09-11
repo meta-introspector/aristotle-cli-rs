@@ -1,0 +1,2 @@
+-- Declaration: strBytes
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: nil_is_null
+-- Extracted by StaticSplit

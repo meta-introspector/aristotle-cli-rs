@@ -1,0 +1,2 @@
+-- Declaration: GriessAlgebra
+-- Extracted by StaticSplit

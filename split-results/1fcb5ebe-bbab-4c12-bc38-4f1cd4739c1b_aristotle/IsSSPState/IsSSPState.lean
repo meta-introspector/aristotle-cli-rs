@@ -1,0 +1,2 @@
+-- Declaration: IsSSPState
+-- Extracted by StaticSplit

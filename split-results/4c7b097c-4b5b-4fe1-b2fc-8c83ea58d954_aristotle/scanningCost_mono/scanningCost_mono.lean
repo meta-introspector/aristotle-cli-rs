@@ -1,0 +1,2 @@
+-- Declaration: scanningCost_mono
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cartLift
+-- Extracted by StaticSplit

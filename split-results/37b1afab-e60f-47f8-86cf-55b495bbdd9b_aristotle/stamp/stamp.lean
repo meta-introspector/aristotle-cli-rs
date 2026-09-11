@@ -1,0 +1,2 @@
+-- Declaration: stamp
+-- Extracted by StaticSplit

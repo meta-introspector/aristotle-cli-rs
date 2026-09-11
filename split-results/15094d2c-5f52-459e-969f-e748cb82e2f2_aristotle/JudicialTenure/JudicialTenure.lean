@@ -1,0 +1,2 @@
+-- Declaration: JudicialTenure
+-- Extracted by StaticSplit

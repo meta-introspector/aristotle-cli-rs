@@ -1,0 +1,2 @@
+-- Declaration: mulGen_preserves_filtration
+-- Extracted by StaticSplit

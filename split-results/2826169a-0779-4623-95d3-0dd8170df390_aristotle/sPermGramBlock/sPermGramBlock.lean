@@ -1,0 +1,2 @@
+-- Declaration: sPermGramBlock
+-- Extracted by StaticSplit

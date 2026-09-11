@@ -1,0 +1,2 @@
+-- Declaration: kernelEquiv_refl
+-- Extracted by StaticSplit

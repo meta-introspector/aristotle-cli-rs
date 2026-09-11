@@ -1,0 +1,2 @@
+-- Declaration: godelToQuine
+-- Extracted by StaticSplit

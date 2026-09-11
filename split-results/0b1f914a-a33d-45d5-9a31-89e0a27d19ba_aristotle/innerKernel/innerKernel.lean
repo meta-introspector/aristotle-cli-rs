@@ -1,0 +1,2 @@
+-- Declaration: innerKernel
+-- Extracted by StaticSplit

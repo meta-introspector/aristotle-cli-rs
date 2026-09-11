@@ -1,0 +1,2 @@
+-- Declaration: oracle_evolution_equivalence
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Organism
+-- Extracted by StaticSplit

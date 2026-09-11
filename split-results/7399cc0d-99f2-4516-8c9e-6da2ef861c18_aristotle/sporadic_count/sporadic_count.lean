@@ -1,0 +1,2 @@
+-- Declaration: sporadic_count
+-- Extracted by StaticSplit

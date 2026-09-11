@@ -1,0 +1,2 @@
+-- Declaration: descents_bottom_isPTE
+-- Extracted by StaticSplit

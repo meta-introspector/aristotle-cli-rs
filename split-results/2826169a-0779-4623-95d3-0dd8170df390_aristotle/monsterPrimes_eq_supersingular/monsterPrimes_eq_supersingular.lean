@@ -1,0 +1,2 @@
+-- Declaration: monsterPrimes_eq_supersingular
+-- Extracted by StaticSplit

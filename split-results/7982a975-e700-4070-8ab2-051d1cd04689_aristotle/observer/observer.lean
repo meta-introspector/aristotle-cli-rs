@@ -1,0 +1,2 @@
+-- Declaration: observer
+-- Extracted by StaticSplit

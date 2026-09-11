@@ -1,0 +1,2 @@
+-- Declaration: genusZeroPrimes
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: sigma3_19
+-- Extracted by StaticSplit

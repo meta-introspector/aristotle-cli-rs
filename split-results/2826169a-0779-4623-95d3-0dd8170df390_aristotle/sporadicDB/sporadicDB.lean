@@ -1,0 +1,2 @@
+-- Declaration: sporadicDB
+-- Extracted by StaticSplit

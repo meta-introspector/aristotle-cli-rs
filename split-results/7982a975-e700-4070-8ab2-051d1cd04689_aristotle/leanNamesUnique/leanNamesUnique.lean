@@ -1,0 +1,2 @@
+-- Declaration: leanNamesUnique
+-- Extracted by StaticSplit

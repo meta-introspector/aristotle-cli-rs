@@ -1,0 +1,2 @@
+-- Declaration: dialecticWorld
+-- Extracted by StaticSplit

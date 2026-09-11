@@ -1,0 +1,2 @@
+-- Declaration: goedel_reaches_type
+-- Extracted by StaticSplit

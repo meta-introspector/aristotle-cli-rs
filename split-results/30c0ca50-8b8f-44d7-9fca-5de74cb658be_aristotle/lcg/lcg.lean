@@ -1,0 +1,2 @@
+-- Declaration: lcg
+-- Extracted by StaticSplit

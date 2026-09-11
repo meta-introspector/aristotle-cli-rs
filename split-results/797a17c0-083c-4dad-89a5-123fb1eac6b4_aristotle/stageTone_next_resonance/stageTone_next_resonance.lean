@@ -1,0 +1,2 @@
+-- Declaration: stageTone_next_resonance
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Account
+-- Extracted by StaticSplit

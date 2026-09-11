@@ -1,0 +1,2 @@
+-- Declaration: ContributionKind
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: GradedFiber.toFiberState_base
+-- Extracted by StaticSplit

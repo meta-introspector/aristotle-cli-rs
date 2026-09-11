@@ -1,0 +1,2 @@
+-- Declaration: SlotData
+-- Extracted by StaticSplit

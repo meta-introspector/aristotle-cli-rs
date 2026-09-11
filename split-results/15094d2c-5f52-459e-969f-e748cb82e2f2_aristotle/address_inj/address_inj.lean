@@ -1,0 +1,2 @@
+-- Declaration: address_inj
+-- Extracted by StaticSplit

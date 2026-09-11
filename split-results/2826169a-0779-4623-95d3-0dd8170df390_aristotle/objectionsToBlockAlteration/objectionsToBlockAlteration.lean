@@ -1,0 +1,2 @@
+-- Declaration: objectionsToBlockAlteration
+-- Extracted by StaticSplit

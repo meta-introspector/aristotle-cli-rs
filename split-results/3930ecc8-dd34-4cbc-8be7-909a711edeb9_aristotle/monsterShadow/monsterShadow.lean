@@ -1,0 +1,2 @@
+-- Declaration: monsterShadow
+-- Extracted by StaticSplit

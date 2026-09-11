@@ -1,0 +1,2 @@
+-- Declaration: schemaSchema_types_count
+-- Extracted by StaticSplit

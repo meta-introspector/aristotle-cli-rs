@@ -1,0 +1,2 @@
+-- Declaration: world_precedes_dasein
+-- Extracted by StaticSplit

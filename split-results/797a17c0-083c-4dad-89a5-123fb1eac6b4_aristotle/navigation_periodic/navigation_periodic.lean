@@ -1,0 +1,2 @@
+-- Declaration: navigation_periodic
+-- Extracted by StaticSplit

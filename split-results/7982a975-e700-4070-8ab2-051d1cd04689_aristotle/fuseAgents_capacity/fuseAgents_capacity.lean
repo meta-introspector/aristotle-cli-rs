@@ -1,0 +1,2 @@
+-- Declaration: fuseAgents_capacity
+-- Extracted by StaticSplit

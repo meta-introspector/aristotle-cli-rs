@@ -1,0 +1,2 @@
+-- Declaration: monsterGroupOrder_large
+-- Extracted by StaticSplit

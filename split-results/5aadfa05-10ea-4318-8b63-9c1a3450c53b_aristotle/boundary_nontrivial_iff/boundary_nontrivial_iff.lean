@@ -1,0 +1,2 @@
+-- Declaration: boundary_nontrivial_iff
+-- Extracted by StaticSplit

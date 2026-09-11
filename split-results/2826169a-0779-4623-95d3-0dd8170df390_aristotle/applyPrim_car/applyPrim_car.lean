@@ -1,0 +1,2 @@
+-- Declaration: applyPrim_car
+-- Extracted by StaticSplit

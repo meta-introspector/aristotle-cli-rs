@@ -1,0 +1,2 @@
+-- Declaration: infiniteThoughtGenerator_injective
+-- Extracted by StaticSplit

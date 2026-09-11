@@ -1,0 +1,2 @@
+-- Declaration: TypeDefn.kind
+-- Extracted by StaticSplit

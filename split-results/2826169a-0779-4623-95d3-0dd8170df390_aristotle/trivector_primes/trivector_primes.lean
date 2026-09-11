@@ -1,0 +1,2 @@
+-- Declaration: trivector_primes
+-- Extracted by StaticSplit

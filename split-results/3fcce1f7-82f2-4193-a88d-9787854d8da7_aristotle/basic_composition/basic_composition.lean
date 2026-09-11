@@ -1,0 +1,2 @@
+-- Declaration: basic_composition
+-- Extracted by StaticSplit

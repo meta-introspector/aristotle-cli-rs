@@ -1,0 +1,2 @@
+-- Declaration: hill_function
+-- Extracted by StaticSplit

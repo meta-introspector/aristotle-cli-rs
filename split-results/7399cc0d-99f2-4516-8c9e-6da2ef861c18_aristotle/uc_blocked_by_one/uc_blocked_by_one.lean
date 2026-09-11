@@ -1,0 +1,2 @@
+-- Declaration: uc_blocked_by_one
+-- Extracted by StaticSplit

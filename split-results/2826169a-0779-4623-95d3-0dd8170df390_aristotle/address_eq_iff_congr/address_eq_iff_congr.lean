@@ -1,0 +1,2 @@
+-- Declaration: address_eq_iff_congr
+-- Extracted by StaticSplit

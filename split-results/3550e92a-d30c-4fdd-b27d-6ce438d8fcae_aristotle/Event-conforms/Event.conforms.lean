@@ -1,0 +1,2 @@
+-- Declaration: Event.conforms
+-- Extracted by StaticSplit

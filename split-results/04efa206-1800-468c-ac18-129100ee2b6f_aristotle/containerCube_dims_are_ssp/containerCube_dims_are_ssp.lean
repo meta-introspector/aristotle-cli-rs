@@ -1,0 +1,2 @@
+-- Declaration: containerCube_dims_are_ssp
+-- Extracted by StaticSplit

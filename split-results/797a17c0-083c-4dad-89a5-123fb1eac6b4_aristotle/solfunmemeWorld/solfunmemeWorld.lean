@@ -1,0 +1,2 @@
+-- Declaration: solfunmemeWorld
+-- Extracted by StaticSplit

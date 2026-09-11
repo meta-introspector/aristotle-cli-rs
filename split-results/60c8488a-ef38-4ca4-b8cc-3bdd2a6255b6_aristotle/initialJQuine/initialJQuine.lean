@@ -1,0 +1,2 @@
+-- Declaration: initialJQuine
+-- Extracted by StaticSplit

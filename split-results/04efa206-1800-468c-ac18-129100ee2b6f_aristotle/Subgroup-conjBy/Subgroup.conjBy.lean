@@ -1,0 +1,2 @@
+-- Declaration: Subgroup.conjBy
+-- Extracted by StaticSplit

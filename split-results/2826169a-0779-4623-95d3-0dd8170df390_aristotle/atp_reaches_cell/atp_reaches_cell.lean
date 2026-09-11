@@ -1,0 +1,2 @@
+-- Declaration: atp_reaches_cell
+-- Extracted by StaticSplit

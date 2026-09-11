@@ -1,0 +1,2 @@
+-- Declaration: trivial_le_scaleTopology
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: LanguageConcept
+-- Extracted by StaticSplit

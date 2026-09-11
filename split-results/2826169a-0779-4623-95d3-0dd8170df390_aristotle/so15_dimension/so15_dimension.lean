@@ -1,0 +1,2 @@
+-- Declaration: so15_dimension
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: metameme_sum_congr_263
+-- Extracted by StaticSplit

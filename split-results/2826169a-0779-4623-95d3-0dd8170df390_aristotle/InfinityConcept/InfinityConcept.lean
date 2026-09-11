@@ -1,0 +1,2 @@
+-- Declaration: InfinityConcept
+-- Extracted by StaticSplit

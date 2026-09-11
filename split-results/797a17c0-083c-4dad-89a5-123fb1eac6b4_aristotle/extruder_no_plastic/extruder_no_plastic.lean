@@ -1,0 +1,2 @@
+-- Declaration: extruder_no_plastic
+-- Extracted by StaticSplit

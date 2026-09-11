@@ -1,0 +1,2 @@
+-- Declaration: cross_domain_overlap_mckay
+-- Extracted by StaticSplit

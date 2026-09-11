@@ -1,0 +1,2 @@
+-- Declaration: isBiology
+-- Extracted by StaticSplit

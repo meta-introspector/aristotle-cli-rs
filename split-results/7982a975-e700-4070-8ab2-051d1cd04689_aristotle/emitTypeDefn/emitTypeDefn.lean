@@ -1,0 +1,2 @@
+-- Declaration: emitTypeDefn
+-- Extracted by StaticSplit

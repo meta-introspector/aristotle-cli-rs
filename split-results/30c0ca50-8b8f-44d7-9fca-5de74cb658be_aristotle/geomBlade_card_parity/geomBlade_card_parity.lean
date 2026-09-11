@@ -1,0 +1,2 @@
+-- Declaration: geomBlade_card_parity
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: canonical_graded_wellFormed
+-- Extracted by StaticSplit

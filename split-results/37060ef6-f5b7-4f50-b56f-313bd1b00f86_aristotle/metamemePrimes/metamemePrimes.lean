@@ -1,0 +1,2 @@
+-- Declaration: metamemePrimes
+-- Extracted by StaticSplit

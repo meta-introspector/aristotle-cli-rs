@@ -1,0 +1,2 @@
+-- Declaration: one_winding_at_71
+-- Extracted by StaticSplit

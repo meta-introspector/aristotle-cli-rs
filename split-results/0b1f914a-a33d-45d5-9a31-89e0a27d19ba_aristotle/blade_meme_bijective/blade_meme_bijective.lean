@@ -1,0 +1,2 @@
+-- Declaration: blade_meme_bijective
+-- Extracted by StaticSplit

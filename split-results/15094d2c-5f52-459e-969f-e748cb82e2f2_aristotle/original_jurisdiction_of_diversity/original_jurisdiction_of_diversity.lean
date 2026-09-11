@@ -1,0 +1,2 @@
+-- Declaration: original_jurisdiction_of_diversity
+-- Extracted by StaticSplit

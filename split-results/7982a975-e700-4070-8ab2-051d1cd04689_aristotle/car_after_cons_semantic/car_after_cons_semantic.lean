@@ -1,0 +1,2 @@
+-- Declaration: car_after_cons_semantic
+-- Extracted by StaticSplit

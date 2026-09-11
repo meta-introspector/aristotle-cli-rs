@@ -1,0 +1,2 @@
+-- Declaration: canonicalMonomyth_maximal
+-- Extracted by StaticSplit

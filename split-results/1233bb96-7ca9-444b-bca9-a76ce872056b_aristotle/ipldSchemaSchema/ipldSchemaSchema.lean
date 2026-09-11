@@ -1,0 +1,2 @@
+-- Declaration: ipldSchemaSchema
+-- Extracted by StaticSplit

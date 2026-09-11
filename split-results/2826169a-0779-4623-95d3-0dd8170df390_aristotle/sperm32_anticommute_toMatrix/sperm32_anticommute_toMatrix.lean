@@ -1,0 +1,2 @@
+-- Declaration: sperm32_anticommute_toMatrix
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: hashQbert
+-- Extracted by StaticSplit

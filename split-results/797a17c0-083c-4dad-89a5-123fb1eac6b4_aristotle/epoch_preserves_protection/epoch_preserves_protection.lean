@@ -1,0 +1,2 @@
+-- Declaration: epoch_preserves_protection
+-- Extracted by StaticSplit

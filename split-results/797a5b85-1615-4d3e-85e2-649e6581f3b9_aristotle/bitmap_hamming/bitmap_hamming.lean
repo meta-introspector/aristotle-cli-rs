@@ -1,0 +1,2 @@
+-- Declaration: bitmap_hamming
+-- Extracted by StaticSplit

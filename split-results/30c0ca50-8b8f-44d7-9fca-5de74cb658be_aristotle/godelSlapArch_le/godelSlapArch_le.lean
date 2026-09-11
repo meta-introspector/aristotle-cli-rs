@@ -1,0 +1,2 @@
+-- Declaration: godelSlapArch_le
+-- Extracted by StaticSplit

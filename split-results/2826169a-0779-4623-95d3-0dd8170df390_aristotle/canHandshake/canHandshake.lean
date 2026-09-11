@@ -1,0 +1,2 @@
+-- Declaration: canHandshake
+-- Extracted by StaticSplit

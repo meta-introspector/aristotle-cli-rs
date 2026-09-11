@@ -1,0 +1,2 @@
+-- Declaration: Mfixpoint
+-- Extracted by StaticSplit

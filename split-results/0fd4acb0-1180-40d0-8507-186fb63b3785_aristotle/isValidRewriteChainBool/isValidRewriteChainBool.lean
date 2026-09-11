@@ -1,0 +1,2 @@
+-- Declaration: isValidRewriteChainBool
+-- Extracted by StaticSplit

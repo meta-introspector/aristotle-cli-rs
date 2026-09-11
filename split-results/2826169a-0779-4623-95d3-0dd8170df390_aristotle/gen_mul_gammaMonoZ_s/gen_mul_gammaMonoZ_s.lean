@@ -1,0 +1,2 @@
+-- Declaration: gen_mul_gammaMonoZ_s
+-- Extracted by StaticSplit

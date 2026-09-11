@@ -1,0 +1,2 @@
+-- Declaration: M11_degrees_divide_order
+-- Extracted by StaticSplit

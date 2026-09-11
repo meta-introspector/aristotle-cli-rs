@@ -1,0 +1,2 @@
+-- Declaration: cartanDiag
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ArchetypeWoman
+-- Extracted by StaticSplit

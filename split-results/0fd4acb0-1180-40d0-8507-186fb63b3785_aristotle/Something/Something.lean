@@ -1,0 +1,2 @@
+-- Declaration: Something
+-- Extracted by StaticSplit

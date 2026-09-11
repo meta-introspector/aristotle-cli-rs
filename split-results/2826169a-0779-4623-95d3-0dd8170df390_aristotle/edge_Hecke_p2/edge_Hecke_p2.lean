@@ -1,0 +1,2 @@
+-- Declaration: edge_Hecke_p2
+-- Extracted by StaticSplit

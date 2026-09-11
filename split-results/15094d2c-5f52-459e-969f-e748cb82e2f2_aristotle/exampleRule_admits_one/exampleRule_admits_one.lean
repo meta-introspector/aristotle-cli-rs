@@ -1,0 +1,2 @@
+-- Declaration: exampleRule_admits_one
+-- Extracted by StaticSplit

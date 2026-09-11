@@ -1,0 +1,2 @@
+-- Declaration: allQIDs
+-- Extracted by StaticSplit

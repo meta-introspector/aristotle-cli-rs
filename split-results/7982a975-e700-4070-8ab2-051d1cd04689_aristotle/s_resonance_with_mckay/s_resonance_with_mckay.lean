@@ -1,0 +1,2 @@
+-- Declaration: s_resonance_with_mckay
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: growthG_increases_depth
+-- Extracted by StaticSplit

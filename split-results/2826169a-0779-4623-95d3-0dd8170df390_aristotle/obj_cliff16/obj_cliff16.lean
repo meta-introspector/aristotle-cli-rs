@@ -1,0 +1,2 @@
+-- Declaration: obj_cliff16
+-- Extracted by StaticSplit

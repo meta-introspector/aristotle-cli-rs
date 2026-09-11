@@ -1,0 +1,2 @@
+-- Declaration: monster_min_nontrivial
+-- Extracted by StaticSplit

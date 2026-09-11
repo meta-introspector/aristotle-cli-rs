@@ -1,0 +1,2 @@
+-- Declaration: SignifierConcept
+-- Extracted by StaticSplit

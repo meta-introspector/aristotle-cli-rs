@@ -1,0 +1,2 @@
+-- Declaration: mockPoll_final_percent
+-- Extracted by StaticSplit

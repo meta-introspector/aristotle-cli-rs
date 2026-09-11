@@ -1,0 +1,2 @@
+-- Declaration: maximalSubgroupsM11_description
+-- Extracted by StaticSplit

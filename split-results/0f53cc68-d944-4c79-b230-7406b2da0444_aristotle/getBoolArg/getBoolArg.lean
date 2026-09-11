@@ -1,0 +1,2 @@
+-- Declaration: getBoolArg
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: faithful_toDom
+-- Extracted by StaticSplit

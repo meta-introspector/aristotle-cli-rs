@@ -1,0 +1,2 @@
+-- Declaration: size_tower
+-- Extracted by StaticSplit

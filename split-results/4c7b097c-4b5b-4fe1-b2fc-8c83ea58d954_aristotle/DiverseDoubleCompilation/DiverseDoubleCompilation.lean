@@ -1,0 +1,2 @@
+-- Declaration: DiverseDoubleCompilation
+-- Extracted by StaticSplit

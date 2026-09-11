@@ -1,0 +1,2 @@
+-- Declaration: isShemNode
+-- Extracted by StaticSplit

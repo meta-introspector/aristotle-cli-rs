@@ -1,0 +1,2 @@
+-- Declaration: aggregateDefect
+-- Extracted by StaticSplit

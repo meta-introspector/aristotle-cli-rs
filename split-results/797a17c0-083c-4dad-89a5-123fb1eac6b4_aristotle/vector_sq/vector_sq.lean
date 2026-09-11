@@ -1,0 +1,2 @@
+-- Declaration: vector_sq
+-- Extracted by StaticSplit

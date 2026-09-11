@@ -1,0 +1,2 @@
+-- Declaration: debit
+-- Extracted by StaticSplit

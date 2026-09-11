@@ -1,0 +1,2 @@
+-- Declaration: fingerprint_max_shapes
+-- Extracted by StaticSplit

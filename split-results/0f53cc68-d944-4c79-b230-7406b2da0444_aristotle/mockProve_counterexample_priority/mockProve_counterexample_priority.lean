@@ -1,0 +1,2 @@
+-- Declaration: mockProve_counterexample_priority
+-- Extracted by StaticSplit

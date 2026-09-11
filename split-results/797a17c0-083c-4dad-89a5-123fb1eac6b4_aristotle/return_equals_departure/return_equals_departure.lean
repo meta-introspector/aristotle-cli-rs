@@ -1,0 +1,2 @@
+-- Declaration: return_equals_departure
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cidOfConst
+-- Extracted by StaticSplit

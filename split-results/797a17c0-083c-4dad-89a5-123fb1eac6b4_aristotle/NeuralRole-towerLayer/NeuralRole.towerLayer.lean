@@ -1,0 +1,2 @@
+-- Declaration: NeuralRole.towerLayer
+-- Extracted by StaticSplit

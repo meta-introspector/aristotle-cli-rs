@@ -1,0 +1,2 @@
+-- Declaration: ramanujanCrank_coordinate
+-- Extracted by StaticSplit

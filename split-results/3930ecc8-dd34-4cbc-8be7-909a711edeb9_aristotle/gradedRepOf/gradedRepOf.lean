@@ -1,0 +1,2 @@
+-- Declaration: gradedRepOf
+-- Extracted by StaticSplit

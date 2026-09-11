@@ -1,0 +1,2 @@
+-- Declaration: koTrivial
+-- Extracted by StaticSplit

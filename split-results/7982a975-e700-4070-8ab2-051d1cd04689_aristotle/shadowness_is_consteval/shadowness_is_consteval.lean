@@ -1,0 +1,2 @@
+-- Declaration: shadowness_is_consteval
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: VestingPosition
+-- Extracted by StaticSplit

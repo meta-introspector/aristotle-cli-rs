@@ -1,0 +1,2 @@
+-- Declaration: grayskullDims
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: credit_lamports_toNat
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: NDProof.imp_self
+-- Extracted by StaticSplit

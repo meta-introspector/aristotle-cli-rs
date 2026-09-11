@@ -1,0 +1,2 @@
+-- Declaration: faceView_constant
+-- Extracted by StaticSplit

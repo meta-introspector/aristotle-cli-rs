@@ -1,0 +1,2 @@
+-- Declaration: projectToVOA
+-- Extracted by StaticSplit

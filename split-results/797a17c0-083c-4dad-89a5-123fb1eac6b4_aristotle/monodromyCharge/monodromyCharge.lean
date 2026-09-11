@@ -1,0 +1,2 @@
+-- Declaration: monodromyCharge
+-- Extracted by StaticSplit

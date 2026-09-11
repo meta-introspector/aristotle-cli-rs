@@ -1,0 +1,2 @@
+-- Declaration: comp_hom
+-- Extracted by StaticSplit

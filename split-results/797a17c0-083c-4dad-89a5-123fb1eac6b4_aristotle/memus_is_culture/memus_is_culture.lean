@@ -1,0 +1,2 @@
+-- Declaration: memus_is_culture
+-- Extracted by StaticSplit

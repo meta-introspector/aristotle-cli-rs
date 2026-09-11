@@ -1,0 +1,2 @@
+-- Declaration: GramEngine.monomials_linearIndependent
+-- Extracted by StaticSplit

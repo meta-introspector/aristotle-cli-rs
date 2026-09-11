@@ -1,0 +1,2 @@
+-- Declaration: DihedralGroup_4_card
+-- Extracted by StaticSplit

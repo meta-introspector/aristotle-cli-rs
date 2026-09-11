@@ -1,0 +1,2 @@
+-- Declaration: Channel
+-- Extracted by StaticSplit

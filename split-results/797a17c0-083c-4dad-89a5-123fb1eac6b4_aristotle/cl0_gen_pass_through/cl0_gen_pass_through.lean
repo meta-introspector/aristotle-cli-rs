@@ -1,0 +1,2 @@
+-- Declaration: cl0_gen_pass_through
+-- Extracted by StaticSplit

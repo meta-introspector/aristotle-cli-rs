@@ -1,0 +1,2 @@
+-- Declaration: fungalPartialChain_length
+-- Extracted by StaticSplit

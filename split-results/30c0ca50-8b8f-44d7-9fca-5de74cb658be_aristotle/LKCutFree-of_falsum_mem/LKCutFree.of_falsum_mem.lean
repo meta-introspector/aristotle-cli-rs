@@ -1,0 +1,2 @@
+-- Declaration: LKCutFree.of_falsum_mem
+-- Extracted by StaticSplit

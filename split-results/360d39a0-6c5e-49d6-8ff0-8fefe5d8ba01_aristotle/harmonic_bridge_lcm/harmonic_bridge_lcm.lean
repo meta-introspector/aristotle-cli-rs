@@ -1,0 +1,2 @@
+-- Declaration: harmonic_bridge_lcm
+-- Extracted by StaticSplit

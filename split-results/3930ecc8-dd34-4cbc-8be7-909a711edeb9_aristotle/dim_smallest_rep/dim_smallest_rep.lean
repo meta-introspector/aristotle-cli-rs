@@ -1,0 +1,2 @@
+-- Declaration: dim_smallest_rep
+-- Extracted by StaticSplit

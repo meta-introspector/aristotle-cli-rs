@@ -1,0 +1,2 @@
+-- Declaration: mckay_tower_bott
+-- Extracted by StaticSplit

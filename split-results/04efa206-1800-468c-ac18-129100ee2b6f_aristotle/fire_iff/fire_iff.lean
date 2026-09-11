@@ -1,0 +1,2 @@
+-- Declaration: fire_iff
+-- Extracted by StaticSplit

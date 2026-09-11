@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup.exponentPairs
+-- Extracted by StaticSplit

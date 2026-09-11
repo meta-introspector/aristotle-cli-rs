@@ -1,0 +1,2 @@
+-- Declaration: JourneyTemplate.isValid
+-- Extracted by StaticSplit

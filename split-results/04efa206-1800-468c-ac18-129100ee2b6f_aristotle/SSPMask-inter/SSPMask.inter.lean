@@ -1,0 +1,2 @@
+-- Declaration: SSPMask.inter
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: exampleRDF_moduli_shadow
+-- Extracted by StaticSplit

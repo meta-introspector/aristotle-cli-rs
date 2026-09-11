@@ -1,0 +1,2 @@
+-- Declaration: snap_round_dist
+-- Extracted by StaticSplit

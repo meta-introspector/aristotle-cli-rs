@@ -1,0 +1,2 @@
+-- Declaration: canonicalFlow_nonempty
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: tononi_reaches_consciousness
+-- Extracted by StaticSplit

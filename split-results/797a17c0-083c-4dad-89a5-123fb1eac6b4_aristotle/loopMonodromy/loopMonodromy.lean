@@ -1,0 +1,2 @@
+-- Declaration: loopMonodromy
+-- Extracted by StaticSplit

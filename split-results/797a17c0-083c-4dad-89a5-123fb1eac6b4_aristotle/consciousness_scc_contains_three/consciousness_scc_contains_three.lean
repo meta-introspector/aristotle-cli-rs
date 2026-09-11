@@ -1,0 +1,2 @@
+-- Declaration: consciousness_scc_contains_three
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: RealNumber
+-- Extracted by StaticSplit

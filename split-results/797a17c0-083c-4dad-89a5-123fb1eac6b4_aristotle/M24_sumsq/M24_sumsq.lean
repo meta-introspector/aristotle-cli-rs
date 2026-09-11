@@ -1,0 +1,2 @@
+-- Declaration: M24_sumsq
+-- Extracted by StaticSplit

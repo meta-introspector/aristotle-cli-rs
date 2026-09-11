@@ -1,0 +1,2 @@
+-- Declaration: bottClock_eq_canonical
+-- Extracted by StaticSplit

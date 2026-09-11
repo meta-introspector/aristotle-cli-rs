@@ -1,0 +1,2 @@
+-- Declaration: bottKTheoryGroup
+-- Extracted by StaticSplit

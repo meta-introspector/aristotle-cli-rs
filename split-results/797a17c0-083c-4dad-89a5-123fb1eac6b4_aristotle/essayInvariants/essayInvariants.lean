@@ -1,0 +1,2 @@
+-- Declaration: essayInvariants
+-- Extracted by StaticSplit

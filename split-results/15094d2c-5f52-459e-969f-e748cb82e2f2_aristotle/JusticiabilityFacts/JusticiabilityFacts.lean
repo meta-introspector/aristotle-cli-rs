@@ -1,0 +1,2 @@
+-- Declaration: JusticiabilityFacts
+-- Extracted by StaticSplit

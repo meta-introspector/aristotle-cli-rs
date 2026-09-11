@@ -1,0 +1,2 @@
+-- Declaration: omega_singularity
+-- Extracted by StaticSplit

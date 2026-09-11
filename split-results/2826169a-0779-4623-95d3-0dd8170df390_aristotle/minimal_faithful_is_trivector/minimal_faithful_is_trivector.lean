@@ -1,0 +1,2 @@
+-- Declaration: minimal_faithful_is_trivector
+-- Extracted by StaticSplit

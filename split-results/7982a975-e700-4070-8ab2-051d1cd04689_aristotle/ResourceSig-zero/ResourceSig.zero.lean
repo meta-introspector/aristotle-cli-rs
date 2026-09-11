@@ -1,0 +1,2 @@
+-- Declaration: ResourceSig.zero
+-- Extracted by StaticSplit

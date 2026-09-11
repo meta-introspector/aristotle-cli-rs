@@ -1,0 +1,2 @@
+-- Declaration: selfLifting_preserved
+-- Extracted by StaticSplit

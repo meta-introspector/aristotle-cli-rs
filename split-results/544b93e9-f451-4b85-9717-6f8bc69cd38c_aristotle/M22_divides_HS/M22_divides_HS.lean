@@ -1,0 +1,2 @@
+-- Declaration: M22_divides_HS
+-- Extracted by StaticSplit

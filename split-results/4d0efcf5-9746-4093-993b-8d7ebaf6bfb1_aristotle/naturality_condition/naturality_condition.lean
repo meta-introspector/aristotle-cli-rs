@@ -1,0 +1,2 @@
+-- Declaration: naturality_condition
+-- Extracted by StaticSplit

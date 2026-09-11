@@ -1,0 +1,2 @@
+-- Declaration: lam_star_wellformed
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Association
+-- Extracted by StaticSplit

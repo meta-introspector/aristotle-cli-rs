@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup.maxExp
+-- Extracted by StaticSplit

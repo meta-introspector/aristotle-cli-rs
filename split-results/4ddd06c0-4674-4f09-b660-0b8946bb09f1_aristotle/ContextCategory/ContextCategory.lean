@@ -1,0 +1,2 @@
+-- Declaration: ContextCategory
+-- Extracted by StaticSplit

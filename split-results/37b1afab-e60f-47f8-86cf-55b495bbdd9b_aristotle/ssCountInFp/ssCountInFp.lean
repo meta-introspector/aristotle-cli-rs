@@ -1,0 +1,2 @@
+-- Declaration: ssCountInFp
+-- Extracted by StaticSplit

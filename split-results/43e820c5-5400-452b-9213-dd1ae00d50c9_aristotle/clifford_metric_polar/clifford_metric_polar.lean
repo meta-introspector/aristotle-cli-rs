@@ -1,0 +1,2 @@
+-- Declaration: clifford_metric_polar
+-- Extracted by StaticSplit

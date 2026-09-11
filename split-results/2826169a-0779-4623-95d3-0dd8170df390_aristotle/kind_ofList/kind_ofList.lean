@@ -1,0 +1,2 @@
+-- Declaration: kind_ofList
+-- Extracted by StaticSplit

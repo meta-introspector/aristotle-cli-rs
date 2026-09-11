@@ -1,0 +1,2 @@
+-- Declaration: monster_23_part_pos
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: propagation_preserves_invariant
+-- Extracted by StaticSplit

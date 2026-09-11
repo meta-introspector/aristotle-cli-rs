@@ -1,0 +1,2 @@
+-- Declaration: popcount_le
+-- Extracted by StaticSplit

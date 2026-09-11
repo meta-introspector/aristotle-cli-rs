@@ -1,0 +1,2 @@
+-- Declaration: self_reference_is_RplusR
+-- Extracted by StaticSplit

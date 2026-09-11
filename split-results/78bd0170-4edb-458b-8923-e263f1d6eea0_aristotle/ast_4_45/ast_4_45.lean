@@ -1,0 +1,2 @@
+-- Declaration: ast_4_45
+-- Extracted by StaticSplit

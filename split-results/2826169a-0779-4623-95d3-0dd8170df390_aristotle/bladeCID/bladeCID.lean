@@ -1,0 +1,2 @@
+-- Declaration: bladeCID
+-- Extracted by StaticSplit

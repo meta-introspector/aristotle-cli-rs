@@ -1,0 +1,2 @@
+-- Declaration: AppealOutcome
+-- Extracted by StaticSplit

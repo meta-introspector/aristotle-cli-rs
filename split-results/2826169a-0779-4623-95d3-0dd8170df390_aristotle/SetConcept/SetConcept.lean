@@ -1,0 +1,2 @@
+-- Declaration: SetConcept
+-- Extracted by StaticSplit

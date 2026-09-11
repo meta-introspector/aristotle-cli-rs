@@ -1,0 +1,2 @@
+-- Declaration: commodity_count
+-- Extracted by StaticSplit

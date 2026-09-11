@@ -1,0 +1,2 @@
+-- Declaration: promethean_vanishes_mod71
+-- Extracted by StaticSplit

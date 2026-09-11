@@ -1,0 +1,2 @@
+-- Declaration: git
+-- Extracted by StaticSplit

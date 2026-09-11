@@ -1,0 +1,2 @@
+-- Declaration: UnoccupiableSpace
+-- Extracted by StaticSplit

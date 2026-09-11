@@ -1,0 +1,2 @@
+-- Declaration: shadow_one
+-- Extracted by StaticSplit

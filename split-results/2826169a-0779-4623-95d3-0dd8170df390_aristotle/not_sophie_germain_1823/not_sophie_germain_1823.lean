@@ -1,0 +1,2 @@
+-- Declaration: not_sophie_germain_1823
+-- Extracted by StaticSplit

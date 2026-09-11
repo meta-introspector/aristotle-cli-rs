@@ -1,0 +1,2 @@
+-- Declaration: majorityOfList_uniform_pos
+-- Extracted by StaticSplit

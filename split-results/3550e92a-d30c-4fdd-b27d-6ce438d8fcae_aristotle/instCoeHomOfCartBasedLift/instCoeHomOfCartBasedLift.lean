@@ -1,0 +1,2 @@
+-- Declaration: instCoeHomOfCartBasedLift
+-- Extracted by StaticSplit

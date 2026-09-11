@@ -1,0 +1,2 @@
+-- Declaration: UnionRepresentation_StringPrefix
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Tree.add3
+-- Extracted by StaticSplit

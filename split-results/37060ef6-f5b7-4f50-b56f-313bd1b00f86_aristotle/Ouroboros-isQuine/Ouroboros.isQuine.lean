@@ -1,0 +1,2 @@
+-- Declaration: Ouroboros.isQuine
+-- Extracted by StaticSplit

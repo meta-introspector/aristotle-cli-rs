@@ -1,0 +1,2 @@
+-- Declaration: ArchetypeWarriorWoman
+-- Extracted by StaticSplit

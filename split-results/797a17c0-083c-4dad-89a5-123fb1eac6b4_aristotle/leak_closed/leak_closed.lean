@@ -1,0 +1,2 @@
+-- Declaration: leak_closed
+-- Extracted by StaticSplit

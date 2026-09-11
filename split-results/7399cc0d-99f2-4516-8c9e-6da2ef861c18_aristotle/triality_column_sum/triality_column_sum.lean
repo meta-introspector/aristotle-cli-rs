@@ -1,0 +1,2 @@
+-- Declaration: triality_column_sum
+-- Extracted by StaticSplit

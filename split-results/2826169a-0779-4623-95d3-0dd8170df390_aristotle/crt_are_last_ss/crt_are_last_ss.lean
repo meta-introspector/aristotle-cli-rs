@@ -1,0 +1,2 @@
+-- Declaration: crt_are_last_ss
+-- Extracted by StaticSplit

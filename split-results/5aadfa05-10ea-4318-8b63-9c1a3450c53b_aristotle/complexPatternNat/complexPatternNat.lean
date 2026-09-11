@@ -1,0 +1,2 @@
+-- Declaration: complexPatternNat
+-- Extracted by StaticSplit

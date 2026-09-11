@@ -1,0 +1,2 @@
+-- Declaration: Gene
+-- Extracted by StaticSplit

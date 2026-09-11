@@ -1,0 +1,2 @@
+-- Declaration: atp_universal_root
+-- Extracted by StaticSplit

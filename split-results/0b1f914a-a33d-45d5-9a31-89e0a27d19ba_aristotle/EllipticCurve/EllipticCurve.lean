@@ -1,0 +1,2 @@
+-- Declaration: EllipticCurve
+-- Extracted by StaticSplit

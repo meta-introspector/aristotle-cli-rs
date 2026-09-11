@@ -1,0 +1,2 @@
+-- Declaration: germGeneratorOffset
+-- Extracted by StaticSplit

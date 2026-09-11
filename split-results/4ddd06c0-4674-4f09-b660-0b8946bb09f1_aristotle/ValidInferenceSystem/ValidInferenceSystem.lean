@@ -1,0 +1,2 @@
+-- Declaration: ValidInferenceSystem
+-- Extracted by StaticSplit

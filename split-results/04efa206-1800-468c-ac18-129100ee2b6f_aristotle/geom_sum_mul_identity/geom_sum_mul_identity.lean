@@ -1,0 +1,2 @@
+-- Declaration: geom_sum_mul_identity
+-- Extracted by StaticSplit

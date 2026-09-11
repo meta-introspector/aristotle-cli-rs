@@ -1,0 +1,2 @@
+-- Declaration: carrot_residue_fiber_infinite
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: towerValue_eq_seed_mul_divisor
+-- Extracted by StaticSplit

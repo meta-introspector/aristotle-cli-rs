@@ -1,0 +1,2 @@
+-- Declaration: moonshineMult
+-- Extracted by StaticSplit

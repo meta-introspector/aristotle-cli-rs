@@ -1,0 +1,2 @@
+-- Declaration: ogg_branch_count
+-- Extracted by StaticSplit

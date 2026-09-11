@@ -1,0 +1,2 @@
+-- Declaration: chevron_and_loper_diverge
+-- Extracted by StaticSplit

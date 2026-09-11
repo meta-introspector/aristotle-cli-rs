@@ -1,0 +1,2 @@
+-- Declaration: GoalBearingName.delta
+-- Extracted by StaticSplit

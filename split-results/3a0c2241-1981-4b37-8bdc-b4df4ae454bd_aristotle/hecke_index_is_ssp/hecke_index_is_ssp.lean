@@ -1,0 +1,2 @@
+-- Declaration: hecke_index_is_ssp
+-- Extracted by StaticSplit

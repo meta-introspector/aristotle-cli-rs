@@ -1,0 +1,2 @@
+-- Declaration: exampleOrbifoldCoord
+-- Extracted by StaticSplit

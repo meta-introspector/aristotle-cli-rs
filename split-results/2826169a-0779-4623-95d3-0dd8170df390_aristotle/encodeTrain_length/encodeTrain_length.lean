@@ -1,0 +1,2 @@
+-- Declaration: encodeTrain_length
+-- Extracted by StaticSplit

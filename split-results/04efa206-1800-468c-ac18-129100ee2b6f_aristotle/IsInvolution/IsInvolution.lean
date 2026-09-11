@@ -1,0 +1,2 @@
+-- Declaration: IsInvolution
+-- Extracted by StaticSplit

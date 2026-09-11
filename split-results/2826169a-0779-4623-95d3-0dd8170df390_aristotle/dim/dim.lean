@@ -1,0 +1,2 @@
+-- Declaration: dim
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: traceProd32_eq_int_trace
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ffiMonomial
+-- Extracted by StaticSplit

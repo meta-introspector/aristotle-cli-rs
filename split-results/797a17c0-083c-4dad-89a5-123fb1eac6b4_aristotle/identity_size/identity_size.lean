@@ -1,0 +1,2 @@
+-- Declaration: identity_size
+-- Extracted by StaticSplit

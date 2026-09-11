@@ -1,0 +1,2 @@
+-- Declaration: superthreshold_is_ss
+-- Extracted by StaticSplit

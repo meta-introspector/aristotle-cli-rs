@@ -1,0 +1,2 @@
+-- Declaration: dupont_is_creator
+-- Extracted by StaticSplit

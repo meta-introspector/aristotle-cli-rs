@@ -1,0 +1,2 @@
+-- Declaration: beingTowardDeath
+-- Extracted by StaticSplit

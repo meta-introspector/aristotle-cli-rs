@@ -1,0 +1,2 @@
+-- Declaration: Germ
+-- Extracted by StaticSplit

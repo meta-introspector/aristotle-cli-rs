@@ -1,0 +1,2 @@
+-- Declaration: List.singleton3
+-- Extracted by StaticSplit

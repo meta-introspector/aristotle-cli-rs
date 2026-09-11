@@ -1,0 +1,2 @@
+-- Declaration: TypeDefnStruct
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Positive.predDouble
+-- Extracted by StaticSplit

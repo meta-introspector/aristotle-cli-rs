@@ -1,0 +1,2 @@
+-- Declaration: cosmic_screw_components
+-- Extracted by StaticSplit

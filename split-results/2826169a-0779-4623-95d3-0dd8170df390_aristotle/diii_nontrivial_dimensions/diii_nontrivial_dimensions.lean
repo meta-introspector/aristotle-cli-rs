@@ -1,0 +1,2 @@
+-- Declaration: diii_nontrivial_dimensions
+-- Extracted by StaticSplit

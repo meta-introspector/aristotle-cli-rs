@@ -1,0 +1,2 @@
+-- Declaration: schemaTypeCount
+-- Extracted by StaticSplit

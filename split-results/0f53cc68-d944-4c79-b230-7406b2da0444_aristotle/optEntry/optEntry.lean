@@ -1,0 +1,2 @@
+-- Declaration: optEntry
+-- Extracted by StaticSplit

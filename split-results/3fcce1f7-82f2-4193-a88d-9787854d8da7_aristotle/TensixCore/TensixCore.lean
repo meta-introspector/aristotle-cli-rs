@@ -1,0 +1,2 @@
+-- Declaration: TensixCore
+-- Extracted by StaticSplit

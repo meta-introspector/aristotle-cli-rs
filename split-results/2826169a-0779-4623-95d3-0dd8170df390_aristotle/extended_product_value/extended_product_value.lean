@@ -1,0 +1,2 @@
+-- Declaration: extended_product_value
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: conj_intro
+-- Extracted by StaticSplit

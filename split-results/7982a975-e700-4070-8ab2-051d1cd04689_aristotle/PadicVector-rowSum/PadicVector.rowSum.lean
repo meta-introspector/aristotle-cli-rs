@@ -1,0 +1,2 @@
+-- Declaration: PadicVector.rowSum
+-- Extracted by StaticSplit

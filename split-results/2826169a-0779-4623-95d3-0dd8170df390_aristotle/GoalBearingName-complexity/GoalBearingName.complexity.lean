@@ -1,0 +1,2 @@
+-- Declaration: GoalBearingName.complexity
+-- Extracted by StaticSplit

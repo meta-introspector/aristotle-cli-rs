@@ -1,0 +1,2 @@
+-- Declaration: ontology_axes_coprime
+-- Extracted by StaticSplit

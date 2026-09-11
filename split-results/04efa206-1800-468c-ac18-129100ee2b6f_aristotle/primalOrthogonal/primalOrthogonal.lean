@@ -1,0 +1,2 @@
+-- Declaration: primalOrthogonal
+-- Extracted by StaticSplit

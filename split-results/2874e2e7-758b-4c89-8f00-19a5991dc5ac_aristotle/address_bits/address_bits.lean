@@ -1,0 +1,2 @@
+-- Declaration: address_bits
+-- Extracted by StaticSplit

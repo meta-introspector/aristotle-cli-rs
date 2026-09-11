@@ -1,0 +1,2 @@
+-- Declaration: spectrumOfClass
+-- Extracted by StaticSplit

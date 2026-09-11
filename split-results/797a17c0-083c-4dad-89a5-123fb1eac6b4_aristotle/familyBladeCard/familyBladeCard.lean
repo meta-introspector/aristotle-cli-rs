@@ -1,0 +1,2 @@
+-- Declaration: familyBladeCard
+-- Extracted by StaticSplit

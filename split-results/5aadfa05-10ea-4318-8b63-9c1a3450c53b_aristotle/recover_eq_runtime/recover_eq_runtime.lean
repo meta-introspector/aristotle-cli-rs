@@ -1,0 +1,2 @@
+-- Declaration: recover_eq_runtime
+-- Extracted by StaticSplit

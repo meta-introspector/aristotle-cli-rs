@@ -1,0 +1,2 @@
+-- Declaration: elixir_e8_shadow
+-- Extracted by StaticSplit

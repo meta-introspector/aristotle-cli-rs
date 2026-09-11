@@ -1,0 +1,2 @@
+-- Declaration: trivialQuineStep
+-- Extracted by StaticSplit

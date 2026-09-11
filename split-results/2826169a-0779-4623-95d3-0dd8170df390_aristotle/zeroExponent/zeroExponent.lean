@@ -1,0 +1,2 @@
+-- Declaration: zeroExponent
+-- Extracted by StaticSplit

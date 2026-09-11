@@ -1,0 +1,2 @@
+-- Declaration: every_ruling_establishes_precedent
+-- Extracted by StaticSplit

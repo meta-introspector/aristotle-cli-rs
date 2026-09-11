@@ -1,0 +1,2 @@
+-- Declaration: fnvOffset
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: WikiConcept
+-- Extracted by StaticSplit

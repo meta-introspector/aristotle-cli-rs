@@ -1,0 +1,2 @@
+-- Declaration: aristotleMaxim_coprime_monster
+-- Extracted by StaticSplit

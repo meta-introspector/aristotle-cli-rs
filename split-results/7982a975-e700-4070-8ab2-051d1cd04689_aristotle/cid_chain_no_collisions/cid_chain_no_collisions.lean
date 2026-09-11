@@ -1,0 +1,2 @@
+-- Declaration: cid_chain_no_collisions
+-- Extracted by StaticSplit

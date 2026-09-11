@@ -1,0 +1,2 @@
+-- Declaration: kubernetes_reaches_language
+-- Extracted by StaticSplit

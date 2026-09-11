@@ -1,0 +1,2 @@
+-- Declaration: wrong_signature_decomposes
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: orbifoldView
+-- Extracted by StaticSplit

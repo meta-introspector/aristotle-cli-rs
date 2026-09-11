@@ -1,0 +1,2 @@
+-- Declaration: irrepBits
+-- Extracted by StaticSplit

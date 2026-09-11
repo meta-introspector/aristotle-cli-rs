@@ -1,0 +1,2 @@
+-- Declaration: retract71_idempotent
+-- Extracted by StaticSplit

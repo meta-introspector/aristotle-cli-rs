@@ -1,0 +1,2 @@
+-- Declaration: PrecedentLog.maxWeight
+-- Extracted by StaticSplit

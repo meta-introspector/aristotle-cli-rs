@@ -1,0 +1,2 @@
+-- Declaration: scanningCost_le_grid
+-- Extracted by StaticSplit

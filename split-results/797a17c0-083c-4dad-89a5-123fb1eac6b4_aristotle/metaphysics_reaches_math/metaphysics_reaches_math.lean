@@ -1,0 +1,2 @@
+-- Declaration: metaphysics_reaches_math
+-- Extracted by StaticSplit

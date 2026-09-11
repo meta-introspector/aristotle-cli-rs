@@ -1,0 +1,2 @@
+-- Declaration: supersingular_dvd_monster
+-- Extracted by StaticSplit

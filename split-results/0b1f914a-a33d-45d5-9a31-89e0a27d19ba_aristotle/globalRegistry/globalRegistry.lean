@@ -1,0 +1,2 @@
+-- Declaration: globalRegistry
+-- Extracted by StaticSplit

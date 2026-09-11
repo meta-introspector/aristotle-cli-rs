@@ -1,0 +1,2 @@
+-- Declaration: TLanguageClassicalGreek
+-- Extracted by StaticSplit

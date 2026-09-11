@@ -1,0 +1,2 @@
+-- Declaration: L3_4_sum_sq_degrees
+-- Extracted by StaticSplit

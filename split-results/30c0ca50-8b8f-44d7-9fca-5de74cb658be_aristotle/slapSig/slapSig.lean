@@ -1,0 +1,2 @@
+-- Declaration: slapSig
+-- Extracted by StaticSplit

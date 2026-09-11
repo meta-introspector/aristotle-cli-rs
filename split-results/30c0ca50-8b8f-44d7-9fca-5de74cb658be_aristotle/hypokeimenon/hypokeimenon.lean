@@ -1,0 +1,2 @@
+-- Declaration: hypokeimenon
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: GlobalDecl
+-- Extracted by StaticSplit

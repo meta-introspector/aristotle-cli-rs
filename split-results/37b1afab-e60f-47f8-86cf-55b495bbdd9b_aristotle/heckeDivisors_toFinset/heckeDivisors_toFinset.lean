@@ -1,0 +1,2 @@
+-- Declaration: heckeDivisors_toFinset
+-- Extracted by StaticSplit

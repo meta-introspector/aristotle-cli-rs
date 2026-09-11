@@ -1,0 +1,2 @@
+-- Declaration: paxos_emoji_consensus
+-- Extracted by StaticSplit

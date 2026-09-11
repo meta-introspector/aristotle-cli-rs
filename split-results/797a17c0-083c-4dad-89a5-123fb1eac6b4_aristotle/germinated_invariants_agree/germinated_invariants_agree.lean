@@ -1,0 +1,2 @@
+-- Declaration: germinated_invariants_agree
+-- Extracted by StaticSplit

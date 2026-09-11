@@ -1,0 +1,2 @@
+-- Declaration: SpecialRule.amendmentInOrder
+-- Extracted by StaticSplit

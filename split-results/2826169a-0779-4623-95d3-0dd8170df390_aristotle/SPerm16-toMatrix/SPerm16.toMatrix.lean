@@ -1,0 +1,2 @@
+-- Declaration: SPerm16.toMatrix
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: emergentMeaningSeq
+-- Extracted by StaticSplit

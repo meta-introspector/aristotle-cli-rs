@@ -1,0 +1,2 @@
+-- Declaration: transfer_preserves_total
+-- Extracted by StaticSplit

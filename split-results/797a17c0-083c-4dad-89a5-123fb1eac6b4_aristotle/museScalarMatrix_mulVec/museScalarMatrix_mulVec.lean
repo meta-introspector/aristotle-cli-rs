@@ -1,0 +1,2 @@
+-- Declaration: museScalarMatrix_mulVec
+-- Extracted by StaticSplit

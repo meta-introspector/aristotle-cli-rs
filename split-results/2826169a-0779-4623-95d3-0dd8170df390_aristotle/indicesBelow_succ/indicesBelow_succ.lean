@@ -1,0 +1,2 @@
+-- Declaration: indicesBelow_succ
+-- Extracted by StaticSplit

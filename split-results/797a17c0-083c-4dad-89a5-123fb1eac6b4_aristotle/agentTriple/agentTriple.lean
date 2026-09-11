@@ -1,0 +1,2 @@
+-- Declaration: agentTriple
+-- Extracted by StaticSplit

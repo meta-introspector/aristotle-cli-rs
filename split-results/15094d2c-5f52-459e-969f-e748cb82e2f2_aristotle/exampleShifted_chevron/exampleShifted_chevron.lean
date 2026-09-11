@@ -1,0 +1,2 @@
+-- Declaration: exampleShifted_chevron
+-- Extracted by StaticSplit

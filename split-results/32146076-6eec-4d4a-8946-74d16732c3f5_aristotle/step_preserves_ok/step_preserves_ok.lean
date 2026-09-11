@@ -1,0 +1,2 @@
+-- Declaration: step_preserves_ok
+-- Extracted by StaticSplit

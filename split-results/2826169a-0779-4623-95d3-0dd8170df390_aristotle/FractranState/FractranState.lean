@@ -1,0 +1,2 @@
+-- Declaration: FractranState
+-- Extracted by StaticSplit

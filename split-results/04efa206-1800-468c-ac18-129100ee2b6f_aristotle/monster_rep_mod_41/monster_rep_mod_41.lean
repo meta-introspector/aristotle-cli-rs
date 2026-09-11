@@ -1,0 +1,2 @@
+-- Declaration: monster_rep_mod_41
+-- Extracted by StaticSplit

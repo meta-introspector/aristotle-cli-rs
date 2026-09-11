@@ -1,0 +1,2 @@
+-- Declaration: coord_determines_hash
+-- Extracted by StaticSplit

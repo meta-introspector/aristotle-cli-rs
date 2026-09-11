@@ -1,0 +1,2 @@
+-- Declaration: ComonadicMeme
+-- Extracted by StaticSplit

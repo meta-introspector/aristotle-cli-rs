@@ -1,0 +1,2 @@
+-- Declaration: LevelTree.empty
+-- Extracted by StaticSplit

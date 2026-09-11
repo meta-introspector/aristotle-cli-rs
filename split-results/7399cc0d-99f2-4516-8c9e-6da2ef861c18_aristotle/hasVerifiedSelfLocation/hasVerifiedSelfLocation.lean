@@ -1,0 +1,2 @@
+-- Declaration: hasVerifiedSelfLocation
+-- Extracted by StaticSplit

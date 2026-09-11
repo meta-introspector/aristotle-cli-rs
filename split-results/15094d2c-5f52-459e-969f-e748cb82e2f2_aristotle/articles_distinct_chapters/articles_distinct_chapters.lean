@@ -1,0 +1,2 @@
+-- Declaration: articles_distinct_chapters
+-- Extracted by StaticSplit

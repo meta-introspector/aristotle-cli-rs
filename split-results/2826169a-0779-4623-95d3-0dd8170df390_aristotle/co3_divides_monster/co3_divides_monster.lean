@@ -1,0 +1,2 @@
+-- Declaration: co3_divides_monster
+-- Extracted by StaticSplit

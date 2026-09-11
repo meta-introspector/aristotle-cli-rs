@@ -1,0 +1,2 @@
+-- Declaration: jSyntax
+-- Extracted by StaticSplit

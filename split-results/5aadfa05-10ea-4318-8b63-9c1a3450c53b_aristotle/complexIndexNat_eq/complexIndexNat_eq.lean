@@ -1,0 +1,2 @@
+-- Declaration: complexIndexNat_eq
+-- Extracted by StaticSplit

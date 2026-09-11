@@ -1,0 +1,2 @@
+-- Declaration: PropertyConcept
+-- Extracted by StaticSplit

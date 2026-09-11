@@ -1,0 +1,2 @@
+-- Declaration: Group
+-- Extracted by StaticSplit

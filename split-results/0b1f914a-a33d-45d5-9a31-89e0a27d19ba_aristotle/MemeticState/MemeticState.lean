@@ -1,0 +1,2 @@
+-- Declaration: MemeticState
+-- Extracted by StaticSplit

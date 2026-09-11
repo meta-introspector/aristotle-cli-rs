@@ -1,0 +1,2 @@
+-- Declaration: Emoji.meaning
+-- Extracted by StaticSplit

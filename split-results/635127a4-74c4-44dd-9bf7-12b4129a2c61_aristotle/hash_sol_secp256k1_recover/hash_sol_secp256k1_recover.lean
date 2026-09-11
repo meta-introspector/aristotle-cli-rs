@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_secp256k1_recover
+-- Extracted by StaticSplit

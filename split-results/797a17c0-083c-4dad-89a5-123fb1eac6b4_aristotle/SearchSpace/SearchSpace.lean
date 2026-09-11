@@ -1,0 +1,2 @@
+-- Declaration: SearchSpace
+-- Extracted by StaticSplit

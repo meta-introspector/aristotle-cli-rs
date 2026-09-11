@@ -1,0 +1,2 @@
+-- Declaration: renderModule
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: conj_elim_left
+-- Extracted by StaticSplit

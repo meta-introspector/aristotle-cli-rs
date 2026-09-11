@@ -1,0 +1,2 @@
+-- Declaration: trace_gammaMonoZ_s_zero'
+-- Extracted by StaticSplit

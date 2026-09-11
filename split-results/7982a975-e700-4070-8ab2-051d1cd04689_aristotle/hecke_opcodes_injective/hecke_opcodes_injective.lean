@@ -1,0 +1,2 @@
+-- Declaration: hecke_opcodes_injective
+-- Extracted by StaticSplit

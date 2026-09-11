@@ -1,0 +1,2 @@
+-- Declaration: Fibration.IsVertical
+-- Extracted by StaticSplit

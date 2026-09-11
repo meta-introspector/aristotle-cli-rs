@@ -1,0 +1,2 @@
+-- Declaration: taut_interp
+-- Extracted by StaticSplit

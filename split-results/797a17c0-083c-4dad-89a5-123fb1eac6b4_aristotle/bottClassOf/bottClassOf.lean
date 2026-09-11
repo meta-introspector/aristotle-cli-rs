@@ -1,0 +1,2 @@
+-- Declaration: bottClassOf
+-- Extracted by StaticSplit

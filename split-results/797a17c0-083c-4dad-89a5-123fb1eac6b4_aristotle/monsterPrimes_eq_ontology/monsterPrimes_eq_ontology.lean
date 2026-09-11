@@ -1,0 +1,2 @@
+-- Declaration: monsterPrimes_eq_ontology
+-- Extracted by StaticSplit

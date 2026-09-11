@@ -1,0 +1,2 @@
+-- Declaration: CrankMonoid.act
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: godel_boundary
+-- Extracted by StaticSplit

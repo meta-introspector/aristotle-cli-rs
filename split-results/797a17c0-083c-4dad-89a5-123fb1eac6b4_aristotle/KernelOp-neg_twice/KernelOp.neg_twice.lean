@@ -1,0 +1,2 @@
+-- Declaration: KernelOp.neg_twice
+-- Extracted by StaticSplit

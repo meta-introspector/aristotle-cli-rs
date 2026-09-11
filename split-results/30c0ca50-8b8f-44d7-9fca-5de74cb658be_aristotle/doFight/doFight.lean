@@ -1,0 +1,2 @@
+-- Declaration: doFight
+-- Extracted by StaticSplit

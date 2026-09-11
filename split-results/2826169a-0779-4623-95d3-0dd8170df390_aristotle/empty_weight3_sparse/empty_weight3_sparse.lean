@@ -1,0 +1,2 @@
+-- Declaration: empty_weight3_sparse
+-- Extracted by StaticSplit

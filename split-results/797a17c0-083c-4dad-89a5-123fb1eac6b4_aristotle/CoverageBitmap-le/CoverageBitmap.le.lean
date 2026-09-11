@@ -1,0 +1,2 @@
+-- Declaration: CoverageBitmap.le
+-- Extracted by StaticSplit

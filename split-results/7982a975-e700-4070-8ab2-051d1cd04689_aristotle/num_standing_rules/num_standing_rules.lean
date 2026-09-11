@@ -1,0 +1,2 @@
+-- Declaration: num_standing_rules
+-- Extracted by StaticSplit

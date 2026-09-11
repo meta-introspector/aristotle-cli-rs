@@ -1,0 +1,2 @@
+-- Declaration: hashChess
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: examplePipeline_check
+-- Extracted by StaticSplit

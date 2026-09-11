@@ -1,0 +1,2 @@
+-- Declaration: SheafDiagram.empty
+-- Extracted by StaticSplit

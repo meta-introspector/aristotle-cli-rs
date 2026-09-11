@@ -1,0 +1,2 @@
+-- Declaration: envelope.
+-- Extracted by StaticSplit

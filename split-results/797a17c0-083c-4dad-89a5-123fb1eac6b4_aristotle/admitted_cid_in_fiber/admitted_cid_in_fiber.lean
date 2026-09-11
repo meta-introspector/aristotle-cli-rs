@@ -1,0 +1,2 @@
+-- Declaration: admitted_cid_in_fiber
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: GovernanceAdmissible
+-- Extracted by StaticSplit

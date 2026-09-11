@@ -1,0 +1,2 @@
+-- Declaration: divisor_telescope
+-- Extracted by StaticSplit

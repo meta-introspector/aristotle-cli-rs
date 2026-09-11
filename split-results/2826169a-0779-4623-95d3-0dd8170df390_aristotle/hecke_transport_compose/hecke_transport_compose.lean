@@ -1,0 +1,2 @@
+-- Declaration: hecke_transport_compose
+-- Extracted by StaticSplit

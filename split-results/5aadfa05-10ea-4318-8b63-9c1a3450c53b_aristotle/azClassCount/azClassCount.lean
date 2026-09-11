@@ -1,0 +1,2 @@
+-- Declaration: azClassCount
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monsterValuation
+-- Extracted by StaticSplit

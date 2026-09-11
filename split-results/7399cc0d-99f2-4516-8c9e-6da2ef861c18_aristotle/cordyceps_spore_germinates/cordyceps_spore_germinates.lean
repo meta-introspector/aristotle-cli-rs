@@ -1,0 +1,2 @@
+-- Declaration: cordyceps_spore_germinates
+-- Extracted by StaticSplit

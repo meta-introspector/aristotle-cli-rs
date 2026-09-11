@@ -1,0 +1,2 @@
+-- Declaration: skibidi_universal
+-- Extracted by StaticSplit

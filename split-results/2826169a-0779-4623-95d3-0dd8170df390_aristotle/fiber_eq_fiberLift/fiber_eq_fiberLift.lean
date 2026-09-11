@@ -1,0 +1,2 @@
+-- Declaration: fiber_eq_fiberLift
+-- Extracted by StaticSplit

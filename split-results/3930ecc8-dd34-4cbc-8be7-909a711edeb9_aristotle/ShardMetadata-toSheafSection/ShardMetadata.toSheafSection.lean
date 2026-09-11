@@ -1,0 +1,2 @@
+-- Declaration: ShardMetadata.toSheafSection
+-- Extracted by StaticSplit

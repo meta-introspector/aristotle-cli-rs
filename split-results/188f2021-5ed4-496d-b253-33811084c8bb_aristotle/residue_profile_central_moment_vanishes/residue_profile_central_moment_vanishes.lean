@@ -1,0 +1,2 @@
+-- Declaration: residue_profile_central_moment_vanishes
+-- Extracted by StaticSplit

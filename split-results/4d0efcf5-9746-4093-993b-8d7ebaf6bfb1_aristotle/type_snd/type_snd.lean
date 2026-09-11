@@ -1,0 +1,2 @@
+-- Declaration: type_snd
+-- Extracted by StaticSplit

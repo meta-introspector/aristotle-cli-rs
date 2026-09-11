@@ -1,0 +1,2 @@
+-- Declaration: Heap.alloc
+-- Extracted by StaticSplit

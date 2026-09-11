@@ -1,0 +1,2 @@
+-- Declaration: CommitteeRulesSystem
+-- Extracted by StaticSplit

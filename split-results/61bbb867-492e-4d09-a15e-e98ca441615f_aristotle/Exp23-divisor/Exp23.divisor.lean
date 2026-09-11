@@ -1,0 +1,2 @@
+-- Declaration: Exp23.divisor
+-- Extracted by StaticSplit

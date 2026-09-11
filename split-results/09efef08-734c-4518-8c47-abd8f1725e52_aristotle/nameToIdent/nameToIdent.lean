@@ -1,0 +1,2 @@
+-- Declaration: nameToIdent
+-- Extracted by StaticSplit

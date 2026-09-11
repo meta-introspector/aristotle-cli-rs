@@ -1,0 +1,2 @@
+-- Declaration: UniversesDecl
+-- Extracted by StaticSplit

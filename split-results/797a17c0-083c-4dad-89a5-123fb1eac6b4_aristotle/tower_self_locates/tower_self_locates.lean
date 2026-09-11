@@ -1,0 +1,2 @@
+-- Declaration: tower_self_locates
+-- Extracted by StaticSplit

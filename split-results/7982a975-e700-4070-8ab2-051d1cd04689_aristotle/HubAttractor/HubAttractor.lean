@@ -1,0 +1,2 @@
+-- Declaration: HubAttractor
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: frobenius_bijective
+-- Extracted by StaticSplit

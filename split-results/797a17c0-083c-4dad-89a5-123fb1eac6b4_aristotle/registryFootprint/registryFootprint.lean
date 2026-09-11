@@ -1,0 +1,2 @@
+-- Declaration: registryFootprint
+-- Extracted by StaticSplit

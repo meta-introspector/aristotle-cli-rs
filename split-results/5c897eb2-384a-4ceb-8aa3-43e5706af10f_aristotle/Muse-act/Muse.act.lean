@@ -1,0 +1,2 @@
+-- Declaration: Muse.act
+-- Extracted by StaticSplit

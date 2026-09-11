@@ -1,0 +1,2 @@
+-- Declaration: HeckeEigenvalues.primeIdeal_complement_closed
+-- Extracted by StaticSplit

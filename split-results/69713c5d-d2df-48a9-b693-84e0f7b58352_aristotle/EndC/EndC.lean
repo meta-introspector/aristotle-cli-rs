@@ -1,0 +1,2 @@
+-- Declaration: EndC
+-- Extracted by StaticSplit

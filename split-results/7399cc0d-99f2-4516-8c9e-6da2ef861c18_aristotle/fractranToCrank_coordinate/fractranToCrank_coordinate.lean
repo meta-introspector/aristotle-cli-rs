@@ -1,0 +1,2 @@
+-- Declaration: fractranToCrank_coordinate
+-- Extracted by StaticSplit

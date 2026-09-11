@@ -1,0 +1,2 @@
+-- Declaration: orbifold_lift
+-- Extracted by StaticSplit

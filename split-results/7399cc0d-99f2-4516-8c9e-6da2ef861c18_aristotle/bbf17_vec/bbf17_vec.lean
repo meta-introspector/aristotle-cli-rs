@@ -1,0 +1,2 @@
+-- Declaration: bbf17_vec
+-- Extracted by StaticSplit

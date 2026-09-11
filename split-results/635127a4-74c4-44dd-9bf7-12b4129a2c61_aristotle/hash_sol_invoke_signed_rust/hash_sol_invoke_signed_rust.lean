@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_invoke_signed_rust
+-- Extracted by StaticSplit

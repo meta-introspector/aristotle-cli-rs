@@ -1,0 +1,2 @@
+-- Declaration: dimLabel
+-- Extracted by StaticSplit

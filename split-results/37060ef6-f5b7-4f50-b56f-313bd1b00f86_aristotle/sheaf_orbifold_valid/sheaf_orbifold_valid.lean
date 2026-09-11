@@ -1,0 +1,2 @@
+-- Declaration: sheaf_orbifold_valid
+-- Extracted by StaticSplit

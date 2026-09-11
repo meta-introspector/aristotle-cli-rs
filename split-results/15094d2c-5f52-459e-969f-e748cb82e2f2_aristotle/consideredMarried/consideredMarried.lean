@@ -1,0 +1,2 @@
+-- Declaration: consideredMarried
+-- Extracted by StaticSplit

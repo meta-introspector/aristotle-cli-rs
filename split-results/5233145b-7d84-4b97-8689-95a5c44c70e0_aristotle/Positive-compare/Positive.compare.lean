@@ -1,0 +1,2 @@
+-- Declaration: Positive.compare
+-- Extracted by StaticSplit

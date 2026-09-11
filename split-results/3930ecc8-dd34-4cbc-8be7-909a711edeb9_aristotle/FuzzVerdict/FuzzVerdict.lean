@@ -1,0 +1,2 @@
+-- Declaration: FuzzVerdict
+-- Extracted by StaticSplit

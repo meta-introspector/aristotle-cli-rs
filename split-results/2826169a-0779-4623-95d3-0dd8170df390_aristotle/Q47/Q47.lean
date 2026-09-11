@@ -1,0 +1,2 @@
+-- Declaration: Q47
+-- Extracted by StaticSplit

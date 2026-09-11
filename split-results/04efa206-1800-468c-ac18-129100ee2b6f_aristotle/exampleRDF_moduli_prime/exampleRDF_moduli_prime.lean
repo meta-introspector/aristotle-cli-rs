@@ -1,0 +1,2 @@
+-- Declaration: exampleRDF_moduli_prime
+-- Extracted by StaticSplit

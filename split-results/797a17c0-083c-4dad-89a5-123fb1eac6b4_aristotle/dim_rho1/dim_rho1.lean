@@ -1,0 +1,2 @@
+-- Declaration: dim_rho1
+-- Extracted by StaticSplit

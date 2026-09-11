@@ -1,0 +1,2 @@
+-- Declaration: similar
+-- Extracted by StaticSplit

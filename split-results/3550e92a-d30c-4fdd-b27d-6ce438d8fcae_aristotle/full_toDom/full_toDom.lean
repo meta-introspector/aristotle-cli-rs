@@ -1,0 +1,2 @@
+-- Declaration: full_toDom
+-- Extracted by StaticSplit

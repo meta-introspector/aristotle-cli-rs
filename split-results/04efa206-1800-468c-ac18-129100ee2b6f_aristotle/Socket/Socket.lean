@@ -1,0 +1,2 @@
+-- Declaration: Socket
+-- Extracted by StaticSplit

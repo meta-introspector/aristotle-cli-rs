@@ -1,0 +1,2 @@
+-- Declaration: gatePrimes
+-- Extracted by StaticSplit

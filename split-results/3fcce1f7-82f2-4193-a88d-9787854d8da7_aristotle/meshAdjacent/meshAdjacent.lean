@@ -1,0 +1,2 @@
+-- Declaration: meshAdjacent
+-- Extracted by StaticSplit

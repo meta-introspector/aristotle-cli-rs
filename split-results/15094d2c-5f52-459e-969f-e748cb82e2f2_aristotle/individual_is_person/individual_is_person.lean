@@ -1,0 +1,2 @@
+-- Declaration: individual_is_person
+-- Extracted by StaticSplit

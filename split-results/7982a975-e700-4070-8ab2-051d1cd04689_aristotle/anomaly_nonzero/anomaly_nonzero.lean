@@ -1,0 +1,2 @@
+-- Declaration: anomaly_nonzero
+-- Extracted by StaticSplit

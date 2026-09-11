@@ -1,0 +1,2 @@
+-- Declaration: Thirdness
+-- Extracted by StaticSplit

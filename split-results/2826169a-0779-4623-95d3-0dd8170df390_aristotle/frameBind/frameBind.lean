@@ -1,0 +1,2 @@
+-- Declaration: frameBind
+-- Extracted by StaticSplit

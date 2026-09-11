@@ -1,0 +1,2 @@
+-- Declaration: cutWeakest
+-- Extracted by StaticSplit

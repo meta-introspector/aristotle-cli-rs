@@ -1,0 +1,2 @@
+-- Declaration: phi_neuronalGroup_pos
+-- Extracted by StaticSplit

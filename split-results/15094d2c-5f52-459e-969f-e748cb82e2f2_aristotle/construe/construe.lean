@@ -1,0 +1,2 @@
+-- Declaration: construe
+-- Extracted by StaticSplit

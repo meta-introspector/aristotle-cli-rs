@@ -1,0 +1,2 @@
+-- Declaration: holomorphicProjection
+-- Extracted by StaticSplit

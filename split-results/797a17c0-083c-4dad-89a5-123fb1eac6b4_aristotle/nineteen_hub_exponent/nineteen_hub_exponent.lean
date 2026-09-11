@@ -1,0 +1,2 @@
+-- Declaration: nineteen_hub_exponent
+-- Extracted by StaticSplit

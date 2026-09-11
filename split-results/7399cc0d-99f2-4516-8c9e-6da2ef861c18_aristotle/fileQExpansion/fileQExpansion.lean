@@ -1,0 +1,2 @@
+-- Declaration: fileQExpansion
+-- Extracted by StaticSplit

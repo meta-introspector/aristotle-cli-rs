@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_always_home
+-- Extracted by StaticSplit

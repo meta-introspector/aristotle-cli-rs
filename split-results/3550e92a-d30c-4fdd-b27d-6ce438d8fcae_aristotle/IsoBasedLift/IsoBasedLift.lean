@@ -1,0 +1,2 @@
+-- Declaration: IsoBasedLift
+-- Extracted by StaticSplit

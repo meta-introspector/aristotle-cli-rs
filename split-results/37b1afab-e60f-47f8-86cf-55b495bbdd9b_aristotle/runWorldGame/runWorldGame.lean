@@ -1,0 +1,2 @@
+-- Declaration: runWorldGame
+-- Extracted by StaticSplit

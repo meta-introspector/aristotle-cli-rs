@@ -1,0 +1,2 @@
+-- Declaration: card_blades
+-- Extracted by StaticSplit

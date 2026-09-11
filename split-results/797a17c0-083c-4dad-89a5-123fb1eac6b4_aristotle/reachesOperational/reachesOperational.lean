@@ -1,0 +1,2 @@
+-- Declaration: reachesOperational
+-- Extracted by StaticSplit

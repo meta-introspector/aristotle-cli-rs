@@ -1,0 +1,2 @@
+-- Declaration: coe_inj
+-- Extracted by StaticSplit

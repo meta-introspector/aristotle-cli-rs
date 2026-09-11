@@ -1,0 +1,2 @@
+-- Declaration: cosmicMonodromy
+-- Extracted by StaticSplit

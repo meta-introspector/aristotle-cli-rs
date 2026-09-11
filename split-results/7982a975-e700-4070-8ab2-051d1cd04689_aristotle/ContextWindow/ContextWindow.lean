@@ -1,0 +1,2 @@
+-- Declaration: ContextWindow
+-- Extracted by StaticSplit

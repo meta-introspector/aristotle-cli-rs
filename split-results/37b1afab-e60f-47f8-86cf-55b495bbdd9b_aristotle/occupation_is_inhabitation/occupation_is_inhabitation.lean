@@ -1,0 +1,2 @@
+-- Declaration: occupation_is_inhabitation
+-- Extracted by StaticSplit

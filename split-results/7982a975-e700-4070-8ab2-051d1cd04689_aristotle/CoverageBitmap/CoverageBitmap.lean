@@ -1,0 +1,2 @@
+-- Declaration: CoverageBitmap
+-- Extracted by StaticSplit

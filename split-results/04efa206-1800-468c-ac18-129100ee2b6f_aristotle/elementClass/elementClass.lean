@@ -1,0 +1,2 @@
+-- Declaration: elementClass
+-- Extracted by StaticSplit

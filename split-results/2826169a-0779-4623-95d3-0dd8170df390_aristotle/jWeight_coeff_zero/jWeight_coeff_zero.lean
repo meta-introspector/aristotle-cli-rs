@@ -1,0 +1,2 @@
+-- Declaration: jWeight_coeff_zero
+-- Extracted by StaticSplit

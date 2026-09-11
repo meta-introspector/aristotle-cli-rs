@@ -1,0 +1,2 @@
+-- Declaration: totalRootCount
+-- Extracted by StaticSplit

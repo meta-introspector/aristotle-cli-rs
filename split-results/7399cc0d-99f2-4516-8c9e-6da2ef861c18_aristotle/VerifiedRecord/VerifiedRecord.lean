@@ -1,0 +1,2 @@
+-- Declaration: VerifiedRecord
+-- Extracted by StaticSplit

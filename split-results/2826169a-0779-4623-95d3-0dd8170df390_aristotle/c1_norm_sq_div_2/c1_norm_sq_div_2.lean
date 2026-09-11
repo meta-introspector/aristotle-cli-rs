@@ -1,0 +1,2 @@
+-- Declaration: c1_norm_sq_div_2
+-- Extracted by StaticSplit

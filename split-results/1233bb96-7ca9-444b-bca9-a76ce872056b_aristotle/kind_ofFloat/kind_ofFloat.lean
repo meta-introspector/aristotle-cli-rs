@@ -1,0 +1,2 @@
+-- Declaration: kind_ofFloat
+-- Extracted by StaticSplit

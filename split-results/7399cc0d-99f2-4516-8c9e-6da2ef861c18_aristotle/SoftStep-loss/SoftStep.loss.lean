@@ -1,0 +1,2 @@
+-- Declaration: SoftStep.loss
+-- Extracted by StaticSplit

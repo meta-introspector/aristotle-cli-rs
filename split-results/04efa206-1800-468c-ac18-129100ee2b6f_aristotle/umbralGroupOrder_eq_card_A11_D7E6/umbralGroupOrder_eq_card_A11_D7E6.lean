@@ -1,0 +1,2 @@
+-- Declaration: umbralGroupOrder_eq_card_A11_D7E6
+-- Extracted by StaticSplit

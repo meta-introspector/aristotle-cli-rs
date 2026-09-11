@@ -1,0 +1,2 @@
+-- Declaration: ErrorCorrectionParams
+-- Extracted by StaticSplit

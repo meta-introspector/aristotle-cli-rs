@@ -1,0 +1,2 @@
+-- Declaration: sha256Codec
+-- Extracted by StaticSplit

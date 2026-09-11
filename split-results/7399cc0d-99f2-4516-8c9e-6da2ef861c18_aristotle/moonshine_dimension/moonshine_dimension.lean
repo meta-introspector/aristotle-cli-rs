@@ -1,0 +1,2 @@
+-- Declaration: moonshine_dimension
+-- Extracted by StaticSplit

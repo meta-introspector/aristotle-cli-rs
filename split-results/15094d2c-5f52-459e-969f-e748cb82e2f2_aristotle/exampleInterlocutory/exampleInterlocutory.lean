@@ -1,0 +1,2 @@
+-- Declaration: exampleInterlocutory
+-- Extracted by StaticSplit

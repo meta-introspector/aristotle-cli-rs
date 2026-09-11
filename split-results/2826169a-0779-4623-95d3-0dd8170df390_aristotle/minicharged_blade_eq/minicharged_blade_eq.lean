@@ -1,0 +1,2 @@
+-- Declaration: minicharged_blade_eq
+-- Extracted by StaticSplit

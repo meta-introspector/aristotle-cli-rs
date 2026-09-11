@@ -1,0 +1,2 @@
+-- Declaration: rosser_implies_goedel
+-- Extracted by StaticSplit

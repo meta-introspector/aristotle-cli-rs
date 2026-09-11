@@ -1,0 +1,2 @@
+-- Declaration: ontology_axiom_count
+-- Extracted by StaticSplit

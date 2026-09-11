@@ -1,0 +1,2 @@
+-- Declaration: SSPFraction
+-- Extracted by StaticSplit

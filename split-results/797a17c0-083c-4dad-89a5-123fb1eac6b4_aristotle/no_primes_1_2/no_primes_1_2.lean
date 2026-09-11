@@ -1,0 +1,2 @@
+-- Declaration: no_primes_1_2
+-- Extracted by StaticSplit

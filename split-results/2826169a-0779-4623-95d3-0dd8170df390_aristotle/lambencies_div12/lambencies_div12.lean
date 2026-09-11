@@ -1,0 +1,2 @@
+-- Declaration: lambencies_div12
+-- Extracted by StaticSplit

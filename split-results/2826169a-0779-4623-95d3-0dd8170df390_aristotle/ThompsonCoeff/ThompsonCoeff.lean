@@ -1,0 +1,2 @@
+-- Declaration: ThompsonCoeff
+-- Extracted by StaticSplit

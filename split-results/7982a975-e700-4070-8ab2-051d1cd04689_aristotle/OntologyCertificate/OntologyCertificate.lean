@@ -1,0 +1,2 @@
+-- Declaration: OntologyCertificate
+-- Extracted by StaticSplit

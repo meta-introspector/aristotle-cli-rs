@@ -1,0 +1,2 @@
+-- Declaration: IsCharacter
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: loper_no_deference_from_ambiguity
+-- Extracted by StaticSplit

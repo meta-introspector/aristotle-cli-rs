@@ -1,0 +1,2 @@
+-- Declaration: SheafSection.isValid
+-- Extracted by StaticSplit

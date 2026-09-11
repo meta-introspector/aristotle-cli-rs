@@ -1,0 +1,2 @@
+-- Declaration: WebContentType
+-- Extracted by StaticSplit

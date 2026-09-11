@@ -1,0 +1,2 @@
+-- Declaration: BootstrapResolution
+-- Extracted by StaticSplit

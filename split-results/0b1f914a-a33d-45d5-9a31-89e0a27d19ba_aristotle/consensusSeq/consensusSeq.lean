@@ -1,0 +1,2 @@
+-- Declaration: consensusSeq
+-- Extracted by StaticSplit

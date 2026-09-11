@@ -1,0 +1,2 @@
+-- Declaration: semiotics_reaches_semiotics
+-- Extracted by StaticSplit

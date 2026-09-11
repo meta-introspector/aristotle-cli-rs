@@ -1,0 +1,2 @@
+-- Declaration: categorize
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: TriadicAlignment
+-- Extracted by StaticSplit

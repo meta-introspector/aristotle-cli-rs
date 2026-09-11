@@ -1,0 +1,2 @@
+-- Declaration: Weight3Sparse
+-- Extracted by StaticSplit

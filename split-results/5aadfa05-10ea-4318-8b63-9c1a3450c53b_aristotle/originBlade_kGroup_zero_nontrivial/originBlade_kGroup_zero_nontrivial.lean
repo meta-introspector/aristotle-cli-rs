@@ -1,0 +1,2 @@
+-- Declaration: originBlade_kGroup_zero_nontrivial
+-- Extracted by StaticSplit

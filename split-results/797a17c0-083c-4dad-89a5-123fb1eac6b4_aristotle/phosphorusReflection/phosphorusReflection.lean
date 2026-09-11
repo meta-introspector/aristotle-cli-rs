@@ -1,0 +1,2 @@
+-- Declaration: phosphorusReflection
+-- Extracted by StaticSplit

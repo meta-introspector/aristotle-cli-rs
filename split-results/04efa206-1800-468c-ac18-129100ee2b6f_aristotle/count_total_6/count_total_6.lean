@@ -1,0 +1,2 @@
+-- Declaration: count_total_6
+-- Extracted by StaticSplit

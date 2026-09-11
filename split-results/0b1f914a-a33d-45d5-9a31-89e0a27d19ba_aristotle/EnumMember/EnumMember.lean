@@ -1,0 +1,2 @@
+-- Declaration: EnumMember
+-- Extracted by StaticSplit

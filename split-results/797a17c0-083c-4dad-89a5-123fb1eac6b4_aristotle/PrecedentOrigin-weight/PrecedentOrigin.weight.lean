@@ -1,0 +1,2 @@
+-- Declaration: PrecedentOrigin.weight
+-- Extracted by StaticSplit

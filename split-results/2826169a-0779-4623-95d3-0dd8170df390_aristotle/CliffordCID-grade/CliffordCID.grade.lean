@@ -1,0 +1,2 @@
+-- Declaration: CliffordCID.grade
+-- Extracted by StaticSplit

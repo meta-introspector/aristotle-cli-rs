@@ -1,0 +1,2 @@
+-- Declaration: alternatingGroup_isSimpleGroup
+-- Extracted by StaticSplit

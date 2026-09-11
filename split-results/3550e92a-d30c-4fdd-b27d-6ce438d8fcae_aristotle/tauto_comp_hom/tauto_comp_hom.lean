@@ -1,0 +1,2 @@
+-- Declaration: tauto_comp_hom
+-- Extracted by StaticSplit

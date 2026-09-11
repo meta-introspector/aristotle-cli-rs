@@ -1,0 +1,2 @@
+-- Declaration: auto_native
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: encoding_is_residue_projection
+-- Extracted by StaticSplit

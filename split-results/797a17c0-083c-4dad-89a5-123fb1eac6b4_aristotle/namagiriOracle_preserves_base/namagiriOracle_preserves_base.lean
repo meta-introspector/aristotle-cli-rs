@@ -1,0 +1,2 @@
+-- Declaration: namagiriOracle_preserves_base
+-- Extracted by StaticSplit

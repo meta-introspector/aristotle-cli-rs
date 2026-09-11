@@ -1,0 +1,2 @@
+-- Declaration: project_is_coherent
+-- Extracted by StaticSplit

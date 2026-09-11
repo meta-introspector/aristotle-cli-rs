@@ -1,0 +1,2 @@
+-- Declaration: cid_self_inverse
+-- Extracted by StaticSplit

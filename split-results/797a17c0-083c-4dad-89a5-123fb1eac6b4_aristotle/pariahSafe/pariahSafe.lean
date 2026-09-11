@@ -1,0 +1,2 @@
+-- Declaration: pariahSafe
+-- Extracted by StaticSplit

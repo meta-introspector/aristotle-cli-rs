@@ -1,0 +1,2 @@
+-- Declaration: isGenusZero
+-- Extracted by StaticSplit

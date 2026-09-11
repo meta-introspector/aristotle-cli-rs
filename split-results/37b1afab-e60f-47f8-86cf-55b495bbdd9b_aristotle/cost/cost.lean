@@ -1,0 +1,2 @@
+-- Declaration: cost
+-- Extracted by StaticSplit

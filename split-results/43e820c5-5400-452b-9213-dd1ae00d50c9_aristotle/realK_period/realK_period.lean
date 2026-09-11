@@ -1,0 +1,2 @@
+-- Declaration: realK_period
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: StageLeq.refl
+-- Extracted by StaticSplit

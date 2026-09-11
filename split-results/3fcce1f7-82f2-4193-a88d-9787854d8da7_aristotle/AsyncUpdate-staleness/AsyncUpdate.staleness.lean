@@ -1,0 +1,2 @@
+-- Declaration: AsyncUpdate.staleness
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: supersingularPrimesList_nodup
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: selfLifting_bott
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: firstFiveSectors
+-- Extracted by StaticSplit

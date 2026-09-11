@@ -1,0 +1,2 @@
+-- Declaration: PartialPropStep
+-- Extracted by StaticSplit

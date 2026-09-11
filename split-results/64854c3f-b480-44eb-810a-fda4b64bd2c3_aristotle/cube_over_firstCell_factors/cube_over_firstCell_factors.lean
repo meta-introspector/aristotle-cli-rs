@@ -1,0 +1,2 @@
+-- Declaration: cube_over_firstCell_factors
+-- Extracted by StaticSplit

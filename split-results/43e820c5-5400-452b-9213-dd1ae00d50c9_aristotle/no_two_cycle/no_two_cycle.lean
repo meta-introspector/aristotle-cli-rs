@@ -1,0 +1,2 @@
+-- Declaration: no_two_cycle
+-- Extracted by StaticSplit

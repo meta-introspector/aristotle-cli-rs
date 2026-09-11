@@ -1,0 +1,2 @@
+-- Declaration: mckay_preserves_jdist
+-- Extracted by StaticSplit

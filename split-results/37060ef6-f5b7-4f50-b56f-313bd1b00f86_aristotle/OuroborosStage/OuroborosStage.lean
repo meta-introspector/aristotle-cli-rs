@@ -1,0 +1,2 @@
+-- Declaration: OuroborosStage
+-- Extracted by StaticSplit

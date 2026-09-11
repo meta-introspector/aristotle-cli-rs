@@ -1,0 +1,2 @@
+-- Declaration: da51_decimal
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: TAuthType
+-- Extracted by StaticSplit

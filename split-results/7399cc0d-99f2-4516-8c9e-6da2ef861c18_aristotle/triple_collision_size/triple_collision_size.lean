@@ -1,0 +1,2 @@
+-- Declaration: triple_collision_size
+-- Extracted by StaticSplit

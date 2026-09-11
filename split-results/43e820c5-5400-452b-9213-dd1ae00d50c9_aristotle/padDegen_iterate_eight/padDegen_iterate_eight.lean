@@ -1,0 +1,2 @@
+-- Declaration: padDegen_iterate_eight
+-- Extracted by StaticSplit

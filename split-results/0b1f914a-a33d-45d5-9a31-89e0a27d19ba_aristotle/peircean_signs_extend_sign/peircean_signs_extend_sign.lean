@@ -1,0 +1,2 @@
+-- Declaration: peircean_signs_extend_sign
+-- Extracted by StaticSplit

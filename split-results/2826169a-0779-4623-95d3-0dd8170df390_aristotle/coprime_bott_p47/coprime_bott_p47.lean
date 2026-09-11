@@ -1,0 +1,2 @@
+-- Declaration: coprime_bott_p47
+-- Extracted by StaticSplit

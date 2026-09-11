@@ -1,0 +1,2 @@
+-- Declaration: rpcError
+-- Extracted by StaticSplit

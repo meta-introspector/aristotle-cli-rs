@@ -1,0 +1,2 @@
+-- Declaration: crossroads_coordinates
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: isProp_isProp
+-- Extracted by StaticSplit

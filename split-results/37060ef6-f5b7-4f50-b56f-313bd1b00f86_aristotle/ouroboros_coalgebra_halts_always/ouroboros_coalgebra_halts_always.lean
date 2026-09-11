@@ -1,0 +1,2 @@
+-- Declaration: ouroboros_coalgebra_halts_always
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: HCIDAddr
+-- Extracted by StaticSplit

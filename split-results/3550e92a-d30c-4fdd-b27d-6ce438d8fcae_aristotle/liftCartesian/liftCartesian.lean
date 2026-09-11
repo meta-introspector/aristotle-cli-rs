@@ -1,0 +1,2 @@
+-- Declaration: liftCartesian
+-- Extracted by StaticSplit

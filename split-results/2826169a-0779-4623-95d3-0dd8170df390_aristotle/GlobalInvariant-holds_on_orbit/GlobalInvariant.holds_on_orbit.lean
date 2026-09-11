@@ -1,0 +1,2 @@
+-- Declaration: GlobalInvariant.holds_on_orbit
+-- Extracted by StaticSplit

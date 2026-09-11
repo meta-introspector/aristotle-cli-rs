@@ -1,0 +1,2 @@
+-- Declaration: WeakEquiv.symm
+-- Extracted by StaticSplit

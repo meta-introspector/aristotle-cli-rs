@@ -1,0 +1,2 @@
+-- Declaration: meaning_injective
+-- Extracted by StaticSplit

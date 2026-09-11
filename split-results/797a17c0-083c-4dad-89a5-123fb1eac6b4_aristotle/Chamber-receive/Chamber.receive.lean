@@ -1,0 +1,2 @@
+-- Declaration: Chamber.receive
+-- Extracted by StaticSplit

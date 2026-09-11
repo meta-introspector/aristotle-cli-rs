@@ -1,0 +1,2 @@
+-- Declaration: f2mul
+-- Extracted by StaticSplit

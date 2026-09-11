@@ -1,0 +1,2 @@
+-- Declaration: all_metameme_primes
+-- Extracted by StaticSplit

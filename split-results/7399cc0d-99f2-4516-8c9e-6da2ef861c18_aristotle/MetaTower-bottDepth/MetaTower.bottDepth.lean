@@ -1,0 +1,2 @@
+-- Declaration: MetaTower.bottDepth
+-- Extracted by StaticSplit

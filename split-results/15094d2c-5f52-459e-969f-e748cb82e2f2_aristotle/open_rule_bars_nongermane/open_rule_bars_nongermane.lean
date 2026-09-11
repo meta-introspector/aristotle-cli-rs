@@ -1,0 +1,2 @@
+-- Declaration: open_rule_bars_nongermane
+-- Extracted by StaticSplit

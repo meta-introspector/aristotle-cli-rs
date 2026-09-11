@@ -1,0 +1,2 @@
+-- Declaration: lean_names_are_unique
+-- Extracted by StaticSplit

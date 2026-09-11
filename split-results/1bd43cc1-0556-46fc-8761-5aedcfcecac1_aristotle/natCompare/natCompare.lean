@@ -1,0 +1,2 @@
+-- Declaration: natCompare
+-- Extracted by StaticSplit

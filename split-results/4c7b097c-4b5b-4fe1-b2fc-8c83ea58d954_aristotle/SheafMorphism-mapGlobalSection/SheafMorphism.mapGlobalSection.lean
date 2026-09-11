@@ -1,0 +1,2 @@
+-- Declaration: SheafMorphism.mapGlobalSection
+-- Extracted by StaticSplit

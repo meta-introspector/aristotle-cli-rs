@@ -1,0 +1,2 @@
+-- Declaration: AsyncUpdate
+-- Extracted by StaticSplit

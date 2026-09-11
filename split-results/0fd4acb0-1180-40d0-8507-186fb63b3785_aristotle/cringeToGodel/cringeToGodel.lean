@@ -1,0 +1,2 @@
+-- Declaration: cringeToGodel
+-- Extracted by StaticSplit

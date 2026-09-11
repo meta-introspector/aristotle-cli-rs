@@ -1,0 +1,2 @@
+-- Declaration: cl0_four_equiv_mat2Quaternion
+-- Extracted by StaticSplit

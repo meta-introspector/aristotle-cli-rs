@@ -1,0 +1,2 @@
+-- Declaration: Tree.height
+-- Extracted by StaticSplit

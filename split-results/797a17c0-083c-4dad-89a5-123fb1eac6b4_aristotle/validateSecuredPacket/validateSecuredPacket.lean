@@ -1,0 +1,2 @@
+-- Declaration: validateSecuredPacket
+-- Extracted by StaticSplit

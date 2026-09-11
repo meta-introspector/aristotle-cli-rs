@@ -1,0 +1,2 @@
+-- Declaration: monster_irrep_clifford
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CoverageBitmap.popcount
+-- Extracted by StaticSplit

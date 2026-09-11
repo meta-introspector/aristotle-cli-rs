@@ -1,0 +1,2 @@
+-- Declaration: chain_residue
+-- Extracted by StaticSplit

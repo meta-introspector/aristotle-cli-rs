@@ -1,0 +1,2 @@
+-- Declaration: matchRatPattern_iff
+-- Extracted by StaticSplit

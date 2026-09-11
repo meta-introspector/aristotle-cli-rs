@@ -1,0 +1,2 @@
+-- Declaration: QEQObj
+-- Extracted by StaticSplit

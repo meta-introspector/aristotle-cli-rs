@@ -1,0 +1,2 @@
+-- Declaration: SSPFraction.delta
+-- Extracted by StaticSplit

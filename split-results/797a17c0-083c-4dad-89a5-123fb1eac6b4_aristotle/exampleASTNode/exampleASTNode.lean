@@ -1,0 +1,2 @@
+-- Declaration: exampleASTNode
+-- Extracted by StaticSplit

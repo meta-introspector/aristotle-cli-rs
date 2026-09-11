@@ -1,0 +1,2 @@
+-- Declaration: monsterIrrepDims_sorted
+-- Extracted by StaticSplit

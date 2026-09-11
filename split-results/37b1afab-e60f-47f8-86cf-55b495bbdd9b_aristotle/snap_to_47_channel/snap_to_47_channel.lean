@@ -1,0 +1,2 @@
+-- Declaration: snap_to_47_channel
+-- Extracted by StaticSplit

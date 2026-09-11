@@ -1,0 +1,2 @@
+-- Declaration: gaplift_hom_property
+-- Extracted by StaticSplit

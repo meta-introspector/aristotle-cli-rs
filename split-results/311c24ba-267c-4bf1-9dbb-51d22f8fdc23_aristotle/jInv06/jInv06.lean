@@ -1,0 +1,2 @@
+-- Declaration: jInv06
+-- Extracted by StaticSplit

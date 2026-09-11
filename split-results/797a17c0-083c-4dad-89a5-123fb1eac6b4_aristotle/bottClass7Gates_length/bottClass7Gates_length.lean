@@ -1,0 +1,2 @@
+-- Declaration: bottClass7Gates_length
+-- Extracted by StaticSplit

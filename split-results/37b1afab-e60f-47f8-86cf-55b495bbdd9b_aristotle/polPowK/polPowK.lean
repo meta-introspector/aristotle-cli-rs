@@ -1,0 +1,2 @@
+-- Declaration: polPowK
+-- Extracted by StaticSplit

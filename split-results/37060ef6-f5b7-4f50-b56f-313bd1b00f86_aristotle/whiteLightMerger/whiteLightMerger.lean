@@ -1,0 +1,2 @@
+-- Declaration: whiteLightMerger
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: scanningCost_saturates
+-- Extracted by StaticSplit

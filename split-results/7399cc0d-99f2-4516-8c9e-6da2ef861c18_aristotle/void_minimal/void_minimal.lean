@@ -1,0 +1,2 @@
+-- Declaration: void_minimal
+-- Extracted by StaticSplit

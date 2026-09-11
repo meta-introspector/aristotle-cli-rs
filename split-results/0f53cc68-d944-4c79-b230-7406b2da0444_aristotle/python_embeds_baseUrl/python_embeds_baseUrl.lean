@@ -1,0 +1,2 @@
+-- Declaration: python_embeds_baseUrl
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ternaryMul_zero_left
+-- Extracted by StaticSplit

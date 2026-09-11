@@ -1,0 +1,2 @@
+-- Declaration: ontology_primes
+-- Extracted by StaticSplit

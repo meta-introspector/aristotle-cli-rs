@@ -1,0 +1,2 @@
+-- Declaration: monomialN9
+-- Extracted by StaticSplit

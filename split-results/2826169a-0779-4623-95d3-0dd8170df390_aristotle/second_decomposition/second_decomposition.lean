@@ -1,0 +1,2 @@
+-- Declaration: second_decomposition
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: BoardroomState.init
+-- Extracted by StaticSplit

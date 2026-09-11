@@ -1,0 +1,2 @@
+-- Declaration: functor_map_comp
+-- Extracted by StaticSplit

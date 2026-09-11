@@ -1,0 +1,2 @@
+-- Declaration: pteFace
+-- Extracted by StaticSplit

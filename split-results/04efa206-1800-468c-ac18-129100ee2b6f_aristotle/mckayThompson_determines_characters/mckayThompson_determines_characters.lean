@@ -1,0 +1,2 @@
+-- Declaration: mckayThompson_determines_characters
+-- Extracted by StaticSplit

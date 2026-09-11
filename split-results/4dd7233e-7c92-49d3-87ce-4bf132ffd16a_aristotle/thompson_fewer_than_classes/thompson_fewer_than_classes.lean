@@ -1,0 +1,2 @@
+-- Declaration: thompson_fewer_than_classes
+-- Extracted by StaticSplit

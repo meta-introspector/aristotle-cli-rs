@@ -1,0 +1,2 @@
+-- Declaration: ATPExtConcept.all
+-- Extracted by StaticSplit

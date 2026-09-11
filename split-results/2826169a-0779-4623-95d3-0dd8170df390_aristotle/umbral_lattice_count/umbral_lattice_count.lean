@@ -1,0 +1,2 @@
+-- Declaration: umbral_lattice_count
+-- Extracted by StaticSplit

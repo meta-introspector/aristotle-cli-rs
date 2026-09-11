@@ -1,0 +1,2 @@
+-- Declaration: standing_rules_addr
+-- Extracted by StaticSplit

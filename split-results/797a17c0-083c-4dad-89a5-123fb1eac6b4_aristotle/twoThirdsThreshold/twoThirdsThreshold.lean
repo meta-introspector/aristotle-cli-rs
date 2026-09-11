@@ -1,0 +1,2 @@
+-- Declaration: twoThirdsThreshold
+-- Extracted by StaticSplit

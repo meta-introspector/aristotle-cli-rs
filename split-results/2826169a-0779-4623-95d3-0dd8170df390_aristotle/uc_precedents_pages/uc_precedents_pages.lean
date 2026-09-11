@@ -1,0 +1,2 @@
+-- Declaration: uc_precedents_pages
+-- Extracted by StaticSplit

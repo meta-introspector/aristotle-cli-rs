@@ -1,0 +1,2 @@
+-- Declaration: MarketBounded
+-- Extracted by StaticSplit

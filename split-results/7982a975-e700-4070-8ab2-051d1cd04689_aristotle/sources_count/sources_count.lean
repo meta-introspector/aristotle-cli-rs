@@ -1,0 +1,2 @@
+-- Declaration: sources_count
+-- Extracted by StaticSplit

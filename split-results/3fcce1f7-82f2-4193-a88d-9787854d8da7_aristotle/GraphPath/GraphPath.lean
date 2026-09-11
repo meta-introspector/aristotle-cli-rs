@@ -1,0 +1,2 @@
+-- Declaration: GraphPath
+-- Extracted by StaticSplit

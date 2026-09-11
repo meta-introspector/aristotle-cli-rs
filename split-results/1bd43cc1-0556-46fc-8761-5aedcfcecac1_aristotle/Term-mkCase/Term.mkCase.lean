@@ -1,0 +1,2 @@
+-- Declaration: Term.mkCase
+-- Extracted by StaticSplit

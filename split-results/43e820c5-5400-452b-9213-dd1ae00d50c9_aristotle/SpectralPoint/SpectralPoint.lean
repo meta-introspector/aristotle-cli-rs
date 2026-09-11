@@ -1,0 +1,2 @@
+-- Declaration: SpectralPoint
+-- Extracted by StaticSplit

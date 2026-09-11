@@ -1,0 +1,2 @@
+-- Declaration: AnomalyPoly_U1H_U1X
+-- Extracted by StaticSplit

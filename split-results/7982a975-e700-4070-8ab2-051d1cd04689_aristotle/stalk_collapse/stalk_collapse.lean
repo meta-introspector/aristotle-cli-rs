@@ -1,0 +1,2 @@
+-- Declaration: stalk_collapse
+-- Extracted by StaticSplit

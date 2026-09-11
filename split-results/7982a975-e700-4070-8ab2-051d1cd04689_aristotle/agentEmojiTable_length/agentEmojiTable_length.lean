@@ -1,0 +1,2 @@
+-- Declaration: agentEmojiTable_length
+-- Extracted by StaticSplit

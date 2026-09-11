@@ -1,0 +1,2 @@
+-- Declaration: BinInt.add
+-- Extracted by StaticSplit

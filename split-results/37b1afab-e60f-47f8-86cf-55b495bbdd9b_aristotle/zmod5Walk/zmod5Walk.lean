@@ -1,0 +1,2 @@
+-- Declaration: zmod5Walk
+-- Extracted by StaticSplit

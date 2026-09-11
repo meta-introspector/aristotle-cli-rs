@@ -1,0 +1,2 @@
+-- Declaration: senate_quorum_overlap
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: p_minus_comm_gen
+-- Extracted by StaticSplit

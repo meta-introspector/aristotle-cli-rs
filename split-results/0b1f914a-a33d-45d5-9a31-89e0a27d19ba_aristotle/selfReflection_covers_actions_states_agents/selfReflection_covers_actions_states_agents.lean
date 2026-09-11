@@ -1,0 +1,2 @@
+-- Declaration: selfReflection_covers_actions_states_agents
+-- Extracted by StaticSplit

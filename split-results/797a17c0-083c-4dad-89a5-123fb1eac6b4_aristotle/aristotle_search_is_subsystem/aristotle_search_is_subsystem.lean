@@ -1,0 +1,2 @@
+-- Declaration: aristotle_search_is_subsystem
+-- Extracted by StaticSplit

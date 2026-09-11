@@ -1,0 +1,2 @@
+-- Declaration: demo_heist_logged
+-- Extracted by StaticSplit

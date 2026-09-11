@@ -1,0 +1,2 @@
+-- Declaration: fold_right2
+-- Extracted by StaticSplit

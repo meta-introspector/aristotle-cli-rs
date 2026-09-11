@@ -1,0 +1,2 @@
+-- Declaration: glossary_count
+-- Extracted by StaticSplit

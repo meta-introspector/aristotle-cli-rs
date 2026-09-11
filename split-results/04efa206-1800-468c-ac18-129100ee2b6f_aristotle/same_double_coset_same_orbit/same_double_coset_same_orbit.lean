@@ -1,0 +1,2 @@
+-- Declaration: same_double_coset_same_orbit
+-- Extracted by StaticSplit

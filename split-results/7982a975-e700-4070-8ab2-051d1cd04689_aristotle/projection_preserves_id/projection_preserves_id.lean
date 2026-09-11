@@ -1,0 +1,2 @@
+-- Declaration: projection_preserves_id
+-- Extracted by StaticSplit

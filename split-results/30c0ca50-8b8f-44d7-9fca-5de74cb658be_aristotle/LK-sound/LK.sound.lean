@@ -1,0 +1,2 @@
+-- Declaration: LK.sound
+-- Extracted by StaticSplit

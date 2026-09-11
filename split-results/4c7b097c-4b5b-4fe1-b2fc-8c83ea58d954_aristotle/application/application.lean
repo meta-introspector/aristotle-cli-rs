@@ -1,0 +1,2 @@
+-- Declaration: application
+-- Extracted by StaticSplit

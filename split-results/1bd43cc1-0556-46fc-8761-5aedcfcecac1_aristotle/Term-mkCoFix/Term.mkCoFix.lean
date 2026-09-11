@@ -1,0 +1,2 @@
+-- Declaration: Term.mkCoFix
+-- Extracted by StaticSplit

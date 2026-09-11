@@ -1,0 +1,2 @@
+-- Declaration: A8_L3_4_different_multipliers
+-- Extracted by StaticSplit

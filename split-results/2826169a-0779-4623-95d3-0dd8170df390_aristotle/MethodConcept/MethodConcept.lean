@@ -1,0 +1,2 @@
+-- Declaration: MethodConcept
+-- Extracted by StaticSplit

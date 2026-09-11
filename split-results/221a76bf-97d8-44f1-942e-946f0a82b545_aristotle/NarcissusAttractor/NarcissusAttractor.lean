@@ -1,0 +1,2 @@
+-- Declaration: NarcissusAttractor
+-- Extracted by StaticSplit

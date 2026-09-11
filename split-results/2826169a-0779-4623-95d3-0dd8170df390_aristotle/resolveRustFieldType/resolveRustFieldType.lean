@@ -1,0 +1,2 @@
+-- Declaration: resolveRustFieldType
+-- Extracted by StaticSplit

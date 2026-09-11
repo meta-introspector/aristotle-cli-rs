@@ -1,0 +1,2 @@
+-- Declaration: allowedShifts
+-- Extracted by StaticSplit

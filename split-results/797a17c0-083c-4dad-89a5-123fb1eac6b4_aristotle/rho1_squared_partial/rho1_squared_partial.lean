@@ -1,0 +1,2 @@
+-- Declaration: rho1_squared_partial
+-- Extracted by StaticSplit

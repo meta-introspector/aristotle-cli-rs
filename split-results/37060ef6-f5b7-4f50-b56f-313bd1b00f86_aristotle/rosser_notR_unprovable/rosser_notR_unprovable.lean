@@ -1,0 +1,2 @@
+-- Declaration: rosser_notR_unprovable
+-- Extracted by StaticSplit

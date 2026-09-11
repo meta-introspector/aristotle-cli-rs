@@ -1,0 +1,2 @@
+-- Declaration: shah_legitimacy_stable
+-- Extracted by StaticSplit

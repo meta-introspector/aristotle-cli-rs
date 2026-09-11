@@ -1,0 +1,2 @@
+-- Declaration: collapseLam
+-- Extracted by StaticSplit

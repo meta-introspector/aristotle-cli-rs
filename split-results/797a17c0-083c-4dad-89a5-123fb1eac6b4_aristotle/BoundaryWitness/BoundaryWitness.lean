@@ -1,0 +1,2 @@
+-- Declaration: BoundaryWitness
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: umbral_multiplicities_nonneg
+-- Extracted by StaticSplit

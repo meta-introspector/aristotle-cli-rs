@@ -1,0 +1,2 @@
+-- Declaration: AtlasPresheaf
+-- Extracted by StaticSplit

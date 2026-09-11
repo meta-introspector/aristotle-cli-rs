@@ -1,0 +1,2 @@
+-- Declaration: monster_earth_dominant
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: num_subsystems
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: OntologicalObject
+-- Extracted by StaticSplit

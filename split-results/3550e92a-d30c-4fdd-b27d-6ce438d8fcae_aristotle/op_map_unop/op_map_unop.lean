@@ -1,0 +1,2 @@
+-- Declaration: op_map_unop
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: logBits
+-- Extracted by StaticSplit

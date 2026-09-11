@@ -1,0 +1,2 @@
+-- Declaration: mycorrhizal_reaches_consciousness
+-- Extracted by StaticSplit

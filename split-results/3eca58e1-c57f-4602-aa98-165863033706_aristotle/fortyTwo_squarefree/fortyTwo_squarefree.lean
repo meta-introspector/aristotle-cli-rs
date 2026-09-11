@@ -1,0 +1,2 @@
+-- Declaration: fortyTwo_squarefree
+-- Extracted by StaticSplit

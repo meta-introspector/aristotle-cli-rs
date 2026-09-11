@@ -1,0 +1,2 @@
+-- Declaration: registry_footprint_small
+-- Extracted by StaticSplit

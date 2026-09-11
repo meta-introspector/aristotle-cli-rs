@@ -1,0 +1,2 @@
+-- Declaration: renderNode
+-- Extracted by StaticSplit

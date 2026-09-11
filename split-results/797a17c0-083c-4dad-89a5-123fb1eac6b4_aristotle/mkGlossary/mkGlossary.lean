@@ -1,0 +1,2 @@
+-- Declaration: mkGlossary
+-- Extracted by StaticSplit

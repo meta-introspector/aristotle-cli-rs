@@ -1,0 +1,2 @@
+-- Declaration: curryHowardIdentity
+-- Extracted by StaticSplit

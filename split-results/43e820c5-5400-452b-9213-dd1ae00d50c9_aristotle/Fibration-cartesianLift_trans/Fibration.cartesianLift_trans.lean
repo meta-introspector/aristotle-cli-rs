@@ -1,0 +1,2 @@
+-- Declaration: Fibration.cartesianLift_trans
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: EmojiBinding
+-- Extracted by StaticSplit

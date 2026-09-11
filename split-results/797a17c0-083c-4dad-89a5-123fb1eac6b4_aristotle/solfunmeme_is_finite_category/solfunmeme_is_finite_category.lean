@@ -1,0 +1,2 @@
+-- Declaration: solfunmeme_is_finite_category
+-- Extracted by StaticSplit

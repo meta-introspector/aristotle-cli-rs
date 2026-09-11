@@ -1,0 +1,2 @@
+-- Declaration: activateNeg
+-- Extracted by StaticSplit

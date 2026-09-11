@@ -1,0 +1,2 @@
+-- Declaration: canonical_is_protected
+-- Extracted by StaticSplit

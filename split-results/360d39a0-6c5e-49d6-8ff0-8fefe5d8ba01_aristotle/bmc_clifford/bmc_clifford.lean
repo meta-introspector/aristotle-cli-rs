@@ -1,0 +1,2 @@
+-- Declaration: bmc_clifford
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: partialChain_preserves_invariant
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: tip_valid
+-- Extracted by StaticSplit

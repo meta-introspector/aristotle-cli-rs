@@ -1,0 +1,2 @@
+-- Declaration: land_at_self_no_collision
+-- Extracted by StaticSplit

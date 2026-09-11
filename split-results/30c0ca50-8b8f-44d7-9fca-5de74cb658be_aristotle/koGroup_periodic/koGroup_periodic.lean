@@ -1,0 +1,2 @@
+-- Declaration: koGroup_periodic
+-- Extracted by StaticSplit

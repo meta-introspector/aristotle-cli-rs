@@ -1,0 +1,2 @@
+-- Declaration: descendingWalk
+-- Extracted by StaticSplit

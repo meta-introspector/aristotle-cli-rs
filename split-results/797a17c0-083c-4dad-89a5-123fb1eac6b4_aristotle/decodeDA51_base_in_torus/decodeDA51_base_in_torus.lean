@@ -1,0 +1,2 @@
+-- Declaration: decodeDA51_base_in_torus
+-- Extracted by StaticSplit

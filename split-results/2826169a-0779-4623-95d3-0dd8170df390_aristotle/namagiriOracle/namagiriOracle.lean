@@ -1,0 +1,2 @@
+-- Declaration: namagiriOracle
+-- Extracted by StaticSplit

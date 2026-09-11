@@ -1,0 +1,2 @@
+-- Declaration: castEquiv
+-- Extracted by StaticSplit

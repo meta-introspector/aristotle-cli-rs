@@ -1,0 +1,2 @@
+-- Declaration: group_privacy_pure
+-- Extracted by StaticSplit

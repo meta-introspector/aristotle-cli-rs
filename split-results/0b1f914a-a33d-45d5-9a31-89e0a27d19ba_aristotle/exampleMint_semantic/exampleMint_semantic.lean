@@ -1,0 +1,2 @@
+-- Declaration: exampleMint_semantic
+-- Extracted by StaticSplit

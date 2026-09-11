@@ -1,0 +1,2 @@
+-- Declaration: NiemeierRootSystem.umbralGroupOrder
+-- Extracted by StaticSplit

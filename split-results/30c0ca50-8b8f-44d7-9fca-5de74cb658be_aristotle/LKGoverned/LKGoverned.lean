@@ -1,0 +1,2 @@
+-- Declaration: LKGoverned
+-- Extracted by StaticSplit

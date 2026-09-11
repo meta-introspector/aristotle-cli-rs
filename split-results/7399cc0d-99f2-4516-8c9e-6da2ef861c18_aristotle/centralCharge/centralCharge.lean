@@ -1,0 +1,2 @@
+-- Declaration: centralCharge
+-- Extracted by StaticSplit

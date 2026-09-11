@@ -1,0 +1,2 @@
+-- Declaration: modulus_one_collapses
+-- Extracted by StaticSplit

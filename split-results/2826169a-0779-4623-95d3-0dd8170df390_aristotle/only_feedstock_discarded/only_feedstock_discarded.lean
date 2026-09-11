@@ -1,0 +1,2 @@
+-- Declaration: only_feedstock_discarded
+-- Extracted by StaticSplit

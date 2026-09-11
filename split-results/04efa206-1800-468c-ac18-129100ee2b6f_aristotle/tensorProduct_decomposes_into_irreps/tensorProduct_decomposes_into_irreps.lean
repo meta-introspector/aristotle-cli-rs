@@ -1,0 +1,2 @@
+-- Declaration: tensorProduct_decomposes_into_irreps
+-- Extracted by StaticSplit

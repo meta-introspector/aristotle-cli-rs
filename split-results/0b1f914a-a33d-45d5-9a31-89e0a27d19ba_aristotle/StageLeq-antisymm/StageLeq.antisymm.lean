@@ -1,0 +1,2 @@
+-- Declaration: StageLeq.antisymm
+-- Extracted by StaticSplit

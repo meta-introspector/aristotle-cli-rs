@@ -1,0 +1,2 @@
+-- Declaration: ontology_object_count
+-- Extracted by StaticSplit

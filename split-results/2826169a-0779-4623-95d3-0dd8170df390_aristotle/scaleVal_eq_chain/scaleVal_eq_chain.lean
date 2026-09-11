@@ -1,0 +1,2 @@
+-- Declaration: scaleVal_eq_chain
+-- Extracted by StaticSplit

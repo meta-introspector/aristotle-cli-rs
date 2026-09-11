@@ -1,0 +1,2 @@
+-- Declaration: ConfluenceLayoutClean
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: faber_check_c4
+-- Extracted by StaticSplit

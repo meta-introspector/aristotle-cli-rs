@@ -1,0 +1,2 @@
+-- Declaration: cdist8_eq_zero_iff
+-- Extracted by StaticSplit

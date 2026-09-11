@@ -1,0 +1,2 @@
+-- Declaration: towerWeight
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: SelfModel
+-- Extracted by StaticSplit

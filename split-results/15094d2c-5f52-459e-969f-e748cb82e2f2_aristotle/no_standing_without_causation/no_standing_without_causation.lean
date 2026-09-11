@@ -1,0 +1,2 @@
+-- Declaration: no_standing_without_causation
+-- Extracted by StaticSplit

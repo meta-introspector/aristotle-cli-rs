@@ -1,0 +1,2 @@
+-- Declaration: steal_gains
+-- Extracted by StaticSplit

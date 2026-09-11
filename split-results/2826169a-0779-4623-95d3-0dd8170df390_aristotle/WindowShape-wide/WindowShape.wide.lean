@@ -1,0 +1,2 @@
+-- Declaration: WindowShape.wide
+-- Extracted by StaticSplit

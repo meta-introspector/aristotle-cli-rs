@@ -1,0 +1,2 @@
+-- Declaration: pipeline_preserves_count
+-- Extracted by StaticSplit

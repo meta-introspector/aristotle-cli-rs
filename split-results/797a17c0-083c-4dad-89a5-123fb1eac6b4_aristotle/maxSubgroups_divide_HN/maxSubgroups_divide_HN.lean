@@ -1,0 +1,2 @@
+-- Declaration: maxSubgroups_divide_HN
+-- Extracted by StaticSplit

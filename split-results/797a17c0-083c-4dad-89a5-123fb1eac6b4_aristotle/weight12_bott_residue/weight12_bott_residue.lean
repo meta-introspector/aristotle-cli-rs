@@ -1,0 +1,2 @@
+-- Declaration: weight12_bott_residue
+-- Extracted by StaticSplit

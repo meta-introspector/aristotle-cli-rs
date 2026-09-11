@@ -1,0 +1,2 @@
+-- Declaration: zeroExtend_injective
+-- Extracted by StaticSplit

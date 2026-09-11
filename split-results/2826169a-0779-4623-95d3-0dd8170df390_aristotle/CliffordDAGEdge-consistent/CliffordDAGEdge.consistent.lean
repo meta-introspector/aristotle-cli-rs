@@ -1,0 +1,2 @@
+-- Declaration: CliffordDAGEdge.consistent
+-- Extracted by StaticSplit

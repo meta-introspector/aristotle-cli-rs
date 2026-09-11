@@ -1,0 +1,2 @@
+-- Declaration: mintCID
+-- Extracted by StaticSplit

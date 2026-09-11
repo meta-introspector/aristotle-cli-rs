@@ -1,0 +1,2 @@
+-- Declaration: GramEngine.forward_gen
+-- Extracted by StaticSplit

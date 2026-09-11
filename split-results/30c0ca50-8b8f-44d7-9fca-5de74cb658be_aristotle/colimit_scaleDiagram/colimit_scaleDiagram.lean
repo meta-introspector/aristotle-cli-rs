@@ -1,0 +1,2 @@
+-- Declaration: colimit_scaleDiagram
+-- Extracted by StaticSplit

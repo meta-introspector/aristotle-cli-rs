@@ -1,0 +1,2 @@
+-- Declaration: Telegram
+-- Extracted by StaticSplit

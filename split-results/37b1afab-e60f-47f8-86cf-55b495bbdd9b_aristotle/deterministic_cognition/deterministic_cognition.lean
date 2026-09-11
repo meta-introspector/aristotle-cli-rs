@@ -1,0 +1,2 @@
+-- Declaration: deterministic_cognition
+-- Extracted by StaticSplit

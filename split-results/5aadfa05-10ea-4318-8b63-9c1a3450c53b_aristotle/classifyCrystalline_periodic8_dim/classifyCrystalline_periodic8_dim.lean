@@ -1,0 +1,2 @@
+-- Declaration: classifyCrystalline_periodic8_dim
+-- Extracted by StaticSplit

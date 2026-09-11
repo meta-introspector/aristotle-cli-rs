@@ -1,0 +1,2 @@
+-- Declaration: linkT1A
+-- Extracted by StaticSplit

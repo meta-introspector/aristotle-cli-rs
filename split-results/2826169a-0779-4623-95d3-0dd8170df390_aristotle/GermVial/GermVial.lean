@@ -1,0 +1,2 @@
+-- Declaration: GermVial
+-- Extracted by StaticSplit

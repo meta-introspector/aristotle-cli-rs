@@ -1,0 +1,2 @@
+-- Declaration: baseUrl
+-- Extracted by StaticSplit

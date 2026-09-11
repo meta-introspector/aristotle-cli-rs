@@ -1,0 +1,2 @@
+-- Declaration: semiotics_isolated_cluster
+-- Extracted by StaticSplit

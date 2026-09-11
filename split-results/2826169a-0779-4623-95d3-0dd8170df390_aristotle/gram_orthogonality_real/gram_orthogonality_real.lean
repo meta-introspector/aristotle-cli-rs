@@ -1,0 +1,2 @@
+-- Declaration: gram_orthogonality_real
+-- Extracted by StaticSplit

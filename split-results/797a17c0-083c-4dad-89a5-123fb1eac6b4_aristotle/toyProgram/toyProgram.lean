@@ -1,0 +1,2 @@
+-- Declaration: toyProgram
+-- Extracted by StaticSplit

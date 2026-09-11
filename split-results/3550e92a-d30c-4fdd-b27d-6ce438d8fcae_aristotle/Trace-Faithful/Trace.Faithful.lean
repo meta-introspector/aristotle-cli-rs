@@ -1,0 +1,2 @@
+-- Declaration: Trace.Faithful
+-- Extracted by StaticSplit

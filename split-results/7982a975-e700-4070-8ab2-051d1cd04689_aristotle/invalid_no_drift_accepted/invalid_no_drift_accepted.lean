@@ -1,0 +1,2 @@
+-- Declaration: invalid_no_drift_accepted
+-- Extracted by StaticSplit

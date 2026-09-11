@@ -1,0 +1,2 @@
+-- Declaration: instCountableChar
+-- Extracted by StaticSplit

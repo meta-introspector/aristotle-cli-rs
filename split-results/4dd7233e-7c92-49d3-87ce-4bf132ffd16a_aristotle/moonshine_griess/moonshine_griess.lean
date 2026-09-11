@@ -1,0 +1,2 @@
+-- Declaration: moonshine_griess
+-- Extracted by StaticSplit

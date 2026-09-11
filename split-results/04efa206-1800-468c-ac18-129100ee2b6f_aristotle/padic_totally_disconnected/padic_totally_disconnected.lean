@@ -1,0 +1,2 @@
+-- Declaration: padic_totally_disconnected
+-- Extracted by StaticSplit

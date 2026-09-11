@@ -1,0 +1,2 @@
+-- Declaration: Sequencer.isCoherent
+-- Extracted by StaticSplit

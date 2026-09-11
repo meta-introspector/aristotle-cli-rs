@@ -1,0 +1,2 @@
+-- Declaration: tensor_factors_match_primes
+-- Extracted by StaticSplit

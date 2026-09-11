@@ -1,0 +1,2 @@
+-- Declaration: gammaMonoZ_s_orth
+-- Extracted by StaticSplit

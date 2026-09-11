@@ -1,0 +1,2 @@
+-- Declaration: tail_card_eq_two_pow_nine
+-- Extracted by StaticSplit

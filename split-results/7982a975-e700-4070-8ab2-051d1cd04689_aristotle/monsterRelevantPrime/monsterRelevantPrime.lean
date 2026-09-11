@@ -1,0 +1,2 @@
+-- Declaration: monsterRelevantPrime
+-- Extracted by StaticSplit

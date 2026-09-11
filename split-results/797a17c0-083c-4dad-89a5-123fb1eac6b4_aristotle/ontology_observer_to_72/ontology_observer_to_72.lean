@@ -1,0 +1,2 @@
+-- Declaration: ontology_observer_to_72
+-- Extracted by StaticSplit

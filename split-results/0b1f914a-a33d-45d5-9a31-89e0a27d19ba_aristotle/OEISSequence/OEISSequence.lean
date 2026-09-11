@@ -1,0 +1,2 @@
+-- Declaration: OEISSequence
+-- Extracted by StaticSplit

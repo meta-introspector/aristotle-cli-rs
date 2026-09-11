@@ -1,0 +1,2 @@
+-- Declaration: SporeInTransit
+-- Extracted by StaticSplit

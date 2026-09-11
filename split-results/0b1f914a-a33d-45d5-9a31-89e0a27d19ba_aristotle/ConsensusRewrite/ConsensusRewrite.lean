@@ -1,0 +1,2 @@
+-- Declaration: ConsensusRewrite
+-- Extracted by StaticSplit

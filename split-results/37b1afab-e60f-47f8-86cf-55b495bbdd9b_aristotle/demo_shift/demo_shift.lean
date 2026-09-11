@@ -1,0 +1,2 @@
+-- Declaration: demo_shift
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: sigma3_four_is_prime
+-- Extracted by StaticSplit

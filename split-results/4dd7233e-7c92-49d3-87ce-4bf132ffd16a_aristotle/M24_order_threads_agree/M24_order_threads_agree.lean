@@ -1,0 +1,2 @@
+-- Declaration: M24_order_threads_agree
+-- Extracted by StaticSplit

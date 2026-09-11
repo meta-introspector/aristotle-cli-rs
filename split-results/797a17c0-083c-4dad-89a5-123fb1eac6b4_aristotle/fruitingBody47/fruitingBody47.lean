@@ -1,0 +1,2 @@
+-- Declaration: fruitingBody47
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: inferType
+-- Extracted by StaticSplit

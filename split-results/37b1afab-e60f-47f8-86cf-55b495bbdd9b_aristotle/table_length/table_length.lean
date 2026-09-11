@@ -1,0 +1,2 @@
+-- Declaration: table_length
+-- Extracted by StaticSplit

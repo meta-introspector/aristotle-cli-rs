@@ -1,0 +1,2 @@
+-- Declaration: j2_decomposition
+-- Extracted by StaticSplit

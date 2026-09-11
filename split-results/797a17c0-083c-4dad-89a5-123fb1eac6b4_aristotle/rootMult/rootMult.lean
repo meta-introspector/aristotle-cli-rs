@@ -1,0 +1,2 @@
+-- Declaration: rootMult
+-- Extracted by StaticSplit

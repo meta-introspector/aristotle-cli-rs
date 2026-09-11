@@ -1,0 +1,2 @@
+-- Declaration: crt_mod2_from_mod6
+-- Extracted by StaticSplit

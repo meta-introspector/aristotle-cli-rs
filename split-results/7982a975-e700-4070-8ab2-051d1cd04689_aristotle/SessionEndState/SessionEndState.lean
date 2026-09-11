@@ -1,0 +1,2 @@
+-- Declaration: SessionEndState
+-- Extracted by StaticSplit

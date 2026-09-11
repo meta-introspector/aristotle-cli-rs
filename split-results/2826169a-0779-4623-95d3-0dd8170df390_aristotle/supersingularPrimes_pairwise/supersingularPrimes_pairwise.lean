@@ -1,0 +1,2 @@
+-- Declaration: supersingularPrimes_pairwise
+-- Extracted by StaticSplit

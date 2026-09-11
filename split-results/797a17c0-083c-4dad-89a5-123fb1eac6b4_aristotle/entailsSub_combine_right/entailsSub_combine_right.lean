@@ -1,0 +1,2 @@
+-- Declaration: entailsSub_combine_right
+-- Extracted by StaticSplit

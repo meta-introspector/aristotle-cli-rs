@@ -1,0 +1,2 @@
+-- Declaration: x51_decimal
+-- Extracted by StaticSplit

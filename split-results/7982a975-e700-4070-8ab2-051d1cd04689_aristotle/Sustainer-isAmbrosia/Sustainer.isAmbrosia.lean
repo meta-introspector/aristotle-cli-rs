@@ -1,0 +1,2 @@
+-- Declaration: Sustainer.isAmbrosia
+-- Extracted by StaticSplit

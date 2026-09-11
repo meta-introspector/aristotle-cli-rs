@@ -1,0 +1,2 @@
+-- Declaration: FractranVOAData
+-- Extracted by StaticSplit

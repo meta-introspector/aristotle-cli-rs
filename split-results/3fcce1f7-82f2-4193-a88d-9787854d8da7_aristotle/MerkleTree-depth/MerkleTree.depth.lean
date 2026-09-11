@@ -1,0 +1,2 @@
+-- Declaration: MerkleTree.depth
+-- Extracted by StaticSplit

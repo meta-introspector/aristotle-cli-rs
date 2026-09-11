@@ -1,0 +1,2 @@
+-- Declaration: SSP
+-- Extracted by StaticSplit

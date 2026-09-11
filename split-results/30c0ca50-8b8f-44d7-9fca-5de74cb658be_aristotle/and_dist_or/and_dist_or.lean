@@ -1,0 +1,2 @@
+-- Declaration: and_dist_or
+-- Extracted by StaticSplit

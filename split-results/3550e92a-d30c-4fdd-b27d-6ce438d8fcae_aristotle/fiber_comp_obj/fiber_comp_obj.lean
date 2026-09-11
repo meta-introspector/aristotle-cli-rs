@@ -1,0 +1,2 @@
+-- Declaration: fiber_comp_obj
+-- Extracted by StaticSplit

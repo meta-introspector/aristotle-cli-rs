@@ -1,0 +1,2 @@
+-- Declaration: curvature_needs_two_shadows
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: no_root_at_zero
+-- Extracted by StaticSplit

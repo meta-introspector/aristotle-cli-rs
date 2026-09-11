@@ -1,0 +1,2 @@
+-- Declaration: padic_ultrametric
+-- Extracted by StaticSplit

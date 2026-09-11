@@ -1,0 +1,2 @@
+-- Declaration: game_cut_eliminates
+-- Extracted by StaticSplit

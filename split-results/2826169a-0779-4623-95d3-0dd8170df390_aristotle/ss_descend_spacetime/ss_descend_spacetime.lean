@@ -1,0 +1,2 @@
+-- Declaration: ss_descend_spacetime
+-- Extracted by StaticSplit

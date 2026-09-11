@@ -1,0 +1,2 @@
+-- Declaration: stageTrace_length
+-- Extracted by StaticSplit

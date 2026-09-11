@@ -1,0 +1,2 @@
+-- Declaration: Ledger.check
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: SHIFT_TYPE
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: triangle_distinct_base
+-- Extracted by StaticSplit

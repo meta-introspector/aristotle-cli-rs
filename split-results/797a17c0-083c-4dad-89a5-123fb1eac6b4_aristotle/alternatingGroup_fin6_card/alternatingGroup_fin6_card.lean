@@ -1,0 +1,2 @@
+-- Declaration: alternatingGroup_fin6_card
+-- Extracted by StaticSplit

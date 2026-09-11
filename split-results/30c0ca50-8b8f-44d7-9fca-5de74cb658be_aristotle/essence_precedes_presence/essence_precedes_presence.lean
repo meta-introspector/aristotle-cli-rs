@@ -1,0 +1,2 @@
+-- Declaration: essence_precedes_presence
+-- Extracted by StaticSplit

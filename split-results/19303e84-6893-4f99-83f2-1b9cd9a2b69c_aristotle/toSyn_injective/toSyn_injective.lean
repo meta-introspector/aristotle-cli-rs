@@ -1,0 +1,2 @@
+-- Declaration: toSyn_injective
+-- Extracted by StaticSplit

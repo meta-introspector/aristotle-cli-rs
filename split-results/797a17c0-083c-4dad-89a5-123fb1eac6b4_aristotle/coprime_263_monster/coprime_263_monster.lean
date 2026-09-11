@@ -1,0 +1,2 @@
+-- Declaration: coprime_263_monster
+-- Extracted by StaticSplit

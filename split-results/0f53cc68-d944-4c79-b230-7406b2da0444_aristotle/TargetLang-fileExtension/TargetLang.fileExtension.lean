@@ -1,0 +1,2 @@
+-- Declaration: TargetLang.fileExtension
+-- Extracted by StaticSplit

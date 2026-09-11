@@ -1,0 +1,2 @@
+-- Declaration: residueSum42_values
+-- Extracted by StaticSplit

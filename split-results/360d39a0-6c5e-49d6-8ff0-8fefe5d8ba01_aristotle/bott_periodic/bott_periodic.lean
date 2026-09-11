@@ -1,0 +1,2 @@
+-- Declaration: bott_periodic
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: classify_ghost
+-- Extracted by StaticSplit

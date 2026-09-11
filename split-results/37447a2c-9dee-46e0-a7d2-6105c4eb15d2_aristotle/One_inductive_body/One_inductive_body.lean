@@ -1,0 +1,2 @@
+-- Declaration: One_inductive_body
+-- Extracted by StaticSplit

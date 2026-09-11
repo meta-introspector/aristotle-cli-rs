@@ -1,0 +1,2 @@
+-- Declaration: quorumPresent
+-- Extracted by StaticSplit

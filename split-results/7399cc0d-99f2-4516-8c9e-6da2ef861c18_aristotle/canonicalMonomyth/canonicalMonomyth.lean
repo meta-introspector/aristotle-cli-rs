@@ -1,0 +1,2 @@
+-- Declaration: canonicalMonomyth
+-- Extracted by StaticSplit

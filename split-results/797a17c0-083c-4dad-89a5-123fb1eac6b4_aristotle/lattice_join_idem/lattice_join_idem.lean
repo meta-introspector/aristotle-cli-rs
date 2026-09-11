@@ -1,0 +1,2 @@
+-- Declaration: lattice_join_idem
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: EigenspaceAddrData
+-- Extracted by StaticSplit

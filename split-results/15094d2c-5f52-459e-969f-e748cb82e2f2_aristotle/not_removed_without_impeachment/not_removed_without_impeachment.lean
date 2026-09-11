@@ -1,0 +1,2 @@
+-- Declaration: not_removed_without_impeachment
+-- Extracted by StaticSplit

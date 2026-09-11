@@ -1,0 +1,2 @@
+-- Declaration: supersingularPrimes_prod
+-- Extracted by StaticSplit

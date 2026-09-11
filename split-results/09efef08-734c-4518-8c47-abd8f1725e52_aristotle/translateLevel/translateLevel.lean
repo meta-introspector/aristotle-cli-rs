@@ -1,0 +1,2 @@
+-- Declaration: translateLevel
+-- Extracted by StaticSplit

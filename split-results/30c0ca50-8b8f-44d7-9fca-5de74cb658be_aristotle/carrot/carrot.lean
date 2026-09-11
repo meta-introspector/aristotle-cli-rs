@@ -1,0 +1,2 @@
+-- Declaration: carrot
+-- Extracted by StaticSplit

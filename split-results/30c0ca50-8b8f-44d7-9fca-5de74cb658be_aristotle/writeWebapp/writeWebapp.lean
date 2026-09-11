@@ -1,0 +1,2 @@
+-- Declaration: writeWebapp
+-- Extracted by StaticSplit

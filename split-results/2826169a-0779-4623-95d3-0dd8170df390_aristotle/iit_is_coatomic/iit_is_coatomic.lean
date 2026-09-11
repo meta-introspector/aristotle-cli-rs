@@ -1,0 +1,2 @@
+-- Declaration: iit_is_coatomic
+-- Extracted by StaticSplit

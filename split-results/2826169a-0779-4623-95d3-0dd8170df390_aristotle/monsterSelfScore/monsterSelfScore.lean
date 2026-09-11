@@ -1,0 +1,2 @@
+-- Declaration: monsterSelfScore
+-- Extracted by StaticSplit

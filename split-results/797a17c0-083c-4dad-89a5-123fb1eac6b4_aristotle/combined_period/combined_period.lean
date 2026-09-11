@@ -1,0 +1,2 @@
+-- Declaration: combined_period
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: OneInductiveBody
+-- Extracted by StaticSplit

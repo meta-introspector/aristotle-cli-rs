@@ -1,0 +1,2 @@
+-- Declaration: taxicab_sum2
+-- Extracted by StaticSplit

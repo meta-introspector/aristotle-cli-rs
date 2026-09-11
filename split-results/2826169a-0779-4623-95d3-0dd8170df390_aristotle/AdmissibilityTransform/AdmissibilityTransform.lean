@@ -1,0 +1,2 @@
+-- Declaration: AdmissibilityTransform
+-- Extracted by StaticSplit

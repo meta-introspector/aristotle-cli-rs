@@ -1,0 +1,2 @@
+-- Declaration: arcade_count
+-- Extracted by StaticSplit

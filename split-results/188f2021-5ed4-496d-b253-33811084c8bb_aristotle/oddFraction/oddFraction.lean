@@ -1,0 +1,2 @@
+-- Declaration: oddFraction
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: predsOf
+-- Extracted by StaticSplit

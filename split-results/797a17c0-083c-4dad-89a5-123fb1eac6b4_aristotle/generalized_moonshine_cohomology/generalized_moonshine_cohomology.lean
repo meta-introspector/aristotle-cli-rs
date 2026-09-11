@@ -1,0 +1,2 @@
+-- Declaration: generalized_moonshine_cohomology
+-- Extracted by StaticSplit

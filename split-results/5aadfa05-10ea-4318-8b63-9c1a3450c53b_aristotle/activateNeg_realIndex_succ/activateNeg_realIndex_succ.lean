@@ -1,0 +1,2 @@
+-- Declaration: activateNeg_realIndex_succ
+-- Extracted by StaticSplit

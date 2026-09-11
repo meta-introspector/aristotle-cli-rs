@@ -1,0 +1,2 @@
+-- Declaration: Ternary.oppositeSigned_zero_left
+-- Extracted by StaticSplit

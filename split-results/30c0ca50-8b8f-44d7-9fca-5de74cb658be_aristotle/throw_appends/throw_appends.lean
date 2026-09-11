@@ -1,0 +1,2 @@
+-- Declaration: throw_appends
+-- Extracted by StaticSplit

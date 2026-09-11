@@ -1,0 +1,2 @@
+-- Declaration: toCtorName
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: RuntimeModel.predict
+-- Extracted by StaticSplit

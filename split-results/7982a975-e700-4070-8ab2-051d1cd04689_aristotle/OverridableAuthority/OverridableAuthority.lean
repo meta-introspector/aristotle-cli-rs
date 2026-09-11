@@ -1,0 +1,2 @@
+-- Declaration: OverridableAuthority
+-- Extracted by StaticSplit

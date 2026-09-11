@@ -1,0 +1,2 @@
+-- Declaration: existElim
+-- Extracted by StaticSplit

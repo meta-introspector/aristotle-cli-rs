@@ -1,0 +1,2 @@
+-- Declaration: adjustedWeight_conj_invariant
+-- Extracted by StaticSplit

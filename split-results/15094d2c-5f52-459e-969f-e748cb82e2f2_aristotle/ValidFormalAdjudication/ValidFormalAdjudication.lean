@@ -1,0 +1,2 @@
+-- Declaration: ValidFormalAdjudication
+-- Extracted by StaticSplit

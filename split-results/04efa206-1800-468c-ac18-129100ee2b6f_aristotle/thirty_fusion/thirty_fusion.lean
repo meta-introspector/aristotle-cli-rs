@@ -1,0 +1,2 @@
+-- Declaration: thirty_fusion
+-- Extracted by StaticSplit

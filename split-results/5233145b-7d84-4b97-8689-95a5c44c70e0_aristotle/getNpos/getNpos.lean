@@ -1,0 +1,2 @@
+-- Declaration: getNpos
+-- Extracted by StaticSplit

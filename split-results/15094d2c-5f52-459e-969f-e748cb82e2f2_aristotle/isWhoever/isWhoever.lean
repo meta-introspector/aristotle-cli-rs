@@ -1,0 +1,2 @@
+-- Declaration: isWhoever
+-- Extracted by StaticSplit

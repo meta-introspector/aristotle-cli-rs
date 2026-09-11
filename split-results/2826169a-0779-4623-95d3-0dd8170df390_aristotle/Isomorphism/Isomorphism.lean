@@ -1,0 +1,2 @@
+-- Declaration: Isomorphism
+-- Extracted by StaticSplit

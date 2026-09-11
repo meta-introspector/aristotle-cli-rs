@@ -1,0 +1,2 @@
+-- Declaration: n36
+-- Extracted by StaticSplit

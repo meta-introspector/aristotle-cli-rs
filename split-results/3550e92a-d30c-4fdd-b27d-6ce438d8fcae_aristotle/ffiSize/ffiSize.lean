@@ -1,0 +1,2 @@
+-- Declaration: ffiSize
+-- Extracted by StaticSplit

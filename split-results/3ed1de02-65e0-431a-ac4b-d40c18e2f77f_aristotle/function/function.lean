@@ -1,0 +1,2 @@
+-- Declaration: function
+-- Extracted by StaticSplit

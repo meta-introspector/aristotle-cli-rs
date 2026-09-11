@@ -1,0 +1,2 @@
+-- Declaration: torus_factorization
+-- Extracted by StaticSplit

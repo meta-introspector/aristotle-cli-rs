@@ -1,0 +1,2 @@
+-- Declaration: clockHub_same_type
+-- Extracted by StaticSplit

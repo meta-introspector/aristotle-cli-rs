@@ -1,0 +1,2 @@
+-- Declaration: rho17_total_exponent_mass
+-- Extracted by StaticSplit

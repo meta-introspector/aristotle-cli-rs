@@ -1,0 +1,2 @@
+-- Declaration: degeneracy_of_consciousness_paths
+-- Extracted by StaticSplit

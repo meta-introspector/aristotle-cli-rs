@@ -1,0 +1,2 @@
+-- Declaration: e4_coeff_from_bernoulli
+-- Extracted by StaticSplit

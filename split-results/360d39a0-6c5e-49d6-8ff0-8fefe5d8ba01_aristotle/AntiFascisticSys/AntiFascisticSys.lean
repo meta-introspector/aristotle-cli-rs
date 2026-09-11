@@ -1,0 +1,2 @@
+-- Declaration: AntiFascisticSys
+-- Extracted by StaticSplit

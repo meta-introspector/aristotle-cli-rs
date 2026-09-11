@@ -1,0 +1,2 @@
+-- Declaration: writables
+-- Extracted by StaticSplit

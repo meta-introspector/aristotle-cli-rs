@@ -1,0 +1,2 @@
+-- Declaration: ipldNodeKind
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: moonshine_incompleteness_lemma
+-- Extracted by StaticSplit

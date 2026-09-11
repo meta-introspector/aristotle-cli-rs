@@ -1,0 +1,2 @@
+-- Declaration: omegaZ
+-- Extracted by StaticSplit

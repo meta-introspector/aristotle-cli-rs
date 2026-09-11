@@ -1,0 +1,2 @@
+-- Declaration: product_formula_thirty
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ninety_seven_prime
+-- Extracted by StaticSplit

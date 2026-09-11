@@ -1,0 +1,2 @@
+-- Declaration: Th_prime_divisors
+-- Extracted by StaticSplit

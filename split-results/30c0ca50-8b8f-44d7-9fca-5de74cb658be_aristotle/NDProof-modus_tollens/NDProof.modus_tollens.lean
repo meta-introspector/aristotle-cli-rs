@@ -1,0 +1,2 @@
+-- Declaration: NDProof.modus_tollens
+-- Extracted by StaticSplit

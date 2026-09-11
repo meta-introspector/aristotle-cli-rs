@@ -1,0 +1,2 @@
+-- Declaration: two_bott_periods
+-- Extracted by StaticSplit

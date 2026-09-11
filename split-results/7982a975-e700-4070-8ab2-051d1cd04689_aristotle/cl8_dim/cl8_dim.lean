@@ -1,0 +1,2 @@
+-- Declaration: cl8_dim
+-- Extracted by StaticSplit

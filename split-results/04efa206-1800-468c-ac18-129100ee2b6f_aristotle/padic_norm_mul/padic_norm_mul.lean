@@ -1,0 +1,2 @@
+-- Declaration: padic_norm_mul
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: terminal_restr
+-- Extracted by StaticSplit

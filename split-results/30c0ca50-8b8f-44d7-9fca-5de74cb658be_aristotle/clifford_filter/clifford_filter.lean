@@ -1,0 +1,2 @@
+-- Declaration: clifford_filter
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: mirror_PTE3
+-- Extracted by StaticSplit

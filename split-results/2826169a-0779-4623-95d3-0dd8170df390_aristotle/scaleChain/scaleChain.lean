@@ -1,0 +1,2 @@
+-- Declaration: scaleChain
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Inexhaustible
+-- Extracted by StaticSplit

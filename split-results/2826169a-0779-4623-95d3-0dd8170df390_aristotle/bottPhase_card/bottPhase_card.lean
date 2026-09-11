@@ -1,0 +1,2 @@
+-- Declaration: bottPhase_card
+-- Extracted by StaticSplit

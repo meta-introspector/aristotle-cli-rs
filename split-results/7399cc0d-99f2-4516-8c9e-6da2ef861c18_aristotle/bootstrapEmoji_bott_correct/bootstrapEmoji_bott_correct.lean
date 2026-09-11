@@ -1,0 +1,2 @@
+-- Declaration: bootstrapEmoji_bott_correct
+-- Extracted by StaticSplit

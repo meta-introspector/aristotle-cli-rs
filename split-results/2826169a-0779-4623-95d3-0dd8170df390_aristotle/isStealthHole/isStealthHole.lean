@@ -1,0 +1,2 @@
+-- Declaration: isStealthHole
+-- Extracted by StaticSplit

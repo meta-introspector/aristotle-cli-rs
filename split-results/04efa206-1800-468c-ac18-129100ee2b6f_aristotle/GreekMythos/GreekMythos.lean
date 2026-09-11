@@ -1,0 +1,2 @@
+-- Declaration: GreekMythos
+-- Extracted by StaticSplit

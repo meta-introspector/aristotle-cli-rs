@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup.monster_largest
+-- Extracted by StaticSplit

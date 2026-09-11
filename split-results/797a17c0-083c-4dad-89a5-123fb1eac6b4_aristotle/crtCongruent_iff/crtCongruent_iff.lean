@@ -1,0 +1,2 @@
+-- Declaration: crtCongruent_iff
+-- Extracted by StaticSplit

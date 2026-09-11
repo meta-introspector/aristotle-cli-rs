@@ -1,0 +1,2 @@
+-- Declaration: monster_irrep_ssp_smooth
+-- Extracted by StaticSplit

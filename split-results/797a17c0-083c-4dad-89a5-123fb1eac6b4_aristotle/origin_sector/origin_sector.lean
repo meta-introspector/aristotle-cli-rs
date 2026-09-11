@@ -1,0 +1,2 @@
+-- Declaration: origin_sector
+-- Extracted by StaticSplit

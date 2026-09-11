@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_curve_validate_point
+-- Extracted by StaticSplit

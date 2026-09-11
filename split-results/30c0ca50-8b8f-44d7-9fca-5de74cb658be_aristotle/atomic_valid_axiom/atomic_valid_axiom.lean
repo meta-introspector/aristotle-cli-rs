@@ -1,0 +1,2 @@
+-- Declaration: atomic_valid_axiom
+-- Extracted by StaticSplit

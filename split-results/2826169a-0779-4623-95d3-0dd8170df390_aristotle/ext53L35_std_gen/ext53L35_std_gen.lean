@@ -1,0 +1,2 @@
+-- Declaration: ext53L35_std_gen
+-- Extracted by StaticSplit

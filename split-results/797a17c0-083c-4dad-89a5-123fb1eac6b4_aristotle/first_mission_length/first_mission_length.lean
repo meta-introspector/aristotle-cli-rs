@@ -1,0 +1,2 @@
+-- Declaration: first_mission_length
+-- Extracted by StaticSplit

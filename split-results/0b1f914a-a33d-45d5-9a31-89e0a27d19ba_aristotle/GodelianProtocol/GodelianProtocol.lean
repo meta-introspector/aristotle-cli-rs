@@ -1,0 +1,2 @@
+-- Declaration: GodelianProtocol
+-- Extracted by StaticSplit

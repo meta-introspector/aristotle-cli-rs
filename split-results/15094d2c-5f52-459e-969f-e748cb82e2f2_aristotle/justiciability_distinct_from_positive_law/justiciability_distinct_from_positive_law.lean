@@ -1,0 +1,2 @@
+-- Declaration: justiciability_distinct_from_positive_law
+-- Extracted by StaticSplit

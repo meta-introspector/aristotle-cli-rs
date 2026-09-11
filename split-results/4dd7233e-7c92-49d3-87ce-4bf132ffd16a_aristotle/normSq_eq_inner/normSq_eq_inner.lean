@@ -1,0 +1,2 @@
+-- Declaration: normSq_eq_inner
+-- Extracted by StaticSplit

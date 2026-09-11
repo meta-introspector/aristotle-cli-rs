@@ -1,0 +1,2 @@
+-- Declaration: hasseInvariant
+-- Extracted by StaticSplit

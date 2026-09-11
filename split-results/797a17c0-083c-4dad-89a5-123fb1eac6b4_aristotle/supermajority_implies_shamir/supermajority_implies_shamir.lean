@@ -1,0 +1,2 @@
+-- Declaration: supermajority_implies_shamir
+-- Extracted by StaticSplit

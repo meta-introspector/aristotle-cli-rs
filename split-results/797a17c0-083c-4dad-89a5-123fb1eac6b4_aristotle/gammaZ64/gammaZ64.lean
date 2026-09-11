@@ -1,0 +1,2 @@
+-- Declaration: gammaZ64
+-- Extracted by StaticSplit

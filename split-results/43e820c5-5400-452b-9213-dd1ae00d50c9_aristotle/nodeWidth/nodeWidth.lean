@@ -1,0 +1,2 @@
+-- Declaration: nodeWidth
+-- Extracted by StaticSplit

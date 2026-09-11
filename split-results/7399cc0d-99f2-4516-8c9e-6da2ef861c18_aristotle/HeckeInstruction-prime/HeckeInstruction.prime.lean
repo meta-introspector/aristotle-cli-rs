@@ -1,0 +1,2 @@
+-- Declaration: HeckeInstruction.prime
+-- Extracted by StaticSplit

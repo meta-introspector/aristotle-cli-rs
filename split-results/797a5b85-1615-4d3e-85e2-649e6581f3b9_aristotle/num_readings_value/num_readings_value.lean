@@ -1,0 +1,2 @@
+-- Declaration: num_readings_value
+-- Extracted by StaticSplit

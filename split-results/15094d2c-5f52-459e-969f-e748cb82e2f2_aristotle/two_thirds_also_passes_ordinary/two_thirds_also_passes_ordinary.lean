@@ -1,0 +1,2 @@
+-- Declaration: two_thirds_also_passes_ordinary
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: graded_depth
+-- Extracted by StaticSplit

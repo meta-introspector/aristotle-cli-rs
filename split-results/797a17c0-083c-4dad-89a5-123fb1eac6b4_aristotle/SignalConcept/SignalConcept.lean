@@ -1,0 +1,2 @@
+-- Declaration: SignalConcept
+-- Extracted by StaticSplit

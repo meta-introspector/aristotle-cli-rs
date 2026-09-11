@@ -1,0 +1,2 @@
+-- Declaration: monsterOrder_rowSum
+-- Extracted by StaticSplit

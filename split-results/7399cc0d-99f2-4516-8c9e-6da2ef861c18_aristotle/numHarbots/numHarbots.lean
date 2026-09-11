@@ -1,0 +1,2 @@
+-- Declaration: numHarbots
+-- Extracted by StaticSplit

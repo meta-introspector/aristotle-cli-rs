@@ -1,0 +1,2 @@
+-- Declaration: solfunmemeGeneratedSource
+-- Extracted by StaticSplit

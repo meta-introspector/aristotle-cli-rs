@@ -1,0 +1,2 @@
+-- Declaration: toDict_minimal
+-- Extracted by StaticSplit

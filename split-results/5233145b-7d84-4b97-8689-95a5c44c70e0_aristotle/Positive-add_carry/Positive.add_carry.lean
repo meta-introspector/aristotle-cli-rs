@@ -1,0 +1,2 @@
+-- Declaration: Positive.add_carry
+-- Extracted by StaticSplit

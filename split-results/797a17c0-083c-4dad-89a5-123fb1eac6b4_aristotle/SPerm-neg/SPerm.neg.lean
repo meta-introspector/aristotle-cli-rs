@@ -1,0 +1,2 @@
+-- Declaration: SPerm.neg
+-- Extracted by StaticSplit

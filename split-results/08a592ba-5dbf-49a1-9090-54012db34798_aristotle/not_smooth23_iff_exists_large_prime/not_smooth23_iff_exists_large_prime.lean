@@ -1,0 +1,2 @@
+-- Declaration: not_smooth23_iff_exists_large_prime
+-- Extracted by StaticSplit

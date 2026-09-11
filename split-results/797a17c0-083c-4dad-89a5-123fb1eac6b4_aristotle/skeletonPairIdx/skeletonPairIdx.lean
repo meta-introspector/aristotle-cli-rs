@@ -1,0 +1,2 @@
+-- Declaration: skeletonPairIdx
+-- Extracted by StaticSplit

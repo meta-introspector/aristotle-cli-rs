@@ -1,0 +1,2 @@
+-- Declaration: senate_origin_invalid
+-- Extracted by StaticSplit

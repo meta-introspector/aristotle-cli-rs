@@ -1,0 +1,2 @@
+-- Declaration: Section.applyDyn
+-- Extracted by StaticSplit

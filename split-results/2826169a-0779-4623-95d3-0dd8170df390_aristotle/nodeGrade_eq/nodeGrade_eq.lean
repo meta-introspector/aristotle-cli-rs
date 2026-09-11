@@ -1,0 +1,2 @@
+-- Declaration: nodeGrade_eq
+-- Extracted by StaticSplit

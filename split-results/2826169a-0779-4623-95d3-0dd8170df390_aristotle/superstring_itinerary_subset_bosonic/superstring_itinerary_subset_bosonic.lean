@@ -1,0 +1,2 @@
+-- Declaration: superstring_itinerary_subset_bosonic
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: NDProof.weaken
+-- Extracted by StaticSplit

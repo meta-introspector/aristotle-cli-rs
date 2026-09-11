@@ -1,0 +1,2 @@
+-- Declaration: subgroupBox_antitone
+-- Extracted by StaticSplit

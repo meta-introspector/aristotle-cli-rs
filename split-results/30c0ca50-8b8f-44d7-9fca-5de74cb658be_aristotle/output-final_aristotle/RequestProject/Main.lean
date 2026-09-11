@@ -1,0 +1,60 @@
+import Mathlib
+import RequestProject.GodelBrainrot
+import RequestProject.GoedelDecoding
+import RequestProject.MoonshineCorpus
+import RequestProject.MonsterMoonshine
+import RequestProject.MoonshineExpansion
+import RequestProject.CartCarrotMap
+import RequestProject.ExtensionEngine
+import RequestProject.ScaleTower
+import RequestProject.ScaleSheaf
+import RequestProject.EngineMonoidal
+import RequestProject.BottPeriodicity
+import RequestProject.TenfoldWay
+import RequestProject.TraceMonoidal
+import RequestProject.Integration
+import RequestProject.ShapeAlgebra
+import RequestProject.ShapeFinder
+-- Proof-theory example (integrated from the attached project):
+import RequestProject.ProofTheory.Formula
+import RequestProject.ProofTheory.NaturalDeduction
+import RequestProject.ProofTheory.SequentCalculus
+import RequestProject.ProofTheory.CurryHoward
+import RequestProject.ProofTheory.CutFreeCompleteness
+import RequestProject.ProofTheory.CutElimination
+import RequestProject.ProofTheory.Normalization
+import RequestProject.ProofTheory.Governance
+import RequestProject.ProofTheory.GovernedCutElimination
+import RequestProject.ProofTheory.Completeness
+import RequestProject.ProofTheory.CutAdmissibility
+import RequestProject.ProofTheoryExample
+import RequestProject.CutColosseum
+import RequestProject.Simulation
+import RequestProject.SlapSceneImagePrompt
+import RequestProject.GameDSL
+import RequestProject.HeideggerThrown
+import RequestProject.AristotleTeleology
+import RequestProject.WebExtract
+
+open scoped BigOperators
+open scoped Real
+open scoped Nat
+open scoped Classical
+open scoped Pointwise
+
+set_option maxHeartbeats 8000000
+set_option maxRecDepth 4000
+set_option synthInstance.maxHeartbeats 20000
+set_option synthInstance.maxSize 128
+
+set_option relaxedAutoImplicit false
+set_option autoImplicit false
+
+set_option pp.fullNames true
+set_option pp.structureInstances true
+set_option pp.coercions.types true
+set_option pp.funBinderTypes true
+set_option pp.letVarTypes true
+set_option pp.piBinderTypes true
+
+set_option grind.warning false

@@ -1,0 +1,2 @@
+-- Declaration: ACLPolicy.denyAll
+-- Extracted by StaticSplit

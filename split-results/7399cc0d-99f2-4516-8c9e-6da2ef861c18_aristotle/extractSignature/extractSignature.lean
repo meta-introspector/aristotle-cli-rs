@@ -1,0 +1,2 @@
+-- Declaration: extractSignature
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: genesis_bott_class
+-- Extracted by StaticSplit

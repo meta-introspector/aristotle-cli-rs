@@ -1,0 +1,2 @@
+-- Declaration: collapseLam_correct
+-- Extracted by StaticSplit

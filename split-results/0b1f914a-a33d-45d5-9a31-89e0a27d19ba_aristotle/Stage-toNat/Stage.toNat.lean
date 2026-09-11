@@ -1,0 +1,2 @@
+-- Declaration: Stage.toNat
+-- Extracted by StaticSplit

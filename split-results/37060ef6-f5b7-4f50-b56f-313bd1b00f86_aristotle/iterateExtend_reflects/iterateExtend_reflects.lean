@@ -1,0 +1,2 @@
+-- Declaration: iterateExtend_reflects
+-- Extracted by StaticSplit

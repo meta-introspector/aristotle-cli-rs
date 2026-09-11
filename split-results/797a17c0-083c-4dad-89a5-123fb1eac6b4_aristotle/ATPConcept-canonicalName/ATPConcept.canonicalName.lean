@@ -1,0 +1,2 @@
+-- Declaration: ATPConcept.canonicalName
+-- Extracted by StaticSplit

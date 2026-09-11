@@ -1,0 +1,2 @@
+-- Declaration: WellTyped
+-- Extracted by StaticSplit

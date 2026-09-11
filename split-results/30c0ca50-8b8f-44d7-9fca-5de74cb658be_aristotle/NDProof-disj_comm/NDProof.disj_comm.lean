@@ -1,0 +1,2 @@
+-- Declaration: NDProof.disj_comm
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: whole_fish_included
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: bitsCost
+-- Extracted by StaticSplit

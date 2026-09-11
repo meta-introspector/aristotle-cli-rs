@@ -1,0 +1,2 @@
+-- Declaration: initialMass
+-- Extracted by StaticSplit

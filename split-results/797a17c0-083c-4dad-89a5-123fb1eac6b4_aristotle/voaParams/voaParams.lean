@@ -1,0 +1,2 @@
+-- Declaration: voaParams
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Graph
+-- Extracted by StaticSplit

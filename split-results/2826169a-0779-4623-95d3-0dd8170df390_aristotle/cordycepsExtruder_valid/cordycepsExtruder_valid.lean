@@ -1,0 +1,2 @@
+-- Declaration: cordycepsExtruder_valid
+-- Extracted by StaticSplit

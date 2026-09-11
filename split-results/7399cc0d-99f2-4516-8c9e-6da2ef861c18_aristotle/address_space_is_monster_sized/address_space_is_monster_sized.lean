@@ -1,0 +1,2 @@
+-- Declaration: address_space_is_monster_sized
+-- Extracted by StaticSplit

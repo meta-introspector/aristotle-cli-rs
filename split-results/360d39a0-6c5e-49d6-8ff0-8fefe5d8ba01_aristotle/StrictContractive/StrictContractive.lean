@@ -1,0 +1,2 @@
+-- Declaration: StrictContractive
+-- Extracted by StaticSplit

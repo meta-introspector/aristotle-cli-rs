@@ -1,0 +1,2 @@
+-- Declaration: motorToRotor
+-- Extracted by StaticSplit

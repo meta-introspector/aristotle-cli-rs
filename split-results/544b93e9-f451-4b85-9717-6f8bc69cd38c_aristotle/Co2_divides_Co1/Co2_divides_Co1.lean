@@ -1,0 +1,2 @@
+-- Declaration: Co2_divides_Co1
+-- Extracted by StaticSplit

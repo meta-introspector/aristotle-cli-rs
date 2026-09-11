@@ -1,0 +1,2 @@
+-- Declaration: land_at_self_navigates_to_bootstrap
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: moonshine_coefficient
+-- Extracted by StaticSplit

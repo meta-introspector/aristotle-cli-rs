@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_panic_
+-- Extracted by StaticSplit

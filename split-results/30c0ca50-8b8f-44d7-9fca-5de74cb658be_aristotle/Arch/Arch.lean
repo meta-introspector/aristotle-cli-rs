@@ -1,0 +1,2 @@
+-- Declaration: Arch
+-- Extracted by StaticSplit

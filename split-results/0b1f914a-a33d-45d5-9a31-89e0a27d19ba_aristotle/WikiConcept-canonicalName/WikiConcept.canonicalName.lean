@@ -1,0 +1,2 @@
+-- Declaration: WikiConcept.canonicalName
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: FactorCount
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Sequence
+-- Extracted by StaticSplit

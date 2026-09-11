@@ -1,0 +1,2 @@
+-- Declaration: Diagonalization
+-- Extracted by StaticSplit

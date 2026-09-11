@@ -1,0 +1,2 @@
+-- Declaration: T25.compare
+-- Extracted by StaticSplit

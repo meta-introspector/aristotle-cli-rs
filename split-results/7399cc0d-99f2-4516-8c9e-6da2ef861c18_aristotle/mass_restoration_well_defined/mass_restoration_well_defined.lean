@@ -1,0 +1,2 @@
+-- Declaration: mass_restoration_well_defined
+-- Extracted by StaticSplit

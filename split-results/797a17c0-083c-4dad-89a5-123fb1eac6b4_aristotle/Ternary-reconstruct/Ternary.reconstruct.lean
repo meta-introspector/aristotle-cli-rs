@@ -1,0 +1,2 @@
+-- Declaration: Ternary.reconstruct
+-- Extracted by StaticSplit

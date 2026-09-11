@@ -1,0 +1,2 @@
+-- Declaration: IntegratedBrainrot.layers_consistent
+-- Extracted by StaticSplit

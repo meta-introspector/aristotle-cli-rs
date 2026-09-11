@@ -1,0 +1,2 @@
+-- Declaration: UniMathConcept
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CliffordDAGEdge.fromMul
+-- Extracted by StaticSplit

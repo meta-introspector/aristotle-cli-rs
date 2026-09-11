@@ -1,0 +1,2 @@
+-- Declaration: configBottClass
+-- Extracted by StaticSplit

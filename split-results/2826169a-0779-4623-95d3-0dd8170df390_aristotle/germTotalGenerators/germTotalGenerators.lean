@@ -1,0 +1,2 @@
+-- Declaration: germTotalGenerators
+-- Extracted by StaticSplit

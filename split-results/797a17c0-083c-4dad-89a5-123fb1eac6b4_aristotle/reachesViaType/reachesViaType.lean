@@ -1,0 +1,2 @@
+-- Declaration: reachesViaType
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: metaTower_eq_orbit
+-- Extracted by StaticSplit

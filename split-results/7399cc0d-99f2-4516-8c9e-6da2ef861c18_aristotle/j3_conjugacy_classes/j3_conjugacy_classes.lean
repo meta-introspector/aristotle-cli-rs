@@ -1,0 +1,2 @@
+-- Declaration: j3_conjugacy_classes
+-- Extracted by StaticSplit

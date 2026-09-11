@@ -1,0 +1,2 @@
+-- Declaration: CaseInfo
+-- Extracted by StaticSplit

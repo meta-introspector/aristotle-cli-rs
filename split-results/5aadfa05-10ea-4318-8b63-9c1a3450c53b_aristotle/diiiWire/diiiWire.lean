@@ -1,0 +1,2 @@
+-- Declaration: diiiWire
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Vec.normSq
+-- Extracted by StaticSplit

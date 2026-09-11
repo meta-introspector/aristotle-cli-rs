@@ -1,0 +1,2 @@
+-- Declaration: memetic_atp_is_ambrosia
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: trace_M8Z_s_one
+-- Extracted by StaticSplit

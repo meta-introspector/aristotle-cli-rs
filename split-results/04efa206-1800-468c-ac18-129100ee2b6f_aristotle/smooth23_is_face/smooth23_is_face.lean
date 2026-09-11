@@ -1,0 +1,2 @@
+-- Declaration: smooth23_is_face
+-- Extracted by StaticSplit

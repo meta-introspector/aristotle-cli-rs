@@ -1,0 +1,2 @@
+-- Declaration: Occupant.bind
+-- Extracted by StaticSplit

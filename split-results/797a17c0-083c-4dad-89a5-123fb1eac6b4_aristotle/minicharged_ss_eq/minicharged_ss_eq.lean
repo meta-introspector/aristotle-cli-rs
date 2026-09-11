@@ -1,0 +1,2 @@
+-- Declaration: minicharged_ss_eq
+-- Extracted by StaticSplit

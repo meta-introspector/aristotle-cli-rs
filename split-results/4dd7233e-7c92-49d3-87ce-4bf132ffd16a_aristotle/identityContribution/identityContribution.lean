@@ -1,0 +1,2 @@
+-- Declaration: identityContribution
+-- Extracted by StaticSplit

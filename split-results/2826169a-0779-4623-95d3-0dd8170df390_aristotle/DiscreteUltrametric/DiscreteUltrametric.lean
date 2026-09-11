@@ -1,0 +1,2 @@
+-- Declaration: DiscreteUltrametric
+-- Extracted by StaticSplit

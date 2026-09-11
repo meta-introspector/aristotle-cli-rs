@@ -1,0 +1,2 @@
+-- Declaration: AristotleError.statusCode
+-- Extracted by StaticSplit

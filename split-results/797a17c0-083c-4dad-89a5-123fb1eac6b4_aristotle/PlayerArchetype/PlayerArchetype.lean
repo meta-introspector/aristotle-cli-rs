@@ -1,0 +1,2 @@
+-- Declaration: PlayerArchetype
+-- Extracted by StaticSplit

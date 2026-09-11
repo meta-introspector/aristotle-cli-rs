@@ -1,0 +1,2 @@
+-- Declaration: gradePresheaf_isSheaf
+-- Extracted by StaticSplit

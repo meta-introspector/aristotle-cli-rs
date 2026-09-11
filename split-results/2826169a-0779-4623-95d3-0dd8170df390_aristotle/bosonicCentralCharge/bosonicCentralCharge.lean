@@ -1,0 +1,2 @@
+-- Declaration: bosonicCentralCharge
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fitsOriginalJurisdiction
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: griess_in_product
+-- Extracted by StaticSplit

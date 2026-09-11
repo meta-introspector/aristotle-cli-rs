@@ -1,0 +1,2 @@
+-- Declaration: sspA_max_lt_sspB_min
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CoreModel
+-- Extracted by StaticSplit

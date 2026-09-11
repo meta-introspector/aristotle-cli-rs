@@ -1,0 +1,2 @@
+-- Declaration: fullyEnforcedSession
+-- Extracted by StaticSplit

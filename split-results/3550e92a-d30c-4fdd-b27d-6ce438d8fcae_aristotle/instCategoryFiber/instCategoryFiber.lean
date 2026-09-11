@@ -1,0 +1,2 @@
+-- Declaration: instCategoryFiber
+-- Extracted by StaticSplit

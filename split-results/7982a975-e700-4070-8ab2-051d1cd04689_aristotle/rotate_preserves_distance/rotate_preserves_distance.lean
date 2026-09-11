@@ -1,0 +1,2 @@
+-- Declaration: rotate_preserves_distance
+-- Extracted by StaticSplit

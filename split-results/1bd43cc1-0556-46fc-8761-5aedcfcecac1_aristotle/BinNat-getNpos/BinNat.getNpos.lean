@@ -1,0 +1,2 @@
+-- Declaration: BinNat.getNpos
+-- Extracted by StaticSplit

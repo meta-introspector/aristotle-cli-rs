@@ -1,0 +1,2 @@
+-- Declaration: j2A_coeff
+-- Extracted by StaticSplit

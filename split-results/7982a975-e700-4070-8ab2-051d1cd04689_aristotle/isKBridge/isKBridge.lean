@@ -1,0 +1,2 @@
+-- Declaration: isKBridge
+-- Extracted by StaticSplit

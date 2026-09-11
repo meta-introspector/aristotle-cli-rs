@@ -1,0 +1,2 @@
+-- Declaration: instComp
+-- Extracted by StaticSplit

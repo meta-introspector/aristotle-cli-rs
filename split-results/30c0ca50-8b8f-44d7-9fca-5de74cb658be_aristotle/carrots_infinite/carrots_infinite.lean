@@ -1,0 +1,2 @@
+-- Declaration: carrots_infinite
+-- Extracted by StaticSplit

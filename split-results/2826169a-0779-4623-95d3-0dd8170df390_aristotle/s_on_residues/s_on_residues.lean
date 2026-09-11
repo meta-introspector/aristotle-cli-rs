@@ -1,0 +1,2 @@
+-- Declaration: s_on_residues
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CosmicEpoch
+-- Extracted by StaticSplit

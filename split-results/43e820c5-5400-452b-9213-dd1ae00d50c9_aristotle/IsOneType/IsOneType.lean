@@ -1,0 +1,2 @@
+-- Declaration: IsOneType
+-- Extracted by StaticSplit

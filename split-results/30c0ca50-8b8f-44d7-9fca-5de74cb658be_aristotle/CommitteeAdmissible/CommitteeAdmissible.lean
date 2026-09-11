@@ -1,0 +1,2 @@
+-- Declaration: CommitteeAdmissible
+-- Extracted by StaticSplit

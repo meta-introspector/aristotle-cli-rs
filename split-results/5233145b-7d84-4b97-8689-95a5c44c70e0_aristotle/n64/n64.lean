@@ -1,0 +1,2 @@
+-- Declaration: n64
+-- Extracted by StaticSplit

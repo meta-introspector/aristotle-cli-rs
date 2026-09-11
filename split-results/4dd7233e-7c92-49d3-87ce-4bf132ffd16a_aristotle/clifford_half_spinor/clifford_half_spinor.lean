@@ -1,0 +1,2 @@
+-- Declaration: clifford_half_spinor
+-- Extracted by StaticSplit

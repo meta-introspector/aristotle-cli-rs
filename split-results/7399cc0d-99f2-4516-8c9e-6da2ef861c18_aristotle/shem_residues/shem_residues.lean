@@ -1,0 +1,2 @@
+-- Declaration: shem_residues
+-- Extracted by StaticSplit

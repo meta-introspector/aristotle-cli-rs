@@ -1,0 +1,2 @@
+-- Declaration: PresidentAction
+-- Extracted by StaticSplit

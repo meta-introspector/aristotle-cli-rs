@@ -1,0 +1,2 @@
+-- Declaration: HS_divides_Co3
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MetaMeme.satisfies_condition
+-- Extracted by StaticSplit

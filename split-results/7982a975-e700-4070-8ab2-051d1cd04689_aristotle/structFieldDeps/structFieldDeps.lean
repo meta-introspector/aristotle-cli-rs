@@ -1,0 +1,2 @@
+-- Declaration: structFieldDeps
+-- Extracted by StaticSplit

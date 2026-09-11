@@ -1,0 +1,2 @@
+-- Declaration: gramBlock10_spec
+-- Extracted by StaticSplit

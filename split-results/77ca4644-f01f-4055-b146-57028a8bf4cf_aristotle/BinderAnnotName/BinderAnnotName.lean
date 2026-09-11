@@ -1,0 +1,2 @@
+-- Declaration: BinderAnnotName
+-- Extracted by StaticSplit

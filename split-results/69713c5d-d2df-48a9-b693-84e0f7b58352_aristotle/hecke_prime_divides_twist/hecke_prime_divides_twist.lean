@@ -1,0 +1,2 @@
+-- Declaration: hecke_prime_divides_twist
+-- Extracted by StaticSplit

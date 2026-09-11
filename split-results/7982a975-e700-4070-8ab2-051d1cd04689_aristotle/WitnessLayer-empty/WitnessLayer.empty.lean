@@ -1,0 +1,2 @@
+-- Declaration: WitnessLayer.empty
+-- Extracted by StaticSplit

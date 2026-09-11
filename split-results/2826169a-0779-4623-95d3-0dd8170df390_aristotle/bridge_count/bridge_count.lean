@@ -1,0 +1,2 @@
+-- Declaration: bridge_count
+-- Extracted by StaticSplit

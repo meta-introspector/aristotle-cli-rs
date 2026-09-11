@@ -1,0 +1,2 @@
+-- Declaration: irreps_eq_conjClasses_general
+-- Extracted by StaticSplit

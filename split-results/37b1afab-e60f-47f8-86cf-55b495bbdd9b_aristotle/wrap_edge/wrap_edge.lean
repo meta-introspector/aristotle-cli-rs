@@ -1,0 +1,2 @@
+-- Declaration: wrap_edge
+-- Extracted by StaticSplit

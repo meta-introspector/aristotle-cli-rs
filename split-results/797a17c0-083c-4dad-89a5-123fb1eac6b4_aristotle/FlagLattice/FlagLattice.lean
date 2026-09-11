@@ -1,0 +1,2 @@
+-- Declaration: FlagLattice
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: stalk_phosphorus
+-- Extracted by StaticSplit

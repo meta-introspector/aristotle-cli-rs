@@ -1,0 +1,2 @@
+-- Declaration: invalid_if_significant_comment_ignored
+-- Extracted by StaticSplit

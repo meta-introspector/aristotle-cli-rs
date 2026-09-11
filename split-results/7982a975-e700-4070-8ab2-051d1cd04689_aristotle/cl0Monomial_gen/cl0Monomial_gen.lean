@@ -1,0 +1,2 @@
+-- Declaration: cl0Monomial_gen
+-- Extracted by StaticSplit

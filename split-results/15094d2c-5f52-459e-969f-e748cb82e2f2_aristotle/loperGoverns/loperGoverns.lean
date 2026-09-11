@@ -1,0 +1,2 @@
+-- Declaration: loperGoverns
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: liftToArithmetic_eq
+-- Extracted by StaticSplit

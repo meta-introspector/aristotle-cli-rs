@@ -1,0 +1,2 @@
+-- Declaration: az_clifford_sum_10
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: selfApp_has_godel_number
+-- Extracted by StaticSplit

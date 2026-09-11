@@ -1,0 +1,2 @@
+-- Declaration: genesisUniverse
+-- Extracted by StaticSplit

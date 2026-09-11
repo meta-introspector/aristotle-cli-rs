@@ -1,0 +1,2 @@
+-- Declaration: ABIConformant
+-- Extracted by StaticSplit

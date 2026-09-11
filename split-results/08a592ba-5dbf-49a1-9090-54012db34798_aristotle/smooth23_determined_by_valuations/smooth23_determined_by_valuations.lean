@@ -1,0 +1,2 @@
+-- Declaration: smooth23_determined_by_valuations
+-- Extracted by StaticSplit

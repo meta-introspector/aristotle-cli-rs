@@ -1,0 +1,2 @@
+-- Declaration: ramanujanF
+-- Extracted by StaticSplit

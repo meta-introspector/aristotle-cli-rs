@@ -1,0 +1,2 @@
+-- Declaration: canonicalBMC
+-- Extracted by StaticSplit

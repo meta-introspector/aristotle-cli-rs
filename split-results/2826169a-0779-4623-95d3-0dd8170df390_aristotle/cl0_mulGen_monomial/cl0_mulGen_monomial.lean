@@ -1,0 +1,2 @@
+-- Declaration: cl0_mulGen_monomial
+-- Extracted by StaticSplit

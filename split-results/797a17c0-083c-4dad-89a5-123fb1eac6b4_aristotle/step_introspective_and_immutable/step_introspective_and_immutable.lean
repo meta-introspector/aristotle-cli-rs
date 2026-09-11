@@ -1,0 +1,2 @@
+-- Declaration: step_introspective_and_immutable
+-- Extracted by StaticSplit

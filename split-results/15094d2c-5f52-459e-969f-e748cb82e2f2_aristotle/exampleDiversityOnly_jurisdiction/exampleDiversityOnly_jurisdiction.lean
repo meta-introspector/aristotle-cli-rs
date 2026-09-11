@@ -1,0 +1,2 @@
+-- Declaration: exampleDiversityOnly_jurisdiction
+-- Extracted by StaticSplit

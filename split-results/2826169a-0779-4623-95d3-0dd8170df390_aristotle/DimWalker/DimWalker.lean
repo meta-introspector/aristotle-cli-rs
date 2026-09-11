@@ -1,0 +1,2 @@
+-- Declaration: DimWalker
+-- Extracted by StaticSplit

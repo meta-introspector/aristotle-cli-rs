@@ -1,0 +1,2 @@
+-- Declaration: two_thirds_threshold_is_67
+-- Extracted by StaticSplit

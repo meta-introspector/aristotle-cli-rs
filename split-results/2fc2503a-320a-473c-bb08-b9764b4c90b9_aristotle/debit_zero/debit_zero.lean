@@ -1,0 +1,2 @@
+-- Declaration: debit_zero
+-- Extracted by StaticSplit

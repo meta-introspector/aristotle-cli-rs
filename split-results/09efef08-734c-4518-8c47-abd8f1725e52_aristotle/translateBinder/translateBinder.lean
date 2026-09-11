@@ -1,0 +1,2 @@
+-- Declaration: translateBinder
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: GreekAuthors
+-- Extracted by StaticSplit

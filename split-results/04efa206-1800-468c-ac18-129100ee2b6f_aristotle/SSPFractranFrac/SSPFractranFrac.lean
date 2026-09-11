@@ -1,0 +1,2 @@
+-- Declaration: SSPFractranFrac
+-- Extracted by StaticSplit

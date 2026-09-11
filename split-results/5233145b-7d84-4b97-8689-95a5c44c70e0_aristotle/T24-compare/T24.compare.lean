@@ -1,0 +1,2 @@
+-- Declaration: T24.compare
+-- Extracted by StaticSplit

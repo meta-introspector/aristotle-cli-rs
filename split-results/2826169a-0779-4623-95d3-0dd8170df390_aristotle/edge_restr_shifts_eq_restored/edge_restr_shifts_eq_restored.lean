@@ -1,0 +1,2 @@
+-- Declaration: edge_restr_shifts_eq_restored
+-- Extracted by StaticSplit

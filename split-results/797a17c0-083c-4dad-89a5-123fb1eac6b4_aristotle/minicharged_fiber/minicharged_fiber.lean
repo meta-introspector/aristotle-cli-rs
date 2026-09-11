@@ -1,0 +1,2 @@
+-- Declaration: minicharged_fiber
+-- Extracted by StaticSplit

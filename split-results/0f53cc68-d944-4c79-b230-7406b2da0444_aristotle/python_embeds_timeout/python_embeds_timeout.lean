@@ -1,0 +1,2 @@
+-- Declaration: python_embeds_timeout
+-- Extracted by StaticSplit

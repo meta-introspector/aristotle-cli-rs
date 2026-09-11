@@ -1,0 +1,2 @@
+-- Declaration: castIdComp
+-- Extracted by StaticSplit

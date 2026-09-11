@@ -1,0 +1,2 @@
+-- Declaration: runTrace_append_obj
+-- Extracted by StaticSplit

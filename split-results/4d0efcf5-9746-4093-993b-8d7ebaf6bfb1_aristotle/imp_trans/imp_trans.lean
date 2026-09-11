@@ -1,0 +1,2 @@
+-- Declaration: imp_trans
+-- Extracted by StaticSplit

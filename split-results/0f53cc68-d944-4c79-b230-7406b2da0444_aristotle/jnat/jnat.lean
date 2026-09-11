@@ -1,0 +1,2 @@
+-- Declaration: jnat
+-- Extracted by StaticSplit

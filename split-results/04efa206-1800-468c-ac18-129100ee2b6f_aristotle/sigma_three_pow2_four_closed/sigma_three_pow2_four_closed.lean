@@ -1,0 +1,2 @@
+-- Declaration: sigma_three_pow2_four_closed
+-- Extracted by StaticSplit

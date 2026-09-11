@@ -1,0 +1,2 @@
+-- Declaration: primegame_starts
+-- Extracted by StaticSplit

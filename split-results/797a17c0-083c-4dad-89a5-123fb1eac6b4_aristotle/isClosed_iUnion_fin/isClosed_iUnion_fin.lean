@@ -1,0 +1,2 @@
+-- Declaration: isClosed_iUnion_fin
+-- Extracted by StaticSplit

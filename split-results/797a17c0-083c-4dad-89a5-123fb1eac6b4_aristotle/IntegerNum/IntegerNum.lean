@@ -1,0 +1,2 @@
+-- Declaration: IntegerNum
+-- Extracted by StaticSplit

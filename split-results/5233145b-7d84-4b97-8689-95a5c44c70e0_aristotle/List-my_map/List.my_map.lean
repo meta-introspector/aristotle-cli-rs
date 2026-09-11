@@ -1,0 +1,2 @@
+-- Declaration: List.my_map
+-- Extracted by StaticSplit

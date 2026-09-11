@@ -1,0 +1,2 @@
+-- Declaration: GradedGenerator
+-- Extracted by StaticSplit

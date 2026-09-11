@@ -1,0 +1,2 @@
+-- Declaration: foldNat
+-- Extracted by StaticSplit

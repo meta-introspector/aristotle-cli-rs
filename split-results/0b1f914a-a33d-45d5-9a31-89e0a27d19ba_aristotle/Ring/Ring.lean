@@ -1,0 +1,2 @@
+-- Declaration: Ring
+-- Extracted by StaticSplit

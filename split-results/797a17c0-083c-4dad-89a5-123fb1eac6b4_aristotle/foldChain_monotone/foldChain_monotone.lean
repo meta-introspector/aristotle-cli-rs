@@ -1,0 +1,2 @@
+-- Declaration: foldChain_monotone
+-- Extracted by StaticSplit

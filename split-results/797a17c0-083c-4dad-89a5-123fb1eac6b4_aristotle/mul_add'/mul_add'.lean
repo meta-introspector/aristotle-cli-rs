@@ -1,0 +1,2 @@
+-- Declaration: mul_add'
+-- Extracted by StaticSplit

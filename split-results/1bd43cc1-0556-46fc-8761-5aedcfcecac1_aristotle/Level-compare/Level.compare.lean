@@ -1,0 +1,2 @@
+-- Declaration: Level.compare
+-- Extracted by StaticSplit

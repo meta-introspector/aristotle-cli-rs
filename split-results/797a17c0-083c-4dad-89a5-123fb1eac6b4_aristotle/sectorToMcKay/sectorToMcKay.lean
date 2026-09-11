@@ -1,0 +1,2 @@
+-- Declaration: sectorToMcKay
+-- Extracted by StaticSplit

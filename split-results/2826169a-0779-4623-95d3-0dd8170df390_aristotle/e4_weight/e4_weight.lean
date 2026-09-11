@@ -1,0 +1,2 @@
+-- Declaration: e4_weight
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Tally
+-- Extracted by StaticSplit

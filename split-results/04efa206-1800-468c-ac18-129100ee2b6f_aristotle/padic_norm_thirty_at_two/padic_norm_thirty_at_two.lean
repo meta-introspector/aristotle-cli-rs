@@ -1,0 +1,2 @@
+-- Declaration: padic_norm_thirty_at_two
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: actorParticipates
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Gbarorder_length
+-- Extracted by StaticSplit

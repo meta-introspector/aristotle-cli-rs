@@ -1,0 +1,2 @@
+-- Declaration: spin
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: isAtom
+-- Extracted by StaticSplit

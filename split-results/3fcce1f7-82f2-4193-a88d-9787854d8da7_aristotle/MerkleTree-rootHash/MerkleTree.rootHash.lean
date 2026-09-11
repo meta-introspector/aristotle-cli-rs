@@ -1,0 +1,2 @@
+-- Declaration: MerkleTree.rootHash
+-- Extracted by StaticSplit

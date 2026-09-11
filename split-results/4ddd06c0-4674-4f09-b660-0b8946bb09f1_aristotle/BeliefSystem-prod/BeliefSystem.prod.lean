@@ -1,0 +1,2 @@
+-- Declaration: BeliefSystem.prod
+-- Extracted by StaticSplit

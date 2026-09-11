@@ -1,0 +1,2 @@
+-- Declaration: mockProve_timeout
+-- Extracted by StaticSplit

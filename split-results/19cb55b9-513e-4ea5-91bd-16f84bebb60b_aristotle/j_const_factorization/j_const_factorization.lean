@@ -1,0 +1,2 @@
+-- Declaration: j_const_factorization
+-- Extracted by StaticSplit

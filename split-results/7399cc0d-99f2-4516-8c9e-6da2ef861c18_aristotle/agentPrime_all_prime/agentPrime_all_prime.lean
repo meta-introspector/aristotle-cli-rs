@@ -1,0 +1,2 @@
+-- Declaration: agentPrime_all_prime
+-- Extracted by StaticSplit

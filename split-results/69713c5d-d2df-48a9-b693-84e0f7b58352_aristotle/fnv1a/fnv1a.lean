@@ -1,0 +1,2 @@
+-- Declaration: fnv1a
+-- Extracted by StaticSplit

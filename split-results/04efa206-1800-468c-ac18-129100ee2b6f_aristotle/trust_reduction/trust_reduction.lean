@@ -1,0 +1,2 @@
+-- Declaration: trust_reduction
+-- Extracted by StaticSplit

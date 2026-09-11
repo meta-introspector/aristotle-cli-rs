@@ -1,0 +1,2 @@
+-- Declaration: cl0_n_equiv
+-- Extracted by StaticSplit

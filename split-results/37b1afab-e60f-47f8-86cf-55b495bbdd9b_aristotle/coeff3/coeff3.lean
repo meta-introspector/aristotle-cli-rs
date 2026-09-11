@@ -1,0 +1,2 @@
+-- Declaration: coeff3
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: InterfaceConcept
+-- Extracted by StaticSplit

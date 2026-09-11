@@ -1,0 +1,2 @@
+-- Declaration: monsterExponentN
+-- Extracted by StaticSplit

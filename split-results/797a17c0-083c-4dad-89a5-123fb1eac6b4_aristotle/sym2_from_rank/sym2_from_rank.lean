@@ -1,0 +1,2 @@
+-- Declaration: sym2_from_rank
+-- Extracted by StaticSplit

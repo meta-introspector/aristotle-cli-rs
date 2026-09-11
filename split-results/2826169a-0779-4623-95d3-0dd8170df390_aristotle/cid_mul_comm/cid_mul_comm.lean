@@ -1,0 +1,2 @@
+-- Declaration: cid_mul_comm
+-- Extracted by StaticSplit

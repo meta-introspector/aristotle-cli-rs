@@ -1,0 +1,2 @@
+-- Declaration: TargetLang.name
+-- Extracted by StaticSplit

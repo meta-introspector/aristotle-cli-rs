@@ -1,0 +1,2 @@
+-- Declaration: exampleDelegated_loper
+-- Extracted by StaticSplit

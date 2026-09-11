@@ -1,0 +1,2 @@
+-- Declaration: DepthAdvanced
+-- Extracted by StaticSplit

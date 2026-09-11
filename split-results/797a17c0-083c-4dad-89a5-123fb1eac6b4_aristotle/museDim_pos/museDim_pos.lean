@@ -1,0 +1,2 @@
+-- Declaration: museDim_pos
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ActionMonotone
+-- Extracted by StaticSplit

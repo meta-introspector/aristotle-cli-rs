@@ -1,0 +1,2 @@
+-- Declaration: fromIndex2
+-- Extracted by StaticSplit

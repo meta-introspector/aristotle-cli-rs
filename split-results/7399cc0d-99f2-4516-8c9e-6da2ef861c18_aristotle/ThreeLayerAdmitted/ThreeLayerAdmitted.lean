@@ -1,0 +1,2 @@
+-- Declaration: ThreeLayerAdmitted
+-- Extracted by StaticSplit

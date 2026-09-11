@@ -1,0 +1,2 @@
+-- Declaration: second_coeff_decomposition
+-- Extracted by StaticSplit

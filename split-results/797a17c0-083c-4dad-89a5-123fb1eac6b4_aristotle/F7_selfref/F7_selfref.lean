@@ -1,0 +1,2 @@
+-- Declaration: F7_selfref
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cl10_injective
+-- Extracted by StaticSplit

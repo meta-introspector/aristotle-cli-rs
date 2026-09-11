@@ -1,0 +1,2 @@
+-- Declaration: coilPairDist_3_11_is_min
+-- Extracted by StaticSplit

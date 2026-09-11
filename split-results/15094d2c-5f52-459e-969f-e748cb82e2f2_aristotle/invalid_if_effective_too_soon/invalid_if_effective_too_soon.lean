@@ -1,0 +1,2 @@
+-- Declaration: invalid_if_effective_too_soon
+-- Extracted by StaticSplit

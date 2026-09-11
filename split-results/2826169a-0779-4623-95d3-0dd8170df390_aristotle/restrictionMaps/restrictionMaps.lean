@@ -1,0 +1,2 @@
+-- Declaration: restrictionMaps
+-- Extracted by StaticSplit

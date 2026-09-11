@@ -1,0 +1,2 @@
+-- Declaration: boardroom_arcade_partition
+-- Extracted by StaticSplit

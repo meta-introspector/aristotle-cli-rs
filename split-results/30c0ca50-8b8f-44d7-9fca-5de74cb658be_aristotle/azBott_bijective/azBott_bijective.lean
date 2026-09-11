@@ -1,0 +1,2 @@
+-- Declaration: azBott_bijective
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cid_xor_group
+-- Extracted by StaticSplit

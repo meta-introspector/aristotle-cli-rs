@@ -1,0 +1,2 @@
+-- Declaration: knownMap_finite
+-- Extracted by StaticSplit

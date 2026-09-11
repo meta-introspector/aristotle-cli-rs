@@ -1,0 +1,2 @@
+-- Declaration: GramEngine.forwardLin
+-- Extracted by StaticSplit

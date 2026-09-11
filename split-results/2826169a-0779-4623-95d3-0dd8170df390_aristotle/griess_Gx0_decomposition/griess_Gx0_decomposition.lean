@@ -1,0 +1,2 @@
+-- Declaration: griess_Gx0_decomposition
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: short_five_lemma
+-- Extracted by StaticSplit

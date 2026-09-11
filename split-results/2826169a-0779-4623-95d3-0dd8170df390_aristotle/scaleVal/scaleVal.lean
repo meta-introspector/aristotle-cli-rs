@@ -1,0 +1,2 @@
+-- Declaration: scaleVal
+-- Extracted by StaticSplit

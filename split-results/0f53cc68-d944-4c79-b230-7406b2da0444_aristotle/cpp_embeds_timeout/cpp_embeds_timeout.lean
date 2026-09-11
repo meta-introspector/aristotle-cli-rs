@@ -1,0 +1,2 @@
+-- Declaration: cpp_embeds_timeout
+-- Extracted by StaticSplit

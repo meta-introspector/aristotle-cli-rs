@@ -1,0 +1,2 @@
+-- Declaration: single_hash_insufficient
+-- Extracted by StaticSplit

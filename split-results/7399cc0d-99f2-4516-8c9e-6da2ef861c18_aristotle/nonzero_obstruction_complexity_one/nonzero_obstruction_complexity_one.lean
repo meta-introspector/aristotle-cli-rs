@@ -1,0 +1,2 @@
+-- Declaration: nonzero_obstruction_complexity_one
+-- Extracted by StaticSplit

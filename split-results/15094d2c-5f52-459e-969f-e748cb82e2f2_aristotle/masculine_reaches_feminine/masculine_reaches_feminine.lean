@@ -1,0 +1,2 @@
+-- Declaration: masculine_reaches_feminine
+-- Extracted by StaticSplit

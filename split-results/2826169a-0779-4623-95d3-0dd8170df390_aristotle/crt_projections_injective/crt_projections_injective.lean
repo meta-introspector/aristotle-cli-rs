@@ -1,0 +1,2 @@
+-- Declaration: crt_projections_injective
+-- Extracted by StaticSplit

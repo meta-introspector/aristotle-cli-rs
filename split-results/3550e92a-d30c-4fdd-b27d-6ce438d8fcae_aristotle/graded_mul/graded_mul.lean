@@ -1,0 +1,2 @@
+-- Declaration: graded_mul
+-- Extracted by StaticSplit

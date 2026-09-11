@@ -1,0 +1,2 @@
+-- Declaration: FractranVOAData.grade
+-- Extracted by StaticSplit

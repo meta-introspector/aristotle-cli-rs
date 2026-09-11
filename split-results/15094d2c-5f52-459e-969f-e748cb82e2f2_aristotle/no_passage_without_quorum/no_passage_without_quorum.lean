@@ -1,0 +1,2 @@
+-- Declaration: no_passage_without_quorum
+-- Extracted by StaticSplit

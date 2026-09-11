@@ -1,0 +1,2 @@
+-- Declaration: unifiedKEquiv_trans
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ext_2E6_divides_M
+-- Extracted by StaticSplit

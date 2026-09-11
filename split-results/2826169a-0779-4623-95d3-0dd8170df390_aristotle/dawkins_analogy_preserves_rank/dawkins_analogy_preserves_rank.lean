@@ -1,0 +1,2 @@
+-- Declaration: dawkins_analogy_preserves_rank
+-- Extracted by StaticSplit

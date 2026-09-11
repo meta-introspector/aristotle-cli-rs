@@ -1,0 +1,2 @@
+-- Declaration: monster_address_persists
+-- Extracted by StaticSplit

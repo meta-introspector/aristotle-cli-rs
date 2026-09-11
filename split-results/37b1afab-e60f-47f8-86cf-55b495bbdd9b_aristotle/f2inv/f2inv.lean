@@ -1,0 +1,2 @@
+-- Declaration: f2inv
+-- Extracted by StaticSplit

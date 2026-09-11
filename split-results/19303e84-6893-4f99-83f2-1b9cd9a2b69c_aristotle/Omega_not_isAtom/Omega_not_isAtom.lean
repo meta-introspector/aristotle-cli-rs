@@ -1,0 +1,2 @@
+-- Declaration: Omega_not_isAtom
+-- Extracted by StaticSplit

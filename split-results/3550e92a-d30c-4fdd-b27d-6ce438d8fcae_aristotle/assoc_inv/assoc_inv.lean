@@ -1,0 +1,2 @@
+-- Declaration: assoc_inv
+-- Extracted by StaticSplit

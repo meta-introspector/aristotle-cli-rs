@@ -1,0 +1,2 @@
+-- Declaration: sigma_three_thirty_mult
+-- Extracted by StaticSplit

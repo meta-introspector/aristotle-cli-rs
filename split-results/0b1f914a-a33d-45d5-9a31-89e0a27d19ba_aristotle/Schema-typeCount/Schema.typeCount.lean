@@ -1,0 +1,2 @@
+-- Declaration: Schema.typeCount
+-- Extracted by StaticSplit

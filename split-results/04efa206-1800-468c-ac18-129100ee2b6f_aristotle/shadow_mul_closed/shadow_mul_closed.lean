@@ -1,0 +1,2 @@
+-- Declaration: shadow_mul_closed
+-- Extracted by StaticSplit

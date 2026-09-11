@@ -1,0 +1,2 @@
+-- Declaration: supersingularPrime_strictMono
+-- Extracted by StaticSplit

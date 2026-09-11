@@ -1,0 +1,2 @@
+-- Declaration: foldGenMul
+-- Extracted by StaticSplit

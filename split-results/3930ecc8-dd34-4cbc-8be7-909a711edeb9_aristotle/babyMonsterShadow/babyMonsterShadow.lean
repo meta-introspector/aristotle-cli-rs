@@ -1,0 +1,2 @@
+-- Declaration: babyMonsterShadow
+-- Extracted by StaticSplit

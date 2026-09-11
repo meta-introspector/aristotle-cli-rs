@@ -1,0 +1,2 @@
+-- Declaration: mulGenSign
+-- Extracted by StaticSplit

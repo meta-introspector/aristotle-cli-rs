@@ -1,0 +1,2 @@
+-- Declaration: monster_baby_div
+-- Extracted by StaticSplit

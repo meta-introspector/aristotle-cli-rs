@@ -1,0 +1,2 @@
+-- Declaration: generators_count
+-- Extracted by StaticSplit

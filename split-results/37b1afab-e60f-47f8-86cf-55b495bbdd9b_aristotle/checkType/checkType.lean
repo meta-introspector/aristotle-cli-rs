@@ -1,0 +1,2 @@
+-- Declaration: checkType
+-- Extracted by StaticSplit

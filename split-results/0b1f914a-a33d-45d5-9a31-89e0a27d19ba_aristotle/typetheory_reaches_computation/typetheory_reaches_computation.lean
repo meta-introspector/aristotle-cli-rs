@@ -1,0 +1,2 @@
+-- Declaration: typetheory_reaches_computation
+-- Extracted by StaticSplit

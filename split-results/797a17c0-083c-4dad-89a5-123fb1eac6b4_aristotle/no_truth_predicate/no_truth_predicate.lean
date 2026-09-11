@@ -1,0 +1,2 @@
+-- Declaration: no_truth_predicate
+-- Extracted by StaticSplit

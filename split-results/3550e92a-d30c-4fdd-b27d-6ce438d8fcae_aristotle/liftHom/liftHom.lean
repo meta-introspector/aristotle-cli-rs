@@ -1,0 +1,2 @@
+-- Declaration: liftHom
+-- Extracted by StaticSplit

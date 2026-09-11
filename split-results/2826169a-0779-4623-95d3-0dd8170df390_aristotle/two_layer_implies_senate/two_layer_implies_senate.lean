@@ -1,0 +1,2 @@
+-- Declaration: two_layer_implies_senate
+-- Extracted by StaticSplit

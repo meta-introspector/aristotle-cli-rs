@@ -1,0 +1,2 @@
+-- Declaration: generate_rust
+-- Extracted by StaticSplit

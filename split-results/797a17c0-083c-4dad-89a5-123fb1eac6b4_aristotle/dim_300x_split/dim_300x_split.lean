@@ -1,0 +1,2 @@
+-- Declaration: dim_300x_split
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: SpectralDifferential
+-- Extracted by StaticSplit

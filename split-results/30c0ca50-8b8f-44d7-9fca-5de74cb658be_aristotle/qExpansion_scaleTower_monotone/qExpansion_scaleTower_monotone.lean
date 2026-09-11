@@ -1,0 +1,2 @@
+-- Declaration: qExpansion_scaleTower_monotone
+-- Extracted by StaticSplit

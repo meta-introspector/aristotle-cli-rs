@@ -1,0 +1,2 @@
+-- Declaration: Message.isValid
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: growth_2_3
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: BMCInvariant
+-- Extracted by StaticSplit

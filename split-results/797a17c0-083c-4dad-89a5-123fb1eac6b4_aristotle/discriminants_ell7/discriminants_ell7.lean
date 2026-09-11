@@ -1,0 +1,2 @@
+-- Declaration: discriminants_ell7
+-- Extracted by StaticSplit

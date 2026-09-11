@@ -1,0 +1,2 @@
+-- Declaration: Fibration.total_card_eq_sigma
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cid_cons_ne_zero
+-- Extracted by StaticSplit

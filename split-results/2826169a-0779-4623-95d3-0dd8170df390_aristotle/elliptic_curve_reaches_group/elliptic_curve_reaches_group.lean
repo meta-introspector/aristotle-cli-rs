@@ -1,0 +1,2 @@
+-- Declaration: elliptic_curve_reaches_group
+-- Extracted by StaticSplit

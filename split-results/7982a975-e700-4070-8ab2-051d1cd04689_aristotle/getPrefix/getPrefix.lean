@@ -1,0 +1,2 @@
+-- Declaration: getPrefix
+-- Extracted by StaticSplit

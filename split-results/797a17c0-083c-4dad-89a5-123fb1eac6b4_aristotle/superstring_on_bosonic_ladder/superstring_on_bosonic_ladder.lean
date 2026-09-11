@@ -1,0 +1,2 @@
+-- Declaration: superstring_on_bosonic_ladder
+-- Extracted by StaticSplit

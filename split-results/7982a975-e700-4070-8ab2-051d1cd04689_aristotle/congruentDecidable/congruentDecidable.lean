@@ -1,0 +1,2 @@
+-- Declaration: congruentDecidable
+-- Extracted by StaticSplit

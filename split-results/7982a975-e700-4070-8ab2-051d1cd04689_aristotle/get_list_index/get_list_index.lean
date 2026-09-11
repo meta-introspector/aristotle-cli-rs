@@ -1,0 +1,2 @@
+-- Declaration: get_list_index
+-- Extracted by StaticSplit

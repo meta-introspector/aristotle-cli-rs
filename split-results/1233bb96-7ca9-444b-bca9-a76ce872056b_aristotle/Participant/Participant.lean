@@ -1,0 +1,2 @@
+-- Declaration: Participant
+-- Extracted by StaticSplit

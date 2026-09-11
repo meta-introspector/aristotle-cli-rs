@@ -1,0 +1,2 @@
+-- Declaration: outerAutOrderAlt
+-- Extracted by StaticSplit

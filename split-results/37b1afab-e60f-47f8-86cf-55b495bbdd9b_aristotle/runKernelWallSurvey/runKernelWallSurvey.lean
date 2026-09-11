@@ -1,0 +1,2 @@
+-- Declaration: runKernelWallSurvey
+-- Extracted by StaticSplit

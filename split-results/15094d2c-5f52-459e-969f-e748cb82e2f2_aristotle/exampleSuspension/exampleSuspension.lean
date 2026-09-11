@@ -1,0 +1,2 @@
+-- Declaration: exampleSuspension
+-- Extracted by StaticSplit

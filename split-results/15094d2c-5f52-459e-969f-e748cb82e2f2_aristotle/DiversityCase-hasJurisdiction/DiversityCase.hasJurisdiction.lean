@@ -1,0 +1,2 @@
+-- Declaration: DiversityCase.hasJurisdiction
+-- Extracted by StaticSplit

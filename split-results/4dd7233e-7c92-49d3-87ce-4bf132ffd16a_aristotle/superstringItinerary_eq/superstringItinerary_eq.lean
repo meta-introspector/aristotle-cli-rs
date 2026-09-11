@@ -1,0 +1,2 @@
+-- Declaration: superstringItinerary_eq
+-- Extracted by StaticSplit

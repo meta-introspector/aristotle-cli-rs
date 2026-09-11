@@ -1,0 +1,2 @@
+-- Declaration: fire_in_range6
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: spectralDegeneration
+-- Extracted by StaticSplit

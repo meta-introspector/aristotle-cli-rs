@@ -1,0 +1,2 @@
+-- Declaration: boundaryClass_realIndex
+-- Extracted by StaticSplit

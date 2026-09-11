@@ -1,0 +1,2 @@
+-- Declaration: bottKTheory_periodic
+-- Extracted by StaticSplit

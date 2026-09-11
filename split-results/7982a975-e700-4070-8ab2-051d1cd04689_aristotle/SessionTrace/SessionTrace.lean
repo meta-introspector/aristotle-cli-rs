@@ -1,0 +1,2 @@
+-- Declaration: SessionTrace
+-- Extracted by StaticSplit

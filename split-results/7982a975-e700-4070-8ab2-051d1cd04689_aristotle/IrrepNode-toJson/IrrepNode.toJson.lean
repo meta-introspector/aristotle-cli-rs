@@ -1,0 +1,2 @@
+-- Declaration: IrrepNode.toJson
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: shem_factorization
+-- Extracted by StaticSplit

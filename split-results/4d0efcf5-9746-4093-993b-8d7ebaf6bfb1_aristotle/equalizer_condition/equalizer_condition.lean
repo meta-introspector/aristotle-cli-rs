@@ -1,0 +1,2 @@
+-- Declaration: equalizer_condition
+-- Extracted by StaticSplit

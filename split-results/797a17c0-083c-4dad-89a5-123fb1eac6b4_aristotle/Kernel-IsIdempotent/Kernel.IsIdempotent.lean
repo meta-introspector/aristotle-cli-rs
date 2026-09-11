@@ -1,0 +1,2 @@
+-- Declaration: Kernel.IsIdempotent
+-- Extracted by StaticSplit

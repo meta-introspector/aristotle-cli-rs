@@ -1,0 +1,2 @@
+-- Declaration: extractLinks
+-- Extracted by StaticSplit

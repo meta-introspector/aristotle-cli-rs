@@ -1,0 +1,2 @@
+-- Declaration: chain_preserves_vanishing
+-- Extracted by StaticSplit

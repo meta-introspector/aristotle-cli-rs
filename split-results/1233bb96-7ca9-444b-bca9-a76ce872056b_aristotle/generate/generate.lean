@@ -1,0 +1,2 @@
+-- Declaration: generate
+-- Extracted by StaticSplit

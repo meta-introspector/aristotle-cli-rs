@@ -1,0 +1,2 @@
+-- Declaration: toZMod2Prod_gmul
+-- Extracted by StaticSplit

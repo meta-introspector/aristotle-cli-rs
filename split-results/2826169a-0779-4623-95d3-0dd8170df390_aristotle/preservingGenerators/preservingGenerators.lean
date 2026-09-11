@@ -1,0 +1,2 @@
+-- Declaration: preservingGenerators
+-- Extracted by StaticSplit

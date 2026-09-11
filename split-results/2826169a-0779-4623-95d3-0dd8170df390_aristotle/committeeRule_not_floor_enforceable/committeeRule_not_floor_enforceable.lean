@@ -1,0 +1,2 @@
+-- Declaration: committeeRule_not_floor_enforceable
+-- Extracted by StaticSplit

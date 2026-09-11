@@ -1,0 +1,2 @@
+-- Declaration: SL23_sumsq
+-- Extracted by StaticSplit

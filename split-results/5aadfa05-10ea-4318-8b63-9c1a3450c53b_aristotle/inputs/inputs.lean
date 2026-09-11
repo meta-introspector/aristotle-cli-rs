@@ -1,0 +1,2 @@
+-- Declaration: inputs
+-- Extracted by StaticSplit

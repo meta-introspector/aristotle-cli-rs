@@ -1,0 +1,2 @@
+-- Declaration: FileOutcome.toStr
+-- Extracted by StaticSplit

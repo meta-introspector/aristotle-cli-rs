@@ -1,0 +1,2 @@
+-- Declaration: idealBootstrap_perfect_reconstruction
+-- Extracted by StaticSplit

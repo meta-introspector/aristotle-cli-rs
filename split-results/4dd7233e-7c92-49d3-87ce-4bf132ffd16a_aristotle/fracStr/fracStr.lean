@@ -1,0 +1,2 @@
+-- Declaration: fracStr
+-- Extracted by StaticSplit

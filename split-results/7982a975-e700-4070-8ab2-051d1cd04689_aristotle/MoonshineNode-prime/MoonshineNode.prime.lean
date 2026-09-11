@@ -1,0 +1,2 @@
+-- Declaration: MoonshineNode.prime
+-- Extracted by StaticSplit

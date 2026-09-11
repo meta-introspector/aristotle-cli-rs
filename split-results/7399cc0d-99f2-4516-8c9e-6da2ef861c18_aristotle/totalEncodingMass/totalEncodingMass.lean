@@ -1,0 +1,2 @@
+-- Declaration: totalEncodingMass
+-- Extracted by StaticSplit

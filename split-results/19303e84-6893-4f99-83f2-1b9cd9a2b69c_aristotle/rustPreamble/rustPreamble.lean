@@ -1,0 +1,2 @@
+-- Declaration: rustPreamble
+-- Extracted by StaticSplit

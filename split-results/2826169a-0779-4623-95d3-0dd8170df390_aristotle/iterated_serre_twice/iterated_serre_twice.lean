@@ -1,0 +1,2 @@
+-- Declaration: iterated_serre_twice
+-- Extracted by StaticSplit

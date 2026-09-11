@@ -1,0 +1,2 @@
+-- Declaration: fortyTwo_primeFactors
+-- Extracted by StaticSplit

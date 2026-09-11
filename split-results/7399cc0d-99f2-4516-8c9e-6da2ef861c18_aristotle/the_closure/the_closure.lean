@@ -1,0 +1,2 @@
+-- Declaration: the_closure
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: identity_consistent
+-- Extracted by StaticSplit

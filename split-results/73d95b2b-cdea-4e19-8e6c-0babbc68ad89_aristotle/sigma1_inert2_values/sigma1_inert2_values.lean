@@ -1,0 +1,2 @@
+-- Declaration: sigma1_inert2_values
+-- Extracted by StaticSplit

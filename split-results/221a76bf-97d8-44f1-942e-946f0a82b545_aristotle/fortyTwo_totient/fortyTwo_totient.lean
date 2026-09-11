@@ -1,0 +1,2 @@
+-- Declaration: fortyTwo_totient
+-- Extracted by StaticSplit

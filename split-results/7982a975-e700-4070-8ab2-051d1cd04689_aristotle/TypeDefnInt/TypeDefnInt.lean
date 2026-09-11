@@ -1,0 +1,2 @@
+-- Declaration: TypeDefnInt
+-- Extracted by StaticSplit

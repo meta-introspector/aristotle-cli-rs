@@ -1,0 +1,2 @@
+-- Declaration: diagonal_ne
+-- Extracted by StaticSplit

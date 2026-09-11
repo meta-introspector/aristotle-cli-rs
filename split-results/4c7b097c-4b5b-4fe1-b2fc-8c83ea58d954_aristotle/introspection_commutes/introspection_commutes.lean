@@ -1,0 +1,2 @@
+-- Declaration: introspection_commutes
+-- Extracted by StaticSplit

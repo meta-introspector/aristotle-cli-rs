@@ -1,0 +1,2 @@
+-- Declaration: max5_is_Th
+-- Extracted by StaticSplit

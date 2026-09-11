@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_get_rent_sysvar
+-- Extracted by StaticSplit

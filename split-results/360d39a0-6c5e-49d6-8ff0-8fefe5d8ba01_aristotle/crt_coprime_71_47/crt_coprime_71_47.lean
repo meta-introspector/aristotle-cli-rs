@@ -1,0 +1,2 @@
+-- Declaration: crt_coprime_71_47
+-- Extracted by StaticSplit

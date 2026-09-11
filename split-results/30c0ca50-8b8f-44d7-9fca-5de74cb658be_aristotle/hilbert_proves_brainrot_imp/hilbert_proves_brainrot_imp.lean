@@ -1,0 +1,2 @@
+-- Declaration: hilbert_proves_brainrot_imp
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: citeRuleXII
+-- Extracted by StaticSplit

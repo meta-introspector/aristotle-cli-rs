@@ -1,0 +1,2 @@
+-- Declaration: rust_embeds_timeout
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: offset_only_at_monster
+-- Extracted by StaticSplit

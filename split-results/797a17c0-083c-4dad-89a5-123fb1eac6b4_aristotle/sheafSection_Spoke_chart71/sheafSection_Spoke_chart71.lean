@@ -1,0 +1,2 @@
+-- Declaration: sheafSection_Spoke_chart71
+-- Extracted by StaticSplit

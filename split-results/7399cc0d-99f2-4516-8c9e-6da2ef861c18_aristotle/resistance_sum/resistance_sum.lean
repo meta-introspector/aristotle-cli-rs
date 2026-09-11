@@ -1,0 +1,2 @@
+-- Declaration: resistance_sum
+-- Extracted by StaticSplit

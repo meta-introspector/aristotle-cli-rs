@@ -1,0 +1,2 @@
+-- Declaration: prime_47
+-- Extracted by StaticSplit

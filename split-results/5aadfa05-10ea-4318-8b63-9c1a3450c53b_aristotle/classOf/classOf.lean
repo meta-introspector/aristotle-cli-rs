@@ -1,0 +1,2 @@
+-- Declaration: classOf
+-- Extracted by StaticSplit

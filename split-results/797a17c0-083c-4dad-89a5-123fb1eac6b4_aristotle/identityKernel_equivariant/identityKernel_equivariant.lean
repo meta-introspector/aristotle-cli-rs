@@ -1,0 +1,2 @@
+-- Declaration: identityKernel_equivariant
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: clock_card
+-- Extracted by StaticSplit

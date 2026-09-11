@@ -1,0 +1,2 @@
+-- Declaration: fcommutes
+-- Extracted by StaticSplit

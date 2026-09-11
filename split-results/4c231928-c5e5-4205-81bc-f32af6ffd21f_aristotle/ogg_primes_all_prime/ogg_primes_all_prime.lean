@@ -1,0 +1,2 @@
+-- Declaration: ogg_primes_all_prime
+-- Extracted by StaticSplit

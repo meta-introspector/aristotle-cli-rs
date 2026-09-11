@@ -1,0 +1,2 @@
+-- Declaration: NeighborGraph
+-- Extracted by StaticSplit

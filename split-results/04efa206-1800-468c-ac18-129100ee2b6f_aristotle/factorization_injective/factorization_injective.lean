@@ -1,0 +1,2 @@
+-- Declaration: factorization_injective
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: germCount
+-- Extracted by StaticSplit

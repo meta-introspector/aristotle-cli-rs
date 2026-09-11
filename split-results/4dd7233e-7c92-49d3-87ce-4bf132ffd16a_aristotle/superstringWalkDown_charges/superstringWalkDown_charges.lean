@@ -1,0 +1,2 @@
+-- Declaration: superstringWalkDown_charges
+-- Extracted by StaticSplit

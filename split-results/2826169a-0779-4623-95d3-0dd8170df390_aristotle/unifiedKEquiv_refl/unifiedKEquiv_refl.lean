@@ -1,0 +1,2 @@
+-- Declaration: unifiedKEquiv_refl
+-- Extracted by StaticSplit

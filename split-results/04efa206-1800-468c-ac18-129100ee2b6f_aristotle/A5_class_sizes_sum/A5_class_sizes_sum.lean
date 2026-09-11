@@ -1,0 +1,2 @@
+-- Declaration: A5_class_sizes_sum
+-- Extracted by StaticSplit

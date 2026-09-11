@@ -1,0 +1,2 @@
+-- Declaration: M22_degree_sum
+-- Extracted by StaticSplit

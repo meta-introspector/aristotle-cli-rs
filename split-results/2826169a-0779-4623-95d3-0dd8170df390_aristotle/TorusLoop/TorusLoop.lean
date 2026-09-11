@@ -1,0 +1,2 @@
+-- Declaration: TorusLoop
+-- Extracted by StaticSplit

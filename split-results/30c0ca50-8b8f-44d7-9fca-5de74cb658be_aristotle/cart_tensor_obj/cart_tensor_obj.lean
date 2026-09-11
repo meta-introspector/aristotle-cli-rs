@@ -1,0 +1,2 @@
+-- Declaration: cart_tensor_obj
+-- Extracted by StaticSplit

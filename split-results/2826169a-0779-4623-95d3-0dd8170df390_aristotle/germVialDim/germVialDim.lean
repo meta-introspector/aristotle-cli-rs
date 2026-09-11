@@ -1,0 +1,2 @@
+-- Declaration: germVialDim
+-- Extracted by StaticSplit

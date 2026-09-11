@@ -1,0 +1,2 @@
+-- Declaration: FiberCat
+-- Extracted by StaticSplit

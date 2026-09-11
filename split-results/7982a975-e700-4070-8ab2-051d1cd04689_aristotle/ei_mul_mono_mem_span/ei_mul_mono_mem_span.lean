@@ -1,0 +1,2 @@
+-- Declaration: ei_mul_mono_mem_span
+-- Extracted by StaticSplit

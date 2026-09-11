@@ -1,0 +1,2 @@
+-- Declaration: n79
+-- Extracted by StaticSplit

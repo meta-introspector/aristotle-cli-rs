@@ -1,0 +1,2 @@
+-- Declaration: prime_71_in_atlas
+-- Extracted by StaticSplit

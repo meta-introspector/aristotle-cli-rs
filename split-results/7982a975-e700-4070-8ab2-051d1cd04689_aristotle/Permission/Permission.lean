@@ -1,0 +1,2 @@
+-- Declaration: Permission
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: bottHecke_cliffordDegree
+-- Extracted by StaticSplit

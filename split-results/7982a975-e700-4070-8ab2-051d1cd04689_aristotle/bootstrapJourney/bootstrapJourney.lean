@@ -1,0 +1,2 @@
+-- Declaration: bootstrapJourney
+-- Extracted by StaticSplit

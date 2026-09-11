@@ -1,0 +1,2 @@
+-- Declaration: subgroupBox_lattice_modular
+-- Extracted by StaticSplit

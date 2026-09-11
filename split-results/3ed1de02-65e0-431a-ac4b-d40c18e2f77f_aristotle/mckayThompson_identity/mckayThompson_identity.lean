@@ -1,0 +1,2 @@
+-- Declaration: mckayThompson_identity
+-- Extracted by StaticSplit

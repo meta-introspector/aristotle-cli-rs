@@ -1,0 +1,2 @@
+-- Declaration: moonshineSVG
+-- Extracted by StaticSplit

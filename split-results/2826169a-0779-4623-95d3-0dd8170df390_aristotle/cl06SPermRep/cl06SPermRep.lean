@@ -1,0 +1,2 @@
+-- Declaration: cl06SPermRep
+-- Extracted by StaticSplit

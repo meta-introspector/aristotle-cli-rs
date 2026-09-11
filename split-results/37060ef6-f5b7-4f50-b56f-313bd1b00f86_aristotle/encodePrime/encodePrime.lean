@@ -1,0 +1,2 @@
+-- Declaration: encodePrime
+-- Extracted by StaticSplit

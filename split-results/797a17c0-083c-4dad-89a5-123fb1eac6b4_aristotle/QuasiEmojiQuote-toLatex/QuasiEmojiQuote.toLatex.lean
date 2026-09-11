@@ -1,0 +1,2 @@
+-- Declaration: QuasiEmojiQuote.toLatex
+-- Extracted by StaticSplit

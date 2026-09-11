@@ -1,0 +1,2 @@
+-- Declaration: monster_dim_prime_factors
+-- Extracted by StaticSplit

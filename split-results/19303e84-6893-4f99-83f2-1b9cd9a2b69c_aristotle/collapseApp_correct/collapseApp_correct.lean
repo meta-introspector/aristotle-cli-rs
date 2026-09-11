@@ -1,0 +1,2 @@
+-- Declaration: collapseApp_correct
+-- Extracted by StaticSplit

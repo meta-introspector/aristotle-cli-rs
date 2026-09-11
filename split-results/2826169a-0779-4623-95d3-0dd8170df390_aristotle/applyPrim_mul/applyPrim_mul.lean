@@ -1,0 +1,2 @@
+-- Declaration: applyPrim_mul
+-- Extracted by StaticSplit

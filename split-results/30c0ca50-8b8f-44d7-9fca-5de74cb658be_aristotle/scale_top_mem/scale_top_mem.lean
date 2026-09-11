@@ -1,0 +1,2 @@
+-- Declaration: scale_top_mem
+-- Extracted by StaticSplit

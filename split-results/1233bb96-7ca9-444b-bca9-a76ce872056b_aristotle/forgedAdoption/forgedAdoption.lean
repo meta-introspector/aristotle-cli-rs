@@ -1,0 +1,2 @@
+-- Declaration: forgedAdoption
+-- Extracted by StaticSplit

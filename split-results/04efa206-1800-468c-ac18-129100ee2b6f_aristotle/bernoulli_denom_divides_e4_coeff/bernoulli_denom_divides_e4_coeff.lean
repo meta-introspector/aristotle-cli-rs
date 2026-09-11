@@ -1,0 +1,2 @@
+-- Declaration: bernoulli_denom_divides_e4_coeff
+-- Extracted by StaticSplit

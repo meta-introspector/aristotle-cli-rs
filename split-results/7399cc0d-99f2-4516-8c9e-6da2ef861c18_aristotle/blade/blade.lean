@@ -1,0 +1,2 @@
+-- Declaration: blade
+-- Extracted by StaticSplit

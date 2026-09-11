@@ -1,0 +1,2 @@
+-- Declaration: Fibration.totalEquivSigma_apply
+-- Extracted by StaticSplit

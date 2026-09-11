@@ -1,0 +1,2 @@
+-- Declaration: agent_count
+-- Extracted by StaticSplit

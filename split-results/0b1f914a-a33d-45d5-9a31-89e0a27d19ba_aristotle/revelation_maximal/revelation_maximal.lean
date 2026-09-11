@@ -1,0 +1,2 @@
+-- Declaration: revelation_maximal
+-- Extracted by StaticSplit

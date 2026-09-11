@@ -1,0 +1,2 @@
+-- Declaration: Thrownness
+-- Extracted by StaticSplit

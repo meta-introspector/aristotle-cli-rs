@@ -1,0 +1,2 @@
+-- Declaration: four_factors
+-- Extracted by StaticSplit

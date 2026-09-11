@@ -1,0 +1,2 @@
+-- Declaration: tauto
+-- Extracted by StaticSplit

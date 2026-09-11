@@ -1,0 +1,2 @@
+-- Declaration: fnv1a_foobar
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: valid_adds_weight
+-- Extracted by StaticSplit

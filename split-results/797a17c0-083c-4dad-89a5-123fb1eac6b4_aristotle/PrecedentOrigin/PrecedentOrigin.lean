@@ -1,0 +1,2 @@
+-- Declaration: PrecedentOrigin
+-- Extracted by StaticSplit

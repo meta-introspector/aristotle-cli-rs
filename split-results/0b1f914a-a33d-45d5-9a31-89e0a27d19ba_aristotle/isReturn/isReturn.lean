@@ -1,0 +1,2 @@
+-- Declaration: isReturn
+-- Extracted by StaticSplit

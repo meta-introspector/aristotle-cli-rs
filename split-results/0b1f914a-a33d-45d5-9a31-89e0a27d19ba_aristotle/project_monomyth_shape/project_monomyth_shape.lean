@@ -1,0 +1,2 @@
+-- Declaration: project_monomyth_shape
+-- Extracted by StaticSplit

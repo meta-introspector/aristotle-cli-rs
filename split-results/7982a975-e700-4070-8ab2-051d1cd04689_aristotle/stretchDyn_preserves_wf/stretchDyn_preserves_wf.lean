@@ -1,0 +1,2 @@
+-- Declaration: stretchDyn_preserves_wf
+-- Extracted by StaticSplit

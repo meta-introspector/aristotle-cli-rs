@@ -1,0 +1,2 @@
+-- Declaration: GaugeRow.exponents
+-- Extracted by StaticSplit

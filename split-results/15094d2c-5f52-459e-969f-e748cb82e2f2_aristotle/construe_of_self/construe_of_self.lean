@@ -1,0 +1,2 @@
+-- Declaration: construe_of_self
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CliffordSerialized.generator
+-- Extracted by StaticSplit

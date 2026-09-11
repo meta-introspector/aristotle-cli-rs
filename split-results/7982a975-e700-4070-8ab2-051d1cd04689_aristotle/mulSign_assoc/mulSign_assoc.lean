@@ -1,0 +1,2 @@
+-- Declaration: mulSign_assoc
+-- Extracted by StaticSplit

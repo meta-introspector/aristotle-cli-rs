@@ -1,0 +1,2 @@
+-- Declaration: Byte.toBinNat
+-- Extracted by StaticSplit

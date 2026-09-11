@@ -1,0 +1,2 @@
+-- Declaration: BinNat
+-- Extracted by StaticSplit

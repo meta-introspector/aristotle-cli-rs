@@ -1,0 +1,2 @@
+-- Declaration: precedent_log_is_bounded_ledger
+-- Extracted by StaticSplit

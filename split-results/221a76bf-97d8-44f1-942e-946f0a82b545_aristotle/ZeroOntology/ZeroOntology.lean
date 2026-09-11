@@ -1,0 +1,2 @@
+-- Declaration: ZeroOntology
+-- Extracted by StaticSplit

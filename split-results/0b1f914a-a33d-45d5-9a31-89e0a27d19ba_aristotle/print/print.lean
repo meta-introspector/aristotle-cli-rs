@@ -1,0 +1,2 @@
+-- Declaration: print
+-- Extracted by StaticSplit

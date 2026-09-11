@@ -1,0 +1,2 @@
+-- Declaration: atp_reaches_protein
+-- Extracted by StaticSplit

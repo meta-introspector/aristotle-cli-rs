@@ -1,0 +1,2 @@
+-- Declaration: cl0n_img
+-- Extracted by StaticSplit

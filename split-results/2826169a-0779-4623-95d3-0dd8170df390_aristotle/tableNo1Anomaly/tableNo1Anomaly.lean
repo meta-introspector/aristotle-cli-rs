@@ -1,0 +1,2 @@
+-- Declaration: tableNo1Anomaly
+-- Extracted by StaticSplit

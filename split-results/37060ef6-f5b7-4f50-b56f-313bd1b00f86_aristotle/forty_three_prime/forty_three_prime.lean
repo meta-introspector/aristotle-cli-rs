@@ -1,0 +1,2 @@
+-- Declaration: forty_three_prime
+-- Extracted by StaticSplit

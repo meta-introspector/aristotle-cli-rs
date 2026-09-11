@@ -1,0 +1,2 @@
+-- Declaration: Binder_annot
+-- Extracted by StaticSplit

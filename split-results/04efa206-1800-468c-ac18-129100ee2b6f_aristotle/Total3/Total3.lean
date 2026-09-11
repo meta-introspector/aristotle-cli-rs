@@ -1,0 +1,2 @@
+-- Declaration: Total3
+-- Extracted by StaticSplit

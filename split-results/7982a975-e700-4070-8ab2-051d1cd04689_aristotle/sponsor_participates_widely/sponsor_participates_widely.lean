@@ -1,0 +1,2 @@
+-- Declaration: sponsor_participates_widely
+-- Extracted by StaticSplit

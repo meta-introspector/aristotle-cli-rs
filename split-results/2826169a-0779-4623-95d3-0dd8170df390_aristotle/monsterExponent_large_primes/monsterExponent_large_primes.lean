@@ -1,0 +1,2 @@
+-- Declaration: monsterExponent_large_primes
+-- Extracted by StaticSplit

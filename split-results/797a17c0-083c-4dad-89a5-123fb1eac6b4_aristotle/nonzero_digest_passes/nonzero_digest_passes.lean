@@ -1,0 +1,2 @@
+-- Declaration: nonzero_digest_passes
+-- Extracted by StaticSplit

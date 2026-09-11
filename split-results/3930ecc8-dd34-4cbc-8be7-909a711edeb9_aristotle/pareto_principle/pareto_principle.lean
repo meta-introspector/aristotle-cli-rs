@@ -1,0 +1,2 @@
+-- Declaration: pareto_principle
+-- Extracted by StaticSplit

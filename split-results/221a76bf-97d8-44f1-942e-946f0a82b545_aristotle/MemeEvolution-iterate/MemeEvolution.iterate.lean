@@ -1,0 +1,2 @@
+-- Declaration: MemeEvolution.iterate
+-- Extracted by StaticSplit

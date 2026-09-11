@@ -1,0 +1,2 @@
+-- Declaration: S6_complete
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: mycelium_is_total
+-- Extracted by StaticSplit

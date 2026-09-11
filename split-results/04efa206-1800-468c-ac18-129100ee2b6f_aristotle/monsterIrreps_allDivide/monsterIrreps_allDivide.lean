@@ -1,0 +1,2 @@
+-- Declaration: monsterIrreps_allDivide
+-- Extracted by StaticSplit

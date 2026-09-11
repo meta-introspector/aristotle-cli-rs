@@ -1,0 +1,2 @@
+-- Declaration: dagMul_self_cid
+-- Extracted by StaticSplit

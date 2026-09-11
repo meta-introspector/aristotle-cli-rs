@@ -1,0 +1,2 @@
+-- Declaration: clockHubOrthogonal
+-- Extracted by StaticSplit

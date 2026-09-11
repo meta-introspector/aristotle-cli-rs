@@ -1,0 +1,2 @@
+-- Declaration: AmbiguitySheaf
+-- Extracted by StaticSplit

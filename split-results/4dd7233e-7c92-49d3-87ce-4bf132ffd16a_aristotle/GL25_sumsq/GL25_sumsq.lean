@@ -1,0 +1,2 @@
+-- Declaration: GL25_sumsq
+-- Extracted by StaticSplit

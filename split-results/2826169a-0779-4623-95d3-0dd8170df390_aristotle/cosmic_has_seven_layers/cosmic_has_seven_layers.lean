@@ -1,0 +1,2 @@
+-- Declaration: cosmic_has_seven_layers
+-- Extracted by StaticSplit

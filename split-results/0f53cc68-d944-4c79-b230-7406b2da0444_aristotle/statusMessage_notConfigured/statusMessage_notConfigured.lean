@@ -1,0 +1,2 @@
+-- Declaration: statusMessage_notConfigured
+-- Extracted by StaticSplit

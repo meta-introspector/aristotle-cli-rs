@@ -1,0 +1,2 @@
+-- Declaration: harmonic_gcd_8_10
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: UnivSort.ofLevels
+-- Extracted by StaticSplit

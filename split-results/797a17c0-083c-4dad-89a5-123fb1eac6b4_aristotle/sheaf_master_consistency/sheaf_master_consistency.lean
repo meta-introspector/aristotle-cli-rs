@@ -1,0 +1,2 @@
+-- Declaration: sheaf_master_consistency
+-- Extracted by StaticSplit

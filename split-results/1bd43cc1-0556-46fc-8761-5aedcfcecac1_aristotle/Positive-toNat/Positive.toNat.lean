@@ -1,0 +1,2 @@
+-- Declaration: Positive.toNat
+-- Extracted by StaticSplit

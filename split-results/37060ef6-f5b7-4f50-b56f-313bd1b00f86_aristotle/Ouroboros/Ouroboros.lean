@@ -1,0 +1,2 @@
+-- Declaration: Ouroboros
+-- Extracted by StaticSplit

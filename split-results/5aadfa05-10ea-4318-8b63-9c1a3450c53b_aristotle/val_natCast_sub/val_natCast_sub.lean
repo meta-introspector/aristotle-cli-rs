@@ -1,0 +1,2 @@
+-- Declaration: val_natCast_sub
+-- Extracted by StaticSplit

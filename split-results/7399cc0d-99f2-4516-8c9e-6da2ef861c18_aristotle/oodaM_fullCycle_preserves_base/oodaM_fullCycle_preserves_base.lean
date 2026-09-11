@@ -1,0 +1,2 @@
+-- Declaration: oodaM_fullCycle_preserves_base
+-- Extracted by StaticSplit

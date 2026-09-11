@@ -1,0 +1,2 @@
+-- Declaration: meshDistance
+-- Extracted by StaticSplit

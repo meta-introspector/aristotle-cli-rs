@@ -1,0 +1,2 @@
+-- Declaration: js_embeds_apiVersion
+-- Extracted by StaticSplit

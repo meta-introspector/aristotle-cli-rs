@@ -1,0 +1,2 @@
+-- Declaration: fixed_twice
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: protection_persists
+-- Extracted by StaticSplit

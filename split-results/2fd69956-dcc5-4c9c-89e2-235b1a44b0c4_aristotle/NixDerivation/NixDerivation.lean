@@ -1,0 +1,2 @@
+-- Declaration: NixDerivation
+-- Extracted by StaticSplit

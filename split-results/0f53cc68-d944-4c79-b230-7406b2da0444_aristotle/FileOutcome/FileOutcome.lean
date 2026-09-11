@@ -1,0 +1,2 @@
+-- Declaration: FileOutcome
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: dagMulSign
+-- Extracted by StaticSplit

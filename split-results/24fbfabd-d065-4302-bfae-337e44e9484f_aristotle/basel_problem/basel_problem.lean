@@ -1,0 +1,2 @@
+-- Declaration: basel_problem
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: missionScore
+-- Extracted by StaticSplit

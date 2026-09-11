@@ -1,0 +1,2 @@
+-- Declaration: FunctorConcept
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ClIndex.degree
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monster_shape
+-- Extracted by StaticSplit

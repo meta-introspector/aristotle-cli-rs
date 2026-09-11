@@ -1,0 +1,2 @@
+-- Declaration: transverseDim
+-- Extracted by StaticSplit

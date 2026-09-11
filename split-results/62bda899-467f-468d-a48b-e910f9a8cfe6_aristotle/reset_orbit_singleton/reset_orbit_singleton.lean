@@ -1,0 +1,2 @@
+-- Declaration: reset_orbit_singleton
+-- Extracted by StaticSplit

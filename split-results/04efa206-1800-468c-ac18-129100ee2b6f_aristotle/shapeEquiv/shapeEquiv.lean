@@ -1,0 +1,2 @@
+-- Declaration: shapeEquiv
+-- Extracted by StaticSplit

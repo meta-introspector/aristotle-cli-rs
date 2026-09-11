@@ -1,0 +1,2 @@
+-- Declaration: valueView_strictDecreasing
+-- Extracted by StaticSplit

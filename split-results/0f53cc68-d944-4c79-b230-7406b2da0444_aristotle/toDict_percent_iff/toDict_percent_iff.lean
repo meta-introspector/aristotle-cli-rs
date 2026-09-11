@@ -1,0 +1,2 @@
+-- Declaration: toDict_percent_iff
+-- Extracted by StaticSplit

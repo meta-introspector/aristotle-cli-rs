@@ -1,0 +1,2 @@
+-- Declaration: Trace.faithful_of_check
+-- Extracted by StaticSplit

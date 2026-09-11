@@ -1,0 +1,2 @@
+-- Declaration: ofDom
+-- Extracted by StaticSplit

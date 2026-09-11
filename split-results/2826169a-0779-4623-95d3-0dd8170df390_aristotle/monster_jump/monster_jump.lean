@@ -1,0 +1,2 @@
+-- Declaration: monster_jump
+-- Extracted by StaticSplit

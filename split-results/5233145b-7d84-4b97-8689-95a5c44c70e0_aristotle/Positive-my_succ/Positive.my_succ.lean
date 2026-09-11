@@ -1,0 +1,2 @@
+-- Declaration: Positive.my_succ
+-- Extracted by StaticSplit

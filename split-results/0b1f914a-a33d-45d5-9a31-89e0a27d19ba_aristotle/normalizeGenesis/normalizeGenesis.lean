@@ -1,0 +1,2 @@
+-- Declaration: normalizeGenesis
+-- Extracted by StaticSplit

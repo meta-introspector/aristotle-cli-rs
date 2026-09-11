@@ -1,0 +1,2 @@
+-- Declaration: InferenceRule
+-- Extracted by StaticSplit

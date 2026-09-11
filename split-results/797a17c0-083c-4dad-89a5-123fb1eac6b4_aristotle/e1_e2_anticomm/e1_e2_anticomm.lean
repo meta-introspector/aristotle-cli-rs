@@ -1,0 +1,2 @@
+-- Declaration: e1_e2_anticomm
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: heckeCoeff
+-- Extracted by StaticSplit

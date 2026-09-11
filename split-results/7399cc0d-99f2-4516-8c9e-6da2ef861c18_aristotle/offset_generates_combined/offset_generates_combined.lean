@@ -1,0 +1,2 @@
+-- Declaration: offset_generates_combined
+-- Extracted by StaticSplit

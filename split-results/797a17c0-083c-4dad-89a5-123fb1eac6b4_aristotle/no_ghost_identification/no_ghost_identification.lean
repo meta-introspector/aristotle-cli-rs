@@ -1,0 +1,2 @@
+-- Declaration: no_ghost_identification
+-- Extracted by StaticSplit

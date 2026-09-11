@@ -1,0 +1,2 @@
+-- Declaration: clusterUsesTorus
+-- Extracted by StaticSplit

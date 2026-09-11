@@ -1,0 +1,2 @@
+-- Declaration: blades_total
+-- Extracted by StaticSplit

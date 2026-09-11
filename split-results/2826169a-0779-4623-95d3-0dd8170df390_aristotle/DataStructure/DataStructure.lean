@@ -1,0 +1,2 @@
+-- Declaration: DataStructure
+-- Extracted by StaticSplit

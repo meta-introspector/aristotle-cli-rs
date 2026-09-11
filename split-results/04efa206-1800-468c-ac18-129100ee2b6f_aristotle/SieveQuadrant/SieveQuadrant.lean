@@ -1,0 +1,2 @@
+-- Declaration: SieveQuadrant
+-- Extracted by StaticSplit

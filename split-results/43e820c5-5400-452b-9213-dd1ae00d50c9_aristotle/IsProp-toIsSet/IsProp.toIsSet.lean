@@ -1,0 +1,2 @@
+-- Declaration: IsProp.toIsSet
+-- Extracted by StaticSplit

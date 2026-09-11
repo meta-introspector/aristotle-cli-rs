@@ -1,0 +1,2 @@
+-- Declaration: StratReflection.level1_no_reconfig
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: NarrativeJourney
+-- Extracted by StaticSplit

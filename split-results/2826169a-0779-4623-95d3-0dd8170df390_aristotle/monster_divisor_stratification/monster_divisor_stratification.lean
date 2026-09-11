@@ -1,0 +1,2 @@
+-- Declaration: monster_divisor_stratification
+-- Extracted by StaticSplit

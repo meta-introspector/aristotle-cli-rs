@@ -1,0 +1,2 @@
+-- Declaration: family_implies_individual
+-- Extracted by StaticSplit

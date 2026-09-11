@@ -1,0 +1,2 @@
+-- Declaration: SubgroupConj.symm
+-- Extracted by StaticSplit

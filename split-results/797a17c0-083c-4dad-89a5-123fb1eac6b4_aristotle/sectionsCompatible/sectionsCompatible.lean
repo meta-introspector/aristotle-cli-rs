@@ -1,0 +1,2 @@
+-- Declaration: sectionsCompatible
+-- Extracted by StaticSplit

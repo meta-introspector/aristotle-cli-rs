@@ -1,0 +1,2 @@
+-- Declaration: resFraction
+-- Extracted by StaticSplit

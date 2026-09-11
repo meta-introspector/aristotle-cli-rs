@@ -1,0 +1,2 @@
+-- Declaration: Schema.lookupType
+-- Extracted by StaticSplit

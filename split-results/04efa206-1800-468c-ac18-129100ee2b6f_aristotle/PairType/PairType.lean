@@ -1,0 +1,2 @@
+-- Declaration: PairType
+-- Extracted by StaticSplit

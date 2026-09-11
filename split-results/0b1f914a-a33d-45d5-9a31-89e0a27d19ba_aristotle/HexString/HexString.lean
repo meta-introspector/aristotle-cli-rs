@@ -1,0 +1,2 @@
+-- Declaration: HexString
+-- Extracted by StaticSplit

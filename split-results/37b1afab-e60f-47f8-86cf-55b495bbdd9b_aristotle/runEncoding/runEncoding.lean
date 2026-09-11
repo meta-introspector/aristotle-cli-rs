@@ -1,0 +1,2 @@
+-- Declaration: runEncoding
+-- Extracted by StaticSplit

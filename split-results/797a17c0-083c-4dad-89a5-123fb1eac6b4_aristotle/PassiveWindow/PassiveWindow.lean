@@ -1,0 +1,2 @@
+-- Declaration: PassiveWindow
+-- Extracted by StaticSplit

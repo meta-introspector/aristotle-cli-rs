@@ -1,0 +1,2 @@
+-- Declaration: walk_through_hub
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: quiver_has_no_composition
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: adjacent
+-- Extracted by StaticSplit

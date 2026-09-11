@@ -1,0 +1,2 @@
+-- Declaration: supersingularBelow512_values
+-- Extracted by StaticSplit

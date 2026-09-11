@@ -1,0 +1,2 @@
+-- Declaration: monsterPrime_iff
+-- Extracted by StaticSplit

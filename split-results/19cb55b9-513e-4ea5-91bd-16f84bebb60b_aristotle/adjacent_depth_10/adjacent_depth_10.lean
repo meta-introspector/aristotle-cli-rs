@@ -1,0 +1,2 @@
+-- Declaration: adjacent_depth_10
+-- Extracted by StaticSplit

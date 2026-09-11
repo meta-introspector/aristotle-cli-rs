@@ -1,0 +1,2 @@
+-- Declaration: crank_orbit_succ
+-- Extracted by StaticSplit

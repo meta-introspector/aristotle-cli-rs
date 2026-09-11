@@ -1,0 +1,2 @@
+-- Declaration: runTrace_obj
+-- Extracted by StaticSplit

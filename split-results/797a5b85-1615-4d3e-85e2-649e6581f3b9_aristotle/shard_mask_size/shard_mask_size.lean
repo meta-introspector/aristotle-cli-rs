@@ -1,0 +1,2 @@
+-- Declaration: shard_mask_size
+-- Extracted by StaticSplit

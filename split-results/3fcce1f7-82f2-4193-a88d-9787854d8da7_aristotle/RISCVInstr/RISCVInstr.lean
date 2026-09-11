@@ -1,0 +1,2 @@
+-- Declaration: RISCVInstr
+-- Extracted by StaticSplit

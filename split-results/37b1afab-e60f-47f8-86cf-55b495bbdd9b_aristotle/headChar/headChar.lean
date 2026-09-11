@@ -1,0 +1,2 @@
+-- Declaration: headChar
+-- Extracted by StaticSplit

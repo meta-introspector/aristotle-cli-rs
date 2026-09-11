@@ -1,0 +1,2 @@
+-- Declaration: majority_leader_first
+-- Extracted by StaticSplit

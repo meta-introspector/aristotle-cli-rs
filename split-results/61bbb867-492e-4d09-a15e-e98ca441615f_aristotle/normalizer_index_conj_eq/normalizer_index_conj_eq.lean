@@ -1,0 +1,2 @@
+-- Declaration: normalizer_index_conj_eq
+-- Extracted by StaticSplit

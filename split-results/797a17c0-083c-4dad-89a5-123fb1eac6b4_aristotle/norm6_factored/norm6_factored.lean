@@ -1,0 +1,2 @@
+-- Declaration: norm6_factored
+-- Extracted by StaticSplit

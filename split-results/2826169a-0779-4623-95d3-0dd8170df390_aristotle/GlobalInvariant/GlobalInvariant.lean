@@ -1,0 +1,2 @@
+-- Declaration: GlobalInvariant
+-- Extracted by StaticSplit

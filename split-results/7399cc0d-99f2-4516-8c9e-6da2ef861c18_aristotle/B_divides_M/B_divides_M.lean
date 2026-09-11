@@ -1,0 +1,2 @@
+-- Declaration: B_divides_M
+-- Extracted by StaticSplit

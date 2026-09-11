@@ -1,0 +1,2 @@
+-- Declaration: consciousness_atom_size
+-- Extracted by StaticSplit

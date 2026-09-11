@@ -1,0 +1,2 @@
+-- Declaration: doubleCoset_partition
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: toCID_ofLink
+-- Extracted by StaticSplit

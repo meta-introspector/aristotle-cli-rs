@@ -1,0 +1,2 @@
+-- Declaration: monsterOrder_pos
+-- Extracted by StaticSplit

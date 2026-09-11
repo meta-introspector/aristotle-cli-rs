@@ -1,0 +1,2 @@
+-- Declaration: monster_rep2_dim
+-- Extracted by StaticSplit

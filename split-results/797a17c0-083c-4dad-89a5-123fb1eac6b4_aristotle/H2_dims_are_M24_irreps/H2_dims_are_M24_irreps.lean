@@ -1,0 +1,2 @@
+-- Declaration: H2_dims_are_M24_irreps
+-- Extracted by StaticSplit

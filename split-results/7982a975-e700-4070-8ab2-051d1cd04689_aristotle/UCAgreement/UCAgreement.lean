@@ -1,0 +1,2 @@
+-- Declaration: UCAgreement
+-- Extracted by StaticSplit

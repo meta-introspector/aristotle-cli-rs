@@ -1,0 +1,2 @@
+-- Declaration: sigma5_eight_factorization
+-- Extracted by StaticSplit

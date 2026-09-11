@@ -1,0 +1,2 @@
+-- Declaration: monodromy71
+-- Extracted by StaticSplit

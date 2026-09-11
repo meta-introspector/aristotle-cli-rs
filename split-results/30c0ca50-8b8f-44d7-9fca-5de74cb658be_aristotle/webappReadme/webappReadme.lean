@@ -1,0 +1,2 @@
+-- Declaration: webappReadme
+-- Extracted by StaticSplit

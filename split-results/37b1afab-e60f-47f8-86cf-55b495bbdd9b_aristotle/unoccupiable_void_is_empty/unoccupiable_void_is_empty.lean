@@ -1,0 +1,2 @@
+-- Declaration: unoccupiable_void_is_empty
+-- Extracted by StaticSplit

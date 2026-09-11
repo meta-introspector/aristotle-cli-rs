@@ -1,0 +1,2 @@
+-- Declaration: geomBlade
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fuse_permission_right
+-- Extracted by StaticSplit

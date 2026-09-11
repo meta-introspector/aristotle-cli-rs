@@ -1,0 +1,2 @@
+-- Declaration: BinNat.compare
+-- Extracted by StaticSplit

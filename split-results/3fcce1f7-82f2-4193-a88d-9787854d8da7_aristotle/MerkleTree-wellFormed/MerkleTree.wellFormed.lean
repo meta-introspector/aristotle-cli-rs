@@ -1,0 +1,2 @@
+-- Declaration: MerkleTree.wellFormed
+-- Extracted by StaticSplit

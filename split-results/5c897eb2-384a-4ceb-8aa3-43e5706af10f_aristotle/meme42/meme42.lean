@@ -1,0 +1,2 @@
+-- Declaration: meme42
+-- Extracted by StaticSplit

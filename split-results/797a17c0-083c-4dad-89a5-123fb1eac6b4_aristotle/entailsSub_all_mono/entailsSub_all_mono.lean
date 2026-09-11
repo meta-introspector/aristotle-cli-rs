@@ -1,0 +1,2 @@
+-- Declaration: entailsSub_all_mono
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Q59
+-- Extracted by StaticSplit

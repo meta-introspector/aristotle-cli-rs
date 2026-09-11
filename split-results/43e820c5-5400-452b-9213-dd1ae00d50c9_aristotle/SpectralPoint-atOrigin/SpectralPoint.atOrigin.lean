@@ -1,0 +1,2 @@
+-- Declaration: SpectralPoint.atOrigin
+-- Extracted by StaticSplit

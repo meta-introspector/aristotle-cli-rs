@@ -1,0 +1,2 @@
+-- Declaration: promotable_or_quarantined
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: isGenusHole
+-- Extracted by StaticSplit

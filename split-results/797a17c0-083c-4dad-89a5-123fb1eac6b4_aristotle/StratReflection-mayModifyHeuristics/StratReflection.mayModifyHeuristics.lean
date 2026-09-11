@@ -1,0 +1,2 @@
+-- Declaration: StratReflection.mayModifyHeuristics
+-- Extracted by StaticSplit

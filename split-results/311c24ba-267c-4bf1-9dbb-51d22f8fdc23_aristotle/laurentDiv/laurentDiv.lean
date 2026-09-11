@@ -1,0 +1,2 @@
+-- Declaration: laurentDiv
+-- Extracted by StaticSplit

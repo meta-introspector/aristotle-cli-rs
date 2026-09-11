@@ -1,0 +1,2 @@
+-- Declaration: Apart
+-- Extracted by StaticSplit

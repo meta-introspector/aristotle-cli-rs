@@ -1,0 +1,2 @@
+-- Declaration: monitored_mul
+-- Extracted by StaticSplit

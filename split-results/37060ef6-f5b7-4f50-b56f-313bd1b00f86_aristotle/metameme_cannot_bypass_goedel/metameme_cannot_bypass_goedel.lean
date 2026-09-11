@@ -1,0 +1,2 @@
+-- Declaration: metameme_cannot_bypass_goedel
+-- Extracted by StaticSplit

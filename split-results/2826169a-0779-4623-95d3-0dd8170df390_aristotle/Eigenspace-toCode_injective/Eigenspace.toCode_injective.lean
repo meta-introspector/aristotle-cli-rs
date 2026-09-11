@@ -1,0 +1,2 @@
+-- Declaration: Eigenspace.toCode_injective
+-- Extracted by StaticSplit

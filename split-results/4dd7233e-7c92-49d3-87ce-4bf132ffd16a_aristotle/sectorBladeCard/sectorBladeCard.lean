@@ -1,0 +1,2 @@
+-- Declaration: sectorBladeCard
+-- Extracted by StaticSplit

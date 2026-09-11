@@ -1,0 +1,2 @@
+-- Declaration: monster_card_divisors
+-- Extracted by StaticSplit

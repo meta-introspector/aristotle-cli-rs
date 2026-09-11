@@ -1,0 +1,2 @@
+-- Declaration: F8_monster_order
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ontology_primes_are_last_three_ssp
+-- Extracted by StaticSplit

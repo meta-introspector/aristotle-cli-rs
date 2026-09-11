@@ -1,0 +1,2 @@
+-- Declaration: precedent_weights_injective
+-- Extracted by StaticSplit

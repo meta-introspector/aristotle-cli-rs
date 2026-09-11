@@ -1,0 +1,2 @@
+-- Declaration: Ledger.Resolves
+-- Extracted by StaticSplit

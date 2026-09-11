@@ -1,0 +1,2 @@
+-- Declaration: quantumSpinHall_kGroup
+-- Extracted by StaticSplit

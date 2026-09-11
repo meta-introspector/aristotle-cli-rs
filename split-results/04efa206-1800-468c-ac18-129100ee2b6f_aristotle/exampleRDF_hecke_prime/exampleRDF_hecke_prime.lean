@@ -1,0 +1,2 @@
+-- Declaration: exampleRDF_hecke_prime
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: realPatternNat
+-- Extracted by StaticSplit

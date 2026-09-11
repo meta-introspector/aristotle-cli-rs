@@ -1,0 +1,2 @@
+-- Declaration: scc_charge_carriers
+-- Extracted by StaticSplit

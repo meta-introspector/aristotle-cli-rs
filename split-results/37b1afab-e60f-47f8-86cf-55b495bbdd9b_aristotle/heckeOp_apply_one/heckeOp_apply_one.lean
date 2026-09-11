@@ -1,0 +1,2 @@
+-- Declaration: heckeOp_apply_one
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cl0Monomial_mul
+-- Extracted by StaticSplit

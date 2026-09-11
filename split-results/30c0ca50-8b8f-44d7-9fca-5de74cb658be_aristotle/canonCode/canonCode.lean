@@ -1,0 +1,2 @@
+-- Declaration: canonCode
+-- Extracted by StaticSplit

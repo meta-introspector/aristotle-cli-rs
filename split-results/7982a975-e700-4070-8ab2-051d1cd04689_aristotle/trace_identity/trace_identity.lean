@@ -1,0 +1,2 @@
+-- Declaration: trace_identity
+-- Extracted by StaticSplit

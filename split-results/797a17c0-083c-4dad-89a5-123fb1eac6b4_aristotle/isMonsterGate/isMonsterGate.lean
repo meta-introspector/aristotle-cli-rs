@@ -1,0 +1,2 @@
+-- Declaration: isMonsterGate
+-- Extracted by StaticSplit

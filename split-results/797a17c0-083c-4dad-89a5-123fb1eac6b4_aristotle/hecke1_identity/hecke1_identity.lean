@@ -1,0 +1,2 @@
+-- Declaration: hecke1_identity
+-- Extracted by StaticSplit

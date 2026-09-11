@@ -1,0 +1,2 @@
+-- Declaration: fiber_bridge_simulation
+-- Extracted by StaticSplit

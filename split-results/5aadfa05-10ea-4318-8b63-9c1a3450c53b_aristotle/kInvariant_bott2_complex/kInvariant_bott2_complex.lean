@@ -1,0 +1,2 @@
+-- Declaration: kInvariant_bott2_complex
+-- Extracted by StaticSplit

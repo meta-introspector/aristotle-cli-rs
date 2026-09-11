@@ -1,0 +1,2 @@
+-- Declaration: dagMul
+-- Extracted by StaticSplit

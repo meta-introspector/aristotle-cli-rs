@@ -1,0 +1,2 @@
+-- Declaration: self_in_orbit
+-- Extracted by StaticSplit

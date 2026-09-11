@@ -1,0 +1,2 @@
+-- Declaration: FractranCrank.final_halts
+-- Extracted by StaticSplit

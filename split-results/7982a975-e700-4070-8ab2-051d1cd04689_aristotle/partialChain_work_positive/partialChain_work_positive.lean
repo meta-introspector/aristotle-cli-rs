@@ -1,0 +1,2 @@
+-- Declaration: partialChain_work_positive
+-- Extracted by StaticSplit

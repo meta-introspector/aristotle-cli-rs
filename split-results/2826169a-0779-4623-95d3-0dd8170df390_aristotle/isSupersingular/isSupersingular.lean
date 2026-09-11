@@ -1,0 +1,2 @@
+-- Declaration: isSupersingular
+-- Extracted by StaticSplit

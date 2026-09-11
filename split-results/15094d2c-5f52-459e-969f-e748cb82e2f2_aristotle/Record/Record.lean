@@ -1,0 +1,2 @@
+-- Declaration: Record
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: instCast
+-- Extracted by StaticSplit

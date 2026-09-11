@@ -1,0 +1,2 @@
+-- Declaration: T32
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: IrrepMask.ofRaw
+-- Extracted by StaticSplit

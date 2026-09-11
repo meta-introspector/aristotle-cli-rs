@@ -1,0 +1,2 @@
+-- Declaration: standardGate
+-- Extracted by StaticSplit

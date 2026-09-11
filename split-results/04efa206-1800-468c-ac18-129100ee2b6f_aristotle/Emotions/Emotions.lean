@@ -1,0 +1,2 @@
+-- Declaration: Emotions
+-- Extracted by StaticSplit

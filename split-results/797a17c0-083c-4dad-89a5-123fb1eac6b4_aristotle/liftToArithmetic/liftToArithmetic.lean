@@ -1,0 +1,2 @@
+-- Declaration: liftToArithmetic
+-- Extracted by StaticSplit

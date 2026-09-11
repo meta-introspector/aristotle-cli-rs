@@ -1,0 +1,2 @@
+-- Declaration: negDefQuadForm
+-- Extracted by StaticSplit

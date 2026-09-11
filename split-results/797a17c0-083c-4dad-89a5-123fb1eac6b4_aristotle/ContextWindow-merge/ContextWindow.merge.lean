@@ -1,0 +1,2 @@
+-- Declaration: ContextWindow.merge
+-- Extracted by StaticSplit

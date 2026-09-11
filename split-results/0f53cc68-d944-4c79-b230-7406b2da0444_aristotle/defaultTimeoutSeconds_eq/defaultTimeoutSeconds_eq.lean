@@ -1,0 +1,2 @@
+-- Declaration: defaultTimeoutSeconds_eq
+-- Extracted by StaticSplit

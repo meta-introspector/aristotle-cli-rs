@@ -1,0 +1,2 @@
+-- Declaration: crank_determined_by_name_and_cycles
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: primeDivisors
+-- Extracted by StaticSplit

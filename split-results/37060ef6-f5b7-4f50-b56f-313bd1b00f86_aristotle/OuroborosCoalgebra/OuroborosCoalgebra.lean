@@ -1,0 +1,2 @@
+-- Declaration: OuroborosCoalgebra
+-- Extracted by StaticSplit

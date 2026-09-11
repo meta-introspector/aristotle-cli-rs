@@ -1,0 +1,2 @@
+-- Declaration: bosonic_ss_product
+-- Extracted by StaticSplit

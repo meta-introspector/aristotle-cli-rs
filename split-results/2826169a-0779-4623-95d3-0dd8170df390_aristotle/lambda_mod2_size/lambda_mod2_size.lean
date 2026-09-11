@@ -1,0 +1,2 @@
+-- Declaration: lambda_mod2_size
+-- Extracted by StaticSplit

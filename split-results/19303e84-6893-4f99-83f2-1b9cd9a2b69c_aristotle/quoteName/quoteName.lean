@@ -1,0 +1,2 @@
+-- Declaration: quoteName
+-- Extracted by StaticSplit

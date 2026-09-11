@@ -1,0 +1,2 @@
+-- Declaration: rotateCRT
+-- Extracted by StaticSplit

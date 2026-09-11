@@ -1,0 +1,2 @@
+-- Declaration: structIso_imp_classifyEq
+-- Extracted by StaticSplit

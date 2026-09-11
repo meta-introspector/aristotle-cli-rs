@@ -1,0 +1,2 @@
+-- Declaration: aristotleQuineToGccAst
+-- Extracted by StaticSplit

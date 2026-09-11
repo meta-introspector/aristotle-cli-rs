@@ -1,0 +1,2 @@
+-- Declaration: dialectic_has_both
+-- Extracted by StaticSplit

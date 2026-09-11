@@ -1,0 +1,2 @@
+-- Declaration: sspBOuterPrimes
+-- Extracted by StaticSplit

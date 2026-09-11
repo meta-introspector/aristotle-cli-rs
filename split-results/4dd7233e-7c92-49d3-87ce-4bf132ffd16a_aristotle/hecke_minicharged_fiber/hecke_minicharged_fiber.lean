@@ -1,0 +1,2 @@
+-- Declaration: hecke_minicharged_fiber
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fullScan_length
+-- Extracted by StaticSplit

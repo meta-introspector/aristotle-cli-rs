@@ -1,0 +1,2 @@
+-- Declaration: atp_crossing_typed
+-- Extracted by StaticSplit

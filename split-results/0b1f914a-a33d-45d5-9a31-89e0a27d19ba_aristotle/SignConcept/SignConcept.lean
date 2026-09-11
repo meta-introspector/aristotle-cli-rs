@@ -1,0 +1,2 @@
+-- Declaration: SignConcept
+-- Extracted by StaticSplit

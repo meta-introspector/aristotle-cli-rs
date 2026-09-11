@@ -1,0 +1,2 @@
+-- Declaration: FormalSystem
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: semantic_hole_has_genus_two
+-- Extracted by StaticSplit

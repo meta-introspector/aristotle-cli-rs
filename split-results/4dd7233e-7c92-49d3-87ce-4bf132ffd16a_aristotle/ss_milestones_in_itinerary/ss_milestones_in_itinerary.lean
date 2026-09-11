@@ -1,0 +1,2 @@
+-- Declaration: ss_milestones_in_itinerary
+-- Extracted by StaticSplit

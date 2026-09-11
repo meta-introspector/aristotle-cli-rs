@@ -1,0 +1,2 @@
+-- Declaration: dihedral_D4_order
+-- Extracted by StaticSplit

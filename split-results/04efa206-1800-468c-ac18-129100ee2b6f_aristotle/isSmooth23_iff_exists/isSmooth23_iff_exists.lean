@@ -1,0 +1,2 @@
+-- Declaration: isSmooth23_iff_exists
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: scaleTower_terminal_is_monster
+-- Extracted by StaticSplit

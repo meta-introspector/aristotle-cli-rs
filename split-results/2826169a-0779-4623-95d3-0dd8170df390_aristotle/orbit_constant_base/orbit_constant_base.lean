@@ -1,0 +1,2 @@
+-- Declaration: orbit_constant_base
+-- Extracted by StaticSplit

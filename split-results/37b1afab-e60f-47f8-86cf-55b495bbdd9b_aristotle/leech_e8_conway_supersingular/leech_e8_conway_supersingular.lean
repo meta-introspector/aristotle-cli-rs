@@ -1,0 +1,2 @@
+-- Declaration: leech_e8_conway_supersingular
+-- Extracted by StaticSplit

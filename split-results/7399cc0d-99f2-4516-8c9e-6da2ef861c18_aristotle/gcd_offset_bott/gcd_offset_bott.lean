@@ -1,0 +1,2 @@
+-- Declaration: gcd_offset_bott
+-- Extracted by StaticSplit

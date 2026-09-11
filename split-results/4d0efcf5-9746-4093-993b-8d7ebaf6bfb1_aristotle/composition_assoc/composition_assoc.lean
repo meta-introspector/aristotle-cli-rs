@@ -1,0 +1,2 @@
+-- Declaration: composition_assoc
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: rotorGrade
+-- Extracted by StaticSplit

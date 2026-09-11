@@ -1,0 +1,2 @@
+-- Declaration: irrep2_crt
+-- Extracted by StaticSplit

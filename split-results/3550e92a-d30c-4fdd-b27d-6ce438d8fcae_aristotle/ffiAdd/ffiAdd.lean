@@ -1,0 +1,2 @@
+-- Declaration: ffiAdd
+-- Extracted by StaticSplit

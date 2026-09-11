@@ -1,0 +1,2 @@
+-- Declaration: labelOf
+-- Extracted by StaticSplit

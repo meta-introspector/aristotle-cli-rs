@@ -1,0 +1,2 @@
+-- Declaration: no_infinite_regress
+-- Extracted by StaticSplit

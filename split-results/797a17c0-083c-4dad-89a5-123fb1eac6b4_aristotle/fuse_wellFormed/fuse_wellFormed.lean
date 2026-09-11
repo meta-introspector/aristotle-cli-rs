@@ -1,0 +1,2 @@
+-- Declaration: fuse_wellFormed
+-- Extracted by StaticSplit

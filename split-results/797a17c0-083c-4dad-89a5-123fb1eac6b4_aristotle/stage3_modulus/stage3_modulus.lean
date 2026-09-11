@@ -1,0 +1,2 @@
+-- Declaration: stage3_modulus
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ofString
+-- Extracted by StaticSplit

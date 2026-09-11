@@ -1,0 +1,2 @@
+-- Declaration: shape_space_size
+-- Extracted by StaticSplit

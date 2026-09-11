@@ -1,0 +1,2 @@
+-- Declaration: base_eq_of_vert_hom
+-- Extracted by StaticSplit

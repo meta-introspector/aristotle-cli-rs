@@ -1,0 +1,2 @@
+-- Declaration: cumulativeWeight_cons
+-- Extracted by StaticSplit

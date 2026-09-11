@@ -1,0 +1,2 @@
+-- Declaration: Schema.typeNames
+-- Extracted by StaticSplit

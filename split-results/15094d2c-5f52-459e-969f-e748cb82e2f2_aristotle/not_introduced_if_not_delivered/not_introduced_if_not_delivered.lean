@@ -1,0 +1,2 @@
+-- Declaration: not_introduced_if_not_delivered
+-- Extracted by StaticSplit

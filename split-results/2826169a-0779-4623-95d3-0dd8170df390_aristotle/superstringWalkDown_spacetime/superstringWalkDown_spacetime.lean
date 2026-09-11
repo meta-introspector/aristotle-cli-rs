@@ -1,0 +1,2 @@
+-- Declaration: superstringWalkDown_spacetime
+-- Extracted by StaticSplit

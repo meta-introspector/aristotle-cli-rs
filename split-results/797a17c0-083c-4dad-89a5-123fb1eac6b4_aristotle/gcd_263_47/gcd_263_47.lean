@@ -1,0 +1,2 @@
+-- Declaration: gcd_263_47
+-- Extracted by StaticSplit

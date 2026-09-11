@@ -1,0 +1,2 @@
+-- Declaration: eisenstein_E4_coeff
+-- Extracted by StaticSplit

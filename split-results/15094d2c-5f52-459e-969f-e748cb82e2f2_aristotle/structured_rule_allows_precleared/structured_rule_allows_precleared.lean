@@ -1,0 +1,2 @@
+-- Declaration: structured_rule_allows_precleared
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: CosmicAddress
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: gradedGrowth
+-- Extracted by StaticSplit

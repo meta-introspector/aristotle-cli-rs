@@ -1,0 +1,2 @@
+-- Declaration: energyDomainConcept
+-- Extracted by StaticSplit

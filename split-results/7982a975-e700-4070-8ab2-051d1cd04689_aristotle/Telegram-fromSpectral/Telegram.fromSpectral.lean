@@ -1,0 +1,2 @@
+-- Declaration: Telegram.fromSpectral
+-- Extracted by StaticSplit

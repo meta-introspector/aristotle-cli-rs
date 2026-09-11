@@ -1,0 +1,2 @@
+-- Declaration: support_monotone
+-- Extracted by StaticSplit

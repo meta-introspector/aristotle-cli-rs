@@ -1,0 +1,2 @@
+-- Declaration: City
+-- Extracted by StaticSplit

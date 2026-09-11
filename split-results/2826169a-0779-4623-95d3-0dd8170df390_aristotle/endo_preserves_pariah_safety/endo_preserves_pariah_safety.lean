@@ -1,0 +1,2 @@
+-- Declaration: endo_preserves_pariah_safety
+-- Extracted by StaticSplit

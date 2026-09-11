@@ -1,0 +1,2 @@
+-- Declaration: hub_count
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: idealTotalDim
+-- Extracted by StaticSplit

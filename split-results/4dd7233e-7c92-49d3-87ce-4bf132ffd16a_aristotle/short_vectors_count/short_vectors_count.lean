@@ -1,0 +1,2 @@
+-- Declaration: short_vectors_count
+-- Extracted by StaticSplit

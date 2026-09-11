@@ -1,0 +1,2 @@
+-- Declaration: piPhi_eq_kclass
+-- Extracted by StaticSplit

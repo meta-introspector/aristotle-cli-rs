@@ -1,0 +1,2 @@
+-- Declaration: qid_semiotics_concept
+-- Extracted by StaticSplit

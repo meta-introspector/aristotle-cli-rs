@@ -1,0 +1,2 @@
+-- Declaration: coherent_pair_congruent
+-- Extracted by StaticSplit

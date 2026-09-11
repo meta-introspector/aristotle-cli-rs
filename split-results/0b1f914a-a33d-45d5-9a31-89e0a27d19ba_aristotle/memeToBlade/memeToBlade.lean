@@ -1,0 +1,2 @@
+-- Declaration: memeToBlade
+-- Extracted by StaticSplit

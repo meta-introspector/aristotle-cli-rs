@@ -1,0 +1,2 @@
+-- Declaration: assessment_requires_assessor
+-- Extracted by StaticSplit

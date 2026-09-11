@@ -1,0 +1,2 @@
+-- Declaration: consciousness_is_DIII
+-- Extracted by StaticSplit

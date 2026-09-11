@@ -1,0 +1,2 @@
+-- Declaration: moonshine_master_link
+-- Extracted by StaticSplit

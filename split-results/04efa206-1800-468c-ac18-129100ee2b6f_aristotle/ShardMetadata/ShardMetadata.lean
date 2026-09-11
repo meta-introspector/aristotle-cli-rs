@@ -1,0 +1,2 @@
+-- Declaration: ShardMetadata
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ShadowFiber
+-- Extracted by StaticSplit

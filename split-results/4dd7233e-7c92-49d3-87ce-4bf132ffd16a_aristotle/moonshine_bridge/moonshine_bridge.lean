@@ -1,0 +1,2 @@
+-- Declaration: moonshine_bridge
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Prod.fst
+-- Extracted by StaticSplit

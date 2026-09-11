@@ -1,0 +1,2 @@
+-- Declaration: thread_pitch_period
+-- Extracted by StaticSplit

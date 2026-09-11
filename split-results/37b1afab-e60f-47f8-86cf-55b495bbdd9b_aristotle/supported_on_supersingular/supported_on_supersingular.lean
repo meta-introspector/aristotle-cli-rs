@@ -1,0 +1,2 @@
+-- Declaration: supported_on_supersingular
+-- Extracted by StaticSplit

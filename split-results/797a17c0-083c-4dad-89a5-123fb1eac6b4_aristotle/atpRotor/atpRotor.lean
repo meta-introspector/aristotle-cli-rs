@@ -1,0 +1,2 @@
+-- Declaration: atpRotor
+-- Extracted by StaticSplit

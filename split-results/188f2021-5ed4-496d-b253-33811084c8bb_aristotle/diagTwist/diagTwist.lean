@@ -1,0 +1,2 @@
+-- Declaration: diagTwist
+-- Extracted by StaticSplit

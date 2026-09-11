@@ -1,0 +1,2 @@
+-- Declaration: D4_generators
+-- Extracted by StaticSplit

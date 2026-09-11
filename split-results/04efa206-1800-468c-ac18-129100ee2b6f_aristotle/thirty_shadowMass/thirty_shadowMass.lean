@@ -1,0 +1,2 @@
+-- Declaration: thirty_shadowMass
+-- Extracted by StaticSplit

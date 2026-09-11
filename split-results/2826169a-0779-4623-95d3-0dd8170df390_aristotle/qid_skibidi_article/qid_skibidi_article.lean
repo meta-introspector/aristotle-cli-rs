@@ -1,0 +1,2 @@
+-- Declaration: qid_skibidi_article
+-- Extracted by StaticSplit

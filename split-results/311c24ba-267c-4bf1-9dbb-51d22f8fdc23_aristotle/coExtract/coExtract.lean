@@ -1,0 +1,2 @@
+-- Declaration: coExtract
+-- Extracted by StaticSplit

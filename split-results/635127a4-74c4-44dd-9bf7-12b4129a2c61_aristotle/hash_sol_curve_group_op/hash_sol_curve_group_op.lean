@@ -1,0 +1,2 @@
+-- Declaration: hash_sol_curve_group_op
+-- Extracted by StaticSplit

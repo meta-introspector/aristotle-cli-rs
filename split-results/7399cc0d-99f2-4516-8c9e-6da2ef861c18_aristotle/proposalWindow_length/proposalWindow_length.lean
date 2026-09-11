@@ -1,0 +1,2 @@
+-- Declaration: proposalWindow_length
+-- Extracted by StaticSplit

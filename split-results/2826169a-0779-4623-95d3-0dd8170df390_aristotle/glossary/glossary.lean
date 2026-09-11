@@ -1,0 +1,2 @@
+-- Declaration: glossary
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: DA51Address.typeField
+-- Extracted by StaticSplit

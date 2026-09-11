@@ -1,0 +1,2 @@
+-- Declaration: finrank_WP_evenH1
+-- Extracted by StaticSplit

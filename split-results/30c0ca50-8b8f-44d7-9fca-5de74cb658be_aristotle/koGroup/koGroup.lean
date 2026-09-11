@@ -1,0 +1,2 @@
+-- Declaration: koGroup
+-- Extracted by StaticSplit

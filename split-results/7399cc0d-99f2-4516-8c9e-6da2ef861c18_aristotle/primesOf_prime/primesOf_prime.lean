@@ -1,0 +1,2 @@
+-- Declaration: primesOf_prime
+-- Extracted by StaticSplit

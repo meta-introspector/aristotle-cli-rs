@@ -1,0 +1,2 @@
+-- Declaration: liftVars
+-- Extracted by StaticSplit

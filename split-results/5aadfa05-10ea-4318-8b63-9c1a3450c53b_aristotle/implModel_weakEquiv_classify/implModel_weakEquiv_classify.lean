@@ -1,0 +1,2 @@
+-- Declaration: implModel_weakEquiv_classify
+-- Extracted by StaticSplit

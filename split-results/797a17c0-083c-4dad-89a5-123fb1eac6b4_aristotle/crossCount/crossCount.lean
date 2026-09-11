@@ -1,0 +1,2 @@
+-- Declaration: crossCount
+-- Extracted by StaticSplit

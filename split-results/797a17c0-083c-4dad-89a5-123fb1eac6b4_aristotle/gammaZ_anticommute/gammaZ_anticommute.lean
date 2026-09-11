@@ -1,0 +1,2 @@
+-- Declaration: gammaZ_anticommute
+-- Extracted by StaticSplit

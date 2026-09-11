@@ -1,0 +1,2 @@
+-- Declaration: monsterAlgebraDim
+-- Extracted by StaticSplit

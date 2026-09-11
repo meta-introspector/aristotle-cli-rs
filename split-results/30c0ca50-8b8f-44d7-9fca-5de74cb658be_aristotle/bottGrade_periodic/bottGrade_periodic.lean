@@ -1,0 +1,2 @@
+-- Declaration: bottGrade_periodic
+-- Extracted by StaticSplit

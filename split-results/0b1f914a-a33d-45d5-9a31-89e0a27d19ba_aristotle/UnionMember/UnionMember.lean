@@ -1,0 +1,2 @@
+-- Declaration: UnionMember
+-- Extracted by StaticSplit

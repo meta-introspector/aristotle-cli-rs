@@ -1,0 +1,2 @@
+-- Declaration: chain_all_valid
+-- Extracted by StaticSplit

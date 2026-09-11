@@ -1,0 +1,2 @@
+-- Declaration: ssCountUpTo
+-- Extracted by StaticSplit

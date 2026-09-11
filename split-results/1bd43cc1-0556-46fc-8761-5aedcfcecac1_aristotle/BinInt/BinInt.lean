@@ -1,0 +1,2 @@
+-- Declaration: BinInt
+-- Extracted by StaticSplit

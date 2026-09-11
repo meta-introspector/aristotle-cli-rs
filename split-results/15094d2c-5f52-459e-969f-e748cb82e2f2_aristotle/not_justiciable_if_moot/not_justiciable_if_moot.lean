@@ -1,0 +1,2 @@
+-- Declaration: not_justiciable_if_moot
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: umbral_coefficients_are_class_functions
+-- Extracted by StaticSplit

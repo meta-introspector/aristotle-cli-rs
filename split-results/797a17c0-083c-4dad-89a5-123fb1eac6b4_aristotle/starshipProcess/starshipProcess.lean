@@ -1,0 +1,2 @@
+-- Declaration: starshipProcess
+-- Extracted by StaticSplit

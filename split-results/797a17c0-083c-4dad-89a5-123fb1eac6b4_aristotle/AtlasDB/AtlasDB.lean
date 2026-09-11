@@ -1,0 +1,2 @@
+-- Declaration: AtlasDB
+-- Extracted by StaticSplit

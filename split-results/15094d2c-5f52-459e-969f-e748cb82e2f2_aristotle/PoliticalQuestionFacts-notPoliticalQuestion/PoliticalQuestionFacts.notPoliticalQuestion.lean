@@ -1,0 +1,2 @@
+-- Declaration: PoliticalQuestionFacts.notPoliticalQuestion
+-- Extracted by StaticSplit

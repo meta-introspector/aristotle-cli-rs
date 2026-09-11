@@ -1,0 +1,2 @@
+-- Declaration: gcd_primes_47_59
+-- Extracted by StaticSplit

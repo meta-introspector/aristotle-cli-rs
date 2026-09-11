@@ -1,0 +1,2 @@
+-- Declaration: metaStableEquiv_symm
+-- Extracted by StaticSplit

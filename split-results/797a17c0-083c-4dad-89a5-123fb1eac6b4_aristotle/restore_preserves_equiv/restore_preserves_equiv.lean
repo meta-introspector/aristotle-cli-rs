@@ -1,0 +1,2 @@
+-- Declaration: restore_preserves_equiv
+-- Extracted by StaticSplit

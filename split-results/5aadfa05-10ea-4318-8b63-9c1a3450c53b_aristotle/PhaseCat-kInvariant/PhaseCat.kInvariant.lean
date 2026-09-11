@@ -1,0 +1,2 @@
+-- Declaration: PhaseCat.kInvariant
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: Nat.my_compare
+-- Extracted by StaticSplit

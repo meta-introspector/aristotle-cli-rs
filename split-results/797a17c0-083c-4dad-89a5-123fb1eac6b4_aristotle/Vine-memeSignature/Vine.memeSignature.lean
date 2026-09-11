@@ -1,0 +1,2 @@
+-- Declaration: Vine.memeSignature
+-- Extracted by StaticSplit

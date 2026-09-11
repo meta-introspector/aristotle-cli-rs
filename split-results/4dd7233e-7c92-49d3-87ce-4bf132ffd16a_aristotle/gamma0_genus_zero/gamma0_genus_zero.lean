@@ -1,0 +1,2 @@
+-- Declaration: gamma0_genus_zero
+-- Extracted by StaticSplit

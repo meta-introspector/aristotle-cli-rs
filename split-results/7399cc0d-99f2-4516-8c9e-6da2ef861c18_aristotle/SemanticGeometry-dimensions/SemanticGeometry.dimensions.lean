@@ -1,0 +1,2 @@
+-- Declaration: SemanticGeometry.dimensions
+-- Extracted by StaticSplit

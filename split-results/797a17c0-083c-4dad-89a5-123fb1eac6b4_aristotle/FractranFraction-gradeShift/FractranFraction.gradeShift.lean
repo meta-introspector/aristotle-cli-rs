@@ -1,0 +1,2 @@
+-- Declaration: FractranFraction.gradeShift
+-- Extracted by StaticSplit

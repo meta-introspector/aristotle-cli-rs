@@ -1,0 +1,2 @@
+-- Declaration: standing_of_all_elements
+-- Extracted by StaticSplit

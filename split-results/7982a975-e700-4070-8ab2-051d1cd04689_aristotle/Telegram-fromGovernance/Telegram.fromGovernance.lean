@@ -1,0 +1,2 @@
+-- Declaration: Telegram.fromGovernance
+-- Extracted by StaticSplit

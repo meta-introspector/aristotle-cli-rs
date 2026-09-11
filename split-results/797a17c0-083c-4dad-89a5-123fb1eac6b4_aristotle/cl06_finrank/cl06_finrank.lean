@@ -1,0 +1,2 @@
+-- Declaration: cl06_finrank
+-- Extracted by StaticSplit

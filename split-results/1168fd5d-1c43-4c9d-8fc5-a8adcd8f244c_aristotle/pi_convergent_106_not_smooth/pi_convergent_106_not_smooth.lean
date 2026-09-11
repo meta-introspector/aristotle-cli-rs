@@ -1,0 +1,2 @@
+-- Declaration: pi_convergent_106_not_smooth
+-- Extracted by StaticSplit

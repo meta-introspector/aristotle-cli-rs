@@ -1,0 +1,2 @@
+-- Declaration: decentralizedTrainingValid
+-- Extracted by StaticSplit

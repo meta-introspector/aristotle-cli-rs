@@ -1,0 +1,2 @@
+-- Declaration: CoinductiveType
+-- Extracted by StaticSplit

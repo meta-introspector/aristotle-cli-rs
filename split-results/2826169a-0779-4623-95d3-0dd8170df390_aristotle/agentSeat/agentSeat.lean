@@ -1,0 +1,2 @@
+-- Declaration: agentSeat
+-- Extracted by StaticSplit

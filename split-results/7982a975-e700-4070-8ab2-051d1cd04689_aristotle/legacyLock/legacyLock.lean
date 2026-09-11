@@ -1,0 +1,2 @@
+-- Declaration: legacyLock
+-- Extracted by StaticSplit

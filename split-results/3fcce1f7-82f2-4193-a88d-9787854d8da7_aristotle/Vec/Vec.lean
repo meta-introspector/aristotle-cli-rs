@@ -1,0 +1,2 @@
+-- Declaration: Vec
+-- Extracted by StaticSplit

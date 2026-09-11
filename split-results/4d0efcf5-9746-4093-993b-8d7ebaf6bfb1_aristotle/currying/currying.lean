@@ -1,0 +1,2 @@
+-- Declaration: currying
+-- Extracted by StaticSplit

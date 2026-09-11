@@ -1,0 +1,2 @@
+-- Declaration: compactify
+-- Extracted by StaticSplit

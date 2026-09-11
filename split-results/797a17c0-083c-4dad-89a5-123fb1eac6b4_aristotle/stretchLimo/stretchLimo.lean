@@ -1,0 +1,2 @@
+-- Declaration: stretchLimo
+-- Extracted by StaticSplit

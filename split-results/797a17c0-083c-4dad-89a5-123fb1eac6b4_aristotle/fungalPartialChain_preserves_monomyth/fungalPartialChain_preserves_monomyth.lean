@@ -1,0 +1,2 @@
+-- Declaration: fungalPartialChain_preserves_monomyth
+-- Extracted by StaticSplit

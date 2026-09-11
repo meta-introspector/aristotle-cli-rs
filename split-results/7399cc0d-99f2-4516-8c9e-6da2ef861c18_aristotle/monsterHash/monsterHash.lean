@@ -1,0 +1,2 @@
+-- Declaration: monsterHash
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: brainrot_self_identity
+-- Extracted by StaticSplit

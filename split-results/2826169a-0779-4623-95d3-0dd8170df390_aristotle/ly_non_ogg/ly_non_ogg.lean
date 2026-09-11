@@ -1,0 +1,2 @@
+-- Declaration: ly_non_ogg
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: AxiomConcept
+-- Extracted by StaticSplit

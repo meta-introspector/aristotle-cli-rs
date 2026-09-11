@@ -1,0 +1,2 @@
+-- Declaration: cl07_monoSet_finite
+-- Extracted by StaticSplit

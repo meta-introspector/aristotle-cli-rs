@@ -1,0 +1,2 @@
+-- Declaration: bottGrade_eight_eq_zero
+-- Extracted by StaticSplit

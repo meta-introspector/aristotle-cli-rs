@@ -1,0 +1,2 @@
+-- Declaration: defectRate
+-- Extracted by StaticSplit

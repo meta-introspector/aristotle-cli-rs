@@ -1,0 +1,2 @@
+-- Declaration: tailPrime_dvd_iff
+-- Extracted by StaticSplit

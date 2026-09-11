@@ -1,0 +1,2 @@
+-- Declaration: protein_roundtrip
+-- Extracted by StaticSplit

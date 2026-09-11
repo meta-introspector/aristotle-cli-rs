@@ -1,0 +1,2 @@
+-- Declaration: azGradeAdd
+-- Extracted by StaticSplit

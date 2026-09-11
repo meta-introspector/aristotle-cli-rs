@@ -1,0 +1,2 @@
+-- Declaration: cofactor_pteFace
+-- Extracted by StaticSplit

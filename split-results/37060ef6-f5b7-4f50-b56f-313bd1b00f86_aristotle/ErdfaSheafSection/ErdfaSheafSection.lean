@@ -1,0 +1,2 @@
+-- Declaration: ErdfaSheafSection
+-- Extracted by StaticSplit

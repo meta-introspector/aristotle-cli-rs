@@ -1,0 +1,2 @@
+-- Declaration: FiberEndo
+-- Extracted by StaticSplit

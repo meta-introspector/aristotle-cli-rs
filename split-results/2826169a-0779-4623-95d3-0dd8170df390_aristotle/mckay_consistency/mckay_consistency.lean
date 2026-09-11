@@ -1,0 +1,2 @@
+-- Declaration: mckay_consistency
+-- Extracted by StaticSplit

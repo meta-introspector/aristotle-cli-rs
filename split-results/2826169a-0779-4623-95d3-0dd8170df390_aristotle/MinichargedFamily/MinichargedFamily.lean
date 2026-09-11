@@ -1,0 +1,2 @@
+-- Declaration: MinichargedFamily
+-- Extracted by StaticSplit

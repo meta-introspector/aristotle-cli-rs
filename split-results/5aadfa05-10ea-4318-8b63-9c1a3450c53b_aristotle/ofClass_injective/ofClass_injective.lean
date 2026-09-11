@@ -1,0 +1,2 @@
+-- Declaration: ofClass_injective
+-- Extracted by StaticSplit

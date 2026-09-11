@@ -1,0 +1,2 @@
+-- Declaration: matchIntPattern_dual
+-- Extracted by StaticSplit

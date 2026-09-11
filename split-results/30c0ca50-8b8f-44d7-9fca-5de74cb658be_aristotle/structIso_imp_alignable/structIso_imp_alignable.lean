@@ -1,0 +1,2 @@
+-- Declaration: structIso_imp_alignable
+-- Extracted by StaticSplit

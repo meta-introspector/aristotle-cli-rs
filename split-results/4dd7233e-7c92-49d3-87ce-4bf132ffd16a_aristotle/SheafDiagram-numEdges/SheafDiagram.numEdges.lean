@@ -1,0 +1,2 @@
+-- Declaration: SheafDiagram.numEdges
+-- Extracted by StaticSplit

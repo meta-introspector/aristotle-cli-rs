@@ -1,0 +1,2 @@
+-- Declaration: kernelArrow
+-- Extracted by StaticSplit

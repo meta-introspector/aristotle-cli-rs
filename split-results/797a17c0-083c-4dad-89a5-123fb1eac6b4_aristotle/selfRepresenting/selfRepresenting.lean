@@ -1,0 +1,2 @@
+-- Declaration: selfRepresenting
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: digestToBase_mod59
+-- Extracted by StaticSplit

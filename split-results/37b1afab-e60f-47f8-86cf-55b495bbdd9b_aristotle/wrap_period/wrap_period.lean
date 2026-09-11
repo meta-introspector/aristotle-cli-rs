@@ -1,0 +1,2 @@
+-- Declaration: wrap_period
+-- Extracted by StaticSplit

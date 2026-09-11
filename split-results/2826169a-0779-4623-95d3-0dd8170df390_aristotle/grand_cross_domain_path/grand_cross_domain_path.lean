@@ -1,0 +1,2 @@
+-- Declaration: grand_cross_domain_path
+-- Extracted by StaticSplit

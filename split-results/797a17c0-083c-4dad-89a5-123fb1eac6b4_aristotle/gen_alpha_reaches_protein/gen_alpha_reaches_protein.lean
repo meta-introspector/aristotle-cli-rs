@@ -1,0 +1,2 @@
+-- Declaration: gen_alpha_reaches_protein
+-- Extracted by StaticSplit

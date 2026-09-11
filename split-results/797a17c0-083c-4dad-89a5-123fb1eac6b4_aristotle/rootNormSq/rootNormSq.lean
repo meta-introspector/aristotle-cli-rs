@@ -1,0 +1,2 @@
+-- Declaration: rootNormSq
+-- Extracted by StaticSplit

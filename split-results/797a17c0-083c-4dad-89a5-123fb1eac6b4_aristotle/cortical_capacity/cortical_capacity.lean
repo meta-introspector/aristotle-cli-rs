@@ -1,0 +1,2 @@
+-- Declaration: cortical_capacity
+-- Extracted by StaticSplit

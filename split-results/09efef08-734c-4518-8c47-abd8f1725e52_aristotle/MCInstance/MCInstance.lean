@@ -1,0 +1,2 @@
+-- Declaration: MCInstance
+-- Extracted by StaticSplit

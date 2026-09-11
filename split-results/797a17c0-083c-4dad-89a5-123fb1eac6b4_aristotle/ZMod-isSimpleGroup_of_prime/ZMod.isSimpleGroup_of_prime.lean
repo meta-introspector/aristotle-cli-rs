@@ -1,0 +1,2 @@
+-- Declaration: ZMod.isSimpleGroup_of_prime
+-- Extracted by StaticSplit

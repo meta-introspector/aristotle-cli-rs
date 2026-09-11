@@ -1,0 +1,2 @@
+-- Declaration: gradePresheaf
+-- Extracted by StaticSplit

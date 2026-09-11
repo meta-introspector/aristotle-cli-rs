@@ -1,0 +1,2 @@
+-- Declaration: FiberedDynSys.proj
+-- Extracted by StaticSplit

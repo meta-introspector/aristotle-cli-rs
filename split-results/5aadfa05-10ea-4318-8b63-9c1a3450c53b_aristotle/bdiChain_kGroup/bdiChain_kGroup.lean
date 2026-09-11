@@ -1,0 +1,2 @@
+-- Declaration: bdiChain_kGroup
+-- Extracted by StaticSplit

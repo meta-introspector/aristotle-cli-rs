@@ -1,0 +1,2 @@
+-- Declaration: crt_type1_bound
+-- Extracted by StaticSplit

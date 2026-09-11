@@ -1,0 +1,2 @@
+-- Declaration: earth_bott_computed
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: same_task_same_shape
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: hasMuseResidue
+-- Extracted by StaticSplit

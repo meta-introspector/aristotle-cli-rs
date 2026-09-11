@@ -1,0 +1,2 @@
+-- Declaration: space_reaches_time
+-- Extracted by StaticSplit

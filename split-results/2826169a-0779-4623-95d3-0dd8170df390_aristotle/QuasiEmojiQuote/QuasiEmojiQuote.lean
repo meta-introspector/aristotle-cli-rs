@@ -1,0 +1,2 @@
+-- Declaration: QuasiEmojiQuote
+-- Extracted by StaticSplit

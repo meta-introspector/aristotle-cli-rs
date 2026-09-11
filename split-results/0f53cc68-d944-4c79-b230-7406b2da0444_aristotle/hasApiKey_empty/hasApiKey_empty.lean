@@ -1,0 +1,2 @@
+-- Declaration: hasApiKey_empty
+-- Extracted by StaticSplit

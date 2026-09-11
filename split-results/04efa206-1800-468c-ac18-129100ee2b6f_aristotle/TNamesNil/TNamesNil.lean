@@ -1,0 +1,2 @@
+-- Declaration: TNamesNil
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: tableZ
+-- Extracted by StaticSplit

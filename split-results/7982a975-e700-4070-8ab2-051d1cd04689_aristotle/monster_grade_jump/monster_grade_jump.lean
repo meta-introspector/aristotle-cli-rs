@@ -1,0 +1,2 @@
+-- Declaration: monster_grade_jump
+-- Extracted by StaticSplit

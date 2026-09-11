@@ -1,0 +1,2 @@
+-- Declaration: InlineDefn
+-- Extracted by StaticSplit

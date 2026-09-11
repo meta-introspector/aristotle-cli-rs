@@ -1,0 +1,2 @@
+-- Declaration: numHoles
+-- Extracted by StaticSplit

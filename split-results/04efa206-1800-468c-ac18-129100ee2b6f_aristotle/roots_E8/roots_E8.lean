@@ -1,0 +1,2 @@
+-- Declaration: roots_E8
+-- Extracted by StaticSplit

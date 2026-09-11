@@ -1,0 +1,2 @@
+-- Declaration: ReduceOp
+-- Extracted by StaticSplit

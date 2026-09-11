@@ -1,0 +1,2 @@
+-- Declaration: mulMonomial
+-- Extracted by StaticSplit

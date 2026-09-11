@@ -1,0 +1,2 @@
+-- Declaration: serverStatusMessage
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: StructIso
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: juggled_solved_justified
+-- Extracted by StaticSplit

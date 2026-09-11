@@ -1,0 +1,2 @@
+-- Declaration: mock_duality_top_weight
+-- Extracted by StaticSplit

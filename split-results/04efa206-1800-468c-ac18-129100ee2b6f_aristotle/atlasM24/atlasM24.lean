@@ -1,0 +1,2 @@
+-- Declaration: atlasM24
+-- Extracted by StaticSplit

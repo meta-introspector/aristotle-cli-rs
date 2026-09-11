@@ -1,0 +1,2 @@
+-- Declaration: instantiate1
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: leak_is_unchecked_count
+-- Extracted by StaticSplit

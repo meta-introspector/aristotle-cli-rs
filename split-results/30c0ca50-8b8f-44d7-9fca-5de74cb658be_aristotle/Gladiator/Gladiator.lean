@@ -1,0 +1,2 @@
+-- Declaration: Gladiator
+-- Extracted by StaticSplit

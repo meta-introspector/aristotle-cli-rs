@@ -1,0 +1,2 @@
+-- Declaration: scaleCovers_iff_ne_bot
+-- Extracted by StaticSplit

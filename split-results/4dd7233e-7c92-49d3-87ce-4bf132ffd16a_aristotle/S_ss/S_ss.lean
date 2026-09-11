@@ -1,0 +1,2 @@
+-- Declaration: S_ss
+-- Extracted by StaticSplit

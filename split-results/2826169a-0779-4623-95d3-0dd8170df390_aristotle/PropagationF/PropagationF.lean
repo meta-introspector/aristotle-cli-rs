@@ -1,0 +1,2 @@
+-- Declaration: PropagationF
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: eight_gears
+-- Extracted by StaticSplit

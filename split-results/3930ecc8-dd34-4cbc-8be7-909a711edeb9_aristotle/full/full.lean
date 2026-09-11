@@ -1,0 +1,2 @@
+-- Declaration: full
+-- Extracted by StaticSplit

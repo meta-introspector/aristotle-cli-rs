@@ -1,0 +1,2 @@
+-- Declaration: ooda_generator_count
+-- Extracted by StaticSplit

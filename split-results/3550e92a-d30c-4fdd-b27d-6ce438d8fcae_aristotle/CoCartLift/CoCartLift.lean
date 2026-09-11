@@ -1,0 +1,2 @@
+-- Declaration: CoCartLift
+-- Extracted by StaticSplit

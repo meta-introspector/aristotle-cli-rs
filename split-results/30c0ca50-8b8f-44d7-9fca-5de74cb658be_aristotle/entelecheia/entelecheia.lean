@@ -1,0 +1,2 @@
+-- Declaration: entelecheia
+-- Extracted by StaticSplit

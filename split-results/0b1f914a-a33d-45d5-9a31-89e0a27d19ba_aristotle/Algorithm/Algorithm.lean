@@ -1,0 +1,2 @@
+-- Declaration: Algorithm
+-- Extracted by StaticSplit

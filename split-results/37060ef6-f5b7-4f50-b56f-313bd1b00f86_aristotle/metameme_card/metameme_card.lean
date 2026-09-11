@@ -1,0 +1,2 @@
+-- Declaration: metameme_card
+-- Extracted by StaticSplit

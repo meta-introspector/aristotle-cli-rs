@@ -1,0 +1,2 @@
+-- Declaration: pi_convergent_22_7_ssp
+-- Extracted by StaticSplit

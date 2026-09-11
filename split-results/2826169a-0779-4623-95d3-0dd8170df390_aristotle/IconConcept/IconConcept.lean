@@ -1,0 +1,2 @@
+-- Declaration: IconConcept
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ChurchConcept
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: mapConAssertion
+-- Extracted by StaticSplit

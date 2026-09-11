@@ -1,0 +1,2 @@
+-- Declaration: toEmojiString
+-- Extracted by StaticSplit

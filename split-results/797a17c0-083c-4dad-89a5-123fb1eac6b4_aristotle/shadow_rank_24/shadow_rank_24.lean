@@ -1,0 +1,2 @@
+-- Declaration: shadow_rank_24
+-- Extracted by StaticSplit

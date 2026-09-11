@@ -1,0 +1,2 @@
+-- Declaration: cardinal_sum_choose
+-- Extracted by StaticSplit

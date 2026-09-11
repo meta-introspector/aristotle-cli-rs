@@ -1,0 +1,2 @@
+-- Declaration: fiber_count_times_chain_length
+-- Extracted by StaticSplit

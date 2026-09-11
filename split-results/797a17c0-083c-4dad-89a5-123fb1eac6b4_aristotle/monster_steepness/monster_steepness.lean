@@ -1,0 +1,2 @@
+-- Declaration: monster_steepness
+-- Extracted by StaticSplit

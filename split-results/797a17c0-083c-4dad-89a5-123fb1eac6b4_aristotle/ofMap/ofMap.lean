@@ -1,0 +1,2 @@
+-- Declaration: ofMap
+-- Extracted by StaticSplit

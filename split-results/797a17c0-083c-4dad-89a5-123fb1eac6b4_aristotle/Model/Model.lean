@@ -1,0 +1,2 @@
+-- Declaration: Model
+-- Extracted by StaticSplit

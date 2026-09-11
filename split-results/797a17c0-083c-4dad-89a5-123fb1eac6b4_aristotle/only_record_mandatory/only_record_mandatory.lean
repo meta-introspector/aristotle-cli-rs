@@ -1,0 +1,2 @@
+-- Declaration: only_record_mandatory
+-- Extracted by StaticSplit

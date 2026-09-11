@@ -1,0 +1,2 @@
+-- Declaration: genus_zero_lt_classes
+-- Extracted by StaticSplit

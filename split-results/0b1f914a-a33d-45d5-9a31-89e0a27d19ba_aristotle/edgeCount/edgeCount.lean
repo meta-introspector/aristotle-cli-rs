@@ -1,0 +1,2 @@
+-- Declaration: edgeCount
+-- Extracted by StaticSplit

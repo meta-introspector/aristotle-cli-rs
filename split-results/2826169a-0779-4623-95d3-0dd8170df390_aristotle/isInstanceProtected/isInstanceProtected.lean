@@ -1,0 +1,2 @@
+-- Declaration: isInstanceProtected
+-- Extracted by StaticSplit

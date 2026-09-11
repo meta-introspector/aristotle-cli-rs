@@ -1,0 +1,2 @@
+-- Declaration: consciousness_has_T
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: trivial_encoding_cant_distinguish
+-- Extracted by StaticSplit

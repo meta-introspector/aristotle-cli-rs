@@ -1,0 +1,2 @@
+-- Declaration: invertedIndexBySymmetry
+-- Extracted by StaticSplit

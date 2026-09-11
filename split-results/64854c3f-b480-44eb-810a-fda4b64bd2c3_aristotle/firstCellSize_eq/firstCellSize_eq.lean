@@ -1,0 +1,2 @@
+-- Declaration: firstCellSize_eq
+-- Extracted by StaticSplit

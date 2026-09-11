@@ -1,0 +1,2 @@
+-- Declaration: Constant_body
+-- Extracted by StaticSplit

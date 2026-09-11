@@ -1,0 +1,2 @@
+-- Declaration: clashMatrix_zero
+-- Extracted by StaticSplit

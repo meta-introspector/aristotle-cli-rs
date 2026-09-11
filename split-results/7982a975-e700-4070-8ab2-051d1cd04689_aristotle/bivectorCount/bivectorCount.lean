@@ -1,0 +1,2 @@
+-- Declaration: bivectorCount
+-- Extracted by StaticSplit

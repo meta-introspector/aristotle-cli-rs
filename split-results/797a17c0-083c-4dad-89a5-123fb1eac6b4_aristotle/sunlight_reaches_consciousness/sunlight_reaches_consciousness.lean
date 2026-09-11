@@ -1,0 +1,2 @@
+-- Declaration: sunlight_reaches_consciousness
+-- Extracted by StaticSplit

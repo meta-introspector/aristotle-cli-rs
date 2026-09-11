@@ -1,0 +1,2 @@
+-- Declaration: car
+-- Extracted by StaticSplit

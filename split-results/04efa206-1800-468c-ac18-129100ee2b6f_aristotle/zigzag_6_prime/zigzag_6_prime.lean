@@ -1,0 +1,2 @@
+-- Declaration: zigzag_6_prime
+-- Extracted by StaticSplit

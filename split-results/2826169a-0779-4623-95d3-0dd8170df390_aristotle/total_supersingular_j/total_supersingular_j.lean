@@ -1,0 +1,2 @@
+-- Declaration: total_supersingular_j
+-- Extracted by StaticSplit

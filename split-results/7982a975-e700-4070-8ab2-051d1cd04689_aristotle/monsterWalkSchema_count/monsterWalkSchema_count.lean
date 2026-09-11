@@ -1,0 +1,2 @@
+-- Declaration: monsterWalkSchema_count
+-- Extracted by StaticSplit

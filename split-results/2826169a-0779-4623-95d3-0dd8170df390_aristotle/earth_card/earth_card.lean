@@ -1,0 +1,2 @@
+-- Declaration: earth_card
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: nodeSquare
+-- Extracted by StaticSplit

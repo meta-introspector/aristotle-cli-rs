@@ -1,0 +1,2 @@
+-- Declaration: refusal_creates_distance
+-- Extracted by StaticSplit

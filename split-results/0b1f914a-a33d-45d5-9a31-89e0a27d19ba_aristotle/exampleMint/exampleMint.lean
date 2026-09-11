@@ -1,0 +1,2 @@
+-- Declaration: exampleMint
+-- Extracted by StaticSplit

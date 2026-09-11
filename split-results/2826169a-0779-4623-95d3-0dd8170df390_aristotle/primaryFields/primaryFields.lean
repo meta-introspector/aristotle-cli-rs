@@ -1,0 +1,2 @@
+-- Declaration: primaryFields
+-- Extracted by StaticSplit

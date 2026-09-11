@@ -1,0 +1,2 @@
+-- Declaration: builtinTypeName
+-- Extracted by StaticSplit

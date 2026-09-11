@@ -1,0 +1,2 @@
+-- Declaration: pointed_totality_is_mckay
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: throw_faithful
+-- Extracted by StaticSplit

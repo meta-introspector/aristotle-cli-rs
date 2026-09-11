@@ -1,0 +1,2 @@
+-- Declaration: NDProof.verum_provable
+-- Extracted by StaticSplit

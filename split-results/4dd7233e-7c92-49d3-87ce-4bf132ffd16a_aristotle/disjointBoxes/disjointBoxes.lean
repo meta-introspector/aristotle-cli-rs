@@ -1,0 +1,2 @@
+-- Declaration: disjointBoxes
+-- Extracted by StaticSplit

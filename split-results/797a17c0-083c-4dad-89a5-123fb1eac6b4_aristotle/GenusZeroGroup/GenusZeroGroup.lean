@@ -1,0 +1,2 @@
+-- Declaration: GenusZeroGroup
+-- Extracted by StaticSplit

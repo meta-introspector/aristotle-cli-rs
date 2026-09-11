@@ -1,0 +1,2 @@
+-- Declaration: GaugeEquiv
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: leTransNat
+-- Extracted by StaticSplit

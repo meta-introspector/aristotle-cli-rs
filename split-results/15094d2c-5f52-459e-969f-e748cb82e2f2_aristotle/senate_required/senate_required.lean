@@ -1,0 +1,2 @@
+-- Declaration: senate_required
+-- Extracted by StaticSplit

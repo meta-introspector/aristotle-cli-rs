@@ -1,0 +1,2 @@
+-- Declaration: FormalSystem.Consistent
+-- Extracted by StaticSplit

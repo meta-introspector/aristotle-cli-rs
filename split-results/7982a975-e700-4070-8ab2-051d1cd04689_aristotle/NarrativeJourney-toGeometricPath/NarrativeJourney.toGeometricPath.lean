@@ -1,0 +1,2 @@
+-- Declaration: NarrativeJourney.toGeometricPath
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monsterAddress
+-- Extracted by StaticSplit

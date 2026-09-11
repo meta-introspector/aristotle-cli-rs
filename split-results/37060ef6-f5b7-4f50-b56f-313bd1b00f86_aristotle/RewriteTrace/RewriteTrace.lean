@@ -1,0 +1,2 @@
+-- Declaration: RewriteTrace
+-- Extracted by StaticSplit

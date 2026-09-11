@@ -1,0 +1,2 @@
+-- Declaration: sq_sqrt5
+-- Extracted by StaticSplit

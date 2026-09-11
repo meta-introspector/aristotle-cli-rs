@@ -1,0 +1,2 @@
+-- Declaration: supersingular_le_71
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: T24
+-- Extracted by StaticSplit

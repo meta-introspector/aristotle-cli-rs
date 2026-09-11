@@ -1,0 +1,2 @@
+-- Declaration: checkPropStepByStep
+-- Extracted by StaticSplit

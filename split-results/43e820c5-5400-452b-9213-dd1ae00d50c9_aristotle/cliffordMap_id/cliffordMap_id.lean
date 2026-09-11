@@ -1,0 +1,2 @@
+-- Declaration: cliffordMap_id
+-- Extracted by StaticSplit

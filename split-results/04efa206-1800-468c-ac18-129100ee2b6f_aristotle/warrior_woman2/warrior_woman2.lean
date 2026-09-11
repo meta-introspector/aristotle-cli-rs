@@ -1,0 +1,2 @@
+-- Declaration: warrior_woman2
+-- Extracted by StaticSplit

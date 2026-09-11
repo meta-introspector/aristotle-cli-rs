@@ -1,0 +1,2 @@
+-- Declaration: DMZPolicy.permitAll
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: numInvolutionClasses
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: toZMod2Prod_injective
+-- Extracted by StaticSplit

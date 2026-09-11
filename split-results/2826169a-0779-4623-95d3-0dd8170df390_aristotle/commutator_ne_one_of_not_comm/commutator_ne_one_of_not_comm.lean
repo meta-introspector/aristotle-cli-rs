@@ -1,0 +1,2 @@
+-- Declaration: commutator_ne_one_of_not_comm
+-- Extracted by StaticSplit

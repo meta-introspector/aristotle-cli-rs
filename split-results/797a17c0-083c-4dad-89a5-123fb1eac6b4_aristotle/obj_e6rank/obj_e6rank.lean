@@ -1,0 +1,2 @@
+-- Declaration: obj_e6rank
+-- Extracted by StaticSplit

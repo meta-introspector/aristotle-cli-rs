@@ -1,0 +1,2 @@
+-- Declaration: IrrepMask
+-- Extracted by StaticSplit

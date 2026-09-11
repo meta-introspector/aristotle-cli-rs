@@ -1,0 +1,2 @@
+-- Declaration: SubgroupConj.card_eq
+-- Extracted by StaticSplit

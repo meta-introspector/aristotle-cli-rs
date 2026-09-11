@@ -1,0 +1,2 @@
+-- Declaration: azClassFromGrade
+-- Extracted by StaticSplit

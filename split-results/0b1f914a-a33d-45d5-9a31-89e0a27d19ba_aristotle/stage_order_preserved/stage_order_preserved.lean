@@ -1,0 +1,2 @@
+-- Declaration: stage_order_preserved
+-- Extracted by StaticSplit

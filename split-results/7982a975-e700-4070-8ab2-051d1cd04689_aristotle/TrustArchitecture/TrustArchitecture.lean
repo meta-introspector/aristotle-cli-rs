@@ -1,0 +1,2 @@
+-- Declaration: TrustArchitecture
+-- Extracted by StaticSplit

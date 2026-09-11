@@ -1,0 +1,2 @@
+-- Declaration: aristotleGccAstToTypescript
+-- Extracted by StaticSplit

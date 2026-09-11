@@ -1,0 +1,2 @@
+-- Declaration: omegaZ_eq_product
+-- Extracted by StaticSplit

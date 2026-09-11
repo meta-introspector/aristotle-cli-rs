@@ -1,0 +1,2 @@
+-- Declaration: toDiePlate
+-- Extracted by StaticSplit

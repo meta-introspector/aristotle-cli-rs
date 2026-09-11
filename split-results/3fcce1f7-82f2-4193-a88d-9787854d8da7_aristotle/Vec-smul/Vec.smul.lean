@@ -1,0 +1,2 @@
+-- Declaration: Vec.smul
+-- Extracted by StaticSplit

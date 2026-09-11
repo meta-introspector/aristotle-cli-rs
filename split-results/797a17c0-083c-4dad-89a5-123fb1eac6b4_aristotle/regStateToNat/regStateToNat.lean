@@ -1,0 +1,2 @@
+-- Declaration: regStateToNat
+-- Extracted by StaticSplit

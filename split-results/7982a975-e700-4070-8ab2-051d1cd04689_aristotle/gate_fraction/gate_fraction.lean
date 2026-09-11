@@ -1,0 +1,2 @@
+-- Declaration: gate_fraction
+-- Extracted by StaticSplit

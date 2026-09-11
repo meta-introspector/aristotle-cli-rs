@@ -1,0 +1,2 @@
+-- Declaration: applySpine
+-- Extracted by StaticSplit

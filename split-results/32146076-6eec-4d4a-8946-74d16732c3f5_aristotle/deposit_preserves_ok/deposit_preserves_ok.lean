@@ -1,0 +1,2 @@
+-- Declaration: deposit_preserves_ok
+-- Extracted by StaticSplit

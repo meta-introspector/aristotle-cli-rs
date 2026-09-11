@@ -1,0 +1,2 @@
+-- Declaration: hash
+-- Extracted by StaticSplit

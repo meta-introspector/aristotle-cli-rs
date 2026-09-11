@@ -1,0 +1,2 @@
+-- Declaration: hasse2
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: types
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: WikiConcept.all
+-- Extracted by StaticSplit

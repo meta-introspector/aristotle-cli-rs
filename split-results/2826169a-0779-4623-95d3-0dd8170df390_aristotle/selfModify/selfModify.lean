@@ -1,0 +1,2 @@
+-- Declaration: selfModify
+-- Extracted by StaticSplit

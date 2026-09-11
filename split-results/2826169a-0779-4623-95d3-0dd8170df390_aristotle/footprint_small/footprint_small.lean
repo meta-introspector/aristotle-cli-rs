@@ -1,0 +1,2 @@
+-- Declaration: footprint_small
+-- Extracted by StaticSplit

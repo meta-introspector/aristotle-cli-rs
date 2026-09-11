@@ -1,0 +1,2 @@
+-- Declaration: bosonic_arithEq_minicharged
+-- Extracted by StaticSplit

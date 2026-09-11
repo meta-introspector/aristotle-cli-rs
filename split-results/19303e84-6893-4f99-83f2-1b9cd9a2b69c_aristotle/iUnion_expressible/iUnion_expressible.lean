@@ -1,0 +1,2 @@
+-- Declaration: iUnion_expressible
+-- Extracted by StaticSplit

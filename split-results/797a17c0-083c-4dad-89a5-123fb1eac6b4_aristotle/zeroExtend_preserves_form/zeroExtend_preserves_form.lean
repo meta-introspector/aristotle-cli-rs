@@ -1,0 +1,2 @@
+-- Declaration: zeroExtend_preserves_form
+-- Extracted by StaticSplit

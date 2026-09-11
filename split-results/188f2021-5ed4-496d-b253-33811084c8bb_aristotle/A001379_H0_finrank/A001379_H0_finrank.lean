@@ -1,0 +1,2 @@
+-- Declaration: A001379_H0_finrank
+-- Extracted by StaticSplit

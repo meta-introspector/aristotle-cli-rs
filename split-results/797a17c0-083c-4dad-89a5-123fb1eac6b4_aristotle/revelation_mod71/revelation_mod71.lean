@@ -1,0 +1,2 @@
+-- Declaration: revelation_mod71
+-- Extracted by StaticSplit

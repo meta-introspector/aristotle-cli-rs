@@ -1,0 +1,2 @@
+-- Declaration: LKCFh.cut_adm
+-- Extracted by StaticSplit

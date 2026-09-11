@@ -1,0 +1,2 @@
+-- Declaration: gcd_div_sq_coprime
+-- Extracted by StaticSplit

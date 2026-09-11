@@ -1,0 +1,2 @@
+-- Declaration: keyType
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: STerm
+-- Extracted by StaticSplit

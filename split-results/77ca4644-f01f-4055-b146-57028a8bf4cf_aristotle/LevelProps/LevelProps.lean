@@ -1,0 +1,2 @@
+-- Declaration: LevelProps
+-- Extracted by StaticSplit

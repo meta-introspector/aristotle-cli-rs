@@ -1,0 +1,2 @@
+-- Declaration: cosmos_is_fibered
+-- Extracted by StaticSplit

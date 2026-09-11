@@ -1,0 +1,2 @@
+-- Declaration: article2_sections_distinct
+-- Extracted by StaticSplit

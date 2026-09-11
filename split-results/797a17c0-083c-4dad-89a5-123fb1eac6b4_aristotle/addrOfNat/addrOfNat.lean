@@ -1,0 +1,2 @@
+-- Declaration: addrOfNat
+-- Extracted by StaticSplit

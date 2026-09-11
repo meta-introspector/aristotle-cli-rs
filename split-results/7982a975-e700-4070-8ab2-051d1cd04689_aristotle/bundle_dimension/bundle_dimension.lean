@@ -1,0 +1,2 @@
+-- Declaration: bundle_dimension
+-- Extracted by StaticSplit

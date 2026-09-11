@@ -1,0 +1,2 @@
+-- Declaration: obj_value
+-- Extracted by StaticSplit

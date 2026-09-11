@@ -1,0 +1,2 @@
+-- Declaration: moonshine_no_currents
+-- Extracted by StaticSplit

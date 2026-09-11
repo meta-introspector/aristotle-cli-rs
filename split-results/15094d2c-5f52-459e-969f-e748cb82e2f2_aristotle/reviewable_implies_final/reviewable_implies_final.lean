@@ -1,0 +1,2 @@
+-- Declaration: reviewable_implies_final
+-- Extracted by StaticSplit

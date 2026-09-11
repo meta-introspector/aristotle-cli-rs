@@ -1,0 +1,2 @@
+-- Declaration: hecke_like_diagonal_stability
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: total_root_count_value
+-- Extracted by StaticSplit

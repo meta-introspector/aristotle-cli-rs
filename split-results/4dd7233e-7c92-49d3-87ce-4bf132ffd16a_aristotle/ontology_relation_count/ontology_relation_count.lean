@@ -1,0 +1,2 @@
+-- Declaration: ontology_relation_count
+-- Extracted by StaticSplit

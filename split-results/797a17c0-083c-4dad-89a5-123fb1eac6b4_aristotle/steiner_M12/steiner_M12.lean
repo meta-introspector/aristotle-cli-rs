@@ -1,0 +1,2 @@
+-- Declaration: steiner_M12
+-- Extracted by StaticSplit

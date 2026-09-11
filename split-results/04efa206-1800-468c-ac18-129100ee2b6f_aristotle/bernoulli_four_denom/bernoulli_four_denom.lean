@@ -1,0 +1,2 @@
+-- Declaration: bernoulli_four_denom
+-- Extracted by StaticSplit

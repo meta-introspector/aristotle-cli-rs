@@ -1,0 +1,2 @@
+-- Declaration: count_water_6
+-- Extracted by StaticSplit

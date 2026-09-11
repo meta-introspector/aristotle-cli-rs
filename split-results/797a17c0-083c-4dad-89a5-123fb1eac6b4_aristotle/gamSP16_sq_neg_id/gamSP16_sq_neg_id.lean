@@ -1,0 +1,2 @@
+-- Declaration: gamSP16_sq_neg_id
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: disjoint
+-- Extracted by StaticSplit

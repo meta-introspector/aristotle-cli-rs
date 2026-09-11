@@ -1,0 +1,2 @@
+-- Declaration: azReal_reduction
+-- Extracted by StaticSplit

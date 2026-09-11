@@ -1,0 +1,2 @@
+-- Declaration: shadowRank
+-- Extracted by StaticSplit

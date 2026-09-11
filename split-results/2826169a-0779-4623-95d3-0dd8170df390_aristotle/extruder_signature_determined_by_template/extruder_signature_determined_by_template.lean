@@ -1,0 +1,2 @@
+-- Declaration: extruder_signature_determined_by_template
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: atp_is_fundamental
+-- Extracted by StaticSplit

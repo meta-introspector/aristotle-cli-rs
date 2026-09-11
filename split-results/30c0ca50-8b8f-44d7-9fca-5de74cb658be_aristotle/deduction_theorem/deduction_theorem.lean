@@ -1,0 +1,2 @@
+-- Declaration: deduction_theorem
+-- Extracted by StaticSplit

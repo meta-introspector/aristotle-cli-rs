@@ -1,0 +1,2 @@
+-- Declaration: AtlasSection
+-- Extracted by StaticSplit

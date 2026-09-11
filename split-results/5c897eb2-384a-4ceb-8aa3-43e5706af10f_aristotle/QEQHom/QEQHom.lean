@@ -1,0 +1,2 @@
+-- Declaration: QEQHom
+-- Extracted by StaticSplit

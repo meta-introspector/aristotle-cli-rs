@@ -1,0 +1,2 @@
+-- Declaration: compressionBound
+-- Extracted by StaticSplit

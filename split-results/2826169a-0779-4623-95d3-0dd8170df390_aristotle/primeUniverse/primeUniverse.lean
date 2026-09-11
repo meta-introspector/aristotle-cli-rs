@@ -1,0 +1,2 @@
+-- Declaration: primeUniverse
+-- Extracted by StaticSplit

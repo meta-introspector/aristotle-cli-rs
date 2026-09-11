@@ -1,0 +1,2 @@
+-- Declaration: StateTransition
+-- Extracted by StaticSplit

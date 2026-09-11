@@ -1,0 +1,2 @@
+-- Declaration: totalSize
+-- Extracted by StaticSplit

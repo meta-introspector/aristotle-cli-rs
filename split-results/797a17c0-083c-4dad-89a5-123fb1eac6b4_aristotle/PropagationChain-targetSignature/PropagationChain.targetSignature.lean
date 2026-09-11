@@ -1,0 +1,2 @@
+-- Declaration: PropagationChain.targetSignature
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: monsterDim_factorization
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: shifted_zero_exceeds_half
+-- Extracted by StaticSplit

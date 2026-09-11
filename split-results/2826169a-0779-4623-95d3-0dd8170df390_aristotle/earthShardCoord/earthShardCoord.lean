@@ -1,0 +1,2 @@
+-- Declaration: earthShardCoord
+-- Extracted by StaticSplit

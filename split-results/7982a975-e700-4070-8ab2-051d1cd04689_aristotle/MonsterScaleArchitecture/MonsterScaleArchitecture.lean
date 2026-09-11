@@ -1,0 +1,2 @@
+-- Declaration: MonsterScaleArchitecture
+-- Extracted by StaticSplit

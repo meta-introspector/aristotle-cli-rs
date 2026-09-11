@@ -1,0 +1,2 @@
+-- Declaration: type_absurd
+-- Extracted by StaticSplit

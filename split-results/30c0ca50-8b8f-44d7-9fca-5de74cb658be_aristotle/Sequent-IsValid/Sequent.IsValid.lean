@@ -1,0 +1,2 @@
+-- Declaration: Sequent.IsValid
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: cidOfString
+-- Extracted by StaticSplit

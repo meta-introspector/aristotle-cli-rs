@@ -1,0 +1,2 @@
+-- Declaration: ZOSPath
+-- Extracted by StaticSplit

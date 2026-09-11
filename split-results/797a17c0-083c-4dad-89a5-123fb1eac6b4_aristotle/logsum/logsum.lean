@@ -1,0 +1,2 @@
+-- Declaration: logsum
+-- Extracted by StaticSplit

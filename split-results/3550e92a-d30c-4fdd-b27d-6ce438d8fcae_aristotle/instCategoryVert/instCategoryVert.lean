@@ -1,0 +1,2 @@
+-- Declaration: instCategoryVert
+-- Extracted by StaticSplit

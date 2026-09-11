@@ -1,0 +1,2 @@
+-- Declaration: corticalFolds
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: glue_23
+-- Extracted by StaticSplit

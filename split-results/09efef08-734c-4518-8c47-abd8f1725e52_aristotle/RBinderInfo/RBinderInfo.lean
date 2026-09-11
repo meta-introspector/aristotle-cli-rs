@@ -1,0 +1,2 @@
+-- Declaration: RBinderInfo
+-- Extracted by StaticSplit

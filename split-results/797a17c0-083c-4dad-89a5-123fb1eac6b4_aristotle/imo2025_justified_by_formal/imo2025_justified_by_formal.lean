@@ -1,0 +1,2 @@
+-- Declaration: imo2025_justified_by_formal
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: fullMetaLanguage_covers_most
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: type_
+-- Extracted by StaticSplit

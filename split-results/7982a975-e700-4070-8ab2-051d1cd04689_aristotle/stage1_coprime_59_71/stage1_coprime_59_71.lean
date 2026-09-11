@@ -1,0 +1,2 @@
+-- Declaration: stage1_coprime_59_71
+-- Extracted by StaticSplit

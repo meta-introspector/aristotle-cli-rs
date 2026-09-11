@@ -1,0 +1,2 @@
+-- Declaration: cfLSize
+-- Extracted by StaticSplit

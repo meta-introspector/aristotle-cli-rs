@@ -1,0 +1,2 @@
+-- Declaration: exampleDiversityOnly
+-- Extracted by StaticSplit

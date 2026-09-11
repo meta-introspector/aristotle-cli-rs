@@ -1,0 +1,2 @@
+-- Declaration: house_majority_strict
+-- Extracted by StaticSplit

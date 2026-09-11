@@ -1,0 +1,2 @@
+-- Declaration: monster_conjClasses_card
+-- Extracted by StaticSplit

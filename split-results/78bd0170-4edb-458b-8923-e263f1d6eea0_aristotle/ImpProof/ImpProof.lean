@@ -1,0 +1,2 @@
+-- Declaration: ImpProof
+-- Extracted by StaticSplit

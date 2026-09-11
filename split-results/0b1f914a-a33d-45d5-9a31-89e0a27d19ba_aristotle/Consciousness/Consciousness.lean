@@ -1,0 +1,2 @@
+-- Declaration: Consciousness
+-- Extracted by StaticSplit

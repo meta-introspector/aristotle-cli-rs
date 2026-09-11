@@ -1,0 +1,2 @@
+-- Declaration: theoremsProvenCount
+-- Extracted by StaticSplit

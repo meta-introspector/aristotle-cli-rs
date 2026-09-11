@@ -1,0 +1,2 @@
+-- Declaration: constrained_generators
+-- Extracted by StaticSplit

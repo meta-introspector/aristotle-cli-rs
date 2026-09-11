@@ -1,0 +1,2 @@
+-- Declaration: ramanujanSig
+-- Extracted by StaticSplit

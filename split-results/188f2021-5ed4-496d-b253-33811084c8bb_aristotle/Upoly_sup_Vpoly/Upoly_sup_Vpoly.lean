@@ -1,0 +1,2 @@
+-- Declaration: Upoly_sup_Vpoly
+-- Extracted by StaticSplit

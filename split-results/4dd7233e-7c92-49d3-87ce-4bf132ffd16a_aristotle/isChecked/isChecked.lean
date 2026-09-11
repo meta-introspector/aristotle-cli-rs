@@ -1,0 +1,2 @@
+-- Declaration: isChecked
+-- Extracted by StaticSplit

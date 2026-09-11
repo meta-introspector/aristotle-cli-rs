@@ -1,0 +1,2 @@
+-- Declaration: resolveFieldType
+-- Extracted by StaticSplit

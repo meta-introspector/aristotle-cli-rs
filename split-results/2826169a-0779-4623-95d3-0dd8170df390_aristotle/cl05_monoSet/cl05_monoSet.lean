@@ -1,0 +1,2 @@
+-- Declaration: cl05_monoSet
+-- Extracted by StaticSplit

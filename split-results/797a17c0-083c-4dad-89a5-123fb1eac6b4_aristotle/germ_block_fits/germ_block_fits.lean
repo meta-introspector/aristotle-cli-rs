@@ -1,0 +1,2 @@
+-- Declaration: germ_block_fits
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: co0_order_value
+-- Extracted by StaticSplit

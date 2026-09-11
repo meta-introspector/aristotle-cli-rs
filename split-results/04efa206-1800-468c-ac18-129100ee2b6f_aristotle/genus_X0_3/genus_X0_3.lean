@@ -1,0 +1,2 @@
+-- Declaration: genus_X0_3
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: SignifiedConcept
+-- Extracted by StaticSplit

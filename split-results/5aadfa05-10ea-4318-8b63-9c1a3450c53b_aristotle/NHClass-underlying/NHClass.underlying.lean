@@ -1,0 +1,2 @@
+-- Declaration: NHClass.underlying
+-- Extracted by StaticSplit

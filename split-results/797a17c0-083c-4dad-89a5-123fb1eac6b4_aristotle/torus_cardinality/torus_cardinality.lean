@@ -1,0 +1,2 @@
+-- Declaration: torus_cardinality
+-- Extracted by StaticSplit

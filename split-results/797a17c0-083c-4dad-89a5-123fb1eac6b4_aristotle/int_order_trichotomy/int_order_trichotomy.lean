@@ -1,0 +1,2 @@
+-- Declaration: int_order_trichotomy
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: ProveOutcome.toStr
+-- Extracted by StaticSplit

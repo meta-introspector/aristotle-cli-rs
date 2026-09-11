@@ -1,0 +1,2 @@
+-- Declaration: Th_divides_B
+-- Extracted by StaticSplit

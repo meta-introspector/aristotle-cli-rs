@@ -1,0 +1,2 @@
+-- Declaration: iterate_internal
+-- Extracted by StaticSplit

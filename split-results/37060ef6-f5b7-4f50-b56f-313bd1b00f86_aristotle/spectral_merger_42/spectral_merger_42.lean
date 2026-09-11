@@ -1,0 +1,2 @@
+-- Declaration: spectral_merger_42
+-- Extracted by StaticSplit

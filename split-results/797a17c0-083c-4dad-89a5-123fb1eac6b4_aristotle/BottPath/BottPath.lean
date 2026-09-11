@@ -1,0 +1,2 @@
+-- Declaration: BottPath
+-- Extracted by StaticSplit

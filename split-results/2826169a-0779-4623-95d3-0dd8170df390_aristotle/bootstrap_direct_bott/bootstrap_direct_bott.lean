@@ -1,0 +1,2 @@
+-- Declaration: bootstrap_direct_bott
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: character_decomposition_implies_graded_module
+-- Extracted by StaticSplit

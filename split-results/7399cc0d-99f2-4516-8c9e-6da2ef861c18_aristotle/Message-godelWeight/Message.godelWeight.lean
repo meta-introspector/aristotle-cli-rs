@@ -1,0 +1,2 @@
+-- Declaration: Message.godelWeight
+-- Extracted by StaticSplit

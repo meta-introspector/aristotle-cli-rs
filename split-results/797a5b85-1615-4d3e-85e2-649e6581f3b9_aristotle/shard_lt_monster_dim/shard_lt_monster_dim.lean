@@ -1,0 +1,2 @@
+-- Declaration: shard_lt_monster_dim
+-- Extracted by StaticSplit

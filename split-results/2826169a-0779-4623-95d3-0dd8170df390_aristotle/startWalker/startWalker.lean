@@ -1,0 +1,2 @@
+-- Declaration: startWalker
+-- Extracted by StaticSplit

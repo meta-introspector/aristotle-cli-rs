@@ -1,0 +1,2 @@
+-- Declaration: zmod5Space
+-- Extracted by StaticSplit

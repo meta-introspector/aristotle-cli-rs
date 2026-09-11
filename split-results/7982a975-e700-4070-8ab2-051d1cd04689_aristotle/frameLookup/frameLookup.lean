@@ -1,0 +1,2 @@
+-- Declaration: frameLookup
+-- Extracted by StaticSplit

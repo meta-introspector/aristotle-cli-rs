@@ -1,0 +1,2 @@
+-- Declaration: all_paths_lead_to_return
+-- Extracted by StaticSplit

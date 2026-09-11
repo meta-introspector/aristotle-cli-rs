@@ -1,0 +1,2 @@
+-- Declaration: exampleFederalQuestionOnly
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: SheafDiagram
+-- Extracted by StaticSplit

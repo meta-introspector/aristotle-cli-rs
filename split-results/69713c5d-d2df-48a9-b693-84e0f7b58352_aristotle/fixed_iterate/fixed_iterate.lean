@@ -1,0 +1,2 @@
+-- Declaration: fixed_iterate
+-- Extracted by StaticSplit

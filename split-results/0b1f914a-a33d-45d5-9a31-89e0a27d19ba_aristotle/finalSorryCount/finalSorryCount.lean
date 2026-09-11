@@ -1,0 +1,2 @@
+-- Declaration: finalSorryCount
+-- Extracted by StaticSplit

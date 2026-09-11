@@ -1,0 +1,2 @@
+-- Declaration: isBoundaryMarker
+-- Extracted by StaticSplit

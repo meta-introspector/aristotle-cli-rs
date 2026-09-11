@@ -1,0 +1,2 @@
+-- Declaration: rpcResult
+-- Extracted by StaticSplit

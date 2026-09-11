@@ -1,0 +1,2 @@
+-- Declaration: mythFiber_injective
+-- Extracted by StaticSplit

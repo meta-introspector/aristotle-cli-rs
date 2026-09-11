@@ -1,0 +1,2 @@
+-- Declaration: bbf20_vec
+-- Extracted by StaticSplit

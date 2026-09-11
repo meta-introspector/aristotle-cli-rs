@@ -1,0 +1,2 @@
+-- Declaration: borcherds_moonshine_agree
+-- Extracted by StaticSplit

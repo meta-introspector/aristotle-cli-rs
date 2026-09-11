@@ -1,0 +1,2 @@
+-- Declaration: truth_is_inhabitation
+-- Extracted by StaticSplit

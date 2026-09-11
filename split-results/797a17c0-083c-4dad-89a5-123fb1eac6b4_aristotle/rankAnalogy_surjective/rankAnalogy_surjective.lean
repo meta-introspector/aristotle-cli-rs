@@ -1,0 +1,2 @@
+-- Declaration: rankAnalogy_surjective
+-- Extracted by StaticSplit

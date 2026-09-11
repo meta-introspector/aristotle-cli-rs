@@ -1,0 +1,2 @@
+-- Declaration: mapApiStatus_failed
+-- Extracted by StaticSplit

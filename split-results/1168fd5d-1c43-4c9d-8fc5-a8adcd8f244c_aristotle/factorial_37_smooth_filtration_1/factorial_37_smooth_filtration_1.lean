@@ -1,0 +1,2 @@
+-- Declaration: factorial_37_smooth_filtration_1
+-- Extracted by StaticSplit

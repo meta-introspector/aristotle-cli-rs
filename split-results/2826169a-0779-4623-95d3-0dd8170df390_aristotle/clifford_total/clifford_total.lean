@@ -1,0 +1,2 @@
+-- Declaration: clifford_total
+-- Extracted by StaticSplit

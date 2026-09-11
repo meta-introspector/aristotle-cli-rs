@@ -1,0 +1,2 @@
+-- Declaration: tenfold_way_complete
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: evolution_preserves_addressing
+-- Extracted by StaticSplit

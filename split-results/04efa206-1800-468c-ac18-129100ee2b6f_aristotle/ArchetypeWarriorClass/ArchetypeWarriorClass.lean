@@ -1,0 +1,2 @@
+-- Declaration: ArchetypeWarriorClass
+-- Extracted by StaticSplit

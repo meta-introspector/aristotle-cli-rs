@@ -1,0 +1,2 @@
+-- Declaration: UnionRepresentation
+-- Extracted by StaticSplit

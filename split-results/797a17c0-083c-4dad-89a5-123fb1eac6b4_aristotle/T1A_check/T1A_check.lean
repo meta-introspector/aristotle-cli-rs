@@ -1,0 +1,2 @@
+-- Declaration: T1A_check
+-- Extracted by StaticSplit

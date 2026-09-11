@@ -1,0 +1,2 @@
+-- Declaration: equiv
+-- Extracted by StaticSplit

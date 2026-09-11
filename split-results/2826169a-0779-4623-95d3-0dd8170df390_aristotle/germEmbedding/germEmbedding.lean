@@ -1,0 +1,2 @@
+-- Declaration: germEmbedding
+-- Extracted by StaticSplit

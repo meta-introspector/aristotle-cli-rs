@@ -1,0 +1,2 @@
+-- Declaration: MemeSystem
+-- Extracted by StaticSplit

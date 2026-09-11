@@ -1,0 +1,2 @@
+-- Declaration: torusGatedPermission
+-- Extracted by StaticSplit

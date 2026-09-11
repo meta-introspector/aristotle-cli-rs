@@ -1,0 +1,2 @@
+-- Declaration: SymbolConcept
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: containerCube_dims_prime
+-- Extracted by StaticSplit

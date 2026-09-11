@@ -1,0 +1,2 @@
+-- Declaration: trivial_umbral_one_series
+-- Extracted by StaticSplit

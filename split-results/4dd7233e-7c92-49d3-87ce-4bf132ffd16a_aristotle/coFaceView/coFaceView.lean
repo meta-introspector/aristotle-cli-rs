@@ -1,0 +1,2 @@
+-- Declaration: coFaceView
+-- Extracted by StaticSplit

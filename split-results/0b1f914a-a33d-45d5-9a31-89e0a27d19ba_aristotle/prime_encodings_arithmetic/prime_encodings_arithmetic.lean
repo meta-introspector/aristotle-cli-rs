@@ -1,0 +1,2 @@
+-- Declaration: prime_encodings_arithmetic
+-- Extracted by StaticSplit

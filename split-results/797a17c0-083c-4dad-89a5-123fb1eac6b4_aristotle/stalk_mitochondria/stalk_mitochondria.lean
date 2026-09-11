@@ -1,0 +1,2 @@
+-- Declaration: stalk_mitochondria
+-- Extracted by StaticSplit

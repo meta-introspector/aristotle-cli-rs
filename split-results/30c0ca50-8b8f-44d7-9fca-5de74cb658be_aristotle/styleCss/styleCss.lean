@@ -1,0 +1,2 @@
+-- Declaration: styleCss
+-- Extracted by StaticSplit

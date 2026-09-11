@@ -1,0 +1,2 @@
+-- Declaration: metaTickN_preserves_base
+-- Extracted by StaticSplit

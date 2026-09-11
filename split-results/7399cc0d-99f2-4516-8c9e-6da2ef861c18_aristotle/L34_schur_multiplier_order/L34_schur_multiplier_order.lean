@@ -1,0 +1,2 @@
+-- Declaration: L34_schur_multiplier_order
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: earthState
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: goedel_reaches_logic
+-- Extracted by StaticSplit

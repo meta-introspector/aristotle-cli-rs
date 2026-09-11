@@ -1,0 +1,2 @@
+-- Declaration: crtCoeff71_mod71
+-- Extracted by StaticSplit

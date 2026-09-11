@@ -1,0 +1,2 @@
+-- Declaration: metameme42_tokens
+-- Extracted by StaticSplit

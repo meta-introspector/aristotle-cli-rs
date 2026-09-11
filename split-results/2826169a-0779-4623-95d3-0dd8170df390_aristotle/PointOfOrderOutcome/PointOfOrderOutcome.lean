@@ -1,0 +1,2 @@
+-- Declaration: PointOfOrderOutcome
+-- Extracted by StaticSplit

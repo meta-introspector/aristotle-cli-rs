@@ -1,0 +1,2 @@
+-- Declaration: bosonic_pteEq_minicharged
+-- Extracted by StaticSplit

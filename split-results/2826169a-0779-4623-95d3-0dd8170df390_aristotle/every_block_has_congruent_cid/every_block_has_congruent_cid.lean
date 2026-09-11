@@ -1,0 +1,2 @@
+-- Declaration: every_block_has_congruent_cid
+-- Extracted by StaticSplit

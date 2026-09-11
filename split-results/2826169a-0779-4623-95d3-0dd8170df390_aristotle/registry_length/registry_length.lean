@@ -1,0 +1,2 @@
+-- Declaration: registry_length
+-- Extracted by StaticSplit

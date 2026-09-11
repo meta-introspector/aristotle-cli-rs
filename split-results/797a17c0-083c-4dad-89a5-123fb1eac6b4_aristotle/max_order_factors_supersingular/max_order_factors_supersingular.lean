@@ -1,0 +1,2 @@
+-- Declaration: max_order_factors_supersingular
+-- Extracted by StaticSplit

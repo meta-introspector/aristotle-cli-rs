@@ -1,0 +1,2 @@
+-- Declaration: IntegratedBrainrot.totalCode
+-- Extracted by StaticSplit

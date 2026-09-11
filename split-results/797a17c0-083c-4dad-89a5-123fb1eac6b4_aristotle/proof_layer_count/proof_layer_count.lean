@@ -1,0 +1,2 @@
+-- Declaration: proof_layer_count
+-- Extracted by StaticSplit

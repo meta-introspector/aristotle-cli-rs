@@ -1,0 +1,2 @@
+-- Declaration: GramEngine.forward_injective
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: defaultShardMetadata_orbifold_valid
+-- Extracted by StaticSplit

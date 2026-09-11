@@ -1,0 +1,2 @@
+-- Declaration: coplayers_remain
+-- Extracted by StaticSplit

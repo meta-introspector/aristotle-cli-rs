@@ -1,0 +1,2 @@
+-- Declaration: hashCompound
+-- Extracted by StaticSplit

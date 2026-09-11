@@ -1,0 +1,2 @@
+-- Declaration: GramEngine.monomialMatrix
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: tboxConcepts_finite
+-- Extracted by StaticSplit

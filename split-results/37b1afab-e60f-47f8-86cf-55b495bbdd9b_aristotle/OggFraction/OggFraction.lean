@@ -1,0 +1,2 @@
+-- Declaration: OggFraction
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: oddBlades_card
+-- Extracted by StaticSplit

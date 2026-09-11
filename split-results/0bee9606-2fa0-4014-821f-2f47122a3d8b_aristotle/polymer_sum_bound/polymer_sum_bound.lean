@@ -1,0 +1,2 @@
+-- Declaration: polymer_sum_bound
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: instFiniteCechH0
+-- Extracted by StaticSplit

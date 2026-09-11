@@ -1,0 +1,2 @@
+-- Declaration: fight_is_a_fighter
+-- Extracted by StaticSplit

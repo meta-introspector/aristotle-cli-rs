@@ -1,0 +1,2 @@
+-- Declaration: triangle_coherent
+-- Extracted by StaticSplit

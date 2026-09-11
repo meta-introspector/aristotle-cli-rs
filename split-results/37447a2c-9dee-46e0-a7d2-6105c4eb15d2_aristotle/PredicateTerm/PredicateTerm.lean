@@ -1,0 +1,2 @@
+-- Declaration: PredicateTerm
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: taskShape
+-- Extracted by StaticSplit

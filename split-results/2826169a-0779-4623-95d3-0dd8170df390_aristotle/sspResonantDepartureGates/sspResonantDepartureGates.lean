@@ -1,0 +1,2 @@
+-- Declaration: sspResonantDepartureGates
+-- Extracted by StaticSplit

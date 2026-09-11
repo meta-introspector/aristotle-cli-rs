@@ -1,0 +1,2 @@
+-- Declaration: entailsCon
+-- Extracted by StaticSplit

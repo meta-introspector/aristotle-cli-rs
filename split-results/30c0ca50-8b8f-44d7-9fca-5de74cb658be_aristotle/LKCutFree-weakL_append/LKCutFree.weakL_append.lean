@@ -1,0 +1,2 @@
+-- Declaration: LKCutFree.weakL_append
+-- Extracted by StaticSplit

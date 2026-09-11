@@ -1,0 +1,2 @@
+-- Declaration: chytridActivation
+-- Extracted by StaticSplit

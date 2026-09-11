@@ -1,0 +1,2 @@
+-- Declaration: clock_dim
+-- Extracted by StaticSplit

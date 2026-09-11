@@ -1,0 +1,2 @@
+-- Declaration: second_iteration_escapes_supersingular
+-- Extracted by StaticSplit

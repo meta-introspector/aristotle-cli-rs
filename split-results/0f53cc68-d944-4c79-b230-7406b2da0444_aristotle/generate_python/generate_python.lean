@@ -1,0 +1,2 @@
+-- Declaration: generate_python
+-- Extracted by StaticSplit

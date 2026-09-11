@@ -1,0 +1,2 @@
+-- Declaration: SenateAction
+-- Extracted by StaticSplit

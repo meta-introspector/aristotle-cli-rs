@@ -1,0 +1,2 @@
+-- Declaration: RiddickCitationStyle.indicatesInquiry
+-- Extracted by StaticSplit

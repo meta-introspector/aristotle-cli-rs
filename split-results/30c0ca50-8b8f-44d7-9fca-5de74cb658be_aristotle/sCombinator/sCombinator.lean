@@ -1,0 +1,2 @@
+-- Declaration: sCombinator
+-- Extracted by StaticSplit

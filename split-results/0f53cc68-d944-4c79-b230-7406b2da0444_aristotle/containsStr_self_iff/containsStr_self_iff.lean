@@ -1,0 +1,2 @@
+-- Declaration: containsStr_self_iff
+-- Extracted by StaticSplit

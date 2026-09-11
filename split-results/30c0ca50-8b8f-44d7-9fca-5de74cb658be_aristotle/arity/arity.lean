@@ -1,0 +1,2 @@
+-- Declaration: arity
+-- Extracted by StaticSplit

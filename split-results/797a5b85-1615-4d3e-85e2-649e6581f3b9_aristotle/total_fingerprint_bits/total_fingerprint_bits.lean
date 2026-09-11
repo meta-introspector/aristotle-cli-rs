@@ -1,0 +1,2 @@
+-- Declaration: total_fingerprint_bits
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: nortonEigenvalues
+-- Extracted by StaticSplit

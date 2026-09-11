@@ -1,0 +1,2 @@
+-- Declaration: phaseFunctor
+-- Extracted by StaticSplit

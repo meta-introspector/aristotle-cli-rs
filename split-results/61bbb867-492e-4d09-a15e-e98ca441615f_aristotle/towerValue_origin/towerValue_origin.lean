@@ -1,0 +1,2 @@
+-- Declaration: towerValue_origin
+-- Extracted by StaticSplit

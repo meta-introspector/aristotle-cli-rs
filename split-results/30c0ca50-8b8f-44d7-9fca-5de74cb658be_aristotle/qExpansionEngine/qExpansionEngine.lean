@@ -1,0 +1,2 @@
+-- Declaration: qExpansionEngine
+-- Extracted by StaticSplit

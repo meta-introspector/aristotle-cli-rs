@@ -1,0 +1,2 @@
+-- Declaration: hecke_coprime_composition_example
+-- Extracted by StaticSplit

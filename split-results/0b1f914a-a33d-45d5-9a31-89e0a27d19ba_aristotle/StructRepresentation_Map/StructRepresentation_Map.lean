@@ -1,0 +1,2 @@
+-- Declaration: StructRepresentation_Map
+-- Extracted by StaticSplit

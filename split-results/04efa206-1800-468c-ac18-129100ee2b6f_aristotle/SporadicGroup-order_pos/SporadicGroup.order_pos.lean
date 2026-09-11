@@ -1,0 +1,2 @@
+-- Declaration: SporadicGroup.order_pos
+-- Extracted by StaticSplit

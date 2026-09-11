@@ -1,0 +1,2 @@
+-- Declaration: diii_invariant_type
+-- Extracted by StaticSplit

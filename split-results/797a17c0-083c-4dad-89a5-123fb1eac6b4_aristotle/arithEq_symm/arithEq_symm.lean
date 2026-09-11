@@ -1,0 +1,2 @@
+-- Declaration: arithEq_symm
+-- Extracted by StaticSplit

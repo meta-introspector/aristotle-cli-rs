@@ -1,0 +1,2 @@
+-- Declaration: jInvariant_q2
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: MoonshineAxiom.proofSource
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: numSectors
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: shard_partition
+-- Extracted by StaticSplit

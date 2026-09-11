@@ -1,0 +1,2 @@
+-- Declaration: assoc
+-- Extracted by StaticSplit

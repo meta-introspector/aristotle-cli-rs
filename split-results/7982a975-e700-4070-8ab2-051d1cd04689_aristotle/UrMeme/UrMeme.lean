@@ -1,0 +1,2 @@
+-- Declaration: UrMeme
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: FungalTaxon.phylum
+-- Extracted by StaticSplit

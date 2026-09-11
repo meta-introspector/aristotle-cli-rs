@@ -1,0 +1,2 @@
+-- Declaration: ofExpr_toExpr_selfApp
+-- Extracted by StaticSplit

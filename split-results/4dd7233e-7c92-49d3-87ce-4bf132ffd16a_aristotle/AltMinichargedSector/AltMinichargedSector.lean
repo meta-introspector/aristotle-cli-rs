@@ -1,0 +1,2 @@
+-- Declaration: AltMinichargedSector
+-- Extracted by StaticSplit

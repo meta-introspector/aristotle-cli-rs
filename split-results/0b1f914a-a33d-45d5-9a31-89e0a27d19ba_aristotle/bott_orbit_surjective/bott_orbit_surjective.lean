@@ -1,0 +1,2 @@
+-- Declaration: bott_orbit_surjective
+-- Extracted by StaticSplit

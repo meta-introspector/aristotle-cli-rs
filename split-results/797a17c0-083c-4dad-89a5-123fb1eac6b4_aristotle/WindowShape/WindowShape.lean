@@ -1,0 +1,2 @@
+-- Declaration: WindowShape
+-- Extracted by StaticSplit

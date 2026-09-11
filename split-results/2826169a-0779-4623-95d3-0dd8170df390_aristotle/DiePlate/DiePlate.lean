@@ -1,0 +1,2 @@
+-- Declaration: DiePlate
+-- Extracted by StaticSplit

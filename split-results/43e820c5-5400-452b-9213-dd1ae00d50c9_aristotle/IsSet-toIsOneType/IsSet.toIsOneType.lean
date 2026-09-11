@@ -1,0 +1,2 @@
+-- Declaration: IsSet.toIsOneType
+-- Extracted by StaticSplit

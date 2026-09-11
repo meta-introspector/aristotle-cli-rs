@@ -1,0 +1,2 @@
+-- Declaration: crt_type1_mod_47
+-- Extracted by StaticSplit

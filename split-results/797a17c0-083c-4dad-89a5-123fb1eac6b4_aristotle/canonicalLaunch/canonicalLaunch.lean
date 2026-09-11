@@ -1,0 +1,2 @@
+-- Declaration: canonicalLaunch
+-- Extracted by StaticSplit

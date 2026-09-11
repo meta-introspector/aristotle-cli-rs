@@ -1,0 +1,2 @@
+-- Declaration: gamMonoSP
+-- Extracted by StaticSplit

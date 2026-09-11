@@ -1,0 +1,2 @@
+-- Declaration: senateVote_gt_parliamentaryInquiry
+-- Extracted by StaticSplit

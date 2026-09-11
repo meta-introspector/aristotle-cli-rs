@@ -1,0 +1,2 @@
+-- Declaration: toBool
+-- Extracted by StaticSplit

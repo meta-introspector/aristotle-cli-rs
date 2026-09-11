@@ -1,0 +1,2 @@
+-- Declaration: TrustworthyIntrospection
+-- Extracted by StaticSplit

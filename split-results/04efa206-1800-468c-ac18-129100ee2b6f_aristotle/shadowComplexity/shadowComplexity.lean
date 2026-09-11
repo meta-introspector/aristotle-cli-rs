@@ -1,0 +1,2 @@
+-- Declaration: shadowComplexity
+-- Extracted by StaticSplit

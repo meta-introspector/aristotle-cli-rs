@@ -1,0 +1,2 @@
+-- Declaration: cartPow_obj
+-- Extracted by StaticSplit

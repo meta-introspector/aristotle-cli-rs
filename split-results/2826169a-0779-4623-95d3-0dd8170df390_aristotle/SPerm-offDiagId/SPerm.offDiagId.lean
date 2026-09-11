@@ -1,0 +1,2 @@
+-- Declaration: SPerm.offDiagId
+-- Extracted by StaticSplit

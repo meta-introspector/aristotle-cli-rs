@@ -1,0 +1,2 @@
+-- Declaration: intrinsic_proximity
+-- Extracted by StaticSplit

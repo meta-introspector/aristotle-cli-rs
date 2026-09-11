@@ -1,0 +1,2 @@
+-- Declaration: kind_ofBool
+-- Extracted by StaticSplit

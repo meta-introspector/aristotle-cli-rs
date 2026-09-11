@@ -1,0 +1,2 @@
+-- Declaration: cl04_finiteDimensional
+-- Extracted by StaticSplit

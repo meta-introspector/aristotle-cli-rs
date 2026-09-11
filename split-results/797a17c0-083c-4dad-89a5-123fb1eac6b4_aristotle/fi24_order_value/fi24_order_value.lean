@@ -1,0 +1,2 @@
+-- Declaration: fi24_order_value
+-- Extracted by StaticSplit

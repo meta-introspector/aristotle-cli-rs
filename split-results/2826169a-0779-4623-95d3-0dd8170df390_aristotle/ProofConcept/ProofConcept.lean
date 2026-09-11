@@ -1,0 +1,2 @@
+-- Declaration: ProofConcept
+-- Extracted by StaticSplit

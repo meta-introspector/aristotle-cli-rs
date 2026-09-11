@@ -1,0 +1,2 @@
+-- Declaration: BeliefMorphism.id
+-- Extracted by StaticSplit

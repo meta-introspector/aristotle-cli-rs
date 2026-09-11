@@ -1,0 +1,2 @@
+-- Declaration: dim_98304x_product
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: superstring_dim_split
+-- Extracted by StaticSplit

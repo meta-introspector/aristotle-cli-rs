@@ -1,0 +1,2 @@
+-- Declaration: PrecedentLog.cumulativeWeight_empty
+-- Extracted by StaticSplit

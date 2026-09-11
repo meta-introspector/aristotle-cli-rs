@@ -1,0 +1,2 @@
+-- Declaration: ResTriple
+-- Extracted by StaticSplit

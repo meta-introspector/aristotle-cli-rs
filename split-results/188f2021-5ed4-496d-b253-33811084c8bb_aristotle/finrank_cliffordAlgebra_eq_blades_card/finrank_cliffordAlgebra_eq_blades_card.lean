@@ -1,0 +1,2 @@
+-- Declaration: finrank_cliffordAlgebra_eq_blades_card
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: offsetEmbed
+-- Extracted by StaticSplit

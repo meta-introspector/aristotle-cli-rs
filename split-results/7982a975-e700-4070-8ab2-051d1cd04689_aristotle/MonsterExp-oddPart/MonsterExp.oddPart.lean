@@ -1,0 +1,2 @@
+-- Declaration: MonsterExp.oddPart
+-- Extracted by StaticSplit

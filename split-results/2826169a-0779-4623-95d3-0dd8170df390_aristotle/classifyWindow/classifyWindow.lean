@@ -1,0 +1,2 @@
+-- Declaration: classifyWindow
+-- Extracted by StaticSplit

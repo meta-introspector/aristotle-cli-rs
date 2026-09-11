@@ -1,0 +1,2 @@
+-- Declaration: Z.double
+-- Extracted by StaticSplit

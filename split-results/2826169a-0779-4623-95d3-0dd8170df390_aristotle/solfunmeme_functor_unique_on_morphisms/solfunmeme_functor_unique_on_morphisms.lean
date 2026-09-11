@@ -1,0 +1,2 @@
+-- Declaration: solfunmeme_functor_unique_on_morphisms
+-- Extracted by StaticSplit

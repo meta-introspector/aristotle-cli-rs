@@ -1,0 +1,2 @@
+-- Declaration: MonomythSignature.isValid
+-- Extracted by StaticSplit

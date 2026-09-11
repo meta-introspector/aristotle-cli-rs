@@ -1,0 +1,2 @@
+-- Declaration: DerivativePoSW
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: dupont
+-- Extracted by StaticSplit

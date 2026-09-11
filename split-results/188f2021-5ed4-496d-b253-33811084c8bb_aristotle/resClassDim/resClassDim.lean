@@ -1,0 +1,2 @@
+-- Declaration: resClassDim
+-- Extracted by StaticSplit

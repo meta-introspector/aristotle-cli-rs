@@ -1,0 +1,2 @@
+-- Declaration: solfunmemeDebugInfo
+-- Extracted by StaticSplit

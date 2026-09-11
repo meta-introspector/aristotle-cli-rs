@@ -1,0 +1,2 @@
+-- Declaration: narrativeEigenvalue
+-- Extracted by StaticSplit

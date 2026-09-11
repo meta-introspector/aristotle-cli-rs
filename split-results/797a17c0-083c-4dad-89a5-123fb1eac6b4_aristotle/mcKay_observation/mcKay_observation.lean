@@ -1,0 +1,2 @@
+-- Declaration: mcKay_observation
+-- Extracted by StaticSplit

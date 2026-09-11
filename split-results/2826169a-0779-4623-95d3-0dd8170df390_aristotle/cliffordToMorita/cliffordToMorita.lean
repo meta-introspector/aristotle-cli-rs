@@ -1,0 +1,2 @@
+-- Declaration: cliffordToMorita
+-- Extracted by StaticSplit

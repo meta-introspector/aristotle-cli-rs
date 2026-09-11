@@ -1,0 +1,2 @@
+-- Declaration: Byte.compare
+-- Extracted by StaticSplit

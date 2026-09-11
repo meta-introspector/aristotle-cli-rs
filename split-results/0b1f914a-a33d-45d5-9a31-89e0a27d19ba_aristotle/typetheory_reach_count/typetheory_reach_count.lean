@@ -1,0 +1,2 @@
+-- Declaration: typetheory_reach_count
+-- Extracted by StaticSplit

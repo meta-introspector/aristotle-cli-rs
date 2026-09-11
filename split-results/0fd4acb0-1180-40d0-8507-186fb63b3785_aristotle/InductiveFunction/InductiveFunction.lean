@@ -1,0 +1,2 @@
+-- Declaration: InductiveFunction
+-- Extracted by StaticSplit

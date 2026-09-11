@@ -1,0 +1,2 @@
+-- Declaration: ThreadId
+-- Extracted by StaticSplit

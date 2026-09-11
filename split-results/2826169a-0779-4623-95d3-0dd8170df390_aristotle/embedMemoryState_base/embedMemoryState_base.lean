@@ -1,0 +1,2 @@
+-- Declaration: embedMemoryState_base
+-- Extracted by StaticSplit

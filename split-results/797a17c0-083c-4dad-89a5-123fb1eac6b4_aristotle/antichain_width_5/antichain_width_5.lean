@@ -1,0 +1,2 @@
+-- Declaration: antichain_width_5
+-- Extracted by StaticSplit

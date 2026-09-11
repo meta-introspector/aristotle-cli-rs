@@ -1,0 +1,2 @@
+-- Declaration: full_lifecycle_bootstrap_success
+-- Extracted by StaticSplit

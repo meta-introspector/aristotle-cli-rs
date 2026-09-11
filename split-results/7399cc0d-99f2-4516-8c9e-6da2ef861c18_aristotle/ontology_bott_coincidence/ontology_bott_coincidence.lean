@@ -1,0 +1,2 @@
+-- Declaration: ontology_bott_coincidence
+-- Extracted by StaticSplit

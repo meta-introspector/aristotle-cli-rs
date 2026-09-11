@@ -1,0 +1,2 @@
+-- Declaration: animNode
+-- Extracted by StaticSplit

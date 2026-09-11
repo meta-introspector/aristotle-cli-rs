@@ -1,0 +1,2 @@
+-- Declaration: bosonic_dim_split
+-- Extracted by StaticSplit

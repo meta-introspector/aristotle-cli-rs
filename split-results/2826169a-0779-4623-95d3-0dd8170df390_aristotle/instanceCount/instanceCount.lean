@@ -1,0 +1,2 @@
+-- Declaration: instanceCount
+-- Extracted by StaticSplit

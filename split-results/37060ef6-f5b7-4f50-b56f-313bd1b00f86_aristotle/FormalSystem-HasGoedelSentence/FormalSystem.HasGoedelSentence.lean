@@ -1,0 +1,2 @@
+-- Declaration: FormalSystem.HasGoedelSentence
+-- Extracted by StaticSplit

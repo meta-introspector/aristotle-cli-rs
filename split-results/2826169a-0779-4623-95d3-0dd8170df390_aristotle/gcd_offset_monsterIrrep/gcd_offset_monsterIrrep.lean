@@ -1,0 +1,2 @@
+-- Declaration: gcd_offset_monsterIrrep
+-- Extracted by StaticSplit

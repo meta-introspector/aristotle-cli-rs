@@ -1,0 +1,2 @@
+-- Declaration: specialLinearEquivKerDet
+-- Extracted by StaticSplit

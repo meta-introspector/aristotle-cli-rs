@@ -1,0 +1,2 @@
+-- Declaration: memetic_atp_ambrosia_culture
+-- Extracted by StaticSplit

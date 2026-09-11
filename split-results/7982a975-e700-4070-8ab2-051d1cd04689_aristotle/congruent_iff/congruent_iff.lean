@@ -1,0 +1,2 @@
+-- Declaration: congruent_iff
+-- Extracted by StaticSplit

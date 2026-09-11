@@ -1,0 +1,2 @@
+-- Declaration: rank_analogy_is_bijective
+-- Extracted by StaticSplit

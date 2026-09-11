@@ -1,0 +1,2 @@
+-- Declaration: max_order_divides_monster
+-- Extracted by StaticSplit

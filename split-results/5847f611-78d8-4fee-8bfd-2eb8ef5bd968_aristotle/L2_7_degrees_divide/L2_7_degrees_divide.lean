@@ -1,0 +1,2 @@
+-- Declaration: L2_7_degrees_divide
+-- Extracted by StaticSplit

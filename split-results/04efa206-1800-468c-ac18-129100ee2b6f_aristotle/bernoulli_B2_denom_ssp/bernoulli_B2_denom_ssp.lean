@@ -1,0 +1,2 @@
+-- Declaration: bernoulli_B2_denom_ssp
+-- Extracted by StaticSplit

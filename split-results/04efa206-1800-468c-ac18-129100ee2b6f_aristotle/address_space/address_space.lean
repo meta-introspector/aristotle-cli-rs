@@ -1,0 +1,2 @@
+-- Declaration: address_space
+-- Extracted by StaticSplit

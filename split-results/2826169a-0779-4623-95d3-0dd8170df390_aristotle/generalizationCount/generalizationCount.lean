@@ -1,0 +1,2 @@
+-- Declaration: generalizationCount
+-- Extracted by StaticSplit

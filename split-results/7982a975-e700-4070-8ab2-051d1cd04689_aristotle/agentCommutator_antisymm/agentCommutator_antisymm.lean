@@ -1,0 +1,2 @@
+-- Declaration: agentCommutator_antisymm
+-- Extracted by StaticSplit

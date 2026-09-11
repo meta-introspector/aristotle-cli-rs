@@ -1,0 +1,2 @@
+-- Declaration: exampleThread
+-- Extracted by StaticSplit

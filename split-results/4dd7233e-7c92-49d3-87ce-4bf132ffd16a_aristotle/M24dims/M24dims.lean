@@ -1,0 +1,2 @@
+-- Declaration: M24dims
+-- Extracted by StaticSplit

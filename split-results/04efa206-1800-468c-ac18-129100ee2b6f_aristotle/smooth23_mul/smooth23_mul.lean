@@ -1,0 +1,2 @@
+-- Declaration: smooth23_mul
+-- Extracted by StaticSplit

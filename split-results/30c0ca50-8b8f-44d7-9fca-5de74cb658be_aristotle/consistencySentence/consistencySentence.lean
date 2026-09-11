@@ -1,0 +1,2 @@
+-- Declaration: consistencySentence
+-- Extracted by StaticSplit

@@ -1,0 +1,2 @@
+-- Declaration: chart_checksum
+-- Extracted by StaticSplit

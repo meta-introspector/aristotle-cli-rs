@@ -1,0 +1,2 @@
+-- Declaration: ssBasis
+-- Extracted by StaticSplit

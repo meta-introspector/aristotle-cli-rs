@@ -1,0 +1,2 @@
+-- Declaration: heckeOpInt_eq
+-- Extracted by StaticSplit
