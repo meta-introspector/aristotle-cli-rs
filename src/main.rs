@@ -6780,9 +6780,13 @@ async fn main() -> Result<()> {
             info!("Executing results command");
             cmd_results()?
         }
-        Commands::Clean => {
+        Commands::Clean { lakes } => {
             info!("Executing clean command");
-            cmd_clean()?
+            cmd_clean(lakes)?
+        }
+        Commands::Worktree { list, repo, upstream, dry_run } => {
+            info!("Executing worktree command");
+            cmd_worktree(*list, repo.clone(), upstream.clone(), *dry_run)?
         }
         Commands::Dedup { root, dry_run, execute } => {
             info!("Executing dedup command");
