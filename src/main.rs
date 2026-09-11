@@ -425,8 +425,23 @@ enum Commands {
         #[arg(long)]
         config_dir: Option<PathBuf>,
     },
-    /// Clean build artifacts
-    Clean,
+    /// Clean build artifacts (remove .lake directories from all projects)
+    Clean {
+        /// Also remove .lake directories from project trees
+        #[arg(long)]
+        lakes: bool,
+    },
+    /// Git worktree management (follow ~/gitplan.org)
+    Worktree {
+        #[arg(long)]
+        list: bool,
+        #[arg(long)]
+        repo: Option<String>,
+        #[arg(long)]
+        upstream: Option<String>,
+        #[arg(long)]
+        dry_run: bool,
+    },
     /// Dedup duplicate project dirs (group by description, keep canonical, archive rest)
     Dedup {
         /// Root containing the UUID project dirs (default: cwd)
@@ -799,7 +814,7 @@ fn cmd_results() -> Result<()> {
 }
 
 #[instrument]
-fn cmd_clean() -> Result<()> {
+fn cmd_clean(lakes: bool) -> Result<()> {
     let config = load_config()?;
     let result_file = config.base_dir.join("result.txt");
     if result_file.exists() {
@@ -810,6 +825,168 @@ fn cmd_clean() -> Result<()> {
         info!("No result file found to clean");
         println!("No result file found.");
     }
+
+    // Remove .lake directories from all projects
+    if lakes {
+        let results_dir = config.results_dir.clone();
+        let mut removed = 0u64;
+        for entry in fs::read_dir(&results_dir)? {
+            let entry = entry?;
+            if entry.file_type()?.is_dir() {
+                let name = entry.file_name();
+                if name.to_string_lossy().ends_with("_aristotle") {
+                    let lake_dir = entry.path().join("output-final_aristotle").join(".lake");
+                    if lake_dir.exists() {
+                        fs::remove_dir_all(&lake_dir)?;
+                        info!(path = %lake_dir.display(), "Removed .lake directory");
+                        removed += 1;
+                    }
+                    // Also check RequestProject/.lake
+                    let rp_lake = entry.path().join("RequestProject").join(".lake");
+                    if rp_lake.exists() {
+                        fs::remove_dir_all(&rp_lake)?;
+                        info!(path = %rp_lake.display(), "Removed .lake directory");
+                        removed += 1;
+                    }
+                }
+            }
+        }
+        println!("Removed {} .lake directories from {} projects", removed, results_dir.display());
+    }
+
+    Ok(())
+}
+
+#[instrument(skip(list_repo, upstream, dry_run))]
+fn cmd_worktree(list: bool, list_repo: Option<String>, upstream: Option<String>, dry_run: bool) -> Result<()> {
+    let git_home = PathBuf::from("/home/mdupont/git");
+    let plan_file = git_home.join("github.com").join("sub0xdai").join("n0x-pi.git");
+    
+    if !plan_file.exists() {
+        println!("GitHub repo not found at {}", plan_file.display());
+        println!("Please clone it first or specify a different repo.");
+        return Ok(());
+    }
+    
+    if list {
+        println!("Available repos:");
+        if let Some(ref repo) = list_repo {
+            println!("  {} (specified)", repo);
+        } else {
+            // List all repos in ~/git/github.com/
+            if let Ok(entries) = fs::read_dir(git_home.join("github.com")) {
+                for entry in entries.filter_map(|e| e.ok()) {
+                    if entry.file_type()?.is_dir() {
+                        let name = entry.file_name().to_string_lossy().to_string();
+                        if name.contains(".git") {
+                            println!("  {}", name.replace(".git", ""));
+                        }
+                    }
+                }
+            }
+        }
+        return Ok(());
+    }
+    
+    let repo_path = if let Some(ref repo) = list_repo {
+        // Use specified repo path
+        if repo.starts_with("http") {
+            // Clone it
+            let clone_dir = git_home.join("temp_repo");
+            if clone_dir.exists() {
+                fs::remove_dir_all(&clone_dir)?;
+            }
+            fs::create_dir_all(&clone_dir)?;
+            // Clone with minimal history
+            Command::new("git")
+                .args(["clone", "--depth", "1", repo, clone_dir.to_str().unwrap()])
+                .output()
+                .context("Failed to clone repo")?;
+            clone_dir
+        } else {
+            // Treat as local path
+            PathBuf::from(repo)
+        }
+    } else {
+        // Default to the n0x-pi mirror
+        git_home.join("github.com").join("sub0xdai").join("n0x-pi.git")
+    };
+    
+    if !repo_path.exists() {
+        println!("Repo not found at {}", repo_path.display());
+        return Ok(());
+    }
+    
+    println!("Working with repo: {}", repo_path.display());
+    
+    // Check if worktree already exists
+    let worktree_dir = PathBuf::from("/mnt/data1/time-2026/05-may/07/n0x-pi");
+    if worktree_dir.exists() {
+        println!("Worktree already exists at {}", worktree_dir.display());
+        
+        // Update remote if upstream is specified
+        if let Some(ref upstream_url) = upstream {
+            println!("Updating remote 'origin' to: {}", upstream_url);
+            let _ = Command::new("git")
+                .args(["-C", worktree_dir.to_str().unwrap(), "remote", "set-url", "origin", upstream_url])
+                .output();
+            
+            // Fetch latest
+            println!("Fetching updates...");
+            let _ = Command::new("git")
+                .args(["-C", worktree_dir.to_str().unwrap(), "fetch", "--all"])
+                .output();
+            
+            // Reset hard
+            println!("Resetting to upstream/main...");
+            let _ = Command::new("git")
+                .args(["-C", worktree_dir.to_str().unwrap(), "reset", "--hard", "origin/main"])
+                .output();
+        }
+    } else {
+        // Create new worktree
+        if dry_run {
+            println!("[DRY RUN] Would create worktree at {}", worktree_dir.display());
+            println!("[DRY RUN] Would add remote 'origin' -> {}", upstream.unwrap_or_else(|| "https://github.com/meta-introspector/n0x-pi.git".to_string()));
+        } else {
+            // Create the parent directory
+            fs::create_dir_all("/mnt/data1/time-2026/05-may/07")?;
+            
+            // Clone the repo as a worktree (with minimal history)
+            println!("Creating worktree at {}", worktree_dir.display());
+            Command::new("git")
+                .args([
+                    "-C", git_home.join("github.com").join("sub0xdai").join("n0x-pi.git").to_str().unwrap(),
+                    "worktree", "add", worktree_dir.to_str().unwrap(), "main"
+                ])
+                .output()
+                .context("Failed to create worktree")?;
+            
+            // Add upstream remote if specified
+            let upstream_url = upstream.unwrap_or_else(|| "https://github.com/meta-introspector/n0x-pi.git".to_string());
+            println!("Adding remote 'origin' -> {}", upstream_url);
+            Command::new("git")
+                .args(["-C", worktree_dir.to_str().unwrap(), "remote", "add", "origin", &upstream_url])
+                .output()
+                .context("Failed to add remote")?;
+            
+            // Fetch from origin
+            println!("Fetching from origin...");
+            Command::new("git")
+                .args(["-C", worktree_dir.to_str().unwrap(), "fetch", "origin"])
+                .output()
+                .context("Failed to fetch")?;
+            
+            // Reset to origin/main
+            println!("Resetting to origin/main...");
+            Command::new("git")
+                .args(["-C", worktree_dir.to_str().unwrap(), "reset", "--hard", "origin/main"])
+                .output()
+                .context("Failed to reset")?;
+        }
+    }
+    
+    println!("Worktree operations completed.");
     Ok(())
 }
 
