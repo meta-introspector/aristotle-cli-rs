@@ -6718,7 +6718,14 @@ async fn main() -> Result<()> {
         }
         Commands::Submit { prompt, project_dir, wait } => {
             info!("Executing submit command");
-            cmd_submit(prompt, project_dir.clone(), *wait)?;
+            // cmd_submit uses reqwest::blocking, which panics if its runtime
+            // is dropped inside the async main context — run it on a blocking thread.
+            let p = prompt.clone();
+            let pd = project_dir.clone();
+            let w = *wait;
+            tokio::task::spawn_blocking(move || cmd_submit(&p, pd, w))
+                .await
+                .map_err(|e| anyhow::anyhow!("submit task join error: {}", e))??;
         }
         Commands::GitSync { project_id, repo_dir, from_commit, to_commit, force, dry_run, ext } => {
             info!("Executing git-sync command");
