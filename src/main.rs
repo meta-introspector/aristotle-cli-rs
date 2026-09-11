@@ -17,6 +17,10 @@ use tracing::{debug, error, info, instrument, warn};
 use tracing_subscriber::{EnvFilter, fmt};
 use walkdir::WalkDir;
 
+mod accounts;
+mod api;
+mod cmd;
+mod config;
 mod fetch;
 mod file_index;
 mod index;
@@ -423,6 +427,18 @@ enum Commands {
     },
     /// Clean build artifacts
     Clean,
+    /// Dedup duplicate project dirs (group by description, keep canonical, archive rest)
+    Dedup {
+        /// Root containing the UUID project dirs (default: cwd)
+        #[arg(long)]
+        root: Option<PathBuf>,
+        /// Report what would be archived without moving anything
+        #[arg(long)]
+        dry_run: bool,
+        /// Actually archive the duplicates (moves to dedup-archive/<date>/)
+        #[arg(long)]
+        execute: bool,
+    },
     /// Index all Aristotle runs into DASL-compatible blocks.json
     Index {
         #[arg(long)]
@@ -646,6 +662,34 @@ enum ConfigureCommands {
         api_key: Option<String>,
     },
     Show,
+    /// Manage named API accounts (multi-token support).
+    Account {
+        #[command(subcommand)]
+        subcommand: AccountCommands,
+    },
+}
+
+#[derive(Subcommand)]
+enum AccountCommands {
+    /// Add or update an account.
+    Add {
+        name: String,
+        /// Inline API key (prefer --key-file to keep secrets out of config.toml).
+        #[arg(long)]
+        key: Option<String>,
+        /// Path to a file containing the API key.
+        #[arg(long)]
+        key_file: Option<PathBuf>,
+        /// Optional per-account API base URL override.
+        #[arg(long)]
+        base_url: Option<String>,
+    },
+    /// List configured accounts (keys masked).
+    List,
+    /// Set the default account.
+    Use { name: String },
+    /// Remove an account.
+    Remove { name: String },
 }
 
 #[derive(Subcommand, Clone)]
@@ -825,7 +869,28 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
             println!("  Max parallel downloads: {}", config.max_parallel_downloads);
             println!("  Retry wait seconds:   {}", config.retry_wait_seconds);
             println!("  Max retries:          {}", config.max_retries);
+            println!();
+            println!("Accounts:");
+            for line in accounts::describe_accounts()? {
+                println!("  {}", line);
+            }
         }
+        ConfigureCommands::Account { subcommand } => match subcommand {
+            AccountCommands::Add { name, key, key_file, base_url } => {
+                accounts::upsert_account(name, key.as_deref(), key_file.as_ref(), base_url.as_deref())?;
+            }
+            AccountCommands::List => {
+                for line in accounts::describe_accounts()? {
+                    println!("{}", line);
+                }
+            }
+            AccountCommands::Use { name } => {
+                accounts::use_account(name)?;
+            }
+            AccountCommands::Remove { name } => {
+                accounts::remove_account(name)?;
+            }
+        },
     }
     Ok(())
 }
@@ -6541,6 +6606,10 @@ async fn main() -> Result<()> {
         Commands::Clean => {
             info!("Executing clean command");
             cmd_clean()?
+        }
+        Commands::Dedup { root, dry_run, execute } => {
+            info!("Executing dedup command");
+            cmd::dedup::cmd_dedup(root.clone(), *dry_run, *execute)?
         }
         Commands::Index { output } => {
             info!("Executing index command");

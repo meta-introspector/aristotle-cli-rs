@@ -7,4 +7,5 @@
 
 pub mod clean;
 pub mod configure;
+pub mod dedup;
 pub mod results;
