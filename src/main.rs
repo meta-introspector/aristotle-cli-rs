@@ -6782,7 +6782,7 @@ async fn main() -> Result<()> {
         }
         Commands::Clean { lakes } => {
             info!("Executing clean command");
-            cmd_clean(lakes)?
+            cmd_clean(*lakes)?
         }
         Commands::Worktree { list, repo, upstream, dry_run } => {
             info!("Executing worktree command");
