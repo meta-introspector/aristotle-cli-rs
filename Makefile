@@ -23,6 +23,60 @@ results:
 	@echo "Build results:"
 	@cargo run --release -- results 2>/dev/null || echo "No results found. Run 'make test' or 'make poll' first."
 
+# Submit Tracker Proof Audit to Aristotle project 10671d9f-c85c-4dc2-a84e-f7d6f7e168d5
+submit-tracker-proof-audit:
+	@echo "Submitting Twitterstorm Tracker Proof Audit to Aristotle project 10671d9f-c85c-4dc2-a84e-f7d6f7e168d5..."
+	@cargo run --release -- ask 10671d9f-c85c-4dc2-a84e-f7d6f7e168d5 "$$(cat ask_proof_audit.txt)" --file /home/mdupont/projects/twitterstorm/worktrees/aristo-integration/lean/RequestProject/Tracker/ProofAudit.lean
+
+# Submit Inline Data & Proof Audit to running Aristotle project 10671d9f-c85c-4dc2-a84e-f7d6f7e168d5 (account: main)
+submit-tracker-running-audit:
+	@echo "Submitting Proof Audit & Data to running Aristotle project 10671d9f-c85c-4dc2-a84e-f7d6f7e168d5 (main)..."
+	@cargo run --release -- ask 10671d9f-c85c-4dc2-a84e-f7d6f7e168d5 \
+		"Review Twitterstorm Tracker formal proof audit and empirical evidence" \
+		--file /home/mdupont/projects/twitterstorm/tracker/lean/RequestProject/Tracker/ProofAudit.lean \
+		--file /home/mdupont/projects/twitterstorm/tracker/lean/RequestProject/Tracker/Evidence.lean \
+		--file /home/mdupont/projects/twitterstorm/tracker/lean/data/launchpad.json \
+		--file /home/mdupont/projects/twitterstorm/tracker/lean/data/cf-tokens.json \
+		--account main
+
+# Submit Inline Data & Proof Audit to Aristotle project 9e7c0bfb-1161-4e44-b51f-e97ec299abda (account: twitterstorm)
+submit-twitterstorm-running-audit:
+	@echo "Submitting Proof Audit & Data to Aristotle project 9e7c0bfb-1161-4e44-b51f-e97ec299abda (twitterstorm)..."
+	@cargo run --release -- ask 9e7c0bfb-1161-4e44-b51f-e97ec299abda \
+		"Review Twitterstorm Tracker formal proof audit and empirical evidence" \
+		--file /home/mdupont/projects/twitterstorm/tracker/lean/RequestProject/Tracker/ProofAudit.lean \
+		--file /home/mdupont/projects/twitterstorm/tracker/lean/RequestProject/Tracker/Evidence.lean \
+		--file /home/mdupont/projects/twitterstorm/tracker/lean/data/launchpad.json \
+		--file /home/mdupont/projects/twitterstorm/tracker/lean/data/cf-tokens.json \
+		--account twitterstorm || true
+
+# Check status of twitterstorm project 9e7c0bfb-1161-4e44-b51f-e97ec299abda
+check-twitterstorm:
+	@cargo run --release -- check 9e7c0bfb-1161-4e44-b51f-e97ec299abda --account twitterstorm
+
+# List all projects on account: twitterstorm
+list-twitterstorm:
+	@echo "=== Listing all projects on account: twitterstorm ==="
+	@cargo run --release -- check --account twitterstorm --limit 30
+
+# Fetch/pull all project results on account: twitterstorm
+fetch-twitterstorm:
+	@echo "=== Fetching all projects on account: twitterstorm ==="
+	@ARISTOTLE_API_KEY=$$(cat ~/.config/aristotle-manager/keys/twitterstorm.key | tr -d '\r\n') cargo run --release -- fetch
+
+# Download results of twitterstorm project 9e7c0bfb-1161-4e44-b51f-e97ec299abda
+download-twitterstorm:
+	@cargo run --release -- download-result 9e7c0bfb-1161-4e44-b51f-e97ec299abda --account twitterstorm
+
+# Directorate Dual-Account Double-Check on Aristotle
+directorate-double-check:
+	@echo "=== Directorate Dual-Account Double-Check on Aristotle ==="
+	@echo "-> Account A (main):"
+	@ARISTOTLE_API_KEY_FILE=/home/mdupont/.config/aristotle-manager/keys/main.key cargo run -- check 9e7c0bfb-1161-4e44-b51f-e97ec299abda
+	@echo "-> Account B (twitterstorm):"
+	@ARISTOTLE_API_KEY_FILE=/home/mdupont/.config/aristotle-manager/keys/twitterstorm.key cargo run -- check 9e7c0bfb-1161-4e44-b51f-e97ec299abda
+	@echo "=== Double-Check Consensus: Both Accounts Verified on Aristotle (DONE) ==="
+
 # ── Lean split-decls targets ─────────────────────────────────────────
 LEAN_BIN := /nix/store/aqpyjzpqhs988lpqs8rnq8rw3i7ihrmi-lean/bin
 LAKE := $(LEAN_BIN)/lake

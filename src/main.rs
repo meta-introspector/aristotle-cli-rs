@@ -62,12 +62,13 @@ fn get_api_key() -> Result<String> {
     if let Some(key) = &*API_KEY.read().unwrap() {
         debug!("API key retrieved from static store");
         Ok(key.clone())
+    } else if let Ok(key) = env::var("ARISTOTLE_API_KEY") {
+        if !key.trim().is_empty() {
+            return Ok(key.trim().to_string());
+        }
+        accounts::resolve_api_key(None)
     } else {
-        env::var("ARISTOTLE_API_KEY")
-            .map_err(|_| {
-                error!("API key not set in env or static store");
-                anyhow::anyhow!("API key not set. Set ARISTOTLE_API_KEY or use configure set")
-            })
+        accounts::resolve_api_key(None)
     }
 }
 
@@ -148,6 +149,8 @@ enum Commands {
     },
     /// Ask Aristotle with Lean4 proof files attached
     AskWithFiles {
+        #[arg(long)]
+        account: Option<String>,
         project_id: String,
         prompt: String,
         #[arg(long)]
@@ -322,6 +325,8 @@ enum Commands {
     },
     /// Check status of a submitted Aristotle project
     Check {
+        #[arg(long)]
+        account: Option<String>,
         /// Project ID to check (omit to list recent)
         project_id: Option<String>,
         #[arg(long)]
@@ -355,6 +360,8 @@ enum Commands {
     },
     /// Download results from a completed Aristotle project
     DownloadResult {
+        #[arg(long)]
+        account: Option<String>,
         /// Project ID to download
         project_id: String,
         #[arg(long)]
@@ -526,14 +533,27 @@ enum Commands {
         #[arg(long)]
         output_dir: Option<PathBuf>,
     },
-    /// Send instructions to a running Aristotle project (injects files inline)
+    /// Send instructions to an Aristotle project (inline if running, attached if idle)
     Ask {
+        #[arg(long)]
+        account: Option<String>,
         project_id: String,
         prompt: String,
-        #[arg(long)]
-        file: Option<PathBuf>,
-        #[arg(long)]
+        /// Single file or multiple files to send
+        #[arg(long = "file", action = clap::ArgAction::Append)]
+        file: Vec<PathBuf>,
+        /// Directory containing files to send (scanned recursively for code/data files)
+        #[arg(long = "dir", action = clap::ArgAction::Append)]
+        dir: Vec<PathBuf>,
+        /// Legacy alias for directory of files
+        #[arg(long = "inject-dir")]
         inject_dir: Option<PathBuf>,
+        /// Force inline mode even if project is stopped
+        #[arg(long)]
+        inline: bool,
+        /// Force attachment mode even if project is running
+        #[arg(long)]
+        attach: bool,
     },
     /// Patch mode: watch a running Aristotle project, detect prereq gaps, fill them
     Patch {
@@ -3435,9 +3455,9 @@ fn cmd_git_sync(
 /// ── Check command: query project status from Aristotle API ──────────
 
 #[instrument(skip(project_id))]
-async fn cmd_check(project_id: Option<String>, limit: Option<usize>, verbose: bool) -> Result<()> {
+async fn cmd_check(project_id: Option<String>, limit: Option<usize>, verbose: bool, account: Option<&str>) -> Result<()> {
     let config = load_config()?;
-    let api_key = get_api_key()?;
+    let api_key = accounts::resolve_api_key(account)?;
     let client = Client::builder()
         .timeout(Duration::from_secs(30))
         .build()
@@ -3720,9 +3740,9 @@ fn cmd_overlap(reference: String, min_shared: usize, top: usize) -> Result<()> {
 
 /// ── Download result from a completed Aristotle project ─────────
 
-async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>, verbose: bool) -> Result<()> {
+async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>, verbose: bool, account: Option<&str>) -> Result<()> {
     let config = load_config()?;
-    let api_key = get_api_key()?;
+    let api_key = accounts::resolve_api_key(account)?;
     let results_dir = output_dir.unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
     fs::create_dir_all(&results_dir)?;
     let client = Client::builder().timeout(Duration::from_secs(300)).build()?;
@@ -4030,53 +4050,166 @@ async fn cmd_serve_project(
     }
 }
 
-/// ── Ask: send instructions to a running Aristotle project ────────
+/// ── Ask: send instructions to an Aristotle project ────────
+///
+/// 1. If project is running: inlines files with clear headers (`=== File: ... ===`)
+/// 2. If project is idle: attaches files in batches of 5 via API payload
+/// 3. Resolves prompt files directly in Rust (supports `@file` or direct path), eliminating heredoc bugs
+/// 4. Sends all text/code files (.lean, .json, .md, .txt, .toml, .ts, .js, .py, .sh), not only .lean
 
-fn cmd_ask(project_id: String, prompt: String, file: Option<PathBuf>, inject_dir: Option<PathBuf>) -> Result<()> {
+fn cmd_ask(
+    project_id: String,
+    prompt: String,
+    files: Vec<PathBuf>,
+    dirs: Vec<PathBuf>,
+    inject_dir: Option<PathBuf>,
+    account: Option<String>,
+    force_inline: bool,
+    force_attach: bool,
+) -> Result<()> {
+    let api_key = accounts::resolve_api_key(account.as_deref())?;
 
-    let api_key = get_api_key()?;
-
-    // Build the prompt — optionally inject file content
-    let final_prompt = if let Some(ref f) = file {
-        let content = std::fs::read_to_string(f)
-            .context("Failed to read inject file")?;
-        let fname = f.file_name().unwrap_or_default().to_string_lossy();
-        if prompt.contains("{file}") {
-            prompt.replace("{file}", &format!("=== {} ===\n{}\n=== END FILE ===", fname, content))
-        } else {
-            format!("{}\n\n=== {} ===\n{}\n=== END FILE ===", prompt, fname, content)
-        }
+    // 1. Resolve prompt in Rust (eliminating bash heredoc / cat issues):
+    let raw_prompt = if prompt.starts_with('@') {
+        let p = Path::new(&prompt[1..]);
+        info!("Reading prompt from file {:?}", p);
+        fs::read_to_string(p).with_context(|| format!("Failed to read prompt file {:?}", p))?
+    } else if Path::new(&prompt).is_file() {
+        info!("Reading prompt from file {:?}", prompt);
+        fs::read_to_string(&prompt).with_context(|| format!("Failed to read prompt file {:?}", prompt))?
     } else {
-        prompt.to_string()
+        prompt
     };
 
-    info!("Asking project {}: {}...", project_id, &final_prompt[..final_prompt.len().min(80)]);
-    
-    let ask_result = ask_aristotle_sync(&api_key, &project_id, &final_prompt);
-    match ask_result {
-        Ok(resp) => println!("{}", resp),
-        Err(e) => eprintln!("Ask failed: {}", e),
+    // 2. Collect all files from files, dirs, and inject_dir:
+    let mut all_dirs = dirs;
+    if let Some(id) = inject_dir {
+        all_dirs.push(id);
     }
 
-    // Batch inject: iterate all .lean files in a directory
-    if let Some(ref dir) = inject_dir {
-        let entries: Vec<_> = std::fs::read_dir(dir)
-            .context("Failed to read inject_dir")?
-            .filter_map(|e| e.ok())
-            .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
-            .collect();
-        for entry in &entries {
-            let path = entry.path();
-            let content = std::fs::read_to_string(&path)
-                .with_context(|| format!("Failed to read {:?}", path))?;
-            let fname = path.file_name().unwrap_or_default().to_string_lossy();
-            let ask_prompt = format!("File: {}\n\n=== {} ===\n{}\n=== END FILE ===", fname, fname, content);
-            match ask_aristotle_sync(&api_key, &project_id, &ask_prompt) {
-                Ok(_) => {}
-                Err(e) => eprintln!("  Failed to inject: {} — {}", fname, e),
+    let mut collected: Vec<(String, String)> = Vec::new();
+
+    // From explicit files:
+    for f in &files {
+        if f.is_file() {
+            let content = fs::read_to_string(f)
+                .with_context(|| format!("Failed to read file {:?}", f))?;
+            let fname = f.file_name().unwrap_or_default().to_string_lossy().to_string();
+            collected.push((fname, content));
+        } else {
+            warn!("Specified file {:?} does not exist or is not a regular file", f);
+        }
+    }
+
+    // From directories (all code/data files, not only .lean):
+    let text_extensions = [
+        "lean", "json", "md", "txt", "toml", "yaml", "yml",
+        "ts", "js", "mjs", "cjs", "py", "sh", "rs"
+    ];
+    for d in &all_dirs {
+        if d.is_dir() {
+            for entry in WalkDir::new(d).into_iter().filter_map(|e| e.ok()) {
+                let path = entry.path();
+                if path.is_file() {
+                    let ext = path.extension().and_then(|s| s.to_str()).unwrap_or("");
+                    if text_extensions.contains(&ext) {
+                        let rel = path.strip_prefix(d).unwrap_or(path);
+                        let fname = rel.to_string_lossy().to_string();
+                        let content = fs::read_to_string(path)
+                            .with_context(|| format!("Failed to read file {:?}", path))?;
+                        collected.push((fname, content));
+                    }
+                }
+            }
+        } else {
+            warn!("Specified directory {:?} does not exist", d);
+        }
+    }
+
+    println!("Collected {} file(s) to send with prompt", collected.len());
+
+    // 3. Check project status (just like cmd_git_sync):
+    let is_running = check_project_status(&api_key, &project_id)?;
+    info!(is_running, "Project status for ask");
+
+    let use_inline = force_inline || (!force_attach && is_running);
+
+    if use_inline {
+        println!("Project is running (or --inline) — formatting files inline with headers...");
+        let mut final_prompt = raw_prompt;
+        if !collected.is_empty() {
+            let mut inline_blocks = String::new();
+            for (fname, content) in &collected {
+                inline_blocks.push_str(&format!(
+                    "\n\n=== File: {} ===\n{}\n=== END FILE ===\n",
+                    fname, content
+                ));
+            }
+
+            if final_prompt.contains("{file}") {
+                final_prompt = final_prompt.replace("{file}", &inline_blocks);
+            } else if final_prompt.contains("{files}") {
+                final_prompt = final_prompt.replace("{files}", &inline_blocks);
+            } else {
+                final_prompt.push_str(&inline_blocks);
             }
         }
-        println!("Injected {} files into project {}", entries.len(), project_id);
+
+        info!("Sending inline prompt ({} bytes) via ask_aristotle_sync...", final_prompt.len());
+        let resp = ask_aristotle_sync(&api_key, &project_id, &final_prompt)?;
+        println!("\n=== Aristotle Response ===");
+        println!("{}", resp);
+    } else {
+        println!("Project is idle (or --attach) — sending files via API attachment payload...");
+        if collected.is_empty() {
+            let resp = ask_aristotle_sync(&api_key, &project_id, &raw_prompt)?;
+            println!("\n=== Aristotle Response ===");
+            println!("{}", resp);
+        } else {
+            let total = collected.len();
+            let chunks: Vec<_> = collected.chunks(5).collect();
+            let num_batches = chunks.len();
+
+            for (i, chunk) in chunks.iter().enumerate() {
+                if i > 0 {
+                    println!("  Waiting for project to become idle before next batch...");
+                    let idle = wait_for_idle(&api_key, &project_id, 10, 300)?;
+                    if !idle {
+                        eprintln!("  ✗ Project did not become idle within timeout, stopping");
+                        break;
+                    }
+                }
+
+                let batch_prompt = if i == 0 {
+                    raw_prompt.clone()
+                } else {
+                    format!("Additional batch {}/{} of files for project incorporation.", i + 1, num_batches)
+                };
+
+                println!("  + Sending batch {}/{} ({} files)...", i + 1, num_batches, chunk.len());
+                let result = ask_aristotle_with_files(
+                    &api_key,
+                    &project_id,
+                    &batch_prompt,
+                    None,
+                    None,
+                    Some(chunk),
+                );
+                match result {
+                    Ok(resp) => {
+                        println!("  ✓ Batch {}/{} delivered successfully", i + 1, num_batches);
+                        if i == chunks.len() - 1 {
+                            println!("\n=== Aristotle Final Response ===");
+                            println!("{}", resp);
+                        }
+                    }
+                    Err(e) => {
+                        eprintln!("  ✗ Batch {}/{} failed: {}", i + 1, num_batches, e);
+                        return Err(e);
+                    }
+                }
+            }
+        }
     }
 
     Ok(())
@@ -6731,14 +6864,14 @@ async fn main() -> Result<()> {
             info!("Executing git-sync command");
             cmd_git_sync(project_id.clone(), repo_dir.clone(), from_commit.clone(), to_commit.clone(), *force, *dry_run, ext.clone())?;
         }
-        Commands::Check { project_id, limit, trace, verbose } => {
+        Commands::Check { project_id, limit, trace, verbose, account } => {
             info!(?project_id, ?limit, trace, "Executing check command");
             let resolved = if let Some(id) = project_id {
                 Some(resolve_project_id(id)?)
             } else {
                 None
             };
-            cmd_check(resolved, *limit, *verbose).await?;
+            cmd_check(resolved, *limit, *verbose, account.as_deref()).await?;
         }
         Commands::DaslStatus { filter, sorries_only } => {
             info!(?filter, sorries_only, "Executing dasl-status command");
@@ -6748,10 +6881,10 @@ async fn main() -> Result<()> {
             info!(reference, min_shared, top, "Executing overlap command");
             cmd_overlap(reference.clone(), *min_shared, *top)?;
         }
-        Commands::DownloadResult { project_id, output_dir, verbose } => {
+        Commands::DownloadResult { project_id, output_dir, verbose, account } => {
             info!("Executing download-result command");
             let resolved = resolve_project_id(project_id)?;
-            cmd_download_result(&resolved, output_dir.clone(), *verbose).await?;
+            cmd_download_result(&resolved, output_dir.clone(), *verbose, account.as_deref()).await?;
         }
         Commands::Deploy { project_id, output_dir, max_size, ignore, ignore_file, url, dry_run, private } => {
             info!("Executing deploy command");
@@ -6763,10 +6896,19 @@ async fn main() -> Result<()> {
             let resolved = resolve_project_id(project_id)?;
             cmd_serve_project(&resolved, *port, host.clone(), dir.clone()).await?;
         }
-        Commands::Ask { project_id, prompt, file, inject_dir } => {
+        Commands::Ask { project_id, prompt, file, dir, inject_dir, account, inline, attach } => {
             info!("Executing ask command");
             let resolved = resolve_project_id(project_id)?;
-            cmd_ask(resolved, prompt.clone(), file.clone(), inject_dir.clone())?;
+            let p = prompt.clone();
+            let f = file.clone();
+            let d = dir.clone();
+            let id = inject_dir.clone();
+            let acc = account.clone();
+            let inl = *inline;
+            let att = *attach;
+            tokio::task::spawn_blocking(move || {
+                cmd_ask(resolved, p, f, d, id, acc, inl, att)
+            }).await??;
         }
         Commands::Patch { project_id, prereq_dir, interval, max_rounds } => {
             info!("Executing patch command");
@@ -6905,9 +7047,9 @@ async fn main() -> Result<()> {
             info!("Executing load-decls");
             repl::cmd_load_decls(dir.clone(), *dry_run)?;
         }
-        Commands::AskWithFiles { project_id, prompt, files_dir, file } => {
+        Commands::AskWithFiles { project_id, prompt, files_dir, file, account } => {
             info!("Executing ask-with-files");
-            let api_key = get_api_key()?;
+            let api_key = accounts::resolve_api_key(account.as_deref())?;
             let resolved = resolve_project_id(project_id)?;
             let result = ask_aristotle_with_files(&api_key, &resolved, prompt, files_dir.as_ref(), file.as_ref(), None)?;
             println!("{}", result);
