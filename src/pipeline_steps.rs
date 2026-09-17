@@ -1,9 +1,9 @@
-use std::collections::{BTreeMap, HashMap, HashSet};
-use std::fs;
-use std::path::{Path, PathBuf};
 use anyhow::{Context, Result};
 use regex::Regex;
 use serde::Serialize;
+use std::collections::{BTreeMap, HashMap, HashSet};
+use std::fs;
+use std::path::{Path, PathBuf};
 use tracing::{debug, info, instrument, warn};
 use walkdir::WalkDir;
 
@@ -11,11 +11,16 @@ use walkdir::WalkDir;
 
 /// j-invariant q-expansion bands (canonical Sage truncation)
 const J_BANDS: &[(&str, u64, u64, &str)] = &[
-    ("q⁻¹",   0,      0,      "Identity origin"),
-    ("q⁰",    2,     31,      "Foundation: 744 = 2³×3×31"),
-    ("q¹",   32,   1823,      "Monster emergence: 196884 = 2²×3³×1823"),
-    ("q²", 1824,   2099,      "Moonshine harmonics: 21493760 = 2⁸×5×2099"),
-    ("q³", 2100, 355679,      "Higher irreps: 864299970"),
+    ("q⁻¹", 0, 0, "Identity origin"),
+    ("q⁰", 2, 31, "Foundation: 744 = 2³×3×31"),
+    ("q¹", 32, 1823, "Monster emergence: 196884 = 2²×3³×1823"),
+    (
+        "q²",
+        1824,
+        2099,
+        "Moonshine harmonics: 21493760 = 2⁸×5×2099",
+    ),
+    ("q³", 2100, 355679, "Higher irreps: 864299970"),
     ("O(q⁴)", 355680, u64::MAX, "Transcendental tail"),
 ];
 
@@ -64,7 +69,9 @@ fn extract_integers(content: &str) -> Vec<u64> {
     for ch in content.chars() {
         if ch.is_ascii_digit() {
             in_num = true;
-            current = current.saturating_mul(10).saturating_add((ch as u8 - b'0') as u64);
+            current = current
+                .saturating_mul(10)
+                .saturating_add((ch as u8 - b'0') as u64);
         } else if in_num {
             if current > 1 && current < 1_000_000_000 {
                 nums.push(current);
@@ -82,15 +89,28 @@ fn extract_integers(content: &str) -> Vec<u64> {
 /// Check if a declaration name is hash-noise (compiler internals, not math)
 fn is_hash_noise(name: &str) -> bool {
     let patterns = [
-        "Lean_PersistentHashMap", "Lean_PHash", "Lean_instInhabited",
-        "Lean_SMap", "Std_HashMap", "Std_HashSet", "Lean_KeyedDecls",
-        "Lean_ScopedEnvExtension", "Lean_PersistentEnvExtension",
-        "Lean_SimplePersistentEnvExtension", "Lean_instMonad",
-        "Lean_MonadCache", "Lean_instNonempty", "Lean_instExcept",
-        "Lean_instToExpr", "Lean_instToMessageData",
-        "Lean_instInhabitedOption", "Lean_instInhabitedPersistentArray",
-        "Lean_instInhabitedPersistentEnv", "Lean_instInhabitedScopedEnvExtension",
-        "Lean_instInhabitedStateStack", "Lean_instAddErrorMessage",
+        "Lean_PersistentHashMap",
+        "Lean_PHash",
+        "Lean_instInhabited",
+        "Lean_SMap",
+        "Std_HashMap",
+        "Std_HashSet",
+        "Lean_KeyedDecls",
+        "Lean_ScopedEnvExtension",
+        "Lean_PersistentEnvExtension",
+        "Lean_SimplePersistentEnvExtension",
+        "Lean_instMonad",
+        "Lean_MonadCache",
+        "Lean_instNonempty",
+        "Lean_instExcept",
+        "Lean_instToExpr",
+        "Lean_instToMessageData",
+        "Lean_instInhabitedOption",
+        "Lean_instInhabitedPersistentArray",
+        "Lean_instInhabitedPersistentEnv",
+        "Lean_instInhabitedScopedEnvExtension",
+        "Lean_instInhabitedStateStack",
+        "Lean_instAddErrorMessage",
     ];
     patterns.iter().any(|p| name.contains(p))
 }
@@ -127,7 +147,8 @@ pub fn cmd_j_key(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Res
         .filter(|e| e.path().extension().map_or(false, |ext| ext == "lean"))
     {
         let content = fs::read_to_string(entry.path())?;
-        let file_name = entry.path()
+        let file_name = entry
+            .path()
             .file_name()
             .and_then(|s| s.to_str())
             .unwrap_or("unknown");
@@ -142,8 +163,18 @@ pub fn cmd_j_key(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Res
             let trimmed = line.trim();
 
             // Check for declaration start
-            let decl_kw = ["theorem", "def", "lemma", "example", "instance",
-                           "class", "inductive", "structure", "abbrev", "axiom"];
+            let decl_kw = [
+                "theorem",
+                "def",
+                "lemma",
+                "example",
+                "instance",
+                "class",
+                "inductive",
+                "structure",
+                "abbrev",
+                "axiom",
+            ];
             let mut found = None;
             for kw in &decl_kw {
                 if trimmed.starts_with(kw) {
@@ -161,10 +192,13 @@ pub fn cmd_j_key(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Res
                     if !is_hash_noise(name) {
                         let ints = extract_integers(&decl_body);
                         if !ints.is_empty() {
-                            let max_p = ints.iter().map(|&n| max_prime_factor(n)).max().unwrap_or(0);
+                            let max_p =
+                                ints.iter().map(|&n| max_prime_factor(n)).max().unwrap_or(0);
                             let (band, band_desc) = get_band(max_p);
                             let monster_primes = [47, 59, 71];
-                            let monster_hit = ints.iter().any(|&n| monster_primes.iter().any(|&mp| n % mp == 0));
+                            let monster_hit = ints
+                                .iter()
+                                .any(|&n| monster_primes.iter().any(|&mp| n % mp == 0));
                             results.push(DeclPrime {
                                 name: name.clone(),
                                 kind: current_decl.as_ref().unwrap().0.clone(),
@@ -212,7 +246,9 @@ pub fn cmd_j_key(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Res
                     let max_p = ints.iter().map(|&n| max_prime_factor(n)).max().unwrap_or(0);
                     let (band, band_desc) = get_band(max_p);
                     let monster_primes = [47, 59, 71];
-                    let monster_hit = ints.iter().any(|&n| monster_primes.iter().any(|&mp| n % mp == 0));
+                    let monster_hit = ints
+                        .iter()
+                        .any(|&n| monster_primes.iter().any(|&mp| n % mp == 0));
                     results.push(DeclPrime {
                         name: name.clone(),
                         kind: current_decl.as_ref().unwrap().0.clone(),
@@ -230,12 +266,15 @@ pub fn cmd_j_key(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Res
     }
 
     // Sort by band, then max_prime desc
-    let band_order: HashMap<&str, usize> = J_BANDS.iter()
+    let band_order: HashMap<&str, usize> = J_BANDS
+        .iter()
         .enumerate()
         .map(|(i, (label, _, _, _))| (*label, i))
         .collect();
     results.sort_by(|a, b| {
-        band_order.get(a.band.as_str()).unwrap_or(&99)
+        band_order
+            .get(a.band.as_str())
+            .unwrap_or(&99)
             .cmp(band_order.get(b.band.as_str()).unwrap_or(&99))
             .then(b.max_prime.cmp(&a.max_prime))
     });
@@ -325,8 +364,7 @@ pub fn cmd_arrows(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Re
         ));
     }
 
-    let jkey_data: serde_json::Value =
-        serde_json::from_str(&fs::read_to_string(&jkey_path)?)?;
+    let jkey_data: serde_json::Value = serde_json::from_str(&fs::read_to_string(&jkey_path)?)?;
 
     let results: &Vec<serde_json::Value> = jkey_data["results"]
         .as_array()
@@ -351,13 +389,15 @@ pub fn cmd_arrows(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Re
     // Band transition arrows (spectral flow)
     let band_order: Vec<&str> = J_BANDS.iter().map(|(l, _, _, _)| *l).collect();
     for i in 0..band_order.len() {
-        for j in i+1..band_order.len() {
-            let src_decls: Vec<_> = decl_band.iter()
+        for j in i + 1..band_order.len() {
+            let src_decls: Vec<_> = decl_band
+                .iter()
                 .filter(|(_, b)| *b == band_order[i])
                 .map(|(n, _)| n.clone())
                 .take(10)
                 .collect();
-            let tgt_decls: Vec<_> = decl_band.iter()
+            let tgt_decls: Vec<_> = decl_band
+                .iter()
                 .filter(|(_, b)| *b == band_order[j])
                 .map(|(n, _)| n.clone())
                 .take(10)
@@ -372,7 +412,10 @@ pub fn cmd_arrows(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Re
                             target: tgt.clone(),
                             arrow_type: "spectral_flow".to_string(),
                             weight: 1.0 / (j - i) as f64,
-                            description: format!("{} → {} band transition", band_order[i], band_order[j]),
+                            description: format!(
+                                "{} → {} band transition",
+                                band_order[i], band_order[j]
+                            ),
                         });
                     }
                 }
@@ -381,14 +424,17 @@ pub fn cmd_arrows(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Re
     }
 
     // Monster prime bridges
-    let monster_results: Vec<_> = results.iter()
+    let monster_results: Vec<_> = results
+        .iter()
         .filter(|r| r["monster_hit"].as_bool().unwrap_or(false))
         .collect();
     for a in &monster_results {
         for b in &monster_results {
             if a["name"] != b["name"] {
-                let key = (a["name"].as_str().unwrap().to_string(),
-                           b["name"].as_str().unwrap().to_string());
+                let key = (
+                    a["name"].as_str().unwrap().to_string(),
+                    b["name"].as_str().unwrap().to_string(),
+                );
                 if seen_pairs.insert(key.clone()) {
                     arrows.push(Arrow {
                         source: key.0.clone(),
@@ -404,11 +450,36 @@ pub fn cmd_arrows(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Re
 
     // 5 Canonical spectral morphisms from the 2-category
     let canonical = [
-        ("0xD8", "0x2A", "markov_transition", "DAG-CBOR CID signature"),
-        ("0xD8", "T_p_spike_D8", "hecke_operator", "Periodic structure at 0xD8"),
-        ("0x2A", "T_p_spike_2A", "hecke_operator", "Periodic structure at 0x2A"),
-        ("0x2A", "freq2_high", "maass_shadow", "High frequency at 0x2A"),
-        ("0xD8", "freq2_med", "maass_shadow", "Medium frequency at 0xD8"),
+        (
+            "0xD8",
+            "0x2A",
+            "markov_transition",
+            "DAG-CBOR CID signature",
+        ),
+        (
+            "0xD8",
+            "T_p_spike_D8",
+            "hecke_operator",
+            "Periodic structure at 0xD8",
+        ),
+        (
+            "0x2A",
+            "T_p_spike_2A",
+            "hecke_operator",
+            "Periodic structure at 0x2A",
+        ),
+        (
+            "0x2A",
+            "freq2_high",
+            "maass_shadow",
+            "High frequency at 0x2A",
+        ),
+        (
+            "0xD8",
+            "freq2_med",
+            "maass_shadow",
+            "Medium frequency at 0xD8",
+        ),
     ];
     for (src, tgt, atype, desc) in &canonical {
         arrows.push(Arrow {
@@ -421,8 +492,14 @@ pub fn cmd_arrows(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> Re
     }
 
     let arrow_count = arrows.len();
-    let spectral = arrows.iter().filter(|a| a.arrow_type == "spectral_flow").count();
-    let monster = arrows.iter().filter(|a| a.arrow_type == "monster_bridge").count();
+    let spectral = arrows
+        .iter()
+        .filter(|a| a.arrow_type == "spectral_flow")
+        .count();
+    let monster = arrows
+        .iter()
+        .filter(|a| a.arrow_type == "monster_bridge")
+        .count();
 
     // Write output
     let output = serde_json::json!({
@@ -469,17 +546,28 @@ pub fn cmd_split_by_band(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>
     let jkey_data: serde_json::Value = {
         let candidates = vec![
             input_dir.join("j-key-stratification.json"),
-            input_dir.parent().unwrap_or(&input_dir).join("j-key-stratification.json"),
-            input_dir.parent().unwrap_or(&input_dir).join("j-key").join("j-key-stratification.json"),
+            input_dir
+                .parent()
+                .unwrap_or(&input_dir)
+                .join("j-key-stratification.json"),
+            input_dir
+                .parent()
+                .unwrap_or(&input_dir)
+                .join("j-key")
+                .join("j-key-stratification.json"),
             PathBuf::from("j-key-stratification.json"),
             PathBuf::from("j-key/j-key-stratification.json"),
         ];
-        let found = candidates.iter().find(|p| p.exists())
-            .ok_or_else(|| anyhow::anyhow!("j-key-stratification.json not found. Run 'aristotle-manager j-key' first."))?;
+        let found = candidates.iter().find(|p| p.exists()).ok_or_else(|| {
+            anyhow::anyhow!(
+                "j-key-stratification.json not found. Run 'aristotle-manager j-key' first."
+            )
+        })?;
         serde_json::from_str(&fs::read_to_string(found)?)?
     };
 
-    let results = jkey_data["results"].as_array()
+    let results = jkey_data["results"]
+        .as_array()
         .context("No results in j-key output")?;
 
     // Group by band
@@ -496,8 +584,15 @@ pub fn cmd_split_by_band(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>
 
         // Write per-band .lean file
         let mut lean = String::new();
-        lean.push_str(&format!("-- Band: {} — {}\n", band,
-            J_BANDS.iter().find(|(l,_,_,_)| *l == band).map(|(_,_,_,d)| *d).unwrap_or("")));
+        lean.push_str(&format!(
+            "-- Band: {} — {}\n",
+            band,
+            J_BANDS
+                .iter()
+                .find(|(l, _, _, _)| *l == band)
+                .map(|(_, _, _, d)| *d)
+                .unwrap_or("")
+        ));
         lean.push_str(&format!("-- {} declarations\n\n", decls.len()));
 
         for d in decls {
@@ -505,9 +600,14 @@ pub fn cmd_split_by_band(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>
             let kind = d["kind"].as_str().unwrap_or("");
             let file = d["file"].as_str().unwrap_or("");
             let line = d["line"].as_u64().unwrap_or(0);
-            lean.push_str(&format!("-- [{}:{}] {} {} (prime={})\n",
-                file, line, kind, name,
-                d["max_prime"].as_u64().unwrap_or(0)));
+            lean.push_str(&format!(
+                "-- [{}:{}] {} {} (prime={})\n",
+                file,
+                line,
+                kind,
+                name,
+                d["max_prime"].as_u64().unwrap_or(0)
+            ));
         }
 
         fs::write(band_dir.join("declarations.lean"), &lean)?;
@@ -542,8 +642,12 @@ pub fn cmd_split_by_band(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>
     )?;
 
     let total_bands = band_groups.len();
-    println!("Split by band complete: {} bands, {} declarations -> {}",
-        total_bands, results.len(), output_dir.display());
+    println!(
+        "Split by band complete: {} bands, {} declarations -> {}",
+        total_bands,
+        results.len(),
+        output_dir.display()
+    );
 
     info!(total_bands, "Split by band complete");
     Ok(())
@@ -567,7 +671,7 @@ pub fn cmd_gen_flake(band_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
     info!(band_dir = %band_dir.display(), output = %output_dir.display(), "Generate flakes");
 
     let mut generated = 0u64;
-    let mut skipped = 0u64;
+    let mut _skipped = 0u64;
 
     // Walk band subdirectories
     for entry in WalkDir::new(&band_dir)
@@ -612,9 +716,10 @@ pub fn cmd_gen_flake(band_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
 }}
 "#,
             band = band_name,
-            band_desc = J_BANDS.iter()
-                .find(|(l,_,_,d)| *l == band_name)
-                .map(|(_,_,_,d)| *d)
+            band_desc = J_BANDS
+                .iter()
+                .find(|(l, _, _, _d)| *l == band_name)
+                .map(|(_, _, _, _d)| *_d)
                 .unwrap_or("")
         );
 
@@ -626,14 +731,16 @@ pub fn cmd_gen_flake(band_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
 
     // Write master flake (composes all bands)
     let band_names: Vec<String> = WalkDir::new(&band_dir)
-        .min_depth(1).max_depth(1)
+        .min_depth(1)
+        .max_depth(1)
         .into_iter()
         .filter_map(|e| e.ok())
         .filter(|e| e.file_type().is_dir())
         .map(|e| e.file_name().to_string_lossy().to_string())
         .collect();
 
-    let bands_json = band_names.iter()
+    let _bands_json = band_names
+        .iter()
         .map(|b| format!("        \"{}\" = \"git+file://${{band_dir}}/{}\";", b, b))
         .collect::<Vec<_>>()
         .join("\n");
@@ -668,8 +775,10 @@ pub fn cmd_gen_flake(band_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
 
     fs::write(output_dir.join("flake.nix"), &master_flake)?;
 
-    println!("Flake generation complete: {} band flakes + 1 master",
-        generated);
+    println!(
+        "Flake generation complete: {} band flakes + 1 master",
+        generated
+    );
     println!("  Output: {}", output_dir.display());
 
     info!(generated, "Gen-flake complete");
@@ -687,17 +796,28 @@ pub fn cmd_dep_graph(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) ->
 
     // Load consolidated manifest
     let mut manifest_path = None;
-    for entry in WalkDir::new(&input_dir).max_depth(2).into_iter().filter_map(|e| e.ok()) {
-        if entry.file_name() == "manifest.json" || entry.path().to_string_lossy().ends_with("_manifest.json") {
+    for entry in WalkDir::new(&input_dir)
+        .max_depth(2)
+        .into_iter()
+        .filter_map(|e| e.ok())
+    {
+        if entry.file_name() == "manifest.json"
+            || entry.path().to_string_lossy().ends_with("_manifest.json")
+        {
             manifest_path = Some(entry.path().to_path_buf());
             break;
         }
     }
-    let manifest_path = manifest_path
-        .ok_or_else(|| anyhow::anyhow!("No manifest.json found in {}. Run consolidate first.", input_dir.display()))?;
+    let manifest_path = manifest_path.ok_or_else(|| {
+        anyhow::anyhow!(
+            "No manifest.json found in {}. Run consolidate first.",
+            input_dir.display()
+        )
+    })?;
 
     let manifest: serde_json::Value = serde_json::from_str(&fs::read_to_string(&manifest_path)?)?;
-    let decls = manifest["declarations"].as_array()
+    let decls = manifest["declarations"]
+        .as_array()
         .context("No declarations in manifest")?;
 
     // Build adjacency list
@@ -707,7 +827,9 @@ pub fn cmd_dep_graph(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) ->
 
     for d in decls {
         let name = d["name"].as_str().unwrap_or("").to_string();
-        if name.is_empty() { continue; }
+        if name.is_empty() {
+            continue;
+        }
         all_names.insert(name.clone());
         adj.entry(name.clone()).or_default();
         in_degree.entry(name.clone()).or_insert(0);
@@ -715,7 +837,9 @@ pub fn cmd_dep_graph(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) ->
         if let Some(deps) = d["dependencies"].as_array() {
             for dep in deps {
                 let dep_name = dep.as_str().unwrap_or("").to_string();
-                if dep_name.is_empty() { continue; }
+                if dep_name.is_empty() {
+                    continue;
+                }
                 adj.entry(name.clone()).or_default().push(dep_name.clone());
                 *in_degree.entry(dep_name.clone()).or_insert(0) += 1;
                 all_names.insert(dep_name.clone());
@@ -726,11 +850,13 @@ pub fn cmd_dep_graph(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) ->
     }
 
     // Find roots (no incoming edges) and leaves (no outgoing)
-    let roots: Vec<_> = in_degree.iter()
+    let roots: Vec<_> = in_degree
+        .iter()
         .filter(|(name, deg)| **deg == 0 && adj.get(*name).map_or(false, |v| !v.is_empty()))
         .map(|(n, _)| n.clone())
         .collect();
-    let leaves: Vec<_> = adj.iter()
+    let leaves: Vec<_> = adj
+        .iter()
         .filter(|(_, deps)| deps.is_empty())
         .map(|(n, _)| n.clone())
         .collect();
@@ -747,19 +873,22 @@ pub fn cmd_dep_graph(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) ->
     }
 
     // Build nodes
-    let nodes: Vec<serde_json::Value> = all_names.iter().map(|n| {
-        let deg = adj.get(n).map_or(0, |v| v.len());
-        let ideg = in_degree.get(n).copied().unwrap_or(0);
-        let is_root = ideg == 0 && deg > 0;
-        let is_leaf = deg == 0;
-        serde_json::json!({
-            "id": n,
-            "out_degree": deg,
-            "in_degree": ideg,
-            "is_root": is_root,
-            "is_leaf": is_leaf,
+    let nodes: Vec<serde_json::Value> = all_names
+        .iter()
+        .map(|n| {
+            let deg = adj.get(n).map_or(0, |v| v.len());
+            let ideg = in_degree.get(n).copied().unwrap_or(0);
+            let is_root = ideg == 0 && deg > 0;
+            let is_leaf = deg == 0;
+            serde_json::json!({
+                "id": n,
+                "out_degree": deg,
+                "in_degree": ideg,
+                "is_root": is_root,
+                "is_leaf": is_leaf,
+            })
         })
-    }).collect();
+        .collect();
 
     let node_count = nodes.len();
     let edge_count = edges.len();
@@ -782,7 +911,10 @@ pub fn cmd_dep_graph(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) ->
         "leaves": leaves.iter().take(50).collect::<Vec<_>>(),
     });
 
-    fs::write(output_dir.join("dep-graph.json"), serde_json::to_string_pretty(&graph)?)?;
+    fs::write(
+        output_dir.join("dep-graph.json"),
+        serde_json::to_string_pretty(&graph)?,
+    )?;
 
     println!("Dependency graph built:");
     println!("  Nodes:  {}", node_count);
@@ -791,7 +923,10 @@ pub fn cmd_dep_graph(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) ->
     println!("  Leaves: {}", leaf_count);
     println!("  Output: {}", output_dir.join("dep-graph.json").display());
 
-    info!(node_count, edge_count, root_count, leaf_count, "Dep-graph complete");
+    info!(
+        node_count,
+        edge_count, root_count, leaf_count, "Dep-graph complete"
+    );
     Ok(())
 }
 
@@ -807,7 +942,9 @@ pub fn cmd_mycelium(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
     // Load dependency graph
     let graph_path = input_dir.join("dep-graph.json");
     if !graph_path.exists() {
-        return Err(anyhow::anyhow!("dep-graph.json not found. Run 'aristotle-manager dep-graph' first."));
+        return Err(anyhow::anyhow!(
+            "dep-graph.json not found. Run 'aristotle-manager dep-graph' first."
+        ));
     }
     let graph: serde_json::Value = serde_json::from_str(&fs::read_to_string(&graph_path)?)?;
 
@@ -825,17 +962,27 @@ pub fn cmd_mycelium(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
     }
 
     // ── 0-cells (objects): all nodes ──
-    let zero_cells: Vec<_> = nodes.iter()
-        .map(|n| (n["id"].as_str().unwrap_or("").to_string(),
-                  n["is_root"].as_bool().unwrap_or(false),
-                  n["is_leaf"].as_bool().unwrap_or(false)))
+    let zero_cells: Vec<_> = nodes
+        .iter()
+        .map(|n| {
+            (
+                n["id"].as_str().unwrap_or("").to_string(),
+                n["is_root"].as_bool().unwrap_or(false),
+                n["is_leaf"].as_bool().unwrap_or(false),
+            )
+        })
         .filter(|(id, _, _)| !id.is_empty())
         .collect();
 
     // ── 1-cells (morphisms): direct dependency edges ──
-    let one_cells: Vec<_> = edges.iter()
-        .map(|e| (e["source"].as_str().unwrap_or("").to_string(),
-                  e["target"].as_str().unwrap_or("").to_string()))
+    let one_cells: Vec<_> = edges
+        .iter()
+        .map(|e| {
+            (
+                e["source"].as_str().unwrap_or("").to_string(),
+                e["target"].as_str().unwrap_or("").to_string(),
+            )
+        })
         .filter(|(s, t)| !s.is_empty() && !t.is_empty())
         .collect();
 
@@ -846,7 +993,7 @@ pub fn cmd_mycelium(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
     for target in incoming.keys() {
         let sources = &incoming[target];
         for i in 0..sources.len() {
-            for j in i+1..sources.len() {
+            for j in i + 1..sources.len() {
                 let pair = if sources[i] < sources[j] {
                     (sources[i].clone(), sources[j].clone())
                 } else {
@@ -906,7 +1053,10 @@ pub fn cmd_mycelium(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
         "terminal": terminal,
     });
 
-    fs::write(output_dir.join("mycelium.json"), serde_json::to_string_pretty(&mycelium)?)?;
+    fs::write(
+        output_dir.join("mycelium.json"),
+        serde_json::to_string_pretty(&mycelium)?,
+    )?;
 
     println!("Mycelium categorical structure:");
     println!("  0-cells (objects):           {}", zero_cells.len());
@@ -916,7 +1066,12 @@ pub fn cmd_mycelium(input_dir: Option<PathBuf>, output_dir: Option<PathBuf>) -> 
     println!("  VOA algebra:                 15×194×170");
     println!("  Output: {}", output_dir.join("mycelium.json").display());
 
-    info!(zc = zero_cells.len(), oc = one_cells.len(), tc = two_cells.len(), "Mycelium complete");
+    info!(
+        zc = zero_cells.len(),
+        oc = one_cells.len(),
+        tc = two_cells.len(),
+        "Mycelium complete"
+    );
     Ok(())
 }
 
@@ -930,8 +1085,7 @@ pub fn cmd_canonical_flake(
 ) -> Result<()> {
     let config = super::load_config()?;
     let input_dir = fs::canonicalize(&input_dir)?;
-    let output_dir = output_dir
-        .unwrap_or_else(|| config.base_dir.join("canonical-flakes"));
+    let output_dir = output_dir.unwrap_or_else(|| config.base_dir.join("canonical-flakes"));
     let mathlib_split = mathlib_split
         .unwrap_or_else(|| PathBuf::from("/home/mdupont/projects/lean-split-tool/mathlib-split"))
         .canonicalize()?;
@@ -964,7 +1118,8 @@ pub fn cmd_canonical_flake(
                 let path = file_entry.path();
                 if path.extension().map_or(false, |e| e == "lean") {
                     let rel = path.strip_prefix(&mathlib_split)?;
-                    let mod_name = rel.to_string_lossy()
+                    let mod_name = rel
+                        .to_string_lossy()
                         .strip_suffix(".lean")
                         .unwrap_or("")
                         .replace(std::path::MAIN_SEPARATOR, ".");
@@ -983,7 +1138,8 @@ pub fn cmd_canonical_flake(
     for lean_path in &lean_files {
         let rel = lean_path.strip_prefix(&input_dir)?;
         let file_stem = rel.file_stem().unwrap().to_string_lossy().to_string();
-        let mod_name = rel.to_string_lossy()
+        let mod_name = rel
+            .to_string_lossy()
             .strip_suffix(".lean")
             .unwrap_or("")
             .replace(std::path::MAIN_SEPARATOR, ".");
@@ -1014,8 +1170,15 @@ pub fn cmd_canonical_flake(
         let mut input_lines = String::new();
         let mut input_names = String::new();
         for (imp_name, canonical_path) in &resolved {
-            let safe = imp_name.replace('.', "_").replace('\'', "prime").replace('"', "dq");
-            input_lines.push_str(&format!("    {}.url = \"path:{}\";\n", safe, canonical_path.display()));
+            let safe = imp_name
+                .replace('.', "_")
+                .replace('\'', "prime")
+                .replace('"', "dq");
+            input_lines.push_str(&format!(
+                "    {}.url = \"path:{}\";\n",
+                safe,
+                canonical_path.display()
+            ));
             input_names.push_str(&format!(", {}", safe));
         }
 
@@ -1059,7 +1222,10 @@ pub fn cmd_canonical_flake(
     println!("  Mathlib ref: {}", mathlib_split.display());
     println!("  Output:      {}", output_dir.display());
 
-    info!(written, resolved_total, "Canonical flake generation complete");
+    info!(
+        written,
+        resolved_total, "Canonical flake generation complete"
+    );
     Ok(())
 }
 
@@ -1071,8 +1237,7 @@ pub fn cmd_canonical_flake_all(
     mathlib_split: Option<PathBuf>,
 ) -> Result<()> {
     let config = super::load_config()?;
-    let output_base = output_dir
-        .unwrap_or_else(|| config.base_dir.join("canonical-flakes"));
+    let output_base = output_dir.unwrap_or_else(|| config.base_dir.join("canonical-flakes"));
 
     // Find all *_aristotle/ project directories in both locations:
     //   git_base  — older downloads (time-2026 tree)
@@ -1171,7 +1336,10 @@ pub fn cmd_canonical_flake_all(
     println!("  Resolved:   {} Mathlib imports", total_resolved);
     println!("  Output:     {}", output_base.display());
 
-    info!(succeeded, total_mods, total_resolved, "Canonical flake all complete");
+    info!(
+        succeeded,
+        total_mods, total_resolved, "Canonical flake all complete"
+    );
     Ok(())
 }
 
@@ -1188,9 +1356,10 @@ pub fn cmd_merge_projects(project_ids: &[String], output_dir: PathBuf) -> Result
     let mut found = 0u64;
 
     for pid in project_ids {
-        let proj_dir = config
-            .results_dir
-            .join(format!("{}_aristotle/output-final_aristotle/RequestProject", pid));
+        let proj_dir = config.results_dir.join(format!(
+            "{}_aristotle/output-final_aristotle/RequestProject",
+            pid
+        ));
 
         if !proj_dir.exists() {
             warn!(project = %pid, "Project not found, skipping");

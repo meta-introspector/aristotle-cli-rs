@@ -1,22 +1,60 @@
 /// fetch — Incremental Aristotle sync (git-fetch style).
 /// Only downloads new or updated projects, then git-versions them.
 use std::fs;
+use std::time::Duration;
 use std::collections::HashSet;
 use crate::load_config;
+use anyhow::Context;
 use tracing::{instrument, warn};
 
 /// Run a lightweight incremental fetch: poll API, download only new/changed, version.
-#[instrument(skip(limit))]
+#[instrument(skip(_limit))]
 pub async fn cmd_fetch(
     parallel: usize,
-    limit: Option<usize>,
+    _limit: Option<usize>,
     dry_run: bool,
+    recent_days: u64,
+    project_id: Option<String>,
 ) -> anyhow::Result<()> {
     let config = load_config()?;
     let results_dir = &config.results_dir;
     fs::create_dir_all(results_dir)?;
 
     println!("=== Aristotle Fetch (incremental) ===");
+
+    // If project_id is provided, fetch just that one
+    if let Some(pid) = project_id {
+        println!("Fetching single project: {}", pid);
+        // Download/fetch just this project
+        let client = reqwest::Client::builder()
+            .timeout(Duration::from_secs(300))
+            .build()?;
+        let api_key = crate::get_api_key()?;
+        
+        // Check if already downloaded
+        let project_dir = results_dir.join(format!("{}_aristotle", pid));
+        if project_dir.exists() {
+            println!("Project already downloaded: {}", project_dir.display());
+        } else {
+            println!("Downloading project {}...", pid);
+            // Use the existing download mechanism
+            crate::download_single_result(
+                &client, 
+                &api_key, 
+                &pid, 
+                results_dir, 
+                results_dir, 
+                config.retry_wait_seconds, 
+                config.max_retries
+            ).await?;
+            println!("Downloaded to: {}", results_dir.join(format!("{}_aristotle", pid)).display());
+        }
+        return Ok(());
+    }
+
+    let cutoff = chrono::Utc::now() - chrono::Duration::days(recent_days as i64);
+    let cutoff_str = cutoff.to_rfc3339();
+    println!("  Recent cutoff: {} ({} days back)", cutoff_str, recent_days);
 
     // Step 1: Discover already-downloaded project IDs + their extraction timestamps
     let mut existing: HashSet<String> = HashSet::new();
@@ -46,23 +84,26 @@ pub async fn cmd_fetch(
     println!("  Existing projects: {}", existing.len());
 
     // Step 2: Poll API for latest project listing (minimal load)
-    let client = reqwest::Client::new();
+    let client = reqwest::Client::builder()
+        .timeout(Duration::from_secs(30))
+        .build()
+        .context("Failed to build HTTP client")?;
     let api_key = crate::get_api_key()?;
     let base_url = crate::API_BASE_URL;
 
     let mut new_projects: Vec<serde_json::Value> = Vec::new();
     let mut pagination_key: Option<String> = None;
-    let mut page = 0u32;
+    let mut pages_fetched = 0u32;
+    let mut stopped_early = false;
 
     loop {
-        page += 1;
         let url = if let Some(ref key) = pagination_key {
             format!("{}/project?pagination_key={}", base_url, key)
         } else {
             format!("{}/project", base_url)
         };
 
-        let resp = client
+        let resp: reqwest::Response = client
             .get(&url)
             .header("x-api-key", &api_key)
             .header("Content-Type", "application/json")
@@ -79,16 +120,33 @@ pub async fn cmd_fetch(
             break;
         }
 
+        pages_fetched += 1;
+
+        // Check if all items on this page are older than the cutoff.
+        // If so, subsequent pages will be even older, so we can stop.
+        let all_older = items.iter().all(|item| {
+            let last_updated = item["last_updated"].as_str().unwrap_or("");
+            last_updated < cutoff_str.as_str()
+        });
+        if all_older {
+            stopped_early = true;
+            println!("  Stopping pagination at page {} — all projects older than cutoff", pages_fetched);
+            break;
+        }
+
         let page_count = items.len();
         for item in &items {
             let id = item["project_id"].as_str().unwrap_or("");
             let has_files = item["has_files"].as_bool().unwrap_or(false);
             let last_updated = item["last_updated"].as_str().unwrap_or("");
+            if last_updated < cutoff_str.as_str() {
+                continue;
+            }
             let is_new = !existing.contains(id);
             let is_updated = if let Some(extracted) = existing_time.get(id) {
                 last_updated > extracted.as_str()
             } else {
-                false
+                existing.contains(id)
             };
             if has_files && (is_new || is_updated) {
                 new_projects.push(item.clone());
@@ -107,6 +165,10 @@ pub async fn cmd_fetch(
 
         // Be gentle on the API
         tokio::time::sleep(std::time::Duration::from_millis(200)).await;
+    }
+
+    if !stopped_early {
+        println!("  Fetched {} pages", pages_fetched);
     }
 
     println!("  New/updated projects: {}", new_projects.len());
@@ -160,6 +222,7 @@ pub async fn cmd_fetch(
                 let gz = flate2::read::GzDecoder::new(&bytes[..]);
                 let mut archive = tar::Archive::new(gz);
                 archive.unpack(&extract_dir)?;
+                crate::shared_lean::configure_downloaded_tree(&extract_dir)?;
 
                 // Save metadata
                 let metadata = serde_json::json!({
@@ -213,7 +276,7 @@ pub async fn cmd_fetch(
     // Step 4: Git version the new results
     if downloaded > 0 {
         println!("\n  Versioning new results...");
-        crate::version::cmd_version(Some(config.results_dir.clone()), Some(config.git_base.join("git-versions")))?;
+        crate::version::cmd_version(Some(config.results_dir.clone()), Some(config.git_base.clone()))?;
     }
 
     Ok(())
