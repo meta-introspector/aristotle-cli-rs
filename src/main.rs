@@ -4104,7 +4104,7 @@ fn cmd_ask(
     // From directories (all code/data files, not only .lean):
     let text_extensions = [
         "lean", "json", "md", "txt", "toml", "yaml", "yml",
-        "ts", "js", "mjs", "cjs", "py", "sh", "rs"
+        "ts", "js", "mjs", "cjs", "py", "sh", "rs", "puml", "svg"
     ];
     for d in &all_dirs {
         if d.is_dir() {
