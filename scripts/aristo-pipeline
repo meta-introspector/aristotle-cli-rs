@@ -3,25 +3,36 @@
 # (prep → ask → receive), portable version of the tracker's
 # scripts/aristo-pipeline.sh. No repo-specific dependencies.
 #
+# Backend: the Rust CLI aristotle-manager (${ARISTO_MANAGER}) — NO curl, NO
+# python in this script; every network call goes through the tool, which
+# resolves API keys from its own account config:
+#   check <project> --account A           -> project status (2 = IDLE)
+#   ask <project> <prompt> --account A --attach [--file F]...
+#       attachment mode: prompt file + text files (auto-batches of 5, waits
+#       IDLE between batches); binaries cannot ride on ask
+#   download-result <project> --account A --output-dir D
+#
 # Phases (all idempotent, state keyed by git HEAD when in a git repo):
-#   P1 API keys exist (ARISTO_KEYS_DIR/<account>.key)
+#   P1 backend executable + live auth probe per account (check)
 #   P2 git tree clean (git repos only; skipped otherwise)
 #   P3 optional pre-submit test command (ARISTO_PREP_TEST_CMD)
-#   P4 artifacts: prompt file + optional git bundle + extra --file parts
-#   A  submit to every account in ARISTO_ACCOUNTS, in PARALLEL; each job waits
-#      independently for its project to be IDLE (status 2) — a busy account
-#      never blocks the others; task ids recorded in state
-#   R  poll tasks until COMPLETE*, download + extract result tar.gz
+#   P4 artifacts: prompt file + optional git bundle (record/push artifact)
+#   A  submit to every account in ARISTO_ACCOUNTS, in PARALLEL; each job polls
+#      `check` until its project is IDLE (status 2), then runs `ask --attach`.
+#      A busy account never blocks the others; response recorded in state.
+#   R  poll until the project returns to IDLE (task done), then
+#      `download-result` + extract; ARISTO_INTEGRATE_CMD hook optional
 #
 # Configuration (env):
 #   ARISTO_ACCOUNTS      comma list            (default "main,twitterstorm")
 #   ARISTO_PROJECTS      "acct=uuid,acct=uuid" (defaults to the two known projects)
-#   ARISTO_KEYS_DIR      default ~/.config/aristotle-manager/keys
+#   ARISTO_MANAGER       aristotle-manager binary (release -> debug -> cargo run)
 #   ARISTO_WORK_DIR      outputs + state       (default /tmp/aristo-pipeline)
 #   ARISTO_PREP_TEST_CMD optional shell command run in P3
-#   ARISTO_API           default https://aristotle.harmonic.fun/api/v3
+#   ARISTO_INTEGRATE_CMD optional shell command run after receive (gets result dir as $1)
+#   ARISTO_BUNDLE        "off" disables git bundle creation (default on, git repos)
 #   ARISTO_IDLE_TIMEOUT  seconds waiting for IDLE   (default 2400)
-#   ARISTO_TASK_TIMEOUT  seconds waiting for COMPLETE (default 14400)
+#   ARISTO_TASK_TIMEOUT  seconds waiting for task completion (default 14400)
 #
 # Usage:
 #   scripts/aristo-pipeline --prompt FILE [options]
@@ -33,8 +44,16 @@
 #   ARISTO_ACCOUNTS=main ARISTO_WORK_DIR=/tmp/r1 scripts/aristo-pipeline --prompt ask.txt
 set -euo pipefail
 
-API="${ARISTO_API:-https://aristotle.harmonic.fun/api/v3}"
-KEYS_DIR="${ARISTO_KEYS_DIR:-$HOME/.config/aristotle-manager/keys}"
+# backend selection mirrors scripts/submit-to-aristotle.sh convention
+if [[ -n "${ARISTO_MANAGER:-}" ]]; then
+  AM="$ARISTO_MANAGER"
+elif [[ -x /home/mdupont/projects/arist/target/release/aristotle-manager ]]; then
+  AM=/home/mdupont/projects/arist/target/release/aristotle-manager
+elif [[ -x /home/mdupont/projects/arist/target/debug/aristotle-manager ]]; then
+  AM=/home/mdupont/projects/arist/target/debug/aristotle-manager
+else
+  AM="cargo --manifest-path /home/mdupont/projects/arist/Cargo.toml run --release --"
+fi
 WORK_DIR="${ARISTO_WORK_DIR:-/tmp/aristo-pipeline}"
 STATE_DIR="$WORK_DIR/state"
 IDLE_TIMEOUT="${ARISTO_IDLE_TIMEOUT:-2400}"
@@ -117,6 +136,7 @@ sk_for() {  # account -> state key (upper, non-alnum -> _)
 
 if (( STATUS_ONLY )); then
   echo "== aristo-pipeline (generic) =="
+  echo "backend: $AM ($([[ -x $AM || $AM == cargo* ]] && echo ok || echo MISSING))"
   echo "work:   $WORK_DIR"
   echo "git:    $([[ $IN_GIT == 1 ]] && echo "$HEAD_SHA ($HEAD8)" || echo 'not a git repo')"
   echo "state:  $STATE_FILE"
@@ -124,14 +144,34 @@ if (( STATUS_ONLY )); then
   exit 0
 fi
 
+# ---------------------------------------------------------- backend calls ----
+# The ONLY network operations — all delegated to aristotle-manager, which
+# resolves API keys from its own account configuration.
+am() { $AM "$@"; }   # unquoted: supports the `cargo run --` fallback form
+proj_status() { # acct project -> "N" (0 q / 1 run / 2 idle) or ""
+  am check "$2" --account "$1" 2>/dev/null | grep -m1 'Status:' | grep -oE '[0-9]+' || true
+}
+ask_attach() { # acct project [files...] -> files become --file F; prompt file via global PROMPT_FILE
+  local a="$1" p="$2"; shift 2
+  local args=( ask "$p" "$PROMPT_FILE" --account "$a" --attach )
+  local f
+  for f in "$@"; do [[ -n "$f" ]] && args+=( --file "$f" ); done
+  am "${args[@]}"
+}
+download_result() { # acct project outdir
+  am download-result "$2" --account "$1" --output-dir "$3"
+}
+
 # ------------------------------------------------------------------ prep ----
 log "=== P0 preflight: work=$WORK_DIR git=$HEAD8 accounts=[${ACCOUNTS[*]}]"
 (( FRESH )) && rm -f "$STATE_FILE"
 
+[[ -x "$AM" || "$AM" == cargo* ]] || die "P1 backend not executable: $AM"
 for a in "${ACCOUNTS[@]}"; do
-  [[ -f "$KEYS_DIR/$a.key" ]] || die "P1 missing API key: $KEYS_DIR/$a.key"
+  st=$(proj_status "$a" "${PROJECTS[$a]}")
+  [[ -n "$st" ]] || die "P1 backend probe failed for $a (auth/network?)"
+  log "P1 $a reachable, project status=$st"
 done
-log "P1 keys ok"
 
 if (( IN_GIT == 1 )); then
   [[ -z "$(git status --porcelain | grep -v '^??')" ]] || die "P2 tracked changes dirty — commit or stash first (untracked files are tolerated)"
@@ -176,17 +216,8 @@ if (( DRY_RUN )); then
 fi
 
 # ------------------------------------------------------------------- ask ----
-# One submit job per account, run in PARALLEL: wait for that project to be
-# IDLE, POST the ask, record the task id. Busy account blocks only itself.
-api() {  # api <account> <method> <path> [curl-extra-args...]
-  local a="$1" method="$2" path="$3"; shift 3
-  local key; key=$(cat "$KEYS_DIR/$a.key")
-  if [[ "$method" == GET ]]; then
-    curl -sS -H "X-API-Key: $key" "$API$path" "$@"
-  else
-    curl -sS -X "$method" -H "X-API-Key: $key" "$API$path" "$@"
-  fi
-}
+# One submit job per account, run in PARALLEL: poll `check` until that project
+# is IDLE, then `ask --attach`. Busy account blocks only itself.
 
 submit_account() {
   local a="$1" project="$2" sk; sk=$(sk_for "$a")
@@ -199,46 +230,33 @@ submit_account() {
     return 0
   fi
 
-  # A1 wait for IDLE (status 2)
-  local st tries=0
+  # A1 wait for IDLE (status 2) via `check`
+  local st waited=0
   while :; do
-    st=$(api "$a" GET "/project/$project" | TID="" python3 -c 'import json,sys; print(json.load(sys.stdin).get("status","?"))' 2>/dev/null || echo ERR)
+    st=$(proj_status "$a" "$project")
     [[ "$st" == "2" ]] && break
-    tries=$((tries + POLL_IDLE))
-    (( tries % 60 < POLL_IDLE )) && log "A[$a] status=$st, waiting for IDLE (${tries}s/${IDLE_TIMEOUT}s)"
-    (( tries >= IDLE_TIMEOUT )) && { log "A[$a] not IDLE after ${IDLE_TIMEOUT}s"; return 1; }
-    sleep "$POLL_IDLE"
+    (( waited >= IDLE_TIMEOUT )) && { log "A[$a] not IDLE after ${IDLE_TIMEOUT}s (status=${st:-?})"; return 1; }
+    (( waited % (POLL_IDLE*4) == 0 )) && log "A[$a] status=${st:-?} waiting for IDLE (${waited}s/${IDLE_TIMEOUT}s)"
+    sleep "$POLL_IDLE"; waited=$((waited + POLL_IDLE))
   done
-  log "A[$a] project IDLE — submitting"
+  log "A[$a] project IDLE — asking with attachments"
 
-  # A2 multipart: prompt + mode + optional bundle + extras (max 5 files)
-  local args=(-F "prompt=$(cat "$PROMPT_FILE")" -F "mode=2" -F "agent_questions_setting=1")
-  local nparts=0
-  if [[ -n "$BUNDLE" ]]; then args+=(-F "files=@$BUNDLE;type=application/octet-stream"); nparts=$((nparts+1)); fi
-  local f
-  for f in "${EXTRA_FILES[@]:-}"; do
-    [[ -n "$f" ]] || continue
-    args+=(-F "files=@$f;type=application/octet-stream"); nparts=$((nparts+1))
-  done
-  (( nparts <= 5 )) || { log "A[$a] too many attachments ($nparts>5)"; return 1; }
+  # A2 ask --attach (prompt file + text attachments; tool auto-batches >5,
+  #    waiting for IDLE between batches; binaries cannot ride on ask)
+  local alog="$WORK_DIR/ask-$a-$HEAD8.log"
+  if ! ask_attach "$a" "$project" "${EXTRA_FILES[@]:-}" > "$alog" 2>&1; then
+    log "A[$a] ask FAILED — log: $alog"; tail -8 "$alog"; return 1
+  fi
 
-  local resp tid
-  resp=$(api "$a" POST "/project/$project/ask" "${args[@]}")
-  tid=$(printf '%s' "$resp" | TID="" python3 -c '
-import json,sys
-try: d=json.load(sys.stdin)
-except Exception: print("PARSE_FAIL"); raise SystemExit
-for k in ("agent_task_id","task_id","id"):
-    if isinstance(d,dict) and k in d: print(d[k]); raise SystemExit
-print("NO_ID")')
-  [[ "$tid" =~ ^(PARSE_FAIL|NO_ID)$ ]] && { log "A[$a] bad response:"; printf '%s\n' "$resp" | head -c 400; return 1; }
-
-  # A3 record
-  state_set "${sk}_TASK" "$tid"
+  # A3 record (response head; uuid extracted if the API returned one)
+  local resp
+  resp=$(grep -A3 'Aristotle' "$alog" | tail -1 | cut -c1-200)
+  state_set "${sk}_TASK" "$(grep -oE '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}' "$alog" | tail -1 || echo "resp:$(date -u +%s)")"
   state_set "${sk}_HEAD" "$HEAD8"
   state_set "${sk}_PROMPT_SHA" "$PROMPT_SHA"
+  state_set "${sk}_RESPONSE" "$resp"
   state_set "${sk}_SUBMITTED_AT" "$(STAMP)"
-  log "A[$a] submitted: task $tid"
+  log "A[$a] asked OK (log: $alog) — response head: $resp"
 }
 
 if (( ! RECEIVE_ONLY )); then
@@ -252,47 +270,38 @@ if (( ! RECEIVE_ONLY )); then
 fi
 
 # -------------------------------------------------------------- receive ----
+# The project returns to IDLE (status 2) when the current task is done —
+# then `download-result` fetches the artifacts.
 receive_account() {
-  local a="$1" project="$2" sk tid st pct out rdir waited=0
+  local a="$1" project="$2" sk tid st out rdir waited=0
   sk=$(sk_for "$a"); tid=$(state_get "${sk}_TASK" || true)
-  [[ -n "$tid" ]] || { log "R[$a] no task recorded — run ask phase first"; return 0; }
+  [[ -n "$tid" ]] || { log "R[$a] no ask recorded — run ask phase first"; return 0; }
   [[ "$(state_get "${sk}_RECEIVED" || true)" == "1" ]] && { log "R[$a] already received: $(state_get "${sk}_RESULT_FILE")"; return 0; }
 
   while :; do
-    read -r st pct < <(api "$a" GET "/project/$project/tasks" | TID="$tid" python3 -c '
-import json,sys,os
-tid=os.environ["TID"]
-try: tasks=json.load(sys.stdin).get("agent_tasks",[])
-except Exception: tasks=[]
-for t in tasks:
-    if str(t.get("agent_task_id","")).startswith(tid):
-        print(t.get("status","?"), t.get("percent_complete","?")); break
-else: print("NOT_FOUND","")')
-    if [[ "$st" == COMPLETE* ]]; then
-      out="$WORK_DIR/${a}-${tid:0:8}-result.tar.gz"
-      log "R[$a] COMPLETE — downloading result"
-      api "$a" GET "/project/$project/result" -o "$out"
+    st=$(proj_status "$a" "$project")
+    if [[ "$st" == "2" ]]; then
+      log "R[$a] project IDLE — downloading result"
       rdir="$WORK_DIR/results/$a-${tid:0:8}"
-      mkdir -p "$rdir"
-      tar -xzf "$out" -C "$rdir" 2>/dev/null || log "R[$a] warn: tar extract failed (kept: $out)"
+      download_result "$a" "$project" "$rdir" \
+        || { log "R[$a] download-result failed — re-run to retry"; return 1; }
       state_set "${sk}_RECEIVED" "1"
-      state_set "${sk}_RESULT_FILE" "$out"
       state_set "${sk}_RESULT_DIR" "$rdir"
       state_set "${sk}_RECEIVED_AT" "$(STAMP)"
-      log "R[$a] result: $out (extracted: $rdir)"
+      log "R[$a] result extracted: $rdir"
       if (( INTEGRATE )) && [[ -n "${ARISTO_INTEGRATE_CMD:-}" ]]; then
         log "R[$a] integrating: $ARISTO_INTEGRATE_CMD"
         bash -c "$ARISTO_INTEGRATE_CMD" "$rdir" || log "R[$a] integration needs manual attention"
       fi
       return 0
-    elif [[ "$st" == ERR* || "$st" == "NOT_FOUND" ]]; then
-      log "R[$a] task $tid status=$st — see project $project"
-      state_set "${sk}_LAST_STATUS" "$st"
-      return 1
+    elif [[ "$st" == "0" ]]; then
+      log "R[$a] status=0 (queued/idle-no-work?) — re-probe"
+      sleep "$POLL_TASK"; waited=$((waited + POLL_TASK))
+    else
+      (( waited >= TASK_TIMEOUT )) && { log "R[$a] timeout after ${TASK_TIMEOUT}s (status=${st:-?}) — re-run to resume"; return 1; }
+      log "R[$a] status=${st:-?} (${waited}s/${TASK_TIMEOUT}s)"
+      sleep "$POLL_TASK"; waited=$((waited + POLL_TASK))
     fi
-    (( waited >= TASK_TIMEOUT )) && { log "R[$a] timeout after ${TASK_TIMEOUT}s (status=$st) — re-run to resume"; return 1; }
-    log "R[$a] task $tid status=$st pct=$pct (${waited}s)"
-    sleep "$POLL_TASK"; waited=$((waited + POLL_TASK))
   done
 }
 
