@@ -1,0 +1,307 @@
+#!/usr/bin/env bash
+# scripts/aristo-pipeline — generic idempotent Aristotle Harmonic pipeline
+# (prep → ask → receive), portable version of the tracker's
+# scripts/aristo-pipeline.sh. No repo-specific dependencies.
+#
+# Phases (all idempotent, state keyed by git HEAD when in a git repo):
+#   P1 API keys exist (ARISTO_KEYS_DIR/<account>.key)
+#   P2 git tree clean (git repos only; skipped otherwise)
+#   P3 optional pre-submit test command (ARISTO_PREP_TEST_CMD)
+#   P4 artifacts: prompt file + optional git bundle + extra --file parts
+#   A  submit to every account in ARISTO_ACCOUNTS, in PARALLEL; each job waits
+#      independently for its project to be IDLE (status 2) — a busy account
+#      never blocks the others; task ids recorded in state
+#   R  poll tasks until COMPLETE*, download + extract result tar.gz
+#
+# Configuration (env):
+#   ARISTO_ACCOUNTS      comma list            (default "main,twitterstorm")
+#   ARISTO_PROJECTS      "acct=uuid,acct=uuid" (defaults to the two known projects)
+#   ARISTO_KEYS_DIR      default ~/.config/aristotle-manager/keys
+#   ARISTO_WORK_DIR      outputs + state       (default /tmp/aristo-pipeline)
+#   ARISTO_PREP_TEST_CMD optional shell command run in P3
+#   ARISTO_API           default https://aristotle.harmonic.fun/api/v3
+#   ARISTO_IDLE_TIMEOUT  seconds waiting for IDLE   (default 2400)
+#   ARISTO_TASK_TIMEOUT  seconds waiting for COMPLETE (default 14400)
+#
+# Usage:
+#   scripts/aristo-pipeline --prompt FILE [options]
+#   options: --bundle F --file F --account a,b --fresh --skip-tests
+#            --integrate --dry-run --status --receive-only
+#
+# Examples:
+#   ARISTO_WORK_DIR=/tmp/r1 scripts/aristo-pipeline --prompt ask.txt --dry-run
+#   ARISTO_ACCOUNTS=main ARISTO_WORK_DIR=/tmp/r1 scripts/aristo-pipeline --prompt ask.txt
+set -euo pipefail
+
+API="${ARISTO_API:-https://aristotle.harmonic.fun/api/v3}"
+KEYS_DIR="${ARISTO_KEYS_DIR:-$HOME/.config/aristotle-manager/keys}"
+WORK_DIR="${ARISTO_WORK_DIR:-/tmp/aristo-pipeline}"
+STATE_DIR="$WORK_DIR/state"
+IDLE_TIMEOUT="${ARISTO_IDLE_TIMEOUT:-2400}"
+TASK_TIMEOUT="${ARISTO_TASK_TIMEOUT:-14400}"
+POLL_IDLE=15
+POLL_TASK=60
+
+PROMPT_FILE="" BUNDLE="" ACCOUNTS_OPT="" FRESH=0 SKIP_TESTS=0
+INTEGRATE=0 DRY_RUN=0 STATUS_ONLY=0 RECEIVE_ONLY=0
+EXTRA_FILES=()
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --prompt)       PROMPT_FILE="$2"; shift 2 ;;
+    --bundle)       BUNDLE="$2"; shift 2 ;;
+    --file)         EXTRA_FILES+=("$2"); shift 2 ;;
+    --account)      ACCOUNTS_OPT="$2"; shift 2 ;;
+    --fresh)        FRESH=1; shift ;;
+    --skip-tests)   SKIP_TESTS=1; shift ;;
+    --integrate)    INTEGRATE=1; shift ;;
+    --dry-run)      DRY_RUN=1; shift ;;
+    --status)       STATUS_ONLY=1; shift ;;
+    --receive-only) RECEIVE_ONLY=1; shift ;;
+    -h|--help)      grep '^#' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+    *) echo "unknown arg: $1" >&2; exit 1 ;;
+  esac
+done
+
+STAMP() { date -u +%Y-%m-%dT%H:%M:%SZ; }
+log()   { echo "[$(STAMP)] $*"; }
+die()   { echo "[$(STAMP)] ERROR: $*" >&2; exit 1; }
+
+# ------------------------------------------------------------- accounts ----
+declare -A PROJECTS=()
+if [[ -n "${ARISTO_PROJECTS:-}" ]]; then
+  IFS=',' read -ra _pairs <<< "$ARISTO_PROJECTS"
+  for p in "${_pairs[@]}"; do
+    [[ "$p" == *=* ]] || die "ARISTO_PROJECTS entry '$p' must be acct=uuid"
+    PROJECTS["${p%%=*}"]="${p#*=}"
+  done
+else
+  PROJECTS[main]="10671d9f-c85c-4dc2-a84e-f7d6f7e168d5"
+  PROJECTS[twitterstorm]="3a8443b1-0e97-4fd4-ada9-b2b02e0335a4"
+fi
+
+ACCOUNTS=()
+if [[ -n "$ACCOUNTS_OPT" ]]; then
+  IFS=',' read -ra ACCOUNTS <<< "$ACCOUNTS_OPT"
+elif [[ -n "${ARISTO_ACCOUNTS:-}" ]]; then
+  IFS=',' read -ra ACCOUNTS <<< "$ARISTO_ACCOUNTS"
+else
+  ACCOUNTS=(main twitterstorm)
+fi
+for a in "${ACCOUNTS[@]}"; do
+  [[ -n "${PROJECTS[$a]:-}" ]] || die "no project id configured for account '$a' (set ARISTO_PROJECTS)"
+done
+
+# ------------------------------------------------------------------ git ----
+IN_GIT=0; HEAD_SHA=""; HEAD8="nogit"
+if git rev-parse --show-toplevel >/dev/null 2>&1; then
+  IN_GIT=1
+  HEAD_SHA=$(git rev-parse HEAD)
+  HEAD8="${HEAD_SHA:0:8}"
+fi
+
+# ----------------------------------------------------------------- state ----
+mkdir -p "$STATE_DIR"
+STATE_FILE="$STATE_DIR/state-$HEAD8.env"
+state_get() { grep -E "^$1=" "$STATE_FILE" 2>/dev/null | tail -1 | cut -d= -f2- ; }
+state_set() {
+  touch "$STATE_FILE"
+  grep -vE "^$1=" "$STATE_FILE" > "$STATE_FILE.tmp" 2>/dev/null || true
+  echo "$1=$2" >> "$STATE_FILE.tmp"
+  mv "$STATE_FILE.tmp" "$STATE_FILE"
+}
+
+sk_for() {  # account -> state key (upper, non-alnum -> _)
+  echo "$1" | tr '[:lower:]-.' '[:upper:]__'
+}
+
+if (( STATUS_ONLY )); then
+  echo "== aristo-pipeline (generic) =="
+  echo "work:   $WORK_DIR"
+  echo "git:    $([[ $IN_GIT == 1 ]] && echo "$HEAD_SHA ($HEAD8)" || echo 'not a git repo')"
+  echo "state:  $STATE_FILE"
+  [[ -f "$STATE_FILE" ]] && cat "$STATE_FILE" || echo "(no state yet)"
+  exit 0
+fi
+
+# ------------------------------------------------------------------ prep ----
+log "=== P0 preflight: work=$WORK_DIR git=$HEAD8 accounts=[${ACCOUNTS[*]}]"
+(( FRESH )) && rm -f "$STATE_FILE"
+
+for a in "${ACCOUNTS[@]}"; do
+  [[ -f "$KEYS_DIR/$a.key" ]] || die "P1 missing API key: $KEYS_DIR/$a.key"
+done
+log "P1 keys ok"
+
+if (( IN_GIT == 1 )); then
+  [[ -z "$(git status --porcelain | grep -v '^??')" ]] || die "P2 tracked changes dirty — commit or stash first (untracked files are tolerated)"
+  log "P2 tree clean"
+else
+  log "P2 not a git repo — clean-tree gate skipped"
+fi
+
+if (( SKIP_TESTS )) || [[ -z "${ARISTO_PREP_TEST_CMD:-}" ]]; then
+  log "P3 pre-submit test command: skipped"
+elif [[ "$(state_get TESTS_OK || true)" == "1" ]]; then
+  log "P3 pre-submit test command: cached green (skip)"
+else
+  log "P3 running: $ARISTO_PREP_TEST_CMD"
+  (( DRY_RUN )) || bash -c "$ARISTO_PREP_TEST_CMD" > "$STATE_DIR/prep-tests-$HEAD8.log" 2>&1 \
+    || { tail -20 "$STATE_DIR/prep-tests-$HEAD8.log" >&2; die "P3 test command failed"; }
+  (( DRY_RUN )) || state_set TESTS_OK 1
+  log "P3 test command green"
+fi
+
+[[ -n "$PROMPT_FILE" ]] || die "P4 --prompt FILE required"
+[[ -f "$PROMPT_FILE" ]] || die "P4 prompt file missing: $PROMPT_FILE"
+PROMPT_SHA=$(sha256sum "$PROMPT_FILE" | cut -c1-16)
+
+if [[ -z "$BUNDLE" && $IN_GIT == 1 && -n "${ARISTO_BUNDLE:-on}" ]]; then
+  BUNDLE="$WORK_DIR/repo-$HEAD8.bundle"
+  [[ -f "$BUNDLE" ]] || { log "P4 creating git bundle from HEAD"; (( DRY_RUN )) || git bundle create "$BUNDLE" --all; }
+fi
+if [[ -n "$BUNDLE" ]]; then
+  [[ -f "$BUNDLE" ]] || (( DRY_RUN )) || die "P4 bundle missing: $BUNDLE"
+  log "P4 bundle: $BUNDLE"
+fi
+log "P4 prompt sha $PROMPT_SHA"
+
+if (( DRY_RUN )); then
+  log "DRY-RUN: would submit to [${ACCOUNTS[*]}] (parallel, independent IDLE waits)"
+  for a in "${ACCOUNTS[@]}"; do
+    log "DRY-RUN:   $a -> project ${PROJECTS[$a]}"
+  done
+  log "DRY-RUN: then receive results into $WORK_DIR"
+  exit 0
+fi
+
+# ------------------------------------------------------------------- ask ----
+# One submit job per account, run in PARALLEL: wait for that project to be
+# IDLE, POST the ask, record the task id. Busy account blocks only itself.
+api() {  # api <account> <method> <path> [curl-extra-args...]
+  local a="$1" method="$2" path="$3"; shift 3
+  local key; key=$(cat "$KEYS_DIR/$a.key")
+  if [[ "$method" == GET ]]; then
+    curl -sS -H "X-API-Key: $key" "$API$path" "$@"
+  else
+    curl -sS -X "$method" -H "X-API-Key: $key" "$API$path" "$@"
+  fi
+}
+
+submit_account() {
+  local a="$1" project="$2" sk; sk=$(sk_for "$a")
+  local have_task have_head have_prompt
+  have_task=$(state_get "${sk}_TASK" || true)
+  have_head=$(state_get "${sk}_HEAD" || true)
+  have_prompt=$(state_get "${sk}_PROMPT_SHA" || true)
+  if [[ -n "$have_task" && "$have_head" == "$HEAD8" && "$have_prompt" == "$PROMPT_SHA" ]]; then
+    log "A[$a] already submitted for $HEAD8/prompt-$PROMPT_SHA: task $have_task (skip)"
+    return 0
+  fi
+
+  # A1 wait for IDLE (status 2)
+  local st tries=0
+  while :; do
+    st=$(api "$a" GET "/project/$project" | TID="" python3 -c 'import json,sys; print(json.load(sys.stdin).get("status","?"))' 2>/dev/null || echo ERR)
+    [[ "$st" == "2" ]] && break
+    tries=$((tries + POLL_IDLE))
+    (( tries % 60 < POLL_IDLE )) && log "A[$a] status=$st, waiting for IDLE (${tries}s/${IDLE_TIMEOUT}s)"
+    (( tries >= IDLE_TIMEOUT )) && { log "A[$a] not IDLE after ${IDLE_TIMEOUT}s"; return 1; }
+    sleep "$POLL_IDLE"
+  done
+  log "A[$a] project IDLE — submitting"
+
+  # A2 multipart: prompt + mode + optional bundle + extras (max 5 files)
+  local args=(-F "prompt=$(cat "$PROMPT_FILE")" -F "mode=2" -F "agent_questions_setting=1")
+  local nparts=0
+  if [[ -n "$BUNDLE" ]]; then args+=(-F "files=@$BUNDLE;type=application/octet-stream"); nparts=$((nparts+1)); fi
+  local f
+  for f in "${EXTRA_FILES[@]:-}"; do
+    [[ -n "$f" ]] || continue
+    args+=(-F "files=@$f;type=application/octet-stream"); nparts=$((nparts+1))
+  done
+  (( nparts <= 5 )) || { log "A[$a] too many attachments ($nparts>5)"; return 1; }
+
+  local resp tid
+  resp=$(api "$a" POST "/project/$project/ask" "${args[@]}")
+  tid=$(printf '%s' "$resp" | TID="" python3 -c '
+import json,sys
+try: d=json.load(sys.stdin)
+except Exception: print("PARSE_FAIL"); raise SystemExit
+for k in ("agent_task_id","task_id","id"):
+    if isinstance(d,dict) and k in d: print(d[k]); raise SystemExit
+print("NO_ID")')
+  [[ "$tid" =~ ^(PARSE_FAIL|NO_ID)$ ]] && { log "A[$a] bad response:"; printf '%s\n' "$resp" | head -c 400; return 1; }
+
+  # A3 record
+  state_set "${sk}_TASK" "$tid"
+  state_set "${sk}_HEAD" "$HEAD8"
+  state_set "${sk}_PROMPT_SHA" "$PROMPT_SHA"
+  state_set "${sk}_SUBMITTED_AT" "$(STAMP)"
+  log "A[$a] submitted: task $tid"
+}
+
+if (( ! RECEIVE_ONLY )); then
+  pids=()
+  for a in "${ACCOUNTS[@]}"; do
+    submit_account "$a" "${PROJECTS[$a]}" & pids+=($!)
+  done
+  rc=0
+  for p in "${pids[@]}"; do wait "$p" || rc=1; done
+  (( rc )) && die "ask phase failed for at least one account (re-run to resume)"
+fi
+
+# -------------------------------------------------------------- receive ----
+receive_account() {
+  local a="$1" project="$2" sk tid st pct out rdir waited=0
+  sk=$(sk_for "$a"); tid=$(state_get "${sk}_TASK" || true)
+  [[ -n "$tid" ]] || { log "R[$a] no task recorded — run ask phase first"; return 0; }
+  [[ "$(state_get "${sk}_RECEIVED" || true)" == "1" ]] && { log "R[$a] already received: $(state_get "${sk}_RESULT_FILE")"; return 0; }
+
+  while :; do
+    read -r st pct < <(api "$a" GET "/project/$project/tasks" | TID="$tid" python3 -c '
+import json,sys,os
+tid=os.environ["TID"]
+try: tasks=json.load(sys.stdin).get("agent_tasks",[])
+except Exception: tasks=[]
+for t in tasks:
+    if str(t.get("agent_task_id","")).startswith(tid):
+        print(t.get("status","?"), t.get("percent_complete","?")); break
+else: print("NOT_FOUND","")')
+    if [[ "$st" == COMPLETE* ]]; then
+      out="$WORK_DIR/${a}-${tid:0:8}-result.tar.gz"
+      log "R[$a] COMPLETE — downloading result"
+      api "$a" GET "/project/$project/result" -o "$out"
+      rdir="$WORK_DIR/results/$a-${tid:0:8}"
+      mkdir -p "$rdir"
+      tar -xzf "$out" -C "$rdir" 2>/dev/null || log "R[$a] warn: tar extract failed (kept: $out)"
+      state_set "${sk}_RECEIVED" "1"
+      state_set "${sk}_RESULT_FILE" "$out"
+      state_set "${sk}_RESULT_DIR" "$rdir"
+      state_set "${sk}_RECEIVED_AT" "$(STAMP)"
+      log "R[$a] result: $out (extracted: $rdir)"
+      if (( INTEGRATE )) && [[ -n "${ARISTO_INTEGRATE_CMD:-}" ]]; then
+        log "R[$a] integrating: $ARISTO_INTEGRATE_CMD"
+        bash -c "$ARISTO_INTEGRATE_CMD" "$rdir" || log "R[$a] integration needs manual attention"
+      fi
+      return 0
+    elif [[ "$st" == ERR* || "$st" == "NOT_FOUND" ]]; then
+      log "R[$a] task $tid status=$st — see project $project"
+      state_set "${sk}_LAST_STATUS" "$st"
+      return 1
+    fi
+    (( waited >= TASK_TIMEOUT )) && { log "R[$a] timeout after ${TASK_TIMEOUT}s (status=$st) — re-run to resume"; return 1; }
+    log "R[$a] task $tid status=$st pct=$pct (${waited}s)"
+    sleep "$POLL_TASK"; waited=$((waited + POLL_TASK))
+  done
+}
+
+rrc=0
+for a in "${ACCOUNTS[@]}"; do
+  receive_account "$a" "${PROJECTS[$a]}" || rrc=1
+done
+
+log "=== pipeline done (git=$HEAD8, state: $STATE_FILE) ==="
+exit $rrc
+
+
