@@ -507,6 +507,9 @@ enum Commands {
         recent_days: u64,
         #[arg(long)]
         project_id: Option<String>,
+        /// Fetch complete history from every upstream account (ignore recency window)
+        #[arg(long)]
+        all: bool,
     },
     /// Full pipeline: fetch → split → verify (lake build) → version → merge
     Pipeline {
@@ -1241,7 +1244,7 @@ async fn cmd_poll(download_only: bool, parallel: usize) -> Result<()> {
 
     if new_count > 0 {
         println!("\nDownloading {} new projects...", new_count);
-        crate::fetch::cmd_fetch(parallel, None, false, 7, None).await?;
+        crate::fetch::cmd_fetch(parallel, None, false, 7, None, false).await?;
     } else if download_only {
         println!("\n  Nothing new — exiting (download-only mode).");
         return Ok(());
@@ -1830,18 +1833,19 @@ async fn download_single_result(
 
             if let Ok(status_json) = serde_json::from_str::<Value>(&status_text) {
                 last_status_json = Some(status_text);
-                // has_files=true means results are available
-                if status_json["has_files"].as_bool().unwrap_or(false) {
+                // has_files=true means results are available.
+                // The API may return booleans as JSON bools or strings ("True").
+                if fetch::json_truthy_pub(&status_json["has_files"]) {
                     info!(id = %result_id, "Result files available (has_files=true)");
                     break;
                 }
-                // status=2 seems to mean completed
-                if status_json["status"].as_i64().unwrap_or(0) >= 2 {
+                // status=2 seems to mean completed (may arrive as string "2")
+                if fetch::json_i64_pub(&status_json["status"]).unwrap_or(0) >= 2 {
                     info!(id = %result_id, "Result is ready (status >= 2)");
                     break;
                 }
                 // Legacy checks
-                if status_json["ready"].as_bool().unwrap_or(false) {
+                if fetch::json_truthy_pub(&status_json["ready"]) {
                     info!(id = %result_id, "Result is ready (ready=true)");
                     break;
                 }
@@ -3206,7 +3210,7 @@ fn check_project_status(api_key: &str, project_id: &str) -> Result<bool> {
 
     let body = response.text().unwrap_or_default();
     if let Ok(json) = serde_json::from_str::<Value>(&body) {
-        let status = json["status"].as_i64().unwrap_or(0);
+        let status = fetch::json_i64_pub(&json["status"]).unwrap_or(0);
         Ok(status == 1)
     } else {
         Err(anyhow::anyhow!("Could not parse project status: {}", body))
@@ -3232,7 +3236,7 @@ fn wait_for_idle(api_key: &str, project_id: &str, interval: u64, max_wait_secs: 
 
         let body = response.text().unwrap_or_default();
         if let Ok(json) = serde_json::from_str::<Value>(&body) {
-            let status = json["status"].as_i64().unwrap_or(0);
+            let status = fetch::json_i64_pub(&json["status"]).unwrap_or(0);
             if status == 2 {
                 return Ok(true);
             }
@@ -3482,8 +3486,8 @@ async fn cmd_check(project_id: Option<String>, limit: Option<usize>, verbose: bo
             println!("  Name:        {}", json["name"].as_str().unwrap_or(""));
             println!("  Description: {}", json["description"].as_str().unwrap_or(""));
             println!("  Status: {} (has_files={})", 
-                json["status"].as_i64().unwrap_or(0),
-                json["has_files"].as_bool().unwrap_or(false));
+                fetch::json_i64_pub(&json["status"]).unwrap_or(0),
+                fetch::json_truthy_pub(&json["has_files"]));
             println!("  Created: {}", json["created_at"].as_str().unwrap_or(""));
             println!("  Updated: {}", json["last_updated"].as_str().unwrap_or(""));
 
@@ -3567,7 +3571,7 @@ async fn cmd_check(project_id: Option<String>, limit: Option<usize>, verbose: bo
         if !verbose {
             println!("{:<36} {:<6} {:<60} {}", "ID", "ST", "NAME / DESCRIPTION", "CREATED");
             for p in all_projects.iter().take(limit) {
-                let st = match p["status"].as_i64().unwrap_or(0) {
+                let st = match fetch::json_i64_pub(&p["status"]).unwrap_or(0) {
                     0 => "QUEUE", 1 => "RUN", 2 => "DONE", _ => "?"
                 };
                 let desc = p["description"].as_str().unwrap_or("");
@@ -3645,7 +3649,7 @@ fn cmd_dasl_status(filter: Option<String>, sorries_only: bool) -> Result<()> {
 
         if sorries_only && sorry_count == 0 { continue; }
 
-        let status = match project["status"].as_i64().unwrap_or(0) {
+        let status = match fetch::json_i64_pub(&project["status"]).unwrap_or(0) {
             0 => "QUEUE", 1 => "RUN", 2 => "DONE", _ => "?"
         };
         results.push((pid, status.to_string(), lean_count, sorry_count, has_flakes));
@@ -4245,7 +4249,7 @@ async fn cmd_patch(project_id: String, prereq_dir: PathBuf, interval: u64, max_r
         match resp {
             Ok(r) if r.status().is_success() => {
                 let json: serde_json::Value = r.json().await?;
-                let status = json["status"].as_i64().unwrap_or(0);
+                let status = fetch::json_i64_pub(&json["status"]).unwrap_or(0);
                 let desc = json["description"].as_str().unwrap_or("");
 
                 match status {
@@ -6981,9 +6985,9 @@ async fn main() -> Result<()> {
             info!("Executing scan-index command");
             file_index::cmd_scan_index(index_dir.clone(), output_dir.clone(), prefix_filter.clone())?;
         }
-        Commands::Fetch { parallel, limit, dry_run, recent_days, project_id } => {
+        Commands::Fetch { parallel, limit, dry_run, recent_days, project_id, all } => {
             info!("Executing fetch command");
-            fetch::cmd_fetch(*parallel, *limit, *dry_run, *recent_days, project_id.clone()).await?;
+            fetch::cmd_fetch(*parallel, *limit, *dry_run, *recent_days, project_id.clone(), *all).await?;
         }
         Commands::Pipeline { parallel, limit, dry_run, recent_days } => {
             info!("Executing pipeline command");
