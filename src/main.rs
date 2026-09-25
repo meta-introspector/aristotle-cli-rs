@@ -19,7 +19,10 @@ use walkdir::WalkDir;
 
 mod accounts;
 mod api;
+mod bootstrap;
+mod cache;
 mod cmd;
+mod deploy;
 mod config;
 mod fetch;
 mod file_index;
@@ -40,6 +43,8 @@ mod project_test;
 mod shared_lean;
 mod alias;
 mod alias_web;
+mod signing;
+mod toolchain;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -79,6 +84,35 @@ fn set_api_key(api_key: &str) {
 
 fn resolve_project_id(input: &str) -> Result<String> {
     alias::resolve(input)
+}
+
+/// Find the most recently modified project dir containing a lakefile,
+/// i.e. the newest downloaded Aristotle result ready to build.
+fn newest_project_dir() -> Result<PathBuf> {
+    let config = load_config()?;
+    let mut best: Option<(std::time::SystemTime, PathBuf)> = None;
+    for entry in fs::read_dir(&config.results_dir)? {
+        let entry = entry?;
+        if !entry.file_type()?.is_dir() {
+            continue;
+        }
+        let inner = entry.path().join("output-final_aristotle");
+        let candidate = if inner.join("lakefile.toml").exists() || inner.join("lakefile.lean").exists() {
+            inner
+        } else if entry.path().join("lakefile.toml").exists()
+            || entry.path().join("lakefile.lean").exists()
+        {
+            entry.path()
+        } else {
+            continue;
+        };
+        let mtime = entry.metadata()?.modified()?;
+        if best.as_ref().map(|(t, _)| mtime > *t).unwrap_or(true) {
+            best = Some((mtime, candidate));
+        }
+    }
+    best.map(|(_, p)| p)
+        .context("no downloadable projects with a lakefile found")
 }
 
 #[derive(Subcommand)]
@@ -511,6 +545,46 @@ enum Commands {
         #[arg(long)]
         all: bool,
     },
+    /// Bootstrap a Lean 4 toolchain on this machine (elan | nix | bundled)
+    Bootstrap {
+        /// Toolchain version (e.g. v4.28.0, stable) — default: stable
+        toolchain: Option<String>,
+        /// Force a method: elan | nix | bundled (default: auto-detect)
+        #[arg(long)]
+        method: Option<String>,
+    },
+    /// gokujo toolchain management (tiny Lean-compiled binary, no deps)
+    Toolchain {
+        #[command(subcommand)]
+        command: ToolchainCommand,
+    },
+    /// Shared lake-cache: symlink shared mathlib/pkg checkouts into projects
+    Cache {
+        #[command(subcommand)]
+        command: CacheCommand,
+        /// Shared cache root (default: /mnt/data1/lake-cache or $LEAN_SHARED_CACHE_ROOT)
+        #[arg(long, global = true)]
+        root: Option<PathBuf>,
+    },
+    /// Sign and verify gokujo binaries with ssh-keygen detached signatures
+    Sign {
+        #[command(subcommand)]
+        command: SignCommand,
+    },
+    /// Build project(s) against the shared cache and publish signed reports to nginx
+    Publish {
+        /// Project dirs (e.g. .../output-final_aristotle); default: newest downloaded
+        projects: Vec<PathBuf>,
+        /// Nginx static root (default: /var/www/solana.solfunmeme.com/aristotle-builds)
+        #[arg(long)]
+        web_root: Option<PathBuf>,
+        /// Stop after this many projects
+        #[arg(long, default_value = "1")]
+        limit: usize,
+        /// Publish without building (just regenerate the index)
+        #[arg(long)]
+        index_only: bool,
+    },
     /// Full pipeline: fetch → split → verify (lake build) → version → merge
     Pipeline {
         #[arg(short = 'j', default_value = "2")]
@@ -758,6 +832,79 @@ enum AliasCommands {
     Resolve {
         name: String,
     },
+}
+
+#[derive(clap::Subcommand)]
+enum ToolchainCommand {
+    /// Report which Lean toolchain backends this machine can use
+    Doctor,
+    /// Compile the vendored Gokujo.lean into a tiny native binary (no deps)
+    Bootstrap {
+        /// Output binary path (default: ~/.cache/aristotle-manager/bin/gokujo)
+        #[arg(short = 'o')]
+        out: Option<PathBuf>,
+        /// Backend to compile with: elan | system (default: auto)
+        #[arg(long)]
+        backend: Option<String>,
+    },
+    /// Copy a Lean toolchain beside the gokujo binary (self-contained pair)
+    Bundle {
+        /// Lean toolchain dir (e.g. ~/.elan/toolchains/leanprover--lean4---v4.28.0)
+        toolchain_dir: PathBuf,
+        /// Destination dir (default: beside the cached gokujo binary)
+        #[arg(short = 'o')]
+        out: Option<PathBuf>,
+    },
+    /// Write the per-platform release script for every gokujo artifact
+    Release {
+        /// Write the script here instead of stdout
+        #[arg(short = 'o')]
+        out: Option<PathBuf>,
+    },
+    /// Print the path of the vendored gokujo manual
+    Manual,
+}
+
+#[derive(clap::Subcommand)]
+enum CacheCommand {
+    /// Show cache contents and (optionally) a project's linkage
+    Status {
+        /// Project dir to inspect
+        project: Option<PathBuf>,
+    },
+    /// Link a project's .lake/packages/mathlib into the shared store
+    Link {
+        /// Project dir (default: .)
+        project: Option<PathBuf>,
+    },
+    /// Link every Lean project found under a tree (e.g. all Aristotle results)
+    LinkAll {
+        /// Directory to scan recursively
+        #[arg(default_value = "/mnt/data1/aristotle-results")]
+        scan_root: PathBuf,
+    },
+    /// Remove shared mathlib checkouts no project links to anymore
+    Gc,
+}
+
+#[derive(clap::Subcommand)]
+enum SignCommand {
+    /// Create the ed25519 signing keypair + allowed_signers file
+    Keygen {
+        /// Principal identity (default: $USER)
+        #[arg(long)]
+        identity: Option<String>,
+    },
+    /// Sign a file (produces FILE.sig)
+    Sign { file: PathBuf },
+    /// Verify a detached signature against allowed_signers
+    Verify {
+        file: PathBuf,
+        /// Signature file (default: FILE.sig)
+        sig: Option<PathBuf>,
+    },
+    /// Show the signing setup
+    Status,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -6988,6 +7135,50 @@ async fn main() -> Result<()> {
         Commands::Fetch { parallel, limit, dry_run, recent_days, project_id, all } => {
             info!("Executing fetch command");
             fetch::cmd_fetch(*parallel, *limit, *dry_run, *recent_days, project_id.clone(), *all).await?;
+        }
+        Commands::Bootstrap { toolchain, method } => {
+            info!("Executing bootstrap command");
+            bootstrap::cmd_lean(toolchain.clone(), method.clone())?;
+        }
+        Commands::Toolchain { command } => match command {
+            ToolchainCommand::Doctor => toolchain::cmd_doctor()?,
+            ToolchainCommand::Bootstrap { out, backend } => {
+                toolchain::cmd_bootstrap(out.clone(), backend.clone())?;
+            }
+            ToolchainCommand::Bundle { toolchain_dir, out } => {
+                toolchain::cmd_bundle(toolchain_dir.clone(), out.clone())?;
+            }
+            ToolchainCommand::Release { out } => {
+                toolchain::cmd_release(out.clone())?;
+            }
+            ToolchainCommand::Manual => toolchain::cmd_manual()?,
+        },
+        Commands::Cache { command, root } => match command {
+            CacheCommand::Status { project } => cache::cmd_status(root.clone(), project.clone())?,
+            CacheCommand::Link { project } => cache::cmd_link(root.clone(), project.clone())?,
+            CacheCommand::LinkAll { scan_root } => cache::cmd_link_all(root.clone(), scan_root.clone())?,
+            CacheCommand::Gc => cache::cmd_gc(root.clone())?,
+        },
+        Commands::Sign { command } => match command {
+            SignCommand::Keygen { identity } => signing::cmd_keygen(identity.clone())?,
+            SignCommand::Sign { file } => signing::cmd_sign(file.clone(), None)?,
+            SignCommand::Verify { file, sig } => signing::cmd_verify(file.clone(), sig.clone())?,
+            SignCommand::Status => signing::cmd_status()?,
+        },
+        Commands::Publish { projects, web_root, limit, index_only } => {
+            info!("Executing publish command");
+            let projects = if projects.is_empty() {
+                vec![newest_project_dir()?]
+            } else {
+                projects.clone()
+            };
+            if *index_only {
+                let root = web_root.clone().unwrap_or_else(|| PathBuf::from(deploy::DEFAULT_WEB_ROOT));
+                std::fs::create_dir_all(&root)?;
+                println!("  index regenerated at {}", root.join("index.html").display());
+            } else {
+                deploy::cmd_deploy(projects, web_root.clone(), *limit)?;
+            }
         }
         Commands::Pipeline { parallel, limit, dry_run, recent_days } => {
             info!("Executing pipeline command");
