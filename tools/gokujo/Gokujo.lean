@@ -190,6 +190,57 @@ theorem scanStr_append (cs : List Char) :
     (scanStr cs).1 ++ (scanStr cs).2 = cs := by
   fun_induction scanStr cs <;> simp_all +zetaDelta
 
+/-- Iterative scanStr for large inputs. -/
+def scanStrTR (cs : List Char) : List Char × List Char :=
+  let r := Id.run do
+    let mut acc : List Char := []
+    let mut rest := cs
+    let mut done := false
+    while !rest.isEmpty && !done do
+      match rest with
+      | '\\' :: c :: cs' =>
+        acc := '\\' :: c :: acc
+        rest := cs'
+    | '"' :: cs' =>
+        done := true
+        rest := cs'
+    | c :: cs' =>
+        acc := c :: acc
+        rest := cs'
+  (r.1.reverse, r.2)
+
+theorem scanStrTR_eq (cs : List Char) : scanStrTR cs = scanStr cs := by
+  -- Prove by induction on the input list
+  induction cs with
+  | nil =>
+      -- both return ([], [])
+      rfl
+  | cons c cs ih =>
+      by_cases h : c = '\\'
+      · subst c
+          -- Recursive case: escape sequence handled
+          by_cases hcs : cs = []
+          · subst cs; rfl
+          · cases cs with
+            | nil => rfl
+            | cons c' cs' =>
+                by_cases h' : c' = '"'
+                · subst c'; rfl
+                · simp [scanStrTR, scanStr, ih, h, hcs, h']
+      · by_cases h' : c = '"'
+        · subst c; rfl
+      · by_cases hcs : cs = []
+        · subst cs; rfl
+        · cases cs with
+          | nil => rfl
+          | cons c' cs' =>
+              by_cases h' : c' = '"'
+              · subst c'; simp [scanStrTR, scanStr, ih, h, hcs]
+              · simp [scanStrTR, scanStr, ih, h, hcs, h']
+
+@[csimp] theorem scanStr_eq_scanStrTR : @scanStr = @scanStrTR := by
+  funext cs; exact scanStrTR_eq cs
+
 /-- Read one token off the front of the input. -/
 def nextTok : List Char → Option (Tok × List Char)
   | [] => none
@@ -2361,11 +2412,3 @@ end Gokujo
 /-- `gokujo`, the executable.  The root `main` that `lake` needs lives in
 `GokujoMain.lean`, so that this library can be imported by other programs. -/
 def gokujoMain (argv : List String) : IO UInt32 := Gokujo.Cli.main argv
-
-namespace Gokujo
-namespace Cli
-/-- Entry point for the native standalone binary: `lean -c` emits this as the
-C `main` when compiled with `-DleanIOexportMain`. -/
-def nativeMain (argv : List String) : IO UInt32 := main argv
-end Cli
-end Gokujo

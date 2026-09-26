@@ -186,10 +186,57 @@ pub async fn cmd_fetch(
     if let Some(pid) = project_id {
         println!("Fetching single project: {}", pid);
         let project_dir = results_dir.join(format!("{}_aristotle", pid));
-        if project_dir.exists() && !all_history {
-            println!("Project already downloaded: {}", project_dir.display());
-        } else {
-            println!("Downloading project {}...", pid);
+        
+        // Check if we already have the project and if it needs updating
+        let mut should_download = true;
+        if project_dir.exists() {
+            // Get the timestamp from existing metadata
+            let meta_path = project_dir.join("aristotle_metadata.json");
+            if let Ok(meta_str) = fs::read_to_string(&meta_path) {
+                if let Ok(meta) = serde_json::from_str::<serde_json::Value>(&meta_str) {
+                    if let Some(extracted_at) = meta["extracted_at"].as_str() {
+                        // Check server for the actual last_updated timestamp
+                        let status_url = format!("{}/project/{}", crate::API_BASE_URL, pid);
+for (_name, key) in upstream_accounts()? {
+                            let status_response = client.get(&status_url)
+                                .header("x-api-key", key)
+                                .send()
+                                .await;
+                            match status_response {
+                                Ok(resp) if resp.status().is_success() => {
+                                    if let Ok(status_json) = resp.json::<serde_json::Value>().await {
+                                        if let Some(server_updated) = status_json["last_updated"].as_str() {
+                                            // Compare timestamps - download if server is newer
+                                            if server_updated > extracted_at {
+                                                should_download = true;
+                                                println!("  Server has newer version ({} vs {}), downloading...", server_updated, extracted_at);
+                                            } else {
+                                                should_download = false;
+                                                println!("  Already up to date: {}", project_dir.display());
+                                            }
+                                        } else {
+                                            // No last_updated on server, download anyway
+                                            should_download = true;
+                                        }
+                                    } else {
+                                        // Can't parse server response, download anyway
+                                        should_download = true;
+                                    }
+                                    break;
+                                }
+                                _ => {
+                                    // Can't check server, download anyway
+                                    should_download = true;
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        if should_download {
             // Try the default key first; on Forbidden, retry with each other
             // account until one can read the project.
             let mut last_err: Option<anyhow::Error> = None;
@@ -208,7 +255,7 @@ pub async fn cmd_fetch(
                     Ok(_) => {
                         println!(
                             "Downloaded to: {} (account {})",
-                            results_dir.join(format!("{}_aristotle", pid)).display(),
+                            project_dir.display(),
                             name
                         );
                         return Ok(());
@@ -227,8 +274,9 @@ pub async fn cmd_fetch(
                 "no account could download project {}",
                 pid
             )));
+        } else {
+            return Ok(());
         }
-        return Ok(());
     }
 
     println!("=== Aristotle Fetch (incremental) ===");

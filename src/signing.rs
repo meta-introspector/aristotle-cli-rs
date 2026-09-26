@@ -106,6 +106,11 @@ pub fn cmd_sign(file: PathBuf, key: Option<PathBuf>) -> Result<()> {
             key.display()
         );
     }
+    // Remove any previous signature first: ssh-keygen -Y sign prompts for
+    // confirmation when the .sig exists, which aborts (no stdin) and leaves
+    // the STALE signature in place — republishing the same path would then
+    // ship a sig that never matches the rewritten file.
+    let _ = std::fs::remove_file(sig_path(&file));
     let (code, _, err) = run(Command::new("ssh-keygen").args([
         "-Y", "sign",
         "-f", key.to_str().unwrap(),

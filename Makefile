@@ -358,6 +358,45 @@ stage8-feed: feed-index feed-arrows feed-deepscan feed-diagonalize feed-refusal
 # Full pipeline from task file
 full-pipeline: stage2-enrich stage3-diagonalize stage4-deepanalysis stage5-termgraph stage6-refusal stage7-notebooklm stage8-feed
 
+# ── Gokujo + shared lake-cache build/deploy targets ───────────────
+WEB_ROOT := /mnt/data1/lake-cache/www/aristotle-builds
+GOKUJO := $(HOME)/.cache/aristotle-manager/bin/gokujo
+RESULTS_DIR := /mnt/data1/aristotle-results
+
+# One-time: configure package managers + cache root
+cache-init:
+	@cargo run --release -- cache init
+
+# One-time: compile + sign the lean-worker (gokujo)
+worker-bootstrap:
+	@cargo run --release -- toolchain bootstrap
+	@cargo run --release -- sign sign $(GOKUJO)
+	@cargo run --release -- sign verify $(GOKUJO)
+
+# Build + publish the NEWEST downloaded project (never rebuilds mathlib)
+publish-newest:
+	@cargo run --release -- publish --web-root $(WEB_ROOT) --limit 1
+
+# Build + publish the N newest downloaded projects (usage: make publish-n N=3)
+publish-n:
+	@cargo run --release -- publish --web-root $(WEB_ROOT) --limit $(N)
+
+# Publish an explicit project (usage: make publish-one PROJ=<uuid>)
+publish-one:
+	@cargo run --release -- publish $(RESULTS_DIR)/$(PROJ)_aristotle/output-final_aristotle --web-root $(WEB_ROOT)
+
+# Serve the tile: commit + build + activate system-manager nginx config
+tile-deploy:
+	@./scripts/deploy-build-tile.sh
+
+# Debug shared-cache linkage for a project (usage: make cache-status PROJ=<uuid>)
+cache-status:
+	@cargo run --release -- cache status $(RESULTS_DIR)/$(PROJ)_aristotle/output-final_aristotle
+
+# Lean-worker direct: debug report (usage: make worker-debug PROJ=<uuid>)
+worker-debug:
+	@$(GOKUJO) debug $(RESULTS_DIR)/$(PROJ)_aristotle/output-final_aristotle
+
 # Update help target
 help:
 	@echo "Available targets:"
@@ -410,4 +449,13 @@ help:
 	@echo "  stage7-notebooklm: Run Stage 7 NotebookLM dump"
 	@echo "  stage8-feed     : Run Stage 8 feed results back to Aristotle"
 	@echo "  full-pipeline   : Run complete pipeline from task file"
+	@echo "  --- gokujo / shared lake-cache ---"
+	@echo "  cache-init      : Configure package managers + shared cache root"
+	@echo "  worker-bootstrap: Compile + sign the lean-worker (gokujo binary)"
+	@echo "  publish-newest  : Build + publish newest downloaded project"
+	@echo "  publish-n N=3   : Build + publish N newest projects"
+	@echo "  publish-one PROJ=: Build + publish one project by UUID"
+	@echo "  tile-deploy     : Serve aristotle-builds tile via system-manager nginx"
+	@echo "  cache-status PROJ=: Show shared-cache linkage for a project"
+	@echo "  worker-debug PROJ=: Lean-worker debug report for a project"
 	@echo "  help            : Show this help"

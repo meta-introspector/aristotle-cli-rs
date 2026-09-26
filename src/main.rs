@@ -584,6 +584,12 @@ enum Commands {
         /// Publish without building (just regenerate the index)
         #[arg(long)]
         index_only: bool,
+        /// Skip the `lake exe cache get!` step (not recommended; risks mathlib rebuild)
+        #[arg(long)]
+        no_cache_exe: bool,
+        /// Skip packaging cached mathlib oleans into the nix store
+        #[arg(long)]
+        no_nix: bool,
     },
     /// Full pipeline: fetch → split → verify (lake build) → version → merge
     Pipeline {
@@ -867,6 +873,12 @@ enum ToolchainCommand {
 
 #[derive(clap::Subcommand)]
 enum CacheCommand {
+    /// Configure package managers + cache root for the shared-cache workflow
+    Init {
+        /// Lean toolchain version to install via elan (e.g. v4.28.0)
+        #[arg(long)]
+        toolchain: Option<String>,
+    },
     /// Show cache contents and (optionally) a project's linkage
     Status {
         /// Project dir to inspect
@@ -883,7 +895,25 @@ enum CacheCommand {
         #[arg(default_value = "/mnt/data1/aristotle-results")]
         scan_root: PathBuf,
     },
-    /// Remove shared mathlib checkouts no project links to anymore
+    /// Deduplicate real .lake/packages checkouts into the shared store (dry-run by default)
+    Dedup {
+        /// Trees to scan (default: builds root + results dir)
+        #[arg(long = "root")]
+        roots: Vec<PathBuf>,
+        /// Actually move/remove duplicate checkouts
+        #[arg(long)]
+        execute: bool,
+    },
+    /// Remove stale build workspaces under the builds root (dry-run by default)
+    Prune {
+        /// Only remove workspaces untouched for this many days
+        #[arg(long, default_value = "2")]
+        older_than_days: u64,
+        /// Actually delete the workspaces
+        #[arg(long)]
+        execute: bool,
+    },
+    /// Remove shared checkouts no project links to anymore
     Gc,
 }
 
@@ -7154,9 +7184,12 @@ async fn main() -> Result<()> {
             ToolchainCommand::Manual => toolchain::cmd_manual()?,
         },
         Commands::Cache { command, root } => match command {
+            CacheCommand::Init { toolchain } => cache::cmd_init(root.clone(), toolchain.clone())?,
             CacheCommand::Status { project } => cache::cmd_status(root.clone(), project.clone())?,
             CacheCommand::Link { project } => cache::cmd_link(root.clone(), project.clone())?,
             CacheCommand::LinkAll { scan_root } => cache::cmd_link_all(root.clone(), scan_root.clone())?,
+            CacheCommand::Dedup { roots, execute } => cache::cmd_dedup(root.clone(), roots.clone(), *execute)?,
+            CacheCommand::Prune { older_than_days, execute } => cache::cmd_prune(*older_than_days, *execute)?,
             CacheCommand::Gc => cache::cmd_gc(root.clone())?,
         },
         Commands::Sign { command } => match command {
@@ -7165,7 +7198,7 @@ async fn main() -> Result<()> {
             SignCommand::Verify { file, sig } => signing::cmd_verify(file.clone(), sig.clone())?,
             SignCommand::Status => signing::cmd_status()?,
         },
-        Commands::Publish { projects, web_root, limit, index_only } => {
+        Commands::Publish { projects, web_root, limit, index_only, no_cache_exe, no_nix } => {
             info!("Executing publish command");
             let projects = if projects.is_empty() {
                 vec![newest_project_dir()?]
@@ -7177,7 +7210,7 @@ async fn main() -> Result<()> {
                 std::fs::create_dir_all(&root)?;
                 println!("  index regenerated at {}", root.join("index.html").display());
             } else {
-                deploy::cmd_deploy(projects, web_root.clone(), *limit)?;
+                deploy::cmd_deploy(projects, web_root.clone(), *limit, *no_cache_exe, *no_nix)?;
             }
         }
         Commands::Pipeline { parallel, limit, dry_run, recent_days } => {
