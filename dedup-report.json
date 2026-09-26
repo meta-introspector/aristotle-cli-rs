@@ -1,0 +1,180 @@
+{
+  "root": "/home/mdupont/projects/arist",
+  "scanned": 56,
+  "duplicate_groups": 19,
+  "dirs_kept": 19,
+  "dirs_archived": 56,
+  "bytes_freed_hint": 367666568,
+  "groups": [
+    {
+      "description": "(* Require Import MirrorSolve.FirstOrder. *)\\n(* Require Import MirrorSolve.BV. *)\\n(* Require Import MirrorSolve.SMT. *)\\n(* Require Import MirrorSolve.UF. *)\\n(* Require Import MirrorSolve.FOList. *)\\n(* Require Import MirrorSolve.HLists. *)\\n\\n(* Import HListNotations. *)\\n\\n(* Require Import Coq.Strings.String. *)\\n\\n(* Require Import MirrorSolve.Reflection.Core. *)\\n(* Require Import MirrorSolve.Reflection.FM. *)\\n\\n(* Require Import Coq.ZArith.BinInt. *)\\n(* Require Import MirrorSolve.Automation.Equations. *)\\n\\n(*\\nIntuitional language model\\neveryone creates different versions of this for themselves.\\n\\nthis is mine that i will create mappings onto other systems with it.\\n\\npair_Type is  similar to total2 of unimath\\n\\n *)\\n\\n(*Unimath*)\\nDefinition UU := Type.\\nInductive empty : UU := .\\nNotation \\",
+      "canonical": "931ec461-1f4a-4bb3-a013-c83dc3723338",
+      "archived": [
+        "93a4a478-2e79-41b3-a4bc-b622c6148ed7"
+      ]
+    },
+    {
+      "description": "DASL MISSING",
+      "canonical": "932247ec-4b02-4568-a780-871ffcb5e6cf",
+      "archived": [
+        "4d1ec35c-5b1a-47e6-bd16-599f0578e15c"
+      ]
+    },
+    {
+      "description": "Merge all projects",
+      "canonical": "e5a47759-cc48-47a5-be61-af88d8e5bfdc_aristotle",
+      "archived": [
+        "e5a47759-cc48-47a5-be61-af88d8e5bfdc"
+      ]
+    },
+    {
+      "description": "MicroLean4 Phase 1: Extended MicroLeanType with string, unit, option, list constructors. Updated all 6 emitters, isBoxed, ofExprPure, reify, ofExpr, memOps, domainOf, codomainOf. All existing theorems updated. 9 types total (was 5), 6 emitters, sorry-free.",
+      "canonical": "40bf462d-132b-46e1-aa5b-7160ad74fb20",
+      "archived": [
+        "cf122c5d-1f4e-4552-970c-4b616718c540"
+      ]
+    },
+    {
+      "description": "Prove the DASL GOAP pipeline specification.\\nThe Lean4 file at /home/mdupont/dasl-planning/lean-proofs/GoapPipeline.lean contains:\\n- 26 state atoms as an inductive type\\n- 13 pipeline actions with pre/post conditions\\n- Pipeline correctness theorem (native_decide)\\nVerify all theorems and report proof status.",
+      "canonical": "f8e27a3f-e5fa-4c4d-ae95-cfd403280fa7",
+      "archived": [
+        "0967a581-db83-49e9-bdc8-1f9e1a426c70"
+      ]
+    },
+    {
+      "description": "Prove the DASL split-merge unification theorem.\\nThe Lean4 file at /home/mdupont/dasl-planning/lean-proofs/SplitMergeUnification.lean contains:\\n- Formal definition of Declaration with CID\\n- split, merge, and dedup functions\\n- split_merge_unification theorem: dedup(merge(split(decls))) = dedup(decls)\\n- Paper coverage statistics: 160 papers, 0 declarations\\nVerify the main theorem and report proof status.\\nThis proof shows that the DASL declaration splitter + merger preserves semantics.",
+      "canonical": "cc3360d4-4af1-48d5-ade5-557d8c5b0fcb",
+      "archived": [
+        "1d27ecd2-dc05-4a70-a3d7-0ab67c70582f",
+        "7b14123b-b7bc-4c75-bef7-1299e9584ce1"
+      ]
+    },
+    {
+      "description": "Submit tracker project for review",
+      "canonical": "10671d9f-c85c-4dc2-a84e-f7d6f7e168d5_aristotle",
+      "archived": [
+        "10671d9f-c85c-4dc2-a84e-f7d6f7e168d5"
+      ]
+    },
+    {
+      "description": "Update project c481ea66 with local dependency paths for mathlib, batteries, aesop, Qq, proofwidgets, plausible, LeanSearchClient, importGraph, Cli",
+      "canonical": "6402fae4-0167-4fa2-a490-76768fffb3bd",
+      "archived": [
+        "6402fae4-0167-4fa2-a490-76768fffb3bd_aristotle"
+      ]
+    },
+    {
+      "description": "Verilean/hesper webgpu",
+      "canonical": "ff756caf-8d26-4f8c-af96-981be215a038_aristotle",
+      "archived": [
+        "ff756caf-8d26-4f8c-af96-981be215a038"
+      ]
+    },
+    {
+      "description": "\\",
+      "canonical": "384cd230-069e-4669-91f2-1f8465ad0a06",
+      "archived": [
+        "1fcb5ebe-bbab-4c12-bc38-4f1cd4739c1b",
+        "3217fdf8-fa6f-4f99-b0d0-1de39a0152ef",
+        "3a0c2241-1981-4b37-8bdc-b4df4ae454bd",
+        "4c7b097c-4b5b-4fe1-b2fc-8c83ea58d954",
+        "4ddd06c0-4674-4f09-b660-0b8946bb09f1",
+        "4f5ac625-776a-4209-b7dc-96f550c2d736",
+        "5c897eb2-384a-4ceb-8aa3-43e5706af10f",
+        "5fe4410b-9508-4b4a-b440-362f6a7b634e",
+        "64854c3f-b480-44eb-810a-fda4b64bd2c3",
+        "797a5b85-1615-4d3e-85e2-649e6581f3b9",
+        "7a027869-d9a0-498b-bf4c-dea783d65b2c",
+        "88bc93f4-49a4-444d-86ca-0888cff1d32f",
+        "c18edf48-c6ea-4e41-baee-0402020d3cf6",
+        "d58917bf-a104-4ede-a696-91c93e268616",
+        "e15ece7d-0382-46da-8774-d6f7dab9380e",
+        "f0bb7632-28fc-4292-8ce6-4fbd0895d39d",
+        "f50f64eb-e1e1-4eb4-b564-ddbdbedb5bc5",
+        "f67cd7d2-b8ae-48f9-a7a5-9350eeefdbba",
+        "fc60cbbb-8393-407e-be18-aab794b76b34"
+      ]
+    },
+    {
+      "description": "arXiv-2608.13433v1.tar",
+      "canonical": "4354fedb-5305-4fab-a97e-70d5e459de99_aristotle",
+      "archived": [
+        "4354fedb-5305-4fab-a97e-70d5e459de99"
+      ]
+    },
+    {
+      "description": "aristotle-monster-data",
+      "canonical": "cef55bd5-3292-4a54-adef-8968dff05a4e",
+      "archived": [
+        "fef52e3d-3233-4bea-a013-0210483fb79b"
+      ]
+    },
+    {
+      "description": "dasl-sorries",
+      "canonical": "74171800-8676-4008-b1c8-39a76b504312",
+      "archived": [
+        "3c84bcb7-cfdb-48c7-8a3a-8f95c2a840b8",
+        "bc363fe9-877e-47a8-9232-01bf3f178506",
+        "d78a39a7-e866-4d8f-ad91-a363b1db2e0d",
+        "ffb49fc6-a8d6-4d51-8224-8aa0cfd656c6"
+      ]
+    },
+    {
+      "description": "https://github.com/DULA2025/prime-inertia-engine import this archive of aristo projects",
+      "canonical": "2cefd4a5-8c86-4377-a717-c5417c6f9451_aristotle",
+      "archived": [
+        "2cefd4a5-8c86-4377-a717-c5417c6f9451"
+      ]
+    },
+    {
+      "description": "kant-zk-pastebin",
+      "canonical": "6f91c03d-87e8-4c6a-8d3f-de39edee2f6d",
+      "archived": [
+        "6f91c03d-87e8-4c6a-8d3f-de39edee2f6d_aristotle"
+      ]
+    },
+    {
+      "description": "project",
+      "canonical": "ad861eea-0752-46e3-880a-52eccfce5b4c",
+      "archived": [
+        "5f43262f-85da-439a-a404-5433260d20ae",
+        "9818aa9f-c2ea-4067-aebd-6b7f928c0abd"
+      ]
+    },
+    {
+      "description": "unified-dasl",
+      "canonical": "c4748da2-cb2f-49be-8d3a-d02e7602b2b4",
+      "archived": [
+        "2e66d20c-f932-45b6-9fa8-623be8facb48",
+        "2ebadf0f-77c0-4dca-ac7d-617603abe8be",
+        "450aa408-4fbe-463a-9d54-6f9306684ef9",
+        "4b7ae00b-c845-4c67-aedd-8d58dabb1ce1",
+        "55f227c1-339f-42cc-ae36-7af193038065",
+        "5adf84d8-1d25-48c5-9b1d-9b891bd23d2d",
+        "68c83868-16f0-4414-9d92-e1e0764dd13d",
+        "75f381bb-75ec-4ad6-8dac-c46236a5f24b",
+        "7a27f5e1-6311-4fd6-9a84-116d5cb115e5",
+        "8fab55fa-06b4-4365-a5b7-d68b21760092",
+        "92c0b91b-d9b6-4bf8-8cf4-d75ed248dbc6",
+        "ac86495b-1e69-425f-ae59-03bd4de541dc",
+        "c0c7317e-167c-46ad-85e1-8c3e23b95ec2",
+        "c8150c48-1fb8-432b-9680-fa6027589ceb",
+        "ca866d40-218d-4a23-b7cb-e2f12a6cedbe"
+      ]
+    },
+    {
+      "description": "{-# LANGUAGE TemplateHaskell, UnboxedTuples, ParallelListComp, CPP,\\n             RankNTypes, TypeFamilies,\\n             DataKinds, ConstraintKinds, PolyKinds, MultiParamTypeClasses,\\n             FlexibleInstances, ExistentialQuantification,\\n             ScopedTypeVariables, GADTs, ViewPatterns, TupleSections,\\n             TypeOperators, PartialTypeSignatures, PatternSynonyms,\\n             TypeApplications #-}\\n{-# OPTIONS -Wno-incomplete-patterns -Wno-overlapping-patterns\\n            -Wno-unused-matches -Wno-type-defaults\\n            -Wno-missing-signatures -Wno-unused-do-bind\\n            -Wno-missing-fields -Wno-incomplete-record-updates\\n            -Wno-partial-type-signatures -Wno-redundant-constraints #-}\\n\\n#if __GLASGOW_HASKELL__ >= 805\\n{-# LANGUAGE DerivingVia #-}\\n{-# LANGUAGE QuantifiedConstraints #-}\\n#endif\\n\\n#if __GLASGOW_HASKELL__ < 806\\n{-# LANGUAGE TypeInType #-}\\n#endif\\n\\n#if __GLASGOW_HASKELL__ >= 809\\n{-# LANGUAGE StandaloneKindSignatures #-}\\n#endif\\n\\n#if __GLASGOW_HASKELL__ >= 906\\n{-# LANGUAGE TypeData #-}\\n#endif\\n{-# OPTIONS_GHC -ddump-to-file #-}\\n{-# LANGUAGE TemplateHaskell, MultiParamTypeClasses, FlexibleInstances, ConstraintKinds, UndecidableInstances, KindSignatures, DeriveGeneric, TypeApplications, DeriveAnyClass #-}\\n\\nmodule Server.MetaCoq.TestMeta3 where\\nimport Language.Haskell.TH.Syntax\\n--import Database.Persist.TH\\n\\n-- oimport Data.Morpheus.Server -- .Types.GQLType\\n-- import Data.Morpheus.App\\n--import Data.Morpheus.Server.Types\\n--import GHC.Types\\nimport Prelude(Show, pure, (.), show, Char, Maybe(..), Monad, return, map)\\n-- import Data.Morpheus.Server.Deriving.Utils.GRep\\nimport Server.MetaCoq.TestMeta\\n--import Test.Tasty\\n--import Test.Tasty.HUnit\\nimport Data.String\\n-- import Data.Generics.Traversable\\n-- import Data.Generics.Traversable.Zipper\\n-- import Data.Generics.Traversable.TH\\nimport Server.MetaCoq.TestMeta2\\n--import Data.ByteString.Lazy.Char8 (ByteString)\\n--import Data.Morpheus (interpreter)\\n--import Data.Morpheus.Document (importGQLDocument)\\n--import Data.Morpheus.Types (RootResolver (..), Undefined, ID, GQLType, QUERY,\\n--                            ResolverQ,\\n--                            Resolver)\\nimport           GHC.Generics\\nimport Data.Text (Text)\\n--import Splices\\n-- import qualified DsDec\\n-- import qualified Dec\\n-- import Dec ( RecordSel )\\n-- import ReifyTypeCUSKs\\n-- import ReifyTypeSigs\\nimport Language.Haskell.TH.Desugar\\nimport qualified Language.Haskell.TH.Desugar.OSet as OS\\nimport Language.Haskell.TH.Desugar.Expand  ( expandUnsoundly )\\nimport Language.Haskell.TH\\n-- import qualified Language.Haskell.TH.Syntax as Syn\\n\\nimport Control.Exception ( ErrorCall )\\nimport Control.Monad\\n\\nimport qualified Data.Map as M\\nimport Data.Proxy\\n\\n#if __GLASGOW_HASKELL__ >= 900\\nimport Prelude as P\\n#endif\\n\\n#if __GLASGOW_HASKELL__ >= 906\\nimport GHC.Tuple ( Solo(MkSolo) )\\n#elif __GLASGOW_HASKELL__ >= 900\\nimport GHC.Tuple ( Solo(Solo) )\\n#endif\\n\\n#if __GLASGOW_HASKELL__ >= 908\\nimport qualified FakeTuples\\nimport GHC.Tuple ( Tuple0, Tuple1, Tuple2, Tuple3, Unit )\\n#endif\\n\\n--class U a\\n--instance U a\\n-- instance GTraversable c0 (TestMeta.Prod TestMeta.Global_env TestMeta.Term)\\n--mshow :: d -> Char\\n--mshow x = 'c'\\n\\n--  foo1 :: String\\n-- foo1 = \\n-- ==  gfoldMap @Show (pure . show) rec_def_term  -- :: [String]--[GHC.Types.Char]\\n-- data Query (m :: * -> *) = Query\\n--   { globals :: ID -> m (Maybe (Prod Global_env Term))\\n--   } deriving (Generic\\n--              --, GQLType\\n--              )\\n\\n--globalsResolver :: Monad m => ID -> Resolver QUERY m (Maybe (Prod Global_env Term))\\n--globalsResolver id = pure (Just (rec_def_term id))\\n\\n--globalsResolver :: ID -> ResolverQ e Haxl (Prod Global_env Term)\\n--globalsResolver id = return (Just rec_def_term)\\n\\n--(GHC.Generics.Rep (Prod Global_env Term)))\\n\\n  -- hidden Data.Morpheus.Server.Deriving.Utils.GRep.GRep\\n-- foo =   GQLType (\\n--       (Resolver\\n--       (QUERY      ()       IO)\\n--         (Resolver QUERY   () IO\\n--          (ResolverValue (Resolver QUERY ()  IO)))\\n--         (GHC.Generics.Rep (Prod Global_env Term))\\n\\n\\n\\n--   Global_declarations\\n\\n--  (List (Branch Term)) \\n--  (List (Context_decl Term)) \\n--  (List (Def Term))\\n--  (List Aname) \\n--  (List Constructor_body) \\n--  (List Elt1) \\n--  (List Ident) \\n--  (List One_inductive_body) \\n--  (List Projection_body) \\n--  (List T3) \\n--  (List T36) \\n--  (List Term) \\n\\n--  (Option (List T36)) \\n--  (Option Kername) \\n--  (Option Term) \\n--  (Predicate Term)\\n\\n--data Prod a b =\\n--    Pair a b\\n\\n--  (Prod Global_env Bool) \\n--  (Prod Global_env Term)\\n--  (Prod Kername Global_decl) \\n\\n--data Modpath =\\n--   MPfile Dirpath\\n-- | MPbound Dirpath Ident Nat\\n-- | MPdot Modpath Ident\\n\\n--  (Prod Modpath Ident) \\n\\n--  (Prod T10 T32) \\n-- type T10 = T_0\\n-- type T35 = Prod T10 T32\\n-- type T32 = T_4\\n-- type T_4 = T26\\n-- type T26 = Tree0\\n--data Tree0 =\\n--   Leaf0\\n-- | Node0 T0 Tree0 (Prod (Prod T3 T24) T3) Tree0\\n\\n--  (Prod T3 Nat)\\n\\n--  (Prod T3 T24)\\n\\n-- type T24 = T_3\\n-- (Prod (Prod T3 T24) T3)\\n-- type Elt4 = Prod (Prod T3 T24) T3\\n-- type T25 = Prod (Prod T3 T24) T3\\n\\n-- type BigMama = (ProdProd Global_env Term)\\n\\n-- type Aname = Binder_annot Name\\n-- type Binder_annot  = BinderAnnot\\n--   MkBindAnn a Relevance\\n\\n-- type Case_info = CaseInfo\\n-- Mk_case_info Inductive Nat Relevance\\n\\n-- type Cast_kind = CastKind\\n-- type Context = List (Context_decl Term)\\n-- type Dirpath = List Ident\\n-- type Elt0 = T_\\n-- type Elt1 = Prod T3 Nat\\n-- type Elt2 = Prod T3 Nat\\n\\n-- type Global_declarations = List (Prod Kername Global_decl)\\n\\n-- type Ident = MyString\\n--   EmptyString\\n-- | String Byte MyString\\n\\n\\n-- type Kername = Prod Modpath Ident\\n\\n-- type Mfixpoint term = List (Def term)\\n-- type Mutual_inductive_body = MutualInductiveBody\\n-- type NonEmptyLevelExprSet =   T21\\n-- type Recursivity_kind = RecursivityKind\\n-- type T =MyString\\n-- type T0 = Z\\n\\n-- type T14 = Prod T3 Nat\\n-- type T18 = List Elt1\\n-- type T21 = T_1\\n-- type T22 = NonEmptyLevelExprSet\\n-- type T23 = T_2\\n\\n\\n\\n-- type T3 = T_\\n\\n-- type T33 = List T3\\n\\n-- type T4 = Tree\\n-- type T_0 = T4\\n-- type T_1 = T18\\n\\n-- type Universes_decl = UniversesDecl\\n\\nstep1 :: Global_declarations\\nstep1 = case rec_def_term of { Pair (Mk_global_env _ a _ ) _ -> a }\\n\\nstep2 :: TGlobalDeclaration\\nstep2 = case step1 of { Cons a b -> a }\\n\\nstep3 :: Global_decl\\nstep3 = case step2 of { Server.MetaCoq.TestMeta.Pair a b  -> b }\\n\\nstep3a :: Kername\\nstep3a = case step2 of { Server.MetaCoq.TestMeta.Pair a b  -> a }\\n\\nget_file :: Prod Modpath b -> Dirpath\\nget_file x = case x of {\\n  Pair (MPdot(MPfile(a)) _) _ -> a;\\n    -- Pair (MPdot (MPbound _ _ _) EmptyString) _\\n    --   Pair (MPdot (MPbound _ _ _) (Server.MetaCoq.TestMeta.String _ _)) _\\n    --  Pair (MPdot (MPdot _ _) EmptyString) _\\n    --  Pair (MPdot (MPdot _ _) (Server.MetaCoq.TestMeta.String _ _)) _\\n\\n  }\\n\\nstep4_inductive :: Mutual_inductive_body\\nstep4_inductive = step_inductive step3\\n\\nstep_inductive :: Global_decl -> Mutual_inductive_body\\nstep_inductive s = case s of { InductiveDecl a -> a }\\n\\nstep5_inductive4 :: List One_inductive_body\\nstep5_inductive4 = case step4_inductive of { Build_mutual_inductive_body _ _ _ a  _ _  -> a}\\n\\nstep6_name_of_type :: String\\nstep6_name_of_type = case step5_inductive4 of { (Cons (Build_one_inductive_body aIdent aContext aT23 aTerm aAllowed_eliminations _ _ _) Nil)  -> concatChars aIdent }\\n\\n\\n-- derivePersistField \\",
+      "canonical": "9687656f-b32a-4554-b64a-ff85980c7d0b",
+      "archived": [
+        "e31b6568-b1b6-4d70-8a9a-d50cf6106165"
+      ]
+    },
+    {
+      "description": "{-# OPTIONS_GHC -ddump-to-file #-}\\n{-# LANGUAGE ConstraintKinds  #-}\\n{-# LANGUAGE TypeFamilies  #-}\\n{-# LANGUAGE DeriveLift  #-}\\n\\n{-# LANGUAGE DerivingStrategies #-}\\n{-# LANGUAGE StandaloneDeriving                  #-}\\n{-# LANGUAGE DataKinds                  #-}\\n{-# LANGUAGE DeriveAnyClass             #-}\\n{-# LANGUAGE DeriveDataTypeable         #-}\\n{-# LANGUAGE DeriveGeneric              #-}\\n{-# LANGUAGE FlexibleInstances #-}\\n{-# LANGUAGE GeneralizedNewtypeDeriving #-}\\n{-# LANGUAGE LambdaCase  #-}\\n{-# LANGUAGE MultiParamTypeClasses  #-}\\n{-# LANGUAGE OverloadedStrings          #-}\\n{-# LANGUAGE QuasiQuotes #-}\\n{-# LANGUAGE TemplateHaskell  #-}\\n{-# LANGUAGE TypeApplications #-}\\n{-# LANGUAGE TypeOperators              #-}\\n{-# LANGUAGE UndecidableInstances #-}\\n\\nmodule Server.MetaCoq.TestMeta where\\nimport Language.Haskell.TH.Syntax (Lift)\\n--import Database.Persist.TH\\n\\n--import Language.Haskell.Liquid.ProofCombinators\\n\\n--import Data.Aeson.QQ\\n--  import Data.Morpheus (interpreter)\\n--import Data.Morpheus.Generic(GRep, deriveTypeValue, deriveTypeDefinition)\\n--- import Data.Morpheus.Document (importGQLDocument)\\n--import Data.Morpheus.Types ( GQLType)\\n\\n\\n--import Data.Generics.Traversable\\n--import Data.Generics.Traversable.Zipper\\n--import Data.Generics.Traversable.TH\\n\\n--import Data.Monoid (Monoid, mempty)\\n--import Data.Generics.Traversable\\n--import Data.Bitraversable\\n--import Data.Bifoldable\\n\\n\\n\\n--import Data.MonoTraversable\\n--import Data.Traversable\\n--import Data.MonoTraversable (Element, MonoFoldable(..))\\n--import Data.MonoTraversable (MonoFunctor(..), MonoFoldable(..), MonoTraversable(..))\\n--import qualified GHC.Real (Integral)\\n--import qualified GHC.Base (Monoid,\\n--                           Semigroup\\n--                          )\\n--import qualified Data.Aeson (Value(..))\\n--import qualified Data.Aeson.Types (Value(String))\\nimport Data.Data\\n--import Data.Sequences\\n--import Data.Generics.Uniplate.Data\\n--import Data.Generics.Uniplate.Operations\\nimport Prelude(Char, Show, Int, Float, (+), show\\n               --IO, (.), return\\n               )\\n\\n\\n\\n--import GHC.Generics (Generic)\\nimport Data.Aeson (toEncoding, ToJSON, genericToEncoding, defaultOptions, object, (.=) )\\nimport GHC.Char ( chr )  \\n\\n--import  Control.Lens ((&), mapped, (?~), (.~) )\\n--oimport           Data.Aeson.Encode.Pretty   (encodePretty)\\n--import qualified Data.ByteString.Lazy.Char8 as BL8\\n--import           Data.Proxy\\n--import           Data.Swagger\\n--import           Data.Text                  (Text)\\n--import           Data.Time                  (UTCTime (..), fromGregorian)\\n--import           Data.Typeable              (Typeable)\\nimport           GHC.Generics\\n\\n\\n\\ntoString :: Byte -> Char\\ntoString x = chr (foldNat (toNat (getNpos (toN x))))\\n\\n--instance (GHC.Real.Integral (Index T_)) where\\n--  mod a b = a \\n  \\n\\ndata T_ =\\n   Lzero\\n | Level MyString\\n | Lvar Nat\\n  deriving (\\n    Generic\\n    ,Show\\n    , Lift\\n--    ,GQLType\\n    ,Data\\n    ,Typeable\\n    )\\n\\n--your_folding_function_here = 1\\n--instance MonoFoldable T_ where\\n--  ofoldMap f (Level st) = ofoldMap f st\\n--  ofoldMap _ _          = mempty\\n  \\n--instance MonoFoldable T_ where\\n--  ofoldMap f (Level st) t = your_folding_function_here\\n--  ofoldr f z (T_ t) = your_right_folding_function_here\\n--  ofoldl' f z (T_ t) = your_left_folding_function_here\\n--  ofoldr1Ex f (T_ t) = your_right_folding_function_non_empty_here\\n--  ofoldl1Ex' f (T_ t) = your_left_folding_function_non_empty_here\\n--  otoList (T_ t) = your_converting_to_list_function_here\\n--  oall f (T_ t) = your_all_elements_satisfy_predicate_here\\n--  oany f (T_ t) = your_any_element_satisfies_predicate_here\\n\\n\\ndata Bool =\\n   True\\n | False\\n  deriving (Generic,\\n            Show,\\n             Lift,\\n            Data, Typeable)\\n\\ndata Prod a b =\\n    Pair a b\\n\\n\\ntype T =MyString\\n\\ndata MyString =\\n   EmptyString\\n-- | MyString2 Byte MyString\\n | String Byte MyString\\n  deriving ( Generic, Show,\\n             \\n             Data, Typeable,\\n             Lift\\n           --, MonoFoldable\\n           )\\n--instance GTraversable c T_\\ndata Nat =\\n  O\\n  | S Nat\\n  deriving ( Generic, Show,Lift,  Data, Typeable)\\n--instance GTraversable c Nat\\nfoldNat :: Nat -> Prelude.Int; foldNat = \\\\case { O -> 0; S n -> 1 Prelude.+ foldNat n }\\ndata N =\\n   N0\\n  | Npos Positive\\n  deriving ( Generic, Show,Lift, --GQLType,\\n             Data, Typeable)\\n\\ndata Positive =\\n  XI Positive\\n  | XO Positive\\n  | XH\\n  deriving ( Generic, Show,Lift, --GQLType,\\n             Data, Typeable)\\n\\ngetNpos :: N -> Positive\\ngetNpos N0 = XH\\ngetNpos (Npos x)  = x\\n\\n\\nadd :: Nat -> Nat -> Nat\\nadd n m =\\n  case n of {\\n   O -> m;\\n   S p -> S (add p m)}\\n\\ntoNat :: Positive -> Nat\\ntoNat x =\\n  iterOp add x (S O)\\n\\niterOp :: (a1 -> a1 -> a1) -> Positive -> a1 -> a1\\niterOp op p a =\\n  case p of {\\n   XI p0 -> op a (iterOp op p0 (op a a));\\n   XO p0 -> iterOp op p0 (op a a);\\n   XH -> a}\\n\\nfold_right :: (a2 -> a1 -> a1) -> a1 -> (List a2) -> a1\\nfold_right f a0 l =\\n  case l of {\\n   Nil -> a0;\\n   Cons b t -> f b (fold_right f a0 t)}\\n\\n--fold_right :: (a2 -> a1 -> a1) -> a1 -> (List a2) -> a1\\nfold_right2 :: (MyString -> [Char] -> [Char]) -> List MyString -> [Char]\\nfold_right2 f l =\\n  case l of {\\n   Nil -> \\",
+      "canonical": "1bd43cc1-0556-46fc-8761-5aedcfcecac1",
+      "archived": [
+        "5233145b-7d84-4b97-8689-95a5c44c70e0"
+      ]
+    }
+  ]
+}

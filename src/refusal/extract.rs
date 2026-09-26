@@ -196,6 +196,7 @@ pub fn run_extract(base_dir: &str, output_json: &str) -> Result<AuditReport> {
     eprintln!("Help: {}", report.help_requests.len());
     eprintln!("Missing: {}", report.missing_deps.len());
     eprintln!("Saved to {}", output_json);
+    eprintln!("Total issues: {}", report.total());
 
     Ok(report)
 }

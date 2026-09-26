@@ -134,7 +134,7 @@ pub fn build_failure_corpus(base_dir: &str, output_jsonl: &str) -> Result<()> {
         }
         let sid = name[..name.len().min(8)].to_string();
 
-        let summary_path = entry
+        let _summary_path = entry
             .path()
             .join("output-final_aristotle")
             .join("ARISTOTLE_SUMMARY.md");
