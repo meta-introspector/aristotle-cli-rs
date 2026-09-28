@@ -16,7 +16,6 @@ Environment=GUI2PROOF_RUNTIME_ENV=/run/gui2proof/cloudflare.env
 Environment=GUI2LEAN4_PORT=9890
 Environment=GUI2LEAN4_BASE_URL=https://aristotle-manager.pages.dev
 Environment=GUI2LEAN4_PROOF_URL=http://127.0.0.1:9876/api/v3/project
-EnvironmentFile=-/home/mdupont/.config/gui2proof/cloudflare.env
 ExecStartPre=+/home/mdupont/.nix-profile/bin/node /mnt/data1/time-2026/05-may/07/arist/scripts/load-sops-cloudflare-env.mjs
 ExecStart=/home/mdupont/.nix-profile/bin/node scripts/start-gui2proof.mjs
 Restart=on-failure

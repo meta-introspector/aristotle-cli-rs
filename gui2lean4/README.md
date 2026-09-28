@@ -63,9 +63,9 @@ unset CF_BOOTSTRAP_TOKEN
 sudo systemctl restart gui2proof.service
 ```
 
-The generated token is stored at
-`~/.config/gui2proof/cloudflare.env` with mode `0600`; only its redacted
-metadata is printed. The bootstrap token is not saved.
+The bootstrap helper writes the generated token locally with mode `0600` so it
+can be entered into the vault panel; after importing it, remove that local
+file. The bootstrap token is not saved.
 
 For the shared systemd/sops setup, store the generated Pages token in the
 existing tracker vault as `cloudflare-pages-token`. `gui2proof.service` then
