@@ -1,0 +1,10 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>GUI2Proof</title>
+<style>body{font:16px system-ui;background:#0f172a;color:#e2e8f0;max-width:1000px;margin:2rem auto;padding:0 1rem}button{background:#38bdf8;border:0;border-radius:6px;padding:.7rem 1rem;font-weight:700;cursor:pointer}a{color:#7dd3fc}.card{background:#1e293b;border-radius:8px;padding:1rem;margin:1rem 0}pre{white-space:pre-wrap;overflow:auto}video{max-width:100%;background:#000}.ok{color:#86efac}.bad{color:#fca5a5}</style></head>
+<body><h1>GUI2Proof</h1><p>Playwright proof capture for the hosted Aristo deployment UI.</p>
+<div class="card"><button id="run">Run proof capture again</button><span id="status"> loading…</span></div><div id="proof"></div>
+<script>
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function refresh(){const d=await (await fetch('api/status')).json();document.querySelector('#status').textContent=d.running?' capture running…':' ready';const p=d.latest;if(!p){document.querySelector('#proof').innerHTML='<div class="card">No capture recorded yet.</div>';return}const base='artifacts/'+encodeURIComponent(p.run)+'/';const files=Object.keys(p.artifacts||{});const video=files.find(f=>f.endsWith('.webm'));const image=files.find(f=>f==='deployment-config.png');document.querySelector('#proof').innerHTML='<div class="card"><h2>Latest proof: '+esc(p.run)+'</h2><p>'+esc(p.capturedAt||'')+'</p><p>'+(p.checks||[]).map(c=>'<span class="'+(c.ok?'ok':'bad')+'">'+esc(c.name)+': '+(c.ok?'PASS':'FAIL')+'</span>').join(' · ')+'</p>'+(video?'<video controls src="'+base+encodeURIComponent(video)+'"></video>':'')+(image?'<p><img style="max-width:100%" src="'+base+image+'"></p>':'')+'<p>'+files.map(f=>'<a href="'+base+encodeURIComponent(f)+'">'+esc(f)+'</a>').join(' · ')+'</p><pre>'+esc(JSON.stringify(p,null,2))+'</pre></div>'}
+document.querySelector('#run').onclick=async()=>{document.querySelector('#status').textContent=' starting…';await fetch('api/run',{method:'POST'});refresh()};refresh();setInterval(refresh,3000);
+</script></body></html>

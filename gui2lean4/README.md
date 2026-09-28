@@ -54,6 +54,23 @@ For VNC or an interactive browser, use the same route and artifact settings
 with a headed Playwright context; never record API keys, cookies, local
 storage, or authorization headers.
 
+## Nginx surface
+
+The persistent capture server exposes the latest proof run and its media at
+`/gui2proof/` when the nginx site is enabled. It listens only on localhost
+(`127.0.0.1:9890`) and is managed by `systemd/gui2proof.service`.
+
+```bash
+sudo systemctl enable --now gui2proof.service
+sudo systemctl reload nginx
+```
+
+Open `https://solana.solfunmeme.com/gui2proof/` to inspect the latest
+redacted manifest, replay the capture, and view or download the generated
+video, screenshots, trace, and proof response. The replay button invokes the
+same local Node/Playwright workflow and stores a new run under
+`data/gui2lean4/proofs/`.
+
 ## Optional Lean verification
 
 The extractor can compile an explicitly selected Lean file after capture:
