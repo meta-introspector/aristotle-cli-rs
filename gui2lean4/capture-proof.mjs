@@ -9,6 +9,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { createRequire } from 'node:module';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -25,6 +27,33 @@ function publicUrl(value) {
 
 function sha256(file) {
   return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+}
+
+const require = createRequire(import.meta.url);
+const HesperGIF = require('./hesper-gif.cjs');
+
+function exportTwitterGif(videoPath, gifPath) {
+  // Keep this small enough for social sharing while retaining the source
+  // aspect ratio (the Playwright recording is 1440x1000).
+  const width = 480;
+  const height = 334;
+  const fps = 10;
+  const decoded = spawnSync('ffmpeg', [
+    '-hide_banner', '-loglevel', 'error', '-i', videoPath,
+    '-vf', `fps=${fps},scale=${width}:${height}:flags=lanczos,format=rgba`,
+    '-f', 'rawvideo', 'pipe:1',
+  ], { maxBuffer: 512 * 1024 * 1024 });
+  if (decoded.error) throw decoded.error;
+  if (decoded.status !== 0) throw new Error(`ffmpeg GIF input failed (${decoded.status})`);
+  const frameSize = width * height * 4;
+  const count = Math.floor(decoded.stdout.length / frameSize);
+  if (!count) throw new Error('ffmpeg produced no GIF frames');
+  const frames = Array.from({ length: count }, (_, i) => ({
+    data: new Uint8ClampedArray(decoded.stdout.buffer, decoded.stdout.byteOffset + i * frameSize, frameSize),
+  }));
+  const bytes = HesperGIF.encode(frames, { width, height, fps, maxColors: 128, dither: true });
+  fs.writeFileSync(gifPath, bytes);
+  return { width, height, fps, frames: count, bytes: bytes.length };
 }
 
 const { chromium } = await import('playwright');
@@ -75,8 +104,17 @@ try {
 }
 
 const video = fs.readdirSync(artifactDir).find(name => name.endsWith('.webm'));
+let gif = null;
+if (video) {
+  try {
+    gif = exportTwitterGif(path.join(artifactDir, video), path.join(artifactDir, 'twitter.gif'));
+    checks.push({ name: 'twitter-gif-generated', ok: true, ...gif });
+  } catch (error) {
+    checks.push({ name: 'twitter-gif-generated', ok: false, detail: error.message });
+  }
+}
 const artifacts = {};
-for (const name of ['initial.png', 'deployment-config.png', 'trace.zip', video]) {
+for (const name of ['initial.png', 'deployment-config.png', 'trace.zip', video, gif ? 'twitter.gif' : null]) {
   if (name && fs.existsSync(path.join(artifactDir, name))) artifacts[name] = { sha256: sha256(path.join(artifactDir, name)) };
 }
 const manifest = {

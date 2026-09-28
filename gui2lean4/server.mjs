@@ -29,7 +29,7 @@ function artifact(res, run, file) {
   if (!safeRun(run) || file.includes('..') || file.includes('/') || file.includes('\\')) return res.writeHead(404).end();
   const full = path.join(proofRoot, run, file);
   if (!fs.existsSync(full) || !fs.statSync(full).isFile()) return res.writeHead(404).end();
-  const types = { '.webm': 'video/webm', '.png': 'image/png', '.zip': 'application/zip', '.json': 'application/json' };
+  const types = { '.webm': 'video/webm', '.gif': 'image/gif', '.png': 'image/png', '.zip': 'application/zip', '.json': 'application/json' };
   res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream', 'Content-Length': fs.statSync(full).size, 'Cache-Control': 'no-store' });
   fs.createReadStream(full).pipe(res);
 }
