@@ -28,6 +28,23 @@ The output is `data/gui2lean4-catalog.json`. It records captured DOM
 accessibility properties and reports violations; it does not claim that the
 UI values are mathematically true.
 
+## Aristo access for cataloging
+
+For a public Aristo project or GUI, paste its public URL into a route entry;
+no API key is needed:
+
+```bash
+export GUI2LEAN4_ROUTES='[{"name":"Public Aristo project","path":"/","url":"https://example/aristo/","role":"public proof UI"}]'
+npx tsx gui2lean4/cli.ts
+```
+
+For private project-list/API access, create a key at
+`https://aristotle.harmonic.fun/keys`, then paste it into the local API-key
+field or provide it through the local CLI configuration. **Never send the key
+to us, put it in a public URL, commit it, or include it in screenshots,
+videos, traces, catalogs, or proof submissions.** The cataloger should record
+only the public URL, project identifier, and redacted access result.
+
 ## Browser-rendered capture and proof submission
 
 Install the Node browser dependency and Chromium once:
