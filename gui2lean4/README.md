@@ -67,6 +67,11 @@ The generated token is stored at
 `~/.config/gui2proof/cloudflare.env` with mode `0600`; only its redacted
 metadata is printed. The bootstrap token is not saved.
 
+For the shared systemd/sops setup, store the generated Pages token in the
+existing tracker vault as `cloudflare-pages-token`. `gui2proof.service` then
+decrypts that one value at start into `/run/gui2proof/cloudflare.env`, owned by
+the service user and mode `0600`; the plaintext is not committed or recorded.
+
 ## Browser-rendered capture and proof submission
 
 Install the Node browser dependency and Chromium once:
