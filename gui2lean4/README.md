@@ -72,6 +72,17 @@ existing tracker vault as `cloudflare-pages-token`. `gui2proof.service` then
 decrypts that one value at start into `/run/gui2proof/cloudflare.env`, owned by
 the service user and mode `0600`; the plaintext is not committed or recorded.
 
+To ingest the two existing home credentials into that vault without printing
+their values:
+
+```bash
+sudo node scripts/import-cloudflare-home-to-vault.mjs
+sudo systemctl restart gui2proof.service
+```
+
+This imports account 0 from `~/.cloudflare*` and account 1 from the existing
+`odd-thunder-678a` files, plus the account-0 Pages alias used by GUI2Proof.
+
 ## Browser-rendered capture and proof submission
 
 Install the Node browser dependency and Chromium once:
