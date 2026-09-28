@@ -1,0 +1,11 @@
+{
+  "name": "aristo-gui2lean4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture": "node capture-proof.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
+}

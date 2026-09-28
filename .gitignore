@@ -9,7 +9,9 @@ aristotle_processed.txt
 aristotle_projects.json
 *.log
 data/gui2lean4-*.json
+data/gui2lean4/
 gui2lean4/__pycache__/
+gui2lean4/node_modules/
 
 # Build artifacts
 *.rs.bk

@@ -28,18 +28,31 @@ The output is `data/gui2lean4-catalog.json`. It records captured DOM
 accessibility properties and reports violations; it does not claim that the
 UI values are mathematically true.
 
-## Browser-rendered capture
+## Browser-rendered capture and proof submission
 
-With Chromium and Pyppeteer installed:
+Install the Node browser dependency and Chromium once:
+
+```bash
+npm install --prefix gui2lean4
+npx --prefix gui2lean4 playwright install chromium
+```
+
+Run the self-deployment workflow with Playwright:
 
 ```bash
 GUI2LEAN4_BASE_URL=https://aristotle-manager.pages.dev \
-  python3 gui2lean4/render-a11y.py
+  GUI2LEAN4_PROOF_URL=http://127.0.0.1:9876/api/v3/project \
+  node gui2lean4/capture-proof.mjs
 ```
 
-The rendered capture is written to `data/gui2lean4-rendered.json`. A future
-Playwright/VNC recorder should use the same `GUI2LEAN4_ROUTES` file and save
-video, screenshots, browser trace, and the JSON capture as one proof bundle.
+The workflow records a WebM video, screenshots, a Playwright trace, and a
+redacted manifest, then posts the manifest and a Lean witness to the local
+Aristo proof service. The proof service checks only `.lean` attachments;
+metadata and media are evidence artifacts, not executable source.
+
+For VNC or an interactive browser, use the same route and artifact settings
+with a headed Playwright context; never record API keys, cookies, local
+storage, or authorization headers.
 
 ## Optional Lean verification
 

@@ -279,7 +279,9 @@ fn handle_submit(
     drop(st);
 
     info!("Project {} submitted (passed={})", project_id, passed);
-    serde_json::to_string_pretty(&project).unwrap_or_else(|_| r#"{"error":"serialize"}"#.into())
+    let serialized = serde_json::to_string_pretty(&project)
+        .unwrap_or_else(|_| r#"{"error":"serialize"}"#.into());
+    json_response(200, &serialized)
 }
 
 /// POST /api/v3/project/:id/ask
@@ -377,6 +379,13 @@ fn run_lean_check(work_dir: &Path, files: &[String]) -> String {
             .file_name()
             .map(|s| s.to_string_lossy().to_string())
             .unwrap_or_default();
+
+        // Proof bundles may contain JSON manifests and media metadata; only
+        // Lean source is executable proof input.
+        if path.extension().and_then(|ext| ext.to_str()) != Some("lean") {
+            output.push_str(&format!("INFO {} (not a Lean source file)\n", filename));
+            continue;
+        }
 
         match Command::new("lean")
             .arg(file)
