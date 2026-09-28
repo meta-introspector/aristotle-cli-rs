@@ -34,9 +34,9 @@ const HesperGIF = require('./hesper-gif.cjs');
 
 function exportTwitterGif(videoPath, gifPath) {
   // Keep this small enough for social sharing while retaining the source
-  // aspect ratio (the Playwright recording is 1440x1000).
+  // aspect ratio (the Playwright recording is 1440x1800).
   const width = 480;
-  const height = 334;
+  const height = 600;
   const fps = 10;
   const decoded = spawnSync('ffmpeg', [
     '-hide_banner', '-loglevel', 'error', '-i', videoPath,
@@ -59,7 +59,8 @@ function exportTwitterGif(videoPath, gifPath) {
 const { chromium } = await import('playwright');
 const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({
-  recordVideo: { dir: artifactDir, size: { width: 1440, height: 1000 } },
+  viewport: { width: 1440, height: 1800 },
+  recordVideo: { dir: artifactDir, size: { width: 1440, height: 1800 } },
 });
 await context.tracing.start({ screenshots: true, snapshots: true, sources: false });
 const page = await context.newPage();
