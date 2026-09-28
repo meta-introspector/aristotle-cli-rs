@@ -8,6 +8,8 @@ flake.lock
 aristotle_processed.txt
 aristotle_projects.json
 *.log
+data/gui2lean4-*.json
+gui2lean4/__pycache__/
 
 # Build artifacts
 *.rs.bk
