@@ -82,11 +82,17 @@ impl AristoServer {
             api_key: api_key.to_string(),
         };
 
-        info!(port = %server.state.lock().unwrap().port, forward = %server.state.lock().unwrap().forward, "Aristotle local server listening");
+        // Do not lock the same mutex twice in one logging expression: the
+        // first guard can remain alive until the end of the statement.
+        let (listening_port, forwarding) = {
+            let state = server.state.lock().unwrap();
+            (state.port, state.forward)
+        };
+        info!(port = %listening_port, forward = %forwarding, "Aristotle local server listening");
         println!(
             "Aristotle local server listening on {} (forward={})",
-            server.state.lock().unwrap().port,
-            server.state.lock().unwrap().forward
+            listening_port,
+            forwarding
         );
         if server.forward_url.is_some() {
             println!("  Forwarding passing proofs to aristotle.harmonic.fun");
