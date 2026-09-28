@@ -67,7 +67,9 @@ sudo systemctl reload nginx
 
 Open `https://solana.solfunmeme.com/gui2proof/` to inspect the latest
 redacted manifest, replay the capture, and view or download the generated
-video, screenshots, trace, and proof response. The replay button invokes the
+video, Twitter-ready GIF, screenshots, trace, and proof response. The GIF is
+generated with the bundled Hesper GIF89a encoder from the recorded frames.
+The replay button invokes the
 same local Node/Playwright workflow and stores a new run under
 `data/gui2lean4/proofs/`.
 
