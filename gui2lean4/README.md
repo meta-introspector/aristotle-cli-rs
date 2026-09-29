@@ -115,6 +115,13 @@ GUI2PROOF_RUNTIME_ENV=/run/gui2proof/cloudflare.env \
 node gui2lean4/capture-proof.mjs
 ```
 
+The same operation is available without repeating the environment details:
+
+```bash
+scripts/deploy-cloudflare.sh deploy   # deploy the public Aristo snapshot
+scripts/deploy-cloudflare.sh record   # deploy and record the GUI proof
+```
+
 This creates or reuses the fixed `gui2proof-aristo-test` Pages project, deploys
 only the public HTML snapshot from the configured Aristo URL, and records the
 deployment URL in the redacted proof manifest. The deploy helper never prints
