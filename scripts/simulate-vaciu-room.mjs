@@ -18,7 +18,9 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
 let capturedLine = null;
 await page.route('**/room/**', async route => {
   if (route.request().method() === 'POST') capturedLine = route.request().postData();
-  await route.abort(); // use the same witnessed line through Node to avoid browser CORS
+  // Let the page render its normal success state; the real witnessed line is
+  // posted below from Node because the public relay does not allow browser CORS.
+  await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ cursor: 0 }) });
 });
 try {
   await page.goto(link, { waitUntil: 'networkidle', timeout: 30_000 });
@@ -43,7 +45,7 @@ try {
   const response = await fetch(relayUrl, { method: 'POST', headers: { 'content-type': 'text/plain', 'x-kant-pass': pass }, body: capturedLine });
   const result = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(`vaciu relay refused (${response.status})`);
-  await page.evaluate(out => { const d = document.createElement('div'); d.textContent = `posted (cursor ${out.cursor})`; d.className = 'ok'; document.querySelector('#log').prepend(d); }, result);
+  await page.evaluate(out => { const d = document.createElement('div'); d.textContent = `relay accepted (cursor ${out.cursor})`; d.className = 'ok'; document.querySelector('#log').prepend(d); }, result);
   await page.waitForFunction(() => [...document.querySelectorAll('#log div')].some(e => /posted \(cursor/.test(e.textContent)), null, { timeout: 5_000 });
   await page.screenshot({ path: path.join(outDir, 'vaciu-room-posted.png'), fullPage: true });
   const log = await page.locator('#log').innerText();
