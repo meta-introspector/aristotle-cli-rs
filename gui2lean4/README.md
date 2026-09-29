@@ -124,6 +124,16 @@ For VNC or an interactive browser, use the same route and artifact settings
 with a headed Playwright context; never record API keys, cookies, local
 storage, or authorization headers.
 
+The vaciu-room simulation is pass-safe by default:
+
+```bash
+node scripts/simulate-vaciu-room.mjs
+```
+
+It records the room UI without loading or consuming a one-time pass. A real
+relay test requires a fresh pass supplied explicitly as `VACIU_TEST_URL`; the
+script refuses to reuse pass links from spool files.
+
 ## Nginx surface
 
 The persistent capture server exposes the latest proof run and its media at

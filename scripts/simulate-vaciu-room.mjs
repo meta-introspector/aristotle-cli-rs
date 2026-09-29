@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-/** Simulate the one-post vaciu room instructions without exposing the pass. */
+/** Simulate the vaciu room workflow without consuming a user-provided pass. */
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const instructions = fs.readFileSync('/var/spool/uucp/pastebin/20260929_000246_kant_vaciu_room_full_instructions_api_url.txt', 'utf8');
-const link = instructions.match(/https:\/\/kant-zk-pastebin\.pages\.dev\/paste\.html#[^\s]+/)?.[0];
-if (!link) throw new Error('vaciu pass link not found');
+const dryRun = process.env.VACIU_DRY_RUN !== '0';
+const link = process.env.VACIU_TEST_URL;
+if (!dryRun && !link) throw new Error('real vaciu test requires VACIU_TEST_URL; refusing to read or reuse a pass file');
 const outDir = path.join(root, 'data', 'gui2lean4', 'proofs', 'run-vaciu-room-simulation');
 fs.mkdirSync(outDir, { recursive: true });
 const require = createRequire(import.meta.url);
@@ -23,8 +23,16 @@ await page.route('**/room/**', async route => {
   await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ cursor: 0 }) });
 });
 try {
-  await page.goto(link, { waitUntil: 'networkidle', timeout: 30_000 });
+  await page.goto(link || 'https://kant-zk-pastebin.pages.dev/paste.html', { waitUntil: 'networkidle', timeout: 30_000 });
   await page.waitForTimeout(2_000);
+  if (dryRun) {
+    await page.locator('#text').fill('vaciu dry-run: GUI flow rendered without consuming a room pass.');
+    await page.screenshot({ path: path.join(outDir, 'vaciu-room-dry-run.png'), fullPage: true });
+    fs.writeFileSync(path.join(outDir, 'result.json'), JSON.stringify({ simulated: true, dryRun: true, postAttempted: false, redaction: 'No pass was loaded or sent.' }, null, 2));
+    console.log(JSON.stringify({ simulated: true, dryRun: true, artifactDir: outDir }, null, 2));
+    await browser.close();
+    process.exit(0);
+  }
   if (await page.locator('#post').isDisabled()) {
     await page.locator('#joinbox').fill(link);
     await page.locator('#join').click();
