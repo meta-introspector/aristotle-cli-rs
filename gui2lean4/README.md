@@ -105,6 +105,21 @@ redacted manifest, then posts the manifest and a Lean witness to the local
 Aristo proof service. The proof service checks only `.lean` attachments;
 metadata and media are evidence artifacts, not executable source.
 
+To run the real, opt-in Pages deployment in the capture (the systemd service
+does not enable this for an unauthenticated public button), use the sops-loaded
+runtime file:
+
+```bash
+GUI2PROOF_REAL_DEPLOY=1 \
+GUI2PROOF_RUNTIME_ENV=/run/gui2proof/cloudflare.env \
+node gui2lean4/capture-proof.mjs
+```
+
+This creates or reuses the fixed `gui2proof-aristo-test` Pages project, deploys
+only the public HTML snapshot from the configured Aristo URL, and records the
+deployment URL in the redacted proof manifest. The deploy helper never prints
+or stores the Cloudflare token; private Aristo source is not exported.
+
 For VNC or an interactive browser, use the same route and artifact settings
 with a headed Playwright context; never record API keys, cookies, local
 storage, or authorization headers.

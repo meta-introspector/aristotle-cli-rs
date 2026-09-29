@@ -68,6 +68,7 @@ const browserMessages = [];
 page.on('console', message => browserMessages.push(`${message.type()}: ${message.text()}`));
 page.on('pageerror', error => browserMessages.push(`pageerror: ${error.message}`));
 const checks = [];
+let realDeployment = null;
 
 try {
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle', timeout: 30_000 });
@@ -93,6 +94,23 @@ try {
     await page.waitForTimeout(1_000);
     const output = page.locator('#deployOutput');
     checks.push({ name: 'deployment-config-generated', ok: (await output.count()) > 0 && (await output.innerText()).length > 0 });
+    if (process.env.GUI2PROOF_REAL_DEPLOY === '1') {
+      const deploy = spawnSync(process.env.NODE_BIN || 'node', [path.join(root, 'scripts', 'deploy-aristo-pages.mjs')], {
+        cwd: root,
+        env: process.env,
+        encoding: 'utf8',
+        maxBuffer: 2 * 1024 * 1024,
+      });
+      if (deploy.error) throw deploy.error;
+      if (deploy.status !== 0) throw new Error(`Cloudflare deployment failed (${deploy.status})`);
+      try { realDeployment = JSON.parse(deploy.stdout); } catch { throw new Error('Cloudflare deployment returned invalid metadata'); }
+      if (!realDeployment.deployed || !realDeployment.url) throw new Error('Cloudflare deployment did not return a public URL');
+      await page.evaluate(result => {
+        const target = document.querySelector('#deployOutput');
+        if (target) target.textContent += `\n\nLIVE TEST DEPLOYMENT\n${JSON.stringify(result, null, 2)}`;
+      }, realDeployment);
+      checks.push({ name: 'cloudflare-pages-deployed', ok: true, project: realDeployment.project, url: realDeployment.url });
+    }
   } else {
     checks.push({ name: 'deployment-config-generated', ok: false, detail: 'deploy tab not present' });
   }
@@ -124,6 +142,7 @@ const manifest = {
   url: publicUrl(`${baseUrl}/`),
   checks,
   artifacts,
+  deployment: realDeployment ? { project: realDeployment.project, url: realDeployment.url, sourceUrl: realDeployment.sourceUrl, bytes: realDeployment.bytes } : null,
   redaction: 'No API key, cookie, authorization header, or browser storage was captured.',
   browserMessages,
 };
