@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 const name = process.argv[2] || 'vaciu';
 const limit = Number(process.argv[3] || 1);
 if (name !== 'vaciu') throw new Error('usage: make-invite-vaciu vaciu 1');
-if (!Number.isInteger(limit) || limit < 1 || limit > 10) throw new Error('limit must be an integer from 1 to 10');
+if (!Number.isInteger(limit) || limit < 1 || limit > 1000) throw new Error('limit must be an integer from 1 to 1000');
 
 const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'kant-pass-'));
 try {
