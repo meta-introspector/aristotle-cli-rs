@@ -134,6 +134,17 @@ It records the room UI without loading or consuming a one-time pass. A real
 relay test requires a fresh pass supplied explicitly as `VACIU_TEST_URL`; the
 script refuses to reuse pass links from spool files.
 
+To mint a fresh one-post vaciu pass locally, provide the current invite/pass
+on stdin; the source pass is never printed or posted:
+
+```bash
+printf '%s\n' 'PASTE_CURRENT_INVITE_HERE' \
+  | node scripts/make-invite-vaciu.mjs vaciu 1
+```
+
+Copy the generated URL into the paste page. Keep it private; anyone holding
+the URL can use its permitted post.
+
 ## Nginx surface
 
 The persistent capture server exposes the latest proof run and its media at
