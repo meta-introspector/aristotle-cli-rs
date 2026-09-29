@@ -35,6 +35,9 @@ try {
   const invite = P.pastePass(code);
   if (!invite || !invite.secret) throw new Error('invalid Kant invite/pass');
   const fresh = P.mintPass(invite, limit);
+  // The solana proxy currently emits duplicate CORS headers in some paths;
+  // use the Cloudflare relay twin for browser-postable passes by default.
+  fresh.relay = process.env.KANT_RELAY || 'https://kant-zk-relay.jmikedupont2.workers.dev';
   console.log(P.passUrl(`${base}/paste.html`, fresh));
 } finally {
   await fs.rm(dir, { recursive: true, force: true });
