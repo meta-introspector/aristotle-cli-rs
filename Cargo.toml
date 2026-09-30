@@ -48,3 +48,10 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 # File system
 walkdir = "2.5"
+
+# UUID for kant relay
+uuid = { version = "1.0", features = ["v4"] }
+
+# Search (tantivy)
+tantivy = "0.22"
+tantivy-query-grammar = "0.22"
