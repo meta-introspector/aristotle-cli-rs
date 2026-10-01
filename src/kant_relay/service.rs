@@ -155,7 +155,7 @@ mod tests {
         relay.register_room("test-room".to_string(), "Test Room".to_string()).await.unwrap();
         
         // Add a pass
-        let pass = relay.add_pass("test-room".to_string(), "secret-123".to_string(), 5).await.unwrap();
+        let pass = relay.add_pass("test-room", "secret-123".to_string(), 5).await.unwrap();
         assert_eq!(pass.limit, 5);
     }
 }
