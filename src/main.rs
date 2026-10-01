@@ -22,12 +22,13 @@ mod api;
 mod bootstrap;
 mod cache;
 mod cmd;
-mod deploy;
 mod config;
+mod deploy;
 mod fetch;
 mod file_index;
 mod index;
 mod local_server;
+mod search;
 mod notebooklm;
 mod notebooklm_cross;
 mod notebooklm_dump;
@@ -795,6 +796,45 @@ enum Commands {
         /// Only build graph, don't generate reports
         #[arg(long)]
         quiet: bool,
+    },
+    /// Search the Aristotle project database with tantivy
+    Search {
+        /// Search query (full-text across project descriptions)
+        #[arg(long)]
+        query: String,
+        /// Filter by status code
+        #[arg(long)]
+        status: Option<u64>,
+        /// Filter: only projects with files
+        #[arg(long)]
+        files: bool,
+        /// Filter: only projects without files
+        #[arg(long)]
+        no_files: bool,
+        /// Filter: only projects with input
+        #[arg(long)]
+        input: bool,
+        /// Filter: only projects without input
+        #[arg(long)]
+        no_input: bool,
+        /// Maximum results
+        #[arg(long, default_value = "20")]
+        limit: usize,
+        /// Index directory (default: ~/.config/aristotle-manager/search-index)
+        #[arg(long)]
+        index_dir: Option<PathBuf>,
+        /// Export results to shmem via dasl-planner
+        #[arg(long)]
+        shmem: bool,
+    },
+    /// Build and index the tantivy search index from aristotle_projects.json
+    SearchIndex {
+        /// Path to aristotle_projects.json (default: ./aristotle_projects.json)
+        #[arg(long)]
+        json: Option<PathBuf>,
+        /// Output index directory (default: ./search-index)
+        #[arg(long)]
+        output: Option<PathBuf>,
     },
     }
 
@@ -7496,6 +7536,67 @@ async fn main() -> Result<()> {
                     println!("  {} + {}: {} shared terms", p1, p2, count);
                 }
             }
+        }
+        Commands::Search {
+            query,
+            status,
+            files,
+            no_files,
+            input,
+            no_input,
+            limit,
+            index_dir,
+            shmem,
+        } => {
+            info!("Executing search command");
+            let mut status_filter = status;
+            let mut has_files_filter: Option<bool> = None;
+            let mut has_input_filter: Option<bool> = None;
+
+            if *files && *no_files {
+                anyhow::bail!("--files and --no-files are mutually exclusive");
+            }
+            if *input && *no_input {
+                anyhow::bail!("--input and --no-input are mutually exclusive");
+            }
+
+            if *files {
+                has_files_filter = Some(true);
+            }
+            if *no_files {
+                has_files_filter = Some(false);
+            }
+            if *input {
+                has_input_filter = Some(true);
+            }
+            if *no_input {
+                has_input_filter = Some(false);
+            }
+
+            let results = cmd::search::cmd_search(
+                &query,
+                *status_filter,
+                has_files_filter,
+                has_input_filter,
+                *limit,
+                index_dir.as_deref(),
+                *shmem,
+            )?;
+
+            if *shmem {
+                println!("Results exported to shmem");
+            } else {
+                println!("{}", serde_json::to_string_pretty(&results)?);
+            }
+        }
+        Commands::SearchIndex { json, output } => {
+            info!("Executing search-index command");
+            let default_json = PathBuf::from("aristotle_projects.json");
+            let default_output = PathBuf::from("./search-index");
+            cmd::search::cmd_search_index(
+                json.as_deref().unwrap_or(&default_json),
+                output.as_deref().unwrap_or(&default_output),
+            )?;
         }
         Commands::Enrich { project_id, skip_task_enricher, skip_goap } => {
             info!("Executing enrich command");
