@@ -5,7 +5,7 @@
   "scripts": {
     "capture": "node capture-proof.mjs"
   },
-  "dependencies": {
+  "devDependencies": {
     "playwright": "^1.63.0"
   }
 }
