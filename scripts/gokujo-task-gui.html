@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokujo Task Browser</title>
+    <style>
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #1a202c; color: #e2e8f0; margin: 0; }
+        .header { background: #1e293b; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .header h1 { margin: 0; color: #6366f1; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tab { padding: 8px 15px; background: #334155; color: #cbd5e0; border-radius: 4px; cursor: pointer; }
+        .tab.active { background: #6366f1; color: white; }
+        .content { padding: 20px; border-radius: 8px; background: #1e293b; }
+        .search-container { display: flex; gap: 10px; margin-bottom: 20px; }
+        .search-bar { background: #334155; padding: 8px; border-radius: 4px; }
+        .search-bar input { padding: 8px; border: 1px solid #4a5568; border-radius: 4px; }
+        .search-bar select {
+            background: #334155;
+            padding: 8px;
+            border-radius: 4px;
+            color: #e2e8f0;
+            border: 1px solid #4a5568;
+        }
+        .task-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .task-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .task-card h3 { margin: 0 0 8px 0; color: #a5b4fc; }
+        .task-card .status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+        .status-running { background: #3b82f6; color: white; }
+        .status-completed { background: #10b981; color: white; }
+        .task-info { margin-top: 8px; color: #94a3b8; }
+        .tag { display: inline-block; background: #6366f1; color: white; padding: 2px 6px; border-radius: 4px; margin-right: 4px; margin-bottom: 4px; }
+        .tag-project { background: #3b82f6; }
+        .chat-section { background: #1e293b; padding: 15px; border-radius: 8px; margin-top: 20px; }
+        .chat-input { display: flex; gap: 10px; margin-top: 10px; }
+        .chat-input input { flex: 1; padding: 8px; border: 1px solid #374151; border-radius: 4px; }
+        .chat-input button { background: #6366f1; color: white; border: none; padding: 8px 15px; border-radius: 4px; }
+        .log-entry { padding: 8px; border-bottom: 1px solid #374151; }
+        .chat-message { display: flex; gap: 8px; padding: 8px 0; }
+        .chat-message .avatar { width: 24px; height: 36px; border-radius: 50%; background: #6366f1; }
+        .chat-message .text { flex: 1; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Gokujo Task Browser</h1>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('all')">All Tasks</div>
+            <div class="tab" onclick="showTab('projects')">By Project</div>
+            <div class="tab" onclick="showTab('tags')">By Tag/Keyword</div>
+            <div class="tab" onclick="showTab('chat')">Kant Chat</div>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <div class="search-container">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search tasks by keyword...">
+                <select id="project-filter" onchange="filterByProject()">
+                    <option value="all">All Projects</option>
+                </div>
+                <div class="filter-row">
+                    <div class="filter-chip" onclick="filterByTag('web-app')">Web</div>
+                    <div class="filter-chip" onclick="filterByTag('theorem')">Theorem</div>
+                    <div class="filter-chip" onclick="filterByTag('research')">Research</div>
+                    <div class="filter-chip" onclick="filterByTag('chat')">Chat</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-list" id="task-list">
+            <!-- Task cards will be populated here -->
+        </div>
+
+        <div class="chat-section">
+            <div class="chat-header">
+                <div class="indicator"></div>
+                <div class="room-info">Aristo Manager Chat</div>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type message..." id="chat-input">
+                <button onclick="sendMessage()">Send</button>
+            </class>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "aristotle-wasm",
+  "type": "module",
+  "description": "Aristotle Manager WebAssembly module for browser-based project management",
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "aristotle_wasm_bg.wasm",
+    "aristotle_wasm.js",
+    "aristotle_wasm.d.ts"
+  ],
+  "main": "aristotle_wasm.js",
+  "types": "aristotle_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
