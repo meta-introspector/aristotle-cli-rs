@@ -105,12 +105,33 @@ omit the `--account-id` flag instead.
 
 ## Building
 
+Run from the **repository root**, not from `aristotle-wasm/` — the deploy root
+is `<repo>/www/`, so `--out-dir www` from inside the crate would quietly write
+to `aristotle-wasm/www/` and leave the served copy stale.
+
 ```bash
-rustup target add wasm32-unknown-unknown
-cargo build --release --target wasm32-unknown-unknown
-wasm-bindgen --target web --out-dir www \
-  target/wasm32-unknown-unknown/release/aristotle_wasm.wasm
+# The wasm32 std ships in the Nix rustc sysroot on this box, so there is no
+# rustup step; add it only on a host that uses rustup.
+cargo build --release --target wasm32-unknown-unknown \
+  --manifest-path aristotle-wasm/Cargo.toml
+wasm-bindgen --target web --out-dir www --out-name aristotle_wasm \
+  aristotle-wasm/target/wasm32-unknown-unknown/release/aristotle_wasm.wasm
 ```
+
+Pin `wasm-bindgen` to the same version as the `wasm-bindgen` crate in
+`Cargo.toml` (0.2.129 here) — a mismatch produces a glue file that imports
+symbols the freshly built `.wasm` does not export.
+
+`www/` is git-ignored, so a rebuild is the only way the served copy changes.
+Afterwards confirm the artifact really is the new one:
+
+```bash
+strings -a www/aristotle_wasm_bg.wasm | grep -Eo '\b[0-9a-f]{32}\b' | sort -u
+```
+
+That should print nothing. Any output is account data that reached the
+artifact, which is exactly what `no_account_data_is_compiled_into_the_artifact`
+exists to prevent.
 
 Tests are pure logic — base64url, cookie round-tripping, session validation —
 and run on the host without a wasm runtime:
