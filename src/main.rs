@@ -4339,9 +4339,18 @@ async fn cmd_deploy(
         if let Some(domain) = deploy_domain {
             println!("\n=== Custom domain: {} ===", domain);
             println!("  To add this custom domain, go to Cloudflare Dashboard:");
-            println!("  https://dash.cloudflare.com/0ceffbadd0a04623896f5317a1e40d94/pages/view/{}", project_name);
-            println!("  Then: Custom domains → Add custom domain → {}", domain);
-            println!("  Or use API: POST /accounts/0ceffbadd0a04623896f5317a1e40d94/pages/projects/{}/domains", project_name);
+            match account_id {
+                Some(ref acct) => {
+                    println!("  https://dash.cloudflare.com/{}/pages/view/{}", acct, project_name);
+                    println!("  Then: Custom domains → Add custom domain → {}", domain);
+                    println!("  Or use API: POST /accounts/{}/pages/projects/{}/domains", acct, project_name);
+                }
+                None => {
+                    println!("  Workers & Pages → {} → Custom domains → Add custom domain → {}", project_name, domain);
+                    println!("  Or use API: POST /accounts/<account-id>/pages/projects/{}/domains", project_name);
+                    println!("  (set CLOUDFLARE_ACCOUNT_ID to get the exact URL)");
+                }
+            }
             println!("  With body: {{\"name\": \"{}\"}}", domain);
         }
     }

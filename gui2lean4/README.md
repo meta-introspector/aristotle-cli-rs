@@ -53,13 +53,17 @@ with Cloudflare **Account API Tokens Write** permission; Cloudflare documents
 that token creation requires this initial privilege and that the secret is
 shown only once. Do not put the bootstrap token in a proof or commit it.
 
-Run this locally, entering the bootstrap token only in the prompt environment:
+Run this locally, entering the bootstrap token only in the prompt environment.
+The account ID is prompted for rather than stored in this repository: no
+account identifier belongs in version control, since the deployed artifacts
+are public.
 
 ```bash
 read -r -s -p 'One-time Cloudflare bootstrap token: ' CF_BOOTSTRAP_TOKEN; echo
-export CF_BOOTSTRAP_TOKEN CLOUDFLARE_ACCOUNT_ID=0ceffbadd0a04623896f5317a1e40d94
+read -r -p 'Cloudflare account ID (32 hex chars): ' CLOUDFLARE_ACCOUNT_ID; echo
+export CF_BOOTSTRAP_TOKEN CLOUDFLARE_ACCOUNT_ID
 node scripts/bootstrap-cloudflare-pages-token.mjs
-unset CF_BOOTSTRAP_TOKEN
+unset CF_BOOTSTRAP_TOKEN CLOUDFLARE_ACCOUNT_ID
 sudo systemctl restart gui2proof.service
 ```
 
