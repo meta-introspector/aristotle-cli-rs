@@ -29,6 +29,28 @@ function sha256(file) {
   return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 }
 
+/**
+ * Strip anything identifying out of a string before it reaches the manifest.
+ *
+ * The capture already blanks #cloudflareAccountId in the DOM before the
+ * screenshot, but console output is a second, unblinded channel: real
+ * manifests carried "Deploying project 0f9b0981-1dc9-4321-a46b-53e3cc6ee6e3"
+ * verbatim while claiming nothing identifying was collected. Anything that
+ * reaches the proof service goes through here first.
+ */
+const REDACTIONS = [
+  [/\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/gi, '[REDACTED-uuid]'],
+  [/\b(?:api[_-]?key|token|secret|password|authorization|cookie|bearer)\b\s*[:=]\s*\S+/gi, '[REDACTED-credential]'],
+  [/\b[A-Za-z0-9_-]{32,}\b/g, '[REDACTED-long-token]'],
+  [/\b[a-z0-9-]+\.(?:pages\.dev|workers\.dev)\b/gi, '[REDACTED-host]'],
+];
+function redact(value) {
+  return String(value ?? '').replace(REDACTIONS[0][0], REDACTIONS[0][1])
+    .replace(REDACTIONS[1][0], REDACTIONS[1][1])
+    .replace(REDACTIONS[2][0], REDACTIONS[2][1])
+    .replace(REDACTIONS[3][0], REDACTIONS[3][1]);
+}
+
 const require = createRequire(import.meta.url);
 const HesperGIF = require('./hesper-gif.cjs');
 
@@ -64,10 +86,15 @@ const context = await browser.newContext({
 });
 await context.tracing.start({ screenshots: true, snapshots: true, sources: false });
 const page = await context.newPage();
-const browserMessages = [];
-page.on('console', message => browserMessages.push(`${message.type()}: ${message.text()}`));
-page.on('pageerror', error => browserMessages.push(`pageerror: ${error.message}`));
+page.on('console', message => recordMessage(`${message.type()}: ${message.text()}`));
+page.on('pageerror', error => recordMessage(`pageerror: ${error.message}`));
 const checks = [];
+const browserMessages = [];
+const recordMessage = text => {
+  const clean = redact(text);
+  if (clean !== String(text ?? '')) browserMessages.push(`${clean}  [redacted]`);
+  else browserMessages.push(clean);
+};
 let realDeployment = null;
 
 try {
@@ -136,6 +163,8 @@ const artifacts = {};
 for (const name of ['initial.png', 'deployment-config.png', 'trace.zip', video, gif ? 'twitter.gif' : null]) {
   if (name && fs.existsSync(path.join(artifactDir, name))) artifacts[name] = { sha256: sha256(path.join(artifactDir, name)) };
 }
+const passed = checks.filter(c => c.ok).length;
+const allPassed = checks.length > 0 && passed === checks.length;
 const manifest = {
   schema: 'gui2lean4-proof/v1',
   capturedAt: new Date().toISOString(),
@@ -143,21 +172,62 @@ const manifest = {
   checks,
   artifacts,
   deployment: realDeployment ? { project: realDeployment.project, url: realDeployment.url, sourceUrl: realDeployment.sourceUrl, bytes: realDeployment.bytes } : null,
-  redaction: 'No API key, cookie, authorization header, or browser storage was captured.',
+  summary: { passed, total: checks.length, allPassed },
+  redaction: 'Browser console output and page errors are recorded after redaction: UUIDs, ' +
+    'credential-shaped strings, long tokens and deployment hostnames are replaced. ' +
+    'No API key, cookie, authorization header, or browser storage is read by this script.',
   browserMessages,
 };
 fs.writeFileSync(path.join(artifactDir, 'proof-manifest.json'), JSON.stringify(manifest, null, 2));
 
-const leanWitness = `/-- The GUI capture completed its declared checks; external evidence is in the manifest. -/\ntheorem gui2lean4_capture_checks_completed : True := by trivial\n`;
+// A record of what the capture observed, not a proof that the GUI is
+// correct. The previous witness was `theorem ... : True := by trivial`,
+// which held whether every check passed or every one failed; naming it
+// "checks_completed" claimed far more than it established. This states the
+// counts that were actually observed and says plainly what it is not.
+const leanWitness = [
+  `/--`,
+  `Record of one GUI2Lean4 browser capture. This is a transcript of what the`,
+  `capture observed, not a proof that the GUI is correct. The authoritative`,
+  `evidence is gui2lean4-proof.json and the SHA-256 artifact digests in it.`,
+  `-/`,
+  `def gui2lean4ChecksPassed : Nat := ${passed}`,
+  `def gui2lean4ChecksTotal : Nat := ${checks.length}`,
+  `def gui2lean4AllChecksPassed : Bool := ${allPassed ? 'true' : 'false'}`,
+  ``,
+  `/-- The recorded pass count cannot exceed the number of checks run. -/`,
+  `theorem gui2lean4_passed_le_total : gui2lean4ChecksPassed ≤ gui2lean4ChecksTotal := by`,
+  `  simp [gui2lean4ChecksPassed, gui2lean4ChecksTotal]`,
+  ``,
+  `theorem gui2lean4_checks_are_recorded : gui2lean4ChecksTotal = ${checks.length} := by rfl`,
+  ``,
+].join('\n');
+
+// A failed capture is not a proof. Submitting one under the same code path
+// is how a red run ends up looking green in the proof service.
+if (!allPassed) {
+  fs.writeFileSync(path.join(artifactDir, 'submission-response.json'),
+    JSON.stringify({ submitted: false, reason: `${passed}/${checks.length} checks passed`, manifest: 'gui2lean4-proof/v1' }, null, 2));
+  console.error(`capture finished with ${passed}/${checks.length} checks passed; not submitting a proof`);
+  console.log(JSON.stringify({ artifactDir, proofUrl, manifest, submission: null }, null, 2));
+  process.exit(2);
+}
+
 const form = new FormData();
 form.append('body', JSON.stringify({
-  prompt: `GUI2Lean4 hosted self-deployment capture ${manifest.capturedAt}; video and trace are identified by SHA-256 in the attached manifest.`,
+  prompt: `GUI2Lean4 hosted self-deployment capture ${manifest.capturedAt}; ${passed}/${checks.length} declared checks passed; video and trace are identified by SHA-256 in the attached manifest.`,
   files: {
     'Gui2Lean4Capture.lean': leanWitness,
     'gui2lean4-proof.json': JSON.stringify(manifest, null, 2),
   },
 }));
-const response = await fetch(proofUrl, { method: 'POST', body: form });
+// Without a timeout a hung proof service wedges the capture forever, and the
+// server's `running` flag never clears -- every later run then gets a 409.
+const response = await fetch(proofUrl, {
+  method: 'POST',
+  body: form,
+  signal: AbortSignal.timeout(Number(process.env.GUI2LEAN4_SUBMIT_TIMEOUT_MS || 30_000)),
+});
 const responseText = await response.text();
 if (!response.ok) throw new Error(`proof submission failed (${response.status}): ${responseText}`);
 fs.writeFileSync(path.join(artifactDir, 'submission-response.json'), responseText);
