@@ -6,6 +6,24 @@ use tracing::info;
 
 use crate::kant_relay::models::{Pass, RelayConfig, Room};
 
+/// Compare two pass secrets without leaking their contents through timing.
+///
+/// Pass secrets are bearer credentials (see KANT_PASTEBIN_CLOUDFLARE_TWIN_SPEC.md),
+/// so a plain `==` would let an attacker who can time responses recover the
+/// secret a byte at a time. Length is still observable, which is acceptable:
+/// secrets are fixed-width UUID-derived strings.
+fn secrets_match(candidate: &str, expected: &str) -> bool {
+    let (candidate, expected) = (candidate.as_bytes(), expected.as_bytes());
+    if candidate.len() != expected.len() {
+        return false;
+    }
+    let mut diff = 0u8;
+    for (a, b) in candidate.iter().zip(expected) {
+        diff |= a ^ b;
+    }
+    diff == 0
+}
+
 /// The Kant relay service manages rooms and passes
 /// for the Kant pastebin Cloudflare twin system.
 pub struct KantRelay {
@@ -96,7 +114,7 @@ impl KantRelay {
         let mut rooms = self.rooms.write().await;
         if let Some(room) = rooms.get_mut(room_id) {
             for pass in &mut room.passes {
-                if pass.secret == pass_secret {
+                if secrets_match(pass_secret, &pass.secret) {
                     if pass.limit > 0 {
                         pass.limit -= 1;
                         info!("Validated pass {} for room {}, remaining: {}", pass.id, room_id, pass.limit);
@@ -150,12 +168,46 @@ mod tests {
     async fn test_add_pass() {
         let config = RelayConfig::default();
         let relay = KantRelay::new(config);
-        
+
         // Register a room
         relay.register_room("test-room".to_string(), "Test Room".to_string()).await.unwrap();
         
         // Add a pass
         let pass = relay.add_pass("test-room", "secret-123".to_string(), 5).await.unwrap();
         assert_eq!(pass.limit, 5);
+    }
+
+    #[tokio::test]
+    async fn test_validate_pass_consumes_limit() {
+        let relay = KantRelay::new(RelayConfig::default());
+        relay.register_room("r".to_string(), "R".to_string()).await.unwrap();
+        relay.add_pass("r", "secret-123".to_string(), 2).await.unwrap();
+
+        assert!(relay.validate_pass("r", "secret-123").await.is_ok());
+        assert!(relay.validate_pass("r", "secret-123").await.is_ok());
+        // Limit exhausted.
+        assert!(relay.validate_pass("r", "secret-123").await.is_err());
+    }
+
+    #[tokio::test]
+    async fn test_validate_pass_rejects_wrong_secret() {
+        let relay = KantRelay::new(RelayConfig::default());
+        relay.register_room("r".to_string(), "R".to_string()).await.unwrap();
+        relay.add_pass("r", "secret-123".to_string(), 5).await.unwrap();
+
+        assert!(relay.validate_pass("r", "secret-124").await.is_err());
+        assert!(relay.validate_pass("r", "").await.is_err());
+        assert!(relay.validate_pass("r", "secret-1234").await.is_err());
+        // A rejected attempt must not consume the pass.
+        assert!(relay.validate_pass("r", "secret-123").await.is_ok());
+    }
+
+    #[test]
+    fn test_secrets_match() {
+        assert!(secrets_match("secret-123", "secret-123"));
+        assert!(!secrets_match("secret-123", "secret-124"));
+        assert!(!secrets_match("secret-123", "secret-12"));
+        assert!(!secrets_match("", "x"));
+        assert!(secrets_match("", ""));
     }
 }
