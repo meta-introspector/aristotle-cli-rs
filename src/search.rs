@@ -613,9 +613,14 @@ mod tests {
         let results = search(&index, "test", None, None, None, 10)?;
         assert!(results.total >= 1, "Expected at least 1 result, got {}", results.total);
 
-        // Search with filter
+        // Search with filter: "lean4" only appears in test-1, which has status=2,
+        // so the filter must still return that hit rather than filtering it out.
         let results = search(&index, "lean4", Some(2), None, None, 10)?;
-        assert!(results.total >= 0, "Expected at least 0 result with status=2, got {}", results.total);
+        assert!(
+            results.total >= 1,
+            "Expected at least 1 result with status=2, got {}",
+            results.total
+        );
 
         // Get by ID
         let project = get_project(&index, "test-1")?;
