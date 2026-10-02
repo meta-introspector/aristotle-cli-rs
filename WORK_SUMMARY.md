@@ -77,14 +77,28 @@ simulated only.
 revisions of this file exist only in the working tree and have never been
 committed. There is no `src/kant_profile.rs` in this branch or any other.
 
+## Immutable WASM artifact
+
+`aristotle-wasm/` is compiled once and served as a static artifact, so it embeds
+no operator or account data. All Cloudflare configuration arrives from the
+client at runtime, either via `set_session_config()` or by hydrating from the
+`aristo_session` cookie on page load (`load_session_from_cookie()`). The API
+key stays in wasm memory and is never written to the cookie. See
+`aristotle-wasm/README.md`.
+
+A unit test enforces the contract by scanning the shipped source for account
+IDs and `.pages.dev` hosts, and `cargo test` in that crate covers the
+base64url cookie encoding, session validation, and the unconfigured-session
+paths.
+
 ## Known issues
 
 - `src/kant_relay/service.rs` compares pass secrets with `==`, which is not
   constant-time. These are bearer credentials.
 - `scripts/make-invite-vaciu.mjs` `import()`s modules fetched at runtime from
-  `kant-zk-pastebin.pages.dev`.
-- `src/search.rs` has a vacuous `assert!(results.total >= 0)` on a `usize`
-  (compiler warns `unused_comparisons`); the fixture supports `>= 1`.
+  `kant-zk-pastebin.pages.dev` when `KANT_FETCH_REMOTE=1`.
 - `systemd/*.service`, `nginx/aristo.conf`, and `src/main.rs` hardcode
   `/home/mdupont` and `/mnt/data1/time-2026/05-may/07/arist`.
-- `gui2lean4/README.md` contains a real Cloudflare account ID.
+- The deployed `www/` still ships the previous `aristotle_wasm_bg.wasm`, which
+  was built before the account ID was removed. It needs a rebuild, a
+  `wasm-bindgen` run, and a redeploy.
