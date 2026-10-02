@@ -1,7 +1,15 @@
 /target
 
-# Flake lock file
-flake.lock
+# Build output from any nested crate
+*/target/
+
+# Agent/editor worktree and session state (never commit)
+.worktrees/
+.letta/
+.omx/
+.kilo/
+.wrangler/
+.pi/
 
 # Download artifacts & logs
 *_aristotle/
@@ -15,6 +23,16 @@ gui2lean4/node_modules/
 
 # Build artifacts
 *.rs.bk
+*.o
+*.so
+*.wasm
+*~
+*.bak
+*.tmp
+
+# Compiled helper binaries (built from tools/gokujo/*.lean + GokujoMain.c)
+/tools/gokujo/gokujo
+/tools/gokujo/gokujo-test
 
 # IDE files
 .idea
@@ -34,3 +52,6 @@ Thumbs.db
 /split-by-band/
 /merged-results/
 .gokujo-build/
+
+# Emacs lock files
+\#*\#
