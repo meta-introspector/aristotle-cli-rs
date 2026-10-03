@@ -1,0 +1,79 @@
+{
+  "patterns": [
+    {
+      "id": "web-app-1",
+      "projectId": "0f9b0981-1dc9-4321-a46b-53e3cc6ee6e3",
+      "pattern": "deploy-webapp",
+      "steps": [
+        "check-webapp-directory",
+        "verify-index-file",
+        "run-deploy-command",
+        "verify-deployment"
+      ],
+      "confidence": 0.95,
+      "successRate": 0.95,
+      "description": "Deploy webapp directory to Cloudflare Pages",
+      "relatedFiles": [
+        "webapp/index.html",
+        "www/aristotle_wasm.js",
+        "www/aristotle_wasm_bg.wasm"
+      ],
+      "script": "deploy-cloudflare-worker.sh",
+      "relatedScripts": ["deploy-cloudflare.sh", "deploy-lean-worker.sh"]
+    },
+    {
+      "id": "theorem-prover-1",
+      "projectId": "9b854e2d-2ae1-4d55-9b53-bf308b5e3648",
+      "pattern": "deploy-webapp",
+      "steps": [
+        "verify-webapp-directory",
+        "run-deploy-command",
+        "verify-deployment"
+      ],
+      "confidence": 0.9,
+      "successRate": 0.95,
+      "description": "Deploy webapp for theorem prover project",
+      "relatedFiles": [
+        "webapp/index.html",
+        "webapp/serve.js",
+        "www/aristotle_wasm_bg.wasm"
+      ],
+      "script": "deploy-cloudflare-worker.sh",
+      "relatedScripts": ["deploy-cloudflare.sh"]
+    },
+    {
+      "id": "research-manager-1",
+      "projectId": "b2de6e68-6c11-4a08-b881-73ca688bdff6",
+      "pattern": "deploy-webapp",
+      "steps": [
+        "verify-webapp-directory",
+        "run-deploy-command",
+        "verify-deployment"
+      ],
+      "confidence": 0.9,
+      "successRate": 0.95,
+      "description": "Deploy webapp for research manager project",
+      "relatedFiles": [
+        "webapp/index.html",
+        "webapp/learn-kant-relay.sh",
+        "lean4_relay_proof.md"
+      ],
+      "script": "deploy-cloudflare.sh",
+      "relatedScripts": ["deploy-lean-worker.sh"]
+    }
+  ],
+  "deploymentSteps": [
+    "validate-project-structure",
+    "prepare-webapp-directory",
+    "decrypt-cloudflare-credentials",
+    "deploy-with-wrangler",
+    "verify-deployment"
+  ],
+  "deploymentSteps": [
+    "validate-project-structure",
+    "prepare-webapp-directory",
+    "decrypt-secrets",
+    "deploy-webfiles",
+    "verify-deployment"
+  ]
+}

@@ -9,3 +9,4 @@ pub mod clean;
 pub mod configure;
 pub mod dedup;
 pub mod results;
+pub mod search;

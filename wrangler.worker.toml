@@ -1,0 +1,4 @@
+name = "aristotle-alias-editor"
+main = "src/alias_web_worker.js"
+compatibility_date = "2026-09-28"
+workers_dev = true
