@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.instAddErrorMessageContextOfAddMessageContextOfMonad : forall (m : Type -> Type) [inst._@.Lean.Exception.2194575445._hygCtx._hyg.5 : Lean.AddMessageContext m] [inst._@.Lean.Exception.2194575445._hygCtx._hyg.8 : Monad.{0, 0} m], Lean.AddErrorMessageContext m
+def Lean.instAddErrorMessageContextOfAddMessageContextOfMonad : forall (m : Type -> Type) [inst._@.Lean.Exception.2194575445._hygCtx._hyg.5 : Lean.AddMessageContext m] [inst._@.Lean.Exception.2194575445._hygCtx._hyg.8 : Monad.{0, 0} m], Lean.AddErrorMessageContext m :=
+  fun (m : Type -> Type) [inst._@.Lean.Exception.2194575445._hygCtx._hyg.5 : Lean.AddMessageContext m] [inst._@.Lean.Exception.2194575445._hygCtx._hyg.8 : Monad.{0, 0} m] => Lean.AddErrorMessageContext.mk m (fun (ref : Lean.Syntax) (msg : Lean.MessageData) => Bind.bind.{0, 0} m (Monad.toBind.{0, 0} m inst._@.Lean.Exception.2194575445._hygCtx._hyg.8) Lean.MessageData (Prod.{0, 0} Lean.Syntax Lean.MessageData) (Lean.AddMessageContext.addMessageContext m inst._@.Lean.Exception.2194575445._hygCtx._hyg.5 msg) (fun (msg : Lean.MessageData) => Pure.pure.{0, 0} m (Applicative.toPure.{0, 0} m (Monad.toApplicative.{0, 0} m inst._@.Lean.Exception.2194575445._hygCtx._hyg.8)) (Prod.{0, 0} Lean.Syntax Lean.MessageData) (Prod.mk.{0, 0} Lean.Syntax Lean.MessageData ref msg)))

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Eq.casesOn : forall {α : Sort.{u_1}} {a._@._internal._hyg.0 : α} {motive : forall (a_1._@._internal._hyg.0 : α), (Eq.{u_1} α a._@._internal._hyg.0 a_1._@._internal._hyg.0) -> Sort.{u}} {a_1._@._internal._hyg.0 : α} (t : Eq.{u_1} α a._@._internal._hyg.0 a_1._@._internal._hyg.0), (motive a._@._internal._hyg.0 (Eq.refl.{u_1} α a._@._internal._hyg.0)) -> (motive a_1._@._internal._hyg.0 t)
+def Eq.casesOn : forall {α : Sort.{u_1}} {a._@._internal._hyg.0 : α} {motive : forall (a_1._@._internal._hyg.0 : α), (Eq.{u_1} α a._@._internal._hyg.0 a_1._@._internal._hyg.0) -> Sort.{u}} {a_1._@._internal._hyg.0 : α} (t : Eq.{u_1} α a._@._internal._hyg.0 a_1._@._internal._hyg.0), (motive a._@._internal._hyg.0 (Eq.refl.{u_1} α a._@._internal._hyg.0)) -> (motive a_1._@._internal._hyg.0 t) :=
+  fun {α : Sort.{u_1}} {a._@._internal._hyg.0 : α} {motive : forall (a_1._@._internal._hyg.0 : α), (Eq.{u_1} α a._@._internal._hyg.0 a_1._@._internal._hyg.0) -> Sort.{u}} {a_1._@._internal._hyg.0 : α} (t : Eq.{u_1} α a._@._internal._hyg.0 a_1._@._internal._hyg.0) (refl : motive a._@._internal._hyg.0 (Eq.refl.{u_1} α a._@._internal._hyg.0)) => Eq.rec.{u, u_1} α a._@._internal._hyg.0 motive refl a_1._@._internal._hyg.0 t

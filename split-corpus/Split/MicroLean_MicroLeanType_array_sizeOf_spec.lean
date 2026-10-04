@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem MicroLean.MicroLeanType.array.sizeOf_spec : forall (elem : MicroLean.MicroLeanType), Eq.{1} Nat (SizeOf.sizeOf.{1} MicroLean.MicroLeanType MicroLean.MicroLeanType._sizeOf_inst (MicroLean.MicroLeanType.array elem)) (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) (SizeOf.sizeOf.{1} MicroLean.MicroLeanType MicroLean.MicroLeanType._sizeOf_inst elem))
+theorem MicroLean.MicroLeanType.array.sizeOf_spec : forall (elem : MicroLean.MicroLeanType), Eq.{1} Nat (SizeOf.sizeOf.{1} MicroLean.MicroLeanType MicroLean.MicroLeanType._sizeOf_inst (MicroLean.MicroLeanType.array elem)) (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) (SizeOf.sizeOf.{1} MicroLean.MicroLeanType MicroLean.MicroLeanType._sizeOf_inst elem)) :=
+  fun (elem : MicroLean.MicroLeanType) => Eq.refl.{1} Nat (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) (SizeOf.sizeOf.{1} MicroLean.MicroLeanType MicroLean.MicroLeanType._sizeOf_inst elem))

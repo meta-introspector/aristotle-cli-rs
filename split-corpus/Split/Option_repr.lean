@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Option.repr : forall {α : Type.{u_1}} [inst._@.Init.Data.Repr.682344313._hygCtx._hyg.5 : Repr.{u_1} α], (Option.{u_1} α) -> Nat -> Std.Format
+def Option.repr : forall {α : Type.{u_1}} [inst._@.Init.Data.Repr.682344313._hygCtx._hyg.5 : Repr.{u_1} α], (Option.{u_1} α) -> Nat -> Std.Format :=
+  fun {α : Type.{u_1}} [inst._@.Init.Data.Repr.682344313._hygCtx._hyg.5 : Repr.{u_1} α] (x._@.Init.Data.Repr.682344313._hygCtx._hyg.14 : Option.{u_1} α) (x._@.Init.Data.Repr.682344313._hygCtx._hyg.15 : Nat) => _private.Init.Data.Repr.0.Option.repr.match_1.{u_1, 1} α (fun (x._@.Init.Data.Repr.682344313._hygCtx.14.Init.Data.Repr.682344313._hygCtx._hyg.33 : Option.{u_1} α) (x._@.Init.Data.Repr.682344313._hygCtx.15.Init.Data.Repr.682344313._hygCtx._hyg.36 : Nat) => Std.Format) x._@.Init.Data.Repr.682344313._hygCtx._hyg.14 x._@.Init.Data.Repr.682344313._hygCtx._hyg.15 (fun (x._@.Init.Data.Repr.682344313._hygCtx._hyg.43 : Nat) => Std.Format.text "none") (fun (a : α) (prec : Nat) => Repr.addAppParen (HAppend.hAppend.{0, 0, 0} Std.Format Std.Format Std.Format (instHAppendOfAppend.{0} Std.Format Std.Format.instAppend) (Std.Format.text "some ") (reprArg.{u_1} α inst._@.Init.Data.Repr.682344313._hygCtx._hyg.5 a)) prec)

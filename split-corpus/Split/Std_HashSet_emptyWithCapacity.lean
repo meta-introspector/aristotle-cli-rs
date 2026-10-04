@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.HashSet.emptyWithCapacity : forall {α : Type.{u}} [inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.9 : BEq.{u} α] [inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.12 : Hashable.{succ u} α], (optParam.{1} Nat (OfNat.ofNat.{0} Nat 8 (instOfNatNat 8))) -> (Std.HashSet.{u} α inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.9 inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.12)
+def Std.HashSet.emptyWithCapacity : forall {α : Type.{u}} [inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.9 : BEq.{u} α] [inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.12 : Hashable.{succ u} α], (optParam.{1} Nat (OfNat.ofNat.{0} Nat 8 (instOfNatNat 8))) -> (Std.HashSet.{u} α inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.9 inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.12) :=
+  fun {α : Type.{u}} [inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.9 : BEq.{u} α] [inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.12 : Hashable.{succ u} α] (capacity : Nat) => Std.HashSet.mk.{u} α inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.9 inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.12 (Std.HashMap.emptyWithCapacity.{u, 0} α Unit inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.9 inst._@.Std.Data.HashSet.Basic.3778331399._hygCtx._hyg.12 capacity)

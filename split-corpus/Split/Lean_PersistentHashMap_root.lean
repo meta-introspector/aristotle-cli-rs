@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.PersistentHashMap.root : forall {α : Type.{u}} {β : Type.{v}} [inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.4 : BEq.{u} α] [inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.7 : Hashable.{succ u} α], (Lean.PersistentHashMap.{u, v} α β inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.4 inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.7) -> (Lean.PersistentHashMap.Node.{u, v} α β)
+def Lean.PersistentHashMap.root : forall {α : Type.{u}} {β : Type.{v}} [inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.4 : BEq.{u} α] [inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.7 : Hashable.{succ u} α], (Lean.PersistentHashMap.{u, v} α β inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.4 inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.7) -> (Lean.PersistentHashMap.Node.{u, v} α β) :=
+  fun (α : Type.{u}) (β : Type.{v}) [inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.4 : BEq.{u} α] [inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.7 : Hashable.{succ u} α] (self : Lean.PersistentHashMap.{u, v} α β inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.4 inst._@.Lean.Data.PersistentHashMap.3696607590._hygCtx._hyg.7) => self.1

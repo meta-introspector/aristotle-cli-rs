@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.beq_refl : forall (a : Nat), Eq.{1} Bool (Nat.beq a a) Bool.true
+theorem Nat.beq_refl : forall (a : Nat), Eq.{1} Bool (Nat.beq a a) Bool.true :=
+  fun (a : Nat) => Nat.recAux.{0} (fun (a : Nat) => Eq.{1} Bool (Nat.beq a a) Bool.true) (of_eq_true (Eq.{1} Bool Bool.true Bool.true) (eq_self.{1} Bool Bool.true)) (fun (a : Nat) (ih : Eq.{1} Bool (Nat.beq a a) Bool.true) => id.{0} (Eq.{1} Bool (Nat.beq (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) a (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1))) (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) a (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)))) Bool.true) (of_eq_true (Eq.{1} Bool (Nat.beq a a) Bool.true) (Eq.trans.{1} Prop (Eq.{1} Bool (Nat.beq a a) Bool.true) (Eq.{1} Bool Bool.true Bool.true) True (congrFun'.{1, 1} Bool Prop (Eq.{1} Bool (Nat.beq a a)) (Eq.{1} Bool Bool.true) (congrArg.{1, 1} Bool (Bool -> Prop) (Nat.beq a a) Bool.true (Eq.{1} Bool) ih) Bool.true) (eq_self.{1} Bool Bool.true)))) a

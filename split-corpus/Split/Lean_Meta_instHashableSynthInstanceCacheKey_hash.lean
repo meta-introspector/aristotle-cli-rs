@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Meta.instHashableSynthInstanceCacheKey.hash : Lean.Meta.SynthInstanceCacheKey -> UInt64
+def Lean.Meta.instHashableSynthInstanceCacheKey.hash : Lean.Meta.SynthInstanceCacheKey -> UInt64 :=
+  fun (x._@.Lean.Meta.Basic.3837601417._hygCtx._hyg.14 : Lean.Meta.SynthInstanceCacheKey) => _private.Lean.Meta.Basic.0.Lean.Meta.instHashableSynthInstanceCacheKey.hash.match_1.{1} (fun (x._@.Lean.Meta.Basic.3837601417._hygCtx.14.Lean.Meta.Basic.1363585664._hygCtx._hyg.7 : Lean.Meta.SynthInstanceCacheKey) => UInt64) x._@.Lean.Meta.Basic.3837601417._hygCtx._hyg.14 (fun (a._@.Lean.Meta.Basic.3837601417._hygCtx._hyg.15 : Lean.LocalInstances) (a._@.Lean.Meta.Basic.3837601417._hygCtx._hyg.16 : Lean.Expr) (a._@.Lean.Meta.Basic.3837601417._hygCtx._hyg.17 : Nat) => mixHash (mixHash (mixHash (OfNat.ofNat.{0} UInt64 0 (UInt64.instOfNat 0)) (Hashable.hash.{1} Lean.LocalInstances (instHashableArray.{0} Lean.LocalInstance Lean.instHashableLocalInstance) a._@.Lean.Meta.Basic.3837601417._hygCtx._hyg.15)) (Hashable.hash.{1} Lean.Expr Lean.Expr.instHashable a._@.Lean.Meta.Basic.3837601417._hygCtx._hyg.16)) (Hashable.hash.{1} Nat instHashableNat a._@.Lean.Meta.Basic.3837601417._hygCtx._hyg.17))

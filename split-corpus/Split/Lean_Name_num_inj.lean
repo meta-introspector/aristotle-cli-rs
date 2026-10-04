@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Lean.Name.num.inj : forall {pre : Lean.Name} {i : Nat} {pre_1 : Lean.Name} {i_1 : Nat}, (Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre_1 i_1)) -> (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} Nat i i_1))
+theorem Lean.Name.num.inj : forall {pre : Lean.Name} {i : Nat} {pre_1 : Lean.Name} {i_1 : Nat}, (Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre_1 i_1)) -> (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} Nat i i_1)) :=
+  fun {pre : Lean.Name} {i : Nat} {pre_1 : Lean.Name} {i_1 : Nat} (x._@.Init.Core.2310967795._hygCtx._hyg.6 : Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre_1 i_1)) => Lean.Name.num.noConfusion.{0} (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} Nat i i_1)) pre i pre_1 i_1 x._@.Init.Core.2310967795._hygCtx._hyg.6 (fun (pre_eq._@.Init.Core.2310967795._hygCtx._hyg.7 : Eq.{1} Lean.Name pre pre_1) (i_eq._@.Init.Core.2310967795._hygCtx._hyg.8 : Eq.{1} Nat i i_1) => And.intro (Eq.{1} Lean.Name pre pre_1) (Eq.{1} Nat i i_1) pre_eq._@.Init.Core.2310967795._hygCtx._hyg.7 i_eq._@.Init.Core.2310967795._hygCtx._hyg.8)

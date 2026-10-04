@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Name.ctorElim : forall {motive : Lean.Name -> Sort.{u}} (ctorIdx : Nat) (t : Lean.Name), (Eq.{1} Nat ctorIdx (Lean.Name.ctorIdx t)) -> (Lean.Name.ctorElimType.{u} motive ctorIdx) -> (motive t)
+def Lean.Name.ctorElim : forall {motive : Lean.Name -> Sort.{u}} (ctorIdx : Nat) (t : Lean.Name), (Eq.{1} Nat ctorIdx (Lean.Name.ctorIdx t)) -> (Lean.Name.ctorElimType.{u} motive ctorIdx) -> (motive t) :=
+  fun {motive : Lean.Name -> Sort.{u}} (ctorIdx : Nat) (t : Lean.Name) (h : Eq.{1} Nat ctorIdx (Lean.Name.ctorIdx t)) (k : Lean.Name.ctorElimType.{u} motive ctorIdx) => Lean.Name.casesOn.{u} (fun (t : Lean.Name) => (Eq.{1} Nat ctorIdx (Lean.Name.ctorIdx t)) -> (motive t)) t (fun (h : Eq.{1} Nat ctorIdx 0) => PULift.down.{u, u} (motive Lean.Name.anonymous) (Eq.ndrec.{max 1 u, 1} Nat ctorIdx (Lean.Name.ctorElimType.{u} motive) k 0 h)) (fun (pre : Lean.Name) (str : String) (h : Eq.{1} Nat ctorIdx 1) => PULift.down.{u, u} (forall (pre : Lean.Name) (str : String), motive (Lean.Name.str pre str)) (Eq.ndrec.{max 1 u, 1} Nat ctorIdx (Lean.Name.ctorElimType.{u} motive) k 1 h) pre str) (fun (pre : Lean.Name) (i : Nat) (h : Eq.{1} Nat ctorIdx 2) => PULift.down.{u, u} (forall (pre : Lean.Name) (i : Nat), motive (Lean.Name.num pre i)) (Eq.ndrec.{max 1 u, 1} Nat ctorIdx (Lean.Name.ctorElimType.{u} motive) k 2 h) pre i) h

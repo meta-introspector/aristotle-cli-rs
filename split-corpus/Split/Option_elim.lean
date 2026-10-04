@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Option.elim : forall {α : Type.{u_1}} {β : Sort.{u_2}}, (Option.{u_1} α) -> β -> (α -> β) -> β
+def Option.elim : forall {α : Type.{u_1}} {β : Sort.{u_2}}, (Option.{u_1} α) -> β -> (α -> β) -> β :=
+  fun {α : Type.{u_1}} {β : Sort.{u_2}} (x._@.Init.Data.Option.Basic.2135250726._hygCtx._hyg.22 : Option.{u_1} α) (x._@.Init.Data.Option.Basic.2135250726._hygCtx._hyg.23 : β) (x._@.Init.Data.Option.Basic.2135250726._hygCtx._hyg.24 : α -> β) => Option.elim.match_1.{u_1, u_2, u_2} α β (fun (x._@.Init.Data.Option.Basic.2135250726._hygCtx.22.Init.Data.Option.Basic.2135250726._hygCtx._hyg.49 : Option.{u_1} α) (x._@.Init.Data.Option.Basic.2135250726._hygCtx.23.Init.Data.Option.Basic.2135250726._hygCtx._hyg.52 : β) (x._@.Init.Data.Option.Basic.2135250726._hygCtx.24.Init.Data.Option.Basic.2135250726._hygCtx._hyg.55 : α -> β) => β) x._@.Init.Data.Option.Basic.2135250726._hygCtx._hyg.22 x._@.Init.Data.Option.Basic.2135250726._hygCtx._hyg.23 x._@.Init.Data.Option.Basic.2135250726._hygCtx._hyg.24 (fun (x : α) (x._@.Init.Data.Option.Basic.2135250726._hygCtx._hyg.66 : β) (f : α -> β) => f x) (fun (y : β) (x._@.Init.Data.Option.Basic.2135250726._hygCtx._hyg.80 : α -> β) => y)

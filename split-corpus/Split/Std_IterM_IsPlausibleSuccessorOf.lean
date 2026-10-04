@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.IterM.IsPlausibleSuccessorOf : forall {α : Type.{w}} {m : Type.{w} -> Type.{w'}} {β : Type.{w}} [inst._@.Init.Data.Iterators.Basic.2361324551._hygCtx._hyg.7 : Std.Iterator.{w, w'} α m β], (Std.IterM.{w, w'} α m β) -> (Std.IterM.{w, w'} α m β) -> Prop
+def Std.IterM.IsPlausibleSuccessorOf : forall {α : Type.{w}} {m : Type.{w} -> Type.{w'}} {β : Type.{w}} [inst._@.Init.Data.Iterators.Basic.2361324551._hygCtx._hyg.7 : Std.Iterator.{w, w'} α m β], (Std.IterM.{w, w'} α m β) -> (Std.IterM.{w, w'} α m β) -> Prop :=
+  fun {α : Type.{w}} {m : Type.{w} -> Type.{w'}} {β : Type.{w}} [inst._@.Init.Data.Iterators.Basic.2361324551._hygCtx._hyg.7 : Std.Iterator.{w, w'} α m β] (it' : Std.IterM.{w, w'} α m β) (it : Std.IterM.{w, w'} α m β) => Exists.{succ w} (Std.IterStep.{succ w, succ w} (Std.IterM.{w, w'} α m β) β) (fun (step : Std.IterStep.{succ w, succ w} (Std.IterM.{w, w'} α m β) β) => And (Eq.{succ w} (Option.{w} (Std.IterM.{w, w'} α m β)) (Std.IterStep.successor.{w, w} (Std.IterM.{w, w'} α m β) β step) (Option.some.{w} (Std.IterM.{w, w'} α m β) it')) (Std.IterM.IsPlausibleStep.{w, w'} α m β inst._@.Init.Data.Iterators.Basic.2361324551._hygCtx._hyg.7 it step))

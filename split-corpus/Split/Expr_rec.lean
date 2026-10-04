@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: recursor Expr.rec : forall {motive : Expr -> Sort.{u}}, (forall (a._@._internal._hyg.0 : String), motive (Expr.Var a._@._internal._hyg.0)) -> (forall (a._@._internal._hyg.0 : String), motive (Expr.LLMQuery a._@._internal._hyg.0)) -> (forall (a._@._internal._hyg.0 : String), motive (Expr.LLMResponse a._@._internal._hyg.0)) -> (forall (a._@._internal._hyg.0 : List.{0} (Prod.{0, 0} String Nat)), motive (Expr.OrderBookState a._@._internal._hyg.0)) -> (forall (a._@._internal._hyg.0 : Expr), (motive a._@._internal._hyg.0) -> (motive (Expr.QuotedCode a._@._internal._hyg.0))) -> (motive Expr.SelfRef) -> (forall (t : Expr), motive t)

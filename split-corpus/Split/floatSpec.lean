@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: opaque floatSpec : FloatSpec
+opaque floatSpec : FloatSpec :=
+  FloatSpec.mk Unit Unit.unit (fun (x._@.Init.Data.Float.3665695874._hygCtx._hyg.12 : Unit) (x._@.Init.Data.Float.3665695874._hygCtx._hyg.14 : Unit) => True) (fun (x._@.Init.Data.Float.3665695874._hygCtx._hyg.19 : Unit) (x._@.Init.Data.Float.3665695874._hygCtx._hyg.21 : Unit) => True) (fun (x._@.Init.Data.Float.3665695874._hygCtx._hyg.26 : Unit) (x._@.Init.Data.Float.3665695874._hygCtx._hyg.28 : Unit) => Decidable.isTrue ((fun (x._@.Init.Data.Float.3665695874._hygCtx._hyg.12 : Unit) (x._@.Init.Data.Float.3665695874._hygCtx._hyg.14 : Unit) => True) x._@.Init.Data.Float.3665695874._hygCtx._hyg.26 x._@.Init.Data.Float.3665695874._hygCtx._hyg.28) trivial) (fun (x._@.Init.Data.Float.3665695874._hygCtx._hyg.37 : Unit) (x._@.Init.Data.Float.3665695874._hygCtx._hyg.39 : Unit) => Decidable.isTrue ((fun (x._@.Init.Data.Float.3665695874._hygCtx._hyg.19 : Unit) (x._@.Init.Data.Float.3665695874._hygCtx._hyg.21 : Unit) => True) x._@.Init.Data.Float.3665695874._hygCtx._hyg.37 x._@.Init.Data.Float.3665695874._hygCtx._hyg.39) trivial)

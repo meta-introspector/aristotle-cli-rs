@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.PersistentHashSet.empty : forall {α : Type.{u_1}} [inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.5 : BEq.{u_1} α] [inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.8 : Hashable.{succ u_1} α], Lean.PersistentHashSet.{u_1} α inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.5 inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.8
+def Lean.PersistentHashSet.empty : forall {α : Type.{u_1}} [inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.5 : BEq.{u_1} α] [inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.8 : Hashable.{succ u_1} α], Lean.PersistentHashSet.{u_1} α inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.5 inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.8 :=
+  fun {α : Type.{u_1}} [inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.5 : BEq.{u_1} α] [inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.8 : Hashable.{succ u_1} α] => Lean.PersistentHashSet.mk.{u_1} α inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.5 inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.8 (Lean.PersistentHashMap.empty.{u_1, 0} α Unit inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.5 inst._@.Lean.Data.PersistentHashSet.3430269429._hygCtx._hyg.8)

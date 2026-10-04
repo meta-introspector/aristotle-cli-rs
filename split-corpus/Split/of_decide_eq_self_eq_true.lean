@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem of_decide_eq_self_eq_true : forall {α : Sort.{u_1}} [inst : DecidableEq.{u_1} α] (a : α), Eq.{1} Bool (Decidable.decide (Eq.{u_1} α a a) (inst a a)) Bool.true
+theorem of_decide_eq_self_eq_true : forall {α : Sort.{u_1}} [inst : DecidableEq.{u_1} α] (a : α), Eq.{1} Bool (Decidable.decide (Eq.{u_1} α a a) (inst a a)) Bool.true :=
+  fun {α : Sort.{u_1}} [inst : DecidableEq.{u_1} α] (a : α) => _private.Init.Prelude.0.of_decide_eq_self_eq_true.match_1_1.{u_1} α a (fun (x._@.Init.Prelude.1098376536._hygCtx._hyg.26 : Decidable (Eq.{u_1} α a a)) => Eq.{1} Bool (Decidable.decide (Eq.{u_1} α a a) x._@.Init.Prelude.1098376536._hygCtx._hyg.26) Bool.true) (inst a a) (fun (h._@.Init.Prelude.1098376536._hygCtx._hyg.33 : Eq.{u_1} α a a) => rfl.{1} Bool (Decidable.decide (Eq.{u_1} α a a) (Decidable.isTrue (Eq.{u_1} α a a) h._@.Init.Prelude.1098376536._hygCtx._hyg.33))) (fun (h₁ : Not (Eq.{u_1} α a a)) => absurd.{0} (Eq.{u_1} α a a) (Eq.{1} Bool (Decidable.decide (Eq.{u_1} α a a) (Decidable.isFalse (Eq.{u_1} α a a) h₁)) Bool.true) (rfl.{u_1} α a) h₁)

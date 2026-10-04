@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.mul_le_mul : forall {n₁ : Nat} {m₁ : Nat} {n₂ : Nat} {m₂ : Nat}, (LE.le.{0} Nat instLENat n₁ n₂) -> (LE.le.{0} Nat instLENat m₁ m₂) -> (LE.le.{0} Nat instLENat (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n₁ m₁) (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n₂ m₂))
+theorem Nat.mul_le_mul : forall {n₁ : Nat} {m₁ : Nat} {n₂ : Nat} {m₂ : Nat}, (LE.le.{0} Nat instLENat n₁ n₂) -> (LE.le.{0} Nat instLENat m₁ m₂) -> (LE.le.{0} Nat instLENat (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n₁ m₁) (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n₂ m₂)) :=
+  fun {n₁ : Nat} {m₁ : Nat} {n₂ : Nat} {m₂ : Nat} (h₁ : LE.le.{0} Nat instLENat n₁ n₂) (h₂ : LE.le.{0} Nat instLENat m₁ m₂) => Nat.le_trans (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n₁ m₁) (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n₂ m₁) (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n₂ m₂) (Nat.mul_le_mul_right n₁ n₂ m₁ h₁) (Nat.mul_le_mul_left m₁ m₂ n₂ h₂)

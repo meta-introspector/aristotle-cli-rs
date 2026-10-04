@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Lean.Name.num.injEq : forall (pre : Lean.Name) (i : Nat) (pre_1 : Lean.Name) (i_1 : Nat), Eq.{1} Prop (Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre_1 i_1)) (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} Nat i i_1))
+theorem Lean.Name.num.injEq : forall (pre : Lean.Name) (i : Nat) (pre_1 : Lean.Name) (i_1 : Nat), Eq.{1} Prop (Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre_1 i_1)) (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} Nat i i_1)) :=
+  fun (pre : Lean.Name) (i : Nat) (pre_1 : Lean.Name) (i_1 : Nat) => Eq.propIntro (Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre_1 i_1)) (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} Nat i i_1)) (Lean.Name.num.inj pre i pre_1 i_1) (Lean.injEq_helper (Eq.{1} Lean.Name pre pre_1) (Eq.{1} Nat i i_1) (Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre_1 i_1)) (Eq.ndrec.{0, 1} Lean.Name pre (fun (pre_1 : Lean.Name) => (Eq.{1} Nat i i_1) -> (Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre_1 i_1))) (Eq.ndrec.{0, 1} Nat i (fun (i_1 : Nat) => Eq.{1} Lean.Name (Lean.Name.num pre i) (Lean.Name.num pre i_1)) (Eq.refl.{1} Lean.Name (Lean.Name.num pre i)) i_1) pre_1))

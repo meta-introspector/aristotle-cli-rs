@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: constructor Std.LawfulOrderLT.mk : forall {α : Type.{u}} [inst._@.Init.Data.Order.Classes.1606021098._hygCtx._hyg.3 : LT.{u} α] [inst._@.Init.Data.Order.Classes.1606021098._hygCtx._hyg.6 : LE.{u} α], (forall (a : α) (b : α), Iff (LT.lt.{u} α inst._@.Init.Data.Order.Classes.1606021098._hygCtx._hyg.3 a b) (And (LE.le.{u} α inst._@.Init.Data.Order.Classes.1606021098._hygCtx._hyg.6 a b) (Not (LE.le.{u} α inst._@.Init.Data.Order.Classes.1606021098._hygCtx._hyg.6 b a)))) -> (Std.LawfulOrderLT.{u} α inst._@.Init.Data.Order.Classes.1606021098._hygCtx._hyg.3 inst._@.Init.Data.Order.Classes.1606021098._hygCtx._hyg.6)

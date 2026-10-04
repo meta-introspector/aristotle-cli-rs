@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem MicroLean.emitCppMut.eq_2 : forall (t : MicroLean.MicroLeanType), Eq.{1} String (MicroLean.emitCppMut (MicroLean.MutLinearType.qualified MicroLean.MutMode.mutBorrow t)) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString (MicroLean.emitCpp t)) (ToString.toString.{0} String instToStringString "* /* in/out: mutable borrow */"))
+theorem MicroLean.emitCppMut.eq_2 : forall (t : MicroLean.MicroLeanType), Eq.{1} String (MicroLean.emitCppMut (MicroLean.MutLinearType.qualified MicroLean.MutMode.mutBorrow t)) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString (MicroLean.emitCpp t)) (ToString.toString.{0} String instToStringString "* /* in/out: mutable borrow */")) :=
+  fun (t : MicroLean.MicroLeanType) => Eq.refl.{1} String (MicroLean.emitCppMut (MicroLean.MutLinearType.qualified MicroLean.MutMode.mutBorrow t))

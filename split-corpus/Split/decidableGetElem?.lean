@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: decidableGetElem? : forall {coll : Type.{u_1}} {idx : Type.{u_2}} {elem : Type.{u_3}} {valid : coll -> idx -> Prop} [inst._@.Init.GetElem.2429199434._hygCtx._hyg.20 : GetElem.{u_1, u_2, u_3} coll idx elem valid] (xs : coll) (i : idx) [inst._@.Init.GetElem.2429199434._hygCtx._hyg.28 : Decidable (valid xs i)], Option.{u_3} elem
+def decidableGetElem? : forall {coll : Type.{u_1}} {idx : Type.{u_2}} {elem : Type.{u_3}} {valid : coll -> idx -> Prop} [inst._@.Init.GetElem.2429199434._hygCtx._hyg.20 : GetElem.{u_1, u_2, u_3} coll idx elem valid] (xs : coll) (i : idx) [inst._@.Init.GetElem.2429199434._hygCtx._hyg.28 : Decidable (valid xs i)], Option.{u_3} elem :=
+  fun {coll : Type.{u_1}} {idx : Type.{u_2}} {elem : Type.{u_3}} {valid : coll -> idx -> Prop} [inst._@.Init.GetElem.2429199434._hygCtx._hyg.20 : GetElem.{u_1, u_2, u_3} coll idx elem valid] (xs : coll) (i : idx) [inst._@.Init.GetElem.2429199434._hygCtx._hyg.28 : Decidable (valid xs i)] => dite.{succ u_3} (Option.{u_3} elem) (valid xs i) inst._@.Init.GetElem.2429199434._hygCtx._hyg.28 (fun (h : valid xs i) => Option.some.{u_3} elem (GetElem.getElem.{u_1, u_2, u_3} coll idx elem valid inst._@.Init.GetElem.2429199434._hygCtx._hyg.20 xs i h)) (fun (h : Not (valid xs i)) => Option.none.{u_3} elem)

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.PrettyPrinter.Delaborator.instMonadReaderOfSubExprDelabM : MonadReaderOf.{0, 0} Lean.SubExpr Lean.PrettyPrinter.Delaborator.DelabM
+def Lean.PrettyPrinter.Delaborator.instMonadReaderOfSubExprDelabM : MonadReaderOf.{0, 0} Lean.SubExpr Lean.PrettyPrinter.Delaborator.DelabM :=
+  MonadReaderOf.mk.{0, 0} Lean.SubExpr Lean.PrettyPrinter.Delaborator.DelabM (Functor.map.{0, 0} Lean.PrettyPrinter.Delaborator.DelabM (ReaderT.instFunctorOfMonad.{0, 0} Lean.PrettyPrinter.Delaborator.Context (StateRefT' IO.RealWorld Lean.PrettyPrinter.Delaborator.State Lean.Meta.MetaM) (StateRefT'.instMonad IO.RealWorld Lean.PrettyPrinter.Delaborator.State Lean.Meta.MetaM Lean.Meta.instMonadMetaM)) Lean.PrettyPrinter.Delaborator.Context Lean.SubExpr Lean.PrettyPrinter.Delaborator.Context.subExpr (MonadReader.read.{0, 0} Lean.PrettyPrinter.Delaborator.Context Lean.PrettyPrinter.Delaborator.DelabM (instMonadReaderOfMonadReaderOf.{0, 0} Lean.PrettyPrinter.Delaborator.Context Lean.PrettyPrinter.Delaborator.DelabM (instMonadReaderOfReaderTOfMonad.{0, 0} Lean.PrettyPrinter.Delaborator.Context (StateRefT' IO.RealWorld Lean.PrettyPrinter.Delaborator.State Lean.Meta.MetaM) (StateRefT'.instMonad IO.RealWorld Lean.PrettyPrinter.Delaborator.State Lean.Meta.MetaM Lean.Meta.instMonadMetaM)))))

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: ExceptT.bindCont : forall {ε : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.Except.1479504271._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}}, (α -> (ExceptT.{u, v} ε m β)) -> (Except.{u, u} ε α) -> (m (Except.{u, u} ε β))
+def ExceptT.bindCont : forall {ε : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.Except.1479504271._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}}, (α -> (ExceptT.{u, v} ε m β)) -> (Except.{u, u} ε α) -> (m (Except.{u, u} ε β)) :=
+  fun {ε : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.Except.1479504271._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}} (f : α -> (ExceptT.{u, v} ε m β)) (x._@.Init.Control.Except.1479504271._hygCtx._hyg.27 : Except.{u, u} ε α) => ExceptT.bindCont.match_1.{u, succ v} ε α (fun (x._@.Init.Control.Except.1479504271._hygCtx.27.Init.Control.Except.1479504271._hygCtx._hyg.38 : Except.{u, u} ε α) => m (Except.{u, u} ε β)) x._@.Init.Control.Except.1479504271._hygCtx._hyg.27 (fun (a : α) => f a) (fun (e : ε) => Pure.pure.{u, v} m (Applicative.toPure.{u, v} m (Monad.toApplicative.{u, v} m inst._@.Init.Control.Except.1479504271._hygCtx._hyg.6)) (Except.{u, u} ε β) (Except.error.{u, u} ε β e))

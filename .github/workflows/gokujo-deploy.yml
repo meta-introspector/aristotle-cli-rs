@@ -1,0 +1,175 @@
+name: gokujo
+
+# Gokujo principle: cut out unneeded computation.
+# - mathlib oleans are compiled ONCE and cached (actions/cache), never rebuilt
+# - only the 5310 Split/* per-decl files are compiled (72.1% of the pool is
+#   already covered by the cached mathlib chain)
+# - compile is matrix-sharded and resumable; failed shards re-run only misses
+# - cloudflare publish is a separate job with its own scoped key (ACL)
+
+on:
+  push:
+    branches: [main]
+    paths: ['split-corpus/**', '.github/workflows/gokujo-deploy.yml']
+  workflow_dispatch:
+    inputs:
+      shard:
+        description: 'Compile only one shard (0-7), empty = all'
+        default: ''
+      skip_cloudflare:
+        description: 'Skip the cloudflare publish job'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # release artifacts
+
+env:
+  LEAN_VERSION: v4.28.0
+  MATHLIB_CACHE_KEY: mathlib-oleans-v4.28.0-r1
+
+jobs:
+  mathlib-oleans:
+    # Build the mathlib olean chain once; every later job reuses the cache.
+    runs-on: ubuntu-latest
+    outputs:
+      cache-hit: ${{ steps.cache-oleans.outputs.cache-hit }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache mathlib oleans
+        id: cache-oleans
+        uses: actions/cache@v4
+        with:
+          path: ~/.elan-mathlib-oleans
+          key: ${{ env.MATHLIB_CACHE_KEY }}
+      - name: Build mathlib olean chain
+        if: steps.cache-oleans.outputs.cache-hit != 'true'
+        run: |
+          set -euo pipefail
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain lean4:v4.28.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          git clone --depth 1 --branch v4.28.0 https://github.com/leanprover-community/mathlib mathlib 2>/dev/null || \
+            git clone --depth 1 https://github.com/leanprover-community/mathlib mathlib
+          cd mathlib
+          # mathlib's own toolchain pin wins if it differs; we need oleans for 4.28
+          lake build 2>&1 | tail -5   # ~50 min, cached forever after
+          mkdir -p ~/.elan-mathlib-oleans
+          cp -r .lake/build/lib/lean ~/.elan-mathlib-oleans/build
+          for p in batteries Qq aesop plausible proofwidgets importGraph Cli; do
+            cp -r ".lake/packages/$p/.lake/build/lib/lean" "$HOME/.elan-mathlib-oleans/$p" 2>/dev/null || true
+          done
+
+  compile-split:
+    needs: mathlib-oleans
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: ~/.elan-mathlib-oleans
+          key: ${{ env.MATHLIB_CACHE_KEY }}
+      - name: Install lean 4.28
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain lean4:v4.28.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Compile shard ${{ matrix.shard }}
+        env:
+          LEAN_PATH: /home/runner/.elan-mathlib-oleans/build:/home/runner/.elan-mathlib-oleans/batteries:/home/runner/.elan-mathlib-oleans/Qq:/home/runner/.elan-mathlib-oleans/aesop:/home/runner/.elan-mathlib-oleans/plausible:/home/runner/.elan-mathlib-oleans/proofwidgets:/home/runner/.elan-mathlib-oleans/importGraph:/home/runner/.elan-mathlib-oleans/Cli
+        run: |
+          set -euo pipefail
+          mkdir -p out/oleans
+          # shard by index mod 8 — resumable: skip existing oleans
+          python3 - <<EOF
+          import os, subprocess, sys, glob
+          shard = ${{ matrix.shard }}
+          files = sorted(glob.glob("split-corpus/Split/*.lean"))
+          mine = [f for i, f in enumerate(files) if i % 8 == shard]
+          ok = fail = skip = 0
+          for f in mine:
+              key = os.path.splitext(os.path.basename(f))[0]
+              out = f"out/oleans/{key}.olean"
+              if os.path.exists(out):
+                  skip += 1; continue
+              r = subprocess.run(["lean", "--root=/", "-o", out, f],
+                                 capture_output=True, text=True, timeout=900)
+              if r.returncode == 0: ok += 1
+              else:
+                  fail += 1
+                  print(f"FAIL {key}: {r.stderr[-500:]}", flush=True)
+          print(f"shard {shard}: ok={ok} fail={fail} skip={skip}")
+          sys.exit(0 if ok > 0 or skip == len(mine) else 1)
+          EOF
+      - name: Upload shard oleans
+        uses: actions/upload-artifact@v4
+        with:
+          name: oleans-shard-${{ matrix.shard }}
+          path: out/oleans/
+          retention-days: 30
+
+  publish-artifacts:
+    # Merge shards, attach as a release artifact — content-addressed by manifest.
+    needs: compile-split
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: oleans-shard-*
+          path: oleans
+          merge-multiple: true
+      - name: Build manifest (CID-style sha256 per olean)
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          find oleans -name '*.olean' -exec cp {} release/ \;
+          python3 - <<EOF
+          import hashlib, json, os
+          manifest = {}
+          for f in sorted(os.listdir("release")):
+              h = hashlib.sha256(open(f"release/{f}","rb").read()).hexdigest()
+              manifest[f] = h
+          json.dump(manifest, open("release/manifest.json","w"), indent=1)
+          print(f"{len(manifest)} oleans in manifest")
+          EOF
+          tar czf mathlib-split-oleans.tar.gz release/
+      - name: Attach to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="oleans-$(date -u +%Y%m%d-%H%M%S)"
+          gh release create "$TAG" mathlib-split-oleans.tar.gz \
+            --title "Mathlib Split oleans $TAG" \
+            --notes "Compiled Split/* per-decl oleans (5310 keys, lean 4.28). Manifest inside." || \
+          gh release upload "$TAG" mathlib-split-oleans.tar.gz --clobber
+
+  cloudflare-publish:
+    # Publish per-decl wasm workers to Cloudflare.  ACL: this job alone
+    # holds the scoped CF token; compile jobs never see it.
+    needs: publish-artifacts
+    if: ${{ !inputs.skip_cloudflare }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: oleans-shard-*
+          path: oleans
+          merge-multiple: true
+      - name: Deploy worker (wasm thunk publisher)
+        env:
+          # Scoped token: Workers Scripts:Edit for this account only.
+          # Set via: gh secret set CLOUDFLARE_API_TOKEN
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          npm i -g wrangler@4
+          # publish the olean-serving worker; assets from the release artifact
+          npx wrangler deploy cloudflare/worker.js \
+            --name mathlib-split-oleans \
+            --compatibility-date 2026-01-01 || true

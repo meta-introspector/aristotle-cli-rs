@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.HashSet.instEmptyCollection : forall {α : Type.{u}} [inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.9 : BEq.{u} α] [inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.12 : Hashable.{succ u} α], EmptyCollection.{u} (Std.HashSet.{u} α inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.9 inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.12)
+def Std.HashSet.instEmptyCollection : forall {α : Type.{u}} [inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.9 : BEq.{u} α] [inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.12 : Hashable.{succ u} α], EmptyCollection.{u} (Std.HashSet.{u} α inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.9 inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.12) :=
+  fun {α : Type.{u}} [inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.9 : BEq.{u} α] [inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.12 : Hashable.{succ u} α] => EmptyCollection.mk.{u} (Std.HashSet.{u} α inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.9 inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.12) (Std.HashSet.emptyWithCapacity.{u} α inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.9 inst._@.Std.Data.HashSet.Basic.3260187968._hygCtx._hyg.12 (OfNat.ofNat.{0} Nat 8 (instOfNatNat 8)))

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: AddressType.recOn : forall {motive : AddressType -> Sort.{u}} (t : AddressType), (motive AddressType.monsterWalk) -> (motive AddressType.astNode) -> (motive AddressType.protocol) -> (motive AddressType.nestedCID) -> (motive AddressType.harmonicPath) -> (motive AddressType.shardId) -> (motive AddressType.eigenspace) -> (motive AddressType.hauptmodul) -> (motive t)
+def AddressType.recOn : forall {motive : AddressType -> Sort.{u}} (t : AddressType), (motive AddressType.monsterWalk) -> (motive AddressType.astNode) -> (motive AddressType.protocol) -> (motive AddressType.nestedCID) -> (motive AddressType.harmonicPath) -> (motive AddressType.shardId) -> (motive AddressType.eigenspace) -> (motive AddressType.hauptmodul) -> (motive t) :=
+  fun {motive : AddressType -> Sort.{u}} (t : AddressType) (monsterWalk : motive AddressType.monsterWalk) (astNode : motive AddressType.astNode) (protocol : motive AddressType.protocol) (nestedCID : motive AddressType.nestedCID) (harmonicPath : motive AddressType.harmonicPath) (shardId : motive AddressType.shardId) (eigenspace : motive AddressType.eigenspace) (hauptmodul : motive AddressType.hauptmodul) => AddressType.rec.{u} motive monsterWalk astNode protocol nestedCID harmonicPath shardId eigenspace hauptmodul t

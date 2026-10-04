@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.MessageLog.hasErrors : Lean.MessageLog -> Bool
+def Lean.MessageLog.hasErrors : Lean.MessageLog -> Bool :=
+  fun (log : Lean.MessageLog) => Bool.or (Lean.PersistentArray.any.{0} Lean.Message (Lean.MessageLog.reported log) (fun (x._@.Lean.Message.3012039604._hygCtx._hyg.10 : Lean.Message) => _private.Lean.Message.0.Lean.MessageLog.hasErrors.match_1.{1} (fun (x._@.Lean.Message.3012039604._hygCtx._hyg.28 : Lean.MessageSeverity) => Bool) (Lean.BaseMessage.severity.{0} Lean.MessageData x._@.Lean.Message.3012039604._hygCtx._hyg.10) (fun (_ : Unit) => Bool.true) (fun (x._@.Lean.Message.3012039604._hygCtx._hyg.35 : Lean.MessageSeverity) => Bool.false))) (Lean.PersistentArray.any.{0} Lean.Message (Lean.MessageLog.unreported log) (fun (x._@.Lean.Message.3012039604._hygCtx._hyg.44 : Lean.Message) => _private.Lean.Message.0.Lean.MessageLog.hasErrors.match_1.{1} (fun (x._@.Lean.Message.3012039604._hygCtx._hyg.62 : Lean.MessageSeverity) => Bool) (Lean.BaseMessage.severity.{0} Lean.MessageData x._@.Lean.Message.3012039604._hygCtx._hyg.44) (fun (_ : Unit) => Bool.true) (fun (x._@.Lean.Message.3012039604._hygCtx._hyg.69 : Lean.MessageSeverity) => Bool.false)))

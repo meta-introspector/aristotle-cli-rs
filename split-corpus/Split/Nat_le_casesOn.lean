@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Nat.le.casesOn : forall {n : Nat} {motive : forall (a._@._internal._hyg.0 : Nat), (Nat.le n a._@._internal._hyg.0) -> Prop} {a._@._internal._hyg.0 : Nat} (t : Nat.le n a._@._internal._hyg.0), (motive n (Nat.le.refl n)) -> (forall {m : Nat} (a._@._internal._hyg.0 : Nat.le n m), motive (Nat.succ m) (Nat.le.step n m a._@._internal._hyg.0)) -> (motive a._@._internal._hyg.0 t)
+def Nat.le.casesOn : forall {n : Nat} {motive : forall (a._@._internal._hyg.0 : Nat), (Nat.le n a._@._internal._hyg.0) -> Prop} {a._@._internal._hyg.0 : Nat} (t : Nat.le n a._@._internal._hyg.0), (motive n (Nat.le.refl n)) -> (forall {m : Nat} (a._@._internal._hyg.0 : Nat.le n m), motive (Nat.succ m) (Nat.le.step n m a._@._internal._hyg.0)) -> (motive a._@._internal._hyg.0 t) :=
+  fun {n : Nat} {motive : forall (a._@._internal._hyg.0 : Nat), (Nat.le n a._@._internal._hyg.0) -> Prop} {a._@._internal._hyg.0 : Nat} (t : Nat.le n a._@._internal._hyg.0) (refl : motive n (Nat.le.refl n)) (step : forall {m : Nat} (a._@._internal._hyg.0 : Nat.le n m), motive (Nat.succ m) (Nat.le.step n m a._@._internal._hyg.0)) => Nat.le.rec n motive refl (fun {m : Nat} (a._@._internal._hyg.0 : Nat.le n m) (a_ih._@._internal._hyg.0 : motive m a._@._internal._hyg.0) => step m a._@._internal._hyg.0) a._@._internal._hyg.0 t

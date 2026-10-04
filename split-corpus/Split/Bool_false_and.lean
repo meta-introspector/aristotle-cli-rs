@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Bool.false_and : forall (b : Bool), Eq.{1} Bool (Bool.and Bool.false b) Bool.false
+theorem Bool.false_and : forall (b : Bool), Eq.{1} Bool (Bool.and Bool.false b) Bool.false :=
+  fun (b : Bool) => Bool.casesOn.{0} (fun (t._@.Init.SimpLemmas.760575691._hygCtx._hyg.20 : Bool) => (Eq.{1} Bool b t._@.Init.SimpLemmas.760575691._hygCtx._hyg.20) -> (Eq.{1} Bool (Bool.and Bool.false b) Bool.false)) b (fun (h._@.Init.SimpLemmas.760575691._hygCtx._hyg.21 : Eq.{1} Bool b Bool.false) => Eq.ndrec.{0, 1} Bool Bool.false (fun (b : Bool) => Eq.{1} Bool (Bool.and Bool.false b) Bool.false) (Eq.refl.{1} Bool (Bool.and Bool.false Bool.false)) b (Eq.symm.{1} Bool b Bool.false h._@.Init.SimpLemmas.760575691._hygCtx._hyg.21)) (fun (h._@.Init.SimpLemmas.760575691._hygCtx._hyg.22 : Eq.{1} Bool b Bool.true) => Eq.ndrec.{0, 1} Bool Bool.true (fun (b : Bool) => Eq.{1} Bool (Bool.and Bool.false b) Bool.false) (Eq.refl.{1} Bool (Bool.and Bool.false Bool.true)) b (Eq.symm.{1} Bool b Bool.true h._@.Init.SimpLemmas.760575691._hygCtx._hyg.22)) (Eq.refl.{1} Bool b)

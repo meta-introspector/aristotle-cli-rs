@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Parser.getTokenTable : Lean.Environment -> Lean.Parser.TokenTable
+def Lean.Parser.getTokenTable : Lean.Environment -> Lean.Parser.TokenTable :=
+  fun (env : Lean.Environment) => Lean.Parser.ParserExtension.State.tokens (Lean.ScopedEnvExtension.getState Lean.Parser.ParserExtension.State Lean.Parser.ParserExtension.OLeanEntry Lean.Parser.ParserExtension.Entry Lean.Parser.ParserExtension.instInhabitedState Lean.Parser.parserExtension env (Lean.EnvExtension.asyncMode (Lean.PersistentEnvExtensionState (Lean.ScopedEnvExtension.Entry Lean.Parser.ParserExtension.OLeanEntry) (Lean.ScopedEnvExtension.StateStack Lean.Parser.ParserExtension.OLeanEntry Lean.Parser.ParserExtension.Entry Lean.Parser.ParserExtension.State)) (Lean.PersistentEnvExtension.toEnvExtension (Lean.ScopedEnvExtension.Entry Lean.Parser.ParserExtension.OLeanEntry) (Lean.ScopedEnvExtension.Entry Lean.Parser.ParserExtension.Entry) (Lean.ScopedEnvExtension.StateStack Lean.Parser.ParserExtension.OLeanEntry Lean.Parser.ParserExtension.Entry Lean.Parser.ParserExtension.State) (Lean.ScopedEnvExtension.ext Lean.Parser.ParserExtension.OLeanEntry Lean.Parser.ParserExtension.Entry Lean.Parser.ParserExtension.State Lean.Parser.parserExtension))))

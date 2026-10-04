@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Duality.ctorElimType : forall {motive : Duality -> Sort.{u}}, Nat -> Sort.{max 1 u}
+def Duality.ctorElimType : forall {motive : Duality -> Sort.{u}}, Nat -> Sort.{max 1 u} :=
+  fun {motive : Duality -> Sort.{u}} (ctorIdx : Nat) => cond.{succ (max 1 u)} Sort.{max 1 u} (Nat.ble ctorIdx 3) (cond.{succ (max 1 u)} Sort.{max 1 u} (Nat.ble ctorIdx 1) (cond.{succ (max 1 u)} Sort.{max 1 u} (Nat.ble ctorIdx 0) (PULift.{u, u} (motive Duality.Two)) (PULift.{u, u} (motive Duality.Bit))) (cond.{succ (max 1 u)} Sort.{max 1 u} (Nat.ble ctorIdx 2) (PULift.{u, u} (motive Duality.Binary)) (PULift.{u, u} (motive Duality.Symmetry)))) (cond.{succ (max 1 u)} Sort.{max 1 u} (Nat.ble ctorIdx 5) (cond.{succ (max 1 u)} Sort.{max 1 u} (Nat.ble ctorIdx 4) (PULift.{u, u} (motive Duality.BitIsBinary)) (PULift.{u, u} (motive Duality.Boolean))) (cond.{succ (max 1 u)} Sort.{max 1 u} (Nat.ble ctorIdx 6) (PULift.{u, u} (forall (a._@._internal._hyg.0 : Something) (a_1._@._internal._hyg.0 : Something), motive (Duality.Product a._@._internal._hyg.0 a_1._@._internal._hyg.0))) (PULift.{u, u} (forall (a._@._internal._hyg.0 : Something) (a_1._@._internal._hyg.0 : Something), motive (Duality.Pair a._@._internal._hyg.0 a_1._@._internal._hyg.0)))))

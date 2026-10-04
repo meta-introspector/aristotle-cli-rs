@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Duality.noConfusion : forall {P : Sort.{u}} {t : Duality} {t' : Duality}, (Eq.{1} Duality t t') -> (Duality.noConfusionType.{u} P t t')
+def Duality.noConfusion : forall {P : Sort.{u}} {t : Duality} {t' : Duality}, (Eq.{1} Duality t t') -> (Duality.noConfusionType.{u} P t t') :=
+  fun {P : Sort.{u}} {t : Duality} {t' : Duality} (eq : Eq.{1} Duality t t') => Eq.ndrec.{u, 1} Duality t (fun {t' : Duality} => Duality.noConfusionType.{u} P t t') (Duality.casesOn.{u} (fun {t : Duality} => Duality.noConfusionType.{u} P t t) t (fun (k : P) => k) (fun (k : P) => k) (fun (k : P) => k) (fun (k : P) => k) (fun (k : P) => k) (fun (k : P) => k) (fun (a._@._internal._hyg.0 : Something) (a_1._@._internal._hyg.0 : Something) (k : (Eq.{1} Something a._@._internal._hyg.0 a._@._internal._hyg.0) -> (Eq.{1} Something a_1._@._internal._hyg.0 a_1._@._internal._hyg.0) -> P) => k (Eq.refl.{1} Something a._@._internal._hyg.0) (Eq.refl.{1} Something a_1._@._internal._hyg.0)) (fun (a._@._internal._hyg.0 : Something) (a_1._@._internal._hyg.0 : Something) (k : (Eq.{1} Something a._@._internal._hyg.0 a._@._internal._hyg.0) -> (Eq.{1} Something a_1._@._internal._hyg.0 a_1._@._internal._hyg.0) -> P) => k (Eq.refl.{1} Something a._@._internal._hyg.0) (Eq.refl.{1} Something a_1._@._internal._hyg.0))) t' eq

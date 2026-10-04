@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Meta.isExprDefEq : Lean.Expr -> Lean.Expr -> (Lean.Meta.MetaM Bool)
+def Lean.Meta.isExprDefEq : Lean.Expr -> Lean.Expr -> (Lean.Meta.MetaM Bool) :=
+  fun (t : Lean.Expr) (s : Lean.Expr) => MonadWithReader.withReader.{0, 0} Lean.Meta.Context Lean.Meta.MetaM (instMonadWithReaderOfMonadWithReaderOf.{0, 0} Lean.Meta.Context Lean.Meta.MetaM (instMonadWithReaderOfReaderT.{0, 0} Lean.Meta.Context (StateRefT' IO.RealWorld Lean.Meta.State Lean.Core.CoreM))) Bool (fun (ctx : Lean.Meta.Context) => Lean.Meta.Context.mk (Lean.Meta.Context.keyedConfig ctx) (Lean.Meta.Context.trackZetaDelta ctx) (Lean.Meta.Context.zetaDeltaSet ctx) (Lean.Meta.Context.lctx ctx) (Lean.Meta.Context.localInstances ctx) (Option.some.{0} Lean.Meta.DefEqContext (Lean.Meta.DefEqContext.mk t s (Lean.Meta.Context.lctx ctx) (Lean.Meta.Context.localInstances ctx))) (Lean.Meta.Context.synthPendingDepth ctx) (Lean.Meta.Context.canUnfold? ctx) (Lean.Meta.Context.univApprox ctx) (Lean.Meta.Context.inTypeClassResolution ctx) (Lean.Meta.Context.cacheInferType ctx)) (Bind.bind.{0, 0} Lean.Meta.MetaM (Monad.toBind.{0, 0} Lean.Meta.MetaM Lean.Meta.instMonadMetaM) Unit Bool Lean.Meta.resetDefEqPermCaches (fun (x._@.Lean.Meta.Basic.787757620._hygCtx._hyg.34 : PUnit.{1}) => Lean.Meta.checkpointDefEq (Lean.Meta.isExprDefEqAux t s) Bool.true))

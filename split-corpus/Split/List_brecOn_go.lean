@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: List.brecOn.go : forall {α : Type.{u}} {motive : (List.{u} α) -> Sort.{u_1}} (t : List.{u} α), (forall (t : List.{u} α), (List.below.{u_1, u} α motive t) -> (motive t)) -> (PProd.{u_1, max (succ u) u_1} (motive t) (List.below.{u_1, u} α motive t))
+def List.brecOn.go : forall {α : Type.{u}} {motive : (List.{u} α) -> Sort.{u_1}} (t : List.{u} α), (forall (t : List.{u} α), (List.below.{u_1, u} α motive t) -> (motive t)) -> (PProd.{u_1, max (succ u) u_1} (motive t) (List.below.{u_1, u} α motive t)) :=
+  fun {α : Type.{u}} {motive : (List.{u} α) -> Sort.{u_1}} (t : List.{u} α) (F_1 : forall (t : List.{u} α), (List.below.{u_1, u} α motive t) -> (motive t)) => List.rec.{max (succ u) u_1, u} α (fun (t : List.{u} α) => PProd.{u_1, max (succ u) u_1} (motive t) (List.below.{u_1, u} α motive t)) (PProd.mk.{u_1, max (succ u) u_1} (motive (List.nil.{u} α)) PUnit.{max (succ u) u_1} (F_1 (List.nil.{u} α) PUnit.unit.{max (succ u) u_1}) PUnit.unit.{max (succ u) u_1}) (fun (head : α) (tail : List.{u} α) (tail_ih : PProd.{u_1, max (succ u) u_1} (motive tail) (List.below.{u_1, u} α motive tail)) => PProd.mk.{u_1, max (max 1 u_1) (succ u) u_1} (motive (List.cons.{u} α head tail)) (PProd.{u_1, max (succ u) u_1} (motive tail) (List.below.{u_1, u} α motive tail)) (F_1 (List.cons.{u} α head tail) tail_ih) tail_ih) t

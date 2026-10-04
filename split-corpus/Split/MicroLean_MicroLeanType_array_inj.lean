@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem MicroLean.MicroLeanType.array.inj : forall {elem : MicroLean.MicroLeanType} {elem_1 : MicroLean.MicroLeanType}, (Eq.{1} MicroLean.MicroLeanType (MicroLean.MicroLeanType.array elem) (MicroLean.MicroLeanType.array elem_1)) -> (Eq.{1} MicroLean.MicroLeanType elem elem_1)
+theorem MicroLean.MicroLeanType.array.inj : forall {elem : MicroLean.MicroLeanType} {elem_1 : MicroLean.MicroLeanType}, (Eq.{1} MicroLean.MicroLeanType (MicroLean.MicroLeanType.array elem) (MicroLean.MicroLeanType.array elem_1)) -> (Eq.{1} MicroLean.MicroLeanType elem elem_1) :=
+  fun {elem : MicroLean.MicroLeanType} {elem_1 : MicroLean.MicroLeanType} (x._@.RequestProject.MicroLean.3340560199._hygCtx._hyg.23 : Eq.{1} MicroLean.MicroLeanType (MicroLean.MicroLeanType.array elem) (MicroLean.MicroLeanType.array elem_1)) => MicroLean.MicroLeanType.array.noConfusion.{0} (Eq.{1} MicroLean.MicroLeanType elem elem_1) elem elem_1 x._@.RequestProject.MicroLean.3340560199._hygCtx._hyg.23 (fun (elem_eq._@.RequestProject.MicroLean.3340560199._hygCtx._hyg.24 : Eq.{1} MicroLean.MicroLeanType elem elem_1) => elem_eq._@.RequestProject.MicroLean.3340560199._hygCtx._hyg.24)

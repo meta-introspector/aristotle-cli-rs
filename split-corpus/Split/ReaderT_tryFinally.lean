@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: ReaderT.tryFinally : forall {m : Type.{u_1} -> Type.{u_2}} {ρ : Type.{u_1}} [inst._@.Init.Control.Reader.2478996145._hygCtx._hyg.13 : MonadFinally.{u_1, u_2} m], MonadFinally.{u_1, max u_2 u_1} (ReaderT.{u_1, u_2} ρ m)
+def ReaderT.tryFinally : forall {m : Type.{u_1} -> Type.{u_2}} {ρ : Type.{u_1}} [inst._@.Init.Control.Reader.2478996145._hygCtx._hyg.13 : MonadFinally.{u_1, u_2} m], MonadFinally.{u_1, max u_2 u_1} (ReaderT.{u_1, u_2} ρ m) :=
+  fun {m : Type.{u_1} -> Type.{u_2}} {ρ : Type.{u_1}} [inst._@.Init.Control.Reader.2478996145._hygCtx._hyg.13 : MonadFinally.{u_1, u_2} m] => MonadFinally.mk.{u_1, max u_2 u_1} (ReaderT.{u_1, u_2} ρ m) (fun {α._@.Init.Control.Reader.2478996145._hygCtx._hyg.29 : Type.{u_1}} {β._@.Init.Control.Reader.2478996145._hygCtx._hyg.30 : Type.{u_1}} (x : ReaderT.{u_1, u_2} ρ m α._@.Init.Control.Reader.2478996145._hygCtx._hyg.29) (h : (Option.{u_1} α._@.Init.Control.Reader.2478996145._hygCtx._hyg.29) -> (ReaderT.{u_1, u_2} ρ m β._@.Init.Control.Reader.2478996145._hygCtx._hyg.30)) (ctx : ρ) => MonadFinally.tryFinally'.{u_1, u_2} m inst._@.Init.Control.Reader.2478996145._hygCtx._hyg.13 α._@.Init.Control.Reader.2478996145._hygCtx._hyg.29 β._@.Init.Control.Reader.2478996145._hygCtx._hyg.30 (x ctx) (fun (a? : Option.{u_1} α._@.Init.Control.Reader.2478996145._hygCtx._hyg.29) => h a? ctx))

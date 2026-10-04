@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Core.withCurrHeartbeats : forall {m : Type -> Type.{u_1}} {α : Type} [inst._@.Lean.CoreM.278868958._hygCtx._hyg.14 : Monad.{0, u_1} m] [inst._@.Lean.CoreM.278868958._hygCtx._hyg.17 : MonadControlT.{0, 0, u_1} Lean.Core.CoreM m], (m α) -> (m α)
+def Lean.Core.withCurrHeartbeats : forall {m : Type -> Type.{u_1}} {α : Type} [inst._@.Lean.CoreM.278868958._hygCtx._hyg.14 : Monad.{0, u_1} m] [inst._@.Lean.CoreM.278868958._hygCtx._hyg.17 : MonadControlT.{0, 0, u_1} Lean.Core.CoreM m], (m α) -> (m α) :=
+  fun {m : Type -> Type.{u_1}} {α : Type} [inst._@.Lean.CoreM.278868958._hygCtx._hyg.14 : Monad.{0, u_1} m] [inst._@.Lean.CoreM.278868958._hygCtx._hyg.17 : MonadControlT.{0, 0, u_1} Lean.Core.CoreM m] (x : m α) => controlAt.{0, 0, u_1} Lean.Core.CoreM m inst._@.Lean.CoreM.278868958._hygCtx._hyg.17 (Monad.toBind.{0, u_1} m inst._@.Lean.CoreM.278868958._hygCtx._hyg.14) α (fun (runInBase : forall {β : Type}, (m β) -> (Lean.Core.CoreM (MonadControlT.stM.{0, 0, u_1} Lean.Core.CoreM m inst._@.Lean.CoreM.278868958._hygCtx._hyg.17 β))) => _private.Lean.CoreM.0.Lean.Core.withCurrHeartbeatsImp (MonadControlT.stM.{0, 0, u_1} Lean.Core.CoreM m inst._@.Lean.CoreM.278868958._hygCtx._hyg.17 α) (runInBase α x))

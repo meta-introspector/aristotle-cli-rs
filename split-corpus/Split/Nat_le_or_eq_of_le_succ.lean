@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.le_or_eq_of_le_succ : forall {m : Nat} {n : Nat}, (LE.le.{0} Nat instLENat m (Nat.succ n)) -> (Or (LE.le.{0} Nat instLENat m n) (Eq.{1} Nat m (Nat.succ n)))
+theorem Nat.le_or_eq_of_le_succ : forall {m : Nat} {n : Nat}, (LE.le.{0} Nat instLENat m (Nat.succ n)) -> (Or (LE.le.{0} Nat instLENat m n) (Eq.{1} Nat m (Nat.succ n))) :=
+  fun {m : Nat} {n : Nat} (h : LE.le.{0} Nat instLENat m (Nat.succ n)) => Decidable.byCases.{0} (Eq.{1} Nat m (Nat.succ n)) (Or (LE.le.{0} Nat instLENat m n) (Eq.{1} Nat m (Nat.succ n))) (instDecidableEqNat m (Nat.succ n)) (fun (h' : Eq.{1} Nat m (Nat.succ n)) => Or.inr (LE.le.{0} Nat instLENat m n) (Eq.{1} Nat m (Nat.succ n)) h') (fun (h' : Ne.{1} Nat m (Nat.succ n)) => have this : LT.lt.{0} Nat instLTNat m (Nat.succ n) := Nat.lt_of_le_of_ne m (Nat.succ n) h h'; have this : LE.le.{0} Nat instLENat (Nat.succ m) (Nat.succ n) := Nat.succ_le_of_lt m (Nat.succ n) this; Or.inl (LE.le.{0} Nat instLENat m n) (Eq.{1} Nat m (Nat.succ n)) (Nat.le_of_succ_le_succ m n this))

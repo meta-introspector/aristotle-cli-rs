@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.SMap.map₁ : forall {α : Type.{u}} {β : Type.{v}} [inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 : BEq.{u} α] [inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7 : Hashable.{succ u} α], (Lean.SMap.{u, v} α β inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7) -> (Std.HashMap.{u, v} α β inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7)
+def Lean.SMap.map₁ : forall {α : Type.{u}} {β : Type.{v}} [inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 : BEq.{u} α] [inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7 : Hashable.{succ u} α], (Lean.SMap.{u, v} α β inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7) -> (Std.HashMap.{u, v} α β inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7) :=
+  fun (α : Type.{u}) (β : Type.{v}) [inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 : BEq.{u} α] [inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7 : Hashable.{succ u} α] (self : Lean.SMap.{u, v} α β inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7) => self.2

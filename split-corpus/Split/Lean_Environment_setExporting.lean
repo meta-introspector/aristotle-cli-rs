@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Environment.setExporting : Lean.Environment -> Bool -> Lean.Environment
+def Lean.Environment.setExporting : Lean.Environment -> Bool -> Lean.Environment :=
+  fun (env : Lean.Environment) (isExporting : Bool) => ite.{1} Lean.Environment (Eq.{1} Bool (Bool.or (Bool.not (Lean.EnvironmentHeader.isModule (Lean.Environment.header env))) (BEq.beq.{0} Bool (instBEqOfDecidableEq.{0} Bool instDecidableEqBool) (Lean.Environment.isExporting env) isExporting)) Bool.true) (instDecidableEqBool (Bool.or (Bool.not (Lean.EnvironmentHeader.isModule (Lean.Environment.header env))) (BEq.beq.{0} Bool (instBEqOfDecidableEq.{0} Bool instDecidableEqBool) (Lean.Environment.isExporting env) isExporting)) Bool.true) env (_private.Lean.Environment.0.Lean.Environment.mk (_private.Lean.Environment.0.Lean.Environment.base env) (_private.Lean.Environment.0.Lean.Environment.serverBaseExts env) (Lean.Environment.checked env) (_private.Lean.Environment.0.Lean.Environment.asyncConstsMap env) (_private.Lean.Environment.0.Lean.Environment.asyncCtx? env) (_private.Lean.Environment.0.Lean.Environment.importRealizationCtx? env) (_private.Lean.Environment.0.Lean.Environment.localRealizationCtxMap env) (_private.Lean.Environment.0.Lean.Environment.allRealizations env) isExporting)

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.getRevAliases : Lean.Environment -> Lean.Name -> (List.{0} Lean.Name)
+def Lean.getRevAliases : Lean.Environment -> Lean.Name -> (List.{0} Lean.Name) :=
+  fun (env : Lean.Environment) (e : Lean.Name) => Lean.SMap.fold.{0, 0, 0} Lean.Name (List.{0} Lean.Name) Lean.Name.instBEq Lean.instHashableName (List.{0} Lean.Name) (fun (as : List.{0} Lean.Name) (a : Lean.Name) (es : List.{0} Lean.Name) => ite.{1} (List.{0} Lean.Name) (Eq.{1} Bool (List.contains.{0} Lean.Name Lean.Name.instBEq es e) Bool.true) (instDecidableEqBool (List.contains.{0} Lean.Name Lean.Name.instBEq es e) Bool.true) (List.cons.{0} Lean.Name a as) as) (List.nil.{0} Lean.Name) (Lean.SimplePersistentEnvExtension.getState Lean.AliasEntry Lean.AliasState (Lean.SMap.instInhabited.{0, 0} Lean.Name (List.{0} Lean.Name) Lean.Name.instBEq Lean.instHashableName) Lean.aliasExtension env (Lean.EnvExtension.asyncMode (Lean.PersistentEnvExtensionState Lean.AliasEntry (Prod.{0, 0} (List.{0} Lean.AliasEntry) Lean.AliasState)) (Lean.PersistentEnvExtension.toEnvExtension Lean.AliasEntry Lean.AliasEntry (Prod.{0, 0} (List.{0} Lean.AliasEntry) Lean.AliasState) Lean.aliasExtension)) Lean.Name.anonymous)

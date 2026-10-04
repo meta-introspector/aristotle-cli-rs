@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Meta.withNewMCtxDepth : forall {n : Type -> Type.{u_1}} [inst._@.Lean.Meta.Basic.123587257._hygCtx._hyg.6 : MonadControlT.{0, 0, u_1} Lean.Meta.MetaM n] [inst._@.Lean.Meta.Basic.123587257._hygCtx._hyg.10 : Monad.{0, u_1} n] {α : Type}, (n α) -> (optParam.{1} Bool Bool.false) -> (n α)
+def Lean.Meta.withNewMCtxDepth : forall {n : Type -> Type.{u_1}} [inst._@.Lean.Meta.Basic.123587257._hygCtx._hyg.6 : MonadControlT.{0, 0, u_1} Lean.Meta.MetaM n] [inst._@.Lean.Meta.Basic.123587257._hygCtx._hyg.10 : Monad.{0, u_1} n] {α : Type}, (n α) -> (optParam.{1} Bool Bool.false) -> (n α) :=
+  fun {n : Type -> Type.{u_1}} [inst._@.Lean.Meta.Basic.123587257._hygCtx._hyg.6 : MonadControlT.{0, 0, u_1} Lean.Meta.MetaM n] [inst._@.Lean.Meta.Basic.123587257._hygCtx._hyg.10 : Monad.{0, u_1} n] {α : Type} (k : n α) (allowLevelAssignments : Bool) => Lean.Meta.mapMetaM.{u_1} n inst._@.Lean.Meta.Basic.123587257._hygCtx._hyg.6 inst._@.Lean.Meta.Basic.123587257._hygCtx._hyg.10 (fun {α._@.Lean.Meta.Basic.123587257._hygCtx._hyg.26 : Type} => _private.Lean.Meta.Basic.0.Lean.Meta.withNewMCtxDepthImp α._@.Lean.Meta.Basic.123587257._hygCtx._hyg.26 allowLevelAssignments) α k

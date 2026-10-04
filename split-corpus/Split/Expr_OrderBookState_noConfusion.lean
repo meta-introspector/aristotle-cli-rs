@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Expr.OrderBookState.noConfusion : forall {P : Sort.{u}} {a._@._internal._hyg.0 : List.{0} (Prod.{0, 0} String Nat)} {a'._@._internal._hyg.0 : List.{0} (Prod.{0, 0} String Nat)}, (Eq.{1} Expr (Expr.OrderBookState a._@._internal._hyg.0) (Expr.OrderBookState a'._@._internal._hyg.0)) -> ((Eq.{1} (List.{0} (Prod.{0, 0} String Nat)) a._@._internal._hyg.0 a'._@._internal._hyg.0) -> P) -> P
+def Expr.OrderBookState.noConfusion : forall {P : Sort.{u}} {a._@._internal._hyg.0 : List.{0} (Prod.{0, 0} String Nat)} {a'._@._internal._hyg.0 : List.{0} (Prod.{0, 0} String Nat)}, (Eq.{1} Expr (Expr.OrderBookState a._@._internal._hyg.0) (Expr.OrderBookState a'._@._internal._hyg.0)) -> ((Eq.{1} (List.{0} (Prod.{0, 0} String Nat)) a._@._internal._hyg.0 a'._@._internal._hyg.0) -> P) -> P :=
+  fun {P : Sort.{u}} {a._@._internal._hyg.0 : List.{0} (Prod.{0, 0} String Nat)} {a'._@._internal._hyg.0 : List.{0} (Prod.{0, 0} String Nat)} (eq : Eq.{1} Expr (Expr.OrderBookState a._@._internal._hyg.0) (Expr.OrderBookState a'._@._internal._hyg.0)) (k : (Eq.{1} (List.{0} (Prod.{0, 0} String Nat)) a._@._internal._hyg.0 a'._@._internal._hyg.0) -> P) => id.{u} P (Expr.noConfusion.{u} P (Expr.OrderBookState a._@._internal._hyg.0) (Expr.OrderBookState a'._@._internal._hyg.0) eq k)

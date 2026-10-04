@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.instBEqLiteral.beq : Lean.Literal -> Lean.Literal -> Bool
+def Lean.instBEqLiteral.beq : Lean.Literal -> Lean.Literal -> Bool :=
+  fun (x._@.Lean.Expr.566217582._hygCtx._hyg.30 : Lean.Literal) (x._@.Lean.Expr.566217582._hygCtx._hyg.31 : Lean.Literal) => _private.Lean.Expr.0.Lean.instBEqLiteral.beq.match_1.{1} (fun (x._@.Lean.Expr.566217582._hygCtx.30.Lean.Expr.2408276647._hygCtx._hyg.9 : Lean.Literal) (x._@.Lean.Expr.566217582._hygCtx.31.Lean.Expr.2408276647._hygCtx._hyg.11 : Lean.Literal) => Bool) x._@.Lean.Expr.566217582._hygCtx._hyg.30 x._@.Lean.Expr.566217582._hygCtx._hyg.31 (fun (a._@.Lean.Expr.566217582._hygCtx._hyg.32 : Nat) (b._@.Lean.Expr.566217582._hygCtx._hyg.33 : Nat) => BEq.beq.{0} Nat (instBEqOfDecidableEq.{0} Nat instDecidableEqNat) a._@.Lean.Expr.566217582._hygCtx._hyg.32 b._@.Lean.Expr.566217582._hygCtx._hyg.33) (fun (a._@.Lean.Expr.566217582._hygCtx._hyg.34 : String) (b._@.Lean.Expr.566217582._hygCtx._hyg.35 : String) => BEq.beq.{0} String (instBEqOfDecidableEq.{0} String instDecidableEqString) a._@.Lean.Expr.566217582._hygCtx._hyg.34 b._@.Lean.Expr.566217582._hygCtx._hyg.35) (fun (x._@.Lean.Expr.2408276647._hygCtx._hyg.49 : Lean.Literal) (x._@.Lean.Expr.2408276647._hygCtx._hyg.48 : Lean.Literal) => Bool.false)

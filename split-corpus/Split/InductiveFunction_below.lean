@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: InductiveFunction.below : forall {motive : InductiveFunction -> Sort.{u}}, InductiveFunction -> Sort.{max 1 u}
+def InductiveFunction.below : forall {motive : InductiveFunction -> Sort.{u}}, InductiveFunction -> Sort.{max 1 u} :=
+  fun {motive : InductiveFunction -> Sort.{u}} (t : InductiveFunction) => InductiveFunction.rec.{succ (max 1 u)} (fun (t : InductiveFunction) => Sort.{max 1 u}) (fun (a._@._internal._hyg.0 : Expr -> InductiveFunction) (a_ih._@._internal._hyg.0 : Expr -> Sort.{max 1 u}) => forall (a_1._@._internal._hyg.0 : Expr), PProd.{u, max 1 u} (motive (a._@._internal._hyg.0 a_1._@._internal._hyg.0)) (a_ih._@._internal._hyg.0 a_1._@._internal._hyg.0)) (fun (a._@._internal._hyg.0 : Expr -> InductiveFunction) (a_ih._@._internal._hyg.0 : Expr -> Sort.{max 1 u}) => forall (a_1._@._internal._hyg.0 : Expr), PProd.{u, max 1 u} (motive (a._@._internal._hyg.0 a_1._@._internal._hyg.0)) (a_ih._@._internal._hyg.0 a_1._@._internal._hyg.0)) (fun (a._@._internal._hyg.0 : Expr -> InductiveFunction) (a_ih._@._internal._hyg.0 : Expr -> Sort.{max 1 u}) => forall (a_1._@._internal._hyg.0 : Expr), PProd.{u, max 1 u} (motive (a._@._internal._hyg.0 a_1._@._internal._hyg.0)) (a_ih._@._internal._hyg.0 a_1._@._internal._hyg.0)) t

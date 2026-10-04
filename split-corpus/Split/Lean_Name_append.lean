@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Name.append : Lean.Name -> Lean.Name -> Lean.Name
+def Lean.Name.append : Lean.Name -> Lean.Name -> Lean.Name :=
+  fun (a : Lean.Name) (b : Lean.Name) => Lean.Name.append.match_1.{1} (fun (x._@.Init.Prelude.4042049377._hygCtx._hyg.9 : Bool) (x._@.Init.Prelude.4042049377._hygCtx._hyg.11 : Bool) => Lean.Name) (Lean.Name.hasMacroScopes a) (Lean.Name.hasMacroScopes b) (fun (_ : Unit) => panic.{1} Lean.Name Lean.instInhabitedName "Error: invalid `Name.append`, both arguments have macro scopes, consider using `eraseMacroScopes`") (fun (_ : Unit) => have view : Lean.MacroScopesView := Lean.extractMacroScopes a; Lean.MacroScopesView.review (Lean.MacroScopesView.mk (Lean.Name.appendCore (Lean.MacroScopesView.name view) b) (Lean.MacroScopesView.imported view) (Lean.MacroScopesView.ctx view) (Lean.MacroScopesView.scopes view))) (fun (_ : Unit) => have view : Lean.MacroScopesView := Lean.extractMacroScopes b; Lean.MacroScopesView.review (Lean.MacroScopesView.mk (Lean.Name.appendCore a (Lean.MacroScopesView.name view)) (Lean.MacroScopesView.imported view) (Lean.MacroScopesView.ctx view) (Lean.MacroScopesView.scopes view))) (fun (_ : Unit) => Lean.Name.appendCore a b)

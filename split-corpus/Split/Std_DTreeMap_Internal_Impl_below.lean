@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.DTreeMap.Internal.Impl.below : forall {α : Type.{u}} {β : α -> Type.{v}} {motive : (Std.DTreeMap.Internal.Impl.{u, v} α β) -> Sort.{u_1}}, (Std.DTreeMap.Internal.Impl.{u, v} α β) -> Sort.{max (max (succ u) (succ v)) u_1}
+def Std.DTreeMap.Internal.Impl.below : forall {α : Type.{u}} {β : α -> Type.{v}} {motive : (Std.DTreeMap.Internal.Impl.{u, v} α β) -> Sort.{u_1}}, (Std.DTreeMap.Internal.Impl.{u, v} α β) -> Sort.{max (max (succ u) (succ v)) u_1} :=
+  fun {α : Type.{u}} {β : α -> Type.{v}} {motive : (Std.DTreeMap.Internal.Impl.{u, v} α β) -> Sort.{u_1}} (t : Std.DTreeMap.Internal.Impl.{u, v} α β) => Std.DTreeMap.Internal.Impl.rec.{succ (max (max (succ u) (succ v)) u_1), u, v} α β (fun (t : Std.DTreeMap.Internal.Impl.{u, v} α β) => Sort.{max (max (succ u) (succ v)) u_1}) (fun (size : Nat) (k : α) (v : β k) (l : Std.DTreeMap.Internal.Impl.{u, v} α β) (r : Std.DTreeMap.Internal.Impl.{u, v} α β) (l_ih : Sort.{max (max (succ u) (succ v)) u_1}) (r_ih : Sort.{max (max (succ u) (succ v)) u_1}) => PProd.{max (max 1 u_1) (max (succ u) (succ v)) u_1, max (max 1 u_1) (max (succ u) (succ v)) u_1} (PProd.{u_1, max (max (succ u) (succ v)) u_1} (motive l) l_ih) (PProd.{u_1, max (max (succ u) (succ v)) u_1} (motive r) r_ih)) PUnit.{max (max (succ u) (succ v)) u_1} t

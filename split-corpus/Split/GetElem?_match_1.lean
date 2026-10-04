@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: GetElem?.match_1 : forall (elem : outParam.{succ (succ u_1)} Type.{u_1}) (motive : (Option.{u_1} elem) -> Sort.{u_2}) (x._@.Init.GetElem.365082188._hygCtx._hyg.43 : Option.{u_1} elem), (forall (e : elem), motive (Option.some.{u_1} elem e)) -> (Unit -> (motive (Option.none.{u_1} elem))) -> (motive x._@.Init.GetElem.365082188._hygCtx._hyg.43)
+def GetElem?.match_1 : forall (elem : outParam.{succ (succ u_1)} Type.{u_1}) (motive : (Option.{u_1} elem) -> Sort.{u_2}) (x._@.Init.GetElem.365082188._hygCtx._hyg.43 : Option.{u_1} elem), (forall (e : elem), motive (Option.some.{u_1} elem e)) -> (Unit -> (motive (Option.none.{u_1} elem))) -> (motive x._@.Init.GetElem.365082188._hygCtx._hyg.43) :=
+  fun (elem : outParam.{succ (succ u_1)} Type.{u_1}) (motive : (Option.{u_1} elem) -> Sort.{u_2}) (x._@.Init.GetElem.365082188._hygCtx._hyg.43 : Option.{u_1} elem) (h_1 : forall (e : elem), motive (Option.some.{u_1} elem e)) (h_2 : Unit -> (motive (Option.none.{u_1} elem))) => Option.casesOn.{u_2, u_1} elem (fun (x : Option.{u_1} elem) => motive x) x._@.Init.GetElem.365082188._hygCtx._hyg.43 (h_2 Unit.unit) (fun (val._@.Init.GetElem.365082188._hygCtx._hyg.56 : elem) => h_1 val._@.Init.GetElem.365082188._hygCtx._hyg.56)
