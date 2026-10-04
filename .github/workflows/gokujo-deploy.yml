@@ -61,25 +61,32 @@ jobs:
 
   compile-split:
     needs: mathlib-oleans
-    # Gokujo single-shard dispatch: only the requested shard does work,
-    # the others exit immediately without installing lean or reading the cache.
     strategy:
       fail-fast: false
       matrix:
         shard: [0, 1, 2, 3, 4, 5, 6, 7]
     runs-on: ubuntu-latest
-    if: ${{ github.event_name != 'workflow_dispatch' || inputs.shard == '' || format('{0}', matrix.shard) == inputs.shard }}
     steps:
+      # Gokujo single-shard dispatch: skip non-selected shards before any
+      # setup cost (cache restore, lean install). matrix IS available in
+      # step-level expressions; it is NOT valid in a job-level `if`.
+      - name: Shard gate
+        id: gate
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.shard != '' && matrix.shard != inputs.shard }}
+        run: echo "skipped=true" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v4
       - uses: actions/cache@v4
+        if: steps.gate.outputs.skipped != 'true'
         with:
           path: ~/.elan-mathlib-oleans
           key: ${{ env.MATHLIB_CACHE_KEY }}
       - name: Install lean 4.28
+        if: steps.gate.outputs.skipped != 'true'
         run: |
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain lean4:v4.28.0
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
       - name: Compile shard ${{ matrix.shard }}
+        if: steps.gate.outputs.skipped != 'true'
         env:
           LEAN_PATH: /home/runner/.elan-mathlib-oleans/build:/home/runner/.elan-mathlib-oleans/batteries:/home/runner/.elan-mathlib-oleans/Qq:/home/runner/.elan-mathlib-oleans/aesop:/home/runner/.elan-mathlib-oleans/plausible:/home/runner/.elan-mathlib-oleans/proofwidgets:/home/runner/.elan-mathlib-oleans/importGraph:/home/runner/.elan-mathlib-oleans/Cli
         run: |
@@ -107,6 +114,7 @@ jobs:
           sys.exit(0 if ok > 0 or skip == len(mine) else 1)
           EOF
       - name: Upload shard oleans
+        if: steps.gate.outputs.skipped != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: oleans-shard-${{ matrix.shard }}
