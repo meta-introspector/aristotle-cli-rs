@@ -48,6 +48,8 @@ jobs:
           set -euo pipefail
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain lean4:v4.28.0
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          # GITHUB_PATH only affects LATER steps; lake must be on PATH here
+          export PATH="$HOME/.elan/bin:$PATH"
           git clone --depth 1 --branch v4.28.0 https://github.com/leanprover-community/mathlib mathlib 2>/dev/null || \
             git clone --depth 1 https://github.com/leanprover-community/mathlib mathlib
           cd mathlib

@@ -19,7 +19,9 @@ export default {
     if (!key || key.includes("..")) {
       return new Response("mathlib-split-oleans: GET /manifest.json or /oleans/<Decl>.olean", { status: 200 });
     }
-    const value = await env.OLEANS.get(key);
+    // oleans are binary — must request "arrayBuffer", not the default
+    // "text" (UTF-8 decode would corrupt the bytes)
+    const value = await env.OLEANS.get(key, { type: "arrayBuffer" });
     if (value === null) {
       return new Response(`olean not found: ${key}`, { status: 404 });
     }
