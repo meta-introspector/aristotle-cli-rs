@@ -6,9 +6,16 @@
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    // GET /manifest.json — the sha256 manifest from publish-artifacts
+    // GET /oleans/manifest.json — the sha256 manifest from publish-artifacts
     // GET /oleans/<Decl>.olean — per-decl olean bytes
     const key = url.pathname.replace(/^\/oleans\//, "");
+    if (url.pathname === "/manifest.json") {
+      const manifest = await env.OLEANS.get("manifest.json");
+      if (manifest === null) return new Response("manifest not published yet", { status: 404 });
+      return new Response(manifest, {
+        headers: { "content-type": "application/json", "cache-control": "no-cache" },
+      });
+    }
     if (!key || key.includes("..")) {
       return new Response("mathlib-split-oleans: GET /manifest.json or /oleans/<Decl>.olean", { status: 200 });
     }

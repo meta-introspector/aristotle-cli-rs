@@ -12,9 +12,10 @@ secrets are scoped per job, never workflow-global.
 
 ## GITHUB_TOKEN permissions
 
-Workflow-level: `contents: write` (release upload only).
-Compile jobs use the default `contents: read` — they cannot push or
-create releases even if a script is compromised.
+Workflow-level: `contents: read` (minimum for every job).
+Only `publish-artifacts` escalates with a job-level `contents: write`
+for the release upload. Compile jobs cannot push or create releases
+even if a script is compromised.
 
 ## Environment protection (optional, recommended)
 

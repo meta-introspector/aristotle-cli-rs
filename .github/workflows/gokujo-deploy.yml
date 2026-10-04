@@ -22,7 +22,7 @@ on:
         default: false
 
 permissions:
-  contents: write   # release artifacts
+  contents: read    # default for all jobs; publish-artifacts escalates below
 
 env:
   LEAN_VERSION: v4.28.0
@@ -61,11 +61,14 @@ jobs:
 
   compile-split:
     needs: mathlib-oleans
+    # Gokujo single-shard dispatch: only the requested shard does work,
+    # the others exit immediately without installing lean or reading the cache.
     strategy:
       fail-fast: false
       matrix:
         shard: [0, 1, 2, 3, 4, 5, 6, 7]
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.shard == '' || format('{0}', matrix.shard) == inputs.shard }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/cache@v4
@@ -115,6 +118,8 @@ jobs:
     needs: compile-split
     if: always()
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # release upload only — this job and nothing else
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
@@ -169,7 +174,9 @@ jobs:
         run: |
           set -euo pipefail
           npm i -g wrangler@4
+          if grep -q REPLACE_WITH_KV_NAMESPACE_ID cloudflare/wrangler.toml; then
+            echo "::warning::KV namespace not created yet — run 'npx wrangler kv namespace create OLEANS' and fill cloudflare/wrangler.toml. Skipping deploy."
+            exit 0
+          fi
           # publish the olean-serving worker; assets from the release artifact
-          npx wrangler deploy cloudflare/worker.js \
-            --name mathlib-split-oleans \
-            --compatibility-date 2026-01-01 || true
+          npx wrangler deploy --config cloudflare/wrangler.toml
