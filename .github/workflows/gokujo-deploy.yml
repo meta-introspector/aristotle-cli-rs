@@ -113,20 +113,36 @@ jobs:
                   fail += 1
                   print(f"FAIL {key}: {r.stderr[-500:]}", flush=True)
           print(f"shard {shard}: ok={ok} fail={fail} skip={skip}")
-          sys.exit(0 if ok > 0 or skip == len(mine) else 1)
+          # Write per-file results so publish-artifacts can verify coverage.
+          with open("out/results.json", "w") as rj:
+              import json
+              json.dump({"shard": shard, "ok": ok, "fail": fail, "skip": skip,
+                         "total": len(mine)}, rj)
+          # Fail the shard on ANY compile failure — a systematic break
+          # (e.g. a Mathlib rename invalidating all files) must be loud,
+          # not green with one lucky success. Failures are still uploaded
+          # via the artifact (if: always() is not set, but upload runs on
+          # success only; the FAIL log lines carry the diagnosis).
+          sys.exit(1 if fail > 0 else 0)
           EOF
       - name: Upload shard oleans
-        if: steps.gate.outputs.skipped != 'true'
+        # upload even on compile failure so FAIL diagnostics survive
+        if: ${{ !cancelled() && steps.gate.outputs.skipped != 'true' }}
         uses: actions/upload-artifact@v4
         with:
           name: oleans-shard-${{ matrix.shard }}
-          path: out/oleans/
+          path: |
+            out/oleans/
+            out/results.json
           retention-days: 30
 
   publish-artifacts:
     # Merge shards, attach as a release artifact — content-addressed by manifest.
     needs: compile-split
-    if: always()
+    # Only publish when ALL shards succeeded — a single-shard dispatch
+    # would otherwise publish a partial release as if it were complete.
+    # (Partial runs can still be inspected via the per-shard artifacts.)
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.shard == '' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write   # release upload only — this job and nothing else
@@ -142,6 +158,17 @@ jobs:
           set -euo pipefail
           mkdir -p release
           find oleans -name '*.olean' -exec cp {} release/ \;
+          # verify every shard reported zero failures before publishing
+          python3 - <<EOF
+          import glob, json, sys
+          results = [json.load(open(f)) for f in glob.glob("oleans/**/results.json", recursive=True)]
+          if not results:
+              sys.exit("no shard results found — refusing to publish")
+          total_fail = sum(r["fail"] for r in results)
+          if total_fail:
+              sys.exit(f"refusing to publish: {total_fail} compile failures across shards")
+          print(f"verified {len(results)} shards, 0 failures")
+          EOF
           python3 - <<EOF
           import hashlib, json, os
           manifest = {}
