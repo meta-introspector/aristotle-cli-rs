@@ -10,6 +10,17 @@ use crate::load_config;
 
 /// Try to build a Lean project with lake, returning (success, stdout)
 fn lake_build(project_dir: &PathBuf) -> (bool, String) {
+    // Guard: lake build on a mathlib-split pool is a latent 8031-module
+    // rebuild (hours of disk IO).  Require explicit opt-in.
+    if let Some(dir_name) = project_dir.file_name().and_then(|n| n.to_str()) {
+        if dir_name == "mathlib-split" && std::env::var_os("ARIST_ALLOW_MATHLIB_BUILD").is_none() {
+            return (
+                false,
+                "SKIPPED: mathlib-split lake build is guarded; set ARIST_ALLOW_MATHLIB_BUILD=1 to run it"
+                    .to_string(),
+            );
+        }
+    }
     if let Err(error) = crate::shared_lean::configure_project(project_dir) {
         return (false, format!("shared Lean setup failed: {}", error));
     }
