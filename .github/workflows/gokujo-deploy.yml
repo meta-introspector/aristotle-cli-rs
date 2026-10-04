@@ -10,7 +10,10 @@ name: gokujo
 on:
   push:
     branches: [main]
-    paths: ['split-corpus/**', '.github/workflows/gokujo-deploy.yml']
+    paths:
+      - 'split-corpus/**'
+      - 'cloudflare/**'
+      - '.github/workflows/gokujo-deploy.yml'
   workflow_dispatch:
     inputs:
       shard:
