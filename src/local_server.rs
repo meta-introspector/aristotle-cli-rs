@@ -25,6 +25,8 @@ use anyhow::Result;
 use serde::Serialize;
 use tracing::{debug, info, warn};
 
+use crate::proof_policy;
+
 /// Stored project state
 #[derive(Debug, Clone, Serialize)]
 pub struct LocalProject {
@@ -219,7 +221,7 @@ fn handle_submit(
 ) -> String {
     // Parse multipart form to extract 'body' field
     let body_str = String::from_utf8_lossy(body);
-    let (prompt, files) = parse_multipart_form(&body_str);
+    let (prompt, files, required_theorems) = parse_multipart_form(&body_str);
 
     let project_id = uuid_v4();
     let now = timestamp();
@@ -244,6 +246,29 @@ fn handle_submit(
     } else {
         (
             Some("No .lean files submitted — skipping local check".to_string()),
+            false,
+        )
+    };
+
+    // A clean compile is not proof evidence: files with `sorry`, custom
+    // axioms or `native_decide`, empty files and definition-only files all
+    // compile.  Acceptance additionally requires the proof policy: every
+    // required theorem exists, is kernel-checked, and uses only the allowed
+    // axioms (see proof_policy).
+    let (lean_result, passed) = if passed {
+        let policy = proof_policy::check_submission(&work_dir, &files, &required_theorems);
+        (
+            lean_result.map(|r| format!("{}\n{}", r, policy.report())),
+            policy.accepted,
+        )
+    } else {
+        (
+            lean_result.map(|r| {
+                format!(
+                    "{}\n=== PROOF POLICY: NOT EVALUATED (compile failed) ===",
+                    r
+                )
+            }),
             false,
         )
     };
@@ -495,9 +520,13 @@ fn forward_ask(
 
 // ── Helpers ───────────────────────────────────────────────────────────
 
-fn parse_multipart_form(body: &str) -> (String, Vec<(String, String)>) {
+/// Returns `(prompt, files, required_theorems)`.  `required_theorems` is the
+/// optional JSON array of fully-qualified theorem names that must be proved;
+/// non-string entries become `""`, which the proof policy rejects.
+fn parse_multipart_form(body: &str) -> (String, Vec<(String, String)>, Vec<String>) {
     let mut prompt = String::new();
     let mut files: Vec<(String, String)> = Vec::new();
+    let mut required: Vec<String> = Vec::new();
 
     // Look for name="body" field containing JSON
     if let Some(start) = body.find(r#"name="body""#) {
@@ -513,11 +542,16 @@ fn parse_multipart_form(body: &str) -> (String, Vec<(String, String)>) {
                         files.push((k.clone(), v.as_str().unwrap_or("").to_string()));
                     }
                 }
+                if let Some(arr) = val["required_theorems"].as_array() {
+                    for v in arr {
+                        required.push(v.as_str().unwrap_or("").to_string());
+                    }
+                }
             }
         }
     }
 
-    (prompt, files)
+    (prompt, files, required)
 }
 
 fn parse_json_field(body: &str, field: &str) -> Option<String> {
@@ -675,5 +709,89 @@ mod verdict_tests {
             &[f.to_string_lossy().to_string()],
         );
         assert!(!passed);
+    }
+}
+
+#[cfg(test)]
+mod required_theorems_tests {
+    use super::*;
+
+    fn form(json: &str) -> String {
+        format!(
+            "--b\r\nContent-Disposition: form-data; name=\"body\"\r\n\r\n{}\r\n--b--\r\n",
+            json
+        )
+    }
+
+    #[test]
+    fn parses_required_theorems() {
+        let (_, files, req) = parse_multipart_form(&form(
+            r#"{"prompt":"p","files":{"A.lean":"x"},"required_theorems":["target","Foo.bar"]}"#,
+        ));
+        assert_eq!(files.len(), 1);
+        assert_eq!(req, vec!["target".to_string(), "Foo.bar".to_string()]);
+    }
+
+    #[test]
+    fn missing_or_malformed_required_theorems() {
+        let (_, _, req) = parse_multipart_form(&form(r#"{"prompt":"p","files":{}}"#));
+        assert!(req.is_empty());
+        let (_, _, req) =
+            parse_multipart_form(&form(r#"{"files":{},"required_theorems":"target"}"#));
+        assert!(req.is_empty());
+        let (_, _, req) =
+            parse_multipart_form(&form(r#"{"files":{},"required_theorems":[1,"t"]}"#));
+        assert_eq!(req, vec!["".to_string(), "t".to_string()]);
+    }
+}
+
+#[cfg(test)]
+mod proof_policy_wiring_tests {
+    use super::*;
+
+    fn submit(json: &str) -> String {
+        let body = format!(
+            "--b\r\nContent-Disposition: form-data; name=\"body\"\r\n\r\n{}\r\n--b--\r\n",
+            json
+        );
+        let state = Arc::new(Mutex::new(ServerState::default()));
+        let resp = handle_submit(body.as_bytes(), &state, &None, "");
+        let v: serde_json::Value = serde_json::from_str(&resp).unwrap();
+        v["lean_result"].as_str().unwrap_or("").to_string()
+    }
+
+    /// Needs `lean` + `leanchecker` on PATH.  Run with
+    /// `cargo test --bin aristotle-manager local_server:: -- --include-ignored`.
+    #[test]
+    #[ignore = "needs lean + leanchecker on PATH"]
+    fn submit_applies_proof_policy() {
+        let clean = r#"{"prompt":"p","files":{"Wiring.lean":"theorem wiring_target : 2 + 2 = 4 := rfl\n"},"required_theorems":["wiring_target"]}"#;
+        assert!(submit(clean).contains("=== PROOF POLICY: ACCEPTED ==="));
+
+        let sorry = r#"{"prompt":"p","files":{"Wiring.lean":"theorem wiring_target : 2 + 2 = 5 := sorry\n"},"required_theorems":["wiring_target"]}"#;
+        let r = submit(sorry);
+        assert!(r.contains("=== ALL PROOFS PASSED ==="), "compiles");
+        assert!(r.contains("=== PROOF POLICY: REJECTED ==="));
+
+        let no_required = r#"{"prompt":"p","files":{"Wiring.lean":"theorem wiring_target : 2 + 2 = 4 := rfl\n"}}"#;
+        assert!(submit(no_required).contains("=== PROOF POLICY: REJECTED ==="));
+
+        let broken = r#"{"prompt":"p","files":{"Wiring.lean":"theorem wiring_target : 2 + 2 = 5 := rfl\n"},"required_theorems":["wiring_target"]}"#;
+        assert!(submit(broken).contains("=== PROOF POLICY: NOT EVALUATED (compile failed) ==="));
+    }
+
+    /// Submitted files are compiled one by one with `lean <file>`, which
+    /// builds no `.olean`, so a sibling import never resolves: the pre-policy
+    /// compile already fails and the policy is not evaluated.
+    #[test]
+    #[ignore = "needs lean + leanchecker on PATH"]
+    fn submit_cross_file_import_fails_before_policy() {
+        let json = r#"{"prompt":"p","files":{"Helper.lean":"theorem helper : True := by trivial\n","Main.lean":"import Helper\ntheorem target : True := helper\n"},"required_theorems":["target"]}"#;
+        let r = submit(json);
+        assert!(r.contains("PASS Helper.lean"));
+        assert!(r.contains("FAIL Main.lean"));
+        assert!(r.contains("unknown module prefix 'Helper'"));
+        assert!(r.contains("=== SOME PROOFS FAILED ==="));
+        assert!(r.contains("=== PROOF POLICY: NOT EVALUATED (compile failed) ==="));
     }
 }
