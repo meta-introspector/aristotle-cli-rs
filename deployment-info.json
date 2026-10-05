@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-10-05T14:44:22-04:00",
+  "deployed_by": "manual",
+  "project_id": "17da0589-2bfc-44c4-8169-dbdb61676da2",
+  "deploy_path": "output-final_aristotle/17da0589-2bfc-44c4-8169-dbdb61676da2_aristotle/output-final_aristotle",
+  "status": "succeeded",
+  "deployed_to": "https://orion.pages.dev",
+  "cloudflare_account": "CF_ACCOUNT_ID",
+  "branch": "master",
+  "notes": "Created merged workspace for review"
+}

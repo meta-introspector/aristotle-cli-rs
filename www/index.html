@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aristotle Manager - Web Deployment</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #0f172a; color: #e2e8f0;
+    max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem;
+  }
+  h1 { color: #38bdf8; margin-bottom: 0.5rem; }
+  .subtitle { color: #94a3b8; margin-bottom: 2rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+  .card {
+    background: #1e293b; border: 1px solid #334155; border-radius: 0.75rem;
+    padding: 1.25rem; text-decoration: none; color: inherit;
+    transition: transform 0.1s, border-color 0.1s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: #6366f1; }
+  .card h3 { margin: 0 0 0.5rem; color: #a5b4fc; font-size: 1.05rem; }
+  .card .path { font-family: monospace; font-size: 0.8rem; color: #94a3b8; word-break: break-all; }
+  .badge {
+    display: inline-block; font-size: 0.7rem; padding: 2px 8px;
+    border-radius: 999px; background: #064e3b; color: #4ade80;
+    margin-left: 0.5rem;
+  }
+  footer { color: #64748b; font-size: 0.8rem; margin-top: 3rem; }
+  a { color: #7dd3fc; }
+</style>
+</head>
+<body>
+  <h1>🏛️ Aristotle Manager</h1>
+  <p class="subtitle">Cross-repository P2P proving loop and file-drop system</p>
+
+  <div class="grid">
+    <a href="/aristo/health" class="card">
+      <h3>Health <span class="badge">API</span></h3>
+      <div class="path">/aristo/health</div>
+    </a>
+    <a href="/aristo/api/" class="card">
+      <h3>API <span class="badge">API</span></h3>
+      <div class="path">/aristo/api/</div>
+    </a>
+    <a href="/aristo/p2p/" class="card">
+      <h3>P2P Proving <span class="badge">GUI</span></h3>
+      <div class="path">/aristo/p2p/</div>
+    </a>
+    <a href="/aristo/p2p/status" class="card">
+      <h3>P2P Status <span class="badge">JSON</span></h3>
+      <div class="path">/aristo/p2p/status</div>
+    </a>
+    <a href="/aristo/gokujo/" class="card">
+      <h3>Gokujo Tasks <span class="badge">GUI</span></h3>
+      <div class="path">/aristo/gokujo/</div>
+    </a>
+    <a href="/aristo/gokujo/api/" class="card">
+      <h3>Gokujo API <span class="badge">API</span></h3>
+      <div class="path">/aristo/gokujo/api/</div>
+    </a>
+    <a href="/aristo/gokujo/status" class="card">
+      <h3>Gokujo Status <span class="badge">JSON</span></h3>
+      <div class="path">/aristo/gokujo/status</div>
+    </a>
+    <a href="/aristo/gui2proof/" class="card">
+      <h3>GUI2Proof <span class="badge">GUI</span></h3>
+      <div class="path">/aristo/gui2proof/</div>
+    </a>
+    <a href="/aristo/gui2proof/api/status" class="card">
+      <h3>GUI2Proof Status <span class="badge">JSON</span></h3>
+      <div class="path">/aristo/gui2proof/api/status</div>
+    </a>
+    <a href="/aristo/file-drop/" class="card">
+      <h3>File Drop <span class="badge">GUI</span></h3>
+      <div class="path">/aristo/file-drop/</div>
+    </a>
+    <a href="/aristo/verify" class="card">
+      <h3>Verify <span class="badge">JSON</span></h3>
+      <div class="path">/aristo/verify</div>
+    </a>
+    <a href="/aristo/monitor" class="card">
+      <h3>Monitor <span class="badge">NGINX</span></h3>
+      <div class="path">/aristo/monitor</div>
+    </a>
+  </div>
+
+  <footer>
+    <p>📡 Served via <a href="https://solana.solfunmeme.com/aristo/">solana.solfunmeme.com/aristo/</a></p>
+    <p>Connected to lean-worker, pastebin, and pastebin-lean repositories.</p>
+  </footer>
+</body>
+</html>
