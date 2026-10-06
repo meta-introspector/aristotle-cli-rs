@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem MicroLean.emitJsLinear.eq_1 : forall (t : MicroLean.MicroLeanType), Eq.{1} String (MicroLean.emitJsLinear (MicroLean.LinearMicroType.qualified MicroLean.OwnershipMode.borrowed t)) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString (MicroLean.emitJs t)) (ToString.toString.{0} String instToStringString " /* borrowed: no finally-dec */"))
+theorem MicroLean.emitJsLinear.eq_1 : forall (t : MicroLean.MicroLeanType), Eq.{1} String (MicroLean.emitJsLinear (MicroLean.LinearMicroType.qualified MicroLean.OwnershipMode.borrowed t)) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString (MicroLean.emitJs t)) (ToString.toString.{0} String instToStringString " /* borrowed: no finally-dec */")) :=
+  fun (t : MicroLean.MicroLeanType) => Eq.refl.{1} String (MicroLean.emitJsLinear (MicroLean.LinearMicroType.qualified MicroLean.OwnershipMode.borrowed t))

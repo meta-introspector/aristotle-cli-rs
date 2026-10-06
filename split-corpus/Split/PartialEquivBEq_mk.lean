@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: constructor PartialEquivBEq.mk : forall {α : Type.{u_1}} [inst._@.Init.Data.BEq.2309242299._hygCtx._hyg.3 : BEq.{u_1} α], (forall {a : α} {b : α}, (Eq.{1} Bool (BEq.beq.{u_1} α inst._@.Init.Data.BEq.2309242299._hygCtx._hyg.3 a b) Bool.true) -> (Eq.{1} Bool (BEq.beq.{u_1} α inst._@.Init.Data.BEq.2309242299._hygCtx._hyg.3 b a) Bool.true)) -> (forall {a : α} {b : α} {c : α}, (Eq.{1} Bool (BEq.beq.{u_1} α inst._@.Init.Data.BEq.2309242299._hygCtx._hyg.3 a b) Bool.true) -> (Eq.{1} Bool (BEq.beq.{u_1} α inst._@.Init.Data.BEq.2309242299._hygCtx._hyg.3 b c) Bool.true) -> (Eq.{1} Bool (BEq.beq.{u_1} α inst._@.Init.Data.BEq.2309242299._hygCtx._hyg.3 a c) Bool.true)) -> (PartialEquivBEq.{u_1} α inst._@.Init.Data.BEq.2309242299._hygCtx._hyg.3)

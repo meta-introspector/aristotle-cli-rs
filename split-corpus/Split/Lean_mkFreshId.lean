@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.mkFreshId : forall {m : Type -> Type} [inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.5 : Monad.{0, 0} m] [inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.8 : Lean.MonadNameGenerator m], m Lean.Name
+def Lean.mkFreshId : forall {m : Type -> Type} [inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.5 : Monad.{0, 0} m] [inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.8 : Lean.MonadNameGenerator m], m Lean.Name :=
+  fun {m : Type -> Type} [inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.5 : Monad.{0, 0} m] [inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.8 : Lean.MonadNameGenerator m] => Bind.bind.{0, 0} m (Monad.toBind.{0, 0} m inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.5) Lean.NameGenerator Lean.Name (Lean.MonadNameGenerator.getNGen m inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.8) (fun (ngen : Lean.NameGenerator) => have r : Lean.Name := Lean.NameGenerator.curr ngen; Bind.bind.{0, 0} m (Monad.toBind.{0, 0} m inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.5) Unit Lean.Name (Lean.MonadNameGenerator.setNGen m inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.8 (Lean.NameGenerator.next ngen)) (fun (x._@.Init.Meta.Defs.1637232341._hygCtx._hyg.52 : PUnit.{1}) => Pure.pure.{0, 0} m (Applicative.toPure.{0, 0} m (Monad.toApplicative.{0, 0} m inst._@.Init.Meta.Defs.1637232341._hygCtx._hyg.5)) Lean.Name r))

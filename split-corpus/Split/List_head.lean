@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: List.head : forall {α : Type.{u}} (as : List.{u} α), (Ne.{succ u} (List.{u} α) as (List.nil.{u} α)) -> α
+def List.head : forall {α : Type.{u}} (as : List.{u} α), (Ne.{succ u} (List.{u} α) as (List.nil.{u} α)) -> α :=
+  fun {α : Type.{u}} (x._@.Init.Data.List.Basic.3139159517._hygCtx._hyg.16 : List.{u} α) (x._@.Init.Data.List.Basic.3139159517._hygCtx._hyg.17 : Ne.{succ u} (List.{u} α) x._@.Init.Data.List.Basic.3139159517._hygCtx._hyg.16 (List.nil.{u} α)) => List.head.match_1.{u, succ u} α (fun (x._@.Init.Data.List.Basic.3139159517._hygCtx.16.Init.Data.List.Basic.3139159517._hygCtx._hyg.35 : List.{u} α) (x._@.Init.Data.List.Basic.3139159517._hygCtx.17.Init.Data.List.Basic.3139159517._hygCtx._hyg.38 : Ne.{succ u} (List.{u} α) x._@.Init.Data.List.Basic.3139159517._hygCtx.16.Init.Data.List.Basic.3139159517._hygCtx._hyg.35 (List.nil.{u} α)) => α) x._@.Init.Data.List.Basic.3139159517._hygCtx._hyg.16 x._@.Init.Data.List.Basic.3139159517._hygCtx._hyg.17 (fun (a : α) (tail._@.Init.Data.List.Basic.3139159517._hygCtx._hyg.51 : List.{u} α) (x._@.Init.Data.List.Basic.3139159517._hygCtx._hyg.52 : Ne.{succ u} (List.{u} α) (List.cons.{u} α a tail._@.Init.Data.List.Basic.3139159517._hygCtx._hyg.51) (List.nil.{u} α)) => a)

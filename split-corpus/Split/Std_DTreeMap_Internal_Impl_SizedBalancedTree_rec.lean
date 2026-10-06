@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: recursor Std.DTreeMap.Internal.Impl.SizedBalancedTree.rec : forall {α : Type.{u}} {β : α -> Type.{v}} {lb : Nat} {ub : Nat} {motive : (Std.DTreeMap.Internal.Impl.SizedBalancedTree.{u, v} α β lb ub) -> Sort.{u_1}}, (forall (impl : Std.DTreeMap.Internal.Impl.{u, v} α β) (balanced_impl : Std.DTreeMap.Internal.Impl.Balanced.{u, v} α β impl) (lb_le_size_impl : LE.le.{0} Nat instLENat lb (Std.DTreeMap.Internal.Impl.size.{u, v} α β impl)) (size_impl_le_ub : LE.le.{0} Nat instLENat (Std.DTreeMap.Internal.Impl.size.{u, v} α β impl) ub), motive (Std.DTreeMap.Internal.Impl.SizedBalancedTree.mk.{u, v} α β lb ub impl balanced_impl lb_le_size_impl size_impl_le_ub)) -> (forall (t : Std.DTreeMap.Internal.Impl.SizedBalancedTree.{u, v} α β lb ub), motive t)

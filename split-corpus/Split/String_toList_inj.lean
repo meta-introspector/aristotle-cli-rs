@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem String.toList_inj : forall {s₁ : String} {s₂ : String}, Iff (Eq.{1} (List.{0} Char) (String.toList s₁) (String.toList s₂)) (Eq.{1} String s₁ s₂)
+theorem String.toList_inj : forall {s₁ : String} {s₂ : String}, Iff (Eq.{1} (List.{0} Char) (String.toList s₁) (String.toList s₂)) (Eq.{1} String s₁ s₂) :=
+  fun {s₁ : String} {s₂ : String} => Iff.intro (Eq.{1} (List.{0} Char) (String.toList s₁) (String.toList s₂)) (Eq.{1} String s₁ s₂) (String.toList_injective s₁ s₂) (fun (x._@.Init.Data.String.Basic.426620227._hygCtx._hyg.22 : Eq.{1} String s₁ s₂) => Eq.rec.{0, 1} String s₁ (fun (x._@.Init.Data.String.Basic.426620227._hygCtx._hyg.29 : String) (h._@.Init.Data.String.Basic.426620227._hygCtx._hyg.30 : Eq.{1} String s₁ x._@.Init.Data.String.Basic.426620227._hygCtx._hyg.29) => Eq.{1} (List.{0} Char) (String.toList s₁) (String.toList x._@.Init.Data.String.Basic.426620227._hygCtx._hyg.29)) (rfl.{1} (List.{0} Char) (String.toList s₁)) s₂ x._@.Init.Data.String.Basic.426620227._hygCtx._hyg.22)

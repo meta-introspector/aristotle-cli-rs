@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: String.Slice.splitToSubslice : forall {ρ : Type} {σ : String.Slice -> Type} (s : String.Slice) (pat : ρ) [inst._@.Init.Data.String.Slice.786417475._hygCtx._hyg.43 : String.Slice.Pattern.ToForwardSearcher ρ pat σ], Std.Iter.{0} (String.Slice.SplitIterator σ ρ pat s inst._@.Init.Data.String.Slice.786417475._hygCtx._hyg.43) (String.Slice.Subslice s)
+def String.Slice.splitToSubslice : forall {ρ : Type} {σ : String.Slice -> Type} (s : String.Slice) (pat : ρ) [inst._@.Init.Data.String.Slice.786417475._hygCtx._hyg.43 : String.Slice.Pattern.ToForwardSearcher ρ pat σ], Std.Iter.{0} (String.Slice.SplitIterator σ ρ pat s inst._@.Init.Data.String.Slice.786417475._hygCtx._hyg.43) (String.Slice.Subslice s) :=
+  fun {ρ : Type} {σ : String.Slice -> Type} (s : String.Slice) (pat : ρ) [inst._@.Init.Data.String.Slice.786417475._hygCtx._hyg.43 : String.Slice.Pattern.ToForwardSearcher ρ pat σ] => Std.Iter.mk.{0} (String.Slice.SplitIterator σ ρ pat s inst._@.Init.Data.String.Slice.786417475._hygCtx._hyg.43) (String.Slice.Subslice s) (String.Slice.SplitIterator.operating σ ρ pat s inst._@.Init.Data.String.Slice.786417475._hygCtx._hyg.43 (String.Slice.startPos s) (String.Slice.Pattern.ToForwardSearcher.toSearcher ρ pat σ inst._@.Init.Data.String.Slice.786417475._hygCtx._hyg.43 s))

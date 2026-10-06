@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Meta.mkDiagSummaryForUnfolded : (Lean.PHashMap.{0, 0} Lean.Name Nat Lean.Name.instBEq Lean.instHashableName) -> (optParam.{1} Bool Bool.false) -> (Lean.Meta.MetaM Lean.Meta.DiagSummary)
+def Lean.Meta.mkDiagSummaryForUnfolded : (Lean.PHashMap.{0, 0} Lean.Name Nat Lean.Name.instBEq Lean.instHashableName) -> (optParam.{1} Bool Bool.false) -> (Lean.Meta.MetaM Lean.Meta.DiagSummary) :=
+  fun (counters : Lean.PHashMap.{0, 0} Lean.Name Nat Lean.Name.instBEq Lean.instHashableName) (instances : Bool) => Bind.bind.{0, 0} Lean.Meta.MetaM (Monad.toBind.{0, 0} Lean.Meta.MetaM Lean.Meta.instMonadMetaM) Lean.Environment Lean.Meta.DiagSummary (Lean.MonadEnv.getEnv Lean.Meta.MetaM Lean.Meta.instMonadEnvMetaM) (fun (env : Lean.Environment) => Lean.Meta.mkDiagSummary (Lean.Name.mkStr1 "reduction") counters (fun (declName : Lean.Name) => Bool.and (_private.Lean.Meta.Diagnostics.0.Lean.Meta.mkDiagSummaryForUnfolded.match_1.{1} (fun (x._@.Lean.Meta.Diagnostics.865278209._hygCtx._hyg.56 : Lean.ReducibilityStatus) => Bool) (Lean.getReducibilityStatusCore env declName) (fun (_ : Unit) => Bool.true) (fun (x._@.Lean.Meta.Diagnostics.865278209._hygCtx._hyg.63 : Lean.ReducibilityStatus) => Bool.false)) (BEq.beq.{0} Bool (instBEqOfDecidableEq.{0} Bool instDecidableEqBool) (Lean.Meta.isInstanceCore env declName) instances)))

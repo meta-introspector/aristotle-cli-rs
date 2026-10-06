@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: constructor Lean.SMap.mk : forall {α : Type.{u}} {β : Type.{v}} [inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 : BEq.{u} α] [inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7 : Hashable.{succ u} α], Bool -> (Std.HashMap.{u, v} α β inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7) -> (Lean.PHashMap.{u, v} α β inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7) -> (Lean.SMap.{u, v} α β inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.4 inst._@.Lean.Data.SMap.2523064473._hygCtx._hyg.7)

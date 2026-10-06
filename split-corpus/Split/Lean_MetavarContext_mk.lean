@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: constructor Lean.MetavarContext.mk : Nat -> Nat -> Nat -> (Lean.PersistentHashMap.{0, 0} Lean.LMVarId Nat Lean.instBEqLevelMVarId Lean.instHashableLevelMVarId) -> (Lean.PersistentHashMap.{0, 0} Lean.MVarId Lean.MetavarDecl Lean.instBEqMVarId Lean.instHashableMVarId) -> (Lean.PersistentHashMap.{0, 0} Lean.Name Lean.MVarId Lean.Name.instBEq Lean.instHashableName) -> (Lean.PersistentHashMap.{0, 0} Lean.LMVarId Lean.Level Lean.instBEqLevelMVarId Lean.instHashableLevelMVarId) -> (Lean.PersistentHashMap.{0, 0} Lean.MVarId Lean.Expr Lean.instBEqMVarId Lean.instHashableMVarId) -> (Lean.PersistentHashMap.{0, 0} Lean.MVarId Lean.DelayedMetavarAssignment Lean.instBEqMVarId Lean.instHashableMVarId) -> Lean.MetavarContext

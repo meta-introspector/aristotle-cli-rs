@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.LocalDecl.userName : Lean.LocalDecl -> Lean.Name
+def Lean.LocalDecl.userName : Lean.LocalDecl -> Lean.Name :=
+  fun (x._@.Lean.LocalContext.3043070444._hygCtx._hyg.5 : Lean.LocalDecl) => _private.Lean.LocalContext.0.Lean.LocalDecl.index.match_1.{1} (fun (x._@.Lean.LocalContext.3043070444._hygCtx.5.Lean.LocalContext.3043070444._hygCtx._hyg.16 : Lean.LocalDecl) => Lean.Name) x._@.Lean.LocalContext.3043070444._hygCtx._hyg.5 (fun (index._@.Lean.LocalContext.3043070444._hygCtx._hyg.36 : Nat) (fvarId._@.Lean.LocalContext.3043070444._hygCtx._hyg.37 : Lean.FVarId) (n : Lean.Name) (type._@.Lean.LocalContext.3043070444._hygCtx._hyg.38 : Lean.Expr) (bi._@.Lean.LocalContext.3043070444._hygCtx._hyg.39 : Lean.BinderInfo) (kind._@.Lean.LocalContext.3043070444._hygCtx._hyg.40 : Lean.LocalDeclKind) => n) (fun (index._@.Lean.LocalContext.3043070444._hygCtx._hyg.65 : Nat) (fvarId._@.Lean.LocalContext.3043070444._hygCtx._hyg.66 : Lean.FVarId) (n : Lean.Name) (type._@.Lean.LocalContext.3043070444._hygCtx._hyg.67 : Lean.Expr) (value._@.Lean.LocalContext.3043070444._hygCtx._hyg.68 : Lean.Expr) (nondep._@.Lean.LocalContext.3043070444._hygCtx._hyg.69 : Bool) (kind._@.Lean.LocalContext.3043070444._hygCtx._hyg.70 : Lean.LocalDeclKind) => n)

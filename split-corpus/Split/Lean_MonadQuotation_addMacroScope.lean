@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.MonadQuotation.addMacroScope : forall {m : Type -> Type} [inst._@.Init.Prelude.4222034687._hygCtx._hyg.5 : Lean.MonadQuotation m] [inst._@.Init.Prelude.4222034687._hygCtx._hyg.8 : Monad.{0, 0} m], Lean.Name -> (m Lean.Name)
+def Lean.MonadQuotation.addMacroScope : forall {m : Type -> Type} [inst._@.Init.Prelude.4222034687._hygCtx._hyg.5 : Lean.MonadQuotation m] [inst._@.Init.Prelude.4222034687._hygCtx._hyg.8 : Monad.{0, 0} m], Lean.Name -> (m Lean.Name) :=
+  fun {m : Type -> Type} [inst._@.Init.Prelude.4222034687._hygCtx._hyg.5 : Lean.MonadQuotation m] [inst._@.Init.Prelude.4222034687._hygCtx._hyg.8 : Monad.{0, 0} m] (n : Lean.Name) => Bind.bind.{0, 0} m (Monad.toBind.{0, 0} m inst._@.Init.Prelude.4222034687._hygCtx._hyg.8) Lean.Name Lean.Name (Lean.MonadQuotation.getContext m inst._@.Init.Prelude.4222034687._hygCtx._hyg.5) (fun (ctx : Lean.Name) => Bind.bind.{0, 0} m (Monad.toBind.{0, 0} m inst._@.Init.Prelude.4222034687._hygCtx._hyg.8) Lean.MacroScope Lean.Name (Lean.MonadQuotation.getCurrMacroScope m inst._@.Init.Prelude.4222034687._hygCtx._hyg.5) (fun (scp : Lean.MacroScope) => Pure.pure.{0, 0} m (Applicative.toPure.{0, 0} m (Monad.toApplicative.{0, 0} m inst._@.Init.Prelude.4222034687._hygCtx._hyg.8)) Lean.Name (Lean.addMacroScope ctx n scp)))

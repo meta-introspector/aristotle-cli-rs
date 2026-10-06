@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: MicroLean.OwnershipMode.ctorElim : forall {motive : MicroLean.OwnershipMode -> Sort.{u}} (ctorIdx : Nat) (t : MicroLean.OwnershipMode), (Eq.{1} Nat ctorIdx (MicroLean.OwnershipMode.ctorIdx t)) -> (MicroLean.OwnershipMode.ctorElimType.{u} motive ctorIdx) -> (motive t)
+def MicroLean.OwnershipMode.ctorElim : forall {motive : MicroLean.OwnershipMode -> Sort.{u}} (ctorIdx : Nat) (t : MicroLean.OwnershipMode), (Eq.{1} Nat ctorIdx (MicroLean.OwnershipMode.ctorIdx t)) -> (MicroLean.OwnershipMode.ctorElimType.{u} motive ctorIdx) -> (motive t) :=
+  fun {motive : MicroLean.OwnershipMode -> Sort.{u}} (ctorIdx : Nat) (t : MicroLean.OwnershipMode) (h : Eq.{1} Nat ctorIdx (MicroLean.OwnershipMode.ctorIdx t)) (k : MicroLean.OwnershipMode.ctorElimType.{u} motive ctorIdx) => MicroLean.OwnershipMode.casesOn.{u} (fun (t : MicroLean.OwnershipMode) => (Eq.{1} Nat ctorIdx (MicroLean.OwnershipMode.ctorIdx t)) -> (motive t)) t (fun (h : Eq.{1} Nat ctorIdx 0) => PULift.down.{u, u} (motive MicroLean.OwnershipMode.borrowed) (Eq.ndrec.{max 1 u, 1} Nat ctorIdx (MicroLean.OwnershipMode.ctorElimType.{u} motive) k 0 h)) (fun (h : Eq.{1} Nat ctorIdx 1) => PULift.down.{u, u} (motive MicroLean.OwnershipMode.owned) (Eq.ndrec.{max 1 u, 1} Nat ctorIdx (MicroLean.OwnershipMode.ctorElimType.{u} motive) k 1 h)) h

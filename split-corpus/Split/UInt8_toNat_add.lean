@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem UInt8.toNat_add : forall (a : UInt8) (b : UInt8), Eq.{1} Nat (UInt8.toNat (HAdd.hAdd.{0, 0, 0} UInt8 UInt8 UInt8 (instHAdd.{0} UInt8 instAddUInt8) a b)) (HMod.hMod.{0, 0, 0} Nat Nat Nat (instHMod.{0} Nat Nat.instMod) (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) (UInt8.toNat a) (UInt8.toNat b)) (HPow.hPow.{0, 0, 0} Nat Nat Nat (instHPow.{0, 0} Nat Nat (instPowNat.{0} Nat instNatPowNat)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) (OfNat.ofNat.{0} Nat 8 (instOfNatNat 8))))
+theorem UInt8.toNat_add : forall (a : UInt8) (b : UInt8), Eq.{1} Nat (UInt8.toNat (HAdd.hAdd.{0, 0, 0} UInt8 UInt8 UInt8 (instHAdd.{0} UInt8 instAddUInt8) a b)) (HMod.hMod.{0, 0, 0} Nat Nat Nat (instHMod.{0} Nat Nat.instMod) (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) (UInt8.toNat a) (UInt8.toNat b)) (HPow.hPow.{0, 0, 0} Nat Nat Nat (instHPow.{0, 0} Nat Nat (instPowNat.{0} Nat instNatPowNat)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) (OfNat.ofNat.{0} Nat 8 (instOfNatNat 8)))) :=
+  fun (a : UInt8) (b : UInt8) => BitVec.toNat_add (OfNat.ofNat.{0} Nat 8 (instOfNatNat 8)) (UInt8.toBitVec a) (UInt8.toBitVec b)

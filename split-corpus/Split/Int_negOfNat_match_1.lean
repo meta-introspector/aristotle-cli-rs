@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Int.negOfNat.match_1 : forall (motive : Nat -> Sort.{u_1}) (x._@.Init.Data.Int.Basic.3241868368._hygCtx.5.Init.Data.Int.Basic.3241868368._hygCtx._hyg.16 : Nat), (Unit -> (motive (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)))) -> (forall (m : Nat), motive (Nat.succ m)) -> (motive x._@.Init.Data.Int.Basic.3241868368._hygCtx.5.Init.Data.Int.Basic.3241868368._hygCtx._hyg.16)
+def Int.negOfNat.match_1 : forall (motive : Nat -> Sort.{u_1}) (x._@.Init.Data.Int.Basic.3241868368._hygCtx.5.Init.Data.Int.Basic.3241868368._hygCtx._hyg.16 : Nat), (Unit -> (motive (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)))) -> (forall (m : Nat), motive (Nat.succ m)) -> (motive x._@.Init.Data.Int.Basic.3241868368._hygCtx.5.Init.Data.Int.Basic.3241868368._hygCtx._hyg.16) :=
+  fun (motive : Nat -> Sort.{u_1}) (x._@.Init.Data.Int.Basic.3241868368._hygCtx.5.Init.Data.Int.Basic.3241868368._hygCtx._hyg.16 : Nat) (h_1 : Unit -> (motive (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)))) (h_2 : forall (m : Nat), motive (Nat.succ m)) => Nat.casesOn.{u_1} (fun (x : Nat) => motive x) x._@.Init.Data.Int.Basic.3241868368._hygCtx.5.Init.Data.Int.Basic.3241868368._hygCtx._hyg.16 (h_1 Unit.unit) (fun (n._@.Init.Data.Int.Basic.3241868368._hygCtx._hyg.30 : Nat) => h_2 n._@.Init.Data.Int.Basic.3241868368._hygCtx._hyg.30)

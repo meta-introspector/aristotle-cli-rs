@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: constructor DA51Address.mk : forall (bits : BitVec (OfNat.ofNat.{0} Nat 64 (instOfNatNat 64))), (Eq.{1} (BitVec (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) (OfNat.ofNat.{0} Nat 63 (instOfNatNat 63)) (OfNat.ofNat.{0} Nat 48 (instOfNatNat 48))) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)))) (BitVec.extractLsb (OfNat.ofNat.{0} Nat 64 (instOfNatNat 64)) (OfNat.ofNat.{0} Nat 63 (instOfNatNat 63)) (OfNat.ofNat.{0} Nat 48 (instOfNatNat 48)) bits) (BitVec.ofNat (OfNat.ofNat.{0} Nat 16 (instOfNatNat 16)) (OfNat.ofNat.{0} Nat 55889 (instOfNatNat 55889)))) -> DA51Address

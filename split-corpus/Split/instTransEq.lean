@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: instTransEq : forall {α : Sort.{u_1}} {γ : Sort.{u_2}} (r : α -> γ -> Sort.{u}), Trans.{0, u, u, u_1, u_1, u_2} α α γ (Eq.{u_1} α) r r
+def instTransEq : forall {α : Sort.{u_1}} {γ : Sort.{u_2}} (r : α -> γ -> Sort.{u}), Trans.{0, u, u, u_1, u_1, u_2} α α γ (Eq.{u_1} α) r r :=
+  fun {α : Sort.{u_1}} {γ : Sort.{u_2}} (r : α -> γ -> Sort.{u}) => Trans.mk.{0, u, u, u_1, u_1, u_2} α α γ (Eq.{u_1} α) r r (fun {a._@.Init.Prelude.3520178738._hygCtx._hyg.24 : α} {b._@.Init.Prelude.3520178738._hygCtx._hyg.25 : α} {c._@.Init.Prelude.3520178738._hygCtx._hyg.26 : γ} (heq : Eq.{u_1} α a._@.Init.Prelude.3520178738._hygCtx._hyg.24 b._@.Init.Prelude.3520178738._hygCtx._hyg.25) (h' : r b._@.Init.Prelude.3520178738._hygCtx._hyg.25 c._@.Init.Prelude.3520178738._hygCtx._hyg.26) => Eq.rec.{u, u_1} α b._@.Init.Prelude.3520178738._hygCtx._hyg.25 (fun (x._@.Init.Prelude.3520178738._hygCtx._hyg.32 : α) (h._@.Init.Prelude.3520178738._hygCtx._hyg.33 : Eq.{u_1} α b._@.Init.Prelude.3520178738._hygCtx._hyg.25 x._@.Init.Prelude.3520178738._hygCtx._hyg.32) => r x._@.Init.Prelude.3520178738._hygCtx._hyg.32 c._@.Init.Prelude.3520178738._hygCtx._hyg.26) h' a._@.Init.Prelude.3520178738._hygCtx._hyg.24 (Eq.symm.{u_1} α a._@.Init.Prelude.3520178738._hygCtx._hyg.24 b._@.Init.Prelude.3520178738._hygCtx._hyg.25 heq))

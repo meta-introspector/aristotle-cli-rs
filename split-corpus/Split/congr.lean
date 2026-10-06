@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem congr : forall {α : Sort.{u}} {β : Sort.{v}} {f₁ : α -> β} {f₂ : α -> β} {a₁ : α} {a₂ : α}, (Eq.{imax u v} (α -> β) f₁ f₂) -> (Eq.{u} α a₁ a₂) -> (Eq.{v} β (f₁ a₁) (f₂ a₂))
+theorem congr : forall {α : Sort.{u}} {β : Sort.{v}} {f₁ : α -> β} {f₂ : α -> β} {a₁ : α} {a₂ : α}, (Eq.{imax u v} (α -> β) f₁ f₂) -> (Eq.{u} α a₁ a₂) -> (Eq.{v} β (f₁ a₁) (f₂ a₂)) :=
+  fun {α : Sort.{u}} {β : Sort.{v}} {f₁ : α -> β} {f₂ : α -> β} {a₁ : α} {a₂ : α} (h₁ : Eq.{imax u v} (α -> β) f₁ f₂) (h₂ : Eq.{u} α a₁ a₂) => Eq.rec.{0, imax u v} (α -> β) f₁ (fun (x._@.Init.Prelude.3367718672._hygCtx._hyg.34 : α -> β) (h._@.Init.Prelude.3367718672._hygCtx._hyg.35 : Eq.{imax u v} (α -> β) f₁ x._@.Init.Prelude.3367718672._hygCtx._hyg.34) => Eq.{v} β (f₁ a₁) (x._@.Init.Prelude.3367718672._hygCtx._hyg.34 a₂)) (Eq.rec.{0, u} α a₁ (fun (x._@.Init.Prelude.3367718672._hygCtx._hyg.32 : α) (h._@.Init.Prelude.3367718672._hygCtx._hyg.33 : Eq.{u} α a₁ x._@.Init.Prelude.3367718672._hygCtx._hyg.32) => Eq.{v} β (f₁ a₁) (f₁ x._@.Init.Prelude.3367718672._hygCtx._hyg.32)) (rfl.{v} β (f₁ a₁)) a₂ h₂) f₂ h₁

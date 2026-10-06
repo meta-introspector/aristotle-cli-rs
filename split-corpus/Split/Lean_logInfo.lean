@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.logInfo : forall {m : Type -> Type} [inst._@.Lean.Log.763621557._hygCtx._hyg.5 : Monad.{0, 0} m] [inst._@.Lean.Log.763621557._hygCtx._hyg.8 : Lean.MonadLog m] [inst._@.Lean.Log.763621557._hygCtx._hyg.11 : Lean.AddMessageContext m] [inst._@.Lean.Log.763621557._hygCtx._hyg.14 : Lean.MonadOptions m], Lean.MessageData -> (m Unit)
+def Lean.logInfo : forall {m : Type -> Type} [inst._@.Lean.Log.763621557._hygCtx._hyg.5 : Monad.{0, 0} m] [inst._@.Lean.Log.763621557._hygCtx._hyg.8 : Lean.MonadLog m] [inst._@.Lean.Log.763621557._hygCtx._hyg.11 : Lean.AddMessageContext m] [inst._@.Lean.Log.763621557._hygCtx._hyg.14 : Lean.MonadOptions m], Lean.MessageData -> (m Unit) :=
+  fun {m : Type -> Type} [inst._@.Lean.Log.763621557._hygCtx._hyg.5 : Monad.{0, 0} m] [inst._@.Lean.Log.763621557._hygCtx._hyg.8 : Lean.MonadLog m] [inst._@.Lean.Log.763621557._hygCtx._hyg.11 : Lean.AddMessageContext m] [inst._@.Lean.Log.763621557._hygCtx._hyg.14 : Lean.MonadOptions m] (msgData : Lean.MessageData) => Lean.log m inst._@.Lean.Log.763621557._hygCtx._hyg.5 inst._@.Lean.Log.763621557._hygCtx._hyg.8 inst._@.Lean.Log.763621557._hygCtx._hyg.11 inst._@.Lean.Log.763621557._hygCtx._hyg.14 msgData Lean.MessageSeverity.information Bool.false

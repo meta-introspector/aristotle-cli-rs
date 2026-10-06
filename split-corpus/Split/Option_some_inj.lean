@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Option.some_inj : forall {α : Type.{u_1}} {a : α} {b : α}, Iff (Eq.{succ u_1} (Option.{u_1} α) (Option.some.{u_1} α a) (Option.some.{u_1} α b)) (Eq.{succ u_1} α a b)
+theorem Option.some_inj : forall {α : Type.{u_1}} {a : α} {b : α}, Iff (Eq.{succ u_1} (Option.{u_1} α) (Option.some.{u_1} α a) (Option.some.{u_1} α b)) (Eq.{succ u_1} α a b) :=
+  fun {α : Type.{u_1}} {a : α} {b : α} => Eq.mpr.{0} (Iff (Eq.{succ u_1} (Option.{u_1} α) (Option.some.{u_1} α a) (Option.some.{u_1} α b)) (Eq.{succ u_1} α a b)) (Iff (Eq.{succ u_1} α a b) (Eq.{succ u_1} α a b)) (id.{0} (Eq.{1} Prop (Iff (Eq.{succ u_1} (Option.{u_1} α) (Option.some.{u_1} α a) (Option.some.{u_1} α b)) (Eq.{succ u_1} α a b)) (Iff (Eq.{succ u_1} α a b) (Eq.{succ u_1} α a b))) (congrFun'.{1, 1} Prop Prop (Iff (Eq.{succ u_1} (Option.{u_1} α) (Option.some.{u_1} α a) (Option.some.{u_1} α b))) (Iff (Eq.{succ u_1} α a b)) (congrArg.{1, 1} Prop (Prop -> Prop) (Eq.{succ u_1} (Option.{u_1} α) (Option.some.{u_1} α a) (Option.some.{u_1} α b)) (Eq.{succ u_1} α a b) Iff (Option.some.injEq.{u_1} α a b)) (Eq.{succ u_1} α a b))) (Iff.rfl (Eq.{succ u_1} α a b))

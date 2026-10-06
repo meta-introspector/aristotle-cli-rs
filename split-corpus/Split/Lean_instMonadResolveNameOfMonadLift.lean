@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.instMonadResolveNameOfMonadLift : forall (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.8 : Lean.MonadResolveName m], Lean.MonadResolveName n
+def Lean.instMonadResolveNameOfMonadLift : forall (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.8 : Lean.MonadResolveName m], Lean.MonadResolveName n :=
+  fun (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.8 : Lean.MonadResolveName m] => Lean.MonadResolveName.mk n (liftM.{0, 0, 0} m n (instMonadLiftTOfMonadLift.{0, 0, 0, 0} m m n inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.4 (instMonadLiftT.{0, 0} m)) Lean.Name (Lean.MonadResolveName.getCurrNamespace m inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.8)) (liftM.{0, 0, 0} m n (instMonadLiftTOfMonadLift.{0, 0, 0, 0} m m n inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.4 (instMonadLiftT.{0, 0} m)) (List.{0} Lean.OpenDecl) (Lean.MonadResolveName.getOpenDecls m inst._@.Lean.ResolveName.2034130798._hygCtx._hyg.8))

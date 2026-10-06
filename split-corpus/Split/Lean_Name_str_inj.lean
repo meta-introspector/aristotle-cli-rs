@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Lean.Name.str.inj : forall {pre : Lean.Name} {str : String} {pre_1 : Lean.Name} {str_1 : String}, (Eq.{1} Lean.Name (Lean.Name.str pre str) (Lean.Name.str pre_1 str_1)) -> (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} String str str_1))
+theorem Lean.Name.str.inj : forall {pre : Lean.Name} {str : String} {pre_1 : Lean.Name} {str_1 : String}, (Eq.{1} Lean.Name (Lean.Name.str pre str) (Lean.Name.str pre_1 str_1)) -> (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} String str str_1)) :=
+  fun {pre : Lean.Name} {str : String} {pre_1 : Lean.Name} {str_1 : String} (x._@.Init.Core.2310967795._hygCtx._hyg.3 : Eq.{1} Lean.Name (Lean.Name.str pre str) (Lean.Name.str pre_1 str_1)) => Lean.Name.str.noConfusion.{0} (And (Eq.{1} Lean.Name pre pre_1) (Eq.{1} String str str_1)) pre str pre_1 str_1 x._@.Init.Core.2310967795._hygCtx._hyg.3 (fun (pre_eq._@.Init.Core.2310967795._hygCtx._hyg.4 : Eq.{1} Lean.Name pre pre_1) (str_eq._@.Init.Core.2310967795._hygCtx._hyg.5 : Eq.{1} String str str_1) => And.intro (Eq.{1} Lean.Name pre pre_1) (Eq.{1} String str str_1) pre_eq._@.Init.Core.2310967795._hygCtx._hyg.4 str_eq._@.Init.Core.2310967795._hygCtx._hyg.5)

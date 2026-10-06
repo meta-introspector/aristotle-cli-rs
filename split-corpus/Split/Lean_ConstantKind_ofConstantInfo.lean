@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.ConstantKind.ofConstantInfo : Lean.ConstantInfo -> Lean.ConstantKind
+def Lean.ConstantKind.ofConstantInfo : Lean.ConstantInfo -> Lean.ConstantKind :=
+  fun (x._@.Lean.Environment.3408502117._hygCtx._hyg.5 : Lean.ConstantInfo) => _private.Lean.Environment.0.Lean.ConstantKind.ofConstantInfo.match_1.{1} (fun (x._@.Lean.Environment.3408502117._hygCtx.5.Lean.Environment.3408502117._hygCtx._hyg.16 : Lean.ConstantInfo) => Lean.ConstantKind) x._@.Lean.Environment.3408502117._hygCtx._hyg.5 (fun (val._@.Lean.Environment.3408502117._hygCtx._hyg.22 : Lean.DefinitionVal) => Lean.ConstantKind.defn) (fun (val._@.Lean.Environment.3408502117._hygCtx._hyg.30 : Lean.TheoremVal) => Lean.ConstantKind.thm) (fun (val._@.Lean.Environment.3408502117._hygCtx._hyg.38 : Lean.AxiomVal) => Lean.ConstantKind.axiom) (fun (val._@.Lean.Environment.3408502117._hygCtx._hyg.46 : Lean.OpaqueVal) => Lean.ConstantKind.opaque) (fun (val._@.Lean.Environment.3408502117._hygCtx._hyg.54 : Lean.QuotVal) => Lean.ConstantKind.quot) (fun (val._@.Lean.Environment.3408502117._hygCtx._hyg.62 : Lean.InductiveVal) => Lean.ConstantKind.induct) (fun (val._@.Lean.Environment.3408502117._hygCtx._hyg.70 : Lean.ConstructorVal) => Lean.ConstantKind.ctor) (fun (val._@.Lean.Environment.3408502117._hygCtx._hyg.78 : Lean.RecursorVal) => Lean.ConstantKind.recursor)

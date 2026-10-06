@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Expr.QuotedCode.injEq : forall (a._@._internal._hyg.0 : Expr) (a_1._@._internal._hyg.0 : Expr), Eq.{1} Prop (Eq.{1} Expr (Expr.QuotedCode a._@._internal._hyg.0) (Expr.QuotedCode a_1._@._internal._hyg.0)) (Eq.{1} Expr a._@._internal._hyg.0 a_1._@._internal._hyg.0)
+theorem Expr.QuotedCode.injEq : forall (a._@._internal._hyg.0 : Expr) (a_1._@._internal._hyg.0 : Expr), Eq.{1} Prop (Eq.{1} Expr (Expr.QuotedCode a._@._internal._hyg.0) (Expr.QuotedCode a_1._@._internal._hyg.0)) (Eq.{1} Expr a._@._internal._hyg.0 a_1._@._internal._hyg.0) :=
+  fun (a._@._internal._hyg.0 : Expr) (a_1._@._internal._hyg.0 : Expr) => Eq.propIntro (Eq.{1} Expr (Expr.QuotedCode a._@._internal._hyg.0) (Expr.QuotedCode a_1._@._internal._hyg.0)) (Eq.{1} Expr a._@._internal._hyg.0 a_1._@._internal._hyg.0) (Expr.QuotedCode.inj a._@._internal._hyg.0 a_1._@._internal._hyg.0) (Eq.ndrec.{0, 1} Expr a._@._internal._hyg.0 (fun (a_1._@._internal._hyg.0 : Expr) => Eq.{1} Expr (Expr.QuotedCode a._@._internal._hyg.0) (Expr.QuotedCode a_1._@._internal._hyg.0)) (Eq.refl.{1} Expr (Expr.QuotedCode a._@._internal._hyg.0)) a_1._@._internal._hyg.0)

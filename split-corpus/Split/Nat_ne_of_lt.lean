@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.ne_of_lt : forall {a : Nat} {b : Nat}, (LT.lt.{0} Nat instLTNat a b) -> (Ne.{1} Nat a b)
+theorem Nat.ne_of_lt : forall {a : Nat} {b : Nat}, (LT.lt.{0} Nat instLTNat a b) -> (Ne.{1} Nat a b) :=
+  fun {a : Nat} {b : Nat} (h : LT.lt.{0} Nat instLTNat a b) (he : Eq.{1} Nat a b) => absurd.{0} (LT.lt.{0} Nat instLTNat a a) False (Eq.rec.{0, 1} Nat b (fun (x._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.30 : Nat) (h._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.31 : Eq.{1} Nat b x._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.30) => LT.lt.{0} Nat instLTNat x._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.30 x._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.30) (Eq.rec.{0, 1} Nat a (fun (x._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.28 : Nat) (h._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.29 : Eq.{1} Nat a x._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.28) => LT.lt.{0} Nat instLTNat x._@.Init.Data.Nat.Basic.2719800311._hygCtx._hyg.28 b) h b (Eq.symm.{1} Nat b a (Eq.symm.{1} Nat a b he))) a (Eq.symm.{1} Nat a b he)) (Nat.lt_irrefl a)

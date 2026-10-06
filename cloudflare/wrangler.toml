@@ -1,0 +1,10 @@
+name = "mathlib-split-oleans"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# KV namespace for per-decl oleans.  Created once:
+#   npx wrangler kv namespace create OLEANS
+# then paste the id here.
+[[kv_namespaces]]
+binding = "OLEANS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"

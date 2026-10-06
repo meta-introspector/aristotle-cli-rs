@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: StateT.bind : forall {σ : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.State.3640351540._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}}, (StateT.{u, v} σ m α) -> (α -> (StateT.{u, v} σ m β)) -> (StateT.{u, v} σ m β)
+def StateT.bind : forall {σ : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.State.3640351540._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}}, (StateT.{u, v} σ m α) -> (α -> (StateT.{u, v} σ m β)) -> (StateT.{u, v} σ m β) :=
+  fun {σ : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.State.3640351540._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}} (x : StateT.{u, v} σ m α) (f : α -> (StateT.{u, v} σ m β)) (s : σ) => Bind.bind.{u, v} m (Monad.toBind.{u, v} m inst._@.Init.Control.State.3640351540._hygCtx._hyg.6) (Prod.{u, u} α σ) (Prod.{u, u} β σ) (x s) (fun (__discr._@.Init.Control.State.3640351540._hygCtx._hyg.33 : Prod.{u, u} α σ) => StateT.bind.match_1.{u, succ v} σ α (fun (__discr._@.Init.Control.State.3640351540._hygCtx.33.Init.Control.State.3640351540._hygCtx._hyg.60 : Prod.{u, u} α σ) => m (Prod.{u, u} β σ)) __discr._@.Init.Control.State.3640351540._hygCtx._hyg.33 (fun (a : α) (s : σ) => f a s))

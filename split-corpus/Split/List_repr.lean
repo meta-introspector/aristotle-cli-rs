@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: List.repr : forall {α : Type.{u_1}} [inst._@.Init.Data.Repr.682344320._hygCtx._hyg.5 : Repr.{u_1} α], (List.{u_1} α) -> Nat -> Std.Format
+def List.repr : forall {α : Type.{u_1}} [inst._@.Init.Data.Repr.682344320._hygCtx._hyg.5 : Repr.{u_1} α], (List.{u_1} α) -> Nat -> Std.Format :=
+  fun {α : Type.{u_1}} [inst._@.Init.Data.Repr.682344320._hygCtx._hyg.5 : Repr.{u_1} α] (a : List.{u_1} α) (n : Nat) => have x._@.Init.Data.Repr.682344320._hygCtx._hyg.13 : Std.ToFormat.{u_1} α := Std.ToFormat.mk.{u_1} α (repr.{u_1} α inst._@.Init.Data.Repr.682344320._hygCtx._hyg.5); _private.Init.Data.Repr.0.List.repr.match_1.{u_1, 1} α (fun (a._@.Init.Data.Repr.682344320._hygCtx._hyg.23 : List.{u_1} α) (n._@.Init.Data.Repr.682344320._hygCtx._hyg.25 : Nat) => Std.Format) a n (fun (x._@.Init.Data.Repr.682344320._hygCtx._hyg.33 : Nat) => Std.Format.text "[]") (fun (as : List.{u_1} α) (x._@.Init.Data.Repr.682344320._hygCtx._hyg.40 : Nat) => Std.Format.bracket "[" (Std.Format.joinSep.{u_1} α x._@.Init.Data.Repr.682344320._hygCtx._hyg.13 as (HAppend.hAppend.{0, 0, 0} Std.Format Std.Format Std.Format (instHAppendOfAppend.{0} Std.Format Std.Format.instAppend) (Std.Format.text ",") Std.Format.line)) "]")

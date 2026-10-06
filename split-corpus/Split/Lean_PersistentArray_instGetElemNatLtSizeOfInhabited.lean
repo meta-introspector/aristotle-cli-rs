@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.PersistentArray.instGetElemNatLtSizeOfInhabited : forall {α : Type.{u}} [inst._@.Lean.Data.PersistentArray.1968895090._hygCtx._hyg.3 : Inhabited.{succ u} α], GetElem.{u, 0, u} (Lean.PersistentArray.{u} α) Nat α (fun (as : Lean.PersistentArray.{u} α) (i : Nat) => LT.lt.{0} Nat instLTNat i (Lean.PersistentArray.size.{u} α as))
+def Lean.PersistentArray.instGetElemNatLtSizeOfInhabited : forall {α : Type.{u}} [inst._@.Lean.Data.PersistentArray.1968895090._hygCtx._hyg.3 : Inhabited.{succ u} α], GetElem.{u, 0, u} (Lean.PersistentArray.{u} α) Nat α (fun (as : Lean.PersistentArray.{u} α) (i : Nat) => LT.lt.{0} Nat instLTNat i (Lean.PersistentArray.size.{u} α as)) :=
+  fun {α : Type.{u}} [inst._@.Lean.Data.PersistentArray.1968895090._hygCtx._hyg.3 : Inhabited.{succ u} α] => GetElem.mk.{u, 0, u} (Lean.PersistentArray.{u} α) Nat α (fun (as : Lean.PersistentArray.{u} α) (i : Nat) => LT.lt.{0} Nat instLTNat i (Lean.PersistentArray.size.{u} α as)) (fun (xs : Lean.PersistentArray.{u} α) (i : Nat) (x._@.Lean.Data.PersistentArray.1968895090._hygCtx._hyg.31 : LT.lt.{0} Nat instLTNat i (Lean.PersistentArray.size.{u} α xs)) => Lean.PersistentArray.get!.{u} α inst._@.Lean.Data.PersistentArray.1968895090._hygCtx._hyg.3 xs i)

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: String.instDecidableLeRaw : forall (p₁ : String.Pos.Raw) (p₂ : String.Pos.Raw), Decidable (LE.le.{0} String.Pos.Raw String.instLERaw p₁ p₂)
+def String.instDecidableLeRaw : forall (p₁ : String.Pos.Raw) (p₂ : String.Pos.Raw), Decidable (LE.le.{0} String.Pos.Raw String.instLERaw p₁ p₂) :=
+  fun (p₁ : String.Pos.Raw) (p₂ : String.Pos.Raw) => dite.{1} (Decidable (LE.le.{0} ([mdata borrowed:1 Nat]) instLENat (String.Pos.Raw.byteIdx p₁) (String.Pos.Raw.byteIdx p₂))) (Eq.{1} Bool (Nat.ble (String.Pos.Raw.byteIdx p₁) (String.Pos.Raw.byteIdx p₂)) Bool.true) (instDecidableEqBool (Nat.ble (String.Pos.Raw.byteIdx p₁) (String.Pos.Raw.byteIdx p₂)) Bool.true) (fun (h : Eq.{1} Bool (Nat.ble (String.Pos.Raw.byteIdx p₁) (String.Pos.Raw.byteIdx p₂)) Bool.true) => Decidable.isTrue (LE.le.{0} ([mdata borrowed:1 Nat]) instLENat (String.Pos.Raw.byteIdx p₁) (String.Pos.Raw.byteIdx p₂)) (String.instDecidableLeRaw._proof_1 p₁ p₂ h)) (fun (h : Not (Eq.{1} Bool (Nat.ble (String.Pos.Raw.byteIdx p₁) (String.Pos.Raw.byteIdx p₂)) Bool.true)) => Decidable.isFalse (LE.le.{0} ([mdata borrowed:1 Nat]) instLENat (String.Pos.Raw.byteIdx p₁) (String.Pos.Raw.byteIdx p₂)) (String.instDecidableLeRaw._proof_2 p₁ p₂ h))

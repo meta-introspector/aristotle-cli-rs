@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: opaque Lean.PersistentHashMap.foldlMAux : forall {m : Type.{w} -> Type.{w'}} [inst._@.Lean.Data.PersistentHashMap.2369924029._hygCtx._hyg.5 : Monad.{w, w'} m] {σ : Type.{w}} {α : Type.{u_1}} {β : Type.{u_2}}, (σ -> α -> β -> (m σ)) -> (Lean.PersistentHashMap.Node.{u_1, u_2} α β) -> σ -> (m σ)
+opaque Lean.PersistentHashMap.foldlMAux : forall {m : Type.{w} -> Type.{w'}} [inst._@.Lean.Data.PersistentHashMap.2369924029._hygCtx._hyg.5 : Monad.{w, w'} m] {σ : Type.{w}} {α : Type.{u_1}} {β : Type.{u_2}}, (σ -> α -> β -> (m σ)) -> (Lean.PersistentHashMap.Node.{u_1, u_2} α β) -> σ -> (m σ) :=
+  fun {m : Type.{w} -> Type.{w'}} [inst._@.Lean.Data.PersistentHashMap.2369924029._hygCtx._hyg.5 : Monad.{w, w'} m] {σ : Type.{w}} {α : Type.{u_1}} {β : Type.{u_2}} (f : σ -> α -> β -> (m σ)) (a._@._internal._hyg.0 : Lean.PersistentHashMap.Node.{u_1, u_2} α β) (a._@._internal._hyg.0 : σ) => let inst : Inhabited.{succ w} σ := Inhabited.mk.{succ w} σ a._@._internal._hyg.0; Inhabited.default.{succ w'} (m σ) (instInhabitedOfMonad.{w, w'} σ m inst._@.Lean.Data.PersistentHashMap.2369924029._hygCtx._hyg.5 inst)

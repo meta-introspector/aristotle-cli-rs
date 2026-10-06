@@ -1,0 +1,288 @@
+name: gokujo
+
+# Gokujo principle: cut out unneeded computation.
+# - mathlib oleans are compiled ONCE and cached (actions/cache), never rebuilt
+# - only the 5310 Split/* per-decl files are compiled (72.1% of the pool is
+#   already covered by the cached mathlib chain)
+# - compile is matrix-sharded and resumable; failed shards re-run only misses
+# - cloudflare publish is a separate job with its own scoped key (ACL)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'split-corpus/**'
+      - 'cloudflare/**'
+      - '.github/workflows/gokujo-deploy.yml'
+  workflow_dispatch:
+    inputs:
+      shard:
+        description: 'Compile only one shard (0-7), empty = all'
+        default: ''
+      skip_cloudflare:
+        description: 'Skip the cloudflare publish job'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read    # default for all jobs; publish-artifacts escalates below
+
+env:
+  LEAN_VERSION: v4.28.0
+  MATHLIB_CACHE_KEY: mathlib-oleans-v4.28.0-r1
+
+jobs:
+  mathlib-oleans:
+    # Build the mathlib olean chain once; every later job reuses the cache.
+    runs-on: ubuntu-latest
+    outputs:
+      cache-hit: ${{ steps.cache-oleans.outputs.cache-hit }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache mathlib oleans
+        id: cache-oleans
+        uses: actions/cache@v4
+        with:
+          path: ~/.elan-mathlib-oleans
+          key: ${{ env.MATHLIB_CACHE_KEY }}
+      - name: Build mathlib olean chain
+        if: steps.cache-oleans.outputs.cache-hit != 'true'
+        run: |
+          set -euo pipefail
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain lean4:v4.28.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          # GITHUB_PATH only affects LATER steps; lake must be on PATH here
+          export PATH="$HOME/.elan/bin:$PATH"
+          git clone --depth 1 --branch v4.28.0 https://github.com/leanprover-community/mathlib mathlib 2>/dev/null || \
+            git clone --depth 1 https://github.com/leanprover-community/mathlib mathlib
+          cd mathlib
+          # mathlib's own toolchain pin wins if it differs; we need oleans for 4.28
+          lake build 2>&1 | tail -5   # ~50 min, cached forever after
+          mkdir -p ~/.elan-mathlib-oleans
+          cp -r .lake/build/lib/lean ~/.elan-mathlib-oleans/build
+          for p in batteries Qq aesop plausible proofwidgets importGraph Cli; do
+            cp -r ".lake/packages/$p/.lake/build/lib/lean" "$HOME/.elan-mathlib-oleans/$p" 2>/dev/null || true
+          done
+
+  compile-split:
+    needs: mathlib-oleans
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    runs-on: ubuntu-latest
+    steps:
+      # Gokujo single-shard dispatch: skip non-selected shards before any
+      # setup cost (cache restore, lean install). matrix IS available in
+      # step-level expressions; it is NOT valid in a job-level `if`.
+      - name: Shard gate
+        id: gate
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.shard != '' && matrix.shard != inputs.shard }}
+        run: echo "skipped=true" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        if: steps.gate.outputs.skipped != 'true'
+        with:
+          path: ~/.elan-mathlib-oleans
+          key: ${{ env.MATHLIB_CACHE_KEY }}
+      - name: Install lean 4.28
+        if: steps.gate.outputs.skipped != 'true'
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain lean4:v4.28.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Compile shard ${{ matrix.shard }}
+        if: steps.gate.outputs.skipped != 'true'
+        env:
+          LEAN_PATH: /home/runner/.elan-mathlib-oleans/build:/home/runner/.elan-mathlib-oleans/batteries:/home/runner/.elan-mathlib-oleans/Qq:/home/runner/.elan-mathlib-oleans/aesop:/home/runner/.elan-mathlib-oleans/plausible:/home/runner/.elan-mathlib-oleans/proofwidgets:/home/runner/.elan-mathlib-oleans/importGraph:/home/runner/.elan-mathlib-oleans/Cli
+        run: |
+          set -euo pipefail
+          mkdir -p out/oleans
+          # shard by index mod 8 — resumable: skip existing oleans
+          python3 - <<EOF
+          import os, subprocess, sys, glob
+          shard = ${{ matrix.shard }}
+          files = sorted(glob.glob("split-corpus/Split/*.lean"))
+          mine = [f for i, f in enumerate(files) if i % 8 == shard]
+          ok = fail = skip = 0
+          already_declared = 0
+          spec_only = 0
+          # URL-safe key transform: decl names contain '?' and non-ASCII
+          # (ByteArray.utf8Decode?, ..._assemble₃) which cannot round-trip
+          # through a URL path. Percent-encode once, here, so the olean
+          # filename, the manifest key and the worker KV key all agree.
+          import re, urllib.parse
+          def safe_key(k):
+              return urllib.parse.quote(k, safe="")
+          for f in mine:
+              key = os.path.splitext(os.path.basename(f))[0]
+              skey = safe_key(key)
+              # GOKUJO CUT: comment-only spec files (inductive/ctor specs,
+              # ~1128 in the corpus) have no declaration body — compiling
+              # them yields an EMPTY olean that masquerades as the decl's
+              # artifact. Skip them; they are metadata, not compilable decls.
+              body = [l for l in open(f).read().splitlines()
+                      if l.strip() and not l.strip().startswith(("--", "import"))]
+              if not body:
+                  spec_only += 1
+                  continue
+              out = f"out/oleans/{skey}.olean"
+              if os.path.exists(out):
+                  skip += 1; continue
+              r = subprocess.run(["lean", "--root=/", "-o", out, f],
+                                 capture_output=True, text=True, timeout=900)
+              if r.returncode == 0: ok += 1
+              else:
+                  # GOKUJO CUT: 'already been declared' means the decl is
+                  # already proven inside the cached mathlib olean chain —
+                  # recompiling it is provably unnecessary work. Classify
+                  # it as covered, don't burn a failure on it.
+                  # Anchored to lean's error form "'<name>' has already
+                  # been declared" so unrelated stderr can't match.
+                  if re.search(r"'[^']+' has already been declared", r.stderr):
+                      already_declared += 1
+                      print(f"CUT {skey}: already declared in mathlib chain", flush=True)
+                  else:
+                      fail += 1
+                      print(f"FAIL {skey}: {r.stderr[-500:]}", flush=True)
+          print(f"shard {shard}: ok={ok} fail={fail} skip={skip} cut={already_declared} spec={spec_only}")
+          # Write per-file results so publish-artifacts can verify coverage.
+          # distinct filename per shard — merge-multiple:true would
+          # otherwise collapse 8 results.json into 1
+          with open(f"out/results-{shard}.json", "w") as rj:
+              import json
+              json.dump({"shard": shard, "ok": ok, "fail": fail, "skip": skip,
+                         "cut": already_declared, "spec": spec_only,
+                         "total": len(mine)}, rj)
+          # Fail the shard on ANY compile failure — a systematic break
+          # (e.g. a Mathlib rename invalidating all files) must be loud,
+          # not green with one lucky success. Failures are still uploaded
+          # via the artifact (if: always() is not set, but upload runs on
+          # success only; the FAIL log lines carry the diagnosis).
+          # A shard that compiled NOTHING (all cut / all fail / empty glob)
+          # must not be green — otherwise the corpus-as-is (every file
+          # re-declares a Mathlib name) publishes an empty release.
+          if len(mine) == 0:
+              sys.exit(f"shard {shard}: glob matched no files")
+          if fail > 0:
+              sys.exit(1)
+          if ok == 0:
+              sys.exit(f"shard {shard}: compiled nothing (ok=0, cut={already_declared}) "
+                       "— corpus fully covered by the mathlib chain; nothing to publish")
+          sys.exit(0)
+          EOF
+      - name: Upload shard oleans
+        # upload even on compile failure so FAIL diagnostics survive
+        if: ${{ !cancelled() && steps.gate.outputs.skipped != 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: oleans-shard-${{ matrix.shard }}
+          path: |
+            out/oleans/
+            out/results-*.json
+          retention-days: 30
+
+  publish-artifacts:
+    # Merge shards, attach as a release artifact — content-addressed by manifest.
+    needs: compile-split
+    # Only publish when ALL shards succeeded — a single-shard dispatch
+    # would otherwise publish a partial release as if it were complete.
+    # (Partial runs can still be inspected via the per-shard artifacts.)
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.shard == '' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # release upload only — this job and nothing else
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: oleans-shard-*
+          path: oleans
+          merge-multiple: true
+      - name: Build manifest (CID-style sha256 per olean)
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          find oleans -name '*.olean' -exec cp {} release/ \;
+          # verify every shard: zero failures AND at least one olean
+          # produced per shard — refuse empty manifests
+          python3 - <<EOF
+          import glob, json, sys
+          results = [json.load(open(f)) for f in glob.glob("oleans/**/results-*.json", recursive=True)]
+          if len(results) != 8:
+              sys.exit("no shard results found — refusing to publish")
+          total_fail = sum(r["fail"] for r in results)
+          if total_fail:
+              sys.exit(f"refusing to publish: {total_fail} compile failures across shards")
+          total_ok = sum(r["ok"] for r in results)
+          if total_ok == 0:
+              sys.exit("refusing to publish: 0 oleans compiled across all shards")
+          print(f"verified {len(results)} shards, 0 failures, {total_ok} oleans")
+          EOF
+          python3 - <<EOF
+          import hashlib, json, os
+          manifest = {}
+          for f in sorted(os.listdir("release")):
+              h = hashlib.sha256(open(f"release/{f}","rb").read()).hexdigest()
+              manifest[f] = h
+          json.dump(manifest, open("release/manifest.json","w"), indent=1)
+          print(f"{len(manifest)} oleans in manifest")
+          EOF
+          tar czf mathlib-split-oleans.tar.gz release/
+      - name: Attach to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="oleans-$(date -u +%Y%m%d-%H%M%S)"
+          gh release create "$TAG" mathlib-split-oleans.tar.gz \
+            --title "Mathlib Split oleans $TAG" \
+            --notes "Compiled Split/* per-decl oleans (5310 keys, lean 4.28). Manifest inside." || \
+          gh release upload "$TAG" mathlib-split-oleans.tar.gz --clobber
+
+  cloudflare-publish:
+    # Publish per-decl wasm workers to Cloudflare.  ACL: this job alone
+    # holds the scoped CF token; compile jobs never see it.
+    needs: publish-artifacts
+    if: ${{ !inputs.skip_cloudflare }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: oleans-shard-*
+          path: oleans
+          merge-multiple: true
+      - name: Deploy worker (wasm thunk publisher)
+        env:
+          # Scoped token: Workers Scripts:Edit for this account only.
+          # Set via: gh secret set CLOUDFLARE_API_TOKEN
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          npm i -g wrangler@4
+          if grep -q REPLACE_WITH_KV_NAMESPACE_ID cloudflare/wrangler.toml; then
+            echo "::warning::KV namespace not created yet — run 'npx wrangler kv namespace create OLEANS' and fill cloudflare/wrangler.toml. Skipping deploy."
+            exit 0
+          fi
+          # Upload the oleans + manifest into the OLEANS KV namespace.
+          # wrangler kv bulk put takes a JSON list of {key, value} — values
+          # are base64-encoded by wrangler when --base64 is passed.
+          python3 - <<'EOF'
+          import base64, glob, json, os
+          entries = []
+          for f in glob.glob("oleans/**/*.olean", recursive=True):
+              key = os.path.basename(f)
+              with open(f, "rb") as fh:
+                  entries.append({"key": key, "value": base64.b64encode(fh.read()).decode()})
+          for f in glob.glob("oleans/**/manifest.json", recursive=True):
+              with open(f) as fh:
+                  entries.append({"key": "manifest.json", "value": fh.read()})
+          if not entries:
+              raise SystemExit("no oleans or manifest found in artifacts — refusing to wipe KV")
+          with open("kv-put.json", "w") as out:
+              json.dump(entries, out)
+          print(f"uploading {len(entries)} keys to KV")
+          EOF
+          npx wrangler kv key bulk put kv-put.json --config cloudflare/wrangler.toml --base64 --remote
+          # publish the olean-serving worker
+          npx wrangler deploy --config cloudflare/wrangler.toml

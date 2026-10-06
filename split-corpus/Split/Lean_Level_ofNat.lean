@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Level.ofNat : Nat -> Lean.Level
+def Lean.Level.ofNat : Nat -> Lean.Level :=
+  fun (x._@.Lean.Level.197636206._hygCtx._hyg.5 : Nat) => Nat.brecOn.{1} (fun (x._@.Lean.Level.197636206._hygCtx._hyg.5 : Nat) => Lean.Level) x._@.Lean.Level.197636206._hygCtx._hyg.5 (fun (x._@.Lean.Level.197636206._hygCtx._hyg.5 : Nat) (f : Nat.below.{1} (fun (x._@.Lean.Level.197636206._hygCtx._hyg.5 : Nat) => Lean.Level) x._@.Lean.Level.197636206._hygCtx._hyg.5) => Lean.Level.ofNat.match_1.{1} (fun (x._@.Lean.Level.197636206._hygCtx.5.Lean.Level.197636206._hygCtx._hyg.16 : Nat) => (Nat.below.{1} (fun (x._@.Lean.Level.197636206._hygCtx._hyg.5 : Nat) => Lean.Level) x._@.Lean.Level.197636206._hygCtx.5.Lean.Level.197636206._hygCtx._hyg.16) -> Lean.Level) x._@.Lean.Level.197636206._hygCtx._hyg.5 (fun (_ : Unit) (x._@.Lean.Level.197636206._hygCtx._hyg.37 : Nat.below.{1} (fun (x._@.Lean.Level.197636206._hygCtx._hyg.5 : Nat) => Lean.Level) (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0))) => Lean.levelZero) (fun (n : Nat) (x._@.Lean.Level.197636206._hygCtx._hyg.37 : Nat.below.{1} (fun (x._@.Lean.Level.197636206._hygCtx._hyg.5 : Nat) => Lean.Level) (Nat.succ n)) => Lean.mkLevelSucc x._@.Lean.Level.197636206._hygCtx._hyg.37.1) f)

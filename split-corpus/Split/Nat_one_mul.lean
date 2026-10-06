@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.one_mul : forall (n : Nat), Eq.{1} Nat (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) n) n
+theorem Nat.one_mul : forall (n : Nat), Eq.{1} Nat (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) n) n :=
+  fun (n : Nat) => Eq.rec.{0, 1} Nat (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1))) (fun (x._@.Init.Data.Nat.Basic.1021016586._hygCtx._hyg.16 : Nat) (h._@.Init.Data.Nat.Basic.1021016586._hygCtx._hyg.17 : Eq.{1} Nat (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) n (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1))) x._@.Init.Data.Nat.Basic.1021016586._hygCtx._hyg.16) => Eq.{1} Nat x._@.Init.Data.Nat.Basic.1021016586._hygCtx._hyg.16 n) (Nat.mul_one n) (HMul.hMul.{0, 0, 0} Nat Nat Nat (instHMul.{0} Nat instMulNat) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) n) (Nat.mul_comm n (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)))

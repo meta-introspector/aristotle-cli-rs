@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Array.extract_eq_empty_of_le : forall {α : Type.{u_1}} {j : Nat} {i : Nat} {as : Array.{u_1} α}, (LE.le.{0} Nat instLENat (Min.min.{0} Nat instMinNat j (Array.size.{u_1} α as)) i) -> (Eq.{succ u_1} (Array.{u_1} α) (Array.extract.{u_1} α as i j) (List.toArray.{u_1} α (List.nil.{u_1} α)))
+theorem Array.extract_eq_empty_of_le : forall {α : Type.{u_1}} {j : Nat} {i : Nat} {as : Array.{u_1} α}, (LE.le.{0} Nat instLENat (Min.min.{0} Nat instMinNat j (Array.size.{u_1} α as)) i) -> (Eq.{succ u_1} (Array.{u_1} α) (Array.extract.{u_1} α as i j) (List.toArray.{u_1} α (List.nil.{u_1} α))) :=
+  fun {α : Type.{u_1}} {j : Nat} {i : Nat} {as : Array.{u_1} α} (h : LE.le.{0} Nat instLENat (Min.min.{0} Nat instMinNat j (Array.size.{u_1} α as)) i) => Iff.mpr (Eq.{succ u_1} (Array.{u_1} α) (Array.extract.{u_1} α as i j) (List.toArray.{u_1} α (List.nil.{u_1} α))) (LE.le.{0} Nat instLENat (Min.min.{0} Nat instMinNat j (Array.size.{u_1} α as)) i) (Array.extract_eq_empty_iff.{u_1} α i j as) h

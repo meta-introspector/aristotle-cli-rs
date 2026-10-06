@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.sub_le_sub_iff_right : forall {k : Nat} {m : Nat} {n : Nat}, (LE.le.{0} Nat instLENat k m) -> (Iff (LE.le.{0} Nat instLENat (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n k) (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) m k)) (LE.le.{0} Nat instLENat n m))
+theorem Nat.sub_le_sub_iff_right : forall {k : Nat} {m : Nat} {n : Nat}, (LE.le.{0} Nat instLENat k m) -> (Iff (LE.le.{0} Nat instLENat (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n k) (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) m k)) (LE.le.{0} Nat instLENat n m)) :=
+  fun {k : Nat} {m : Nat} {n : Nat} (h : LE.le.{0} Nat instLENat k m) => Iff.intro (LE.le.{0} Nat instLENat (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n k) (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) m k)) (LE.le.{0} Nat instLENat n m) (Nat.le_of_sub_le_sub_right n m k h) (fun (h : LE.le.{0} Nat instLENat n m) => Nat.sub_le_sub_right n m h k)

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.MessageData.instCoeOptionExpr.match_1 : forall (motive : (Option.{0} Lean.Expr) -> Sort.{u_1}) (o._@.Lean.Message.3103435574._hygCtx._hyg.16 : Option.{0} Lean.Expr), (Unit -> (motive (Option.none.{0} Lean.Expr))) -> (forall (e : Lean.Expr), motive (Option.some.{0} Lean.Expr e)) -> (motive o._@.Lean.Message.3103435574._hygCtx._hyg.16)
+def Lean.MessageData.instCoeOptionExpr.match_1 : forall (motive : (Option.{0} Lean.Expr) -> Sort.{u_1}) (o._@.Lean.Message.3103435574._hygCtx._hyg.16 : Option.{0} Lean.Expr), (Unit -> (motive (Option.none.{0} Lean.Expr))) -> (forall (e : Lean.Expr), motive (Option.some.{0} Lean.Expr e)) -> (motive o._@.Lean.Message.3103435574._hygCtx._hyg.16) :=
+  fun (motive : (Option.{0} Lean.Expr) -> Sort.{u_1}) (o._@.Lean.Message.3103435574._hygCtx._hyg.16 : Option.{0} Lean.Expr) (h_1 : Unit -> (motive (Option.none.{0} Lean.Expr))) (h_2 : forall (e : Lean.Expr), motive (Option.some.{0} Lean.Expr e)) => Option.casesOn.{u_1, 0} Lean.Expr (fun (x : Option.{0} Lean.Expr) => motive x) o._@.Lean.Message.3103435574._hygCtx._hyg.16 (h_1 Unit.unit) (fun (val._@.Lean.Message.3103435574._hygCtx._hyg.30 : Lean.Expr) => h_2 val._@.Lean.Message.3103435574._hygCtx._hyg.30)

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.DHashMap.Internal.Raw₀.emptyWithCapacity : forall {α : Type.{u}} {β : α -> Type.{v}}, (optParam.{1} Nat (OfNat.ofNat.{0} Nat 8 (instOfNatNat 8))) -> (Std.DHashMap.Internal.Raw₀.{u, v} α β)
+def Std.DHashMap.Internal.Raw₀.emptyWithCapacity : forall {α : Type.{u}} {β : α -> Type.{v}}, (optParam.{1} Nat (OfNat.ofNat.{0} Nat 8 (instOfNatNat 8))) -> (Std.DHashMap.Internal.Raw₀.{u, v} α β) :=
+  fun {α : Type.{u}} {β : α -> Type.{v}} (capacity : Nat) => Subtype.mk.{max (succ u) (succ v)} (Std.DHashMap.Raw.{u, v} α β) (fun (m : Std.DHashMap.Raw.{u, v} α β) => LT.lt.{0} Nat instLTNat (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (Array.size.{max u v} (Std.DHashMap.Internal.AssocList.{v, u} α β) (Std.DHashMap.Raw.buckets.{u, v} α β m))) (Std.DHashMap.Raw.mk.{u, v} α β (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (Array.replicate.{max u v} (Std.DHashMap.Internal.AssocList.{v, u} α β) (Nat.nextPowerOfTwo (_private.Std.Data.DHashMap.Internal.Defs.0.Std.DHashMap.Internal.numBucketsForCapacity capacity)) (Std.DHashMap.Internal.AssocList.nil.{v, u} α β))) (_private.Std.Data.DHashMap.Internal.Defs.0.Std.DHashMap.Internal.Raw₀.emptyWithCapacity._proof_1.{u, v} α β capacity)

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.Iter.step : forall {α : Type.{w}} {β : Type.{w}} [inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 : Std.Iterator.{w, w} α Id.{w} β] (it : Std.Iter.{w} α β), Std.Iter.Step.{w} α β inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 it
+def Std.Iter.step : forall {α : Type.{w}} {β : Type.{w}} [inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 : Std.Iterator.{w, w} α Id.{w} β] (it : Std.Iter.{w} α β), Std.Iter.Step.{w} α β inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 it :=
+  fun {α : Type.{w}} {β : Type.{w}} [inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 : Std.Iterator.{w, w} α Id.{w} β] (it : Std.Iter.{w} α β) => Std.IterM.Step.toPure.{w} α β inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 (Std.Iter.toIterM.{w} α β it) (Std.Shrink.inflate.{w} (Std.IterM.Step.{w, w} α Id.{w} β inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 (Std.Iter.toIterM.{w} α β it)) (Id.run.{w} (Std.Shrink.{w} (Std.IterM.Step.{w, w} α Id.{w} β inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 (Std.Iter.toIterM.{w} α β it))) (Std.IterM.step.{w, w} α Id.{w} β inst._@.Init.Data.Iterators.Basic.2479753424._hygCtx._hyg.4 (Std.Iter.toIterM.{w} α β it))))

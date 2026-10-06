@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: StateT.map : forall {σ : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.State.3880878766._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}}, (α -> β) -> (StateT.{u, v} σ m α) -> (StateT.{u, v} σ m β)
+def StateT.map : forall {σ : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.State.3880878766._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}}, (α -> β) -> (StateT.{u, v} σ m α) -> (StateT.{u, v} σ m β) :=
+  fun {σ : Type.{u}} {m : Type.{u} -> Type.{v}} [inst._@.Init.Control.State.3880878766._hygCtx._hyg.6 : Monad.{u, v} m] {α : Type.{u}} {β : Type.{u}} (f : α -> β) (x : StateT.{u, v} σ m α) (s : σ) => Bind.bind.{u, v} m (Monad.toBind.{u, v} m inst._@.Init.Control.State.3880878766._hygCtx._hyg.6) (Prod.{u, u} α σ) (Prod.{u, u} β σ) (x s) (fun (__discr._@.Init.Control.State.3880878766._hygCtx._hyg.30 : Prod.{u, u} α σ) => StateT.bind.match_1.{u, succ v} σ α (fun (__discr._@.Init.Control.State.3880878766._hygCtx.30.Init.Control.State.3880878766._hygCtx._hyg.57 : Prod.{u, u} α σ) => m (Prod.{u, u} β σ)) __discr._@.Init.Control.State.3880878766._hygCtx._hyg.30 (fun (a : α) (s : σ) => Pure.pure.{u, v} m (Applicative.toPure.{u, v} m (Monad.toApplicative.{u, v} m inst._@.Init.Control.State.3880878766._hygCtx._hyg.6)) (Prod.{u, u} β σ) (Prod.mk.{u, u} β σ (f a) s)))

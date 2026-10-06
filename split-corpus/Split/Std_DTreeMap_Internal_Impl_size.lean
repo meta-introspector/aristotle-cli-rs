@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.DTreeMap.Internal.Impl.size : forall {α : Type.{u}} {β : α -> Type.{v}}, (Std.DTreeMap.Internal.Impl.{u, v} α β) -> Nat
+def Std.DTreeMap.Internal.Impl.size : forall {α : Type.{u}} {β : α -> Type.{v}}, (Std.DTreeMap.Internal.Impl.{u, v} α β) -> Nat :=
+  fun {α : Type.{u}} {β : α -> Type.{v}} (x._@.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx._hyg.11 : Std.DTreeMap.Internal.Impl.{u, v} α β) => Std.DTreeMap.Internal.Impl.size.match_1.{u, v, 1} α β (fun (x._@.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx.11.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx._hyg.22 : Std.DTreeMap.Internal.Impl.{u, v} α β) => Nat) x._@.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx._hyg.11 (fun (sz : Nat) (k._@.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx._hyg.41 : α) (v._@.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx._hyg.42 : β k._@.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx._hyg.41) (l._@.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx._hyg.43 : Std.DTreeMap.Internal.Impl.{u, v} α β) (r._@.Std.Data.DTreeMap.Internal.Def.1687928787._hygCtx._hyg.44 : Std.DTreeMap.Internal.Impl.{u, v} α β) => sz) (fun (_ : Unit) => OfNat.ofNat.{0} Nat 0 (instOfNatNat 0))

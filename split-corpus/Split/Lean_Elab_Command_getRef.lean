@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Elab.Command.getRef : Lean.Elab.Command.CommandElabM Lean.Syntax
+def Lean.Elab.Command.getRef : Lean.Elab.Command.CommandElabM Lean.Syntax :=
+  Bind.bind.{0, 0} Lean.Elab.Command.CommandElabM (Monad.toBind.{0, 0} Lean.Elab.Command.CommandElabM Lean.Elab.Command.instMonadCommandElabM) Lean.Elab.Command.Context Lean.Syntax (MonadReader.read.{0, 0} Lean.Elab.Command.Context Lean.Elab.Command.CommandElabM (instMonadReaderOfMonadReaderOf.{0, 0} Lean.Elab.Command.Context Lean.Elab.Command.CommandElabM (instMonadReaderOfReaderTOfMonad.{0, 0} Lean.Elab.Command.Context (StateRefT' IO.RealWorld Lean.Elab.Command.State (EIO Lean.Exception)) (StateRefT'.instMonad IO.RealWorld Lean.Elab.Command.State (EIO Lean.Exception) (instMonadEIO Lean.Exception))))) (fun (__do_lift._@.Lean.Elab.Command.3593469140._hygCtx._hyg.11.0 : Lean.Elab.Command.Context) => Pure.pure.{0, 0} Lean.Elab.Command.CommandElabM (Applicative.toPure.{0, 0} Lean.Elab.Command.CommandElabM (ReaderT.instApplicativeOfMonad.{0, 0} Lean.Elab.Command.Context (StateRefT' IO.RealWorld Lean.Elab.Command.State (EIO Lean.Exception)) (StateRefT'.instMonad IO.RealWorld Lean.Elab.Command.State (EIO Lean.Exception) (instMonadEIO Lean.Exception)))) Lean.Syntax (Lean.Elab.Command.Context.ref __do_lift._@.Lean.Elab.Command.3593469140._hygCtx._hyg.11.0))

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: List.cons.noConfusion : forall {α : Type.{u}} {P : Sort.{u_1}} {head : α} {tail : List.{u} α} {head' : α} {tail' : List.{u} α}, (Eq.{succ u} (List.{u} α) (List.cons.{u} α head tail) (List.cons.{u} α head' tail')) -> ((HEq.{succ u} α head α head') -> (HEq.{succ u} (List.{u} α) tail (List.{u} α) tail') -> P) -> P
+def List.cons.noConfusion : forall {α : Type.{u}} {P : Sort.{u_1}} {head : α} {tail : List.{u} α} {head' : α} {tail' : List.{u} α}, (Eq.{succ u} (List.{u} α) (List.cons.{u} α head tail) (List.cons.{u} α head' tail')) -> ((HEq.{succ u} α head α head') -> (HEq.{succ u} (List.{u} α) tail (List.{u} α) tail') -> P) -> P :=
+  fun {α : Type.{u}} {P : Sort.{u_1}} {head : α} {tail : List.{u} α} {head' : α} {tail' : List.{u} α} (eq : Eq.{succ u} (List.{u} α) (List.cons.{u} α head tail) (List.cons.{u} α head' tail')) (k : (HEq.{succ u} α head α head') -> (HEq.{succ u} (List.{u} α) tail (List.{u} α) tail') -> P) => id.{u_1} P (List.noConfusion.{u_1, u} P α (List.cons.{u} α head tail) α (List.cons.{u} α head' tail') (Eq.refl.{succ (succ u)} Type.{u} α) (heq_of_eq.{succ u} (List.{u} α) (List.cons.{u} α head tail) (List.cons.{u} α head' tail') eq) k)

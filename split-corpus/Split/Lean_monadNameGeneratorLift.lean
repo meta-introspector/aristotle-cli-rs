@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.monadNameGeneratorLift : forall (m : Type -> Type) (n : Type -> Type) [inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.8 : MonadLift.{0, 0, 0} m n] [inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.12 : Lean.MonadNameGenerator m], Lean.MonadNameGenerator n
+def Lean.monadNameGeneratorLift : forall (m : Type -> Type) (n : Type -> Type) [inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.8 : MonadLift.{0, 0, 0} m n] [inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.12 : Lean.MonadNameGenerator m], Lean.MonadNameGenerator n :=
+  fun (m : Type -> Type) (n : Type -> Type) [inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.8 : MonadLift.{0, 0, 0} m n] [inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.12 : Lean.MonadNameGenerator m] => Lean.MonadNameGenerator.mk n (liftM.{0, 0, 0} m n (instMonadLiftTOfMonadLift.{0, 0, 0, 0} m m n inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.8 (instMonadLiftT.{0, 0} m)) Lean.NameGenerator (Lean.MonadNameGenerator.getNGen m inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.12)) (fun (ngen : Lean.NameGenerator) => liftM.{0, 0, 0} m n (instMonadLiftTOfMonadLift.{0, 0, 0, 0} m m n inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.8 (instMonadLiftT.{0, 0} m)) Unit (Lean.MonadNameGenerator.setNGen m inst._@.Init.Meta.Defs.387019827._hygCtx._hyg.12 ngen))

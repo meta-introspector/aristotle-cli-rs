@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: MicroLean.emitPythonLinear : MicroLean.LinearMicroType -> String
+def MicroLean.emitPythonLinear : MicroLean.LinearMicroType -> String :=
+  fun (x._@.RequestProject.MicroLean.2145653042._hygCtx._hyg.5 : MicroLean.LinearMicroType) => MicroLean.emitRustLinear.match_1.{1} (fun (x._@.RequestProject.MicroLean.2145653042._hygCtx.5.RequestProject.MicroLean.2145653042._hygCtx._hyg.16 : MicroLean.LinearMicroType) => String) x._@.RequestProject.MicroLean.2145653042._hygCtx._hyg.5 (fun (t : MicroLean.MicroLeanType) => HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString "Final[") (ToString.toString.{0} String instToStringString (MicroLean.emitPython t))) (ToString.toString.{0} String instToStringString "]  # borrowed: do not retain")) (fun (t : MicroLean.MicroLeanType) => HAppend.hAppend.{0, 0, 0} String String String (instHAppendOfAppend.{0} String instAppendString) (ToString.toString.{0} String instToStringString (MicroLean.emitPython t)) (ToString.toString.{0} String instToStringString "  # owned: caller transfers"))

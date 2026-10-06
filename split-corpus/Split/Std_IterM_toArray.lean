@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.IterM.toArray : forall {α : Type.{w}} {β : Type.{w}} {m : Type.{w} -> Type.{w'}} [inst._@.Init.Data.Iterators.Consumers.Monadic.Collect.3236840523._hygCtx._hyg.7 : Monad.{w, w'} m] [inst._@.Init.Data.Iterators.Consumers.Monadic.Collect.3236840523._hygCtx._hyg.10 : Std.Iterator.{w, w'} α m β], (Std.IterM.{w, w'} α m β) -> (m (Array.{w} β))
+def Std.IterM.toArray : forall {α : Type.{w}} {β : Type.{w}} {m : Type.{w} -> Type.{w'}} [inst._@.Init.Data.Iterators.Consumers.Monadic.Collect.3236840523._hygCtx._hyg.7 : Monad.{w, w'} m] [inst._@.Init.Data.Iterators.Consumers.Monadic.Collect.3236840523._hygCtx._hyg.10 : Std.Iterator.{w, w'} α m β], (Std.IterM.{w, w'} α m β) -> (m (Array.{w} β)) :=
+  fun {α : Type.{w}} {β : Type.{w}} {m : Type.{w} -> Type.{w'}} [inst._@.Init.Data.Iterators.Consumers.Monadic.Collect.3236840523._hygCtx._hyg.7 : Monad.{w, w'} m] [inst._@.Init.Data.Iterators.Consumers.Monadic.Collect.3236840523._hygCtx._hyg.10 : Std.Iterator.{w, w'} α m β] (it : Std.IterM.{w, w'} α m β) => Std.IterM.toArray.go.{w, w'} α β m inst._@.Init.Data.Iterators.Consumers.Monadic.Collect.3236840523._hygCtx._hyg.7 inst._@.Init.Data.Iterators.Consumers.Monadic.Collect.3236840523._hygCtx._hyg.10 it (List.toArray.{w} β (List.nil.{w} β))

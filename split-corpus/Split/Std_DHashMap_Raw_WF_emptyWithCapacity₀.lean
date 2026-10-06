@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: constructor Std.DHashMap.Raw.WF.emptyWithCapacity₀ : forall {α : Type.{u}} {β : α -> Type.{v}} [inst._@.Std.Data.DHashMap.Raw.1514113539._hygCtx._hyg.77 : BEq.{u} α] [inst._@.Std.Data.DHashMap.Raw.1514113539._hygCtx._hyg.80 : Hashable.{succ u} α] {c : Nat}, Std.DHashMap.Raw.WF.{u, v} α β inst._@.Std.Data.DHashMap.Raw.1514113539._hygCtx._hyg.77 inst._@.Std.Data.DHashMap.Raw.1514113539._hygCtx._hyg.80 (Subtype.val.{max (succ u) (succ v)} (Std.DHashMap.Raw.{u, v} α β) (fun (m : Std.DHashMap.Raw.{u, v} α β) => LT.lt.{0} Nat instLTNat (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (Array.size.{max u v} (Std.DHashMap.Internal.AssocList.{v, u} α β) (Std.DHashMap.Raw.buckets.{u, v} α β m))) (Std.DHashMap.Internal.Raw₀.emptyWithCapacity.{u, v} α β c))

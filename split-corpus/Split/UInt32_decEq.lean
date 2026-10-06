@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: UInt32.decEq : forall (a : UInt32) (b : UInt32), Decidable (Eq.{1} UInt32 a b)
+def UInt32.decEq : forall (a : UInt32) (b : UInt32), Decidable (Eq.{1} UInt32 a b) :=
+  fun (a : UInt32) (b : UInt32) => UInt32.decEq.match_1.{1} (fun (a._@.Init.Prelude.18944140._hygCtx._hyg.14 : UInt32) (b._@.Init.Prelude.18944140._hygCtx._hyg.16 : UInt32) => Decidable (Eq.{1} UInt32 a._@.Init.Prelude.18944140._hygCtx._hyg.14 b._@.Init.Prelude.18944140._hygCtx._hyg.16)) a b (fun (n : BitVec (OfNat.ofNat.{0} Nat 32 (instOfNatNat 32))) (m : BitVec (OfNat.ofNat.{0} Nat 32 (instOfNatNat 32))) => dite.{1} (Decidable (Eq.{1} UInt32 (UInt32.ofBitVec n) (UInt32.ofBitVec m))) (Eq.{1} (BitVec (OfNat.ofNat.{0} Nat 32 (instOfNatNat 32))) n m) (instDecidableEqBitVec (OfNat.ofNat.{0} Nat 32 (instOfNatNat 32)) n m) (fun (h : Eq.{1} (BitVec (OfNat.ofNat.{0} Nat 32 (instOfNatNat 32))) n m) => Decidable.isTrue (Eq.{1} UInt32 (UInt32.ofBitVec n) (UInt32.ofBitVec m)) (UInt32.decEq._proof_1 n m h)) (fun (h : Not (Eq.{1} (BitVec (OfNat.ofNat.{0} Nat 32 (instOfNatNat 32))) n m)) => Decidable.isFalse (Eq.{1} UInt32 (UInt32.ofBitVec n) (UInt32.ofBitVec m)) (UInt32.decEq._proof_2 n m h)))

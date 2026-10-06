@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Nat.pow : ([mdata borrowed:1 Nat]) -> ([mdata borrowed:1 Nat]) -> Nat
+def Nat.pow : ([mdata borrowed:1 Nat]) -> ([mdata borrowed:1 Nat]) -> Nat :=
+  fun (m : Nat) (x._@.Init.Prelude.427477602._hygCtx._hyg.10 : Nat) => Nat.brecOn.{1} (fun (x._@.Init.Prelude.427477602._hygCtx._hyg.10 : Nat) => Nat) x._@.Init.Prelude.427477602._hygCtx._hyg.10 (fun (x._@.Init.Prelude.427477602._hygCtx._hyg.10 : Nat) (f : Nat.below.{1} (fun (x._@.Init.Prelude.427477602._hygCtx._hyg.10 : Nat) => Nat) x._@.Init.Prelude.427477602._hygCtx._hyg.10) => Nat.pow.match_1.{1} (fun (x._@.Init.Prelude.427477602._hygCtx.10.Init.Prelude.427477602._hygCtx._hyg.21 : Nat) => (Nat.below.{1} (fun (x._@.Init.Prelude.427477602._hygCtx._hyg.10 : Nat) => Nat) x._@.Init.Prelude.427477602._hygCtx.10.Init.Prelude.427477602._hygCtx._hyg.21) -> Nat) x._@.Init.Prelude.427477602._hygCtx._hyg.10 (fun (_ : Unit) (x._@.Init.Prelude.427477602._hygCtx._hyg.41 : Nat.below.{1} (fun (x._@.Init.Prelude.427477602._hygCtx._hyg.10 : Nat) => Nat) (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0))) => OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) (fun (n : Nat) (x._@.Init.Prelude.427477602._hygCtx._hyg.41 : Nat.below.{1} (fun (x._@.Init.Prelude.427477602._hygCtx._hyg.10 : Nat) => Nat) (Nat.succ n)) => Nat.mul x._@.Init.Prelude.427477602._hygCtx._hyg.41.1 m) f)

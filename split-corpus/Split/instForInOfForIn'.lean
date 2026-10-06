@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: instForInOfForIn' : forall {m : Type.{u_1} -> Type.{u_2}} {ρ : Type.{u_3}} {α : Type.{u_4}} {d : Membership.{u_4, u_3} α ρ} [inst._@.Init.Control.Basic.3880515848._hygCtx._hyg.20 : ForIn'.{u_3, u_4, u_1, u_2} m ρ α d], ForIn.{u_3, u_4, u_1, u_2} m ρ α
+def instForInOfForIn' : forall {m : Type.{u_1} -> Type.{u_2}} {ρ : Type.{u_3}} {α : Type.{u_4}} {d : Membership.{u_4, u_3} α ρ} [inst._@.Init.Control.Basic.3880515848._hygCtx._hyg.20 : ForIn'.{u_3, u_4, u_1, u_2} m ρ α d], ForIn.{u_3, u_4, u_1, u_2} m ρ α :=
+  fun {m : Type.{u_1} -> Type.{u_2}} {ρ : Type.{u_3}} {α : Type.{u_4}} {d : Membership.{u_4, u_3} α ρ} [inst._@.Init.Control.Basic.3880515848._hygCtx._hyg.20 : ForIn'.{u_3, u_4, u_1, u_2} m ρ α d] => ForIn.mk.{u_3, u_4, u_1, u_2} m ρ α (fun {β._@.Init.Control.Basic.3880515848._hygCtx._hyg.37 : Type.{u_1}} (x : ρ) (b : β._@.Init.Control.Basic.3880515848._hygCtx._hyg.37) (f : α -> β._@.Init.Control.Basic.3880515848._hygCtx._hyg.37 -> (m (ForInStep.{u_1} β._@.Init.Control.Basic.3880515848._hygCtx._hyg.37))) => ForIn'.forIn'.{u_3, u_4, u_1, u_2} m ρ α d inst._@.Init.Control.Basic.3880515848._hygCtx._hyg.20 β._@.Init.Control.Basic.3880515848._hygCtx._hyg.37 x b (fun (a : α) (x._@.Init.Control.Basic.3880515848._hygCtx._hyg.47 : Membership.mem.{u_4, u_3} α ρ d x a) => f a))

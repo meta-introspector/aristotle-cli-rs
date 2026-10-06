@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: tryFinally : forall {m : Type.{u} -> Type.{v}} {α : Type.{u}} {β : Type.{u}} [inst._@.Init.Control.Except.2478996145._hygCtx._hyg.7 : MonadFinally.{u, v} m] [inst._@.Init.Control.Except.2478996145._hygCtx._hyg.10 : Functor.{u, v} m], (m α) -> (m β) -> (m α)
+def tryFinally : forall {m : Type.{u} -> Type.{v}} {α : Type.{u}} {β : Type.{u}} [inst._@.Init.Control.Except.2478996145._hygCtx._hyg.7 : MonadFinally.{u, v} m] [inst._@.Init.Control.Except.2478996145._hygCtx._hyg.10 : Functor.{u, v} m], (m α) -> (m β) -> (m α) :=
+  fun {m : Type.{u} -> Type.{v}} {α : Type.{u}} {β : Type.{u}} [inst._@.Init.Control.Except.2478996145._hygCtx._hyg.7 : MonadFinally.{u, v} m] [inst._@.Init.Control.Except.2478996145._hygCtx._hyg.10 : Functor.{u, v} m] (x : m α) (finalizer : m β) => have y : m (Prod.{u, u} α β) := MonadFinally.tryFinally'.{u, v} m inst._@.Init.Control.Except.2478996145._hygCtx._hyg.7 α β x (fun (x._@.Init.Control.Except.2478996145._hygCtx._hyg.27 : Option.{u} α) => finalizer); Functor.map.{u, v} m inst._@.Init.Control.Except.2478996145._hygCtx._hyg.10 (Prod.{u, u} α β) α (fun (x._@.Init.Control.Except.2478996145._hygCtx._hyg.35 : Prod.{u, u} α β) => Prod.fst.{u, u} α β x._@.Init.Control.Except.2478996145._hygCtx._hyg.35) y

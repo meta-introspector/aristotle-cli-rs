@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: EStateM.modifyGet.match_1 : forall {σ : Type.{u_1}} {α : Type.{u_1}} (motive : (Prod.{u_1, u_1} α σ) -> Sort.{u_2}) (x._@.Init.Prelude.2882318218._hygCtx._hyg.26 : Prod.{u_1, u_1} α σ), (forall (a : α) (s : σ), motive (Prod.mk.{u_1, u_1} α σ a s)) -> (motive x._@.Init.Prelude.2882318218._hygCtx._hyg.26)
+def EStateM.modifyGet.match_1 : forall {σ : Type.{u_1}} {α : Type.{u_1}} (motive : (Prod.{u_1, u_1} α σ) -> Sort.{u_2}) (x._@.Init.Prelude.2882318218._hygCtx._hyg.26 : Prod.{u_1, u_1} α σ), (forall (a : α) (s : σ), motive (Prod.mk.{u_1, u_1} α σ a s)) -> (motive x._@.Init.Prelude.2882318218._hygCtx._hyg.26) :=
+  fun {σ : Type.{u_1}} {α : Type.{u_1}} (motive : (Prod.{u_1, u_1} α σ) -> Sort.{u_2}) (x._@.Init.Prelude.2882318218._hygCtx._hyg.26 : Prod.{u_1, u_1} α σ) (h_1 : forall (a : α) (s : σ), motive (Prod.mk.{u_1, u_1} α σ a s)) => Prod.casesOn.{u_2, u_1, u_1} α σ (fun (x : Prod.{u_1, u_1} α σ) => motive x) x._@.Init.Prelude.2882318218._hygCtx._hyg.26 (fun (fst._@.Init.Prelude.2882318218._hygCtx._hyg.40 : α) (snd._@.Init.Prelude.2882318218._hygCtx._hyg.41 : σ) => h_1 fst._@.Init.Prelude.2882318218._hygCtx._hyg.40 snd._@.Init.Prelude.2882318218._hygCtx._hyg.41)

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: ByteArray.copySlice : ([mdata borrowed:1 ByteArray]) -> Nat -> ByteArray -> Nat -> Nat -> (optParam.{1} Bool Bool.true) -> ByteArray
+def ByteArray.copySlice : ([mdata borrowed:1 ByteArray]) -> Nat -> ByteArray -> Nat -> Nat -> (optParam.{1} Bool Bool.true) -> ByteArray :=
+  fun (src : ByteArray) (srcOff : Nat) (dest : ByteArray) (destOff : Nat) (len : Nat) (exact : Bool) => ByteArray.mk (HAppend.hAppend.{0, 0, 0} (Array.{0} UInt8) (Array.{0} UInt8) (Array.{0} UInt8) (instHAppendOfAppend.{0} (Array.{0} UInt8) (Array.instAppend.{0} UInt8)) (HAppend.hAppend.{0, 0, 0} (Array.{0} UInt8) (Array.{0} UInt8) (Array.{0} UInt8) (instHAppendOfAppend.{0} (Array.{0} UInt8) (Array.instAppend.{0} UInt8)) (Array.extract.{0} UInt8 (ByteArray.data dest) (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) destOff) (Array.extract.{0} UInt8 (ByteArray.data src) srcOff (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) srcOff len))) (Array.extract.{0} UInt8 (ByteArray.data dest) (HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) destOff (Min.min.{0} Nat instMinNat len (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) (Array.size.{0} UInt8 (ByteArray.data src)) srcOff))) (Array.size.{0} UInt8 (ByteArray.data dest))))

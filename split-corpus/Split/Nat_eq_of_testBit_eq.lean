@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.eq_of_testBit_eq : forall {x : Nat} {y : Nat}, (forall (i : Nat), Eq.{1} Bool (Nat.testBit x i) (Nat.testBit y i)) -> (Eq.{1} Nat x y)
+theorem Nat.eq_of_testBit_eq : forall {x : Nat} {y : Nat}, (forall (i : Nat), Eq.{1} Bool (Nat.testBit x i) (Nat.testBit y i)) -> (Eq.{1} Nat x y) :=
+  fun {x : Nat} {y : Nat} (pred : forall (i : Nat), Eq.{1} Bool (Nat.testBit x i) (Nat.testBit y i)) => dite.{0} (Eq.{1} Nat x y) (Eq.{1} Nat x y) (instDecidableEqNat x y) (fun (h : Eq.{1} Nat x y) => h) (fun (h : Not (Eq.{1} Nat x y)) => _private.Init.Data.Nat.Bitwise.Lemmas.0.Nat.eq_of_testBit_eq.match_1_1 x y (fun (x._@.Init.Data.Nat.Bitwise.Lemmas.198915824._hygCtx._hyg.97 : Exists.{1} Nat (fun (i : Nat) => Ne.{1} Bool (Nat.testBit x i) (Nat.testBit y i))) => [mdata noImplicitLambda:1 Eq.{1} Nat x y]) (Nat.exists_testBit_ne_of_ne x y h) (fun (i : Nat) (eq : Ne.{1} Bool (Nat.testBit x i) (Nat.testBit y i)) => have p : Eq.{1} Bool (Nat.testBit x i) (Nat.testBit y i) := pred i; False.elim.{0} ([mdata noImplicitLambda:1 Eq.{1} Nat x y]) (eq p)))

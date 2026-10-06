@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.PersistentArray.get! : forall {α : Type.{u}} [inst._@.Lean.Data.PersistentArray.2959036029._hygCtx._hyg.3 : Inhabited.{succ u} α], (Lean.PersistentArray.{u} α) -> Nat -> α
+def Lean.PersistentArray.get! : forall {α : Type.{u}} [inst._@.Lean.Data.PersistentArray.2959036029._hygCtx._hyg.3 : Inhabited.{succ u} α], (Lean.PersistentArray.{u} α) -> Nat -> α :=
+  fun {α : Type.{u}} [inst._@.Lean.Data.PersistentArray.2959036029._hygCtx._hyg.3 : Inhabited.{succ u} α] (t : Lean.PersistentArray.{u} α) (i : Nat) => ite.{succ u} α (GE.ge.{0} Nat instLENat i (Lean.PersistentArray.tailOff.{u} α t)) (Nat.decLe (Lean.PersistentArray.tailOff.{u} α t) i) (GetElem?.getElem!.{u, 0, u} (Array.{u} α) Nat α (fun (xs : Array.{u} α) (i : Nat) => LT.lt.{0} Nat instLTNat i (Array.size.{u} α xs)) (Array.instGetElem?NatLtSize.{u} α) inst._@.Lean.Data.PersistentArray.2959036029._hygCtx._hyg.3 (Lean.PersistentArray.tail.{u} α t) (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) i (Lean.PersistentArray.tailOff.{u} α t))) (Lean.PersistentArray.getAux.{u} α inst._@.Lean.Data.PersistentArray.2959036029._hygCtx._hyg.3 (Lean.PersistentArray.root.{u} α t) (USize.ofNat i) (Lean.PersistentArray.shift.{u} α t))

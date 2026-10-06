@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.brecOn.eq : forall {motive : Nat -> Sort.{u}} (t : Nat) (F_1 : forall (t : Nat), (Nat.below.{u} motive t) -> (motive t)), Eq.{u} (motive t) (Nat.brecOn.{u} motive t F_1) (F_1 t ((Nat.brecOn.go.{u} motive t F_1).2))
+theorem Nat.brecOn.eq : forall {motive : Nat -> Sort.{u}} (t : Nat) (F_1 : forall (t : Nat), (Nat.below.{u} motive t) -> (motive t)), Eq.{u} (motive t) (Nat.brecOn.{u} motive t F_1) (F_1 t ((Nat.brecOn.go.{u} motive t F_1).2)) :=
+  fun {motive : Nat -> Sort.{u}} (t : Nat) (F_1 : forall (t : Nat), (Nat.below.{u} motive t) -> (motive t)) => Nat.casesOn.{0} (fun (x : Nat) => Eq.{u} (motive x) (Nat.brecOn.{u} motive x F_1) (F_1 x ((Nat.brecOn.go.{u} motive x F_1).2))) t (Eq.refl.{u} (motive Nat.zero) (Nat.brecOn.{u} motive Nat.zero F_1)) (fun (n._@.Init.Prelude.1759501723._hygCtx._hyg.8 : Nat) => Eq.refl.{u} (motive (Nat.succ n._@.Init.Prelude.1759501723._hygCtx._hyg.8)) (Nat.brecOn.{u} motive (Nat.succ n._@.Init.Prelude.1759501723._hygCtx._hyg.8) F_1))

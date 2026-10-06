@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: instDecidableAnd.match_1 : forall {q : Prop} (motive : (Decidable q) -> Sort.{u_1}) (dq._@.Init.Prelude.3138210578._hygCtx._hyg.26 : Decidable q), (forall (hq : q), motive (Decidable.isTrue q hq)) -> (forall (hq : Not q), motive (Decidable.isFalse q hq)) -> (motive dq._@.Init.Prelude.3138210578._hygCtx._hyg.26)
+def instDecidableAnd.match_1 : forall {q : Prop} (motive : (Decidable q) -> Sort.{u_1}) (dq._@.Init.Prelude.3138210578._hygCtx._hyg.26 : Decidable q), (forall (hq : q), motive (Decidable.isTrue q hq)) -> (forall (hq : Not q), motive (Decidable.isFalse q hq)) -> (motive dq._@.Init.Prelude.3138210578._hygCtx._hyg.26) :=
+  fun {q : Prop} (motive : (Decidable q) -> Sort.{u_1}) (dq._@.Init.Prelude.3138210578._hygCtx._hyg.26 : Decidable q) (h_1 : forall (hq : q), motive (Decidable.isTrue q hq)) (h_2 : forall (hq : Not q), motive (Decidable.isFalse q hq)) => Decidable.casesOn.{u_1} q (fun (x : Decidable q) => motive x) dq._@.Init.Prelude.3138210578._hygCtx._hyg.26 (fun (h._@.Init.Prelude.3138210578._hygCtx._hyg.55 : Not q) => h_2 h._@.Init.Prelude.3138210578._hygCtx._hyg.55) (fun (h._@.Init.Prelude.3138210578._hygCtx._hyg.56 : q) => h_1 h._@.Init.Prelude.3138210578._hygCtx._hyg.56)

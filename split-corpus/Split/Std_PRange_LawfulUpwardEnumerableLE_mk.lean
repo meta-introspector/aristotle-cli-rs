@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: constructor Std.PRange.LawfulUpwardEnumerableLE.mk : forall {α : Type.{u}} [inst._@.Init.Data.Range.Polymorphic.UpwardEnumerable.1679492678._hygCtx._hyg.3 : Std.PRange.UpwardEnumerable.{u} α] [inst._@.Init.Data.Range.Polymorphic.UpwardEnumerable.1679492678._hygCtx._hyg.6 : LE.{u} α], (forall (a : α) (b : α), Iff (LE.le.{u} α inst._@.Init.Data.Range.Polymorphic.UpwardEnumerable.1679492678._hygCtx._hyg.6 a b) (Std.PRange.UpwardEnumerable.LE.{u} α inst._@.Init.Data.Range.Polymorphic.UpwardEnumerable.1679492678._hygCtx._hyg.3 a b)) -> (Std.PRange.LawfulUpwardEnumerableLE.{u} α inst._@.Init.Data.Range.Polymorphic.UpwardEnumerable.1679492678._hygCtx._hyg.3 inst._@.Init.Data.Range.Polymorphic.UpwardEnumerable.1679492678._hygCtx._hyg.6)

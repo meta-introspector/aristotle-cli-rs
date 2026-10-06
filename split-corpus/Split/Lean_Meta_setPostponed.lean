@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Meta.setPostponed : (Lean.PersistentArray.{0} Lean.Meta.PostponedEntry) -> (Lean.Meta.MetaM Unit)
+def Lean.Meta.setPostponed : (Lean.PersistentArray.{0} Lean.Meta.PostponedEntry) -> (Lean.Meta.MetaM Unit) :=
+  fun (postponed : Lean.PersistentArray.{0} Lean.Meta.PostponedEntry) => modify.{0, 0} Lean.Meta.State Lean.Meta.MetaM (instMonadStateOfMonadStateOf.{0, 0} Lean.Meta.State Lean.Meta.MetaM (instMonadStateOfOfMonadLift.{0, 0, 0} Lean.Meta.State (StateRefT' IO.RealWorld Lean.Meta.State Lean.Core.CoreM) Lean.Meta.MetaM (ReaderT.instMonadLift.{0, 0} Lean.Meta.Context (StateRefT' IO.RealWorld Lean.Meta.State Lean.Core.CoreM)) (StateRefT'.instMonadStateOfOfMonadLiftTST IO.RealWorld Lean.Meta.State Lean.Core.CoreM (instMonadLiftTOfMonadLift.{0, 0, 0, 0} (ST IO.RealWorld) IO Lean.Core.CoreM Lean.Core.instMonadLiftIOCoreM (instMonadLiftTOfMonadLift.{0, 0, 0, 0} (ST IO.RealWorld) BaseIO IO (instMonadLiftBaseIOEIO IO.Error) (instMonadLiftTOfMonadLift.{0, 0, 0, 0} (ST IO.RealWorld) (ST IO.RealWorld) BaseIO IO.instMonadLiftSTRealWorldBaseIO (instMonadLiftT.{0, 0} (ST IO.RealWorld)))))))) (fun (s : Lean.Meta.State) => Lean.Meta.State.mk (Lean.Meta.State.mctx s) (Lean.Meta.State.cache s) (Lean.Meta.State.zetaDeltaFVarIds s) postponed (Lean.Meta.State.diag s))

@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: AristotleWeaver.Core.SimpleExpr.bvar.noConfusion : forall {P : Sort.{u}} {a._@._internal._hyg.0 : Nat} {a'._@._internal._hyg.0 : Nat}, (Eq.{1} AristotleWeaver.Core.SimpleExpr (AristotleWeaver.Core.SimpleExpr.bvar a._@._internal._hyg.0) (AristotleWeaver.Core.SimpleExpr.bvar a'._@._internal._hyg.0)) -> ((Eq.{1} Nat a._@._internal._hyg.0 a'._@._internal._hyg.0) -> P) -> P
+def AristotleWeaver.Core.SimpleExpr.bvar.noConfusion : forall {P : Sort.{u}} {a._@._internal._hyg.0 : Nat} {a'._@._internal._hyg.0 : Nat}, (Eq.{1} AristotleWeaver.Core.SimpleExpr (AristotleWeaver.Core.SimpleExpr.bvar a._@._internal._hyg.0) (AristotleWeaver.Core.SimpleExpr.bvar a'._@._internal._hyg.0)) -> ((Eq.{1} Nat a._@._internal._hyg.0 a'._@._internal._hyg.0) -> P) -> P :=
+  fun {P : Sort.{u}} {a._@._internal._hyg.0 : Nat} {a'._@._internal._hyg.0 : Nat} (eq : Eq.{1} AristotleWeaver.Core.SimpleExpr (AristotleWeaver.Core.SimpleExpr.bvar a._@._internal._hyg.0) (AristotleWeaver.Core.SimpleExpr.bvar a'._@._internal._hyg.0)) (k : (Eq.{1} Nat a._@._internal._hyg.0 a'._@._internal._hyg.0) -> P) => id.{u} P (AristotleWeaver.Core.SimpleExpr.noConfusion.{u} P (AristotleWeaver.Core.SimpleExpr.bvar a._@._internal._hyg.0) (AristotleWeaver.Core.SimpleExpr.bvar a'._@._internal._hyg.0) eq k)

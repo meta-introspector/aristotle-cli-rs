@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Std.IterStep.casesOn : forall {α : Sort.{u_1}} {β : Sort.{u_2}} {motive : (Std.IterStep.{u_1, u_2} α β) -> Sort.{u}} (t : Std.IterStep.{u_1, u_2} α β), (forall (it : α) (out : β), motive (Std.IterStep.yield.{u_1, u_2} α β it out)) -> (forall (it : α), motive (Std.IterStep.skip.{u_1, u_2} α β it)) -> (motive (Std.IterStep.done.{u_1, u_2} α β)) -> (motive t)
+def Std.IterStep.casesOn : forall {α : Sort.{u_1}} {β : Sort.{u_2}} {motive : (Std.IterStep.{u_1, u_2} α β) -> Sort.{u}} (t : Std.IterStep.{u_1, u_2} α β), (forall (it : α) (out : β), motive (Std.IterStep.yield.{u_1, u_2} α β it out)) -> (forall (it : α), motive (Std.IterStep.skip.{u_1, u_2} α β it)) -> (motive (Std.IterStep.done.{u_1, u_2} α β)) -> (motive t) :=
+  fun {α : Sort.{u_1}} {β : Sort.{u_2}} {motive : (Std.IterStep.{u_1, u_2} α β) -> Sort.{u}} (t : Std.IterStep.{u_1, u_2} α β) (yield : forall (it : α) (out : β), motive (Std.IterStep.yield.{u_1, u_2} α β it out)) (skip : forall (it : α), motive (Std.IterStep.skip.{u_1, u_2} α β it)) (done : motive (Std.IterStep.done.{u_1, u_2} α β)) => Std.IterStep.rec.{u, u_1, u_2} α β motive (fun (it : α) (out : β) => yield it out) (fun (it : α) => skip it) done t

@@ -1,0 +1,3 @@
+import Mathlib
+
+-- spec: constructor Std.HashMap.mk : forall {α : Type.{u}} {β : Type.{v}} [inst._@.Std.Data.HashMap.Basic.3281969765._hygCtx._hyg.20 : BEq.{u} α] [inst._@.Std.Data.HashMap.Basic.3281969765._hygCtx._hyg.23 : Hashable.{succ u} α], (Std.DHashMap.{u, v} α (fun (x._@.Std.Data.HashMap.Basic.3281969765._hygCtx._hyg.33 : α) => β) inst._@.Std.Data.HashMap.Basic.3281969765._hygCtx._hyg.20 inst._@.Std.Data.HashMap.Basic.3281969765._hygCtx._hyg.23) -> (Std.HashMap.{u, v} α β inst._@.Std.Data.HashMap.Basic.3281969765._hygCtx._hyg.20 inst._@.Std.Data.HashMap.Basic.3281969765._hygCtx._hyg.23)

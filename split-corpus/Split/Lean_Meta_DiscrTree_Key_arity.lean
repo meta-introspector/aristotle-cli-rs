@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Meta.DiscrTree.Key.arity : Lean.Meta.DiscrTree.Key -> Nat
+def Lean.Meta.DiscrTree.Key.arity : Lean.Meta.DiscrTree.Key -> Nat :=
+  fun (x._@.Lean.Meta.DiscrTree.Main.179417476._hygCtx._hyg.5 : Lean.Meta.DiscrTree.Key) => _private.Lean.Meta.DiscrTree.Main.0.Lean.Meta.DiscrTree.Key.arity.match_1.{1} (fun (x._@.Lean.Meta.DiscrTree.Main.179417476._hygCtx.5.Lean.Meta.DiscrTree.Main.179417476._hygCtx._hyg.16 : Lean.Meta.DiscrTree.Key) => Nat) x._@.Lean.Meta.DiscrTree.Main.179417476._hygCtx._hyg.5 (fun (a._@._internal.0.Lean.Meta.DiscrTree.Main.179417476._hygCtx._hyg.24 : Lean.Name) (a : Nat) => a) (fun (a._@._internal.0.Lean.Meta.DiscrTree.Main.179417476._hygCtx._hyg.34 : Lean.FVarId) (a : Nat) => a) (fun (_ : Unit) => OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) (fun (a._@._internal.0.Lean.Meta.DiscrTree.Main.179417476._hygCtx._hyg.51 : Lean.Name) (a._@._internal.0.Lean.Meta.DiscrTree.Main.179417476._hygCtx._hyg.52 : Nat) (a : Nat) => HAdd.hAdd.{0, 0, 0} Nat Nat Nat (instHAdd.{0} Nat instAddNat) (OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)) a) (fun (x._@.Lean.Meta.DiscrTree.Main.179417476._hygCtx._hyg.62 : Lean.Meta.DiscrTree.Key) => OfNat.ofNat.{0} Nat 0 (instOfNatNat 0))

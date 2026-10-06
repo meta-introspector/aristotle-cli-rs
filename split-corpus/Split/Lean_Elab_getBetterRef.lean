@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Elab.getBetterRef : Lean.Syntax -> Lean.Elab.MacroStack -> Lean.Syntax
+def Lean.Elab.getBetterRef : Lean.Syntax -> Lean.Elab.MacroStack -> Lean.Syntax :=
+  fun (ref : Lean.Syntax) (macroStack : Lean.Elab.MacroStack) => _private.Lean.Elab.Util.0.Lean.Elab.getBetterRef.match_3.{1} (fun (x._@.Lean.Elab.Util.3844706198._hygCtx._hyg.8 : Option.{0} String.Pos.Raw) => Lean.Syntax) (Lean.Syntax.getPos? ref Bool.false) (fun (val._@.Lean.Elab.Util.3844706198._hygCtx._hyg.15 : String.Pos.Raw) => ref) (fun (_ : Unit) => _private.Lean.Elab.Util.0.Lean.Elab.getBetterRef.match_1.{1} (fun (x._@.Lean.Elab.Util.3844706198._hygCtx._hyg.41 : Option.{0} Lean.Elab.MacroStackElem) => Lean.Syntax) (List.find?.{0} Lean.Elab.MacroStackElem (fun (x._@.Lean.Elab.Util.3844706198._hygCtx._hyg.26 : Lean.Elab.MacroStackElem) => bne.{0} (Option.{0} String.Pos.Raw) (Option.instBEq.{0} String.Pos.Raw (instBEqOfDecidableEq.{0} String.Pos.Raw instDecidableEqRaw)) (Lean.Syntax.getPos? (Lean.Elab.MacroStackElem.before x._@.Lean.Elab.Util.3844706198._hygCtx._hyg.26) Bool.false) (Option.none.{0} String.Pos.Raw)) macroStack) (fun (elem : Lean.Elab.MacroStackElem) => Lean.Elab.MacroStackElem.before elem) (fun (_ : Unit) => ref))

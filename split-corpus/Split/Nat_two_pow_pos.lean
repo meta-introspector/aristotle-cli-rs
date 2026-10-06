@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.two_pow_pos : forall (w : Nat), LT.lt.{0} Nat instLTNat (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (HPow.hPow.{0, 0, 0} Nat Nat Nat (instHPow.{0, 0} Nat Nat (instPowNat.{0} Nat instNatPowNat)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) w)
+theorem Nat.two_pow_pos : forall (w : Nat), LT.lt.{0} Nat instLTNat (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (HPow.hPow.{0, 0, 0} Nat Nat Nat (instHPow.{0, 0} Nat Nat (instPowNat.{0} Nat instNatPowNat)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) w) :=
+  fun (w : Nat) => Nat.pow_pos (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) w (of_decide_eq_true (LT.lt.{0} Nat instLTNat (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2))) (Nat.decLt (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2))) (id.{0} (Eq.{1} Bool (Decidable.decide (LT.lt.{0} Nat instLTNat (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2))) (Nat.decLt (OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) (OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)))) Bool.true) (Eq.refl.{1} Bool Bool.true)))

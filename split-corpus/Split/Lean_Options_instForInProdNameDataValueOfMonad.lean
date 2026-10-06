@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Options.instForInProdNameDataValueOfMonad : forall {m : Type.{u_1} -> Type.{u_2}} [inst._@.Lean.Data.Options.2323833999._hygCtx._hyg.5 : Monad.{u_1, u_2} m], ForIn.{0, 0, u_1, u_2} m Lean.Options (Prod.{0, 0} Lean.Name Lean.DataValue)
+def Lean.Options.instForInProdNameDataValueOfMonad : forall {m : Type.{u_1} -> Type.{u_2}} [inst._@.Lean.Data.Options.2323833999._hygCtx._hyg.5 : Monad.{u_1, u_2} m], ForIn.{0, 0, u_1, u_2} m Lean.Options (Prod.{0, 0} Lean.Name Lean.DataValue) :=
+  fun {m : Type.{u_1} -> Type.{u_2}} [inst._@.Lean.Data.Options.2323833999._hygCtx._hyg.5 : Monad.{u_1, u_2} m] => ForIn.mk.{0, 0, u_1, u_2} m Lean.Options (Prod.{0, 0} Lean.Name Lean.DataValue) (fun {β._@.Lean.Data.Options.2323833999._hygCtx._hyg.25 : Type.{u_1}} (o : Lean.Options) (init : β._@.Lean.Data.Options.2323833999._hygCtx._hyg.25) (f : (Prod.{0, 0} Lean.Name Lean.DataValue) -> β._@.Lean.Data.Options.2323833999._hygCtx._hyg.25 -> (m (ForInStep.{u_1} β._@.Lean.Data.Options.2323833999._hygCtx._hyg.25))) => Lean.Options.instForInProdNameDataValueOfMonad._private_1.{u_1, u_2} m inst._@.Lean.Data.Options.2323833999._hygCtx._hyg.5 β._@.Lean.Data.Options.2323833999._hygCtx._hyg.25 o init f)

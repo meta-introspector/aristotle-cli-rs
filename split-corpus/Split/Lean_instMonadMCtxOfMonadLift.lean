@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.instMonadMCtxOfMonadLift : forall (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.8 : Lean.MonadMCtx m], Lean.MonadMCtx n
+def Lean.instMonadMCtxOfMonadLift : forall (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.8 : Lean.MonadMCtx m], Lean.MonadMCtx n :=
+  fun (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.8 : Lean.MonadMCtx m] => Lean.MonadMCtx.mk n (liftM.{0, 0, 0} m n (instMonadLiftTOfMonadLift.{0, 0, 0, 0} m m n inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.4 (instMonadLiftT.{0, 0} m)) Lean.MetavarContext (Lean.MonadMCtx.getMCtx m inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.8)) (fun (f : Lean.MetavarContext -> Lean.MetavarContext) => liftM.{0, 0, 0} m n (instMonadLiftTOfMonadLift.{0, 0, 0, 0} m m n inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.4 (instMonadLiftT.{0, 0} m)) Unit (Lean.MonadMCtx.modifyMCtx m inst._@.Lean.MetavarContext.1084198254._hygCtx._hyg.8 f))

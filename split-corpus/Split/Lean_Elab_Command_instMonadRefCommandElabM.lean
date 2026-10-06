@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Elab.Command.instMonadRefCommandElabM : Lean.MonadRef Lean.Elab.Command.CommandElabM
+def Lean.Elab.Command.instMonadRefCommandElabM : Lean.MonadRef Lean.Elab.Command.CommandElabM :=
+  Lean.MonadRef.mk Lean.Elab.Command.CommandElabM Lean.Elab.Command.getRef (fun {α._@.Lean.Elab.Command.1415867191._hygCtx._hyg.12 : Type} (ref : Lean.Syntax) (x : Lean.Elab.Command.CommandElabM α._@.Lean.Elab.Command.1415867191._hygCtx._hyg.12) => MonadWithReader.withReader.{0, 0} Lean.Elab.Command.Context Lean.Elab.Command.CommandElabM (instMonadWithReaderOfMonadWithReaderOf.{0, 0} Lean.Elab.Command.Context Lean.Elab.Command.CommandElabM (instMonadWithReaderOfReaderT.{0, 0} Lean.Elab.Command.Context (StateRefT' IO.RealWorld Lean.Elab.Command.State (EIO Lean.Exception)))) α._@.Lean.Elab.Command.1415867191._hygCtx._hyg.12 (fun (ctx : Lean.Elab.Command.Context) => Lean.Elab.Command.Context.mk (Lean.Elab.Command.Context.fileName ctx) (Lean.Elab.Command.Context.fileMap ctx) (Lean.Elab.Command.Context.currRecDepth ctx) (Lean.Elab.Command.Context.cmdPos ctx) (Lean.Elab.Command.Context.macroStack ctx) (Lean.Elab.Command.Context.quotContext? ctx) (Lean.Elab.Command.Context.currMacroScope ctx) ref (Lean.Elab.Command.Context.snap? ctx) (Lean.Elab.Command.Context.cancelTk? ctx) (Lean.Elab.Command.Context.suppressElabErrors ctx)) x)

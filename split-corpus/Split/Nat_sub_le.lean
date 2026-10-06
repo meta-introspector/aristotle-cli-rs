@@ -1,0 +1,5 @@
+import Mathlib
+
+-- spec: theorem Nat.sub_le : forall (n : Nat) (m : Nat), LE.le.{0} Nat instLENat (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n m) n
+theorem Nat.sub_le : forall (n : Nat) (m : Nat), LE.le.{0} Nat instLENat (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n m) n :=
+  fun (n : Nat) (m : Nat) => Nat.rec.{0} (fun (x._@.Init.Prelude.3861851691._hygCtx._hyg.12 : Nat) => LE.le.{0} Nat instLENat (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n x._@.Init.Prelude.3861851691._hygCtx._hyg.12) n) (Nat.le_refl (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n Nat.zero)) (fun (x._@.Init.Prelude.3861851691._hygCtx._hyg.21 : Nat) (ih : LE.le.{0} Nat instLENat (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n x._@.Init.Prelude.3861851691._hygCtx._hyg.21) n) => Nat.le_trans (HSub.hSub.{0, 0, 0} Nat Nat Nat (instHSub.{0} Nat instSubNat) n (Nat.succ x._@.Init.Prelude.3861851691._hygCtx._hyg.21)) (Nat.sub n x._@.Init.Prelude.3861851691._hygCtx._hyg.21) n (Nat.pred_le (Nat.sub n x._@.Init.Prelude.3861851691._hygCtx._hyg.21)) ih) m

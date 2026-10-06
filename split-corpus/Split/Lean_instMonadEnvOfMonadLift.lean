@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.instMonadEnvOfMonadLift : forall (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.Environment.3107030587._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.Environment.3107030587._hygCtx._hyg.8 : Lean.MonadEnv m], Lean.MonadEnv n
+def Lean.instMonadEnvOfMonadLift : forall (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.Environment.3107030587._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.Environment.3107030587._hygCtx._hyg.8 : Lean.MonadEnv m], Lean.MonadEnv n :=
+  fun (m : Type -> Type) (n : Type -> Type) [inst._@.Lean.Environment.3107030587._hygCtx._hyg.4 : MonadLift.{0, 0, 0} m n] [inst._@.Lean.Environment.3107030587._hygCtx._hyg.8 : Lean.MonadEnv m] => Lean.MonadEnv.mk n (liftM.{0, 0, 0} m n (instMonadLiftTOfMonadLift.{0, 0, 0, 0} m m n inst._@.Lean.Environment.3107030587._hygCtx._hyg.4 (instMonadLiftT.{0, 0} m)) Lean.Environment (Lean.MonadEnv.getEnv m inst._@.Lean.Environment.3107030587._hygCtx._hyg.8)) (fun (f : Lean.Environment -> Lean.Environment) => liftM.{0, 0, 0} m n (instMonadLiftTOfMonadLift.{0, 0, 0, 0} m m n inst._@.Lean.Environment.3107030587._hygCtx._hyg.4 (instMonadLiftT.{0, 0} m)) Unit (Lean.MonadEnv.modifyEnv m inst._@.Lean.Environment.3107030587._hygCtx._hyg.8 f))

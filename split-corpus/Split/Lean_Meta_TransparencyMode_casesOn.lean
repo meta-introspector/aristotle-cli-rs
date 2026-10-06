@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: Lean.Meta.TransparencyMode.casesOn : forall {motive : Lean.Meta.TransparencyMode -> Sort.{u}} (t : Lean.Meta.TransparencyMode), (motive Lean.Meta.TransparencyMode.all) -> (motive Lean.Meta.TransparencyMode.default) -> (motive Lean.Meta.TransparencyMode.reducible) -> (motive Lean.Meta.TransparencyMode.instances) -> (motive Lean.Meta.TransparencyMode.none) -> (motive t)
+def Lean.Meta.TransparencyMode.casesOn : forall {motive : Lean.Meta.TransparencyMode -> Sort.{u}} (t : Lean.Meta.TransparencyMode), (motive Lean.Meta.TransparencyMode.all) -> (motive Lean.Meta.TransparencyMode.default) -> (motive Lean.Meta.TransparencyMode.reducible) -> (motive Lean.Meta.TransparencyMode.instances) -> (motive Lean.Meta.TransparencyMode.none) -> (motive t) :=
+  fun {motive : Lean.Meta.TransparencyMode -> Sort.{u}} (t : Lean.Meta.TransparencyMode) (all : motive Lean.Meta.TransparencyMode.all) (default : motive Lean.Meta.TransparencyMode.default) (reducible : motive Lean.Meta.TransparencyMode.reducible) (instances : motive Lean.Meta.TransparencyMode.instances) (none : motive Lean.Meta.TransparencyMode.none) => Lean.Meta.TransparencyMode.rec.{u} motive all default reducible instances none t

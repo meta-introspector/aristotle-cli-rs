@@ -1,0 +1,6 @@
+import Mathlib
+
+set_option pp.all true
+-- spec: RoutingStrategy.ctorElim : forall {motive : RoutingStrategy -> Sort.{u}} (ctorIdx : Nat) (t : RoutingStrategy), (Eq.{1} Nat ctorIdx (RoutingStrategy.ctorIdx t)) -> (RoutingStrategy.ctorElimType.{u} motive ctorIdx) -> (motive t)
+def RoutingStrategy.ctorElim : forall {motive : RoutingStrategy -> Sort.{u}} (ctorIdx : Nat) (t : RoutingStrategy), (Eq.{1} Nat ctorIdx (RoutingStrategy.ctorIdx t)) -> (RoutingStrategy.ctorElimType.{u} motive ctorIdx) -> (motive t) :=
+  fun {motive : RoutingStrategy -> Sort.{u}} (ctorIdx : Nat) (t : RoutingStrategy) (h : Eq.{1} Nat ctorIdx (RoutingStrategy.ctorIdx t)) (k : RoutingStrategy.ctorElimType.{u} motive ctorIdx) => RoutingStrategy.casesOn.{u} (fun (t : RoutingStrategy) => (Eq.{1} Nat ctorIdx (RoutingStrategy.ctorIdx t)) -> (motive t)) t (fun (h : Eq.{1} Nat ctorIdx 0) => PULift.down.{u, u} (motive RoutingStrategy.drop) (Eq.ndrec.{max 1 u, 1} Nat ctorIdx (RoutingStrategy.ctorElimType.{u} motive) k 0 h)) (fun (h : Eq.{1} Nat ctorIdx 1) => PULift.down.{u, u} (motive RoutingStrategy.hostAccumulate) (Eq.ndrec.{max 1 u, 1} Nat ctorIdx (RoutingStrategy.ctorElimType.{u} motive) k 1 h)) (fun (h : Eq.{1} Nat ctorIdx 2) => PULift.down.{u, u} (motive RoutingStrategy.priorityGPU) (Eq.ndrec.{max 1 u, 1} Nat ctorIdx (RoutingStrategy.ctorElimType.{u} motive) k 2 h)) h
