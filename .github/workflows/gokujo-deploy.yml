@@ -105,9 +105,27 @@ jobs:
           mine = [f for i, f in enumerate(files) if i % 8 == shard]
           ok = fail = skip = 0
           already_declared = 0
+          spec_only = 0
+          # URL-safe key transform: decl names contain '?' and non-ASCII
+          # (ByteArray.utf8Decode?, ..._assemble₃) which cannot round-trip
+          # through a URL path. Percent-encode once, here, so the olean
+          # filename, the manifest key and the worker KV key all agree.
+          import re, urllib.parse
+          def safe_key(k):
+              return urllib.parse.quote(k, safe="")
           for f in mine:
               key = os.path.splitext(os.path.basename(f))[0]
-              out = f"out/oleans/{key}.olean"
+              skey = safe_key(key)
+              # GOKUJO CUT: comment-only spec files (inductive/ctor specs,
+              # ~1128 in the corpus) have no declaration body — compiling
+              # them yields an EMPTY olean that masquerades as the decl's
+              # artifact. Skip them; they are metadata, not compilable decls.
+              body = [l for l in open(f).read().splitlines()
+                      if l.strip() and not l.strip().startswith(("--", "import"))]
+              if not body:
+                  spec_only += 1
+                  continue
+              out = f"out/oleans/{skey}.olean"
               if os.path.exists(out):
                   skip += 1; continue
               r = subprocess.run(["lean", "--root=/", "-o", out, f],
@@ -118,24 +136,39 @@ jobs:
                   # already proven inside the cached mathlib olean chain —
                   # recompiling it is provably unnecessary work. Classify
                   # it as covered, don't burn a failure on it.
-                  if "already been declared" in r.stderr:
+                  # Anchored to lean's error form "'<name>' has already
+                  # been declared" so unrelated stderr can't match.
+                  if re.search(r"'[^']+' has already been declared", r.stderr):
                       already_declared += 1
-                      print(f"CUT {key}: already declared in mathlib chain", flush=True)
+                      print(f"CUT {skey}: already declared in mathlib chain", flush=True)
                   else:
                       fail += 1
-                      print(f"FAIL {key}: {r.stderr[-500:]}", flush=True)
-          print(f"shard {shard}: ok={ok} fail={fail} skip={skip} cut={already_declared}")
+                      print(f"FAIL {skey}: {r.stderr[-500:]}", flush=True)
+          print(f"shard {shard}: ok={ok} fail={fail} skip={skip} cut={already_declared} spec={spec_only}")
           # Write per-file results so publish-artifacts can verify coverage.
-          with open("out/results.json", "w") as rj:
+          # distinct filename per shard — merge-multiple:true would
+          # otherwise collapse 8 results.json into 1
+          with open(f"out/results-{shard}.json", "w") as rj:
               import json
               json.dump({"shard": shard, "ok": ok, "fail": fail, "skip": skip,
-                         "cut": already_declared, "total": len(mine)}, rj)
+                         "cut": already_declared, "spec": spec_only,
+                         "total": len(mine)}, rj)
           # Fail the shard on ANY compile failure — a systematic break
           # (e.g. a Mathlib rename invalidating all files) must be loud,
           # not green with one lucky success. Failures are still uploaded
           # via the artifact (if: always() is not set, but upload runs on
           # success only; the FAIL log lines carry the diagnosis).
-          sys.exit(1 if fail > 0 else 0)
+          # A shard that compiled NOTHING (all cut / all fail / empty glob)
+          # must not be green — otherwise the corpus-as-is (every file
+          # re-declares a Mathlib name) publishes an empty release.
+          if len(mine) == 0:
+              sys.exit(f"shard {shard}: glob matched no files")
+          if fail > 0:
+              sys.exit(1)
+          if ok == 0:
+              sys.exit(f"shard {shard}: compiled nothing (ok=0, cut={already_declared}) "
+                       "— corpus fully covered by the mathlib chain; nothing to publish")
+          sys.exit(0)
           EOF
       - name: Upload shard oleans
         # upload even on compile failure so FAIL diagnostics survive
@@ -145,7 +178,7 @@ jobs:
           name: oleans-shard-${{ matrix.shard }}
           path: |
             out/oleans/
-            out/results.json
+            out/results-*.json
           retention-days: 30
 
   publish-artifacts:
@@ -170,16 +203,20 @@ jobs:
           set -euo pipefail
           mkdir -p release
           find oleans -name '*.olean' -exec cp {} release/ \;
-          # verify every shard reported zero failures before publishing
+          # verify every shard: zero failures AND at least one olean
+          # produced per shard — refuse empty manifests
           python3 - <<EOF
           import glob, json, sys
-          results = [json.load(open(f)) for f in glob.glob("oleans/**/results.json", recursive=True)]
-          if not results:
+          results = [json.load(open(f)) for f in glob.glob("oleans/**/results-*.json", recursive=True)]
+          if len(results) != 8:
               sys.exit("no shard results found — refusing to publish")
           total_fail = sum(r["fail"] for r in results)
           if total_fail:
               sys.exit(f"refusing to publish: {total_fail} compile failures across shards")
-          print(f"verified {len(results)} shards, 0 failures")
+          total_ok = sum(r["ok"] for r in results)
+          if total_ok == 0:
+              sys.exit("refusing to publish: 0 oleans compiled across all shards")
+          print(f"verified {len(results)} shards, 0 failures, {total_ok} oleans")
           EOF
           python3 - <<EOF
           import hashlib, json, os
@@ -227,5 +264,25 @@ jobs:
             echo "::warning::KV namespace not created yet — run 'npx wrangler kv namespace create OLEANS' and fill cloudflare/wrangler.toml. Skipping deploy."
             exit 0
           fi
-          # publish the olean-serving worker; assets from the release artifact
+          # Upload the oleans + manifest into the OLEANS KV namespace.
+          # wrangler kv bulk put takes a JSON list of {key, value} — values
+          # are base64-encoded by wrangler when --base64 is passed.
+          python3 - <<'EOF'
+          import base64, glob, json, os
+          entries = []
+          for f in glob.glob("oleans/**/*.olean", recursive=True):
+              key = os.path.basename(f)
+              with open(f, "rb") as fh:
+                  entries.append({"key": key, "value": base64.b64encode(fh.read()).decode()})
+          for f in glob.glob("oleans/**/manifest.json", recursive=True):
+              with open(f) as fh:
+                  entries.append({"key": "manifest.json", "value": fh.read()})
+          if not entries:
+              raise SystemExit("no oleans or manifest found in artifacts — refusing to wipe KV")
+          with open("kv-put.json", "w") as out:
+              json.dump(entries, out)
+          print(f"uploading {len(entries)} keys to KV")
+          EOF
+          npx wrangler kv key bulk put kv-put.json --config cloudflare/wrangler.toml --base64 --remote
+          # publish the olean-serving worker
           npx wrangler deploy --config cloudflare/wrangler.toml
