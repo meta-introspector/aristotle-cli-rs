@@ -3990,7 +3990,8 @@ async fn cmd_download_result(project_id: &str, output_dir: Option<PathBuf>, verb
     let config = load_config()?;
     let api_key = accounts::resolve_api_key(account)?;
     let results_dir = output_dir.unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
-    fs::create_dir_all(&results_dir)?;
+    fs::create_dir_all(&results_dir)
+        .with_context(|| format!("creating results dir {}", results_dir.display()))?;
     let client = Client::builder().timeout(Duration::from_secs(300)).build()?;
     // Enable debug tracing for verbose mode
     if verbose {
@@ -4080,7 +4081,8 @@ async fn cmd_deploy(
 ) -> Result<()> {
     let config = load_config()?;
     let results_dir = output_dir.clone().unwrap_or_else(|| config.results_dir.join("aristo-outputs"));
-    fs::create_dir_all(&results_dir)?;
+    fs::create_dir_all(&results_dir)
+        .with_context(|| format!("creating results dir {}", results_dir.display()))?;
 
     // Project is downloaded to <results_dir>/<project_id>_aristotle/output-final_aristotle
     let project_dir = results_dir.join(format!("{}_aristotle", project_id));
@@ -4688,7 +4690,8 @@ async fn cmd_dasl_finish(project_id: String, common_project: PathBuf, results_di
     // Step 1: Download result to canonical results directory
     let api_key = get_api_key()?;
     let client = Client::builder().timeout(Duration::from_secs(300)).build()?;
-    fs::create_dir_all(&results_dir)?;
+    fs::create_dir_all(&results_dir)
+        .with_context(|| format!("creating results dir {}", results_dir.display()))?;
     
     println!("[1/5] Downloading result for {}...", project_id);
     let download_path = download_single_result(

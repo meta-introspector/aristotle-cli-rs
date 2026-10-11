@@ -173,7 +173,8 @@ pub async fn cmd_fetch(
     let _ = parallel; // downloads are serialized with a polite rate limit
     let config = load_config()?;
     let results_dir = config.results_dir.clone();
-    fs::create_dir_all(&results_dir)?;
+    fs::create_dir_all(&results_dir)
+        .with_context(|| format!("creating results dir {}", results_dir.display()))?;
 
     let base_url = crate::API_BASE_URL;
     let client = reqwest::Client::builder()
