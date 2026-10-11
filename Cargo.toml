@@ -5,6 +5,7 @@ edition = "2024"
 description = "A tool for polling Aristotle results and managing Lean4 project compilation"
 authors = ["mdupont"]
 license = "MIT"
+default-run = "aristotle-manager"
 
 [dependencies]
 anyhow = "1.0"
