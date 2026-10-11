@@ -1276,10 +1276,14 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
                 info!("API key set from stdin");
                 println!("API key set");
             }
-            // Save config
+            // Save config. `configure set` only stores the API key; it must NOT
+            // rewrite the user's config. Write defaults only when no config
+            // exists — reserializing the Config struct would silently drop
+            // unmanaged keys like [[accounts]] and default_account, and would
+            // clobber absolute directory paths with the relative fallback.
             let config_str = fs::read_to_string(&config_path).unwrap_or_default();
-            let mut config: Config = if config_str.is_empty() {
-                Config {
+            if config_str.trim().is_empty() {
+                let config = Config {
                     base_dir: PathBuf::from("aristotles_results"),
                     results_dir: PathBuf::from("aristotles_results"),
                     git_base: PathBuf::from("aristotles_results"),
@@ -1288,15 +1292,10 @@ fn cmd_configure(subcommand: &ConfigureCommands) -> Result<()> {
                     max_retries: 3,
                     nix_store_path: None,
                     mathlib_split_path: None,
-                }
-            } else {
-                toml::from_str(&config_str)?
-            };
-            config.git_base = PathBuf::from("aristotles_results");
-            config.base_dir = PathBuf::from("aristotles_results");
-            config.results_dir = PathBuf::from("aristotles_results");
-            let toml = toml::to_string(&config)?;
-            fs::write(&config_path, toml)?;
+                };
+                let toml = toml::to_string(&config)?;
+                fs::write(&config_path, toml)?;
+            }
             info!(path = %config_path.display(), "Configuration saved");
             println!("Configuration saved");
         }
