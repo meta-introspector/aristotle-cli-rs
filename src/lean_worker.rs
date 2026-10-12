@@ -54,6 +54,9 @@ pub enum LeanCommands {
         /// Skip the build step (module oleans already exist).
         #[arg(long)]
         no_build: bool,
+        /// Arguments forwarded to the module's `main` (after `--`).
+        #[arg(last = true)]
+        args: Vec<String>,
     },
 }
 
@@ -214,7 +217,7 @@ pub fn cmd_lean(subcommand: &LeanCommands) -> Result<()> {
         LeanCommands::Sorry(a) => gate(&bin, &results_dir, "sorry", a),
         LeanCommands::Axioms(a) => gate(&bin, &results_dir, "axioms", a),
         LeanCommands::Check(a) => gate(&bin, &results_dir, "check", a),
-        LeanCommands::Run { project_id, module, src, no_build } => {
+        LeanCommands::Run { project_id, module, src, no_build, args } => {
             let dir = resolve_project_dir(&results_dir, project_id)?;
             prepare(&dir)?;
             let src = src.clone().unwrap_or_else(|| default_src(&dir));
@@ -247,6 +250,7 @@ pub fn cmd_lean(subcommand: &LeanCommands) -> Result<()> {
             let status = Command::new(lean)
                 .arg("--run")
                 .arg(&file)
+                .args(args)
                 .current_dir(&dir)
                 .env("LEAN_PATH", lean_path)
                 .status()
