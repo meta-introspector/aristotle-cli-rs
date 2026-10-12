@@ -43,6 +43,7 @@ mod refusal;
 mod term_graph;
 mod project_test;
 mod shared_lean;
+mod lean_worker;
 mod alias;
 mod alias_web;
 mod signing;
@@ -570,6 +571,12 @@ enum Commands {
         /// Fetch complete history from every upstream account (ignore recency window)
         #[arg(long)]
         all: bool,
+    },
+    /// Load and run modules from downloaded Aristotle projects via the
+    /// lean-worker (gokujo) protocol.
+    Lean {
+        #[command(subcommand)]
+        subcommand: lean_worker::LeanCommands,
     },
     /// Bootstrap a Lean 4 toolchain on this machine (elan | nix | bundled)
     Bootstrap {
@@ -7105,9 +7112,16 @@ async fn main() -> Result<()> {
     // Parse CLI first so we can configure tracing based on command options
     let cli = Cli::parse();
 
-    // Determine log level: use RUST_LOG env, or debug if --verbose on download
-    let env_filter = EnvFilter::try_from_default_env()
-        .unwrap_or_else(|_| EnvFilter::new("info"));
+    // Determine log level: use RUST_LOG env, or debug if --verbose on download.
+    // Lean-worker commands default to `warn` so --json telemetry on stdout
+    // stays machine-parseable (gokujo writes its own progress to stderr).
+    let env_filter = EnvFilter::try_from_default_env().unwrap_or_else(|_| {
+        if matches!(cli.command, Commands::Lean { .. }) {
+            EnvFilter::new("warn")
+        } else {
+            EnvFilter::new("info")
+        }
+    });
 
     // Extract trace mode from command
     let trace_mode: Option<&str> = match &cli.command {
@@ -7354,6 +7368,10 @@ async fn main() -> Result<()> {
         Commands::Fetch { parallel, limit, dry_run, recent_days, project_id, all } => {
             info!("Executing fetch command");
             fetch::cmd_fetch(*parallel, *limit, *dry_run, *recent_days, project_id.clone(), *all).await?;
+        }
+        Commands::Lean { subcommand } => {
+            info!("Executing lean command");
+            lean_worker::cmd_lean(subcommand)?;
         }
         Commands::Bootstrap { toolchain, method } => {
             info!("Executing bootstrap command");
