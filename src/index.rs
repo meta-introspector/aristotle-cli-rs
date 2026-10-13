@@ -1,13 +1,156 @@
 /// Index module — scans Aristotle run directories and produces
 /// DASL-compatible blocks.json with metadata and categories.
 
-use std::collections::HashMap;
+use std::collections::{BTreeMap, HashMap};
 use std::fs;
 use std::path::{Path, PathBuf};
 use anyhow::Context;
+use serde::{Deserialize, Serialize};
 use tracing::{debug, info, instrument, warn};
 
 use crate::load_config;
+
+/// Minimal metadata read from aristotle_metadata.json.
+#[derive(Debug, Deserialize)]
+struct AristotleMetadata {
+    #[serde(default)]
+    extracted_at: Option<String>,
+    #[serde(default)]
+    tarball_size_bytes: Option<u64>,
+    #[serde(default)]
+    result_id: Option<String>,
+}
+
+/// Lightweight status read from aristotle_status.json.
+#[derive(Debug, Deserialize)]
+struct AristotleStatus {
+    #[serde(default)]
+    created_at: Option<String>,
+    #[serde(default)]
+    description: Option<String>,
+    #[serde(default)]
+    has_files: Option<bool>,
+    #[serde(default)]
+    has_input: Option<bool>,
+}
+
+/// Small serializable project index entry emitted by cmd_index.
+#[derive(Debug, Serialize)]
+struct ProjectBlock {
+    project_id: String,
+    run_id: String,
+    title: String,
+    keywords: Vec<String>,
+    description: String,
+    category: String,
+    track: String,
+    lean_files: usize,
+    size: usize,
+    tarball_size_bytes: Option<u64>,
+    extracted_at: Option<String>,
+    created_at: Option<String>,
+    has_files: Option<bool>,
+    has_input: Option<bool>,
+    path: String,
+}
+
+const STOP_WORDS: &[&str] = &[
+    "the", "and", "for", "with", "this", "that", "from", "have", "has", "had",
+    "are", "was", "were", "be", "been", "being", "is", "it", "its", "in", "on",
+    "of", "to", "a", "an", "i", "you", "we", "they", "he", "she", "at", "by",
+    "as", "or", "not", "no", "but", "so", "if", "can", "do", "does", "did",
+    "will", "would", "could", "should", "may", "might", "shall", "than", "then",
+    "into", "about", "over", "after", "before", "between", "under", "again",
+    "further", "once", "here", "there", "when", "where", "why", "how", "all",
+    "each", "every", "both", "few", "more", "most", "other", "some", "such",
+    "only", "own", "same", "too", "very", "just", "because", "until", "while",
+    "above", "below", "up", "down", "out", "off", "around", "through", "during",
+    "without", "within", "along", "against", "among", "across", "behind",
+    "summary", "changes", "run", "aristotle", "project", "lean", "requestproject",
+    "index", "file", "files", "build", "proof", "checked", "checked", "see",
+];
+
+/// Extract a small keyword list from a summary + optional status description.
+fn extract_keywords(summary: &str, status_description: Option<&str>, max_keywords: usize) -> Vec<String> {
+    let mut freq: BTreeMap<String, usize> = BTreeMap::new();
+
+    // Helper: fold a line-window into token frequencies.
+    let mut feed = |text: &str, boost: usize| {
+        for token in tokenize(text) {
+            let entry = freq.entry(token.clone()).or_insert(0);
+            *entry += 1 + boost;
+        }
+    };
+
+    // Title words (first heading) get the strongest boost.
+    let title = extract_title(summary, "");
+    if !title.is_empty() {
+        feed(&title, 5);
+    }
+
+    // First ~1500 chars of the summary body.
+    let body = summary.chars().take(1500).collect::<String>();
+    feed(&body, 1);
+
+    // Status description as an extra signal when present.
+    if let Some(d) = status_description {
+        feed(d, 2);
+    }
+
+    // Sort by frequency desc, then alphabetically asc for determinism.
+    let mut ranked: Vec<(String, usize)> = freq.into_iter().collect();
+    ranked.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(&b.0)));
+
+    let mut out = Vec::new();
+    for (token, _count) in ranked {
+        if out.len() >= max_keywords {
+            break;
+        }
+        if STOP_WORDS.contains(&token.as_str()) {
+            continue;
+        }
+        if token.chars().all(char::is_numeric) {
+            continue;
+        }
+        out.push(token);
+    }
+    out
+}
+
+/// Very light tokenizer: lowercase, split on non-alphanumeric, keep runs of length >= 2.
+fn tokenize(text: &str) -> Vec<String> {
+    let mut out = Vec::new();
+    let mut buf = String::new();
+    for ch in text.chars() {
+        if ch.is_alphanumeric() || ch == '-' || ch == '_' {
+            buf.push(ch.to_ascii_lowercase());
+        } else {
+            if buf.len() >= 2 {
+                out.push(buf.clone());
+            }
+            buf.clear();
+        }
+    }
+    if buf.len() >= 2 {
+        out.push(buf);
+    }
+    out
+}
+
+/// Read aristotle_metadata.json if present.
+fn read_metadata(run_dir: &Path) -> Option<AristotleMetadata> {
+    let path = run_dir.join("aristotle_metadata.json");
+    let text = fs::read_to_string(&path).ok()?;
+    serde_json::from_str(&text).ok()
+}
+
+/// Read aristotle_status.json if present.
+fn read_status(run_dir: &Path) -> Option<AristotleStatus> {
+    let path = run_dir.join("aristotle_status.json");
+    let text = fs::read_to_string(&path).ok()?;
+    serde_json::from_str(&text).ok()
+}
+
 
 /// Categorize an Aristotle run by its summary content
 fn categorize(summary_text: &str) -> &'static str {
@@ -237,6 +380,15 @@ pub fn cmd_index(output: Option<PathBuf>) -> anyhow::Result<()> {
                 continue;
             }
 
+            // Keep only real project dirs that carry aristotle_metadata.json.
+            // This drops wrapper dirs such as the git-root-level
+            // `output-final_aristotle/` that are not themselves a downloaded
+            // Aristotle result.
+            let metadata = match read_metadata(&path) {
+                Some(m) => m,
+                None => continue,
+            };
+
             let run_id = name.trim_end_matches("_aristotle").to_string();
             let summary_text = read_summary(&path);
             let lean_names = collect_lean_names(&path);
@@ -253,15 +405,26 @@ pub fn cmd_index(output: Option<PathBuf>) -> anyhow::Result<()> {
 
             *stats.entry(category.to_string()).or_insert(0) += 1;
 
+            let status = read_status(&path);
+            let status_description = status.as_ref().and_then(|s| s.description.as_deref());
+            let keywords = extract_keywords(&summary_text, status_description, 12);
+
             let block = serde_json::json!({
-                "path": format!("aristotle/{}/{}/{}", source_name, category, run_id),
-                "description": title,
-                "size": summary_text.len(),
-                "lean_files": lean_names.len(),
-                "cid": "",
-                "read_only": false,
+                "project_id": run_id,
+                "run_id": run_id,
+                "title": title,
+                "keywords": keywords,
+                "description": status_description.unwrap_or(&title),
                 "category": category,
                 "track": track,
+                "lean_files": lean_names.len(),
+                "size": summary_text.len(),
+                "tarball_size_bytes": metadata.tarball_size_bytes,
+                "extracted_at": metadata.extracted_at,
+                "created_at": status.as_ref().and_then(|s| s.created_at.as_deref()),
+                "has_files": status.as_ref().and_then(|s| s.has_files),
+                "has_input": status.as_ref().and_then(|s| s.has_input),
+                "path": format!("aristotle/{}/{}/{}", source_name, category, run_id),
             });
 
             blocks.push(block);
@@ -292,6 +455,23 @@ pub fn cmd_index(output: Option<PathBuf>) -> anyhow::Result<()> {
     for (cat, cnt) in &sorted_cats {
         let bar = "█".repeat(std::cmp::max(1, *cnt / 5));
         println!("  {:30} {:>4}  {}", cat, cnt, bar);
+    }
+
+    // Keyword coverage stats.
+    let mut kw_total = 0usize;
+    let mut kw_sets = 0usize;
+    for block in &blocks {
+        let kws = block["keywords"].as_array().map(|a| a.len()).unwrap_or(0);
+        kw_total += kws;
+        if kws > 0 {
+            kw_sets += 1;
+        }
+    }
+    println!();
+    println!("  Projects with keywords: {}/{}", kw_sets, blocks.len());
+    if !blocks.is_empty() {
+        let avg = kw_total as f64 / blocks.len() as f64;
+        println!("  Avg keywords/project:   {:.1}", avg);
     }
 
     Ok(())
