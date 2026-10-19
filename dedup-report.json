@@ -1,11 +1,18 @@
 {
-  "root": "/home/mdupont/projects/arist",
-  "scanned": 56,
-  "duplicate_groups": 19,
-  "dirs_kept": 19,
-  "dirs_archived": 56,
-  "bytes_freed_hint": 367666568,
+  "root": "/mnt/data1/time-2026/05-may/07/arist",
+  "scanned": 53,
+  "duplicate_groups": 15,
+  "dirs_kept": 15,
+  "dirs_archived": 53,
+  "bytes_freed_hint": 5281979,
   "groups": [
+    {
+      "description": "# Aristotle Task: Merge All DASL Splitters → Minimal Lean4 Core\\n\\n## Background\\n\\nWe have 16 Lean/Mathlib splitters across Rust, Lean4, Shell, and soon Python.\\nThey all parse and decompose `.lean` files into declarations, but they disagree\\non output format, scope, and correctness. We need a unified pipeline that:\\n\\n1. Parses Lean4 syntax (from `leanprover/lean4.git`) with every splitter\\n2. Scores them against each other (Jaccard similarity of declaration extraction)\\n3. Merges the best into a single `dasl-split` binary\\n4. Extracts a **minimal reusable Lean4 core** (< 200 declarations, self-contained)\\n5. Pushes the core to IPLD CAR shared memory with content-addressed CIDs\\n\\n## The Splitters We Have\\n\\n### Rust (aristo-manager) — 6 subcommands\\n- `split` — per-declaration `.lean` stub + `flake.nix` from a directory\\n- `split-all` — batch split across 159 project directories (parallel)\\n- `split-by-band` — partition declarations along j-expansion coefficient bands\\n- `atomize` — prime-factorize integer constants → 437-atom value lattice\\n- `j-key` — j-expansion coefficient clustering → 7 bands (q⁻¹ through q⁶)\\n- `decl-table` — extract declaration dependency table from split results\\n\\n### Rust (staticsplitjson)\\n- Nix binary at `/nix/store/*staticsplitjson/bin/staticsplitjson`\\n- Input: `.lean` file → Output: JSON per declaration (`name`, `kind`, `line`, `imports`)\\n- Used by `lean4-repl` HTTP server (port 8156) for `/put` endpoint\\n\\n### Rust (forgecode)\\n- 17 crates for forge/branch/split management\\n- Located at `/mnt/data1/time-2026/05-may/15/forgecode/crates/`\\n- Handles git branch operations but has parsing infrastructure\\n\\n### Lean4 (kernel API)\\n- `SplitDecls.lean` — kernel API declaration splitter (in splitter-engine, 38 files, v4.28.0 + Mathlib)\\n- `lean-split-decls` — aligned to v4.29.1\\n- `lean-split-tool` — Codex-based split tool (plan.org item #11)\\n\\n### Lean4 (language source)\\n- `leanprover/lean4.git` — the Lean4 language itself\\n- Key files: `src/Init/Syntax.lean`, `src/Lean/Parser.lean`, `src/Lean/Elab/Frontend.lean`\\n- These are the **authoritative grammar** for Lean4 syntax\\n\\n### Python\\n- TO BE BUILT: grammar-based splitter using `lark`/`pyparsing`\\n- Must match `staticsplitjson` output format\\n- Target: HTTP `/put` endpoint → IPLD CAR shmem\\n\\n### Shell\\n- `split-aristotle-project.sh` (106 lines)\\n- `split-lean-project.sh` (34 lines)\\n\\n### Artifacts/Datasets\\n- `splitter-engine/` — 38-file complete Lean4 project (v4.28.0 + Mathlib)\\n- `mathlib-split/` — 5,790 unique declarations from 43 Aristotle projects, each with `flake.nix`\\n- `split-results/` — 159 project directories of per-declaration splits\\n- Plan.org — 231 sections, 376 checklist items (DASL master plan)\\n- Plan-to-Inputs mappings — MiniZinc(4) + Lean4(8) + GOAP(376) + Planr(231)\\n\\n## Task Phases\\n\\n### Phase 1: Feed All Splitters to All Splitters\\nFor each splitter S in our 11-splitter inventory:\\n- Run every OTHER splitter on S's source code\\n- This is a 121-combination meta-split matrix\\n- Goal: identify which splitters can parse themselves (\\",
+      "canonical": "5f3362b6-f9e1-4f4d-b6ca-88fc0dd6fd84",
+      "archived": [
+        "86c53ec8-2ed7-4bf1-b726-cba6a09edf24"
+      ]
+    },
     {
       "description": "(* Require Import MirrorSolve.FirstOrder. *)\\n(* Require Import MirrorSolve.BV. *)\\n(* Require Import MirrorSolve.SMT. *)\\n(* Require Import MirrorSolve.UF. *)\\n(* Require Import MirrorSolve.FOList. *)\\n(* Require Import MirrorSolve.HLists. *)\\n\\n(* Import HListNotations. *)\\n\\n(* Require Import Coq.Strings.String. *)\\n\\n(* Require Import MirrorSolve.Reflection.Core. *)\\n(* Require Import MirrorSolve.Reflection.FM. *)\\n\\n(* Require Import Coq.ZArith.BinInt. *)\\n(* Require Import MirrorSolve.Automation.Equations. *)\\n\\n(*\\nIntuitional language model\\neveryone creates different versions of this for themselves.\\n\\nthis is mine that i will create mappings onto other systems with it.\\n\\npair_Type is  similar to total2 of unimath\\n\\n *)\\n\\n(*Unimath*)\\nDefinition UU := Type.\\nInductive empty : UU := .\\nNotation \\",
       "canonical": "931ec461-1f4a-4bb3-a013-c83dc3723338",
@@ -21,17 +28,17 @@
       ]
     },
     {
-      "description": "Merge all projects",
-      "canonical": "e5a47759-cc48-47a5-be61-af88d8e5bfdc_aristotle",
+      "description": "Merge",
+      "canonical": "97d619b3-9e9c-4734-b69a-48a8859ff6bf",
       "archived": [
-        "e5a47759-cc48-47a5-be61-af88d8e5bfdc"
+        "324d1521-451b-43e5-bfbc-344d8f320272"
       ]
     },
     {
       "description": "MicroLean4 Phase 1: Extended MicroLeanType with string, unit, option, list constructors. Updated all 6 emitters, isBoxed, ofExprPure, reify, ofExpr, memOps, domainOf, codomainOf. All existing theorems updated. 9 types total (was 5), 6 emitters, sorry-free.",
-      "canonical": "40bf462d-132b-46e1-aa5b-7160ad74fb20",
+      "canonical": "cf122c5d-1f4e-4552-970c-4b616718c540",
       "archived": [
-        "cf122c5d-1f4e-4552-970c-4b616718c540"
+        "40bf462d-132b-46e1-aa5b-7160ad74fb20"
       ]
     },
     {
@@ -50,32 +57,12 @@
       ]
     },
     {
-      "description": "Submit tracker project for review",
-      "canonical": "10671d9f-c85c-4dc2-a84e-f7d6f7e168d5_aristotle",
-      "archived": [
-        "10671d9f-c85c-4dc2-a84e-f7d6f7e168d5"
-      ]
-    },
-    {
-      "description": "Update project c481ea66 with local dependency paths for mathlib, batteries, aesop, Qq, proofwidgets, plausible, LeanSearchClient, importGraph, Cli",
-      "canonical": "6402fae4-0167-4fa2-a490-76768fffb3bd",
-      "archived": [
-        "6402fae4-0167-4fa2-a490-76768fffb3bd_aristotle"
-      ]
-    },
-    {
-      "description": "Verilean/hesper webgpu",
-      "canonical": "ff756caf-8d26-4f8c-af96-981be215a038_aristotle",
-      "archived": [
-        "ff756caf-8d26-4f8c-af96-981be215a038"
-      ]
-    },
-    {
       "description": "\\",
-      "canonical": "384cd230-069e-4669-91f2-1f8465ad0a06",
+      "canonical": "d58917bf-a104-4ede-a696-91c93e268616",
       "archived": [
         "1fcb5ebe-bbab-4c12-bc38-4f1cd4739c1b",
         "3217fdf8-fa6f-4f99-b0d0-1de39a0152ef",
+        "384cd230-069e-4669-91f2-1f8465ad0a06",
         "3a0c2241-1981-4b37-8bdc-b4df4ae454bd",
         "4c7b097c-4b5b-4fe1-b2fc-8c83ea58d954",
         "4ddd06c0-4674-4f09-b660-0b8946bb09f1",
@@ -87,19 +74,11 @@
         "7a027869-d9a0-498b-bf4c-dea783d65b2c",
         "88bc93f4-49a4-444d-86ca-0888cff1d32f",
         "c18edf48-c6ea-4e41-baee-0402020d3cf6",
-        "d58917bf-a104-4ede-a696-91c93e268616",
         "e15ece7d-0382-46da-8774-d6f7dab9380e",
         "f0bb7632-28fc-4292-8ce6-4fbd0895d39d",
         "f50f64eb-e1e1-4eb4-b564-ddbdbedb5bc5",
         "f67cd7d2-b8ae-48f9-a7a5-9350eeefdbba",
         "fc60cbbb-8393-407e-be18-aab794b76b34"
-      ]
-    },
-    {
-      "description": "arXiv-2608.13433v1.tar",
-      "canonical": "4354fedb-5305-4fab-a97e-70d5e459de99_aristotle",
-      "archived": [
-        "4354fedb-5305-4fab-a97e-70d5e459de99"
       ]
     },
     {
@@ -111,44 +90,37 @@
     },
     {
       "description": "dasl-sorries",
-      "canonical": "74171800-8676-4008-b1c8-39a76b504312",
+      "canonical": "3c84bcb7-cfdb-48c7-8a3a-8f95c2a840b8",
       "archived": [
-        "3c84bcb7-cfdb-48c7-8a3a-8f95c2a840b8",
+        "74171800-8676-4008-b1c8-39a76b504312",
         "bc363fe9-877e-47a8-9232-01bf3f178506",
         "d78a39a7-e866-4d8f-ad91-a363b1db2e0d",
         "ffb49fc6-a8d6-4d51-8224-8aa0cfd656c6"
       ]
     },
     {
-      "description": "https://github.com/DULA2025/prime-inertia-engine import this archive of aristo projects",
-      "canonical": "2cefd4a5-8c86-4377-a717-c5417c6f9451_aristotle",
-      "archived": [
-        "2cefd4a5-8c86-4377-a717-c5417c6f9451"
-      ]
-    },
-    {
-      "description": "kant-zk-pastebin",
-      "canonical": "6f91c03d-87e8-4c6a-8d3f-de39edee2f6d",
-      "archived": [
-        "6f91c03d-87e8-4c6a-8d3f-de39edee2f6d_aristotle"
-      ]
-    },
-    {
       "description": "project",
-      "canonical": "ad861eea-0752-46e3-880a-52eccfce5b4c",
+      "canonical": "5f43262f-85da-439a-a404-5433260d20ae",
       "archived": [
-        "5f43262f-85da-439a-a404-5433260d20ae",
-        "9818aa9f-c2ea-4067-aebd-6b7f928c0abd"
+        "9818aa9f-c2ea-4067-aebd-6b7f928c0abd",
+        "a9dd29c5-a8b5-4281-a91a-a75dfa4adeed",
+        "ad861eea-0752-46e3-880a-52eccfce5b4c"
+      ]
+    },
+    {
+      "description": "prompt-round7.txt",
+      "canonical": "94f804e0-02d4-41bd-a283-73eefe8bf9c3",
+      "archived": [
+        "1e702852-8a6f-47b5-aa4a-48ea5b805351"
       ]
     },
     {
       "description": "unified-dasl",
-      "canonical": "c4748da2-cb2f-49be-8d3a-d02e7602b2b4",
+      "canonical": "4b7ae00b-c845-4c67-aedd-8d58dabb1ce1",
       "archived": [
         "2e66d20c-f932-45b6-9fa8-623be8facb48",
         "2ebadf0f-77c0-4dca-ac7d-617603abe8be",
         "450aa408-4fbe-463a-9d54-6f9306684ef9",
-        "4b7ae00b-c845-4c67-aedd-8d58dabb1ce1",
         "55f227c1-339f-42cc-ae36-7af193038065",
         "5adf84d8-1d25-48c5-9b1d-9b891bd23d2d",
         "68c83868-16f0-4414-9d92-e1e0764dd13d",
@@ -158,6 +130,7 @@
         "92c0b91b-d9b6-4bf8-8cf4-d75ed248dbc6",
         "ac86495b-1e69-425f-ae59-03bd4de541dc",
         "c0c7317e-167c-46ad-85e1-8c3e23b95ec2",
+        "c4748da2-cb2f-49be-8d3a-d02e7602b2b4",
         "c8150c48-1fb8-432b-9680-fa6027589ceb",
         "ca866d40-218d-4a23-b7cb-e2f12a6cedbe"
       ]

@@ -28,6 +28,8 @@ struct ProjectEntry {
     description: String,
     created_at: String,
     has_output: bool,
+    /// A real downloaded project carries a lakefile + lean-toolchain.
+    has_project_files: bool,
     size_bytes: u64,
 }
 
@@ -69,6 +71,7 @@ fn scan(root: &Path) -> Result<Vec<ProjectEntry>> {
         let description = json_field(&raw, "description").unwrap_or_default();
         let created_at = json_field(&raw, "created_at").unwrap_or_default();
         let has_output = path.join("output-final_aristotle").is_dir();
+        let has_project_files = is_real_project(&path);
         let size_bytes = dir_size(&path);
         entries.push(ProjectEntry {
             name: dent.file_name().to_string_lossy().to_string(),
@@ -76,6 +79,7 @@ fn scan(root: &Path) -> Result<Vec<ProjectEntry>> {
             description,
             created_at,
             has_output,
+            has_project_files,
             size_bytes,
         });
     }
@@ -117,15 +121,28 @@ fn dir_size(path: &Path) -> u64 {
     acc
 }
 
+/// A real downloaded project carries a lakefile (lakefile.toml or lakefile)
+/// plus a lean-toolchain pin. Failed/aborted attempts have only status/metadata.
+fn is_real_project(path: &Path) -> bool {
+    let has_lakefile = path.join("lakefile.toml").is_file()
+        || path.join("lakefile").is_file();
+    let has_toolchain = path.join("lean-toolchain").is_file();
+    has_lakefile && has_toolchain
+}
+
 /// Pick the canonical entry of a group.
+///
+/// Priority (lexicographic): completed download > real project files >
+/// on-disk size > newest created_at. Size beats timestamp so a failed
+/// but newer attempt cannot displace a complete older one.
 fn pick_canonical(group: &[ProjectEntry]) -> &ProjectEntry {
     let mut best: Option<&ProjectEntry> = None;
     for e in group {
         let better = match best {
             None => true,
             Some(b) => {
-                (e.has_output, e.created_at.as_str(), e.size_bytes)
-                    > (b.has_output, b.created_at.as_str(), b.size_bytes)
+                (e.has_output, e.has_project_files, e.size_bytes, e.created_at.as_str())
+                    > (b.has_output, b.has_project_files, b.size_bytes, b.created_at.as_str())
             }
         };
         if better {
@@ -223,10 +240,11 @@ pub fn cmd_dedup(root: Option<PathBuf>, dry_run: bool, execute: bool) -> Result<
         }
         report.dirs_kept += 1;
         println!(
-            "group '{}…': canonical = {} (output={}, {} bytes), {} dup(s)",
+            "group '{}…': canonical = {} (output={}, project_files={}, {} bytes), {} dup(s)",
             &desc[..desc.len().min(50)],
             canonical.name,
             canonical.has_output,
+            canonical.has_project_files,
             canonical.size_bytes,
             archived.len()
         );
@@ -283,9 +301,29 @@ mod tests {
             description: "d".into(),
             created_at: ts.into(),
             has_output: out,
+            has_project_files: false,
             size_bytes: 100,
         };
         let group = vec![mk("a", false, "2026-06-16"), mk("b", true, "2026-06-15")];
         assert_eq!(pick_canonical(&group).name, "b");
+    }
+
+    #[test]
+    fn pick_canonical_prefers_project_files_over_timestamp() {
+        let mk = |name: &str, files: bool, ts: &str, size: u64| ProjectEntry {
+            dir: PathBuf::from(name),
+            name: name.into(),
+            description: "d".into(),
+            created_at: ts.into(),
+            has_output: false,
+            has_project_files: files,
+            size_bytes: size,
+        };
+        // newer but empty attempt must not beat older complete project
+        let group = vec![
+            mk("newer_empty", false, "2026-06-17", 30_000),
+            mk("older_full", true, "2026-06-16", 7_900_000),
+        ];
+        assert_eq!(pick_canonical(&group).name, "older_full");
     }
 }
