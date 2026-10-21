@@ -34,6 +34,7 @@ mod notebooklm_dump;
 mod numerics;
 mod pipeline;
 mod pipeline_steps;
+mod proof_policy;
 mod replay;
 mod nix_build;
 mod version;
