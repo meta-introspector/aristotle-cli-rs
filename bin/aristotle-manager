@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# aristotle-manager — Cloudflare deployment CLI
+# Usage: aristotle-manager deploy cloudflare <UUID> [--pages] [--worker] [--dry-run] [--project-name NAME]
+#        aristotle-manager deploy cloudflare --list
+#        aristotle-manager deploy cloudflare --check <UUID>
+
+set -euo pipefail
+
+DEPLOY_SCRIPT="/home/mdupont/projects/arist/scripts/aristotle-manager-deploy-cloudflare.sh"
+
+case "${1:-}" in
+  deploy)
+    case "${2:-}" in
+      cloudflare)
+        shift 2
+        exec "$DEPLOY_SCRIPT" "$@"
+        ;;
+      *)
+        echo "Usage: aristotle-manager deploy cloudflare <UUID> [--pages|--worker|--dry-run]" >&2
+        exit 2
+        ;;
+    esac
+    ;;
+  list)
+    echo "=== AristotVM Cloudflare-Ready Projects ==="
+    for f in /home/mdupont/projects/arist/scripts/deploy-cloudflare/*.sh; do
+      name=$(basename "$f" .sh)
+      if [ -x "$f" ]; then
+        echo "  $name"
+      fi
+    done
+    ;;
+  check)
+    shift
+    if [ -n "${1:-}" ]; then
+      script="/home/mdupont/projects/arist/scripts/deploy-cloudflare/$1.sh"
+      if [ -f "$script" ]; then
+        bash "$script" "$@"
+      else
+        echo "No deploy script for $1" >&2
+        exit 1
+      fi
+    else
+      echo "Usage: aristotle-manager check <UUID>" >&2
+      exit 2
+    fi
+    ;;
+  *)
+    echo "Usage: aristotle-manager {deploy|list|check}" >&2
+    echo "  deploy cloudflare <UUID> [--pages|--worker|--dry-run]" >&2
+    echo "  list" >&2
+    echo "  check <UUID>" >&2
+    exit 2
+    ;;
+esac
