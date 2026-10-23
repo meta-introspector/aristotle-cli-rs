@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aristotle Project - 9687656f-b32a-4554-b64a-ff85980c7d0b</title>
+<style>
+* {{ box-sizing: border-box; }}
+body {{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0f172a; color: #e2e8f0;
+  max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;
+}}
+h1 {{ color: #38bdf8; margin-bottom: 0.25rem; }}
+.subtitle {{ color: #94a3b8; margin-bottom: 1.5rem; }}
+.section {{ margin-top: 2rem; }}
+.section h2 {{ color: #94a3b8; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }}
+.card {{
+  background: #1e293b; border: 1px solid #334155; border-radius: 0.75rem;
+  padding: 1.5rem; margin: 1rem 0;
+}}
+.card h3 {{ margin: 0 0 1rem; color: #a5b4fc; font-size: 1.1rem; }}
+.card pre {{ background: #0f172a; padding: 1rem; border-radius: 0.5rem; overflow: auto; max-height: 400px; }}
+.meta {{ font-size: 0.85rem; color: #64748b; font-family: monospace; }}
+.links {{ margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }}
+.links a {{ color: #7dd3fc; text-decoration: none; }}
+.links a:hover {{ text-decoration: underline; }}
+.badge {{
+  display: inline-block; font-size: 0.7rem; padding: 2px 8px;
+  border-radius: 999px; background: #064e3b; color: #4ade80;
+  margin: 2px; vertical-align: middle;
+}}
+.badge.archived {{ background: #1e3a5f; color: #93c5fd; }}
+.back-link {{ display: inline-block; margin-bottom: 1.5rem; color: #7dd3fc; text-decoration: none; }}
+.back-link:hover {{ text-decoration: underline; }}
+.footer {{ color: #64748b; font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid #334155; padding-top: 1.5rem; }}
+code {{ background: #1e293b; padding: 1px 5px; border-radius: 3px; }}
+</style>
+</head>
+<body>
+<a href="/aristo/projects.html" class="back-link">← Back to Projects</a>
+<h1>🏛️ Aristotle Project: 9687656f-b32a-4554-b64a-ff85980c7d0b</h1>
+<p class="subtitle">
+  <span class="badge">Canonical</span>
+  <span class="badge archived">1 archived variants</span>
+  <span class="badge">Files ✓</span>
+  <span class="badge archived">No Input</span>
+</p>
+
+<div class="section">
+  <h2>Project Metadata</h2>
+  <div class="card">
+    <div class="meta">
+      <strong>Created:</strong> 2026-05-07T11:44:31.553139<br>
+      <strong>Project ID:</strong> 9687656f-b32a-4554-b64a-ff85980c7d0b<br>
+      <strong>Status:</strong> 2<br>
+      <strong>Has Files:</strong> True<br>
+      <strong>Has Input:</strong> False
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Description</h2>
+  <div class="card">
+    <pre>{-# LANGUAGE TemplateHaskell, UnboxedTuples, ParallelListComp, CPP,\n             RankNTypes, TypeFamilies,\n             DataKinds, ConstraintKinds, PolyKinds, MultiParamTypeClasses,\n             FlexibleInstances, ExistentialQuantification,\n             ScopedTypeVariables, GADTs, ViewPatterns, TupleSections,\n             TypeOperators, PartialTypeSignatures, PatternSynonyms,\n             TypeApplications #-}\n{-# OPTIONS -Wno-incomplete-patterns -Wno-overlapping-patterns\n            -Wno-unused-matches -Wno-type-defaults\n            -Wno-missing-signatures -Wno-unused-do-bind\n            -Wno-missing-fields -Wno-incomplete-record-updates\n            -Wno-partial-type-signatures -Wno-redundant-constraints #-}\n\n#if __GLASGOW_HASKELL__ &gt;= 805\n{-# LANGUAGE DerivingVia #-}\n{-# LANGUAGE QuantifiedConstraints #-}\n#endif\n\n#if __GLASGOW_HASKELL__ &lt; 806\n{-# LANGUAGE TypeInType #-}\n#endif\n\n#if __GLASGOW_HASKELL__ &gt;= 809\n{-# LANGUAGE StandaloneKindSignatures #-}\n#endif\n\n#if __GLASGOW_HASKELL__ &gt;= 906\n{-# LANGUAGE TypeData #-}\n#endif\n{-# OPTIONS_GHC -ddump-to-file #-}\n{-# LANGUAGE TemplateHaskell, MultiParamTypeClasses, FlexibleInstances, ConstraintKinds, UndecidableInstances, KindSignatures, DeriveGeneric, TypeApplications, DeriveAnyClass #-}\n\nmodule Server.MetaCoq.TestMeta3 where\nimport Language.Haskell.TH.Syntax\n--import Database.Persist.TH\n\n-- oimport Data.Morpheus.Server -- .Types.GQLType\n-- import Data.Morpheus.App\n--import Data.Morpheus.Server.Types\n--import GHC.Types\nimport Prelude(Show, pure, (.), show, Char, Maybe(..), Monad, return, map)\n-- import Data.Morpheus.Server.Deriving.Utils.GRep\nimport Server.MetaCoq.TestMeta\n--import Test.Tasty\n--import Test.Tasty.HUnit\nimport Data.String\n-- import Data.Generics.Traversable\n-- import Data.Generics.Traversable.Zipper\n-- import Data.Generics.Traversable.TH\nimport Server.MetaCoq.TestMeta2\n--import Data.ByteString.Lazy.Char8 (ByteString)\n--import Data.Morpheus (interpreter)\n--import Data.Morpheus.Document (importGQLDocument)\n--import Data.Morpheus.Types (RootResolver (..), Undefined, ID, GQLType, QUERY,\n--                            ResolverQ,\n--                            Resolver)\nimport           GHC.Generics\nimport Data.Text (Text)\n--import Splices\n-- import qualified DsDec\n-- import qualified Dec\n-- import Dec ( RecordSel )\n-- import ReifyTypeCUSKs\n-- import ReifyTypeSigs\nimport Language.Haskell.TH.Desugar\nimport qualified Language.Haskell.TH.Desugar.OSet as OS\nimport Language.Haskell.TH.Desugar.Expand  ( expandUnsoundly )\nimport Language.Haskell.TH\n-- import qualified Language.Haskell.TH.Syntax as Syn\n\nimport Control.Exception ( ErrorCall )\nimport Control.Monad\n\nimport qualified Data.Map as M\nimport Data.Proxy\n\n#if __GLASGOW_HASKELL__ &gt;= 900\nimport Prelude as P\n#endif\n\n#if __GLASGOW_HASKELL__ &gt;= 906\nimport GHC.Tuple ( Solo(MkSolo) )\n#elif __GLASGOW_HASKELL__ &gt;= 900\nimport GHC.Tuple ( Solo(Solo) )\n#endif\n\n#if __GLASGOW_HASKELL__ &gt;= 908\nimport qualified FakeTuples\nimport GHC.Tuple ( Tuple0, Tuple1, Tuple2, Tuple3, Unit )\n#endif\n\n--class U a\n--instance U a\n-- instance GTraversable c0 (TestMeta.Prod TestMeta.Global_env TestMeta.Term)\n--mshow :: d -&gt; Char\n--mshow x = &#x27;c&#x27;\n\n--  foo1 :: String\n-- foo1 = \n-- ==  gfoldMap @Show (pure . show) rec_def_term  -- :: [String]--[GHC.Types.Char]\n-- data Query (m :: * -&gt; *) = Query\n--   { globals :: ID -&gt; m (Maybe (Prod Global_env Term))\n--   } deriving (Generic\n--              --, GQLType\n--              )\n\n--globalsResolver :: Monad m =&gt; ID -&gt; Resolver QUERY m (Maybe (Prod Global_env Term))\n--globalsResolver id = pure (Just (rec_def_term id))\n\n--globalsResolver :: ID -&gt; ResolverQ e Haxl (Prod Global_env Term)\n--globalsResolver id = return (Just rec_def_term)\n\n--(GHC.Generics.Rep (Prod Global_env Term)))\n\n  -- hidden Data.Morpheus.Server.Deriving.Utils.GRep.GRep\n-- foo =   GQLType (\n--       (Resolver\n--       (QUERY      ()       IO)\n--         (Resolver QUERY   () IO\n--          (ResolverValue (Resolver QUERY ()  IO)))\n--         (GHC.Generics.Rep (Prod Global_env Term))\n\n\n\n--   Global_declarations\n\n--  (List (Branch Term)) \n--  (List (Context_decl Term)) \n--  (List (Def Term))\n--  (List Aname) \n--  (List Constructor_body) \n--  (List Elt1) \n--  (List Ident) \n--  (List One_inductive_body) \n--  (List Projection_body) \n--  (List T3) \n--  (List T36) \n--  (List Term) \n\n--  (Option (List T36)) \n--  (Option Kername) \n--  (Option Term) \n--  (Predicate Term)\n\n--data Prod a b =\n--    Pair a b\n\n--  (Prod Global_env Bool) \n--  (Prod Global_env Term)\n--  (Prod Kername Global_decl) \n\n--data Modpath =\n--   MPfile Dirpath\n-- | MPbound Dirpath Ident Nat\n-- | MPdot Modpath Ident\n\n--  (Prod Modpath Ident) \n\n--  (Prod T10 T32) \n-- type T10 = T_0\n-- type T35 = Prod T10 T32\n-- type T32 = T_4\n-- type T_4 = T26\n-- type T26 = Tree0\n--data Tree0 =\n--   Leaf0\n-- | Node0 T0 Tree0 (Prod (Prod T3</pre>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Links & Actions</h2>
+  <div class="card">
+    <div class="links">
+      <a href="/aristo/api/9687656f-b32a-4554-b64a-ff85980c7d0b" target="_blank">📥 Download Result</a>
+      <a href="/aristo/api/9687656f-b32a-4554-b64a-ff85980c7d0b/status" target="_blank">📊 Project Status</a>
+      <a href="/aristo/api/9687656f-b32a-4554-b64a-ff85980c7d0b/files" target="_blank">📁 Files</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Generated by aristoprojects from dedup-report.json</p>
+  <p>Deployment manifest: <code>deploy/manifests/project-9687656f-b32a-4554-b64a-ff85980c7d0b/</code></p>
+</div>
+</body>
+</html>

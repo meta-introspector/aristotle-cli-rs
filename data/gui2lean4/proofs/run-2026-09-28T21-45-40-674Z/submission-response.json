@@ -1,0 +1,14 @@
+{
+  "project_id": "local-18d99a47af2bcf8c",
+  "description": "GUI2Lean4 hosted self-deployment capture 2026-09-28T21:45:59.520Z; video and tra",
+  "status": 2,
+  "has_files": true,
+  "created_at": "local-1790631959",
+  "last_updated": "local-1790631959",
+  "lean_result": "PASS Gui2Lean4Capture.lean (status=0)\nINFO gui2lean4-proof.json (not a Lean source file)\n\n=== ALL PROOFS PASSED ===",
+  "remote_id": null,
+  "files": [
+    "/tmp/aristo-local-18/Gui2Lean4Capture.lean",
+    "/tmp/aristo-local-18/gui2lean4-proof.json"
+  ]
+}

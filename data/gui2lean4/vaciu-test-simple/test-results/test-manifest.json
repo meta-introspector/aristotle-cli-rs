@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-09-29T14:04:19.866Z",
+  "inviteUrl": "https://kant-zk-pastebin.pages.dev/paste.html#invite_1790690659866:6580ed865e88a531",
+  "testType": "VACIU_SIMPLE_TEST",
+  "participants": {
+    "host": {
+      "joined": true,
+      "roomId": "invite_1790690659866",
+      "passUsed": false,
+      "messages": [
+        {
+          "from": "host",
+          "content": "Hello from host! This is my first message in the room.",
+          "timestamp": "2026-09-29T14:04:19.866Z",
+          "status": "sent"
+        }
+      ]
+    },
+    "guest": {
+      "joined": true,
+      "roomId": "invite_1790690659866",
+      "passUsed": false,
+      "messages": [
+        {
+          "from": "guest",
+          "content": "Hello from guest! Nice to meet you. This is my first message too.",
+          "timestamp": "2026-09-29T14:04:19.866Z",
+          "status": "sent"
+        }
+      ]
+    }
+  },
+  "messages": [
+    {
+      "from": "host",
+      "content": "Hello from host! This is my first message in the room.",
+      "timestamp": "2026-09-29T14:04:19.866Z",
+      "status": "sent"
+    },
+    {
+      "from": "guest",
+      "content": "Hello from guest! Nice to meet you. This is my first message too.",
+      "timestamp": "2026-09-29T14:04:19.866Z",
+      "status": "sent"
+    }
+  ],
+  "artifacts": {
+    "hostGif": "host-room.gif",
+    "guestGif": "guest-room.gif",
+    "invite": "invite.json"
+  },
+  "deployment": {
+    "sopsAvailable": true,
+    "cloudflareAvailable": true
+  },
+  "summary": "Simple VACIU test completed successfully"
+}

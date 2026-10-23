@@ -1,0 +1,58 @@
+{
+  "schema": "gui2lean4-proof/v1",
+  "capturedAt": "2026-09-29T00:04:11.035Z",
+  "url": "https://aristotle-manager.pages.dev/",
+  "checks": [
+    {
+      "name": "page-loaded",
+      "ok": true
+    },
+    {
+      "name": "deployment-config-generated",
+      "ok": true
+    },
+    {
+      "name": "cloudflare-pages-deployed",
+      "ok": true,
+      "project": "gui2proof-aristo-test",
+      "url": "https://gui2proof-aristo-test.pages.dev"
+    },
+    {
+      "name": "twitter-gif-generated",
+      "ok": true,
+      "width": 480,
+      "height": 600,
+      "fps": 10,
+      "frames": 191,
+      "bytes": 9337724
+    }
+  ],
+  "artifacts": {
+    "initial.png": {
+      "sha256": "b58222ab3e46bea012e28d24d17ee9516adc0c9193902701868233aa09fd5592"
+    },
+    "deployment-config.png": {
+      "sha256": "16c83eaa27646973754daba2305f11e1f403133a36edf7836d50ad5f0a8c5492"
+    },
+    "trace.zip": {
+      "sha256": "f5b525ad0682209d1e22c96e7dc4326df9f2a47ed7b3eff524122e7e487535f6"
+    },
+    "page@99f4c40912fdeab5ccf067e928423d0a.webm": {
+      "sha256": "cfe5d73b515a77c38d85429ba3a12d34e69056516015a5bb742ad185420973fa"
+    },
+    "twitter.gif": {
+      "sha256": "dd45329ce60f1e8b886fdfe93212e7e3883b49aea57a4e8caedcac21b09c3304"
+    }
+  },
+  "deployment": {
+    "project": "gui2proof-aristo-test",
+    "url": "https://gui2proof-aristo-test.pages.dev",
+    "sourceUrl": "https://aristotle.harmonic.fun/projects/0f9b0981-1dc9-4321-a46b-53e3cc6ee6e3",
+    "bytes": 31022
+  },
+  "redaction": "No API key, cookie, authorization header, or browser storage was captured.",
+  "browserMessages": [
+    "log: WASM module initialized",
+    "log: Deploying project 0f9b0981-1dc9-4321-a46b-53e3cc6ee6e3 as gui2lean4-self-capture with domain gui2lean4-self-capture.pages.dev"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "base": "http://127.0.0.1:8787",
+  "checks": [
+    {
+      "name": "page-opened",
+      "ok": true,
+      "detail": "Kant — a private room you share with one link"
+    },
+    {
+      "name": "joined-room",
+      "ok": true
+    },
+    {
+      "name": "gui-post-accepted",
+      "ok": true,
+      "detail": "you: gui2proof invite test 2026-10-01T18:17:35.720Z (http://127.0.0.1:8787)"
+    }
+  ],
+  "console": [
+    "error: Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+  ],
+  "at": "2026-10-01T18:17:37.795Z"
+}

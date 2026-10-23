@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MLVM — MiniLean VM | Aristotle Project f2265b5a</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0f172a; color: #e2e8f0;
+  max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem;
+  line-height: 1.6;
+}
+h1, h2, h3 { color: #38bdf8; }
+h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.5rem; margin-top: 2.5rem; border-top: 1px solid #334155; padding-top: 1.5rem; }
+h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+p { color: #cbd5e1; }
+a { color: #7dd3fc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { background: #1e293b; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+pre { background: #0f172a; border: 1px solid #334155; border-radius: 0.5rem; padding: 1rem; overflow: auto; max-height: 500px; }
+.card {
+  background: #1e293b; border: 1px solid #334155; border-radius: 0.75rem;
+  padding: 1.5rem; margin: 1.5rem 0;
+}
+.badge {
+  display: inline-block; font-size: 0.7rem; padding: 2px 8px;
+  border-radius: 999px; background: #064e3b; color: #4ade80;
+  margin: 2px; vertical-align: middle;
+}
+.badge.warn { background: #78350f; color: #fbbf24; }
+.nav { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.nav a { padding: 0.5rem 1rem; background: #1e293b; border: 1px solid #334155; border-radius: 0.5rem; }
+.nav a:hover { background: #334155; text-decoration: none; }
+.footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.9rem; }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+th, td { padding: 0.5rem; border: 1px solid #334155; text-align: left; }
+th { background: #1e293b; color: #a5b4fc; }
+tr:nth-child(even) { background: #1e293b; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="#overview">Overview</a>
+  <a href="#studio">Studio VM</a>
+  <a href="#api">API & Decode</a>
+  <a href="#run">Run Locally</a>
+</nav>
+
+<h1>🔧 MLVM</h1>
+<p><strong>Multi-Language Virtual Machine (FRACTRAN / MiniLean)</strong></p>
+<p class="badge">Python + JavaScript + WASM + x86-64 asm</p>
+<p class="badge">MiniLean Studio VM</p>
+<p class="badge warn">MLVM v1 — merged 691 board</p>
+
+<div class="card">
+  <h3 id="overview">Project Overview</h3>
+  <p><strong>Project ID:</strong> <code>f2265b5a-a673-4176-84aa-796c0ac9ddfa</code></p>
+  <p><strong>Description:</strong> MLVM — a multi-language VM with MiniLean checker studio. Merged from Aristotle project f2265b5a + 691 board project.</p>
+  <p><strong>Status:</strong> COMPLETE</p>
+  <p><strong>Components:</strong></p>
+  <ul>
+    <li><strong>MiniLean Studio</strong> — Browser-based Lean 4 VM (/mnt/data1/time-2026/05-may/07/arist/f2265b5a-a673-4176-84aa-796c0ac9ddfa/minilean/studio/minilean-studio.html)</li>
+    <li><strong>JavaScript VM</strong> — /mnt/data1/time-2026/05-may/07/arist/f2265b5a-a673-4176-84aa-796c0ac9ddfa/minilean/js/minilean.js</li>
+    <li><strong>Python VM</strong> — /mnt/data1/time-2026/05-may/07/arist/f2265b5a-a673-4176-84aa-796c0ac9ddfa/minilean/python/minilean.py</li>
+    <li><strong>WASM core</strong> — /mnt/data1/time-2026/05-may/07/arist/f2265b5a-a673-4176-84aa-796c0ac9ddfa/minilean/wasm</li>
+    <li><strong>x86-64 ASM</strong> — /mnt/data1/time-2026/05-may/07/arist/f2265b5a-a673-4176-84aa-796c0ac9ddfa/minilean/asm</li>
+    <li><strong>691 Decoder</strong> — /mnt/data1/time-2026/05-may/07/arist/f2265b5a-a673-4176-84aa-796c0ac9ddfa/minilean/web/691-decode.html</li>
+    <li><strong>Compiler</strong> — /mnt/data1/time-2026/05-may/07/arist/f2265b5a-a673-4176-84aa-796c0ac9ddfa/minilean/studio/compiler.js</li>
+  </ul>
+</div>
+
+<h2 id="studio">MiniLean Studio VM</h2>
+<div class="card">
+  <p>The MLVM Studio is a browser-based Virtual Machine running MiniLean — a compact Lean 4 style checker with proof verification.</p>
+  <ul>
+    <li>Studio entrypoint: <code>studio/minilean-studio.html</code> (5.6 MB)</li>
+    <li>Full bundle: <code>studio/dist/minilean-studio-full.html</code></li>
+    <li>Showcase: <code>studio/dist/minilean-studio-showcase.html</code></li>
+    <li>Agent packs: <code>studio/dist/agents/</code></li>
+  </ul>
+</div>
+
+<h2 id="api">API & Decode</h2>
+<div class="card">
+  <h3>691 Decode Page</h3>
+  <p>A dedicated decoder interface for 691-board artifacts.</p>
+  <ul>
+    <li>Page: <code>minilean/web/691-decode.html</code></li>
+    <li>Test: <code>minilean/web/test_decode.js</code></li>
+  </ul>
+</div>
+
+<h2 id="run">Run Locally</h2>
+<div class="card">
+  <h3>Static Server</h3>
+  <pre>cd /mnt/data1/time-2026/05-may/07/arist/f2265b5a-a673-4176-84aa-796c0ac9ddfa/minilean/studio
+python3 -m http.server 8000
+# Then open http://localhost:8000/minilean-studio.html
+</pre>
+
+  <h3>Python VM</h3>
+  <pre>python3 minilean/python/minilean.py
+</pre>
+
+  <h3>Studio Development</h3>
+  <pre>python3 minilean/studio/make_dist.py     # Build distribution
+python3 minilean/studio/make_single.py    # Build single-file
+python3 minilean/studio/test_dist.py      # Test distribution
+</pre>
+</div>
+
+<h2>Data & Artifacts</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Artifact</th><th>Location</th><th>Size</th></tr></thead>
+    <tbody>
+      <tr><td>Studio HTML</td><td><code>minilean/studio/minilean-studio.html</code></td><td>~5.6 MB</td></tr>
+      <tr><td>Full bundle (zip)</td><td><code>minilean/studio/dist/minilean-studio-full.zip</code></td><td>~2.3 MB</td></tr>
+      <tr><td>Modular (zip)</td><td><code>minilean/studio/dist/minilean-studio-modular.zip</code></td><td>~1.2 MB</td></tr>
+      <tr><td>Studio data</td><td><code>minilean/studio/studio-data.js</code></td><td>~5.3 MB</td></tr>
+      <tr><td>Bundle data</td><td><code>minilean/studio/bundle.json</code></td><td>~5.2 MB</td></tr>
+      <tr><td>Agent packs</td><td><code>minilean/studio/dist/agents/</code></td><td>multiple</td></tr>
+      <tr><td>Compiler JS</td><td><code>minilean/studio/compiler.js</code></td><td>~30 KB</td></tr>
+      <tr><td>Kernel JS</td><td><code>minilean/studio/kernel.js</code></td><td>~27 KB</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer">
+  <p>MLVM — Aristotle Manager project <code>f2265b5a-a673-4176-84aa-796c0ac9ddfa</code></p>
+  <p>Deployed via Cloudflare Pages · <a href="https://aristotle.harmonic.fun">Aristotle</a></p>
+</div>
+</body>
+</html>

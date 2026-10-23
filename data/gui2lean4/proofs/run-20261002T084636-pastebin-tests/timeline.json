@@ -1,0 +1,69 @@
+{
+  "base": "http://127.0.0.1:42417",
+  "timeline": [
+    {
+      "step": "mock relay healthy",
+      "ms": 1790930784785,
+      "ok": true,
+      "name": "kant-zk-relay",
+      "version": "1.0.0",
+      "rooms": 0,
+      "lines": 0,
+      "sockets": 0
+    },
+    {
+      "step": "A opened a room",
+      "ms": 1790930788787
+    },
+    {
+      "step": "B joined by invite link",
+      "ms": 1790930789713
+    },
+    {
+      "step": "A dropped the file (encrypted, pinned, announced)",
+      "ms": 1790930792945
+    },
+    {
+      "step": "B sees the dropped file",
+      "ms": 1790930793001
+    },
+    {
+      "step": "B fetched and decrypted the file",
+      "ms": 1790930794005
+    }
+  ],
+  "checks": [
+    [
+      "mock relay healthy",
+      true
+    ],
+    [
+      "A opened a room",
+      true
+    ],
+    [
+      "B joined by invite link",
+      true
+    ],
+    [
+      "A dropped the file",
+      true
+    ],
+    [
+      "B saw the dropped file",
+      true
+    ],
+    [
+      "B's fetched bytes are byte-exact",
+      true
+    ],
+    [
+      "the manifest announced chunk cids",
+      true
+    ],
+    [
+      "the archive recorded the pins",
+      true
+    ]
+  ]
+}

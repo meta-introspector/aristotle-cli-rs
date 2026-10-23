@@ -1,0 +1,16 @@
+{
+  "project_id": "5f43262f-85da-439a-a404-5433260d20ae",
+  "description": "project",
+  "created_at": "2026-06-21T01:11:53.565432",
+  "archived_count": 3,
+  "order": 7,
+  "deployment_date": "2026-10-21T09:41:12.999974",
+  "artifacts": {
+    "systemd": true,
+    "webpage": true,
+    "nix_package": true,
+    "lean_artifacts": true,
+    "tasks": true,
+    "skills": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "project_id": "f8e27a3f-e5fa-4c4d-ae95-cfd403280fa7",
+  "description": "Prove the DASL GOAP pipeline specification.\\nThe Lean4 file at /home/mdupont/dasl-planning/lean-proofs/GoapPipeline.lean contains:\\n- 26 state atoms as an inductive type\\n- 13 pipeline actions with pre/post conditions\\n- Pipeline correctness theorem (native_decide)\\nVerify all theorems and report proof status.",
+  "created_at": "2026-06-25T12:58:16.671884",
+  "archived_count": 1,
+  "order": 10,
+  "deployment_date": "2026-10-21T09:41:13.000251",
+  "artifacts": {
+    "systemd": true,
+    "webpage": true,
+    "nix_package": true,
+    "lean_artifacts": true,
+    "tasks": true,
+    "skills": true
+  }
+}

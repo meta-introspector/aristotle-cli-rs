@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hodge VM — Hodge Certificate Checker, Search, Export & Visualizer</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0f172a; color: #e2e8f0;
+  max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem;
+  line-height: 1.6;
+}
+h1, h2, h3 { color: #38bdf8; }
+h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.5rem; margin-top: 2.5rem; border-top: 1px solid #334155; padding-top: 1.5rem; }
+h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+p { color: #cbd5e1; }
+a { color: #7dd3fc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { background: #1e293b; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+pre { background: #0f172a; border: 1px solid #334155; border-radius: 0.5rem; padding: 1rem; overflow: auto; max-height: 500px; }
+.card {
+  background: #1e293b; border: 1px solid #334155; border-radius: 0.75rem;
+  padding: 1.5rem; margin: 1.5rem 0;
+}
+.badge {
+  display: inline-block; font-size: 0.7rem; padding: 2px 8px;
+  border-radius: 999px; background: #064e3b; color: #4ade80;
+  margin: 2px; vertical-align: middle;
+}
+.badge.warn { background: #78350f; color: #fbbf24; }
+.nav { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.nav a { padding: 0.5rem 1rem; background: #1e293b; border: 1px solid #334155; border-radius: 0.5rem; }
+.nav a:hover { background: #334155; text-decoration: none; }
+.footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.9rem; }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+th, td { padding: 0.5rem; border: 1px solid #334155; text-align: left; }
+th { background: #1e293b; color: #a5b4fc; }
+tr:nth-child(even) { background: #1e293b; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="#architecture">Architecture</a>
+  <a href="#v1-scope">v1 Scope</a>
+  <a href="#measured-results">Results</a>
+  <a href="#run">Run Locally</a>
+  <a href="#tests">Tests</a>
+</nav>
+
+<h1>🏛️ Hodge VM</h1>
+<p><strong>Hodge Certificate Checker, Search, Export & Visualizer</strong></p>
+<p class="badge">Lean 4.28.0 + Mathlib</p>
+<p class="badge">WASM VM (45 KB)</p>
+<p class="badge warn">v1 Shipped</p>
+
+<div class="card">
+  <h3>Project Overview</h3>
+  <p><strong>Project ID:</strong> <code>f4e10742-bd72-442a-88b0-b1a915a3f51b</code></p>
+  <p><strong>Description:</strong> Hodge VM — checking, searching and exporting hodge.computer certificates in the browser</p>
+  <p><strong>Created:</strong> 2026-10-20T22:19:51.544517</p>
+  <p><strong>Status:</strong> IN_PROGRESS</p>
+  <p><strong>Owner:</strong> J (google-oauth2|112348243083922428340)</p>
+</div>
+
+<h2 id="architecture">Architecture Decision: Option C (Hybrid)</h2>
+<div class="card">
+  <h3>Three Components</h3>
+  <ol>
+    <li><strong>Lean Specification & Oracle</strong> — <code>RequestProject/Hodge/</code> holds the verbatim repository contract (<code>HodgeComputer.Verify</code>, <code>Spec.lean</code>), a computable sparse-polynomial checker over ℚ (<code>runChecks</code>, <code>Check.lean</code> / <code>Oracle.lean</code>, runs with <code>#eval</code>), and the theorem <code>HodgeOracle.check_sound</code>: if every Boolean check passes, <code>Verify</code> holds for the interpreted polynomials. Proved without <code>sorry</code>; axioms <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code>.</li>
+    <li><strong>HVM (Hodge VM)</strong> — A compact Rust VM compiled to WebAssembly (<code>vm/</code>, 45,563 bytes, sha256 <code>777b4204a1249cc51ce836d5c4740bb23b25ff1c1b50dec796f212aedd15c6ab</code>): sparse polynomials in six variables with exact big-rational coefficients, instructions <code>LOADPOLY</code>, <code>ADD</code>, <code>SUB</code>, <code>MUL</code>, <code>SMUL</code>, <code>POW</code>, <code>PDERIV</code>, <code>DIR</code>, <code>DIV</code>, <code>EQ</code>, <code>ISZERO</code>, <code>ISHOM</code>, <code>DEG</code>, <code>EVALMOD</code>, <code>REPORT</code>, … (see <code>spec/isa.md</code>), step and memory limits with clear errors, MiniLean report convention (claim k → (k,1) / (k,0)).</li>
+    <li><strong>Differential Testing</strong> — Ties the two together: WASM VM, a JavaScript reference VM, the Lean oracle and an independent Python <code>fractions</code> checker agree on all golden vectors.</li>
+  </ol>
+</div>
+
+<h2 id="v1-scope">v1 Scope (Shipped)</h2>
+<div class="card">
+  <h3>Core Build</h3>
+  <p><code>lake build</code> builds <code>Spec</code>, <code>SPoly</code>, <code>Check</code>, <code>Oracle</code>, <code>Golden</code>, <code>Literal</code> (a few minutes once Mathlib is cached). The 41 per-instance certificate modules (<code>RequestProject/Hodge/Instances/</code>) are a separate library <code>HodgeInstances</code>, not in the default build, so a slow instance can never break the core build.</p>
+  
+  <h3>Instance Builds</h3>
+  <p>Instances are built one at a time, smallest first, with <code>hodge-vm/tools/build_instances.sh [timeout] [Module ...]</code>; results go to <code>tests/instance-build-status.tsv</code>. Current status: <strong>39 of 41 kernel-checked</strong> (14 s – 386 s each); <code>Contact46006</code> (147 KB) and <code>M3Coupled</code> (190 KB) are <strong>not kernel-checked yet</code>. Failures and timeouts are recorded, not fatal.</p>
+  
+  <h3>Axiom Audit</h3>
+  <p><code>#print axioms</code> on the <code>witness</code> theorem gives exactly <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code> for all 39 kernel-checked instances — 34 via <code>tools/axiom_audit.sh</code> and the 5 largest one module per run via <code>tools/audit_one.sh</code>.</p>
+  
+  <h3>No native_decide</h3>
+  <p>No <code>native_decide</code> anywhere in anything described as proved — it adds an axiom the repository's verifier rejects. The core soundness theorem <code>HodgeOracle.check_sound</code> uses <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code> only.</p>
+</div>
+
+<h2 id="measured-results">Measured Results</h2>
+<table>
+<thead>
+<tr><th>Item</th><th>Result</th></tr>
+</thead>
+<tbody>
+<tr><td>Witnesses available</td><td>41 of 62 accepted instances carry a <code>witness.json</code>; 21 are accepted by existence proofs with no finite witness to check; 16 instances are open</td></tr>
+<tr><td>Lean oracle (M1)</td><td>41/41 pass all 5 checks, all 123 negative controls rejected</td></tr>
+<tr><td>VM (M2)</td><td>0 disagreements WASM / JS / Lean / Python on 41 witnesses</td></tr>
+<tr><td>Coprimality</td><td>Established for all 41 witnesses</td></tr>
+<tr><td>Search, accepted ansatz (M4)</td><td>Re-derives 41/41</td></tr>
+<tr><td>Search, graded ansatz</td><td>39/41; Klein-Hesse and Klein-Rational exceed 1,500-unknown limit</td></tr>
+<tr><td>Open instances</td><td>16 instances × 4 denominators, graded ansatz, ≤1,500 unknowns: no candidate — not evidence of nonexistence</td></tr>
+<tr><td>Export dry run (M5)</td><td>Generated <code>Solution.lean</code> compiled with local Lean against the copied contract, clean axioms</td></tr>
+<tr><td>Edge (Appendix A)</td><td>E1, E2 (41, 0 disagreements), E4, E5 (graded search via edge units recovers 39/41) pass on the Node listener</td></tr>
+</tbody>
+</table>
+
+<h2 id="run">Run Locally</h2>
+<div class="card">
+  <h3>Page (Browser Interface)</h3>
+  <pre># Serve the hodge-vm folder with any static server
+python3 -m http.server 8000
+# Then open http://localhost:8000/index.html
+# Works from file:// as well (data and wasm are sharded JS files loaded on demand)
+</pre>
+
+  <h3>Studio (MiniLean)</h3>
+  <pre># studio/studio-hodge.js + studio/hodge.claims.mlean
+# Patch with tools/patch_studio.py (spec/studio.md)
+</pre>
+
+  <h3>Edge (Cloudflare Workers)</h3>
+  <pre>node edge/node-server.mjs
+# Build a Workers bundle with python3 tools/make_hodge_edge.py
+</pre>
+
+  <h3>VM (Rust → WASM)</h3>
+  <pre>bash vm/build.sh          # Rust, wasm32-unknown-unknown
+python3 tools/make_wasm_shards.py
+</pre>
+
+  <h3>Lean</h3>
+  <pre>lake build                    # Core only
+lake build RequestProject.Hodge.Instances.FermatQ2  # One instance
+hodge-vm/tools/build_instances.sh 1800              # All instances in background
+</pre>
+</div>
+
+<h2 id="tests">Tests</h2>
+<div class="card">
+  <pre>
+node tests/test_vm.js
+node tests/test_search.js
+node tests/test_claims.js
+node tests/test_page.js         # and --file
+node tests/test_studio.js
+node tests/test_edge.mjs        # --graded for E5
+bash tests/export_dryrun_all.sh
+python3 tools/chunk_check.py
+  </pre>
+</div>
+
+<h2>Layout for Small Models</h2>
+<div class="card">
+  <p>Every page is ≤ 20,000 estimated tokens (3 characters per token; checked by <code>tools/chunk_check.py</code>). The two largest instances are split into part modules <code>P1</code>…<code>P5</code> to fit. <code>INDEX.md</code> lists each page with its size, sha256, dependencies and summary. <code>tasks/</code> holds task cards. <code>tools/make_bundles.py</code> concatenates whole pages; <code>tools/unpack_reply.py</code> applies a reply after checking checksums.</p>
+</div>
+
+<h2>Defaults and Open Questions</h2>
+<div class="card">
+  <ul>
+    <li>Search on solved instances is allowed and labelled "re-derivation test" (question 3 default).</li>
+    <li>Open: the full MiniLean edge bundle, Workers plan / CPU limits, public vs token-protected routes, and whether peer-to-peer search sharing is in scope.</li>
+    <li>Following AGENTS.md: share partial results, failed searches with their bounds, and independent checks in the instance discussion threads; keep any proof PR to one instance folder.</li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p>Hodge VM — <a href="https://github.com/meta-introspector/aristotle-manager">Aristotle Manager</a> project</p>
+  <p>Deployed via Cloudflare Pages · <a href="https://aristotle.harmonic.fun">Aristotle</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "schema": "gui2lean4-proof/v1",
+  "capturedAt": "2026-09-29T00:00:00.000Z",
+  "url": "https://kant-zk-pastebin.pages.dev/paste.html",
+  "checks": [
+    { "name": "vaciu-room-page-opened", "ok": true },
+    { "name": "pass-not-loaded", "ok": true },
+    { "name": "post-not-attempted", "ok": true }
+  ],
+  "artifacts": {
+    "vaciu-room-dry-run.png": { "sha256": "0eca363774a4fa45878df7883e7c1293728e2a565506fc07c49b7853765e48e7" },
+    "result.json": { "sha256": "a62027540f088997117f2b5b163f70a4ef6fc137287e60dcf0b98399d80870be" }
+  },
+  "redaction": "No pass link or authorization header was loaded or sent."
+}

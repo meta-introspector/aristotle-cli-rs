@@ -1,0 +1,16 @@
+{
+  "project_id": "4b7ae00b-c845-4c67-aedd-8d58dabb1ce1",
+  "description": "unified-dasl",
+  "created_at": "2026-06-16T18:12:24.908571",
+  "archived_count": 15,
+  "order": 4,
+  "deployment_date": "2026-10-21T09:41:12.969548",
+  "artifacts": {
+    "systemd": true,
+    "webpage": true,
+    "nix_package": true,
+    "lean_artifacts": true,
+    "tasks": true,
+    "skills": true
+  }
+}

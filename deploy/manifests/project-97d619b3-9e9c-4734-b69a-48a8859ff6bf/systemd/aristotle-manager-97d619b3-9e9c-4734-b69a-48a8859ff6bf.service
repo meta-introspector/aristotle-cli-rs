@@ -1,0 +1,23 @@
+[Unit]
+Description=Aristotle Project 97d619b3-9e9c-4734-b69a-48a8859ff6bf
+After=network.target
+
+[Service]
+Type=simple
+User=mdupont
+Group=mdupont
+WorkingDirectory=/mnt/data1/time-2026/05-may/07/arist/97d619b3-9e9c-4734-b69a-48a8859ff6bf
+Environment=HOME=/home/mdupont
+Environment=PATH=/home/mdupont/.elan/bin:/home/mdupont/.nix-profile/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/mnt/data1/time-2026/05-may/07/arist/target/release/aristotle-manager serve --port 9876 --forward
+Restart=on-failure
+RestartSec=5s
+KillSignal=SIGINT
+TimeoutStopSec=15s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+
+[Install]
+WantedBy=multi-user.target

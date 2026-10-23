@@ -1,0 +1,16 @@
+{
+  "project_id": "931ec461-1f4a-4bb3-a013-c83dc3723338",
+  "description": "(* Require Import MirrorSolve.FirstOrder. *)\\n(* Require Import MirrorSolve.BV. *)\\n(* Require Import MirrorSolve.SMT. *)\\n(* Require Import MirrorSolve.UF. *)\\n(* Require Import MirrorSolve.FOList. *)\\n(* Require Import MirrorSolve.HLists. *)\\n\\n(* Import HListNotations. *)\\n\\n(* Require Import Coq.Strings.String. *)\\n\\n(* Require Import MirrorSolve.Reflection.Core. *)\\n(* Require Import MirrorSolve.Reflection.FM. *)\\n\\n(* Require Import Coq.ZArith.BinInt. *)\\n(* Require Import MirrorSolve.Automation.Equations. *)\\n\\n(*\\nIntuitional language model\\neveryone creates different versions of this for themselves.\\n\\nthis is mine that i will create mappings onto other systems with it.\\n\\npair_Type is  similar to total2 of unimath\\n\\n *)\\n\\n(*Unimath*)\\nDefinition UU := Type.\\nInductive empty : UU := .\\nNotation \\",
+  "created_at": "2026-06-08T18:08:54.537029",
+  "archived_count": 1,
+  "order": 3,
+  "deployment_date": "2026-10-21T09:41:12.968820",
+  "artifacts": {
+    "systemd": true,
+    "webpage": true,
+    "nix_package": true,
+    "lean_artifacts": true,
+    "tasks": true,
+    "skills": true
+  }
+}

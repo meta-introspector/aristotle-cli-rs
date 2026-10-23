@@ -1,0 +1,46 @@
+{
+  "schema": "gui2lean4-proof/v1",
+  "capturedAt": "2026-09-28T21:51:09.598Z",
+  "url": "https://aristotle-manager.pages.dev/",
+  "checks": [
+    {
+      "name": "page-loaded",
+      "ok": true
+    },
+    {
+      "name": "deployment-config-generated",
+      "ok": true
+    },
+    {
+      "name": "twitter-gif-generated",
+      "ok": true,
+      "width": 480,
+      "height": 600,
+      "fps": 10,
+      "frames": 53,
+      "bytes": 4571289
+    }
+  ],
+  "artifacts": {
+    "initial.png": {
+      "sha256": "27614ff8d7aa1c0639982315ac136326cea85d98583c51a666bfffdd7f157631"
+    },
+    "deployment-config.png": {
+      "sha256": "d34a14ea96ec48dc62db6c51343fa5035752e59cbd98ffee38a4b064478231a6"
+    },
+    "trace.zip": {
+      "sha256": "90507b2a1f0546658221fd73add22bc3b4a04c7242341dfd3f30950e0f8138a4"
+    },
+    "page@06e0fbea18b63cce3b1e3988399ca8d6.webm": {
+      "sha256": "76ba12c664a969f417edb04031341b58cf42070651f214f56580285d4682b3e3"
+    },
+    "twitter.gif": {
+      "sha256": "a6541935e08c22b1259362011cb36669b37f11e9d5f8d249a74dd9e86d7c87d1"
+    }
+  },
+  "redaction": "No API key, cookie, authorization header, or browser storage was captured.",
+  "browserMessages": [
+    "log: WASM module initialized",
+    "log: Deploying project 0f9b0981-1dc9-4321-a46b-53e3cc6ee6e3 as gui2lean4-self-capture with domain gui2lean4-self-capture.pages.dev"
+  ]
+}

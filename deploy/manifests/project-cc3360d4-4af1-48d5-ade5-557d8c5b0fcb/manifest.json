@@ -1,0 +1,16 @@
+{
+  "project_id": "cc3360d4-4af1-48d5-ade5-557d8c5b0fcb",
+  "description": "Prove the DASL split-merge unification theorem.\\nThe Lean4 file at /home/mdupont/dasl-planning/lean-proofs/SplitMergeUnification.lean contains:\\n- Formal definition of Declaration with CID\\n- split, merge, and dedup functions\\n- split_merge_unification theorem: dedup(merge(split(decls))) = dedup(decls)\\n- Paper coverage statistics: 160 papers, 0 declarations\\nVerify the main theorem and report proof status.\\nThis proof shows that the DASL declaration splitter + merger preserves semantics.",
+  "created_at": "2026-06-25T13:41:40.140758",
+  "archived_count": 2,
+  "order": 11,
+  "deployment_date": "2026-10-21T09:41:13.030247",
+  "artifacts": {
+    "systemd": true,
+    "webpage": true,
+    "nix_package": true,
+    "lean_artifacts": true,
+    "tasks": true,
+    "skills": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "gui2lean4-proof/v1",
+  "capturedAt": "2026-09-28T20:30:15.918Z",
+  "url": "https://aristotle-manager.pages.dev/",
+  "checks": [
+    {
+      "name": "page-loaded",
+      "ok": true
+    },
+    {
+      "name": "deployment-config-generated",
+      "ok": false
+    }
+  ],
+  "artifacts": {
+    "initial.png": {
+      "sha256": "a38575177ef036d60bf5fdcadf7ad3894df39b502b5df87caee97b9cc5d51c2f"
+    },
+    "deployment-config.png": {
+      "sha256": "76fd155055fdaf35a7a9571702e9f61798f50d30b62ebb126c726273535b74e2"
+    },
+    "trace.zip": {
+      "sha256": "55689292afce8aa0edf3d38e8b012a387a9634f92a73ef54f57b3e3eb4d553d1"
+    },
+    "page@387bc85b16fd11f94c1976aa55bab81e.webm": {
+      "sha256": "8354eb1351b7203c6124efa35785b4d6d3513db93d1712aa024f6a4b98ba3516"
+    }
+  },
+  "redaction": "No API key, cookie, authorization header, or browser storage was captured."
+}

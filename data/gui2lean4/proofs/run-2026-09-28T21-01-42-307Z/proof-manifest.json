@@ -1,0 +1,34 @@
+{
+  "schema": "gui2lean4-proof/v1",
+  "capturedAt": "2026-09-28T21:02:06.463Z",
+  "url": "https://aristotle-manager.pages.dev/",
+  "checks": [
+    {
+      "name": "page-loaded",
+      "ok": true
+    },
+    {
+      "name": "deployment-config-generated",
+      "ok": true
+    }
+  ],
+  "artifacts": {
+    "initial.png": {
+      "sha256": "363f5f52ed635918d8f86319766eb7ef7aa6d814df0bcc0a6c04259557e302d8"
+    },
+    "deployment-config.png": {
+      "sha256": "c809fd0c3594dd361473d3dae35ee9a8a892232a80427a21ee5c1b6ad7f78ba4"
+    },
+    "trace.zip": {
+      "sha256": "fe4fb57b15044fe3c2deb37ca1a0a6436c1bc8d93c9e9972154d8097a5e9fed2"
+    },
+    "page@51e321fdad26d2c63f3aa7209f57632c.webm": {
+      "sha256": "eb50a75a93f0c1d32f96b37089ef72b2f38f9771b19c87cc547ffc08b7947e4c"
+    }
+  },
+  "redaction": "No API key, cookie, authorization header, or browser storage was captured.",
+  "browserMessages": [
+    "log: WASM module initialized",
+    "log: Deploying project 0f9b0981-1dc9-4321-a46b-53e3cc6ee6e3 as gui2lean4-self-capture with domain gui2lean4-self-capture.pages.dev"
+  ]
+}

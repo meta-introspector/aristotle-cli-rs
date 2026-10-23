@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "testName": "VACIU Complete End-to-End Test",
+    "timestamp": "2026-09-29T21:04:08.096Z",
+    "version": "1.0.0",
+    "status": "PASSED"
+  },
+  "workflow": {
+    "inviteUrl": "https://kant-zk-pastebin.pages.dev/#6b7a696e76697465:68747470733a2f2f6b616e742d72656c61792e63696361646137312e6e6574:addd10f78317e4df23cdd5aa4ae570130ec2e02551389689af06f615ad48e56e:706565722d63756c6162",
+    "roomId": "kzinvite",
+    "relayUrl": "https://kant-relay.cicada71.net",
+    "participants": 2,
+    "messages": [
+      {
+        "from": "host",
+        "content": "Hello from host! This is my first message in the Kant room."
+      },
+      {
+        "from": "guest",
+        "content": "Hello from guest! Nice to meet you. This is our first chat."
+      }
+    ]
+  },
+  "artifacts": {
+    "invite": "/mnt/data1/time-2026/05-may/07/arist/data/gui2lean4/vaciu-complete-test/test-results/invite.json",
+    "inviteUrl": "/mnt/data1/time-2026/05-may/07/arist/data/gui2lean4/vaciu-complete-test/test-results/invite-url.txt",
+    "hostGif": "/mnt/data1/time-2026/05-may/07/arist/data/gui2lean4/vaciu-complete-test/test-results/host-room.gif",
+    "guestGif": "/mnt/data1/time-2026/05-may/07/arist/data/gui2lean4/vaciu-complete-test/test-results/guest-room.gif"
+  },
+  "verification": {
+    "sopsAvailable": true,
+    "cloudflareAvailable": true,
+    "relayActive": true
+  }
+}

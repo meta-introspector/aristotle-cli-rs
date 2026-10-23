@@ -1,0 +1,21 @@
+{
+  "base": "https://kant-relay-v1.purple-fire-b881.workers.dev",
+  "checks": [
+    {
+      "name": "page-opened",
+      "ok": true,
+      "detail": "Kant — a private room you share with one link"
+    },
+    {
+      "name": "joined-room",
+      "ok": true
+    },
+    {
+      "name": "gui-post-accepted",
+      "ok": true,
+      "detail": "you: gui2proof invite test 2026-10-01T18:18:10.535Z (https://kant-relay-v1.purple-fire-b881.workers.dev)"
+    }
+  ],
+  "console": [],
+  "at": "2026-10-01T18:18:12.603Z"
+}

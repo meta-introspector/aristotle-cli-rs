@@ -1,0 +1,16 @@
+{
+  "project_id": "97d619b3-9e9c-4734-b69a-48a8859ff6bf",
+  "description": "Merge",
+  "created_at": "2026-06-17T01:07:38.631170",
+  "archived_count": 1,
+  "order": 5,
+  "deployment_date": "2026-10-21T09:41:12.999652",
+  "artifacts": {
+    "systemd": true,
+    "webpage": true,
+    "nix_package": true,
+    "lean_artifacts": true,
+    "tasks": true,
+    "skills": true
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "capturedAt": "2026-09-28T20:14:02.294Z",
+  "source": [
+    {
+      "name": "Hosted Aristo UI",
+      "path": "/",
+      "url": "https://aristotle-manager.pages.dev/",
+      "role": "proof UI"
+    }
+  ],
+  "summary": {
+    "totalPages": 1,
+    "offlinePages": 0,
+    "totalElements": 13,
+    "totalInteractive": 13,
+    "totalCompliant": 13,
+    "complianceRatePct": 100
+  },
+  "pages": [
+    {
+      "pagePath": "/",
+      "title": "Aristotle Manager - Web Deployment",
+      "elementCount": 13,
+      "accessibleCount": 13,
+      "interactiveCount": 13,
+      "kpiCardCount": 0,
+      "landmarks": {
+        "banner": false,
+        "navigation": false,
+        "main": false
+      },
+      "elements": [
+        {
+          "id": "apiKey",
+          "tag": "input",
+          "role": "textbox",
+          "accessibleName": "Enter your Aristotle API key",
+          "rawText": "",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "cloudflareAccountId",
+          "tag": "input",
+          "role": "textbox",
+          "accessibleName": "0ceffbadd0a04623896f5317a1e40d94",
+          "rawText": "",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "saveConfig",
+          "tag": "button",
+          "role": "button",
+          "accessibleName": "Save Configuration",
+          "rawText": "Save Configuration",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "button-3",
+          "tag": "button",
+          "role": "button",
+          "accessibleName": "📁 Projects",
+          "rawText": "📁 Projects",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "button-4",
+          "tag": "button",
+          "role": "button",
+          "accessibleName": "🚀 Deploy",
+          "rawText": "🚀 Deploy",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "button-5",
+          "tag": "button",
+          "role": "button",
+          "accessibleName": "⚙️ Config",
+          "rawText": "⚙️ Config",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "fetchProjects",
+          "tag": "button",
+          "role": "button",
+          "accessibleName": "Fetch Projects from Aristotle API",
+          "rawText": "Fetch Projects from Aristotle API",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "deployProjectId",
+          "tag": "input",
+          "role": "textbox",
+          "accessibleName": "e.g., 0f9b0981-1dc9-4321-a46b-53e3cc6ee6e3",
+          "rawText": "",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "deployProjectName",
+          "tag": "input",
+          "role": "textbox",
+          "accessibleName": "e.g., the-far-game",
+          "rawText": "",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "deployDomain",
+          "tag": "input",
+          "role": "textbox",
+          "accessibleName": "e.g., myproject.example.com",
+          "rawText": "",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "deployProject",
+          "tag": "button",
+          "role": "button",
+          "accessibleName": "Deploy Project",
+          "rawText": "Deploy Project",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "generateConfig",
+          "tag": "button",
+          "role": "button",
+          "accessibleName": "Generate Config Only",
+          "rawText": "Generate Config Only",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        },
+        {
+          "id": "copyConfig",
+          "tag": "button",
+          "role": "button",
+          "accessibleName": "Copy to Clipboard",
+          "rawText": "Copy to Clipboard",
+          "hasAccessibleLabel": true,
+          "hasValidRole": true,
+          "isInteractive": true,
+          "isStatusIndicator": false,
+          "a11yCompliant": true,
+          "diagnosticNotes": []
+        }
+      ],
+      "kpiBindings": []
+    }
+  ]
+}

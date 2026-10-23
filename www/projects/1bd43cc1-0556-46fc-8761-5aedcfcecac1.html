@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aristotle Project - 1bd43cc1-0556-46fc-8761-5aedcfcecac1</title>
+<style>
+* {{ box-sizing: border-box; }}
+body {{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0f172a; color: #e2e8f0;
+  max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;
+}}
+h1 {{ color: #38bdf8; margin-bottom: 0.25rem; }}
+.subtitle {{ color: #94a3b8; margin-bottom: 1.5rem; }}
+.section {{ margin-top: 2rem; }}
+.section h2 {{ color: #94a3b8; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }}
+.card {{
+  background: #1e293b; border: 1px solid #334155; border-radius: 0.75rem;
+  padding: 1.5rem; margin: 1rem 0;
+}}
+.card h3 {{ margin: 0 0 1rem; color: #a5b4fc; font-size: 1.1rem; }}
+.card pre {{ background: #0f172a; padding: 1rem; border-radius: 0.5rem; overflow: auto; max-height: 400px; }}
+.meta {{ font-size: 0.85rem; color: #64748b; font-family: monospace; }}
+.links {{ margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }}
+.links a {{ color: #7dd3fc; text-decoration: none; }}
+.links a:hover {{ text-decoration: underline; }}
+.badge {{
+  display: inline-block; font-size: 0.7rem; padding: 2px 8px;
+  border-radius: 999px; background: #064e3b; color: #4ade80;
+  margin: 2px; vertical-align: middle;
+}}
+.badge.archived {{ background: #1e3a5f; color: #93c5fd; }}
+.back-link {{ display: inline-block; margin-bottom: 1.5rem; color: #7dd3fc; text-decoration: none; }}
+.back-link:hover {{ text-decoration: underline; }}
+.footer {{ color: #64748b; font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid #334155; padding-top: 1.5rem; }}
+code {{ background: #1e293b; padding: 1px 5px; border-radius: 3px; }}
+</style>
+</head>
+<body>
+<a href="/aristo/projects.html" class="back-link">← Back to Projects</a>
+<h1>🏛️ Aristotle Project: 1bd43cc1-0556-46fc-8761-5aedcfcecac1</h1>
+<p class="subtitle">
+  <span class="badge">Canonical</span>
+  <span class="badge archived">1 archived variants</span>
+  <span class="badge">Files ✓</span>
+  <span class="badge archived">No Input</span>
+</p>
+
+<div class="section">
+  <h2>Project Metadata</h2>
+  <div class="card">
+    <div class="meta">
+      <strong>Created:</strong> 2026-05-07T11:43:46.501209<br>
+      <strong>Project ID:</strong> 1bd43cc1-0556-46fc-8761-5aedcfcecac1<br>
+      <strong>Status:</strong> 2<br>
+      <strong>Has Files:</strong> True<br>
+      <strong>Has Input:</strong> False
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Description</h2>
+  <div class="card">
+    <pre>{-# OPTIONS_GHC -ddump-to-file #-}\n{-# LANGUAGE ConstraintKinds  #-}\n{-# LANGUAGE TypeFamilies  #-}\n{-# LANGUAGE DeriveLift  #-}\n\n{-# LANGUAGE DerivingStrategies #-}\n{-# LANGUAGE StandaloneDeriving                  #-}\n{-# LANGUAGE DataKinds                  #-}\n{-# LANGUAGE DeriveAnyClass             #-}\n{-# LANGUAGE DeriveDataTypeable         #-}\n{-# LANGUAGE DeriveGeneric              #-}\n{-# LANGUAGE FlexibleInstances #-}\n{-# LANGUAGE GeneralizedNewtypeDeriving #-}\n{-# LANGUAGE LambdaCase  #-}\n{-# LANGUAGE MultiParamTypeClasses  #-}\n{-# LANGUAGE OverloadedStrings          #-}\n{-# LANGUAGE QuasiQuotes #-}\n{-# LANGUAGE TemplateHaskell  #-}\n{-# LANGUAGE TypeApplications #-}\n{-# LANGUAGE TypeOperators              #-}\n{-# LANGUAGE UndecidableInstances #-}\n\nmodule Server.MetaCoq.TestMeta where\nimport Language.Haskell.TH.Syntax (Lift)\n--import Database.Persist.TH\n\n--import Language.Haskell.Liquid.ProofCombinators\n\n--import Data.Aeson.QQ\n--  import Data.Morpheus (interpreter)\n--import Data.Morpheus.Generic(GRep, deriveTypeValue, deriveTypeDefinition)\n--- import Data.Morpheus.Document (importGQLDocument)\n--import Data.Morpheus.Types ( GQLType)\n\n\n--import Data.Generics.Traversable\n--import Data.Generics.Traversable.Zipper\n--import Data.Generics.Traversable.TH\n\n--import Data.Monoid (Monoid, mempty)\n--import Data.Generics.Traversable\n--import Data.Bitraversable\n--import Data.Bifoldable\n\n\n\n--import Data.MonoTraversable\n--import Data.Traversable\n--import Data.MonoTraversable (Element, MonoFoldable(..))\n--import Data.MonoTraversable (MonoFunctor(..), MonoFoldable(..), MonoTraversable(..))\n--import qualified GHC.Real (Integral)\n--import qualified GHC.Base (Monoid,\n--                           Semigroup\n--                          )\n--import qualified Data.Aeson (Value(..))\n--import qualified Data.Aeson.Types (Value(String))\nimport Data.Data\n--import Data.Sequences\n--import Data.Generics.Uniplate.Data\n--import Data.Generics.Uniplate.Operations\nimport Prelude(Char, Show, Int, Float, (+), show\n               --IO, (.), return\n               )\n\n\n\n--import GHC.Generics (Generic)\nimport Data.Aeson (toEncoding, ToJSON, genericToEncoding, defaultOptions, object, (.=) )\nimport GHC.Char ( chr )  \n\n--import  Control.Lens ((&amp;), mapped, (?~), (.~) )\n--oimport           Data.Aeson.Encode.Pretty   (encodePretty)\n--import qualified Data.ByteString.Lazy.Char8 as BL8\n--import           Data.Proxy\n--import           Data.Swagger\n--import           Data.Text                  (Text)\n--import           Data.Time                  (UTCTime (..), fromGregorian)\n--import           Data.Typeable              (Typeable)\nimport           GHC.Generics\n\n\n\ntoString :: Byte -&gt; Char\ntoString x = chr (foldNat (toNat (getNpos (toN x))))\n\n--instance (GHC.Real.Integral (Index T_)) where\n--  mod a b = a \n  \n\ndata T_ =\n   Lzero\n | Level MyString\n | Lvar Nat\n  deriving (\n    Generic\n    ,Show\n    , Lift\n--    ,GQLType\n    ,Data\n    ,Typeable\n    )\n\n--your_folding_function_here = 1\n--instance MonoFoldable T_ where\n--  ofoldMap f (Level st) = ofoldMap f st\n--  ofoldMap _ _          = mempty\n  \n--instance MonoFoldable T_ where\n--  ofoldMap f (Level st) t = your_folding_function_here\n--  ofoldr f z (T_ t) = your_right_folding_function_here\n--  ofoldl&#x27; f z (T_ t) = your_left_folding_function_here\n--  ofoldr1Ex f (T_ t) = your_right_folding_function_non_empty_here\n--  ofoldl1Ex&#x27; f (T_ t) = your_left_folding_function_non_empty_here\n--  otoList (T_ t) = your_converting_to_list_function_here\n--  oall f (T_ t) = your_all_elements_satisfy_predicate_here\n--  oany f (T_ t) = your_any_element_satisfies_predicate_here\n\n\ndata Bool =\n   True\n | False\n  deriving (Generic,\n            Show,\n             Lift,\n            Data, Typeable)\n\ndata Prod a b =\n    Pair a b\n\n\ntype T =MyString\n\ndata MyString =\n   EmptyString\n-- | MyString2 Byte MyString\n | String Byte MyString\n  deriving ( Generic, Show,\n             \n             Data, Typeable,\n             Lift\n           --, MonoFoldable\n           )\n--instance GTraversable c T_\ndata Nat =\n  O\n  | S Nat\n  deriving ( Generic, Show,Lift,  Data, Typeable)\n--instance GTraversable c Nat\nfoldNat :: Nat -&gt; Prelude.Int; foldNat = \\case { O -&gt; 0; S n -&gt; 1 Prelude.+ foldNat n }\ndata N =\n   N0\n  | Npos Positive\n  deriving ( Generic, Show,Lift, --GQLType,\n             Data, Typeable)\n\ndata Positive =\n  XI Positive\n  | XO Positive\n  | XH\n  deriving ( Generic, Show,Lift, --GQLType,\n             Data, Typeable)\n\ngetNpos :: N -&gt; Positive\ngetNpos N0 = XH\ngetNpos (Npos x)  = x\n\n\nadd :: Nat -&gt; Nat -&gt; Nat\nadd n m =\n  case n of {\n   O -&gt; m;\n   S p -&gt; S (add p m)}\n\ntoNat :: Positive -&gt; Nat\ntoNat x =\n  iterOp add x (S O)\n\niterOp :: (a1 -&gt; a1 -&gt; a1) -&gt; Positive -&gt; a1 -&gt; a1\niterOp op p a =\n  case p of {\n   XI p0 -&gt; op a (iterOp op p0 (op a a));\n   XO p0 -&gt; iterOp op p0 (op a a)</pre>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Links & Actions</h2>
+  <div class="card">
+    <div class="links">
+      <a href="/aristo/api/1bd43cc1-0556-46fc-8761-5aedcfcecac1" target="_blank">📥 Download Result</a>
+      <a href="/aristo/api/1bd43cc1-0556-46fc-8761-5aedcfcecac1/status" target="_blank">📊 Project Status</a>
+      <a href="/aristo/api/1bd43cc1-0556-46fc-8761-5aedcfcecac1/files" target="_blank">📁 Files</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Generated by aristoprojects from dedup-report.json</p>
+  <p>Deployment manifest: <code>deploy/manifests/project-1bd43cc1-0556-46fc-8761-5aedcfcecac1/</code></p>
+</div>
+</body>
+</html>

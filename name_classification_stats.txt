@@ -1,0 +1,32 @@
+=== NAME CLASSIFICATION STATISTICS ===
+Total files processed: 1309
+Unique file names: 1309
+Core machines to keep: 1271
+Variants to maybe delete: 0
+Junk files to delete: 4
+Generated files to likely delete: 2
+Other files to review: 32
+
+=== TOP 20 CORE MACHINES ===
+SBFMachine: 1
+StackMachine: 1
+server_variant_Machine: 1
+server_variant_SBFMachine: 1
+server_variant_UniversalMachineTeachingSet: 1
+server_variant_UniversalMachineMain: 1
+server_variant_UniversalMachineDistinct: 1
+server_variant_UniversalGroupMachine: 1
+server_variant_StackMachine: 1
+UniversalMachineTeachingSet: 1
+UniversalMachineMain: 1
+UniversalMachineDistinct: 1
+UniversalGroupMachine: 1
+SoftMachine: 1
+TuringMachine: 1
+PostTuringMachine: 1
+ZiskMachine: 1
+ZiskMachineFull: 1
+SBFMachine/SBFMachine: 1
+server_variant_ProjectiveLine32Machine: 1
+
+=== JUNK PATTERNS FOUND ===

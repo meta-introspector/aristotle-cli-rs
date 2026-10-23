@@ -1,0 +1,157 @@
+{
+  "schema": "gui2lean4-proof/v1",
+  "capturedAt": "2026-10-02T08:46:36.565Z",
+  "url": "http://localhost/gui2proof/",
+  "title": "pastebin-lean: unit suites, front-end audit, browser e2e",
+  "summary": "20/22 checks passed, 5 e2e artifacts",
+  "checks": [
+    {
+      "name": "audit: tokenizer selftest",
+      "ok": true
+    },
+    {
+      "name": "audit: no errors",
+      "ok": false,
+      "errors": -1
+    },
+    {
+      "name": "suite web/test.mjs",
+      "ok": true,
+      "ms": 42
+    },
+    {
+      "name": "suite web/carddebug-test.mjs",
+      "ok": true,
+      "ms": 150,
+      "passed": 73,
+      "total": 73
+    },
+    {
+      "name": "suite web/cli-page-test.mjs",
+      "ok": false,
+      "ms": 1083,
+      "detail": "FAIL: the page displays exactly what the terminal displays (got [], want [\"hello from the terminal\"])"
+    },
+    {
+      "name": "suite web/cli-test.mjs",
+      "ok": true,
+      "ms": 2391,
+      "passed": 77,
+      "total": 77
+    },
+    {
+      "name": "suite web/codec-test.mjs",
+      "ok": true,
+      "ms": 36
+    },
+    {
+      "name": "suite web/diag-test.mjs",
+      "ok": true,
+      "ms": 425
+    },
+    {
+      "name": "suite web/diagpage-test.mjs",
+      "ok": true,
+      "ms": 103,
+      "passed": 34,
+      "total": 34
+    },
+    {
+      "name": "suite web/file-test.mjs",
+      "ok": true,
+      "ms": 866
+    },
+    {
+      "name": "suite web/flow-test.mjs",
+      "ok": true,
+      "ms": 53,
+      "passed": 85,
+      "total": 85
+    },
+    {
+      "name": "suite web/handpage-test.mjs",
+      "ok": true,
+      "ms": 64,
+      "passed": 32,
+      "total": 32
+    },
+    {
+      "name": "suite web/join-test.mjs",
+      "ok": true,
+      "ms": 107,
+      "passed": 14,
+      "total": 14
+    },
+    {
+      "name": "suite web/net-test.mjs",
+      "ok": true,
+      "ms": 2959
+    },
+    {
+      "name": "suite web/page-test.mjs",
+      "ok": true,
+      "ms": 2066,
+      "passed": 75,
+      "total": 75
+    },
+    {
+      "name": "suite web/pastebin-test.mjs",
+      "ok": true,
+      "ms": 1095
+    },
+    {
+      "name": "suite web/qr-test.mjs",
+      "ok": true,
+      "ms": 164
+    },
+    {
+      "name": "suite web/sharelog-test.mjs",
+      "ok": true,
+      "ms": 78,
+      "passed": 64,
+      "total": 64
+    },
+    {
+      "name": "suite web/site-test.mjs",
+      "ok": true,
+      "ms": 58,
+      "passed": 53,
+      "total": 53
+    },
+    {
+      "name": "suite web/uucp-test.mjs",
+      "ok": true,
+      "ms": 50
+    },
+    {
+      "name": "suite web/wasm-test.mjs",
+      "ok": true,
+      "ms": 144
+    },
+    {
+      "name": "e2e: two browsers drop and fetch a file",
+      "ok": true,
+      "ms": 12426
+    }
+  ],
+  "artifacts": {
+    "results.json": {
+      "sha256": "5508dfdee4ccdf77324c1e5efedb3fa851ce1ea6ba13a63473f2ba2557e4dbf7"
+    },
+    "01-a-room.png": {
+      "sha256": "771f73e7d21984f9b27ff14718cdd402482ed12c0045ae33217038ac5ccb5d78"
+    },
+    "02-b-joined.png": {
+      "sha256": "18c9cc9bb58b5ac04bd922190336b74445c7fc1280ff4c2f006b13e9d09507f0"
+    },
+    "03-a-dropped.png": {
+      "sha256": "3c7e1787895df6c0e3aa9527e8d12d30e1b4ce9db7a51b8f401095b89221e7b8"
+    },
+    "04-b-sees-file.png": {
+      "sha256": "8ec7c2feadb309e0ec17b716b89cc6955a30402613db42a2c6bbdf067ca67849"
+    },
+    "timeline.json": {
+      "sha256": "3cd6fcc3d3a6dceddbf4b4267e4d5a0a986a5e97e5a40bf812b93020ad2669c0"
+    }
+  }
+}
