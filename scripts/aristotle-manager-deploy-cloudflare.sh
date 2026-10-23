@@ -59,17 +59,25 @@ get_cf_creds() {
   local acct_file="$VAULT_DIR/cloudflare-account-0-id.enc.json"
   local worker_token_file="$VAULT_DIR/cloudflare-account-0-token.enc.json"
 
+  token=""
+  acct=""
+  
+  # Try SOPS vault first
   if command -v sops >/dev/null 2>&1 && [ -f "$AGE_KEY_FILE" ]; then
     token="$(sops -d "$token_file" 2>/dev/null | python3 -c 'import json,sys; print(json.load(sys.stdin).get("value",""))' 2>/dev/null || true)"
     acct="$(sops -d "$acct_file" 2>/dev/null | python3 -c 'import json,sys; print(json.load(sys.stdin).get("value",""))' 2>/dev/null || true)"
-    if [ -z "$token" ] && [ -f "$ENV_FILE" ]; then
-      # Fallback to GUI2PROOF runtime env
-      set -a; source "$ENV_FILE" 2>/dev/null || true; set +a
-      token="${CLOUDFLARE_API_TOKEN:-}"
-      acct="${CLOUDFLARE_ACCOUNT_ID:-}"
-    fi
-  elif [ -r "${GUI2PROOF_RUNTIME_ENV:-/run/gui2proof/cloudflare.env}" ]; then
-    set -a; source "$GUI2PROOF_RUNTIME_ENV" 2>/dev/null || true; set +a
+  fi
+  
+  # Fallback to GUI2PROOF runtime env
+  if [ -z "$token" ] && [ -r "${ENV_FILE:-/run/gui2proof/cloudflare.env}" ]; then
+    set -a; source "${ENV_FILE:-/run/gui2proof/cloudflare.env}" 2>/dev/null || true; set +a
+    token="${CLOUDFLARE_API_TOKEN:-}"
+    acct="${CLOUDFLARE_ACCOUNT_ID:-}"
+  fi
+  
+  # Fallback to GUI2PROOF runtime env (second source)
+  if [ -z "$token" ] && [ -r "${GUI2PROOF_RUNTIME_ENV:-/run/gui2proof/cloudflare.env}" ]; then
+    set -a; source "${GUI2PROOF_RUNTIME_ENV:-/run/gui2proof/cloudflare.env}" 2>/dev/null || true; set +a
     token="${CLOUDFLARE_API_TOKEN:-}"
     acct="${CLOUDFLARE_ACCOUNT_ID:-}"
   fi
