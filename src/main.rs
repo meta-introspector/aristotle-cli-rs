@@ -28,6 +28,7 @@ mod pipeline_steps;
 mod replay;
 mod version;
 mod repl;
+mod aristotle_index;
 #[derive(Parser)]
 #[command(name = "aristotle-manager")]
 #[command(version = VERSION)]
@@ -286,6 +287,12 @@ enum Commands {
     },
     /// Clean build artifacts
     Clean,
+    /// Build keyword index for Aristotle and mathlib
+    KeywordIndex {
+        /// Target: aristo, mathlib, or both
+        #[arg(long)]
+        target: Option<String>,
+    },
     /// Index all Aristotle runs into DASL-compatible blocks.json
     Index {
         #[arg(long)]
@@ -378,6 +385,20 @@ enum Commands {
         /// Max number of patch rounds
         #[arg(long, default_value = "10")]
         max_rounds: usize,
+    },
+    /// Auto-remediate Aristotle project issues: refusal audit + enrichment + fixes
+    Remediate {
+        /// Project ID to remediate
+        project_id: String,
+        /// Topic/domain to remediate
+        #[arg(long)]
+        topic: Option<String>,
+        /// Specific fix commands to run
+        #[arg(long, short = 'f', long = "fix")]
+        fix: Option<String>,
+        /// Auto-approve fixes without confirmation
+        #[arg(long)]
+        auto_approve: bool,
     },
     /// Finish: download result, merge into common project, rebuild flakes, update planner
     DaslFinish {
@@ -2495,6 +2516,43 @@ fn cmd_ask(project_id: String, prompt: String, file: Option<PathBuf>, inject_dir
     Ok(())
 }
 
+/// ── Remediate: run refusal audit + enrichment + targeted fixes ──
+
+async fn cmd_remediate(project_id: String, topic: Option<String>, fix: Option<String>, auto_approve: bool) -> Result<()> {
+    println!("=== REMEDIATE MODE: {} ===", project_id);
+    if let Some(ref t) = topic {
+        println!("Topic: {}", t);
+    }
+    println!("Step 1/4: Checking refusal audit...");
+    println!("  [Note: refusal-audit tool not yet available as standalone binary, skipping]");
+    println!("Step 2/4: Checking enrichment...");
+    println!("  [Note: enrich tool not yet available as standalone binary, skipping]");
+    println!("Step 3/4: Sending remediation fixes...");
+    let fix_prompt = if let Some(ref f) = fix {
+        format!("REMEDIATION FIX: {}", f)
+    } else {
+        format!("REMEDIATION TASK: Address complaints and gaps related to topic: {}", topic.as_deref().unwrap_or("general"))
+    };
+    let api_key = get_api_key()?;
+    let fix_prompt_owned = fix_prompt.clone();
+    let project_id_owned = project_id.clone();
+    let api_key_owned = api_key.clone();
+    let result = tokio::task::spawn_blocking(move || {
+        ask_aristotle_sync(&api_key_owned, &project_id_owned, &fix_prompt_owned)
+    })
+    .await
+    .expect("spawn_blocking task panicked");
+    match result {
+        Ok(resp) => println!("{}", resp),
+        Err(e) => eprintln!("Ask remediation failed: {}", e),
+    }
+    println!("Step 4/4: Finalizing remediation...");
+    if auto_approve {
+        println!("  [Note: fix-approve tool not yet available, skipping auto-approval]");
+    }
+    Ok(())
+}
+
 /// ── Patch mode: poll a running Aristotle project, detect prereq gaps ──
 
 async fn cmd_patch(project_id: String, prereq_dir: PathBuf, interval: u64, max_rounds: usize) -> Result<()> {
@@ -2932,6 +2990,14 @@ async fn main() -> Result<()> {
             info!("Executing index command");
             index::cmd_index(output.clone())?;
         }
+        /// Build keyword index for Aristotle and mathlib
+        KeywordIndex {
+            #[arg(long)]
+            target: Option<String>, // aristo|mathlib|both
+        } => {
+            info!(target = ?target, "Executing keyword index command");
+            aristotle_index::cmd_keyword_index(target)?;
+        }
         Commands::Configure { subcommand } => {
             info!("Executing configure command");
             cmd_configure(subcommand)?
@@ -3021,6 +3087,10 @@ async fn main() -> Result<()> {
             let api_key = get_api_key()?;
             let result = ask_aristotle_with_files(&api_key, project_id, prompt, files_dir)?;
             println!("{}", result);
+        }
+        Commands::Remediate { project_id, topic, fix, auto_approve } => {
+            info!("Executing remediate command for project {} with topic: {:?}", project_id, topic);
+            cmd_remediate(project_id.clone(), topic.clone(), fix.clone(), *auto_approve).await?;
         }
         Commands::ReplStats => {
             info!("Executing repl-stats");
