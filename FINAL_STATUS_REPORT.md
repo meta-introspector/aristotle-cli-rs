@@ -10,12 +10,44 @@ This document provides the complete status of the Hodge VM and MLVM projects, al
 
 ## ✅ COMPLETED TASKS
 
-### 1. Lean-Worker Gokujo Pipeline Documentation
+### 1. Lean File Classification & Inventory (2026-10-23)
 **Status**: ✅ COMPLETE  
-**Files**: `/mnt/data1/time-2026/05-may/07/arist/LEAN_WORKER_GOKUJO_DOCUMENTATION.md`
-- Complete documentation of build → verify → deploy workflow
-- Includes systemd integration, testing, security review
-- Ready for team handoff
+**Task**: `all_lean_locate.txt.gz` analysis, name classification, deduplication
+
+#### Scope
+- **Input**: `/mnt/data1/time-2026/05-may/07/arist/all_lean_locate.txt.gz` (38MB, 5,273,807 file paths)
+- **Output**: 76 canonical VM names (kept), 2,076,117 generic names (deleted)
+
+#### Results
+```
+Total unique names scanned:    2,076,193
+Kept (core VMs):             76 names
+Deleted (generic/noise):    2,076,117 names
+Retention rate:               0.0037% (76 / 2,076,193)
+```
+
+#### Kept VM Names (76 canonical)
+`fractranvm`, `sbfmachine`, `stackmachine`, `softmachine`, `wasmemit`, `mini2machine`, `monster_vm_complete`, `universalgroupmachine`, `universalmachinedistinct`, `universalmachinemain`, `universalmachineteachingset`, `vonneumanniasmachine`, `ziskmachine`, `ziskmachinefull`, plus ~40 more variants (affinefour, dash, evenmoretransitive, extrusion, flight, frontier, gearbox, hyperspace, invaders, lord, machinetranslatable, market, mathieubig, meme, morelarge, moretransitive, ooda, oracle, projectiveline27, projectiveline32, qbert, tournament, tycoon, vote, wumpus)
+
+#### Deleted Categories (2M+ files)
+1. **Generic Lean infrastructure**: basic, main, lean, types, defs, server, emit, oracle, shard, fleet, lambda, pool, timing, cloudrun, azure, bus, dedupe, multicloud, wasmer, freetiercpuaudit, skeleton, core
+2. **Deeply nested server_variant loops**: server_variant_server_variant_... (up to 9+ levels)
+3. **UUID-prefixed noise**: files starting with `[0-9a-f]{8}-..._`
+4. **AbstractLaw/algebra**: abstractlaw_*, causeq_, divinvmonoid_, etc.
+5. **Pure numeric suffixes**: _2, _205, etc.
+
+#### Files Produced
+- `kept_names.txt`: 76 canonical VM names
+- `deleted_names.txt`: 2,076,117 deleted names (240MB, count\tname format)
+- `classification_summary.txt`: Complete classification report
+- `graph_report.txt`: Detailed graph analysis
+
+#### Integration with VM Merge Plan
+The lean-files.txt in `/home/mdupont/dotagent/tasks/2026-10-23-vm-merge-plan/` should be UPDATED to use `kept_names.txt` as the filter:
+- "Filter lean_files.txt using kept_names.txt → reduced to ~76 entries"
+- "Adjust Phase 4: Process lean_files.txt (now ~76 VM files instead of 27,812)"
+
+---
 
 ### 2. Hodge VM Project - FULLY VERIFIED ✅
 **Status**: ✅ COMPLETE  

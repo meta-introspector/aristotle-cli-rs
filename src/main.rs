@@ -17,6 +17,7 @@ use tracing::{debug, error, info, instrument, warn};
 use tracing_subscriber::{EnvFilter, fmt};
 use walkdir::WalkDir;
 
+mod accounts;
 mod fetch;
 mod file_index;
 mod index;
@@ -335,6 +336,10 @@ enum Commands {
         limit: Option<usize>,
         #[arg(long)]
         dry_run: bool,
+        #[arg(long, default_value = "7")]
+        recent_days: u64,
+        #[arg(long)]
+        project_id: Option<String>,
     },
     /// Full pipeline: fetch → split → verify (lake build) → version → merge
     Pipeline {
@@ -757,7 +762,7 @@ async fn cmd_poll(download_only: bool, parallel: usize) -> Result<()> {
 
     if new_count > 0 {
         println!("\nDownloading {} new projects...", new_count);
-        crate::fetch::cmd_fetch(parallel, None, false).await?;
+        crate::fetch::cmd_fetch(parallel, None, false, 7, None).await?;
     } else if download_only {
         println!("\n  Nothing new — exiting (download-only mode).");
         return Ok(());
@@ -2990,13 +2995,9 @@ async fn main() -> Result<()> {
             info!("Executing index command");
             index::cmd_index(output.clone())?;
         }
-        /// Build keyword index for Aristotle and mathlib
-        KeywordIndex {
-            #[arg(long)]
-            target: Option<String>, // aristo|mathlib|both
-        } => {
+        Commands::KeywordIndex { target } => {
             info!(target = ?target, "Executing keyword index command");
-            aristotle_index::cmd_keyword_index(target)?;
+            aristotle_index::cmd_keyword_index(target.clone())?;
         }
         Commands::Configure { subcommand } => {
             info!("Executing configure command");
@@ -3022,9 +3023,9 @@ async fn main() -> Result<()> {
             info!("Executing scan-index command");
             file_index::cmd_scan_index(index_dir.clone(), output_dir.clone(), prefix_filter.clone())?;
         }
-        Commands::Fetch { parallel, limit, dry_run } => {
+        Commands::Fetch { parallel, limit, dry_run, recent_days, project_id } => {
             info!("Executing fetch command");
-            fetch::cmd_fetch(*parallel, *limit, *dry_run).await?;
+            fetch::cmd_fetch(*parallel, *limit, *dry_run, *recent_days, project_id.clone()).await?;
         }
         Commands::Pipeline { parallel, limit, dry_run } => {
             info!("Executing pipeline command");

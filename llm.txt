@@ -1,0 +1,85 @@
+# JTABLE-Numerics-1ece64b7 — Aristotle RFC-0002/0003 Implementation
+
+## Project Overview
+- **Project ID:** 1ece64b7-155f-4a1b-b06c-58713b2f29e7
+- **Date:** 2026-10-23 to 2026-10-24
+- **Owner:** J (JTable-related work)
+- **Status:** IN_PROGRESS — M0-M2 RFC-0002, M0-M5 RFC-0003 complete
+- **Aristotle Run:** e78a3c4f-0732-4338-8a6b-17f73665afb3
+
+## What This Project Does
+
+This is a **major milestone** in the Aristotle pipeline implementing:
+1. **RFC-0002**: Group theory, order ideals, and element-order spectra for finite groups
+2. **RFC-0003**: P2PIS — a peer-to-peer trust system with formal certificates, grade calculation, and cross-implementation verification
+
+Both implemented in **Lean 4** with **no `sorry`** in new code, and a **Python reference store** with **56/56 acceptance checks passing**.
+
+## Key Technical Achievements
+
+### RFC-0002: Group Theory & Order Ideals
+- **M0 Axiom Auditor**: Classifies all theorems as K (standard axioms), N (native_decide), X (external), or O (observed). JTable theorems at N, all new Lean at K, zero flagged.
+- **M1 (Proved, Level K)**: 4 statements from RFC-0001 §4.2 proved in `RequestProject/Spectrum/Shell.lean` — spectrum is order ideal, exponent properties, fit criterion K6, union/intersection closure, fill ratio 0 < fill ≤ 1.
+- **M2 (Partial)**: 5 of 29 sporadic spectra imported (W(E6), W(E7), W(E8), B, M). B/M lists transcribed from ATLAS class lists. Chain ω(E6) ⊆ ω(E7) ⊆ ω(E8) ⊆ ω(B) ⊆ ω(M) proved.
+
+### RFC-0003: P2PIS Trust System
+- **Lean Model** (`RequestProject/P2PIS/`): Formal objects, coverage, levels, policy, grade function. Proved: foreign peer grades ignored, refutation past N preserves prefix certs, contests deprecate, single actor never reaches grade 2, K-viewer never counts N-certs.
+- **Python Store** (`p2pis/`): Canonical encoding (JCS/RFC 8785 subset), SHA-256 IDs, Ed25519 signatures, two-writer merge, 101 seeded sequences. **56/56 checks pass**.
+- **Static Viewer** (`p2pis/site/`): Deployed to Cloudflare Workers at `https://p2pis-view.accurate-bandana.workers.dev`
+
+### Cross-Implementation Verification (Critical)
+- **JTable b-file (10000 terms)**: Lean SHA-256 `3ea765ec...237f30` matches independent Python recurrence computation.
+- **Contest verification**: Both Lean and Python independently find forbidden values `v₂(c(32045)) = 6`, `v₅(c(29282)) = 2`.
+- **Rademacher series**: Truncated K=400 matches integers for n ≤ 12.
+
+## Changes from Review
+1. **Canonical encoding**: JCS subset, decimal strings for large integers, sorted keys
+2. **Level enforcement**: K-viewers verified to never count native certs (in Lean model + Python store)
+3. **Grade 2**: Now requires 2 actors + 2 implementation CIDs (algorithm label insufficient)
+4. **Equal kinds**: `termwise`, `generatingFunction`, `modularForm`, `other` (asymptotic rejected)
+5. **File exchange**: M4/M5 use two-writer directories with re-verification on load
+
+## Files & Structure
+```
+1ece64b7-..._aristotle/
+├── RequestProject/
+│   ├── JTable/          # j-coefficient computation
+│   ├── Spectrum/        # Shell.lean (M1), Data.lean (M2)
+│   └── P2PIS/           # Lean trust model
+├── audit/               # AxiomAudit.lean, reports
+├── p2pis/               # Python store (seed.py, test_p2pis.py)
+├── p2pis/site/          # Cloudflare Workers static site
+├── models/              # Model data
+├── jtable/              # b000521.txt (10002 lines)
+└── RFC_0002_0003_IMPLEMENTATION.md  # Full technical report
+```
+
+## Reproduction Commands
+```bash
+# Lean build
+lake build RequestProject.Spectrum.Data RequestProject.P2PIS.Replay
+lake exe axiom_audit RequestProject.JTable.BFile RequestProject.JTable.Models \
+  RequestProject.JTable.Hecke RequestProject.Spectrum.Shell \
+  RequestProject.P2PIS.Theorems RequestProject.P2PIS.Replay \
+  --external RequestProject.Spectrum.Data
+
+# Python store (requires cryptography)
+cd p2pis && python3 seed.py ../repo && python3 test_p2pis.py
+
+# Deploy static site
+cd p2pis/site && npx wrangler deploy
+```
+
+## Known Gaps
+- RFC-0002 M3-M7 not started (24 spectra remain)
+- RFC-0003 M6-M7 not started
+- RFC-0003 M4 "agreement by ValuesID" impossible as written (ValuesID includes SequenceID)
+- Signing keys are demo keys (public seeds)
+
+## Deployment
+- **Local**: `nix develop` (flake provides Lean 4.28.0 + mathlib, Python, Node)
+- **Cloudflare Workers**: `https://p2pis-view.accurate-bandana.workers.dev` (101 sequences, 56/56 checks)
+- **Flake**: `flake.nix` with packages: `default`, `lean`, `p2pis`, `workers`, `wasm`
+
+## Keywords for Search
+`Aristotle`, `Lean 4`, `formal verification`, `group theory`, `order ideals`, `element orders`, `Monster group`, `JTable`, `j-function`, `A000521`, `P2PIS`, `trust system`, `certificates`, `grade calculation`, `cross-implementation verification`, `Cloudflare Workers`, `WASM`

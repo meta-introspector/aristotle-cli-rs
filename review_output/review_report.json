@@ -1,0 +1,665 @@
+{
+  "total_projects": 607,
+  "newest_projects": [
+    {
+      "id": "1ece64b7-155f-4a1b-b06c-58713b2f29e7",
+      "name": null,
+      "description": "# Summary of changes for run e78a3c4f-0732-4338-8a6b-17f73665afb3 I built the first milestones of both RFCs and applied most of your review of RFC-0003. The Lean files build with no `sorry`, and every",
+      "created": "2026-10-23T18:09:52.557970",
+      "updated": "2026-10-24T18:51:13.933319",
+      "status": 1,
+      "key_themes": [
+        "RFC-0002",
+        "M0, axiom auditor",
+        "M1, proved at level K",
+        "M2, partial",
+        "RFC-0003",
+        "Lean model",
+        "Executable store, M0 to M5",
+        "JTable cross-check:"
+      ],
+      "file_count": 35,
+      "files": [
+        ".gitignore",
+        "20261023_154741_all_14fa8b17_3d8f_4b1a_aaa5_cd87a4758590_aristotle_4.txt",
+        "20261023_175651_all_14dd58c7_6f6f_48d7_ac21_554236c7f5c8_aristotle.txt",
+        "ARISTOTLE_SUMMARY.md",
+        "CLASS24_SUMMARY.md",
+        "CRAB_SUMMARY.md",
+        "CRYPTID_SUMMARY.md",
+        "FAMILIES_SUMMARY.md",
+        "HERMITCRAB_RFC.md",
+        "LEHNER_10000.md",
+        "Makefile",
+        "PROOF_ENGINE.md",
+        "README.md",
+        "REBASE_SUMMARY.md",
+        "RFC_0002_0003_IMPLEMENTATION.md",
+        "RFC_MONSTER_BOX_UPDATE.md",
+        "RFC_RECOGNITION.md",
+        "RFC_REVIEW.md",
+        "RequestProject",
+        "SERIES_SUMMARY.md",
+        "SHELLS_SUMMARY.md",
+        "TENSOR_SUMMARY.md",
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "atlas",
+        "audit",
+        "jtable",
+        "lake-manifest.json",
+        "lakefile.toml",
+        "lean-toolchain"
+      ],
+      "top_keywords": [
+        "grade",
+        "Lean",
+        "lean",
+        "exponent",
+        "certificate",
+        "sorry",
+        "axiom",
+        "proved"
+      ],
+      "description_raw": "20261023_175651_all_14dd58c7_6f6f_48d7_ac21_554236c7f5c8_aristotle",
+      "suggested_name": "JTABLE-Numerics-1ece64b7"
+    },
+    {
+      "id": "9a55ec52-6aec-458b-8092-73fe68e081a7",
+      "name": null,
+      "description": "# Summary of changes for run 7327b73d-f99c-4583-bbbc-f8829cb79719 I added manual flying with keybinds (rudder included) and a cockpit view to the Roblox PID airplane. The desktop tests pass, but nothi",
+      "created": "2026-10-23T20:52:29.946392",
+      "updated": "2026-10-24T15:08:26.166478",
+      "status": 2,
+      "key_themes": [
+        "What you can do in game",
+        "M",
+        "Keys while flying:",
+        "W/S",
+        "\u2191/\u2193",
+        "I",
+        "A/D",
+        "\u2190/\u2192"
+      ],
+      "file_count": 11,
+      "files": [
+        ".github",
+        "20261023_205115_all_65f0b76d_8ae9_4c2e_8b42_28af4b104a3a_aristotle_2.txt",
+        "ARISTOTLE_SUMMARY.md",
+        "README.md",
+        "airplane-default-model.patch",
+        "airplane-manual-controls.patch",
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "roblox",
+        "roblox-airplane.patch",
+        "web"
+      ],
+      "top_keywords": [
+        "json",
+        "README.md"
+      ],
+      "description_raw": "20261023_205115_all_65f0b76d_8ae9_4c2e_8b42_28af4b104a3a_aristotle_2",
+      "suggested_name": "FLIGHT-Game-9a55ec52"
+    },
+    {
+      "id": "14dd58c7-6f6f-48d7-ac21-554236c7f5c8",
+      "name": null,
+      "description": "# Summary of changes for run 10789cea-2600-4292-81d6-0ae4329e438c I ran the declaration fold on all of Mathlib. You can reason about where a declaration lands exactly, and I proved that in Lean. Predi",
+      "created": "2026-10-23T15:48:12.831441",
+      "updated": "2026-10-23T16:24:20.868276",
+      "status": 2,
+      "key_themes": [
+        "Older code brought back.",
+        "Reasoning about location (proved).",
+        "Building up a statement:",
+        "Swapping parts:",
+        "Parts sit below the whole:",
+        "Only the shape matters:",
+        "All of Mathlib (measured, not proved).",
+        "The address box is far too small for Mathlib."
+      ],
+      "file_count": 10,
+      "files": [
+        "20261023_154741_all_14fa8b17_3d8f_4b1a_aaa5_cd87a4758590_aristotle_4.txt",
+        "ARISTOTLE_SUMMARY.md",
+        "README.md",
+        "RequestProject",
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "fold",
+        "lake-manifest.json",
+        "lakefile.toml",
+        "lean-toolchain"
+      ],
+      "top_keywords": [
+        "lean",
+        "proved",
+        "Mathlib",
+        "theorem",
+        "Monster",
+        "Lean",
+        "sorry",
+        "rest"
+      ],
+      "description_raw": "20261023_154741_all_14fa8b17_3d8f_4b1a_aaa5_cd87a4758590_aristotle_4",
+      "suggested_name": "OLDER-CODE-14dd58c7"
+    },
+    {
+      "id": "14fa8b17-3d8f-4b1a-aaa5-cd87a4758590",
+      "name": null,
+      "description": "# Summary of changes for run ed18f51c-26cc-47e8-9754-6b2f033c8e6b The infographics now come from the project's own declarations. I added a declaration-to-address map \u03b2. Each declaration's kernel type ",
+      "created": "2026-10-22T12:32:17.981651",
+      "updated": "2026-10-23T13:32:13.916853",
+      "status": 2,
+      "key_themes": [
+        "The fold",
+        "Kernel reflection",
+        "Feeding every declaration",
+        "The SVGs",
+        "Other changes"
+      ],
+      "file_count": 31,
+      "files": [
+        "20261022_122916_all_f9e7f940_1d58_4de2_89b2_91ae30183b5a_aristotle.txt",
+        "ABSTRACT_HECKE_QUICKREF.md",
+        "ARISTOTLE_SUMMARY.md",
+        "DASEIN15_TSP_STATUS.md",
+        "DASEIN15_UI_STATUS.md",
+        "DASEIN15_VM_STATUS.md",
+        "DICTIONARY.md",
+        "HECKE_SEARCH_CORPUS.md",
+        "HECKE_SEARCH_HITS.md",
+        "IRREPS_AND_SCOPES.md",
+        "MISSING_DEFINITIONS.md",
+        "MONSTER_WALK_STATUS.md",
+        "README.md",
+        "RESULTS.md",
+        "RequestProject",
+        "SCALE_ARGS.md",
+        "TODO.md",
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "cryptids",
+        "fold",
+        "hecke_corpus.json",
+        "imperialcollegelondon-flt-8a5edab282632443.txt",
+        "lake-manifest.json",
+        "lakefile.toml",
+        "lean-toolchain",
+        "meta-introspector-lean-split-tool-8a5edab282632443.txt",
+        "scripts",
+        "slides",
+        "tomdif-eml-lean-8a5edab282632443.txt"
+      ],
+      "top_keywords": [
+        "Lean",
+        "lean",
+        "proved",
+        "theorem",
+        "Monster",
+        "lake",
+        "sorry",
+        "Proved"
+      ],
+      "description_raw": "meta-introspector-lean-split-tool-8a5edab282632443",
+      "suggested_name": "INFOGRAPHICS-Viz-14fa8b17"
+    },
+    {
+      "id": "b1ba72a6-b48f-4f93-bdff-e025f92f9afa",
+      "name": null,
+      "description": "# Summary of changes for run 0af16b2c-8f7f-4a4d-a312-02edb3071fe1 I implemented the fixes from your design review in Lean in a new file, `RequestProject/Ogg/Representation.lean`, alongside the earlier",
+      "created": "2026-10-23T10:49:24.674098",
+      "updated": "2026-10-23T11:20:43.174490",
+      "status": 2,
+      "key_themes": [
+        "Bit budget:",
+        "Address round trip:",
+        "Exact complex values:",
+        "Quantization (D1):",
+        "Typing fixes:",
+        "Not done:"
+      ],
+      "file_count": 9,
+      "files": [
+        "ARISTOTLE_SUMMARY.md",
+        "README.md",
+        "RESULTS.md",
+        "RequestProject",
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "lake-manifest.json",
+        "lakefile.toml",
+        "lean-toolchain"
+      ],
+      "top_keywords": [
+        "proved",
+        "Lean",
+        "lean",
+        "sorry",
+        "exponent",
+        "signature"
+      ],
+      "description_raw": "HeckeFold: An Ogg-Hecke Bottleneck Architecture for Lean Mathematical Corpora\n\nStatus: draft specification\n Level: architecture definition\n Purpose: define a Lean-native prover, explorer, and compression framework in which mathematical objects are represented through a bounded family of Hecke correspondences and residual reconstruction data.\n\n0. Executive Summary\n\nLet\n\nO={2,3,5,7,11,13,17,19,23,29,31,41,47,59,71}\\mathcal O = \\{2,3,5,7,11,13,17,19,23,29,31,41,47,59,71\\}\n\nbe the Ogg prime set associated with the Monster order and Ogg's supersingular observation. The Ogg primes are precisely the prime divisors of the Monster order.\n\nWe define a Lean corpus encoder\n\nEncodeO:D\u2192HO\\mathrm{Encode}_{\\mathcal O} : D \\to \\mathcal H_{\\mathcal O}\n\nwhich maps declarations into a finite-dimensional Hecke coordinate space generated by the Hecke operators\n\nTp,p\u2208O.T_p,\\qquad p\\in\\mathcal O.\n\nThe encoded object is not required to reconstruct the original declaration exactly.\n\nA declaration is represented by:\n\n(Ogg-Hecke\u00a0coordinates,residual)(\\text{Ogg-Hecke coordinates},\\text{residual})\n\nand the residual size becomes the primary information-theoretic quantity.\n\nThe central thesis is:\n\nMathematics may admit useful representations through a bounded Ogg-Hecke vocabulary, with reconstruction error measuring the information not visible through that vocabulary.\n\n1. Objects\n1.1 Corpus\n\nLet\n\nD={Lean\u00a0declarations}D = \\{ \\text{Lean declarations} \\}\n\nwhere declarations may include:\n\ndef\ntheorem\nlemma\ninstance\nclass\nstructure\n\n\nfrom:\n\nFLT\nMathlib\nEML\nuser projects\n\nor any finite Lean corpus.\n\n1.2 Statement Space\n\nEach declaration induces:\n\nName\nType\nProof term (optional)\nDependency graph\n\n\nDefine:\n\nS(D)S(D)\n\nas the statement graph.\n\nProofs may be ignored or included depending on experiment.\n\n2. Ogg Address Space\n2.1 Prime Coordinates\n\nCoordinates correspond to Ogg primes.\n\nFor each\n\np\u2208Op\\in \\mathcal O\n\nintroduce coordinate:\n\nxp.x_p.\n2.2 Monster Bounds\n\nUsing the Monster factorization,\n\n\u2223M\u2223=2463205976112133171923293141475971|M| = 2^{46} 3^{20} 5^9 7^6 11^2 13^3 17 19 23 29 31 41 47 59 71\n\ndefine coordinate bounds:\n\n0\u2264xp\u2264\u03bdp(\u2223M\u2223).0\\le x_p\\le\\nu_p(|M|).\n\nThe latent address space becomes\n\nAOgg=\u220fp\u2208O[0,\u03bdp(\u2223M\u2223)].\\mathcal A_{\\text{Ogg}} = \\prod_{p\\in\\mathcal O} [0,\\nu_p(|M|)].\n\nThis is the canonical bounded arithmetic address system.\n\n3. Hecke Layer\n3.1 Primitive Operators\n\nFor every\n\np\u2208Op\\in\\mathcal O\n\ndefine\n\nTp.T_p .\n\nAbstractly these arise from\n\n[UgU][UgU]\n\nusing the FLT Hecke machinery.\n\n3.2 Composite Operators\n\nFor any sequence\n\n(p1,\u2026,pn)(p_1,\\ldots,p_n)\n\ndefine\n\nTp1\u22efpn=Tp1\u2218\u22ef\u2218Tpn.T_{p_1\\cdots p_n} = T_{p_1}\\circ \\cdots \\circ T_{p_n}.\n\nThese become higher-order arithmetic observables.\n\n4. The Hecke Bottleneck\n4.1 Encoder\n\nDefine\n\nEH:D\u2192HE_H : D \\to \\mathcal H\n\nwhere\n\nH=span\u2061{Tp:p\u2208O}.\\mathcal H = \\operatorname{span} \\{ T_p : p\\in \\mathcal O \\}.\n\nA declaration becomes a Hecke response vector\n\nh(d).h(d).\n4.2 Decoder\n\nDefine a fixed decoder\n\nDecH:H\u2192D\u222a{\u22a5}.Dec_H : \\mathcal H \\to D\\cup\\{\\bot\\}.\n\nDecoder rules are fixed before measurements.\n\n4.3 Residual\n\nDefine\n\nR(d)=d\u2212DecH(EH(d)).R(d) = d - Dec_H(E_H(d)).\n\nConceptually:\n\noriginal declaration\nminus\nits Hecke shadow\n\n5. Reconstruction Error\n\nDefine\n\nerr(d)=L(d\u2223d^)err(d) = L(d|\\hat d)\n\nwhere\n\nd^=DecH(EH(d)).\\hat d = Dec_H(E_H(d)).\n\nInterpretation:\n\nbits needed to restore\nthe original declaration\nfrom its Hecke shadow\n\n\nLow error:\n\nhighly Hecke-compressible\n\n\nHigh error:\n\ncontains information outside\nthe Ogg-Hecke vocabulary\n\n6. Residual Tower\n\nDefine levels\n\nD0\u2192D1\u2192D2\u2192\u22efD_0 \\to D_1 \\to D_2 \\to \\cdots\n\nwhere\n\nDn+1=EH(Dn).D_{n+1} = E_H(D_n).\n\nEach level produces:\n\nshadow\nresidual\nerror\n\nLayer 0\n\n\u03b1-equivalence\n\nLayer 1\n\norbit quotient\n\nLayer 2\n\nHecke spectral decomposition\n\nLayer 3+\n\niterated Hecke compression\n\n7. Equivariance Defect\n\nDefine\n\n\\Defecti=T\u2218Deci\u2212Deci\u2218T.\\Defect_i = T\\circ Dec_i - Dec_i\\circ T.\n\nFor declaration dd,\n\n\\Defecti(d)=\\Defecti(Ei(d)).\\Defect_i(d) = \\Defect_i(E_i(d)).\n\nInterpretation:\n\ninformation preserved by Hecke\nbut discarded by codec\n\n8. Spectral Layer\n\nDiagonalize\n\nTpT_p\n\nor simultaneously diagonalize commuting families.\n\nObtain eigenvectors\n\nviv_i\n\nwith eigenvalues\n\n\u03bbi.\\lambda_i.\n\nRepresent declarations as\n\nd=\u2211icivi.d = \\sum_i c_i v_i.\n\nTruncate by threshold\n\n\u2223\u03bbi\u2223>\u03bb.|\\lambda_i|>\\lambda.\n\nDiscarded coordinates become residuals.\n\n9. Prediction Layer\n\nTarget:\n\n(erri+1,\\Defecti+1)(err_{i+1}, \\Defect_{i+1})\n\nPredict from:\n\n(erri,\\Defecti,statusi,axiomsi).(err_i, \\Defect_i, status_i, axioms_i).\n\nConstraint:\n\nThe predictor may not evaluate future Hecke layers.\n\nIts task is to estimate future bottleneck behavior.\n\n10. Self-Reference\n\nThe corpus includes declarations defining the Hecke machinery itself:\n\nheckeOperator\nheckeOperator_apply\ncomm\nheckeOperator_eq_of_mem_normalizer\n\n\nThese declarations are encoded through the same Hecke bottleneck.\n\nHence\n\nEH(heckeOperator)E_H(\\texttt{heckeOperator})\n\nexists.\n\nWe therefore allow\n\nTp(heckeOperator)T_p(\\texttt{heckeOperator})\n\nand more generally\n\nTp1\u22efpn(heckeOperator).T_{p_1\\cdots p_n} (\\texttt{heckeOperator}).\n\nThe system analyzes the operators that define the analysis.\n\n11. Lean Prover Architecture\nLean Corpus\n      \u2502\n      \u25bc\nDependency Graph\n      \u2502\n      \u25bc\n\u03b1-normalization\n      \u2502\n      \u25bc\nGroup Action Layer\n      \u2502\n      \u25bc\nOgg-Hecke Encoder\n      \u2502\n      \u25bc\nSpectral Decomposition\n      \u2502\n      \u25bc\nResidual Tower\n      \u2502\n      \u251c\u2500\u2500 Error\n      \u251c\u2500\u2500 Defect\n      \u251c\u2500\u2500 Predictor\n      \u2514\u2500\u2500 Reconstruction\n      \u2502\n      \u25bc\nProof Search Guidance\n\n12. Research Question\n\nThe framework does not ask:\n\nIs group theory moonshine?\n\nThe framework asks:\n\nGiven only the bounded Ogg-Hecke address space and residual correction data, how much of a Lean mathematical corpus can be reconstructed, predicted, navigated, or compressed?\n\nThe primary outputs are:\n\nerr(d)err(d) \\Defecti(d)\\Defect_i(d) CoverageO(D)\\text{Coverage}_{\\mathcal O}(D)\n\nand the Hecke-coordinate representation of every declaration in the corpus.\n\nIn this view, the Ogg primes define a finite arithmetic coordinate atlas, the Hecke operators define the observable directions, and the residual tower measures the information that remains invisible to that atlas.\n\n<div typeof=\"erdfa:SheafSection dasl:Type5\" about=\"#bafkda5131c1f2be9ab5\">\n  <meta property=\"erdfa:shard\" content=\"56,6,0\" />\n  <meta property=\"erdfa:encoding\" content=\"raw\" />\n  <meta property=\"erdfa:prime\" content=\"1\" />\n  <meta property=\"dasl:addr\" content=\"0xda5151f872be9ab5\" />\n  <meta property=\"dasl:type\" content=\"5\" />\n  <meta property=\"dasl:eigenspace\" content=\"Earth\" />\n  <meta property=\"dasl:bott\" content=\"7 (R(8)\u2295R(8))\" />\n  <meta property=\"dasl:hecke\" content=\"T_19\" />\n  <meta property=\"sheaf:orbifold\" content=\"(56 mod 71, 6 mod 59, 0 mod 47)\" />\n  <link property=\"sheaf:subgroupIndex\" href=\"erdfa:H/raw\" />\n</div>\n# Spec: A Lean-Prover Folding of the Hecke-Ogg Bottleneck Programme\n\n**Version:** draft 2, `definition_inspected`, superseding the version marked `draft_requires_definition_repair` (File C's verdict) and incorporating the four blocking fixes plus the Ogg-set commitment and the `46`-bound commitment.\n\n**Status of every commitment:** each item in \u00a70 is either *fixed* (a choice made here, reported with every number) or *open* (a choice that must be made before any number is reported; listed in \u00a711).\n\n**Non-claims (unchanged from draft 1):** the spec does not assert automorphy, K-theory, diffusion, or annealing. It does not claim any number is intrinsic to a declaration or to a prime. It claims only that the numbers below have definitions and can be checked against pinned sources.\n\n---\n\n## 0. Commitments\n\n| # | Commitment | Status |\n|---|---|---|\n| C1 | **Carrier `S`** | *open* \u2014 \u00a72.1 |\n| C2 | **Ogg set `P_Ogg`** | *open* \u2014 \u00a72.2; one of three named readings |\n| C3 | **Group `G` and carrier `X`** (synthetic track) | *fixed* in \u00a73.1; `X` = finite representation states, not `D` |\n| C4 | **`U, V, g`** | *fixed* per experiment \u2014 \u00a73.2 |\n| C5 | **Equivalence `\u2261`** | *fixed* \u2014 `Lean.Expr.eqv` modulo binder annotations, with the annotation caveat stated \u2014 \u00a73.3 |\n| C6 | **Decoder `q`** | *fixed* \u2014 fibre-index codec, `q(e x, r x) = x` \u2014 \u00a74.2 |\n| C7 | **Reconstruction target** | *open* \u2014 \u00a74.1; one of four named targets |\n| C8 | **Defect `\u0394 = P T_X \u2212 T_Y P`** | *fixed* \u2014 \u00a75 |\n| C9 | **Scale `c`, threshold `\u03bb`, precision `\u03b5`** | *fixed* per experiment \u2014 \u00a75.4 |\n| C10 | **The `46` bound** | *open* \u2014 \u00a72.3; must name `M` and say what `46` bounds |\n\n---\n\n## 1. The two tracks, kept separate\n\nThe programme has **two tracks that must not be pooled**:\n\n- **Track S (synthetic corpus).** `X` = finite set of syntactic representation states of the FLT abstract/local Hecke declarations. The Hecke action is an explicitly defined permutation action `\u03c1 : G \u2192 Perm(X)`. This is where the bottleneck experiment of draft 1 lives, repaired.\n- **Track M (mathematical carrier).** `S` = a finite-dimensional `\u2102`-vector space on which a Hecke algebra acts genuinely (e.g. `M_k(\u0393_0(N); \u2102)`), and `H_Ogg \u2264 End(S)` the subalgebra generated by a specified set of primes. This is where the Ogg-prime experiment lives.\n\nA **bridge** `\u03b2 : X \u2192 S` (or `S \u2192 X`) exists only if a compatibility certificate is supplied. **No bridge is assumed.** Tracks S and M are reported as separate artefacts and compared only as separate experiments.\n\n---\n\n## 2. Commitments C1, C2, C10\n\n### 2.1 Carrier `S` (Track M)\n\n`S` is one of:\n\n- `M_k(\u0393_0(N); \u2102)` for explicit `k, N` (recommended first: `k = 2`, `N = 11`, genus 1);\n- `FixedPoints V (X \u2192 \u2102)` for the synthetic corpus (Track S);\n- the span of the McKay\u2013Thompson series `{T_g : g \u2208 15 moonshine classes}` (moonshine reading, \u00a72.2 Reading 2).\n\nThe choice is reported with every number.\n\n### 2.2 Ogg set `P_Ogg` (commitment C2)\n\nThree named readings; **one must be chosen and cited**:\n\n- **Reading 1 (Ogg\u2013Eisenstein).** `P_Ogg` = the set of primes `p` for which the Eisenstein ideal of `J_0(p)` has the Ogg property (Mazur, *Modular curves and the Eisenstein ideal*, 1977). Finite, characterised by a congruence.\n- **Reading 2 (moonshine).** `P_Ogg` = the 15 primes `{2,3,5,7,11,13,17,19,23,29,31,41,47,59,71}` dividing `|Monster|`. This is a moonshine set, **not** a Hecke-theoretic one; it is reported separately and never identified with Reading 1.\n- **Reading 3 (chosen finite set).** Any finite set of primes, explicitly listed, with a reason.\n\n### 2.3 The `46` bound (commitment C10)\n\n`46` is not attached to an unnamed `M`. The spec requires:\n\n- **Name `M`.** Monster, a module, a level, a bound on `p`, or something else.\n- **State what `46` bounds.** `v_2(|Monster|)`, `dim` of a graded piece, an exponent in a factorisation, or a cutoff.\n- **State the carrier this bound applies to.** A bound on `M` is meaningful only relative to a carrier; the spec forbids `46` appearing in a formula whose carrier is not named in the same sentence.\n\nIf `M` is the Monster and `46 = v_2(|M|)`, the result is a *moonshine* statement and is reported under Reading 2, never pooled with Reading 1.\n\n---\n\n## 3. Track S: carriers and action\n\n### 3.1 `X` and `D`\n\n- `D` = finite set of `Lean.Name`s of FLT `HeckeOperators/Abstract.lean` and `HeckeOperators/Local.lean` declarations, at the pinned commit.\n- `X` = finite set of **representation states**: syntactic spellings, canonical forms, and their `G`-images. `D` is carried as provenance tags on `X`, not identified with it.\n- `j : D \u2192 X` sends a declaration to its canonical state.\n\n**Why not `D` directly.** Renaming and hypothesis permutation do not map `D` into `D`; they map statements to statements not in the corpus. `X` is the `G`-saturation, and `D \u2286 X` is the real-declaration subset.\n\n### 3.2 `G, U, V, g` (commitment C4)\n\n- **`G`** is a finite group with a **checked permutation** `\u03c1 : G \u2192 Equiv.Perm X`. The generators are stated explicitly per experiment (e.g. `G = S_n` permuting the `n` independent hypotheses of a binder telescope, as in File B's smallest version; or `G = \u27e8\u03c1_rename\u27e9` alone for the calibration).\n- **`U, V \u2264 G`, `g \u2208 G`** are fixed per experiment. `Experiment A` (calibration): `U = V = 1`, `g = 1`, so `[UgV] = id`. `Experiment L` (local): **not** the p-adic matrix group on `X` \u2014 Track S does not support it. Experiment L lives on Track M and is reported separately (\u00a76).\n- **Normalizer condition.** The `Abstract.lean` lemma `heckeOperator_eq_of_mem_normalizer` requires `g \u2208 N_G(U)`; the spec states this condition correctly and does not reverse it.\n\n### 3.3 `\u2261` (commitment C5)\n\n`\u2261` is `Lean.Expr.eqv` on the **statement type**, with the documented caveat that `Expr.eqv` also identifies expressions differing only in binder annotations. If that additional identification is not wanted, `\u2261` is `Expr.eqv` *plus* a check that binder annotations agree; the choice is reported.\n\n**Consequence.** Because Lean terms use de Bruijn indices, `\u03b1`-equivalent statements are already equal under `Expr.eqv`; therefore a Layer-0 codec that quotients by `\u03b1` alone has fibres of size 1 and `err\u2080 = 0`. **Layer 0 must be built on source-text spellings** (or another non-`Expr.eqv` representation) if it is to have non-trivial fibres. This is recorded as a finding, not a bug.\n\n---\n\n## 4. The codec tower (Track S)\n\n### 4.1 Reconstruction target (commitment C7)\n\nThe target is **one** of:\n\n- **(a)** the declaration name `d \u2208 D` (finite identification against the shared corpus; side information includes the corpus);\n- **(b)** the statement type of `d`;\n- **(c)** the elaborated body of `d`;\n- **(d)** the source bytes of `d`.\n\nThe choice determines what `q(e x, r x) = x` means. (a) is the smallest; (b) is the default if the Hecke action is statement-level.\n\n### 4.2 Layers (C6)\n\nA sequential residual tower with fixed decoders:\n\n```\ne_i : X_i \u2192 X_{i+1}\nr_i : X_i \u2192 {0,1}*\nq_i : X_{i+1} \u00d7 {0,1}* \u2192 X_i \u222a {\u22a5}\nrequire  q_i (e_i x, r_i x) = x      for all x\n```\n\n**Layer 0.** `e\u2080` = source-text canonicalisation (class of spelling under `\u03c1_rename`). Fibre size `|[x]_\u03c1|` is the number of spellings in the class; `err\u2080 = \u2308log\u2082 |[x]_\u03c1|\u2309`. `q\u2080` uses the fixed total order on `X` to return the index.\n\n**Layer 1.** `e\u2081 = [UgU]` acting on `X\u2080 \u2192 \u211d`, followed by canonical sort class. Fibre size is computed by the **fibre-index construction**: for finite `e\u2081`, `\u2113\u2081(x) = \u2308log\u2082 |e\u2081\u207b\u00b9(e\u2081 x)|\u2309`. The claim that this fibre is a `U`-orbit is a *theorem*, not an assumption; if it is not proved, the fibre is computed directly.\n\n**Layer 2 (spectral).** Replaced, per File C's repair, by a **deterministic finite-coordinate codec**:\n\n1. Fix a basis and coordinate encoding of `H_U \u2297 \u2102`.\n2. Retain a coordinate subset (e.g. the coordinates of eigenvectors of `[UgU]` with `|\u03bb| > \u03bb`, *if* diagonalisability is proved or assumed and recorded).\n3. Encode the omitted coordinates **exactly** via the fibre-index construction.\n4. Verify `q\u2082(e\u2082 x, r\u2082 x) = x`.\n\nA covering number of a singleton is `1` and cannot measure a residual; the spec therefore forbids covering numbers as residual lengths. If quantisation is introduced, the contract is changed to approximate reconstruction and the change is recorded.\n\n### 4.3 Additivity\n\n`L_residual(x) = \u03a3_i |r_i(x_i)|` is the residual payload length **by construction**. This is independent of any Hecke equivariance. The spec **removes** the claim \"if the tower is not Hecke-equivariant, `err` is not additive.\" Equivariance defect and residual length are separate observables; their statistical relationship is what the experiment investigates.\n\n---\n\n## 5. The defect (C8)\n\n### 5.1 Typed form\n\nFor a layer `i` with vector spaces `A_i, A_{i+1}`, operators\n\n```\nT_i    : A_i   \u2192 A_i\nT_{i+1}: A_{i+1} \u2192 A_{i+1}\nP_i    : A_i   \u2192 A_{i+1}\n```\n\nthe defect is\n\n```\n\u0394_i = P_i \u2218 T_i \u2212 T_{i+1} \u2218 P_i\n```\n\nFor a declaration vector `v_i(d) \u2208 A_i`, `defect_i(d) = \u2016 \u0394_i v_i(d) \u2016`.\n\n**Scope caveat.** Zero defect on the encoded corpus is weaker than `\u0394_i = 0` on the whole carrier; the spec reports which vectors were tested and whether they span `A_i`.\n\n### 5.2 Non-square layers\n\nIf `T_i` is not an endomorphism (e.g. `T_X : H_V \u2192 H_U` with `V \u2260 U`), the square uses separate input and output layer maps `P_i^in, P_i^out`, and `\u0394_i = P_i^out T_i \u2212 T_{i+1} P_i^in`.\n\n### 5.3 Interpretation\n\n`\u0394_i = 0` on `v_i(d)` means the `i`-th layer commutes with the Hecke operator *on `d`*. It does **not** mean the declaration is automorphic, modular, or K-theoretic. It means the chosen maps intertwine on the tested vector.\n\n### 5.4 Norms (C9)\n\n`\u2016\u00b7\u2016` is Euclidean on the finite-dimensional carrier, with **fixed** scale `c` per experiment (`\u2016v\u2016_reported = \u2016v\u2016\u2082 / c`). The draft-1 normalisation by `max_d |a_d|` is removed (undefined at zero, not a fixed norm). `c`, `\u03bb`, `\u03b5` are reported with every number.\n\n---\n\n## 6. Track M: the Ogg-prime experiment\n\n### 6.1 Coverage, discrimination, defect\n\nFor `S`, `P_Ogg`, `H_Ogg = \u2102-algebra generated by {T_p : p \u2208 P_Ogg}`, and a seed `s\u2080 \u2208 S`:\n\n- **Address space** `A = H_Ogg \u00b7 s\u2080 \u2264 S`.\n- **Coverage** `= dim A / dim S`.\n- **Discrimination** `= ` number of distinct simultaneous eigenpackets of `H_Ogg` on `S` (i.e. joint eigenspace dimensions).\n- **Defect** for `T_q`, `q \u2209 P_Ogg`: `\u2016 (1 \u2212 P_A) T_q s\u2080 \u2016 / c`.\n\nThese are finite computations on known data for `S = M_2(\u0393_0(11); \u2102)` and Reading 1.\n\n### 6.2 Moonshine (Reading 2), reported separately\n\nIf `P_Ogg` is the 15 primes and the carrier is the span of the 15 McKay\u2013Thompson series, the three numbers are computed on that carrier and **never pooled** with \u00a76.1. The `46` bound, if used, is `v_2(|Monster|)` and applies to a grading cutoff, not to the Hecke action; this is stated in the report.\n\n### 6.3 No bridge\n\nThere is no `\u03b2 : X \u2192 S` in the current project. Tracks S and M are compared as separate experiments. A bridge requires a separately defined map with a compatibility certificate; until it exists, any sentence of the form \"math lives in the Ogg smooth space\" is a claim about Track M only.\n\n---\n\n## 7. The predictor\n\n### 7.1 Target and guard\n\n`y_i(d) = (L_{i+1}(d), defect_{i+1}(d))` predicted from `x_i(d) = (v_i(d), L_i(d), defect_i(d))`. The predictor must **not** call `e_{i+1}`, `q_{i+1}`, or `[UgV]` on `d` at prediction time; this is the guard against a vacuous result.\n\n### 7.2 Split and size guard\n\n- Split by `G`-orbit, not by individual states, so held-out structures are genuinely held out.\n- **Corpus-size guard.** If `|X| < 100` or the number of `G`-orbits `< 20`, the predictor is reported as **\"not evaluable at this corpus size\"**; only the defect table and the controls are reported. (With `|D| \u2248 30`, this guard will bind; that is the honest outcome.)\n- Baseline: constant predictor on train. Report held-out MAE and absolute error (not relative, because defect targets can be zero).\n\n---\n\n## 8. Deliverables\n\n1. **Track S defect table.** `d \u21a6 (err\u2080, err\u2081, err\u2082, defect\u2080, defect\u2081, defect\u2082, status, axioms)`, with `(G, U, V, g, \u2261, X, c, \u03bb, \u03b5)` in the caption.\n2. **Track S figure.** Rendering only: x = layer, y = `err_i`, colour = `defect_i`, width = fibre size, halo = status. Caption states the commitments.\n3. **Track M report.** `(dim A, coverage, discrimination, defect_{T_q})` for the chosen `S`, `P_Ogg`, `s\u2080`, with `P_Ogg`'s reading cited.\n4. **Controls.** Identity (`T = id`) wiring check; a deliberately non-commuting operator (positive control); Experiment A calibration bracket.\n5. **Predictor report**, or \"not evaluable at this corpus size.\"\n6. **This spec**, with every commitment marked fixed/open.\n\n---\n\n## 9. What this spec does not claim\n\n- Not automorphic, modular, K-theoretic, diffusion, annealing.\n- Not intrinsic: every number is relative to `(C1, \u2026, C10)`.\n- Not a bridge between Tracks S and M.\n- Not a number about `46` unless `M` is named and `46` is stated to bound it.\n- Not a \"modular form plot\": the Track S figure is a codec rendering, and the Track M report is a table.\n\n---\n\n## 10. Smallest runnable instance\n\n**Track S, calibration.** `X` = source-text spellings of the ~30 FLT Hecke declarations; `G = \u27e8\u03c1_rename\u27e9`; `U = V = 1`; `g = 1`; `\u2261` = `Expr.eqv`. Then `e\u2080` = spelling class, `err\u2080 = \u2308log\u2082 (class size)\u2309`, `err\u2081 = err\u2082 = 0`, `defect = 0`. Every `d` gets a number; the pipeline is exercised end-to-end; the figure is trivial. This is the wiring check.\n\n**Track S, first non-trivial.** `G = S_n` on hypothesis telescopes; `U = ` stabiliser of an ordering; `g = ` transposition. `err\u2081` becomes non-zero for declarations with `n \u2265 2`; `defect\u2080` measures whether the Hecke sum commutes with the canonical sort used as `q\u2080`.\n\n**Track M, first non-trivial.** `S = M_2(\u0393_0(11); \u2102)`, `P_Ogg` = Reading 1 for `N = 11`, `s\u2080` = the normalised Eisenstein series. Report `(dim A, coverage, discrimination, defect_{T_q})` for `q \u2209 P_Ogg` up to a stated bound.\n\n---\n\n## 11. Open commitments (must be resolved before any number is reported)\n\n- **C1** \u2014 choose `S` (\u00a72.1).\n- **C2** \u2014 choose the reading of `P_Ogg` and cite it (\u00a72.2).\n- **C7** \u2014 choose the reconstruction target (\u00a74.1).\n- **C10** \u2014 name `M` and state what `46` bounds (\u00a72.3).\n\nUntil these are resolved, the spec is a specification of an intention, and the numbers would move whenever a commitment moves.\n\n---\n\n## 12. One-paragraph executive summary\n\nThe spec folds the Hecke-bottleneck programme of draft 1 (repaired per File C: explicit `X`, checked permutations, fibre-index codecs, typed defect `\u0394 = P T_X \u2212 T_Y P`, no false additivity, no covering-number residuals, corpus-size guard) together with the Ogg-prime programme of the follow-up (Track M: coverage, discrimination, defect of the algebra `H_Ogg` on a named carrier). The two tracks are kept separate: Track S is a synthetic corpus experiment on `X`, Track M is a genuine Hecke-algebra experiment on `S`, and there is no bridge between them without a certificate. The `46` bound is not attached to an unnamed `M`; naming `M` and stating what `46` bounds is a precondition for reporting any number that uses it. Four commitments (`S`, `P_Ogg`, the reconstruction target, and `M/46`) are open and must be resolved before computation; the rest are fixed and reported with every number.\n\n<div typeof=\"erdfa:SheafSection dasl:Type1\" about=\"#bafkda5132f310377add\">\n  <meta property=\"erdfa:shard\" content=\"59,29,28\" />\n  <meta property=\"erdfa:encoding\" content=\"raw\" />\n  <meta property=\"erdfa:prime\" content=\"1\" />\n  <meta property=\"dasl:addr\" content=\"0xda5110c810377add\" />\n  <meta property=\"dasl:type\" content=\"1\" />\n  <meta property=\"dasl:eigenspace\" content=\"Earth\" />\n  <meta property=\"dasl:bott\" content=\"1 (C)\" />\n  <meta property=\"dasl:hecke\" content=\"T_7\" />\n  <meta property=\"sheaf:orbifold\" content=\"(59 mod 71, 29 mod 59, 28 mod 47)\" />\n  <link property=\"sheaf:subgroupIndex\" href=\"erdfa:H/raw\" />\n</div>\nHecke-Addressed Lean Prover: Unified Spec v0.1\nDraft, 23 Oct 2026. Status ladder: candidate < source_location_found < definition_inspected < proof_inspected < build_checked < axiom_audited. Nothing below is build_checked or axiom_audited unless stated.\n1. Purpose and one-sentence claim\nBuild a Lean 4 proof assistant that retrieves premises and predicts next steps using a Hecke-structured codec of the declaration corpus, and report honestly whether that structure beats plain baselines. The spec claims a measurable hypothesis, not a result: that a Hecke-aligned shadow of a declaration carries predictive information a generic one does not.\n2. What is established so far\n2.1 Sources (inspected from repository dumps, not compiled)\nItem\nSource\nStatus\nAbstract operator AbstractHeckeOperator.heckeOperator g U V h : A^V \u2192\u2097[R] A^U\nFLT HeckeOperators/Abstract.lean\nproof_inspected against the dump; no sorry or axiom in the file; not built\nLocal coset decomposition U1 \u00b7 diag(\u03b1,1) \u00b7 U1\nFLT HeckeOperators/Local.lean\ndefinition_inspected\nDouble-coset API\nFLT Mathlib/GroupTheory/DoubleCoset.lean\ndefinition_inspected\nClassical T_p on \u210d \u2192 \u2102: heckeOp, linearity, \u03b3 = 1 case\neml-lean HeckeAction.lean\ndefined and linear; modularity-preservation theorem is sorry upstream\nSingle-file extract\nHeckeCore.lean (Part A verbatim, Part B classical)\nassembled, not compiled\nQuaternionic concrete operators\nFLT HeckeOperators/Concrete.lean\nmissing from the supplied dump; imported by FLT.lean\nToolchains differ: FLT targets Lean v4.35.0 (Mathlib pin 56a005855ea17e0b0958f73ec801ae140b0a1679), eml-lean targets v4.29.0. No theorem identifies the abstract operator with the classical formula.\n2.2 Measurements already made (cluster level, regex-based, zlib proxy)\n\u2022 The FLT dump parses to 23 module clusters, about 2,919 declarations, 65 sorry lines (20 in KnownIn1980s, 14 in GlobalLanglandsConjectures).\n\u2022 Decoding error of a declaration x against a 32 KB Hecke dictionary (Abstract, Local, DoubleCoset; Hecke files encoded with themselves left out): \u03c1 = C(x | dict) / C(x). Excess = \u03c1(control) \u2212 \u03c1(Hecke), control being a random 32 KB sample of non-Hecke FLT files.\n\u2022 Only QuaternionAlgebra (\u03c1 0.60 vs 0.72, excess +0.12) and AutomorphicForm (+0.03) gain. Other clusters are neutral or worse than the control. \u03c1 rises with import distance from the Hecke cluster (Spearman 0.58, 21 clusters), which is mostly generic Lean overlap.\n\u2022 Layered refinement (dictionary sizes 2, 4, 8, 16, 32 KB): mean \u03c1 falls 0.95 \u2192 0.77 (Hecke) and 0.93 \u2192 0.73 (control). Steepest per-doubling slopes: QuaternionAlgebra \u22120.078, AutomorphicForm \u22120.055, DedekindDomain \u22120.050.\n\u2022 Next-step predictor (leave-one-cluster-out): against a drift-only baseline, history plus length improves MSE by under 5% at three of four steps and about 10% at the last. The Hecke-versus-control gap adds nothing.\n\u2022 Ogg primes (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71): 24 of 26 sporadic groups have order supported on them (exceptions J4, Ly). A\u2099 qualifies exactly for n \u2264 36. 31 prime powers q < 10^40 give PSL\u2082(q) with Ogg-supported order; largest q = 2209.\n\u2022 Address space = divisors of |M|: 424,488,960 points (28.66 bits), rank 95, middle-rank width 9,031,664, squarefree part 32,768 points.\n2.3 Honest reading\nThe data do not show the project passes through a Hecke bottleneck. They show a Hecke-aligned region (quaternionic automorphic forms) where Hecke context keeps paying off, and a generic Lean-overlap effect everywhere else.\n3. Architecture\nLean sources \u2500\u25ba C1 Extractor \u2500\u25ba corpus D, dependency DAG, status table\n                                   \u2502\n                   C2 Codec tower (L0 dictionary, L1 orbit, L2 spectral)\n                                   \u2502\n                   C3 Ogg address map (dependency \u21d2 divisibility)\n                                   \u2502\n                   C4 Predictor (premise retrieval, next step)\n                                   \u2502\n                   C5 Verifier: Lean kernel is the only judge\nC1 Extractor (Lean side)\nUses Lean.Meta to enumerate declarations by Lean.Name, record statement type, dependency edges, module, and #print axioms. Replaces the regex counts used so far. Output: a table with fields name, module, cluster, kind, deps, status, axioms.\nC2 Codec tower\nThree layers, each a pair (E\u1d62, Dec\u1d62) with Dec\u1d62 a fixed total function independent of E\u1d62.\n\u2022 L0, dictionary shadow. The measured proxy: conditional compression against a Hecke dictionary. Retained because it is computable today. Replace zlib by a stronger compressor before drawing conclusions.\n\u2022 L1, orbit layer. Needs a real group action; see 4.1.\n\u2022 L2, spectral layer. Eigenbasis truncation of [UgU] on the saturated corpus, only where the operator is diagonalizable; otherwise skipped and reported.\nC3 Ogg address map\nAssign each declaration an exponent vector over the 15 Ogg primes within the Monster box, with dependency mapped to divisibility and Hecke composition to multiplication. The address is an index into the codebook, not storage: 28.66 bits against roughly 2,400 bits for a 300-byte declaration. Feasibility depends on the order dimension of the dependency DAG, which is untested.\nC4 Predictor\nPremise retrieval first, tactic prediction second. Features: codec residuals, orbit sizes, defects, address proximity, plus ordinary baselines (lexical overlap, imported-module proximity). The predictor must not call E, Dec, or the Hecke operator at the next layer for the item being predicted; otherwise the result is exact by construction.\nC5 Verifier\nEvery proposed step is checked by the Lean kernel. The system never reports a proof unless lake build succeeds and #print axioms is recorded for the target. Search is only guided by C2 to C4; correctness never depends on them.\n4. Corrected definitions (fixing the four problems in the earlier draft spec)\n4.1 The group must act totally\n[UgV] needs a total DistribMulAction G (D \u2192 \u211d), so G must permute D. Define D as the G-saturation of the real declarations (synthetic variants included) and mark real entries as an annotation. Minimal first instance: G = S_n permuting the n independent hypotheses of a binder telescope, U = stabilizer of an ordering, g = a transposition, so err\u2081 = log\u2082 of the orbit size.\n4.2 Experiment L uses the right group\nThe corpus operator and the local operator are different objects. Corpus experiments use the group of 4.1. The p-adic operator of Local.lean (localPTameLevel, general nonzero \u03b1 in \ud835\udcaa\u1d65) is studied only through the declarations that define it, never as a group acting on declarations.\n4.3 Layer 0 under de Bruijn indices\n\u03b1-equivalent statements are already the same Expr, so renaming gives orbit size 1. Layer 0 therefore is the dictionary shadow of C2, not an \u03b1-quotient.\n4.4 Types of the defect\nLet Dec\u1d62 : H\u1d62 \u2192 H (values in the function space). Then\nDefect\u1d62 := [UgV] \u2218 Dec\u1d62 \u2212 Dec\u1d62 \u2218 [UgV] is well typed. Eigenvalue retention in L2 uses a single rule: keep modulus > \u03bb, prune below.\n4.5 Truncation defect of the Ogg box\nT_p T_{p^r} = T_{p^{r+1}} + p^{k\u22121} T_{p^{r\u22121}} leaves the box at the exponent cap, and primes 41, 47, 59, 71 have cap 1. The box is not Hecke-closed; report the truncation defect alongside every address-space result.\n5. Evaluation protocol\n\u2022 Corpus size. Minimum |D| for a meaningful split: 500 saturated items. Abstract plus Local alone (about 30 declarations) is too small for any held-out claim.\n\u2022 Split. Deterministic by name hash, fixed seed, split by cluster or file to avoid leakage; status and axiom count are file-level constants and are excluded as features.\n\u2022 Baselines. Constant predictor, drift-only autoregression, lexical retrieval, and a control dictionary of equal size.\n\u2022 Reported with every number: (G, U, V, g, \u2261, \u03bb, \u03b5, D, dictionary size, compressor, seed).\n\u2022 Primary metrics: premise recall@k on held-out lemmas; held-out MAE for err; relative error for defect norm.\n6. Milestones\n#\nDeliverable\nGate\nM1\nHeckeCore.lean builds on a pinned toolchain; #print axioms for heckeOperator and comm\nbuild_checked, axiom_audited\nM2\nC1 extractor emits the declaration table for FLT and eml-lean\ntable reproduces the regex counts within tolerance\nM3\nSaturated corpus under S_n, first nonzero err\u2081 and Defect\u2080\nExperiment A bracket (U = V normalizing) returns the trivial value\nM4\nOgg embedding of the Hecke-module dependency DAG\nembedding exists, or a reported obstruction\nM5\nC4 premise retrieval vs baselines on held-out clusters\nbeats the control dictionary and lexical baseline, or is reported as a negative result\nM6\nClosed loop with the kernel check in C5\nno proof reported without a clean build\n7. Kill criteria\n\u2022 If M5 does not beat the control dictionary on held-out clusters, drop the claim that Hecke structure helps, and keep the extractor and verifier.\n\u2022 If M4 finds no embedding within 15 chains of the given lengths, drop divisibility-as-dependency and keep the Ogg set only as a labeling scheme.\n\u2022 If M1 fails on the supplied sources, nothing built on Part A or Part B counts as verified.\n8. Non-claims\n\u2022 No claim that the corpus is automorphic, modular, a K-theory filtration, or a diffusion process. The levels form a filtration and are used as a coarse-to-fine schedule; that is an analogy.\n\u2022 No claim that the Ogg set is special for Hecke operators. The exponent caps (46, 20, 9, 6, 2, 3, 1, ...) are Monster Sylow exponents, a choice, not Hecke data.\n\u2022 No claim that decoding error is intrinsic to a declaration; it is relative to the dictionary, compressor, and corpus.\n\u2022 No claim about group-theoretic coverage beyond order supports: Ogg-supported orders are a fact about orders, not about group structure.\n9. Open questions\n1. What does Concrete.lean contain, and does it instantiate the abstract operator for the quaternionic case?\n2. Is there a map from group data to something T_p acts on, such as moonshine functions, to turn the order-support result into structure?\n3. Does the dependency DAG of the Hecke modules have order dimension at most 15 under the box's chain lengths?\n4. Does a stronger compressor change the ranking of clusters?\n\n<div typeof=\"erdfa:SheafSection dasl:Type3\" about=\"#bafkda5130b1a26ac749\">\n  <meta property=\"erdfa:shard\" content=\"49,52,16\" />\n  <meta property=\"erdfa:encoding\" content=\"raw\" />\n  <meta property=\"erdfa:prime\" content=\"1\" />\n  <meta property=\"dasl:addr\" content=\"0xda513178226ac749\" />\n  <meta property=\"dasl:type\" content=\"3\" />\n  <meta property=\"dasl:eigenspace\" content=\"Earth\" />\n  <meta property=\"dasl:bott\" content=\"7 (R(8)\u2295R(8))\" />\n  <meta property=\"dasl:hecke\" content=\"T_13\" />\n  <meta property=\"sheaf:orbifold\" content=\"(49 mod 71, 52 mod 59, 16 mod 47)\" />\n  <link property=\"sheaf:subgroupIndex\" href=\"erdfa:H/raw\" />\n</div>\n# Spec: Monster-Bounded Hecke Codec Prover\n\nVersion: 0.1  \nStatus: proposed architecture; no implementation, compilation, compression result, or mathematical bridge is asserted by this document.\n\n## 1. Purpose\n\nBuild a Lean-centered prover and analysis system that represents declarations through a finite, Monster-bounded Hecke dictionary, stores the information that representation loses, and verifies exact reconstruction.\n\nThe central principle is **reconstructability**:\n\n\\[\n\\operatorname{Decode}_C(\\operatorname{Encode}_C(d))=d.\n\\]\n\nHere \\(C\\) is a pinned context containing the declaration environment, serialization rules, dictionary, decoder, and mathematical conventions.\n\nThe system has four connected responsibilities:\n\n1. Extract declarations and their evidence from a pinned Lean corpus.\n2. Encode declarations through explicit mathematical shadow layers.\n3. Measure exact residual storage and compatibility with specified Hecke actions.\n4. Propose improved encodings or proofs, accepting claims only through the appropriate checker.\n\nThe initial corpus is the FLT abstract and local Hecke development described in the supplied source excerpts. The classical operator from `eml-lean` is an optional, separately versioned adapter.\n\n## 2. Scope and non-goals\n\n### Initial scope\n\n- Declaration inventory and canonical serialization.\n- A finite address dictionary based on the Monster-order exponent bounds.\n- Exact residual codecs.\n- Synthetic finite-group Hecke experiments.\n- Adapters to the supplied abstract Hecke API.\n- Typed equivariance-defect measurements.\n- Predictor-guided search over candidate encodings.\n- Evidence-linked tables and infographics.\n\n### Not implied by this architecture\n\n- Arbitrary declarations are modular forms.\n- The Monster acts on the declaration corpus.\n- Prime support determines a finite group.\n- A bounded address space is closed under Hecke composition.\n- A low residual or zero defect establishes a mathematical theorem.\n- The encoding layers are K-theory.\n- Repeated operator application is diffusion.\n- A model or visualization can certify its own correctness.\n\nThese may become explicit extensions only after their required structures and certificates are supplied.\n\n## 3. Pinned context and corpus\n\nAn experiment manifest fixes:\n\n```text\nrepository revisions\nLean toolchain\ndependency revisions\nselected modules\nselected declarations\nserialization version\ncodec and dictionary versions\noperator conventions\nevidence and measurement procedures\n```\n\nRepositories requiring incompatible toolchains remain separate environments. Results may be compared through exported records; source compatibility is not assumed.\n\n### Declaration identity\n\nA declaration record contains at least:\n\n```text\nrepository revision\nmodule\nLean.Name\ndeclaration kind\nuniverse parameters\nstatement type\noptional body\ndependency references\nsource location, when available\n```\n\nNames are identifiers within a pinned environment. Syntactic transformations do not automatically define transformations of names.\n\n### Reconstruction contracts\n\nEvery experiment selects one target:\n\n| Contract | Required recovery |\n|---|---|\n| Name-exact | Original declaration identifier in the shared pinned corpus |\n| Statement-exact | Canonical serialized statement record |\n| Declaration-exact | Canonical serialized statement and available body |\n| Source-exact | Original source bytes |\n| Equivalence-certified | An alternative object and a certificate of the specified equivalence |\n\nThe initial compression benchmark uses declaration-exact recovery where bodies are available. Name-exact experiments are permitted but must charge or explicitly disclose the shared corpus.\n\nEquivalence-certified recovery is not reported as exact recovery of the original expression.\n\n## 4. Evidence model\n\nEvidence is recorded as independent fields, not a single ordinal status:\n\n```text\nsource_located\nstatement_inspected\nbody_inspected\nbuild_checked\naxiom_audited\nreconstruction_checked\nbridge_certificate_checked\n```\n\nEach field records:\n\n```text\noutcome: unknown | pass | fail | not_applicable\ncontext identifier\nprocedure\nartifact or transcript reference\n```\n\nA successful build does not substitute for an axiom audit. A round-trip test does not substitute for a mathematical equivalence proof.\n\nAxiom dependencies are stored as reported names from the audit, rather than a closed, hard-coded list.\n\n## 5. Monster-bounded address dictionary\n\nFix\n\n\\[\nS=(2,3,5,7,11,13,17,19,23,29,31,41,47,59,71)\n\\]\n\nand\n\n\\[\nb=(46,20,9,6,2,3,1,1,1,1,1,1,1,1,1).\n\\]\n\nDefine\n\n\\[\n\\mathcal A_M=\\prod_{j=0}^{14}\\{0,\\ldots,b_j\\}.\n\\]\n\nFor \\(a\\in\\mathcal A_M\\), define\n\n\\[\nn(a)=\\prod_{j=0}^{14}S_j^{a_j}.\n\\]\n\nThe dictionary contains\n\n\\[\n|\\mathcal A_M|=424{,}488{,}960\n\\]\n\naddresses. An address can be stored as a 29-bit ordinal, with unused bit patterns rejected.\n\n### Lean model\n\nIllustrative interface; exact imports and elaboration remain implementation work:\n\n```lean\nabbrev PrimeSlot := Fin 15\n\ndef exponentBound : PrimeSlot \u2192 Nat := ...\n\nabbrev Address :=\n  (i : PrimeSlot) \u2192 Fin (exponentBound i + 1)\n\ndef addressIndex : Address \u2192 Fin 424488960 := ...\ndef addressFromIndex : Fin 424488960 \u2192 Address := ...\n\ntheorem address_roundTrip (a : Address) :\n    addressFromIndex (addressIndex a) = a := ...\n```\n\nThe ellipses denote specification placeholders, not accepted proof gaps.\n\n### Address-space boundary\n\nThis is a finite dictionary, not a claim of algebraic closure.\n\nComposition outside the bounds must use a declared policy:\n\n```text\nexplicit overflow\nresidual storage\ncertified reduction\ndictionary expansion\n```\n\nClipping and modular wrapping are forbidden unless they are part of a separately defined and certified mathematical interpretation.\n\n## 6. Separate addresses, operators, and declaration shadows\n\nThree layers must remain distinct:\n\n\\[\n\\text{addresses}\n\\longrightarrow\n\\text{formal expressions}\n\\longrightarrow\n\\text{operators on a carrier}.\n\\]\n\nAn address may denote either:\n\n\\[\nB_a=\\prod_{p\\in S}T_p^{a_p},\n\\]\n\nor\n\n\\[\nC_a=T_{n(a)}.\n\\]\n\nThese are different conventions. The manifest selects one.\n\nAn operator adapter specifies:\n\n- the carrier;\n- its scalar structure;\n- the available \\(T_p\\);\n- multiplication order where relevant;\n- normalization;\n- certified relations;\n- overflow behavior.\n\nDistinct address labels need not denote distinct operators.\n\n### Mathematical shadow\n\nA declaration shadow may be a sparse combination:\n\n\\[\nP(d)=\\sum_{a\\in\\mathcal A_M}c_a(d)e_a.\n\\]\n\nFor exact storage, the initial coefficient domain is a canonical finite encoding, such as integers or rationals. Arbitrary exact real or complex coefficients are not assumed serializable.\n\nAn interpretation map into an operator space is optional and separately certified.\n\nA syntactic shadow without that interpretation remains useful as a codec, but is not labeled a verified Hecke representation.\n\n## 7. Residual codec tower\n\nA tower consists of types \\(X_0,\\ldots,X_n\\), with \\(X_0\\) representing the chosen declaration target.\n\nFor each transition:\n\n\\[\ne_i:X_i\\to X_{i+1},\n\\qquad\nr_i:X_i\\to\\mathrm{Bytes},\n\\]\n\nand\n\n\\[\nq_i:X_{i+1}\\times\\mathrm{Bytes}\\to\n\\operatorname{Except}(\\mathrm{DecodeError},X_i).\n\\]\n\nThe required law is\n\n\\[\nq_i(e_i(x),r_i(x))=\\operatorname{ok}(x).\n\\]\n\nIllustrative Lean interface:\n\n```lean\nstructure ResidualCodec (X Y : Type) where\n  encode : X \u2192 Y \u00d7 ByteArray\n  decode : Y \u2192 ByteArray \u2192 Except DecodeError X\n  roundTrip :\n    \u2200 x,\n      decode (encode x).1 (encode x).2 = .ok x\n```\n\nMalformed-input handling, resource bounds, and serialization framing are specified separately.\n\n### Initial proposed layers\n\n| Transition | Proposed content |\n|---|---|\n| \\(X_0\\to X_1\\) | Canonical declaration record to typed construction record |\n| \\(X_1\\to X_2\\) | Construction record to finite mathematical feature structure |\n| \\(X_2\\to X_3\\) | Feature structure to sparse Monster-bounded dictionary shadow |\n\nThese are engineering layers. Their mathematical interpretations require additional maps and certificates.\n\n### Finite-fiber reference codec\n\nFor a finite encoder \\(e:X\\to Y\\), fix an ordering of \\(X\\). Encode the original input by its index in\n\n\\[\ne^{-1}(e(x)).\n\\]\n\nThis supplies a simple exact baseline. Orbit-size formulas may replace fiber sizes only when fiber\u2013orbit correspondence is established.\n\n## 8. Description-length accounting\n\nThe operational bottleneck cost is the actual serialized residual length:\n\n\\[\n\\ell_i(x_i)=8\\,|\\operatorname{serialize}(r_i(x_i))|_{\\mathrm{bytes}}.\n\\]\n\nThe total encoded cost includes:\n\n\\[\nL(d)=\nL(x_n)\n+\\sum_i L(r_i)\n+L(\\text{framing})\n+L(\\text{allocated shared model}).\n\\]\n\nReport at least:\n\n```text\noriginal bytes\nshadow bytes\ncoefficient bytes\nresidual bytes per layer\noverflow bytes\nframing bytes\ndictionary/model cost and allocation rule\ntotal encoded bytes\n```\n\nResidual payload lengths add because the tower stores them sequentially\u2014not because the tower is Hecke-equivariant.\n\nNo result may hide declaration-specific information in an uncharged decoder, seed object, or learned dictionary.\n\n## 9. Genuine Hecke adapter\n\nThe supplied abstract API is used only after supplying:\n\n```text\ngroup G\nadditive carrier A\ndistributive G-action on A\ncompatible scalar action\nsubgroups U and V\nelement g\nfinite-coset hypothesis\n```\n\nIt then provides the typed map\n\n\\[\n[UgV]:A^V\\to A^U.\n\\]\n\n### First executable instance\n\nUse a finite state set \\(X\\), an explicitly verified finite-group permutation action on \\(X\\), and the induced function-space action\n\n\\[\n(g\\cdot f)(x)=f(g^{-1}\\cdot x).\n\\]\n\nStart with rational-valued functions to support exact finite computations.\n\nDeclaration names, hypothesis permutations, and import edits do not define this action by themselves.\n\n### Local FLT adapter\n\nThe local matrix-group experiment is separate. It requires the actual local carrier and action, plus an explicit bridge from declaration features if corpus shadows are to be interpreted there.\n\n## 10. Equivariance defect\n\nFor endomorphism experiments, specify:\n\n\\[\nT_i:A_i\\to A_i,\\qquad\nT_{i+1}:A_{i+1}\\to A_{i+1},\n\\qquad\nP_i:A_i\\to A_{i+1}.\n\\]\n\nDefine\n\n\\[\n\\Delta_i=P_iT_i-T_{i+1}P_i.\n\\]\n\nFor a declaration observation \\(v_i(d)\\),\n\n\\[\n\\delta_i(d)=\\|\\Delta_i(v_i(d))\\|.\n\\]\n\nFor non-endomorphism Hecke maps, specify a full square with separate input and output projection maps.\n\nThe defect concerns mathematical projections between carriers. It is not defined by subtracting declaration-valued decoder outputs.\n\n### Reporting\n\n- Exact rational defect vectors are primary where available.\n- Numerical norms are derived measurements.\n- Scaling constants are fixed and positive.\n- Zero on sampled declarations is not automatically zero on the whole carrier.\n- Zero defect does not imply zero residual.\n- Zero residual does not imply equivariance.\n\n## 11. Predictor and search engine\n\nA predictor proposes the next encoding or proof-search move.\n\nInputs may include:\n\n```text\ncurrent shadow\ncurrent residual length\ncurrent measured defect\nsyntactic features\navailable certified operations\noptional evidence annotations\n```\n\nTargets may include:\n\n```text\nnext-layer residual length\nnext-layer defect\ncandidate total description length\ncandidate check-success probability\n```\n\nPrediction-time code must not compute the withheld target and present it as prediction.\n\n### Candidate moves\n\n- Change the sparse dictionary expression.\n- Introduce or reuse a charged dictionary template.\n- Select another codec layer.\n- Apply an available operator.\n- Propose a representative decomposition.\n- Propose a bridge lemma.\n- Generate a proof term.\n- Choose explicit overflow instead of a failed reduction.\n\n### Acceptance gates\n\n| Candidate claim | Required check |\n|---|---|\n| Exact reconstruction | Byte/record equality under the selected contract |\n| Mathematical transport | Accepted certificate |\n| Operator identity | Accepted proof or explicitly scoped exact finite check |\n| Compression improvement | Full description-length accounting |\n| New Lean theorem | Lean acceptance plus recorded axiom dependencies |\n\nGenerated proofs importing `sorryAx` are not reported as gap-free.\n\n## 12. Self-application\n\nInclude the system\u2019s own declarations in the corpus:\n\n```text\naddress encoder\nresidual encoder\ndecoder\nHecke adapter\ndefect definition\ncandidate checker\n```\n\nFor a declaration \\(d_T\\) implementing an operator:\n\n\\[\nh_T=P(d_T).\n\\]\n\nA self-observation experiment applies an available operator to \\(h_T\\), then measures the residual required to reconstruct \\(d_T\\).\n\nA stronger experiment defines a source-side transformation \\(S_g\\) and proves\n\n\\[\nP(S_g(d_T))=T_g(P(d_T)).\n\\]\n\nNeither experiment establishes a self-certifying prover. Verification authority remains with the declared checker and its recorded trusted context.\n\n## 13. Evaluation and controls\n\n### Controls\n\n1. Identity operator: tests defect wiring.\n2. Deliberately noncommuting projection: tests defect sensitivity.\n3. Constant shadow: tests residual recovery.\n4. Lossless shadow: tests the zero-residual boundary.\n5. Corrupted residual: tests failure handling.\n6. Overflow beyond exponent bounds: tests boundary policy.\n\n### Dictionary comparisons\n\nCompare:\n\n- Monster-bounded Ogg dictionary;\n- matched alternative prime dictionaries;\n- smaller Ogg subsets;\n- unrestricted dictionaries under equal storage budgets;\n- non-Hecke structural codecs.\n\nThe Monster dictionary is a hypothesis under test, not an assumed compression advantage.\n\n### Predictor evaluation\n\nUse a fixed split grouped by relevant equivalence classes or transformation orbits. Report:\n\n- baseline and predictor MAE;\n- defect error with an explicit zero-target convention;\n- sample counts;\n- uncertainty or repeated-split results where appropriate;\n- evidence-only and structure-only feature ablations.\n\nDo not infer broad mathematical generalization from a small declaration corpus.\n\n## 14. Artifact and infographic contract\n\nThe primary artifact is a machine-readable declaration table. The visualization renders that table.\n\nRequired fields include:\n\n```text\ndeclaration identity\nreconstruction contract\ncodec version\noccupied addresses\nshadow size\nresidual size per layer\noverflow size\nround-trip outcome\ndefect vector or measurement\noperator-context identifier\nevidence records\n```\n\nThe infographic may show:\n\n- vertical axis: codec layer;\n- node or band size: encoded bytes;\n- halo: residual bytes;\n- color: defect magnitude;\n- border: verification evidence;\n- edges: dependency, codec transition, or certified mathematical bridge.\n\nUnknown values remain visibly unknown.\n\nA modular-domain layout is decorative unless a certified modular-form interpretation exists.\n\n## 15. Implementation milestones\n\n| Milestone | Acceptance condition |\n|---|---|\n| M0 \u2014 Inventory | Pinned manifest and reproducible declaration extraction |\n| M1 \u2014 Addresses | Mixed-radix round-trip proofs and boundary tests |\n| M2 \u2014 Exact codec | Decoder law plus executable round-trip tests |\n| M3 \u2014 Finite Hecke experiment | Explicit action, finite sums, identity and noncommuting controls |\n| M4 \u2014 Defect table | Typed exact measurements with complete context |\n| M5 \u2014 Corpus shadows | Documented feature extraction and residual accounting |\n| M6 \u2014 Search | Candidate generation with independent acceptance checks |\n| M7 \u2014 Predictor | Held-out comparison against declared baselines |\n| M8 \u2014 Self-observation | Operator implementation encoded and tested like other declarations |\n| M9 \u2014 Mathematical bridges | Independently certified local or classical adapters |\n\nMilestones succeed independently. A working exact codec is a valid result even if the Monster dictionary offers no compression advantage.\n\n## 16. Deferred extensions\n\nThe architecture leaves explicit interfaces for:\n\n- K-theoretic invariants: require a specified category, invariant map, and induced operations.\n- Automorphic shadows: require an actual automorphic carrier and verified interpretation.\n- Diffusion: requires forward corruption kernels and a reverse model.\n- Annealing: requires a proposal process, temperature schedule, and acceptance rule.\n\nThese extensions must preserve the existing reconstruction and evidence contracts rather than rename them.\n\n## 17. Completion criterion\n\nThe first complete result is not \u201call mathematics embedded into the Monster.\u201d\n\nIt is:\n\n> A reproducible Lean-centered system that encodes a pinned declaration corpus through a finite Monster-bounded dictionary, reconstructs its selected targets exactly, measures the residual and any typed Hecke-compatibility defect, and reports whether this dictionary improves on matched alternatives.\n\nThat delivers a prover architecture, a codec benchmark, and an auditable mathematical map within one coherent project.\n\n<div typeof=\"erdfa:SheafSection dasl:Type1\" about=\"#bafkda513440113c6a03\">\n  <meta property=\"erdfa:shard\" content=\"36,9,36\" />\n  <meta property=\"erdfa:encoding\" content=\"raw\" />\n  <meta property=\"erdfa:prime\" content=\"1\" />\n  <meta property=\"dasl:addr\" content=\"0xda511368113c6a03\" />\n  <meta property=\"dasl:type\" content=\"1\" />\n  <meta property=\"dasl:eigenspace\" content=\"Earth\" />\n  <meta property=\"dasl:bott\" content=\"5 (C(4))\" />\n  <meta property=\"dasl:hecke\" content=\"T_59\" />\n  <meta property=\"sheaf:orbifold\" content=\"(36 mod 71, 9 mod 59, 36 mod 47)\" />\n  <link property=\"sheaf:subgroupIndex\" href=\"erdfa:H/raw\" />\n</div>",
+      "suggested_name": "COMPLEX-Quantization-b1ba72a6"
+    },
+    {
+      "id": "65f0b76d-8ae9-4c2e-8b42-28af4b104a3a",
+      "name": null,
+      "description": "# Summary of changes for run 789bb6f0-69d4-4235-8c82-d3720f249e17 I made a Roblox place file you can open directly, and I added a GitHub Actions workflow that builds it in three ways. One of these use",
+      "created": "2026-10-20T20:05:11.355476",
+      "updated": "2026-10-22T21:41:38.461797",
+      "status": 2,
+      "key_themes": [
+        "I couldn't open or play the place in Roblox Studio.",
+        "What I could check here:",
+        "To try it:",
+        "File > Open from File",
+        "Play",
+        "P",
+        "What I added:",
+        "`roblox/tools/build_place.py`:"
+      ],
+      "file_count": 10,
+      "files": [
+        ".github",
+        "ARISTOTLE_SUMMARY.md",
+        "README.md",
+        "RequestProject",
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "meta-introspector-roblox-rs-8a5edab282632443.txt",
+        "minecraft",
+        "roblox",
+        "web"
+      ],
+      "top_keywords": [
+        "json",
+        "Lean",
+        "README.md"
+      ],
+      "description_raw": "Make me a PID controller",
+      "suggested_name": "I-COULDNT-65f0b76d"
+    },
+    {
+      "id": "f9e7f940-1d58-4de2-89b2-91ae30183b5a",
+      "name": null,
+      "description": "# Summary of changes for run c42a347b-257f-4e7a-98a2-974be384a7b4 I built the Lean specification layer for RFC-0001 revision 2 as `RequestProject/SpectrumVM`. It builds with no `sorry` and no `native_",
+      "created": "2026-10-22T11:26:40.464291",
+      "updated": "2026-10-22T12:21:06.083561",
+      "status": 2,
+      "key_themes": [
+        "What is proved (kernel-checked unless noted)",
+        "M0 / gate 1:",
+        "Group model:",
+        "not proved",
+        "Order ideals:",
+        "Completeness certificates:",
+        "Comparison (M1):",
+        "Trust model (\u00a73):"
+      ],
+      "file_count": 11,
+      "files": [
+        ".gitignore",
+        "ARISTOTLE_SUMMARY.md",
+        "README.md",
+        "RFC-0001-implementation-notes.md",
+        "RequestProject",
+        "STATUS.md",
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "lake-manifest.json",
+        "lakefile.toml",
+        "lean-toolchain"
+      ],
+      "top_keywords": [
+        "proved",
+        "Lean",
+        "theorem",
+        "Mathlib",
+        "certificate",
+        "sorry",
+        "lemma",
+        "Trust"
+      ],
+      "description_raw": "RFC-0001: SpectrumVM\nCertified element-order spectra, order ideals and mask comparisons for finite Coxeter groups\nStatus: Draft for implementation \u00b7 Date: 22 October 2026 \u00b7 Implementer: Aristotle \u00b7 Supersedes: the Python prototype spectrum_vm/ and the Perplexity design note (both informative, neither normative)\n0. Summary\nSpectrumVM turns reflection generators into (a) exact element orders with independently checkable witnesses, (b) spectra labelled by how completely they were established, (c) divisibility order ideals, and (d) three-valued comparisons against target order data, plus an untrusted wheel scene for display. It is a domain-specific, certificate-producing checker, not a general-purpose CPU.\nThis RFC fixes conventions, types, theorems to be proved, certificate formats, milestones and acceptance tests. Lean 4 with Mathlib is the specification, the soundness argument and the test oracle. Heavy enumeration may run in a fast external checker, as in the repository's Hodge-VM precedent (architecture option C: Lean specifies and proves soundness; a compact VM does the work; differential tests tie them together).\nAssumption to confirm: Aristotle works in Lean 4 against Mathlib in the style of the existing RequestProject/ tree. If not, \u00a74\u2013\u00a77 become the language-neutral specification and the theorem statements become required test properties.\n1. Goals and non-goals\nGoals\n1. Exact order of a word in simple reflections, with a certificate a small verifier can replay.\n2. Spectra \u03c9(W) = { ord(w) : w \u2208 W } for W(E\u2086), W(E\u2087), W(E\u2088), each carrying an explicit coverage status.\n3. Order ideals (divisibility downsets) represented by maximal orders \u03bc(W), with containment certificates and obstruction reports.\n4. Comparison of a layer against target masks (the Baby Monster B and the Monster M), with provenance and three-valued results.\n5. A wheel scene export that never alters mathematical identity.\nNon-goals\n\u2022 No Embeds or IsSubgroup instruction. Spectral containment is necessary for a subgroup embedding, never sufficient.\n\u2022 No claim about B or M until a sourced class or order list is imported (\u00a79).\n\u2022 No general bytecode VM in v1 beyond what \u00a78 requires.\n\u2022 No presentation-level claims. The Tau Ceti presentation files assert nothing about orders, and this RFC does not change that.\n2. Binding conventions\nThese are part of every artifact header. A word, its matrix and its root permutation must denote the same action.\nbasis          = simple roots\nvectors        = columns\ncartan[i][j]   = <alpha_i^vee, alpha_j>\nreflection s_i : (s_i x)_i = x_i - sum_j cartan[i][j] * x_j ;  (s_i x)_k = x_k for k != i\nmatrix of s_i  : (s_i)_{jk} = delta_jk - delta_ji * cartan[i][k]      (same as LehmerE10.simpleReflectionE8)\nword_product   = s[i0] * s[i1] * ... * s[ik]\naction         = rightmost factor acts first\nv1 supports simply laced, finite type. The Cartan matrix is derived from a Mathlib CoxeterMatrix (Fin n) by: diagonal 2, entry 3 becomes \u22121, entry 2 becomes 0. The E\u2086, E\u2087, E\u2088 matrices are exactly CoxeterMatrix.E\u2086/E\u2087/E\u2088; implementers must not re-type them.\nNode labels follow Mathlib: branch node 3, arms [1], [2,0] and [4,5,\u2026]. Any other labelling needs an explicit relabelling certificate.\n3. Trust model\nEvery spectrum, ideal and comparison carries a coverage status:\ninductive Coverage\n  | observed                       -- witnesses only; completeness not claimed\n  | external (source : Digest)     -- imported claim, e.g. a class list; not locally proved\n  | verified (cert : Digest)       -- a completeness certificate replayed successfully\nRules:\n\u2022 Operations never silently promote coverage. observed combined with anything stays observed; external becomes verified only through \u00a76.\n\u2022 Two profiles. Explore allows sampling, imports, caches and incomplete spectra. Verify accepts only deterministic operations and explicit certificates.\n\u2022 No native_decide, no sorry, no new axioms. Every theorem named in this RFC must report exactly propext, Classical.choice, Quot.sound under #print axioms.\n\u2022 Status is reported per object with separate columns, as in hodge-vm/status/STATUS.md: (1) fast-checker result, (2) Lean kernel result and axiom audit, (3) assurance label. No column means accepted; only the repository owners decide acceptance.\n\u2022 Equality of group elements is exact equality of integer matrices. A hash or packed key is an index, never a proof of equality.\n4. Types\nKeep group elements and element orders as different types.\nstructure RootDatum (n : \u2115) where\n  cartan   : Matrix (Fin n) (Fin n) \u2124\n  coxeter  : CoxeterMatrix (Fin n)        -- source of truth; cartan is derived\n  wf       : cartan = cartanOfCoxeter coxeter\n\nabbrev Word (n : \u2115) := List (Fin n)\n\ndef refl  (R : RootDatum n) (i : Fin n) : Matrix (Fin n) (Fin n) \u2124 := ...\ndef wordMat (R : RootDatum n) : Word n \u2192 Matrix (Fin n) (Fin n) \u2124\n  -- wordMat [] = 1;  wordMat (w ++ v) = wordMat w * wordMat v\n\nstructure FactoredOrder where             -- sparse prime-exponent list, strictly increasing primes\n  fac : List (\u2115 \u00d7 \u2115)                       -- (p, e), p prime, e > 0\n  val : \u2115                                  -- = \u220f p^e, checked\n\nstructure OrderCert (R : RootDatum n) where\n  word  : Word n\n  order : FactoredOrder\n\nstructure Spectrum (R : RootDatum n) where\n  orders   : Finset \u2115\n  witness  : \u2115 \u2192 Option (OrderCert R)       -- total on `orders`\n  coverage : Coverage\n\nstructure Ideal where                         -- divisibility downset by maximal generators\n  maxima : List FactoredOrder                 -- antichain under divisibility\n\nstructure Mask where                          -- target order data\n  orders      : Finset \u2115\n  kind        : MaskKind                      -- exact | witnessedSubset | outerBound\n  provenance  : Digest\n\ninductive Comparison\n  | contained    (pairs : List (\u2115 \u00d7 \u2115))       -- (a, b) with a \u2223 b, a from layer, b from target\n  | notContained (witness : \u2115)\n  | unknown      (unresolved : List \u2115)\nOrders are factored sparsely. The 15-prime frame of |M| used in the prototype is a job-level optimization: a job may fix a prime basis, and the checker must verify every input against it. The checker must not hardcode primes.\n5. Kernel theorems (required)\nK1 (order certificate soundness). For A : Matrix and n > 0, if A ^ n = 1 and A ^ (n / p) \u2260 1 for every prime p \u2223 n, then orderOf A = n (as a unit or in the monoid, whichever Mathlib form applies). The existing file LehmerE10 already uses orderOf_eq_of_pow_and_pow_div_prime this way; reuse it.\nK2 (factorization check). An OrderCert is valid only if every listed p is prime (Nat.Prime, by norm_num), exponents are positive, primes strictly increase, and the product equals order.val. An incomplete prime list must fail.\nK3 (word evaluation). wordMat is a monoid homomorphism from List under append, and wordMat [i] = refl R i, with refl R i * refl R i = 1.\nK4 (spectrum downward closure). If n \u2208 \u03c9(W) and d \u2223 n then d \u2208 \u03c9(W). Proof sketch: orderOf (g ^ (n / d)) = d (Mathlib: orderOf_pow_orderOf_div, name to be confirmed).\nK5 (ideal decomposition). For a finite divisibility downset S with maximal elements \u03bc(S): S = \u22c3_{m \u2208 \u03bc(S)} {d | d \u2223 m}.\nK6 (containment criterion). If T is the divisor closure of \u03bc(T) and every a \u2208 \u03bc(L) divides some b \u2208 \u03bc(T), then L \u2286 T. The converse holds for downsets. The theorem is about order sets only.\nK7 (non-theorem). If W embeds in G then \u03c9(W) \u2286 \u03c9(G). Do not state or prove the converse. Reports must say \"spectrum contained\" or \"order ideal contained\", never \"embeds\".\n6. Completeness certificates\nAn order witness proves that an order occurs. Completeness is a separate proposition and needs its own certificate. Three kinds, strongest first.\n6.1 Closure certificate (exhaustive)\nA list L of elements with, for each, a generation edge (parent, generator). Replay checks:\n1. the identity is in L;\n2. every element has a valid generation path from the identity;\n3. for every element x \u2208 L and every generator s, x * s \u2208 L;\n4. elements are pairwise distinct by exact matrix equality.\nTheorem C1. If 1\u20133 hold, L contains the subgroup generated by the reflections. (The generators are involutions, so monoid closure equals group closure; prove this lemma explicitly.) Therefore |L| = |W| is a consequence, not an assumption. The known orders 51,840 and 2,903,040 are used only as regression checks.\nThen every x \u2208 L must be assigned a certified order, either individually or by membership in a bucket whose order is certified by a verified per-element check. The prototype did not do this: it certified one witness per order and computed all other orders in a single unreplayed routine. This RFC requires closing that gap.\n6.2 Coset certificate (large groups, E\u2088)\nFor E\u2088, enumeration is too large for a single table, but W(E\u2088) acts transitively on 240 points: the orbit of the fundamental weight at the branch end under W(E\u2088) has 240 elements, with stabilizer W(E\u2087) (verified numerically: 696,729,600 / 2,903,040 = 240). A certificate has:\n\u2022 240 coset representatives (words) whose images of that weight are pairwise distinct;\n\u2022 an orbit-closure check: the 240 images are closed under the eight reflections;\n\u2022 the stabilizer lemma: the stabilizer of a dominant vector in a reflection group is generated by the simple reflections that fix it (Steinberg). The implementer attempts a Lean proof. If it is not available, the lemma is named as an explicit hypothesis, and the resulting coverage is external, not verified.\nEvery element is then r_i * h with h in the W(E\u2087) closure certificate. Order certification runs in 240 shards, one per coset, with an Assembly module that checks the shard list is complete, following the Contact46006 and M3Coupled precedent in the repository.\n6.3 External class lists\nImported representative words may be certified for order locally, but the spectrum is external unless a separate completeness certificate passes. \"Class sizes sum to |G|\" is not sufficient by itself; the class sizes, distinctness and validity of representatives must also be established.\n7. Candidate generation and independent order backends\nThree backends must agree on every certified element in the test suite:\n1. Matrix backend (authoritative): exact integer matrix powers as in K1.\n2. Regular-vector backend: order equals the orbit length of 2\u03c1 under \u27e8g\u27e9. The vector 2\u03c1 solves C x = 2\u00b71 and is integral even when \u03c1 is half-integral (E\u2087). The stabilizer of a regular vector is trivial, so the orbit length is the order. Coordinates of g\u00b72\u03c1 are bounded by those of 2\u03c1, which allows exact 8-bit packing for E\u2086 and E\u2087 as an index.\n3. Root-permutation backend: build the root set by closing the simple roots under reflections (E\u2086: 72, E\u2087: 126, E\u2088: 240 roots); the order is the lcm of cycle lengths of the permutation.\nA disagreement is a failure, not a warning. A permutation or vector result is a candidate only; the matrix check in K1 decides.\nUse checked integers on the fast path and arbitrary precision on overflow. Never wrap or saturate.\n8. Job model\nA job is a typed straight-line program over arena handles, with minimal control flow (CONST MOVE BRANCH JUMP CALL RETURN FOR_EACH HALT). Every algebraic instruction consumes fuel proportional to the work done, and long enumeration instructions are resumable.\nInstruction\nSemantics\nROOTDATUM.LOAD\nload and validate a root datum against its Coxeter matrix\nREFLECTIONS.BUILD\nconstruct the simple-reflection matrices\nROOTS.CLOSE\nclose the simple roots under the reflections\nACTION.BUILD\ngenerator permutations on the roots\nWORD.EVAL / WORD.ACT\nword as matrix / as root permutation\nPERM.ORDER\norder candidate from cycle lengths\nORDER.CHECK\nexact order by matrix powering (K1, K2)\nSPECTRUM.INSERT\ninsert a certified order with its witness\nENUM.CLOSE\nexhaustive closure with generation edges (\u00a76.1)\nCOSET.CHECK\nverify a coset certificate (\u00a76.2)\nCLASSES.IMPORT\nimport representatives with provenance\nCOVERAGE.CHECK\nreplay a completeness certificate\nIDEAL.MAXIMA\ndivisibility-maximal orders (insert rule below)\nIDEAL.COMPARE\nthree-valued comparison (\u00a79)\nWHEEL.PROJECT\ndisplay scene (untrusted)\nARTIFACT.EMIT\nserialize results and dependencies\nIdeal insertion of a new order n: if n divides an existing maximum, do nothing; otherwise remove every maximum that divides n and insert n. The witness database is kept separately, so removing a redundant generator never deletes a certificate.\n9. Mask comparison\nMasks carry provenance and a kind: exact, witnessedSubset, or outerBound (for example, all divisors of |G|). Results are three-valued. Permitted conclusions:\nLayer evidence\nTarget evidence\nPermitted conclusion\nexact\nexact\ndecide containment\nobserved subset\nexact\ncan disprove containment; cannot prove it\nexact\nwitnessed subset\ncan prove containment if every layer maximum is covered; absence is inconclusive\neither\nouter bound\nan order outside the bound proves an obstruction; inside is inconclusive\nTheorem M1. Each permitted conclusion is sound; prove one lemma per row. A negative certificate is a layer order that occurs (witnessed) and is absent from an exact target, or excluded by a certified upper bound. A positive certificate is the list of covering pairs.\nFor each layer\u2013target pair also report \u0394 = \u03c9(L) \u2216 \u03c9(T) and its divisibility-minimal elements as the simplest obstruction orders.\nTargets B and M are not supplied by this RFC. Their exact order spectra must come from a sourced class list (ATLAS or GAP character table library). Until one is imported with provenance, only the outer bound |B| and |M| applies, and every comparison against them is at best an obstruction test. As of the prototype, no Weyl-group order failed that test, so no obstruction exists yet.\n10. Wheel scene\nThe renderer is downstream and untrusted.\nstructure WheelNode where\n  order        : FactoredOrder\n  layers       : List LayerId\n  witnessRefs  : List CertId\n  targetStatus : List TargetStatus\n  position     : Float \u00d7 Float\n\u2022 If several orders project to the same coordinate, keep them as distinct nodes or an explicitly labelled cluster. A geometric collision must never merge mathematical identities.\n\u2022 Colour is layer membership; markers are maximal generators; outlines are obstruction orders; the legend shows each layer's Coverage.\n\u2022 The scene is not an input to any theorem. Golden scene files are regression artifacts only.\n\u2022 The prototype wheel convention (ring j of prime p is p-adic digit j, lines link primes that co-occur in one maximal order) may be kept as one projection, but is not normative.\n11. Milestones and acceptance\nM\nDeliverable\nAcceptance\nM0\nConventions, RootDatum, refl, wordMat, K1\u2013K3\nexplicit multiplication-order tests on A\u2081, A\u2082, commuting pairs; axiom audit clean\nM1\nE\u2086 bundle: closure certificate, per-element orders, spectrum, maxima\nreplay passes;\nM2\nE\u2087 bundle, same standard\n\nM3\nIdeals (K4\u2013K6), comparison engine (M1)\nE\u2086 \u2286 E\u2087 \u2286 E\u2088 spectral containment reproduced with covering pairs\nM4\nE\u2088 coset certificate and 240 shards\nverified only if the Steinberg lemma is proved; otherwise external with the lemma named\nM5\nMask import for B and M with provenance\nexact spectra from a cited source; first real obstruction report\nM6\nWheel scene export and legend\nscene regenerates from artifacts; no identity merges\nGolden data (from the prototype run; M1\u2013M2 must reproduce, M4 must confirm).\nGroup\nOrders\nMaximal\nPrototype status\nW(E\u2086)\n1, 2, 3, 4, 5, 6, 8, 9, 10, 12\n8, 9, 10, 12\nexhaustive, witnesses replayed\nW(E\u2087)\n1\u201310, 12, 14, 15, 18, 30\n8, 12, 14, 18, 30\nexhaustive, witnesses replayed\nW(E\u2088)\n1\u201310, 12, 14, 15, 18, 20, 24, 30\n14, 18, 20, 24, 30\nobserved only (200,000 random words)\nThe prototype's per-element orders were not independently replayed for every element, which is why M1 and M2 require \u00a76.1 and \u00a77 in full.\n12. Tests\n\u2022 Differential: the three backends of \u00a77 over every element in E\u2086 and E\u2087, and over a random sample of E\u2088.\n\u2022 Known values: Coxeter-element orders equal the Coxeter numbers (E\u2086 12, E\u2087 18, E\u2088 30; E\u2088 is already kernel-checked in LehmerE10); in E\u2087 the 9th power of a Coxeter element is \u22121.\n\u2022 Negative tests: a certificate with a missing prime divisor, a composite listed as prime, or a wrong exponent must be rejected. A closure table with one deleted element must fail condition 3.\n\u2022 Convention tests: reversing a word's multiplication order must produce a visibly different action on a non-commuting pair.\n\u2022 Determinism: the same job bundle yields byte-identical artifacts; each bundle records the digests of its inputs.\n13. Out of scope and open questions\n\u2022 Exact B and M spectra and their source format (class names, representatives, provenance fields).\n\u2022 Whether to adopt the 15-section valuation frame as a normative display layer. It matches the Monster's prime support, but the checker stays prime-agnostic.\n\u2022 Class-data layers beyond order spectra (class sizes, power maps, character tables) and products such as M \u00d7 M are deferred.\n\u2022 Whether the Steinberg stabilizer lemma is available in Mathlib or must be proved here.\n\u2022 The relation to the Hodge-VM project: this RFC reuses its architecture and status conventions but shares no code with it.\nReferences\n\u2022 Mathlib CoxeterMatrix and the exceptional matrices E\u2086, E\u2087, E\u2088 (as in the uploaded CoxeterMatrix file).\n\u2022 LehmerE10: E\u2088 Coxeter element has order 30, and the reflection convention used here.\n\u2022 Tau Ceti Sporadic.BabyMonster and Sporadic.Monster presentation files, for the Y\u2084\u2083\u2083 and Y\u2084\u2084\u2083 conventions; they assert no orders.\n\u2022 Hodge-VM README.md and STATUS.md for the hybrid architecture and per-object status columns.\n\u2022 Prototype spectrum_vm/ (informative) and the Perplexity design note (informative). and This is close to an implementation-ready RFC. I would accept its direction, but require a short revision before treating it as normative. The main blockers are not the VM instruction set: they are the meaning of **verified**, the precise coset certificate, and missing mathematical invariants in the types.\n\nThe register-width and multiworker design should be an execution appendix, not part of the mathematical semantics.\n\n## 1. Separate checker soundness from successful kernel replay\n\nThe RFC\u2019s hybrid architecture is sensible, but this implication is not valid by itself:\n\n```text\nLean proves checker soundness\n+ external checker reports success\n\u21d2 Lean kernel verified this spectrum\n```\n\nThe external computation still needs a bridge into Lean.\n\nSpecify three distinct outcomes:\n\n| Assurance | What was established |\n|---|---|\n| External execution | A fast program reports that its checks passed |\n| Sound-checker execution | The algorithm has a Lean soundness theorem, but this execution was not replayed in the kernel |\n| Kernel-established result | Lean has a closed proof of the concrete spectrum proposition |\n\nFor the last outcome, require something of this shape:\n\n```lean\ntheorem checkBundle_sound\n    (b : Bundle)\n    (h : checkBundle b = true) :\n    BundleCorrect b := ...\n```\n\nand a kernel-checked proof of the concrete `h`, or another explicit proof-producing replay mechanism. Differential testing does not supply that proof.\n\nFor \\(E_7\\) and \\(E_8\\), the feasibility of constructing and checking this concrete evidence needs a pilot milestone. Do not hide it behind a digest.\n\n### Suggested normative text\n\n> A digest identifies certificate bytes; it does not establish certificate validity. `verified` requires a successful replay under a named verification authority. Reports must distinguish external replay from Lean-kernel establishment. A generic Lean checker-soundness theorem alone does not establish the result of an external execution.\n\n## 2. Replace \u201cexactly these axioms\u201d with an allowlist\n\nChange:\n\n> Every theorem \u2026 must report exactly `propext`, `Classical.choice`, `Quot.sound`.\n\nto:\n\n> Every theorem\u2019s axiom dependencies must be a subset of `{propext, Classical.choice, Quot.sound}`. Any additional axiom is a failure. The actual dependency list is recorded.\n\nA theorem using fewer axioms should not fail acceptance.\n\nKeep \u201cno `sorry`, no new axioms, no `native_decide`\u201d as explicit project constraints.\n\n## 3. Add the missing group-model obligation\n\n`RootDatum.wf` currently proves only that the Cartan matrix came from the Coxeter matrix. It does not establish:\n\n- That the matrix is finite simply-laced type.\n- That every reflection is involutive.\n- That the matrix-generated group is faithfully identified with the intended abstract Coxeter group.\n\nIn particular, `refl R i * refl R i = 1` needs the diagonal condition \\(C_{ii}=2\\); deriving a matrix alone should not leave the admissibility conditions implicit.\n\nDefine the semantic object first:\n\n```text\nMatrixW(R) = subgroup of invertible integer matrices\n             generated by the checked simple reflections\n```\n\nThen either:\n\n1. Scope v1 results explicitly to `MatrixW(R)`, with an identification theorem for each exceptional type; or\n2. Require a faithful representation theorem connecting `MatrixW(R)` to the abstract Coxeter group before reporting \\(\\omega(W(E_n))\\).\n\nThis is important because exact matrix equality is equality in the representation. Its use as equality of abstract group elements needs faithfulness.\n\n## 4. Use the computational coset certificate as the primary route\n\nSection 6.2 still contains the ambiguous \u201cfundamental weight at the branch end.\u201d Replace that phrase with explicit node and coordinate data.\n\nMore importantly, do not make full \\(E_8\\) verification depend exclusively on formalizing the dominant-vector stabilizer theorem. Use the generator/coset rewriting certificate discussed earlier.\n\nFor each simple generator \\(s_j\\) and representative \\(r_a\\), supply:\n\n\\[\ns_jr_a=r_bh_{j,a},\n\\qquad h_{j,a}\\in H,\n\\]\n\nwhere membership in \\(H\\) is certified by a word in the retained \\(E_7\\) generators.\n\nThe verifier checks:\n\n1. One representative is the identity.\n2. All representative and subgroup words evaluate correctly.\n3. Every rewriting identity holds exactly.\n4. There is a vector \\(\\lambda\\) fixed by the generators of \\(H\\).\n5. The images \\(r_a\\lambda\\) are pairwise distinct.\n\nThen:\n\n- Rewriting proves that \\(\\bigcup_a r_aH\\) contains the identity and is closed under all left generators, hence covers the generated group.\n- Distinct images prove that the cosets are disjoint.\n\nThis establishes the decomposition directly. The stabilizer theorem becomes an optional conceptual route, not a blocker.\n\nAmend M4 accordingly:\n\n> Verified if either the computational transversal certificate passes or the orbit/stabilizer route is established with all required lemmas.\n\n## 5. Fix the domain of order ideals\n\nState throughout:\n\n\\[\nS\\subseteq\\mathbb N_{>0}.\n\\]\n\nA \u201cfinite divisibility downset in \\(\\mathbb N\\)\u201d has awkward behavior around zero: every positive natural divides zero, and an infinite-order element has `orderOf = 0` in Mathlib. The library documents that convention explicitly. [leansearch](https://leansearch.net/doc/Mathlib.GroupTheory.OrderOfElement.html)\n\nRecommended invariants:\n\n```text\nFactoredOrder.val > 0\nSpectrum.orders contains only positive orders\nIdeal.maxima contains only valid FactoredOrders\n```\n\nFor K4, explicitly assume finite element order, or work in the finite group established by the coverage proof. Mathlib provides both the proposed order-certificate theorem and `orderOf_pow_orderOf_div`; the latter requires a nonzero-order hypothesis. [leansearch](https://leansearch.net/doc/Mathlib.GroupTheory.OrderOfElement.html)\n\nAlso make K2\u2019s completeness obligation precise:\n\n> The checker verifies that the distinct listed primes are exactly the prime divisors of `val`.\n\nA valid prime-power product equal to `val` establishes this; an unchecked field called `fac` does not.\n\n## 6. Split raw input types from validated semantic types\n\nThe current structures are mostly wire formats, not types enforcing the stated invariants.\n\nFor example:\n\n```lean\nstructure FactoredOrder where\n  fac : List (\u2115 \u00d7 \u2115)\n  val : \u2115\n```\n\nallows arbitrary inconsistent values.\n\nUse either proof fields or a raw/validated distinction:\n\n```text\nRawFactoredOrder\n  \u2192 checkFactorization\n  \u2192 ValidFactoredOrder\n\nRawOrderCert\n  \u2192 checkOrderCert\n  \u2192 ValidOrderCert\n\nRawClosureCert\n  \u2192 checkClosure\n  \u2192 ValidClosure\n```\n\nLikewise, attach coverage claims to the proposition they establish. A bare\n\n```lean\nCoverage.verified digest\n```\n\nis freely constructible and therefore cannot itself be evidence.\n\nThe same applies to masks: `kind = exact` is a declared claim unless supported by a named assumption or checked evidence.\n\n## 7. Correct two reporting rules\n\n### Coverage combination\n\nDelete the blanket rule:\n\n> observed combined with anything stays observed.\n\nIt is safe but unnecessarily weak, and not a mathematical law. If a verified complete spectrum is combined with additional witnessed orders already inside it, its completeness need not be lost.\n\nRequire an operation-specific preservation theorem instead:\n\n```text\nNo operation strengthens assurance without supporting evidence.\nCoverage propagation is defined separately for each operation.\n```\n\n### Differences against uncertain masks\n\nReport the exact expression\n\n\\[\n\\Delta=\\omega(L)\\setminus\\omega(T)\n\\]\n\nonly when those spectra are actually established.\n\nOtherwise report:\n\n```text\nobserved source orders absent from supplied target data\ncertified obstruction orders\nunresolved candidate orders\n```\n\nAbsence from a witnessed target subset is not an obstruction. An imported \u201cexact\u201d class list yields conclusions conditional on that imported completeness claim unless locally verified.\n\nFinally, M5 should require an obstruction report that may be empty\u2014not require discovery of a \u201cfirst real obstruction.\u201d\n\n## 8. Tighten the regular-vector packing claim\n\nSection 7 says that coordinates of \\(g(2\\rho)\\) are bounded by those of \\(2\\rho\\), allowing byte packing. Keep this only with a stated, proved bound.\n\nFor the diagram numbering written in this RFC, solving \\(Cx=2\\mathbf1\\) exactly gives:\n\n```text\nE6: [16, 22, 30, 42, 30, 16]\nE7: [34, 49, 66, 96, 75, 52, 27]\nE8: [92, 136, 182, 270, 220, 168, 114, 58]\n```\n\nThese are calculations from the stated diagram, not independent confirmation of the repository\u2019s Mathlib definitions. The implementation must derive and check them from those definitions.\n\nThe required packing obligation is:\n\n\\[\n\\forall g,\\forall i,\\quad\n-128\\le (g(2\\rho))_i\\le127,\n\\]\n\nfor whichever jobs use signed-byte coordinates. Checking the initial vector alone is insufficient.\n\nAlso preserve the prototype correction in the golden-data table:\n\n> \\(E_8\\): observed from 200,000 fixed-even-length random words; samples lie in the determinant-\\(+1\\) subgroup.\n\nThe provided sampler uses length 120, so \u201crandom words\u201d without that qualification obscures its restricted domain. [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/1482581/8c39fd59-7077-45d7-8810-895d738aeebb/paste.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Checksum-Mode=ENABLED&X-Amz-Credential=ASIA2F3EMEYEU4RLSEHE%2F20261022%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261022T112620Z&X-Amz-Expires=3531&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIEtZ0sMyzq8wYZiuMDoktEgGEvSA5nDqSHNSMxiGi%2BPFAiAFgCGqsR%2Fp78U4mzU3UYB9RgdFCxPrqA7eUZmCV8rQ%2BiqABQh0EAEaDDY5OTc1MzMwOTcwNSIM3MniCSM59yPmcITUKt0EM4moNd0cku33eAMbQ4%2B%2FjEMsTb0GrJgBu7f2zoqhT0mcaTJlgCHIuXwkzSQiyskprTZFR1%2F7pxwVQ4iX6RMWkSOx6PlOjnorsJhOQiaPdtm9vLcdRS77oY%2BlpcS3G7VGx1%2BFdodC6c4rnbEpbdrp11fsL63yOT%2B3iCDy92qB%2BMJyxQFU4B6L07QCvS4jVGJwzvW45FYP9t%2FpRttEstcQl9MIQrZ3UK82S6m%2FZOrL7GGPqOANg5ERTK5F7IQgvz7r8%2F166hZZ6L8OTPBF2y4YzxE4vQD0Z30mdMClWtlnCVy%2Fwr0YKPyj%2Bk3GEbbZwUM48j%2FMdhH%2B4mz9qJYacuufVByitzaHYb4YCqUoSbRDi%2FRyH%2FticAgoYavAQLCVmDHp7GwBz%2FvNbYQoJq3VNKaQAqBW4zGOPCVJU2E4i8bJ14DbiHcqSA25oIEukSddWgWoJrc2zSugksCBWaRwAC7G%2FeZiio2bf%2BCD%2BlT96D2ZsivhNZlO3w%2BkfXdph0LxTvAMwYot2fFzSeHEKhqXsaRKbWk8UK1BgB38X9b8qwdeueTydk8AeTdQiFlAsIRp9GmtHzMfqCfqiWPRlKbr0uPMyTR%2FU5y8s9OD0ytHId4Czp1rPRiUNdo2VR4nPibYp42StU3b8MON0YnirMZo1inNTPZspAIEYOpxt6TBavQXWCeVEnS5eoeo%2B5emStCeIkO%2BpiAQAWU8QRiu2u8TC4%2Fpmo%2B6Ifrf99QrODTk35b2usBl4SwELscQnERF%2FKVmTxwIzAyHZjoszQOnuQpNTK8XjbJw2%2BPRKcXs0pwiKSgw1OXn1gY6mQF2U5wFseay71wn%2Bajpy4A84i6ydgDyghlktkEM%2FHnL9b1ExoZj8nx61YnPVWlQlnOD2mUK7V37h4m4NB67yWcRO0IlGoQ0Fo%2BBT%2BvGx3a%2BCp94vCT94sbRj4zAbEWyEpmeI14Ym%2FQ0iAzBFSvfKpQ8wpaBtT%2B7l%2ByrM9in5Dz9L1zYOqv1sEsasyqYlQKeTe3RDySIoUxpuQI%3D&X-Amz-SignedHeaders=host&x-id=GetObject&X-Amz-Signature=909050b902136fe3005bf6a47256d3c32e2bfe4603044f8f7b050d834f532d21)\n\n## 9. Add execution profiles and parallel shards as Appendix A\n\nThis is where the register-width discussion belongs.\n\n```text\nExecutionProfile:\n    rank\n    storage_dtype\n    accumulator_dtype\n    overflow_policy\n    batch_size\n    backend\n    worker_count\n```\n\nNormative requirements:\n\n- Widen operands before arithmetic.\n- Check intermediate arithmetic and narrowing conversions.\n- On overflow, discard partial output and retry from original inputs.\n- Execution profiles do not change mathematical semantics.\n- Worker scheduling cannot promote assurance.\n\nGive each task a stable range:\n\n```text\nTaskId = (bundle_digest, coset_id, subgroup_start, subgroup_end)\n```\n\nAssembly verifies exact coverage with no gaps or overlaps, counts, unresolved cases, and the required evidence for each batch.\n\nWidth-specialized workers can therefore share the same certificate format. No separate VM architecture is needed per integer width.\n\n## Recommended disposition\n\nMark this draft \u201capproved in principle; normative revision required,\u201d with four implementation gates:\n\n1. M0: validated types, matrix conventions, and the abstract-group/representation boundary.\n2. M1 pilot: an \\(E_6\\) bundle whose concrete completeness and order classification are actually established through the intended Lean bridge.\n3. M2: scale that mechanism to \\(E_7\\), measuring proof generation and kernel replay\u2014not just enumeration.\n4. M4: verified rewriting transversal plus restartable \\(E_8\\) shards.\n\nThat preserves the strongest feature of the RFC: the fast explorer can evolve independently, while the meaning of a certified result stays fixed.",
+      "suggested_name": "SPECTRUM-Group-Theory-f9e7f940"
+    },
+    {
+      "id": "f4e10742-bd72-442a-88b0-b1a915a3f51b",
+      "name": null,
+      "description": "# Summary of changes for run 9eeb13e5-59f1-4c89-9415-1098fc44ac42 The Hodge VM page now has a meme maker, infographics, a tutorial and \"share my state\" links, plus SVG, GIF and video export in Twitter",
+      "created": "2026-10-20T22:19:51.544517",
+      "updated": "2026-10-22T11:12:17.589747",
+      "status": 2,
+      "key_themes": [
+        "What you get on the page",
+        "Meme maker tab:",
+        "card",
+        "meme",
+        "VM replay",
+        "Sizes:",
+        "Export:",
+        "Share my state:"
+      ],
+      "file_count": 12,
+      "files": [
+        "ARISTOTLE_SUMMARY.md",
+        "README.md",
+        "RequestProject",
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "hodge-computer-sextics-8a5edab282632443.txt",
+        "hodge-vm",
+        "lake-manifest.json",
+        "lakefile.toml",
+        "lean-toolchain",
+        "minilean-studio-modular.txt",
+        "p2p-prover"
+      ],
+      "top_keywords": [
+        "Lean",
+        "json"
+      ],
+      "description_raw": "hodge-computer-sextics-8a5edab282632443",
+      "suggested_name": "INFOGRAPHICS-Viz-f4e10742"
+    },
+    {
+      "id": "f2265b5a-a673-4176-84aa-796c0ac9ddfa",
+      "name": null,
+      "description": "# Summary of changes for run 87f306e0-290d-478d-a0be-f90fa2d38312 I added your generated page to the studio as a new showcase page and fixed the three bug-report issues in this project's copy. The aut",
+      "created": "2026-10-20T01:17:18.693536",
+      "updated": "2026-10-21T20:42:28.348204",
+      "status": 2,
+      "key_themes": [
+        "About your question.",
+        "The showcase",
+        "Overview:",
+        "Math views:",
+        "Proof editor:",
+        "Sandbox:",
+        "Status pill:",
+        "Bug-report fixes"
+      ],
+      "file_count": 107,
+      "files": [
+        ".gitignore",
+        "ARISTOTLE_MANAGER_TWIN.md",
+        "ARISTOTLE_SUMMARY.md",
+        "ARISTOTLE_SUMMARY_691.md",
+        "AUDIT.md",
+        "BLIND_CLIMB.md",
+        "BLIND_CLIMB_TABLES.md",
+        "BRIDGE_STATUS.md",
+        "CATALOG.md",
+        "CATALOG_CLIMB.md",
+        "CATALOG_CLIMB_TABLES.md",
+        "COLOUR_WHEEL.md",
+        "COMPILED_MACHINES.md",
+        "COMPUTE.md",
+        "COORDINATES.md",
+        "CRYPTID_ATLAS.md",
+        "Cryptids",
+        "DEEPSEEK_REVIEW.md",
+        "E8_MONSTER_ZETA.md",
+        "FIXES.md",
+        "FRACTRAN_FARM.md",
+        "FRACTRAN_IN_FIELDS.md",
+        "GOLDBACH_FRACTRAN.md",
+        "HEX_CLIMB.md",
+        "HEX_PASCAL.md",
+        "INNER_RINGS.md",
+        "INNER_RINGS.png",
+        "INNER_RINGS.svg",
+        "JOIN_LATTICE.md",
+        "KERNEL_FIELDS.md"
+      ],
+      "top_keywords": [
+        "Lean",
+        "Verified",
+        "Monster",
+        "axiom",
+        "proved",
+        "rest"
+      ],
+      "description_raw": "merged",
+      "suggested_name": "INFOGRAPHICS-Viz-f2265b5a"
+    },
+    {
+      "id": "c3de2a2c-599f-457e-bc05-b3b7f212038a",
+      "name": null,
+      "description": "",
+      "created": "2026-09-24T13:37:15.534089",
+      "updated": "2026-10-20T14:59:33.439271",
+      "status": 2,
+      "key_themes": [],
+      "file_count": 3,
+      "files": [
+        "aristotle_metadata.json",
+        "aristotle_status.json",
+        "internal-final_aristotle"
+      ],
+      "top_keywords": [],
+      "description_raw": "https://github.com/ChromeDevTools/chrome-devtools-mcp/ let's model this and then formalize it the best we can using uml C4 and state machines and descriptive logic and we will then create theorems about the state",
+      "suggested_name": "PROJECT-c3de2a2c"
+    }
+  ],
+  "common_files_top50": [
+    [
+      "aristotle_status.json",
+      607
+    ],
+    [
+      "aristotle_metadata.json",
+      607
+    ],
+    [
+      "ARISTOTLE_SUMMARY.md",
+      20
+    ],
+    [
+      "README.md",
+      20
+    ],
+    [
+      "lakefile.toml",
+      17
+    ],
+    [
+      "lake-manifest.json",
+      16
+    ],
+    [
+      "lean-toolchain",
+      16
+    ],
+    [
+      ".gitignore",
+      4
+    ],
+    [
+      "RESULTS.md",
+      3
+    ],
+    [
+      "AUDIT.md",
+      2
+    ],
+    [
+      "declaration-names.txt",
+      2
+    ],
+    [
+      "RequestProject.lean",
+      2
+    ],
+    [
+      "FUZZ_TESTING_PLAN.md",
+      2
+    ],
+    [
+      "0919b5f8-082f-4333-8eab-6120e83a58cb-aristotle (3).tar.gz",
+      2
+    ],
+    [
+      "20261023_154741_all_14fa8b17_3d8f_4b1a_aaa5_cd87a4758590_aristotle_4.txt",
+      2
+    ],
+    [
+      "airplane-default-model.patch",
+      1
+    ],
+    [
+      "airplane-manual-controls.patch",
+      1
+    ],
+    [
+      "roblox-airplane.patch",
+      1
+    ],
+    [
+      "20261023_205115_all_65f0b76d_8ae9_4c2e_8b42_28af4b104a3a_aristotle_2.txt",
+      1
+    ],
+    [
+      "RFC-0001-implementation-notes.md",
+      1
+    ],
+    [
+      "STATUS.md",
+      1
+    ],
+    [
+      "infinitespacemechanic-watersheet.lean-8a5edab282632443 (1) (1).txt",
+      1
+    ],
+    [
+      "PARAM_SPEC.md",
+      1
+    ],
+    [
+      "PHOTON_MONSTER.md",
+      1
+    ],
+    [
+      "BRIDGE_STATUS.md",
+      1
+    ],
+    [
+      "E8_MONSTER_ZETA.md",
+      1
+    ],
+    [
+      "paper (9).pdf",
+      1
+    ],
+    [
+      "OUTER_RINGS.md",
+      1
+    ],
+    [
+      "COMPUTE.md",
+      1
+    ],
+    [
+      "REVIEW_ORIGINAL_MAP.md",
+      1
+    ],
+    [
+      "CATALOG_CLIMB.md",
+      1
+    ],
+    [
+      "OGG_HEXAGON.md",
+      1
+    ],
+    [
+      "ARISTOTLE_MANAGER_TWIN.md",
+      1
+    ],
+    [
+      "GOLDBACH_FRACTRAN.md",
+      1
+    ],
+    [
+      "LANDAU_SIEGEL_REVIEW.md",
+      1
+    ],
+    [
+      "FRACTRAN_FARM.md",
+      1
+    ],
+    [
+      "HEX_CLIMB.md",
+      1
+    ],
+    [
+      "PRIME_FIBER_SIEVE.md",
+      1
+    ],
+    [
+      "MATH_CLIMB.md",
+      1
+    ],
+    [
+      "KERNEL_FIELDS.md",
+      1
+    ],
+    [
+      "DEEPSEEK_REVIEW.md",
+      1
+    ],
+    [
+      "SKELETON.md",
+      1
+    ],
+    [
+      "CATALOG.md",
+      1
+    ],
+    [
+      "OGGS_TREE.md",
+      1
+    ],
+    [
+      "INNER_RINGS.md",
+      1
+    ],
+    [
+      "LEARNED.md",
+      1
+    ],
+    [
+      "COORDINATES.md",
+      1
+    ],
+    [
+      "INNER_RINGS.svg",
+      1
+    ],
+    [
+      "SEXTIC_CONFIGS.md",
+      1
+    ],
+    [
+      "PART_IV.md",
+      1
+    ]
+  ],
+  "file_categories": {
+    ".json": 4,
+    ".patch": 3,
+    ".txt": 12,
+    ".md": 119,
+    "(no ext)": 3,
+    ".toml": 1,
+    ".pdf": 8,
+    ".svg": 2,
+    ".png": 1,
+    ".py": 6,
+    ".lean": 5,
+    ".gz": 5,
+    ".nb": 1,
+    ".mht": 1
+  }
+}

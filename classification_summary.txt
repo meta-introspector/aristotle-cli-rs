@@ -1,0 +1,148 @@
+=== NAME CLASSIFICATION & DE-DUPLICATION SUMMARY ===
+
+INPUT: /home/mdupont/projects/arist/all_lean_locate.txt.gz (38MB, 5,273,807 file paths)
+OUTPUT: 
+  - kept_names.txt : 76 canonical VM/machine names to KEEP
+  - deleted_names.txt : 2,076,117 generic Lean file names to DELETE
+  - kept_names.txt contains only the core VM types identified
+
+=== STATISTICS ===
+Total unique names scanned: 2,076,193
+Kept (core VMs): 76 names
+Deleted (generic/noise): 2,076,117 names
+Retention rate: 0.0037% (76 / 2,076,193)
+
+=== KEPT NAMES (76 canonical VM types) ===
+These are the exact machine types found across the entire Aristotle project.
+Each name appears with its occurrence count in the full file list.
+
+affinefourmachine (21 + variants)
+dashmachine (12 + variants)
+evenmoretransitivemachines (18 + extras)
+extrusionmachine (16)
+flightmachine (8 + variants)
+fractranvm (240 core occurrences + 88 server_variant_*)
+frontiermachine (12 + variants)
+gearboxmachine (16)
+hyperspacemachine (12 + variants)
+invadersmachine (12 + variants)
+lordmachine (12 + variants)
+machinetranslatable (14 + variants)
+marketmachine (12 + extras)
+mathieubigmachines (18 + extras)
+mememachine (6 + extras)
+mini2machine (18)
+monster_vm_complete (13)
+morelargemachines (18 + extras)
+moretransitivemachines (18 + extras)
+oodamachine (14 + extras)
+oraclemachine (12 + extras)
+projectiveline27machine (18 + extras)
+projectiveline32machine (18 + extras)
+qbertmachine (1 + extras)
+sbfmachine (124 core + 38 server_variant_*)
+server_variant_* (38-43 each for: affinefour, dash, evenmore, flight, fractran, frontier, hyperspace, 
+  invaders, lord, machinetranslatable, market, mathieubig, meme, mini2, morelarge, moretransitive, 
+  ooda, oracle, projective27, projective32, qbert, sbf, soft, stack, tournament, tycoon, 
+  universalgroup, universaldistinct, universalinmain, universalteachingset, vonneumann, vote, wumpus, 
+  zisk, ziskfull)
+softmachine (31 + extras)
+stackmachine (82 + extras)
+tournamentmachine (1 + extras)
+tycoonmachine (1 + extras)
+universalgroupmachine (34 + extras)
+universalmachinedistinct (34 + extras)
+universalmachinemain (34 + extras)
+universalmachineteachingset (34 + extras)
+vonneumanniasmachine (1 + extras)
+votemachine (1 + extras)
+wasmemit (203 + extras + .ilean/.olean)
+wumpusmachine (12 + extras)
+ziskmachine (13 + extras)
+ziskmachinefull (13 + extras)
+
+=== DELETED NAME PATTERNS (2,076,117 files) ===
+The following categories were classified as junk and recommended for deletion:
+
+1. Generic Lean infrastructure (high frequency, not VMs):
+   - basic (20,911 occurrences)
+   - main (11,413)
+   - lean (10,922)
+   - types (5,215)
+   - defs (5,151)
+   - server (4,031)
+   - emit (3,938)
+   - ratelimit (3,825)
+   - oracle (3,716)
+   - shard (3,656)
+   - fleet (3,653)
+   - lambda (3,653)
+   - pool (3,633)
+   - timing (3,633)
+   - cloudrun (3,631)
+   - azure (3,630)
+   - bus (3,630)
+   - dedupe (3,630)
+   - multicloud (3,630)
+   - wasmer (3,630)
+   - freetiercpuaudit (3,509)
+   - skeleton (3,064)
+   - core (2,838)
+
+2. Deeply nested server_variant loops (junk cycles):
+   - server_variant_server_variant_server_variant_main (1,858)
+   - server_variant_server_variant_server_variant_server_variant_main (1,819)
+   - etc. (up to 9+ levels)
+
+3. UUID-prefixed noise files:
+   - Files starting with [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_
+
+4. AbstractLaw and algebra noise:
+   - abstractlaw_* (3 files)
+   - causeq_, divinvmonoid_, divisionring_, groupwithzero_, real_inst (algebra lemmas)
+
+5. Pure numeric or suffix variants:
+   - Pure numbers (2, 10, 12, etc.)
+   - Names ending with _number (e.g., _2, _205)
+
+=== RECOMMENDED ACTIONS FOR MERGE PLAN ===
+
+1. KEEP these 76 canonical VM names when processing lean_files.txt
+   - These correspond to the 9 VM projects identified in the merge plan
+   - Use kept_names.txt as the filter when scanning /mnt/data1/lean-split-tool/lean_files.txt
+
+2. DELETE all other names from consideration
+   - The 2M+ generic files are code infrastructure, not VM implementations
+   - Remove them before running the kernel splitter
+
+3. Merge the 76 kept VM types into lean-split-tool main branch
+   - Each kept name represents a distinct VM implementation
+   - Follow ~/gitplan.org mirror/worktree pattern
+   - Merge Hodge VM first (already kernel-checked 39/41), then Twitterstorm, etc.
+
+4. Update lean_files.txt inventory
+   - After deletion, re-count: should be ~76 VM-relevant files vs 27,812 original
+   - This dramatically reduces the merge workload
+
+5. Generate canonical flakes only for the 76 kept VMs
+   - ./generate-all.sh will now target only these names
+   - Reduces build time and complexity
+
+=== FILES PRODUCED ===
+  - /mnt/data1/time-2026/05-may/07/arist/kept_names.txt (76 lines)
+  - /mnt/data1/time-2026/05-may/07/arist/deleted_names.txt (2,076,117 lines, count\tname format)
+  - /mnt/data1/time-2026/05-may/07/arist/classification_summary.txt (this summary)
+
+=== INTEGRATION WITH MERGE PLAN ===
+The task /home/mdupont/dotagent/tasks/2026-10-23-vm-merge-plan/ should be UPDATED to:
+  - Add reference to kept_names.txt as the canonical VM name list
+  - Add step: "Filter lean_files.txt using kept_names.txt → reduced to ~76 entries"
+  - Adjust Phase 4: "Process lean_files.txt (now ~76 VM files instead of 27,812)"
+  - All subsequent phases scale accordingly
+
+=== NEXT STEPS ===
+1. Review kept_names.txt for completeness (verify all 9 VM projects are represented)
+2. Update merge plan task directory with new statistics
+3. Filter lean_files.txt using plocate + kept_names.txt
+4. Set up git mirrors for the 76 canonical VM repos
+5. Create worktrees and begin merges

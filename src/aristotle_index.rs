@@ -4,6 +4,8 @@ use std::path::PathBuf;
 use anyhow::Context;
 use std::time::Instant;
 use tracing::{debug, info, instrument, warn};
+use crate::load_config;
+use crate::Config;
 
 /// Keyword index structure for Aristotle projects
 #[derive(Debug, Clone)]
@@ -21,10 +23,8 @@ impl KeywordIndex {
     }
     
     pub fn add_file(&mut self, file_path: &str, content: &str) {
-        // Add to files map
         self.files.insert(file_path.to_string(), Vec::new());
         
-        // Tokenize content (simple word extraction)
         let words: Vec<String> = content
             .split(|c: char| !c.is_alphanumeric() && !c.is_whitespace())
             .map(|s| s.to_lowercase())
@@ -32,7 +32,7 @@ impl KeywordIndex {
             .collect();
             
         for word in words {
-            self.index.entry(word).or_insert_with(Vec::new).push(file_path.to_string());
+            self.index.entry(word.clone()).or_insert_with(Vec::new).push(file_path.to_string());
             if let Some(terms) = self.files.get_mut(file_path) {
                 terms.push(word);
             }
@@ -52,6 +52,69 @@ pub struct SearchResult {
 }
 
 #[instrument]
+pub fn cmd_keyword_index(target: Option<String>) -> anyhow::Result<()> {
+    let targets: Vec<String> = match target {
+        None => vec!["aristo".to_string(), "mathlib".to_string()],
+        Some(t) => t.split(',').map(|s| s.trim().to_string()).collect(),
+    };
+
+    for target_name in &targets {
+        match target_name.as_str() {
+            "aristo" => {
+                println!("Building keyword index for Aristotle projects...");
+                let config = load_config()?;
+                let index_path = config.base_dir.join("aristotle_results");
+                let index = build_keyword_index(&index_path.to_string_lossy().to_string())?;
+                let stats = index_stats(&index);
+                println!("  Files: {}", stats.total_files);
+                println!("  Total terms: {}", stats.total_terms);
+                println!("  Unique terms: {}", stats.unique_terms);
+
+                let out_dir = config.results_dir.join("keyword-index");
+                fs::create_dir_all(&out_dir)?;
+                let index_file_path = out_dir.join("aristo_keyword_index.json");
+                let json_data = serde_json::json!({
+                    "files": index.files.keys().collect::<Vec<_>>(),
+                    "terms": index.index.keys().collect::<Vec<_>>(),
+                    "file_count": stats.total_files,
+                    "term_count": stats.total_terms,
+                    "unique_terms": stats.unique_terms,
+                });
+                fs::write(&index_file_path, serde_json::to_string_pretty(&json_data)?)?;
+                println!("  Saved to: {}", index_file_path.display());
+            }
+            "mathlib" => {
+                println!("Building keyword index for Mathlib...");
+                let config = load_config()?;
+                let index = build_mathlib_keyword_index()?;
+                let stats = index_stats(&index);
+                println!("  Files: {}", stats.total_files);
+                println!("  Total terms: {}", stats.total_terms);
+                println!("  Unique terms: {}", stats.unique_terms);
+
+                let out_dir = config.results_dir.join("keyword-index");
+                fs::create_dir_all(&out_dir)?;
+                let index_file_path = out_dir.join("mathlib_keyword_index.json");
+                let json_data = serde_json::json!({
+                    "files": index.files.keys().collect::<Vec<_>>(),
+                    "terms": index.index.keys().collect::<Vec<_>>(),
+                    "file_count": stats.total_files,
+                    "term_count": stats.total_terms,
+                    "unique_terms": stats.unique_terms,
+                });
+                fs::write(&index_file_path, serde_json::to_string_pretty(&json_data)?)?;
+                println!("  Saved to: {}", index_file_path.display());
+            }
+            _ => {
+                eprintln!("Unknown target: {}. Use 'aristo' or 'mathlib'", target_name);
+            }
+        }
+    }
+
+    Ok(())
+}
+
+#[instrument]
 pub fn build_keyword_index(root_dir: &str) -> anyhow::Result<KeywordIndex> {
     info!(dir = root_dir, "Building keyword index");
     let start = Instant::now();
@@ -59,7 +122,6 @@ pub fn build_keyword_index(root_dir: &str) -> anyhow::Result<KeywordIndex> {
     let mut index = KeywordIndex::new();
     let root_path = PathBuf::from(root_dir);
     
-    // Walk the directory tree
     let walker = walkdir::WalkDir::new(root_path)
         .into_iter()
         .filter_map(Result::ok)
@@ -69,7 +131,6 @@ pub fn build_keyword_index(root_dir: &str) -> anyhow::Result<KeywordIndex> {
     for entry in walker {
         let path = entry.path();
         if path.is_file() {
-            // Only process text files
             if let Ok(contents) = fs::read_to_string(path) {
                 let file_path = path.to_string_lossy().to_string();
                 index.add_file(&file_path, &contents);
@@ -107,7 +168,6 @@ pub fn search_keyword_index(
         }
     }
     
-    // Sort by length (shorter paths first)
     results.sort_by(|a, b| a.path.len().cmp(&b.path.len()));
     
     Ok(results)
@@ -119,11 +179,7 @@ fn extract_snippet(content: &str, query: &str) -> String {
     
     if let Some(start_idx) = content_lower.find(&query_lower) {
         let context = 50;
-        let snippet_start = if start_idx > context {
-            start_idx - context
-        } else {
-            0
-        };
+        let snippet_start = if start_idx > context { start_idx - context } else { 0 };
         let snippet_end = if (start_idx + query_lower.len() + context) < content_lower.len() {
             start_idx + query_lower.len() + context
         } else {
@@ -134,17 +190,16 @@ fn extract_snippet(content: &str, query: &str) -> String {
         return snippet.to_string();
     }
     
-    // Fallback: first 200 chars
     content.chars().take(200).collect()
 }
 
 pub fn build_aristotle_keyword_index() -> anyhow::Result<KeywordIndex> {
     let config = load_config()?;
-    let aristo_root = config.aristo_dir.join("aristotle_results");
+    let aristo_root = config.base_dir.join("aristotle_results");
     if !aristo_root.exists() {
         return Err(anyhow::anyhow!("Aristotle results directory not found: {}", aristo_root.display()));
     }
-    build_keyword_index(aristo_root.to_string_lossy().as_ref())
+    build_keyword_index(&aristo_root.to_string_lossy().to_string())
 }
 
 pub fn build_mathlib_keyword_index() -> anyhow::Result<KeywordIndex> {
@@ -152,7 +207,7 @@ pub fn build_mathlib_keyword_index() -> anyhow::Result<KeywordIndex> {
     if !mathlib_root.exists() {
         return Err(anyhow::anyhow!("Mathlib directory not found: {}", mathlib_root.display()));
     }
-    build_keyword_index(mathlib_root.to_string_lossy().as_ref())
+    build_keyword_index(&mathlib_root.to_string_lossy().to_string())
 }
 
 #[derive(Debug)]
