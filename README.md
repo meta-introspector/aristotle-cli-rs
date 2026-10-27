@@ -142,7 +142,7 @@ cargo run --release -- <command> [flags]
 | `clean` | Remove `result.txt` |
 
 Flags: `-j/--parallel`, `--limit`, `--dry-run`, `--input-dir`, `--output-dir`,
-`--verbose`, `--trace {console,file,both}`.
+`--verbose`, `--trace {console,file,both}`, `--results-dir <PATH>` (global, overrides config `results_dir`).
 
 ## Makefile Targets
 

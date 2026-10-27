@@ -37,12 +37,16 @@ mod aristotle_index;
 struct Cli {
     #[command(subcommand)]
     command: Commands,
+    /// Override the default results directory
+    #[arg(long, global = true, default_value = "aristotles_results")]
+    results_dir: PathBuf,
 }
 
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 const API_BASE_URL: &str = "https://aristotle.harmonic.fun/api/v3";
 
 static API_KEY: RwLock<Option<String>> = RwLock::new(None);
+static RESULTS_DIR_OVERRIDE: RwLock<Option<PathBuf>> = RwLock::new(None);
 
 fn get_api_key() -> Result<String> {
     if let Some(key) = &*API_KEY.read().unwrap() {
@@ -445,7 +449,7 @@ pub fn load_config() -> Result<Config> {
     fs::create_dir_all(&config_dir)?;
     let config_path = config_dir.join("config.toml");
 
-    if !config_path.exists() {
+    let mut config = if !config_path.exists() {
         let default_config = Config {
             base_dir: PathBuf::from("aristotles_results"),
             results_dir: PathBuf::from("aristotles_results"),
@@ -460,13 +464,17 @@ pub fn load_config() -> Result<Config> {
             config_path = %config_path.display(),
             "Created default configuration"
         );
-        return Ok(default_config);
+        default_config
+    } else {
+        let toml = fs::read_to_string(&config_path)?;
+        toml::from_str(&toml)
+            .with_context(|| format!("Failed to parse config at {}", config_path.display()))?
+    };
+
+    if let Some(override_dir) = &*RESULTS_DIR_OVERRIDE.read().unwrap() {
+        config.results_dir = override_dir.clone();
     }
 
-    let toml = fs::read_to_string(&config_path)?;
-    let mut config: Config = toml::from_str(&toml)
-        .with_context(|| format!("Failed to parse config at {}", config_path.display()))?;
-    
     let current_dir = env::current_dir()?;
     if current_dir.to_string_lossy() == "/mnt/data1/time-2026/05-may/07/arist" {
         config.git_base = current_dir;
@@ -478,7 +486,7 @@ pub fn load_config() -> Result<Config> {
         git_base = %config.git_base.display(),
         max_parallel = config.max_parallel_downloads,
         "Loaded configuration"
-    );
+);
     Ok(config)
 }
 
@@ -2900,7 +2908,9 @@ async fn main() -> Result<()> {
 
     info!(version = VERSION, "aristotle-manager starting");
 
-    load_config()?;
+    if cli.results_dir != PathBuf::from("aristotles_results") {
+        *RESULTS_DIR_OVERRIDE.write().unwrap() = Some(cli.results_dir.clone());
+    }
 
     match &cli.command {
         Commands::Poll {
