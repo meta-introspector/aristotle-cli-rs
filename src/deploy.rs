@@ -106,11 +106,54 @@ pub fn builds_root() -> PathBuf {
         .unwrap_or_else(|_| PathBuf::from("/mnt/data1/aristotle-builds"))
 }
 
+#[cfg(test)]
+#[path = "deploy_tests.rs"]
+mod deploy_tests;
+
 /// Materialize a build workspace for a project: hardlink the sources (cheap,
 /// no copies of the multi-GB trees), fresh .lake, shared mathlib linked in.
 /// Returns the workspace path.
 fn prepare_workspace(project: &Path, id: &str) -> Result<PathBuf> {
-    let ws = builds_root().join(id);
+    prepare_workspace_in(&builds_root(), project, id)
+}
+
+/// Inner worker: performs the symlink checks and creates the workspace.
+/// Separated from `prepare_workspace` so tests can supply an arbitrary root
+/// without mutating the process-global `ARISTOTLE_BUILDS_ROOT` env var.
+fn prepare_workspace_in(root: &Path, project: &Path, id: &str) -> Result<PathBuf> {
+    // Interim mitigation: reject a pre-existing symlink at the build root.
+    // This does NOT close the TOCTOU window; it only blocks the non-racing
+    // pre-creation attack.
+    match std::fs::symlink_metadata(root) {
+        Ok(meta) if meta.file_type().is_symlink() => {
+            anyhow::bail!(
+                "build root {} is a symlink; refusing to use it",
+                root.display()
+            );
+        }
+        Ok(_) => {}
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => {}
+        Err(e) => {
+            return Err(e)
+                .with_context(|| format!("stat build root {}", root.display()));
+        }
+    }
+    let ws = root.join(id);
+    // Interim mitigation: reject a pre-existing symlink at the workspace path.
+    match std::fs::symlink_metadata(&ws) {
+        Ok(meta) if meta.file_type().is_symlink() => {
+            anyhow::bail!(
+                "workspace path {} is a symlink; refusing to follow it",
+                ws.display()
+            );
+        }
+        Ok(_) => {}
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => {}
+        Err(e) => {
+            return Err(e)
+                .with_context(|| format!("stat workspace {}", ws.display()));
+        }
+    }
     std::fs::create_dir_all(&ws)?;
 
     // Hardlink every source file from the project into the workspace,
